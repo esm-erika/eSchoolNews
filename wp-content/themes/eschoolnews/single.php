@@ -21,11 +21,7 @@ get_header(); ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<p class="author">By <?php the_author(); ?></p>
 			
-			<div class="article-social">
-			    <a href="#" class=""><i class="fi-social-facebook medium"></i></a>
-			    <a href="#" class=""><i class="fi-social-twitter medium"></i></a>
-				<a href="#" class=""><i class="fi-mail medium"></i></a>
-			 </div>
+			<?php get_template_part('parts/social'); ?>
 			 </header>
 
 			
@@ -44,11 +40,7 @@ get_header(); ?>
 			<?php the_content(); ?>
 			</div>
 
-			<div class="article-social">
-			    <a href="#" class=""><i class="fi-social-facebook medium"></i></a>
-			    <a href="#" class=""><i class="fi-social-twitter medium"></i></a>
-				<a href="#" class=""><i class="fi-mail medium"></i></a>
-			 </div>
+			<?php get_template_part('parts/social'); ?>
 			
 
 				<div class="author-bio row">

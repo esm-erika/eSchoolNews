@@ -29,9 +29,8 @@ get_header(); ?>
 	
 
 <div class="row">
-	<div class="small-12 large-12 columns right-column top-stories">
+
 		<?php get_template_part( 'parts/top-stories' ); ?>
-	</div>
 </div>
 
 

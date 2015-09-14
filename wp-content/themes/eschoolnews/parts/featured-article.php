@@ -43,6 +43,8 @@
 			<header> 
 					<p class="category"><a href="#">Featured</a></p>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<p class="author">By <?php the_author(); ?></p>
+
 				<div class="excerpt">
 					<?php 
 					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 

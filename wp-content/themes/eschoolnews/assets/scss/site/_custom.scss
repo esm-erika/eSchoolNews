@@ -36,7 +36,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	//font-size: 55px;
 	font-weight: 400;
 	text-align: center;
-	padding: 50px 0 30px 0;
+	padding: 30px 0 30px 0;
 	margin: 0;
 
 	i {
@@ -133,6 +133,10 @@ span.flag {
 
 	.center-menu li:not(.has-form) a:not(.button):hover {
 		color: #336699;
+	}
+
+	.center-menu li.active:not(.has-form) a:hover:not(.button) {
+		background: #ffffff;
 	}
 
 }
@@ -345,20 +349,35 @@ article {
 }
 
 .article-social {
-	// margin-bottom: 20px;
+	margin-top: 20px;
 	// float: right;
+
+	a {
+		margin-right: 20px;
 
 	i {
 		font-size: 25px;
-		margin-right: 10px;
+		margin-right: 5px;
+		line-height: 0;
+		float: left;
 	}
 
-	.facebook {
-		background-color: #3b5998;
+	small {
+		float: left;
+		line-height: 25px;
 	}
 
-	.twitter {
-		background-color: #4099FF;
+	.fi-social-facebook {
+		color: #3b5998;
+	}
+
+	.fi-social-twitter {
+		color: #4099FF;
+	}
+
+	.fi-mail {
+		color: #222;
+	}
 	}
 }
 
@@ -421,7 +440,7 @@ article {
 
 // Ad Styles
 
-.leaderboard-container {
+.ad-container {
 	text-align: center;
 	//background-color: #333;
 	//padding: 20px 0;
@@ -626,6 +645,10 @@ footer {
 		.social a {
 			display: inline-block;
 		}
+	}
+
+	.social {
+		margin-left: 0px;
 	}
 
 	.copyright {
