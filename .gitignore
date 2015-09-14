@@ -6,6 +6,15 @@
 *.swp
 Thumbs.db
 
+*.sass-cache*
+*.log
+node_modules/
+assets/stylesheets/
+assets/components/
+assets/javascript/vendor/
+assets/javascript/foundation.js
+assets/javascript/custom/demosite.js
+
 # wordpress specific
 wp-config.php
 wp-content/uploads/
