@@ -37,10 +37,15 @@ function whitepaper_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'whitepaper' , $args );
+	register_post_type( 'whitepapers' , $args );
+
+	register_taxonomy("company_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Companies", "singular_label" => "Company", "rewrite" => true));
+	register_taxonomy("subject_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true));
+
 } 
 
 
@@ -77,10 +82,14 @@ function erc_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
 	register_post_type( 'erc' , $args );
+
+	register_taxonomy("status", array("erc"), array("hierarchical" => true, "label" => "Status", "singular_label" => "Status", "rewrite" => true));
+
 } 
 
 
@@ -117,10 +126,55 @@ function webinar_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
 	register_post_type( 'webinar' , $args );
+
+	register_taxonomy("position", array("webinar"), array("hierarchical" => true, "label" => "Position", "singular_label" => "Position", "rewrite" => true));
+
+} 
+
+
+/*===================================================================================
+ * Special Reports
+ * =================================================================================*/
+
+add_action('init', 'specialreports_register');
+ 
+function specialreports_register() {
+ 
+	$labels = array(
+		'name' => _x('Special Reports', 'post type general name'),
+		'singular_name' => _x('Special Report', 'post type singular name'),
+		'add_new' => _x('Add New', 'webinar item'),
+		'add_new_item' => __('Add New Report'),
+		'edit_item' => __('Edit Report'),
+		'new_item' => __('New Report'),
+		'view_item' => __('View Report'),
+		'search_items' => __('Search Special Reports'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => true,
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'specialreport' , $args );
 } 
 
 
@@ -157,6 +211,7 @@ function newsletter_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  

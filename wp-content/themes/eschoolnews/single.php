@@ -23,7 +23,6 @@ get_header(); ?>
 			
 			<?php get_template_part('parts/social'); ?>
 			 </header>
-
 			
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
