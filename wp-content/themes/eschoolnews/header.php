@@ -49,7 +49,7 @@
               <section class="left-small">
                  <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
              </section>
-             <section class="middle tab-bar-section">
+             <section class="middle tab-bar-section show-for-small-up">
 
                  <h1 class="title">
                     <?php //bloginfo( 'name' ); ?>
@@ -61,9 +61,10 @@
             </section>
         </nav>
 
-        <nav class="small-nav row collapse">
+        <nav class="small-nav row small-collapse medium-uncollapse">
 
             <div class="small-12 medium-6 search columns small-text-center medium-text-left">
+
 
                 <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
 
@@ -99,7 +100,7 @@
                 
           </div>
 
-          <div class="small-12 large-6 columns small-text-center large-text-right">
+          <div class="small-12 medium-6 columns small-text-center medium-text-right">
             <div class="social right">
                 <a href="#" class="right"><i class="fi-social-twitter medium"></i></a>
                 <a href="#" class="right"><i class="fi-social-facebook medium"></i></a>

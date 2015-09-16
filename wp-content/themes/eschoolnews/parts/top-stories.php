@@ -18,7 +18,9 @@
 
 	<div class="row">
 
-		<ul class="large-block-grid-2">
+		<div class="columns large-12">
+
+		<ul class="small-block-grid-1 medium-block-grid-2">
 
 			<?php
 			if ( is_front_page() ) {
@@ -61,6 +63,7 @@
 	</ul>
 
 	<h6 class="readmore"><a href="#">Read More Top Stories &raquo;</a></h6>
+</div>
 
 </div>
 </div>

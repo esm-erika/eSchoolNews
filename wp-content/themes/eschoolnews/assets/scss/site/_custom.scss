@@ -97,6 +97,24 @@ span.flag {
 	}
 }
 
+
+// Tab Bar Section
+
+nav.tab-bar {
+	height: 4.8125rem;
+}
+
+nav.tab-bar .tab-bar-section.middle {
+
+	.title {
+		padding-top: 20px;
+
+		img {
+			max-width: 90%;
+		}
+	}
+}
+
 // Top Bar Section
 
 .sticky.fixed {
@@ -178,7 +196,7 @@ nav.tab-bar {
 
 nav.small-nav {
 	margin-top: 10px;
-	padding: 0 10px 20px 0;
+	padding: 0 0px 20px 0;
 
 	button, .button {
 		margin: 0;
@@ -463,6 +481,7 @@ article {
 
 footer.container > div {
 	border-top: none;
+	margin-bottom: 0;
 }
 
 .bottom > .row {
@@ -685,10 +704,35 @@ footer {
 	
 }
 
+@media only screen and (min-width: 40.0625em) {
+	nav.tab-bar {
+		.tab-bar-section.middle {
 
+			.title {
+
+				img {
+					max-width: 60%;
+				}
+			}
+		}
+
+	}
+}
+
+
+@media only screen and (min-width: 51.3125em) {
+	nav.tab-bar {
+		display: block;
+	}
+
+}
 
 
 @media only screen and (min-width: 64.0625em) {
+
+	nav.tab-bar {
+		display: none;
+	}
 
 	.quaternary article {
 
