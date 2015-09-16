@@ -38,19 +38,8 @@ get_header(); ?>
 		<ul class="tabs" data-tab role="tablist">
 
 			<?php 
-
-				$terms = get_terms( 'subject_categories' );
-				 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-				     echo '<ul>';
-				     foreach ( $terms as $term ) {
-				       echo '<li>' . $term->name . '</li>';
-				        
-				     }
-				     echo '</ul>';
-				 }
+				// We need to be able to spit out the names of all the SUBJECT categories JUST in the Whitepapers
 			 ?>
-
-
 
 		  <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">Tab 1</a></li>
 		  <li class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Tab 2</a></li>

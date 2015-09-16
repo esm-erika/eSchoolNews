@@ -63,7 +63,7 @@
 
         <nav class="small-nav row collapse">
 
-            <div class="small-12 large-6 search columns small-text-center large-text-left">
+            <div class="small-12 medium-6 search columns small-text-center medium-text-left">
 
                 <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
 
