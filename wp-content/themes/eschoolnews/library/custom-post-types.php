@@ -58,8 +58,9 @@ add_action('init', 'erc_register');
 function erc_register() {
  
 	$labels = array(
-		'name' => _x('ERCs', 'post type general name'),
+		'name' => _x('Educator Resource Center', 'post type general name'),
 		'singular_name' => _x('ERC', 'post type singular name'),
+		'menu_name' => _x('ERCs', 'menu name'),
 		'add_new' => _x('Add New', 'erc item'),
 		'add_new_item' => __('Add New ERC'),
 		'edit_item' => __('Edit ERC'),
@@ -86,9 +87,9 @@ function erc_register() {
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'erc' , $args );
+	register_post_type( 'ercs' , $args );
 
-	register_taxonomy("status", array("erc"), array("hierarchical" => true, "label" => "Status", "singular_label" => "Status", "rewrite" => true));
+	register_taxonomy("status", array("ercs"), array("hierarchical" => true, "label" => "Status", "singular_label" => "Status", "rewrite" => true));
 
 } 
 
@@ -130,9 +131,9 @@ function webinar_register() {
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'webinar' , $args );
+	register_post_type( 'webinars' , $args );
 
-	register_taxonomy("position", array("webinar"), array("hierarchical" => true, "label" => "Position", "singular_label" => "Position", "rewrite" => true));
+	register_taxonomy("position", array("webinars"), array("hierarchical" => true, "label" => "Position", "singular_label" => "Position", "rewrite" => true));
 
 } 
 
@@ -174,7 +175,7 @@ function specialreports_register() {
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'specialreport' , $args );
+	register_post_type( 'special-reports' , $args );
 } 
 
 

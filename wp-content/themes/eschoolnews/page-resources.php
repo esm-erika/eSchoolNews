@@ -16,6 +16,8 @@ get_header(); ?>
 <div class="row">
 	<div class="small-12 medium-8 columns">
 
+	<?php get_template_part( 'parts/section-titles' ); ?>
+
 		<ul class="large-block-grid-2">
 
 		<?php do_action( 'foundationpress_before_content' ); ?>

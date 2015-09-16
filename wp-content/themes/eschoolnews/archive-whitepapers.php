@@ -33,7 +33,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
-<h1>White Papers</h1>
+<?php get_template_part( 'parts/section-titles' ); ?>
 
 		<ul class="tabs" data-tab role="tablist">
 

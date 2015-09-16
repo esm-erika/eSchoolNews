@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	line-height: 1;
 	color: #333;
 	border-bottom: 1px solid #999;
@@ -301,6 +301,14 @@ img.th {
 		font-size: 12px;
 		
 	}
+}
+
+p.login-submit, p.login-remember {
+	margin-bottom: 0;
+}
+
+.has-tip, .has-tip:hover, .has-tip:focus {
+	border-bottom: none;
 }
 
 
