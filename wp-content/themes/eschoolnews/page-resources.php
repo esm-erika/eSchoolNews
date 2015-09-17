@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
-		<?php query_posts( array ( 'post_type' => array('webinar','erc','specialreport','whitepapers'), 'posts_per_page' => -1));
+		<?php query_posts( array ( 'post_type' => array('webinars','ercs','special-reports','whitepapers'), 'posts_per_page' => -1));
 		?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -31,8 +31,9 @@ get_header(); ?>
 				<?php 
 				$post_type = get_post_type_object( get_post_type($post) );
 				echo '<span class="flag content">';
+				echo '<a href="#">';
 				echo $post_type->labels->singular_name; 
-				echo '</span>'
+				echo '</a></span>';
 				?>
 
 

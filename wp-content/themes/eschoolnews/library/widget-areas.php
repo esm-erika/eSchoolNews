@@ -15,8 +15,8 @@ function foundationpress_sidebar_widgets() {
 	  'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
 	  'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
 	  'after_widget' => '</div></article>',
-	  'before_title' => '<h2 class="section-title"><span>',
-	  'after_title' => '</span></h2>',
+	  'before_title' => '<h3 class="section-title"><span>',
+	  'after_title' => '</span></h3>',
 	));
 
 	register_sidebar(array(

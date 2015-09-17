@@ -26,8 +26,6 @@
 			if ( is_front_page() ) {
 				query_posts( array ( 'post_type' => 'post', 'posts_per_page' => 4, 'cat' => -4 ));
 			} elseif (is_category()) {
-				//query_posts( array ( 'posts_per_page' => 2 ));
-
 				global $query_string;
 				query_posts( $query_string . '&posts_per_page=3&offset=1' );
 			}

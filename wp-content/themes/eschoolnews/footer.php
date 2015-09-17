@@ -39,7 +39,7 @@
 </div>
 <div class="row copyright">
 	<div class="small-12 large-6 columns small-text-center large-text-left">
-		© Copyright 2015 eSchoolMedia & eSchool News. All Rights Reserved.
+		&copy; Copyright <?php echo date("Y") ?> eSchoolMedia & eSchool News. All Rights Reserved.
 	</div>
 	<div class="small-12 large-6 columns text-right small-text-center large-text-right">
 		7920 Norfolk Ave, Suite 900, Bethesda, MD 20814 | 1-800-394-0115
