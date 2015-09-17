@@ -74,7 +74,7 @@
 
       <a href="#" data-dropdown="subscribe-drop" aria-controls="subscribe-drop" aria-expanded="false" class="subscribe">Subscribe</a>
 
-      <div id="subscribe-drop" data-dropdown-content class="f-dropdown content medium text-left" aria-hidden="true" tabindex="-1">
+      <div id="subscribe-drop" data-dropdown-content class="f-dropdown content medium text-left" aria-hidden="true" aria-autoclose="false" tabindex="-1">
         
 
         <div class="row">
