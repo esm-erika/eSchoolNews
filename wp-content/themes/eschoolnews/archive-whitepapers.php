@@ -31,7 +31,7 @@ get_header(); ?>
 <div class="row">
 	
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-12 columns" role="main">
 
 <?php get_template_part( 'parts/section-titles' ); ?>
 
@@ -41,41 +41,170 @@ get_header(); ?>
 				// We need to be able to spit out the names of all the SUBJECT categories JUST in the Whitepapers
 			 ?>
 
-		  <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">Tab 1</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Tab 2</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">Tab 3</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">Tab 4</a></li>
+		  <li class="tab-title active" role="presentation"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2">Curriculum</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel3" role="tab" tabindex="0" aria-selected="false" aria-controls="panel3">Digital</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel4" role="tab" tabindex="0" aria-selected="false" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel5" role="tab" tabindex="0" aria-selected="false" aria-controls="panel5">Technologies</a></li>
 		</ul>
 
 		<div class="tabs-content">
-		  <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
-		    <h2>First panel content goes here...</h2>
-		    <?php if ( have_posts() ) : ?>
+		  <section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
+		    
+		    <h4>All White Papers</h4>
+		    <ul class="medium-block-grid-4">
+		    <?php
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
+				// The Query
+				$args = array(
+					'post_type' => 'whitepapers',
+					'orderby' => 'rand',
+					'tax_query' => array(
+						array(
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'curriculum',
 
-	<?php endif; // End have_posts() check. ?>
+							),
+
+						),
+
+					);
+
+				$query = new WP_Query( $args );
+
+
+				// The Loop
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					echo '<li>' . get_the_title() . '</li>';
+				}
+
+				wp_reset_postdata(); ?>
+
+			</ul>
 
 		  </section>
-		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2">
 		    <h2>Second panel content goes here...</h2>
+
+		    <?php
+
+				// The Query
+				$args2 = array(
+					//'post_type' => 'whitepapers',
+					'orderby' => 'rand',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'digital',
+
+							),
+
+						),
+
+					);
+
+				$query = new WP_Query( $args2 );
+
+
+				// The Loop
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					echo '<li>' . get_the_title() . '</li>';
+				}
+
+				wp_reset_postdata(); ?>
+
+		   
 		  </section>
-		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
+		  <section role="tabpanel" aria-hidden="true" class="content" id="panel3">
 		    <h2>Third panel content goes here...</h2>
+
+		    <?php
+
+				// The Query
+				$args3 = array(
+					//'post_type' => 'whitepapers',
+					'orderby' => 'rand',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'mobile-online',
+
+							),
+
+						),
+
+					);
+
+				$query = new WP_Query( $args3 );
+
+
+				// The Loop
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					echo '<li>' . get_the_title() . '</li>';
+				}
+
+				wp_reset_postdata(); ?>
 		  </section>
-		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
+		  <section role="tabpanel" aria-hidden="true" class="content" id="panel4">
+
 		    <h2>Fourth panel content goes here...</h2>
+
+		    <ul>
+
+		    <?php
+
+				// The Query
+				$args4 = array(
+					//'post_type' => 'whitepapers',
+					'orderby' => 'rand',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'technologies',
+
+							),
+
+						),
+
+					);
+
+				$query = new WP_Query( $args4 ); ?>
+
+
+				<?php // The Loop
+				 while ( $query->have_posts() ) :
+					$query->the_post(); ?>
+
+				<?php the_title(); ?>
+					
+					<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
+			</ul>
 		  </section>
+		<section role="tabpanel" aria-hidden="true" class="content" id="panel5">
+			<h4>Technologies</h4>
+		
+		</section>
+
 		</div>
+
+		
 
 
 	</div>
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
+
 </div>
 <?php get_footer(); ?>

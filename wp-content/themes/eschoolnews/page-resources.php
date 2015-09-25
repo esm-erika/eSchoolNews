@@ -14,11 +14,14 @@
 get_header(); ?>
 
 <div class="row">
-	<div class="small-12 medium-8 columns">
+	<div class="small-12 medium-12 columns">
+
+	<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
+
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
-		<ul class="large-block-grid-2">
+		<ul class="large-block-grid-3">
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -29,9 +32,10 @@ get_header(); ?>
 		<li <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<?php 
+
 				$post_type = get_post_type_object( get_post_type($post) );
 				echo '<span class="flag content">';
-				echo '<a href="#">';
+				echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
 				echo $post_type->labels->singular_name; 
 				echo '</a></span>';
 				?>
@@ -54,6 +58,6 @@ get_header(); ?>
 
 </div>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
