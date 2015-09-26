@@ -106,3 +106,6 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+*.htaccess
+wp-content/plugins/esml/Untitled-1.html
+.htaccess
