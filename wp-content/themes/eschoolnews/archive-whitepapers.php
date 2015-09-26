@@ -50,44 +50,36 @@ get_header(); ?>
 
 		<div class="tabs-content">
 		  <section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
-		    
-		    <h4>All White Papers</h4>
+		 
+		    <h3>All White Papers</h3>
 		    <ul class="medium-block-grid-4">
 		    <?php
 
 				// The Query
 				$args = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'curriculum',
-
-							),
-
-						),
-
+					'orderby' => 'rand'
 					);
 
-				$query = new WP_Query( $args );
+				$query = new WP_Query( $args ); ?>
 
 
-				// The Loop
-				while ( $query->have_posts() ) {
-					$query->the_post();
-					echo '<li>' . get_the_title() . '</li>';
-				}
+				<?php // The Loop
+				 while ( $query->have_posts() ) :
+					$query->the_post(); ?>
 
-				wp_reset_postdata(); ?>
+				<li><?php the_title(); ?></li>
+					
+					<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
 
 			</ul>
+		
 
 		  </section>
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2">
-		    <h2>Second panel content goes here...</h2>
+		    <h3>Curriculum</h3>
+		    <ul class="medium-block-grid-4">
 
 		    <?php
 
@@ -108,21 +100,24 @@ get_header(); ?>
 
 					);
 
-				$query = new WP_Query( $args2 );
+				$query = new WP_Query( $args2 ); ?>
 
 
-				// The Loop
-				while ( $query->have_posts() ) {
-					$query->the_post();
-					echo '<li>' . get_the_title() . '</li>';
-				}
+				<?php // The Loop
+				 while ( $query->have_posts() ) :
+					$query->the_post(); ?>
 
-				wp_reset_postdata(); ?>
+				<li><?php the_title(); ?></li>
+					
+					<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
 
-		   
+		   </ul>
 		  </section>
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel3">
-		    <h2>Third panel content goes here...</h2>
+		    <h3>Digital</h3>
+
+		    <ul class="medium-block-grid-4">
 
 		    <?php
 
@@ -143,22 +138,25 @@ get_header(); ?>
 
 					);
 
-				$query = new WP_Query( $args3 );
+				$query = new WP_Query( $args3 ); ?>
 
 
-				// The Loop
-				while ( $query->have_posts() ) {
-					$query->the_post();
-					echo '<li>' . get_the_title() . '</li>';
-				}
+				<?php // The Loop
+				 while ( $query->have_posts() ) :
+					$query->the_post(); ?>
 
-				wp_reset_postdata(); ?>
+				<li><?php the_title(); ?></li>
+					
+					<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
+			</ul>
 		  </section>
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel4">
 
-		    <h2>Fourth panel content goes here...</h2>
+		    <h3>Mobile &amp; Online Learning</h3>
 
-		    <ul>
+		    <ul class="medium-block-grid-4">
 
 		    <?php
 
@@ -186,7 +184,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<?php the_title(); ?>
+				<li><?php the_title(); ?></li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -194,7 +192,41 @@ get_header(); ?>
 			</ul>
 		  </section>
 		<section role="tabpanel" aria-hidden="true" class="content" id="panel5">
-			<h4>Technologies</h4>
+			<h3>Technologies</h3>
+
+			<ul class="medium-block-grid-4">
+
+			<?php
+
+				// The Query
+				$args5 = array(
+					//'post_type' => 'whitepapers',
+					'orderby' => 'rand',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'technologies',
+
+							),
+
+						),
+
+					);
+
+				$query = new WP_Query( $args5 ); ?>
+
+
+				<?php // The Loop
+				 while ( $query->have_posts() ) :
+					$query->the_post(); ?>
+
+				<li><?php the_title(); ?></li>
+					
+					<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			</ul>
 		
 		</section>
 
