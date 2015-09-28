@@ -25,6 +25,14 @@ add_action('admin_notices','adrotate_expired_banners');
 add_action('admin_menu', 'adrotate_dashboard');
 add_action('widgets_init', 'adrotate_widget_init_1');
 add_action('widgets_init', 'adrotate_widget_init_2');
+add_action('widgets_init', 'adrotate_widget_init_3');
+add_action('widgets_init', 'adrotate_widget_init_4');
+add_action('widgets_init', 'adrotate_widget_init_5');
+add_action('widgets_init', 'adrotate_widget_init_6');
+add_action('widgets_init', 'adrotate_widget_init_7');
+add_action('widgets_init', 'adrotate_widget_init_8');
+add_action('widgets_init', 'adrotate_widget_init_9');
+
 add_action('wp_dashboard_setup', 'adrotate_dashboard_widget');
 add_action('wp_meta', 'adrotate_meta');
 
