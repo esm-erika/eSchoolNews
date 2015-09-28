@@ -10,5 +10,5 @@
 ?>
 
 	<div class="small-12 large-12 columns ad-container">
-		<?php echo adrotate_group('2'); ?>
+		<?php // echo adrotate_group('2'); ?>
 	</div>
