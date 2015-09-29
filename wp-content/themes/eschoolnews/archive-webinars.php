@@ -19,19 +19,23 @@
 get_header(); ?>
 
 <div class="row">
-
-			<?php get_template_part( 'parts/section-titles' ); ?>
-
 <!-- Row for main content area -->
+<?php get_template_part( 'parts/section-titles' ); ?>
+
 	<div class="small-12 large-8 columns" role="main">
 
 <?php 	$args = array('post_type' => array( 'Webinars' ));
 		$query = new WP_Query( $args );
 		$count = 0;
+			
+			//loop the post and look for upcoming items. Save them for output. 
 			if ( have_posts() ) : 
 			ob_start( );
 			?>
-          
+            
+<h1 class="section-title">
+	<span>Upcoming Webinars</span>
+</h1>
 	  
 <section class="tertiary">
 
@@ -60,7 +64,7 @@ if($webinar_date >= $todayis){
 						<header> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							<p>
-                            <?php echo $showdate->format('d F, Y');; ?><br />
+                            <?php  if($showdate){echo $showdate->format('d F, Y'); echo "<br />";} ?>
                             <a href="<?php the_field('webinar_registration_link'); ?>">Register Now</a></p>
 						</header>
 
@@ -76,7 +80,9 @@ if($webinar_date >= $todayis){
 					$upcomingwebinars = ob_get_clean( );
 					if($count > 0){
 						echo $upcomingwebinars;	
-						}
+						} 
+						
+						// else should be put in in case there are not any. 
 					
 					
 					?>
@@ -96,8 +102,11 @@ if($webinar_date >= $todayis){
 <?php 	$args = array('post_type' => array( 'Webinars' ));
 		$query = new WP_Query( $args );
 		$count = 0;
+				//loop the post and look for past items. Save them for output. 
 			if ( have_posts() ) : 
 			ob_start( );
+			
+			
 			?>
             
 <h1 class="section-title">
@@ -122,7 +131,8 @@ if($webinar_date < $todayis){
 	$count++
 					?>
 						
-					
+					 
+                     
 					<li>
 					<article>
 
@@ -131,7 +141,7 @@ if($webinar_date < $todayis){
 						<header> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							<p>
-                            <?php echo $showdate->format('d F, Y');; ?><br />
+                            <?php  if($showdate){echo $showdate->format('d F, Y'); echo "<br />";} ?>
                             <a href="<?php the_field('webinar_registration_link'); ?>">Register Now</a></p>
 						</header>
 
@@ -142,12 +152,13 @@ if($webinar_date < $todayis){
 					</li>
 
 					<?php 
-					} //check if in date range
+					} // end check if in date range
 					endwhile; 
 					$pastwebinars = ob_get_clean( );
 					if($count > 0){
 						echo $pastwebinars;	
 						}
+						//else if no content should be here. Not that that could happen without an error. 
 					
 					
 					?>
