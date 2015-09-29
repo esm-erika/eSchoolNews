@@ -31,10 +31,7 @@ get_header(); ?>
 			if ( have_posts() ) : 
 			ob_start( );
 			?>
-            
-<h1 class="section-title">
-	<span>Upcoming Webinars</span>
-</h1>
+          
 	  
 <section class="tertiary">
 
