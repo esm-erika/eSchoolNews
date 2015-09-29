@@ -133,7 +133,7 @@ function webinar_register() {
  
 	register_post_type( 'webinars' , $args );
 
-	register_taxonomy("position", array("webinars"), array("hierarchical" => true, "label" => "Position", "singular_label" => "Position", "rewrite" => true));
+	//register_taxonomy("position", array("webinars"), array("hierarchical" => true, "label" => "Position", "singular_label" => "Position", "rewrite" => true));
 
 } 
 

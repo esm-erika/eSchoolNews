@@ -66,7 +66,7 @@ get_header(); ?>
 
 					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)]">
 
-					<h4><?php the_title(); ?></h4>
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 					<?php
 
