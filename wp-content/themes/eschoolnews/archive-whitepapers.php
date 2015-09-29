@@ -29,11 +29,13 @@ get_header(); ?>
 </script>
 
 <div class="row">
+
+	<?php get_template_part( 'parts/section-titles' ); ?>
+
 	
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
-<?php get_template_part( 'parts/section-titles' ); ?>
 
 		<ul class="tabs" data-tab role="tablist">
 
@@ -57,7 +59,6 @@ get_header(); ?>
 
 				// The Query
 				$args = array(
-					'post_type' => 'whitepapers',
 					'orderby' => 'rand'
 					);
 
@@ -85,7 +86,6 @@ get_header(); ?>
 
 				// The Query
 				$args2 = array(
-					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -123,7 +123,6 @@ get_header(); ?>
 
 				// The Query
 				$args3 = array(
-					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -162,7 +161,6 @@ get_header(); ?>
 
 				// The Query
 				$args4 = array(
-					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -200,7 +198,6 @@ get_header(); ?>
 
 				// The Query
 				$args5 = array(
-					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(

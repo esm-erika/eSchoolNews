@@ -19,33 +19,148 @@
 get_header(); ?>
 
 <div class="row">
-<!-- Row for main content area -->
+
+	<?php get_template_part( 'parts/section-titles' ); ?>
+
+	<!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
+		<h4>Featured ERCs</h4>
 
-		<?php get_template_part( 'parts/section-titles' ); ?>
+		<?php
+
+				// The Query
+		$args = array(
+			'tax_query' => array(
+				array(
+
+					'taxonomy' => 'status',
+					'field' => 'slug',
+					'terms' => 'active',
+
+					),
+
+				),
+
+			'meta_query' => array(
+				array(
+					'key' => 'featured',
+					'value' => '1',
+					'compare' => '=='
+					)
+				)
+			);
+
+			$query = new WP_Query( $args ); ?>
 
 
-	<?php if ( have_posts() ) : ?>
+				<?php // The Loop
+				while ( $query->have_posts() ) :
+					$query->the_post(); ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
+				<div class="panel callout radius">
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+					<?php 
+						    //$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+					$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+					?>
 
-	<?php endif; // End have_posts() check. ?>
+					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)]">
 
-	<?php /* Display navigation to next/previous pages when applicable */ ?>
-	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php } ?>
+					<h4><?php the_title(); ?></h4>
 
+					<?php
+
+					$terms_of_post = get_the_term_list( $post->ID, 'sponsor', 'Sponsored by: ','', '', '' );
+					echo $terms_of_post;
+
+
+
+					?>
+
+				</div>
+
+
+
+
+				
+
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+
+			<?php 
+
+			echo '<h6>Sponsors:</h6>';
+
+			$args = array( 'hide_empty' => 0 );
+
+			$terms = get_terms( 'sponsor', $args );
+			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+			    $count = count( $terms );
+			    $i = 0;
+			    $term_list = '<p class="my_term-archive">';
+			    foreach ( $terms as $term ) {
+			        $i++;
+			    	$term_list .= '<span class="flag content"><a href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all %s ERCs', 'my_localization_domain' ), $term->name ) . '">' . $term->name . '</a></span>';
+			    	if ( $count != $i ) {
+			            $term_list .= ' ';
+			        }
+			        else {
+			            $term_list .= '</p>';
+			        }
+			    }
+			    echo $term_list;
+			}
+
+			?>
+
+		</div>
+		<div class="small-12 medium-4 columns">
+			<h4>Active ERCs</h4>
+
+			<ul class="medium-block-grid-1">
+
+				<?php
+
+				// The Query
+				$args = array(
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'status',
+							'field' => 'slug',
+							'terms' => 'active',
+
+							),
+
+						),
+
+					
+					);
+
+					$query2 = new WP_Query( $args ); ?>
+
+
+				<?php // The Loop
+				while ( $query2->have_posts() ) :
+					$query2->the_post(); ?>
+
+				<?php 
+				$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+				$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+				?>
+				<li>
+					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+
+
+					<h6><?php the_title(); ?></h6>
+
+				</li>
+
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+
+			
+
+		</div>
 	</div>
-	<?php get_sidebar(); ?>
-</div>
-<?php get_footer(); ?>
+	<?php get_footer(); ?>

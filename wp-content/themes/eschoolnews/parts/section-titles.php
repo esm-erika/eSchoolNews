@@ -10,23 +10,38 @@
 
 ?>
 
-<h1 class="section-title">
-	<span>
+
+
+
 
 <?php 
 
 if ( is_page('Resources')) {
 
-echo "Resources";
+	echo '<div class="medium-12 columns"><h1 class="section-title"><span>';
+
+	echo 'Resources';
+
+	echo '</span></h1></div>';
 
 } elseif ( is_archive()) {
 
-	post_type_archive_title();
-}
+	echo '<div class="medium-12 columns"><h1 class="section-title"><span>';
 
+	post_type_archive_title();
+
+	echo '</span></h1></div>';
+
+} elseif ( is_tax()) {
+
+	//single_term_title();
+
+	echo 'Test';
+}
 
 ?>
 
 
-</span>
-</h1>
+
+
+

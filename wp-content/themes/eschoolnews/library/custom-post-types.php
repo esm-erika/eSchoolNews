@@ -90,7 +90,7 @@ function erc_register() {
 	register_post_type( 'ercs' , $args );
 
 	register_taxonomy("status", array("ercs"), array("hierarchical" => true, "label" => "Status", "singular_label" => "Status", "rewrite" => true));
-
+	register_taxonomy("sponsor", array("ercs"), array("hierarchical" => true, "label" => "Sponsors", "singular_label" => "Sponsor", "rewrite" => true));
 } 
 
 

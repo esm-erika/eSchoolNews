@@ -14,12 +14,13 @@
 get_header(); ?>
 
 <div class="row">
-	<div class="small-12 medium-12 columns">
 
 	<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
+
+	<div class="small-12 medium-12 columns">
 
 		<ul class="large-block-grid-3">
 

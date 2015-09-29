@@ -19,6 +19,9 @@
 get_header(); ?>
 
 <div class="row">
+
+			<?php get_template_part( 'parts/section-titles' ); ?>
+
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
