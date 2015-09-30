@@ -9,105 +9,140 @@
 
 get_header(); ?>
 
-<div class="row top">
-	<div class="small-12 large-8 columns" role="main">
+<div class="row">
 
-				<?php if( is_singular( array('ercs','whitepapers','webinars','special-reports') )) {?>
-				
-				<?php $post_type = get_post_type_object( get_post_type($post) );
-				
-				echo '<span class="flag content">';
-				echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
-				echo $post_type->labels->singular_name; 
-				echo '</a></span>'; ?>
-				
-				<?php }?>
+		<?php 
 
-	<?php do_action( 'foundationpress_before_content' ); ?>
+		$image = get_field('masthead_image');
 
-	<?php while ( have_posts() ) : the_post(); ?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<p class="date"><?php the_time('F j, Y'); ?></p>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<p class="author">By <?php the_author(); ?></p>
-			
-			<?php get_template_part('parts/social'); ?>
-			 </header>
-			
+		if( !empty($image) ): ?>	
 
-			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-			<div class="entry-content">
+		<div class="small-12 medium-12 columns">
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		</div>
+	<?php endif; ?>
 
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="row">
-					<div class="column">
-						<?php the_post_thumbnail( '', array('class' => 'th') ); ?>
-					</div>
-				</div>
-			<?php endif; ?>
+	<?php if( get_field('masthead_text')): ?>
+		<div class="small-12 medium-12 columns" role="main">
+			<p><?php the_field('masthead_text') ?></p>
+		</div>
+	<?php endif; ?>
 
-			<?php the_content(); ?>
-			</div>
+	<?php
 
-			<?php get_template_part('parts/social'); ?>
-			
+		// check if the repeater field has rows of data
+		if( have_rows('add_section') ):
 
-				<div class="author-bio row">
-					<div class="hide-for-small-only large-2 columns author-avatar small-text-center">
-						<?php echo get_avatar($post->post_author, 50); ?>
-					</div>
-					<div class="small-12 large-10 columns author-bio-text">
-						<h5 class="left small-text-center"><strong>About the Author:</strong> <?php echo the_author_posts_link(); ?></h5>
+			echo '<section class="erc-section">';
 
-							<ul class="icons right">
-								<?php 
-									$rss_url = get_the_author_meta( 'rss_url' );
-									if ( $rss_url && $rss_url != '' ) {
-										echo '<li class="rss left"><a href="' . esc_url($rss_url) . '"><i class="fi-rss"></i></a></li>';
-									}
-													
-									$google_profile = get_the_author_meta( 'google_profile' );
-									if ( $google_profile && $google_profile != '' ) {
-										echo '<li class="google left"><a href="' . esc_url($google_profile) . '" rel="author"><i class="fi-social-google-plus medium"></i></a></li>';
-									}
-													
-									$twitter_profile = get_the_author_meta( 'twitter_profile' );
-									if ( $twitter_profile && $twitter_profile != '' ) {
-										echo '<li class="twitter left"><a href="' . esc_url($twitter_profile) . '"><i class="fi-social-twitter medium"></i></a></li>';
-									}
-													
-									$facebook_profile = get_the_author_meta( 'facebook_profile' );
-									if ( $facebook_profile && $facebook_profile != '' ) {
-										echo '<li class="facebook left"><a href="' . esc_url($facebook_profile) . '"><i class="fi-social-facebook medium"></i></a></li>';
-									}
-													
-									$linkedin_profile = get_the_author_meta( 'linkedin_profile' );
-									if ( $linkedin_profile && $linkedin_profile != '' ) {
-									       echo '<li class="linkedin left"><a href="' . esc_url($linkedin_profile) . '"><i class="fi-social-linkedin medium"></i></a></li>';
-									}
-								?>
-							</ul>
+		 	// loop through the rows of data
+		    while ( have_rows('add_section') ) : the_row();
 
-						<p><?php echo get_the_author_meta('description'); ?></p>
-					</div>
-				</div>
+		        if(get_sub_field('how_many_columns') == "one") {
+		        	echo '<div class="small-12 medium-12 columns">';
+		      
+		       } elseif(get_sub_field('how_many_columns') == "two") {
+		        	echo '<div class="small-12 medium-6 columns">';
 
-				<footer>
+		       }
 
-				<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_post_before_comments' ); ?>
-			<?php //comments_template(); ?>
-			<?php do_action( 'foundationpress_post_after_comments' ); ?>
-		</article>
-	<?php endwhile;?>
+		        	if( get_sub_field('section_title')):
 
-	<?php do_action( 'foundationpress_after_content' ); ?>
+		        		echo '<h3 style="color:';
+		        		the_field('base_color'); 
+		        		echo ';">';
+		        		echo the_sub_field('section_title');
+		        		echo '</h3>';
 
-	</div>
+		        	endif;
+
+		        	if( have_rows('erc_article')):
+
+		        		while( have_rows('erc_article')) : the_row();
+
+			        		//variables
+			        		$thumbnail = get_sub_field('article_thumbnail');
+			        		$title = get_sub_field('article_title');
+			        		$subtitle = get_sub_field('article_subtitle');
+			        		$excerpt = get_sub_field('article_excerpt');
+			        		$readmorelink = get_sub_field('read_more_link');
+			        		$video = get_sub_field('video_link');
+
+			        		echo '<article class="panel">';
+			        		
+			        		if ( $thumbnail ):
+
+			        			//echo '<div class="small-12 medium-6 columns">';
+
+			        			echo '<img src="' . $thumbnail['url'] . '" />';
+
+			        			//echo '</div>';
+
+			        		endif;
+
+			        		//echo '<div class="small-12 medium-6 columns">';
+
+
+			        		if( $title ):
+
+			        			echo '<h4>' . $title . '</h4>';
+
+			        		endif;
+
+			        		if( $subtitle ):
+
+			        			echo '<h6>' . $subtitle . '</h6>';
+
+			        		endif;
+
+			        		if( $excerpt ):
+
+			        			echo '<p>' . $excerpt . '</p>';
+
+			        		endif;
+
+			        		if( $readmorelink ):
+
+			        			echo '<a href="' . $readmorelink . '">Read more</a>';
+
+			        		endif;
+
+			        		if( $video ):
+
+			        			echo '<i class="fi-play-video"></i>';
+
+			        		endif;
+
+			        		//echo '</div>';
+
+			        		echo '</article>';
+
+
+		        		endwhile;
+
+		        	endif;
+
+
+
+		        	echo '</div>';
+
+
+		    endwhile;
+
+		else :
+
+		    // no rows found
+
+		endif;
+
+	echo '</section>';
+
+		?>
+
 	
-	<?php get_sidebar(); ?>
+
+	
+	
+	<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
