@@ -109,3 +109,4 @@ wp-content/mysql.sql
 *.htaccess
 wp-content/plugins/esml/Untitled-1.html
 .htaccess
+*.htaccess
