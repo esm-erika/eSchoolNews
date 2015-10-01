@@ -10,5 +10,5 @@
 ?>
 
 	<div class="small-12 large-12 columns ad-container">
-    	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/970x90ad.png"/>
+		<?php // echo adrotate_group('2'); ?>
 	</div>

@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="top-bar-container contain-to-grid show-for-medium-up">
+<div class="top-bar-container contain-to-grid show-for-large-up">
 
         <div class="title-area row">
             <div class="name large-5 large-centered columns">

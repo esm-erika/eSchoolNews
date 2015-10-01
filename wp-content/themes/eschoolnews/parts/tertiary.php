@@ -21,7 +21,7 @@
 
 					<?php
 						// if ( is_front_page() ) {
-							query_posts( array ( 'category_name' => 'category-3', 'posts_per_page' => 6 ));
+							query_posts( array ( 'post_type' => array('whitepapers'), 'posts_per_page' => 6, 'orderby' =>'rand'));
 						//}
 					?>
 
@@ -31,7 +31,11 @@
 					<li>
 					<article>
 
-						<?php the_post_thumbnail('small-thumb'); ?>
+						<?php //the_post_thumbnail('small-thumb');  
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+						
 
 						<header> 
 							<p class="download"><a href="#"><i class="fi-arrow-down"></i> Download</a></p>
@@ -54,6 +58,6 @@
 
 		</ul>
 
-		<h6 class="readmore"><a href="#">See More White Papers &raquo;</a></h6>
+		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">See More White Papers &raquo;</a></h6>
 
 	</section>

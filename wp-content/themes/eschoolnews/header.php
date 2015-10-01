@@ -41,102 +41,111 @@
 	<?php do_action( 'foundationpress_after_body' ); ?>
 	
 	<div class="off-canvas-wrap" data-offcanvas>
-       <div class="inner-wrap">
+   <div class="inner-wrap">
 
-           <?php do_action( 'foundationpress_layout_start' ); ?>
+     <?php do_action( 'foundationpress_layout_start' ); ?>
 
-           <nav class="tab-bar">
-              <section class="left-small">
-                 <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-             </section>
-             <section class="middle tab-bar-section">
+     <nav class="tab-bar">
+      <section class="left-small">
+       <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+     </section>
+     <section class="middle tab-bar-section show-for-small-up">
 
-                 <h1 class="title">
-                    <?php //bloginfo( 'name' ); ?>
-                    <a href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eschoolnewslogo.png"/>
-                    </a>
-                </h1>
+       <h1 class="title">
+        <?php //bloginfo( 'name' ); ?>
+        <a href="<?php echo home_url(); ?>">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eschoolnewslogo.png"/>
+        </a>
+      </h1>
 
-            </section>
-        </nav>
+    </section>
+  </nav>
 
-        <nav class="small-nav row collapse">
+  <nav class="small-nav row small-collapse medium-uncollapse">
 
-            <div class="small-12 large-6 search columns small-text-center large-text-left">
+    <div class="small-12 medium-6 search columns small-text-center medium-text-left">
 
-                <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
 
-            <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-hidden="true" tabindex="-1">
-                <p>Login goes here.</p>
-            </div>
+      <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
 
-            <a href="#" data-dropdown="subscribe-drop" aria-controls="subscribe-drop" aria-expanded="false" class="subscribe">Subscribe</a>
+      <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-hidden="true" tabindex="-1">
+        <?php wp_login_form(); ?>
+      </div>
 
-            <div id="subscribe-drop" data-dropdown-content class="f-dropdown content medium text-left" aria-hidden="true" tabindex="-1">
-                <h4>Subscribe to Our Newsletters</h4>
+      <a href="#" data-dropdown="subscribe-drop" aria-controls="subscribe-drop" aria-expanded="false" class="subscribe">Subscribe</a>
 
-                <div class="row">
-                    <div class="medium-5 columns">
-                        <p>Select from our list of newsletters to subscribe:</p>
-                    </div>
+      <div id="subscribe-drop" data-dropdown-content class="f-dropdown content medium text-left" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+        
 
-                    <div class="medium-7 columns">
-                        <div class="row">
-                            <div class="large-4 columns">
-                                Col-1
-                            </div>
-                            <div class="large-4 columns">
-                                Col-2
-                            </div>
-                            <div class="large-4 columns">
-                                Col-3
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                
+        <div class="row">
+          <div class="medium-12 columns">
+            <h3>Subscribe to Our Newsletters</h3>
+            <p>Select from our list of newsletters to subscribe:</p>
           </div>
-
-          <div class="small-12 large-6 columns small-text-center large-text-right">
-            <div class="social right">
-                <a href="#" class="right"><i class="fi-social-twitter medium"></i></a>
-                <a href="#" class="right"><i class="fi-social-facebook medium"></i></a>
-
-            </div>
-
-            <a href="#" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="search"> <i class="fi-magnifying-glass"></i> Search</a>
-
-                <div id="drop2" data-dropdown-content class="f-dropdown content small search-drop" aria-hidden="true" tabindex="-1">
-                    <form>
-                        <div class="row collapse postfix-radius">
-                            <div class="small-9 columns text-left">
-                              <input type="text" placeholder="Value">
-                          </div>
-                          <div class="small-3 columns">
-                              <span class="postfix">Go</span>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-
-
-            
-
-            
-
         </div>
 
-    </nav>
+        <form>
 
-    <?php get_template_part( 'parts/off-canvas-menu' ); ?>
+            <div class="row">
+              <div class="medium-12 columns">
+                <ul class="medium-block-grid-2">
+                  <li><input id="checkbox1" type="checkbox"><label for="checkbox1">eSchool News Today <i data-tooltip aria-haspopup="true" class="fi-info has-tip" title="Test tooltip."></i></label></li>
+                
+                  <li><input id="checkbox2" type="checkbox"><label for="checkbox2">Innovation Weekly <i class="fi-info"></i></label></li>
+
+                  <li><input id="checkbox3" type="checkbox"><label for="checkbox3">School IT Leadership <i class="fi-info"></i></label></li>
+
+                  <li><input id="checkbox4" type="checkbox"><label for="checkbox4">Digtial Leadership <i class="fi-info"></i></label></li>
+
+                  <li><input id="checkbox5" type="checkbox"><label for="checkbox3">Reinventing HigherEd <i class="fi-info"></i></label></li>
+
+                  <li><input id="checkbox6" type="checkbox"><label for="checkbox6">eCampus News Today <i class="fi-info"></i></label></li>
+
+                  <li><input id="checkbox7" type="checkbox"><label for="checkbox7">IT Campus Leadership <i class="fi-info"></i></label></li>
+
+                  <li><input id="checkbox8" type="checkbox"><label for="checkbox8">eClassroom News <i class="fi-info"></i></label></li>
+                </ul>
+              </div>
+
+              <a class="button small radius">Subscribe</a>
+              
+            </div>
+        </form>
+
+      </div>
+
+    </div>
+
+    <div class="small-12 medium-6 columns small-text-center medium-text-right">
+      <div class="social right">
+        <a href="#" class="right"><i class="fi-social-twitter medium"></i></a>
+        <a href="#" class="right"><i class="fi-social-facebook medium"></i></a>
+
+      </div>
+
+      <a href="#" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="search"> <i class="fi-magnifying-glass"></i> Search</a>
+
+      <div id="drop2" data-dropdown-content class="f-dropdown content small search-drop" aria-hidden="true" tabindex="-1">
+        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+          <label>
+            <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+            <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+          </label>
+          <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+        </form>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
 
 
-    <?php get_template_part( 'parts/top-bar' ); ?>
+  <?php get_template_part( 'parts/top-bar' ); ?>
 
-    <section class="container" role="document">
-       <?php do_action( 'foundationpress_after_header' ); ?>
+  <section class="container" role="document">
+   <?php do_action( 'foundationpress_after_header' ); ?>
 
 

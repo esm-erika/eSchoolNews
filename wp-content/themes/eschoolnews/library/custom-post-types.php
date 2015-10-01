@@ -32,15 +32,20 @@ function whitepaper_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+		'menu_icon' => 'dashicons-media-default',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'whitepaper' , $args );
+	register_post_type( 'whitepapers' , $args );
+
+	register_taxonomy("company_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Companies", "singular_label" => "Company", "rewrite" => true));
+	register_taxonomy("subject_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true));
+
 } 
 
 
@@ -53,8 +58,9 @@ add_action('init', 'erc_register');
 function erc_register() {
  
 	$labels = array(
-		'name' => _x('ERCs', 'post type general name'),
+		'name' => _x('Educator Resource Center', 'post type general name'),
 		'singular_name' => _x('ERC', 'post type singular name'),
+		'menu_name' => _x('ERCs', 'menu name'),
 		'add_new' => _x('Add New', 'erc item'),
 		'add_new_item' => __('Add New ERC'),
 		'edit_item' => __('Edit ERC'),
@@ -72,15 +78,19 @@ function erc_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+		'menu_icon' => 'dashicons-welcome-learn-more',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'erc' , $args );
+	register_post_type( 'ercs' , $args );
+
+	register_taxonomy("status", array("ercs"), array("hierarchical" => true, "label" => "Status", "singular_label" => "Status", "rewrite" => true));
+	register_taxonomy("sponsor", array("ercs"), array("hierarchical" => true, "label" => "Sponsors", "singular_label" => "Sponsor", "rewrite" => true));
 } 
 
 
@@ -112,15 +122,60 @@ function webinar_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+		'menu_icon' => 'dashicons-format-video',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'webinar' , $args );
+	register_post_type( 'webinars' , $args );
+
+	//register_taxonomy("position", array("webinars"), array("hierarchical" => true, "label" => "Position", "singular_label" => "Position", "rewrite" => true));
+
+} 
+
+
+/*===================================================================================
+ * Special Reports
+ * =================================================================================*/
+
+add_action('init', 'specialreports_register');
+ 
+function specialreports_register() {
+ 
+	$labels = array(
+		'name' => _x('Special Reports', 'post type general name'),
+		'singular_name' => _x('Special Report', 'post type singular name'),
+		'add_new' => _x('Add New', 'webinar item'),
+		'add_new_item' => __('Add New Report'),
+		'edit_item' => __('Edit Report'),
+		'new_item' => __('New Report'),
+		'view_item' => __('View Report'),
+		'search_items' => __('Search Special Reports'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-megaphone',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => true,
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'special-reports' , $args );
 } 
 
 
@@ -152,11 +207,12 @@ function newsletter_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+		'menu_icon' => 'dashicons-layout',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
+		'has_archive' => true,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  

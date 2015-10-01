@@ -10,5 +10,22 @@
 ?>
 
 	<div class="small-12 large-12 columns ad-container">
-    	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/large-leaderboard.png"/>
+	<?php // echo adrotate_group('1'); 
+		
+	if ($astused > 0){
+		// ast used defined   How to do this in the new?
+	} else {
+			$pageadset = $_GET['ast'];
+		if(filter_var($pageadset, FILTER_VALIDATE_INT))
+		{//reserved for default ad set
+			$astused = $pageadset;	
+		} else {
+			// Retrieve adset info from URL query vars
+			$astused = 1;
+		}
+	}
+	echo adrotate_banner($astused,5);
+		
+	?>
+        
 	</div>

@@ -9,6 +9,6 @@
 
 ?>
 
-	<div class="small-12 large-4 columns ad-container">
+	<div class="small-12 large-4 columns ad-container hide-for-medium-only">
     	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/halfpage.jpg"/>
 	</div>

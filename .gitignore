@@ -5,6 +5,7 @@
 *.bak
 *.swp
 Thumbs.db
+.htaccess
 
 *.sass-cache*
 *.log
@@ -105,3 +106,7 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+*.htaccess
+wp-content/plugins/esml/Untitled-1.html
+.htaccess
+*.htaccess
