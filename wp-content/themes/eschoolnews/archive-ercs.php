@@ -68,15 +68,6 @@ get_header(); ?>
 
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
-					<?php
-
-					$terms_of_post = get_the_term_list( $post->ID, 'sponsor', 'Sponsored by: ','', '', '' );
-					echo $terms_of_post;
-
-
-
-					?>
-
 				</div>
 
 
@@ -88,30 +79,28 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
 
 			<?php 
+			//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
 
-			echo '<h6>Sponsors:</h6>';
+			$taxonomy     = 'sponsor';
+			$orderby      = 'name'; 
+			$show_count   = 0;      // 1 for yes, 0 for no
+			$pad_counts   = 0;      // 1 for yes, 0 for no
+			$hierarchical = 1;      // 1 for yes, 0 for no
+			$title        = 'Sponsors';
 
-			$args = array( 'hide_empty' => 0 );
-
-			$terms = get_terms( 'sponsor', $args );
-			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-			    $count = count( $terms );
-			    $i = 0;
-			    $term_list = '<p class="my_term-archive">';
-			    foreach ( $terms as $term ) {
-			        $i++;
-			    	$term_list .= '<span class="flag content"><a href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all %s ERCs', 'my_localization_domain' ), $term->name ) . '">' . $term->name . '</a></span>';
-			    	if ( $count != $i ) {
-			            $term_list .= ' ';
-			        }
-			        else {
-			            $term_list .= '</p>';
-			        }
-			    }
-			    echo $term_list;
-			}
-
+			$args = array(
+			  'taxonomy'     => $taxonomy,
+			  'orderby'      => $orderby,
+			  'show_count'   => $show_count,
+			  'pad_counts'   => $pad_counts,
+			  'hierarchical' => $hierarchical,
+			  'title_li'     => $title
+			);
 			?>
+
+			<ul>
+			<?php wp_list_categories( $args ); ?>
+			</ul>
 
 		</div>
 		<div class="small-12 medium-4 columns">

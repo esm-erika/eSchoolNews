@@ -54,4 +54,10 @@ require_once( 'library/author-social.php' );
 /** Add Custom Post Types */
 require_once( 'library/custom-post-types.php' );
 
+/** Add Slug Function */
+require_once( 'library/the-slug.php' );
+
+/** PHP Widget Function */
+//require_once( 'library/php-widgets.php' );
+
 ?>

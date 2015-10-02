@@ -18,164 +18,35 @@
 
 get_header(); ?>
 
-<script>
-  $(document).foundation({
-    tab: {
-      callback : function (tab) {
-        console.log(tab);
-      }
-    }
-  });
-</script>
-
 <div class="row">
+
+	<?php get_template_part( 'parts/section-titles' ); ?>
+
+<ul class="tabs" data-tab role="tablist">
+		  <li class="tab-title active" role="presentation"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel3" role="tab" tabindex="0" aria-selected="true" aria-controls="panel3">Digital</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
+		  <li class="tab-title" role="presentation"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
+</ul>
 	
 <!-- Row for main content area -->
 	<div class="small-8 medium-8 columns" role="main">
 
-<?php get_template_part( 'parts/section-titles' ); ?>
 
-		<ul class="tabs" data-tab role="tablist">
 
-			<?php 
-				// We need to be able to spit out the names of all the SUBJECT categories JUST in the Whitepapers
-			 ?>
-
-		  <li class="tab-title active" role="presentation"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
-
-<?php 
-		 
- 	     $args = array(
-         	  'orderby' => 'name',
-			  'echo' => 0,
-	          'show_count' => 0,
-        	  'pad_counts' => 0,
-	          'hierarchical' => 1,
-        	  'taxonomy' => 'subject_categories', 
-        	  'title_li' => '',
-			  'hide_empty' => 0,
-			  
-        	);
-
-$tabsconstruct = wp_list_categories( $args );
-//  subject_categories/curriculum/" >Curriculum,
-$replacethis = '/(<li[^>]*>)|(<\/a[^>]*>)|(<\/l[^>]*>)|(<a[^>]*subject_categories\/)/';
-$tabsconstruct = preg_replace($replacethis, ',', $tabsconstruct);
-$tabsconstruct = preg_replace('/\/" >/', '~', $tabsconstruct);
-
-$tabsconstruct = explode(",", $tabsconstruct);
-
-$pannel=2;
-$tabindex=1;
-foreach ($tabsconstruct as $key => $value) {
-	if (preg_match('/\S/', $value)){
-		$pos = strpos($value, '~');
-		$catname =substr( $value , $pos+1);
-		echo '<li class="tab-title" role="presentation"><a href="#panel'.$pannel.'" role="tab" tabindex="'.$tabindex.'" aria-selected="false" aria-controls="panel'.$pannel.'">'.$catname.'</a></li>';
-		$pannel++;$tabindex++;
-	}
-	
-}
-
- ?>
-	</ul>
 	<div class="tabs-content">
         
-<?php 
-/*
-register_taxonomy("company_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Companies", "singular_label" => "Company", "rewrite" => true));
-
-register_taxonomy("subject_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true));
-*/
-
-?>
 
 <section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
 		 
 		    <h3>All White Papers</h3>
-		    <ul class="medium-block-grid-2">
+		    <ul class="medium-block-grid-2" data-equalizer>
 		    <?php
 
 				// The Query
 				$args = array(
-					'post_type' => 'whitepapers',
-					'orderby' => 'rand'
-					);
-
-				$query = new WP_Query( $args ); ?>
-
-
-				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
-
-				<li><?php the_title(); ?></li>
-					
-					<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-
-			</ul>
-		
-
-		  </section>
-<?php
-$pannel=2;
-$tabindex=1;
-foreach ($tabsconstruct as $key => $value) {
-	if (preg_match('/\S/', $value)){
-		$pos = strpos($value, '~');
-		$catname = substr( $value , $pos+1);	
-		$catslug = substr( $value,0, $pos);	
-		
-echo '<section role="tabpanel" aria-hidden="true" class="content" id="panel'.$pannel.'"><h3>'.$catname.'</h3>'?>
-		    <ul class="medium-block-grid-2">
-		    <?php
-				// The Query
-				$args2 = array(
 					//'post_type' => 'whitepapers',
-					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => $catslug,
-
-							),
-
-						),
-
-					);
-
-				$query = new WP_Query( $args2 ); ?>
-
-
-				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
-
-				<li><?php the_title(); ?></li>
-					
-					<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-
-		   </ul>
-		  </section>
-<?php
-		$pannel++;$tabindex++;
-	}
-	
-}        
-?>        
-		  <?php /*<section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
-		 
-		    <h3>All White Papers</h3>
-		    <ul class="medium-block-grid-2">
-		    <?php
-
-				// The Query
-				$args = array(
-					'post_type' => 'whitepapers',
 					'orderby' => 'rand'
 					);
 
@@ -186,7 +57,13 @@ echo '<section role="tabpanel" aria-hidden="true" class="content" id="panel'.$pa
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+					<div class="panel" data-equalizer-watch>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+					</div>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -195,6 +72,7 @@ echo '<section role="tabpanel" aria-hidden="true" class="content" id="panel'.$pa
 		
 
 		  </section>
+ 
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2">
 		    <h3>Curriculum</h3>
 		    <ul class="medium-block-grid-2">
@@ -339,14 +217,19 @@ echo '<section role="tabpanel" aria-hidden="true" class="content" id="panel'.$pa
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-
-				<li><?php the_title(); ?></li>
+				
+				<li>
+					<div class="panel">
+					<h4><?php the_title(); ?></h4>
+					<a href="#">Download</a>
+				</div>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			</ul>
 		
-		</section> */?>
+		</section> 
 
 		</div>
 
@@ -354,7 +237,33 @@ echo '<section role="tabpanel" aria-hidden="true" class="content" id="panel'.$pa
 
 
 	</div>
-	<?php get_sidebar('whitepaper'); ?>
+	<?php //get_sidebar(); ?>
+
+	<div class="small-12 medium-4 columns">
+		<?php 
+//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
+
+$taxonomy     = 'company_categories';
+$orderby      = 'name'; 
+$show_count   = 0;      // 1 for yes, 0 for no
+$pad_counts   = 0;      // 1 for yes, 0 for no
+$hierarchical = 1;      // 1 for yes, 0 for no
+$title        = '';
+
+$args = array(
+  'taxonomy'     => $taxonomy,
+  'orderby'      => $orderby,
+  'show_count'   => $show_count,
+  'pad_counts'   => $pad_counts,
+  'hierarchical' => $hierarchical,
+  'title_li'     => $title
+);
+?>
+
+<ul>
+<?php wp_list_categories( $args ); ?>
+</ul>
+	</div>
 
 </div>
 <?php get_footer(); ?>

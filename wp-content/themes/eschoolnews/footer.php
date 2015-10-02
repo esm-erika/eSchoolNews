@@ -57,15 +57,26 @@
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/vendor/jquery.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/vendor/fastclick.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/foundation.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-      $('.featured-article').slick();
-    });
+	$(document).foundation('tab','equalizer','reflow');
+
+	    equalizer: {
+	    	// Specify if Equalizer should make elements equal height once they become stacked.
+	    	equalize_on_stack: true,
+	    	// Allow equalizer to resize hidden elements
+	    	act_on_hidden_el: false
+	  	}
+
+	  	tab: {
+	      callback : function(tab) {
+	        console.log(tab);
+	      }
+	    }
   </script>
 
 </body>
