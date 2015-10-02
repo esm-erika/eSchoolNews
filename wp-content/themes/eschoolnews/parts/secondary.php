@@ -23,7 +23,7 @@
 
 					<?php
 						if ( is_front_page() ) {
-							query_posts( array ( 'post_type' => array('webinars','ercs','special-reports','whitepapers'), 'posts_per_page' => 2, 'orderby' =>'rand'));
+							query_posts( array ( 'post_type' => array('webinars','ercs','special-reports'), 'posts_per_page' => 2, 'orderby' =>'rand'));
 		
 						} elseif( is_category()) {
 
