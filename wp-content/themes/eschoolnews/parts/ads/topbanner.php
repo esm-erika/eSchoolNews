@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for leaderboard 2 ad
+ * Template part for Top Banner 
  *
  * @package WordPress
  * @subpackage FoundationPress
@@ -24,8 +24,7 @@
 			$astused = 1;
 		}
 	}
-	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,23);}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,6);}
 		
 	?>
-        
 	</div>

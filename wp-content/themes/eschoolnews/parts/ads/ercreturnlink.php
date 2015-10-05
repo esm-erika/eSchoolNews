@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for leaderboard 2 ad
+ * Template part for erc return link
  *
  * @package WordPress
  * @subpackage FoundationPress
@@ -10,7 +10,7 @@
 ?>
 
 	<div class="small-12 large-12 columns ad-container">
-	<?php // echo adrotate_group('1'); 
+			<?php // echo adrotate_group('1'); 
 		
 	if ($astused > 0){
 		// ast used defined   How to do this in the new?
@@ -24,8 +24,7 @@
 			$astused = 1;
 		}
 	}
-	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,23);}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,24);}
 		
 	?>
-        
 	</div>
