@@ -58,6 +58,9 @@ require_once( 'library/custom-post-types.php' );
 require_once( 'library/the-slug.php' );
 
 /** PHP Widget Function */
-//require_once( 'library/php-widgets.php' );
+require_once( 'library/php-widgets.php' );
+
+/** Add Options Page */
+require_once( 'library/options-page.php' );
 
 ?>

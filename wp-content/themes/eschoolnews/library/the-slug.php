@@ -17,6 +17,7 @@ function get_the_slug( $id=null ){
  *
  * Uses get_the_slug() and applies 'the_slug' filter.
  */
+
 function the_slug( $id=null ){
   echo apply_filters( 'the_slug', get_the_slug($id) );
 }
