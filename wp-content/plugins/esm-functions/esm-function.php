@@ -23,6 +23,10 @@ function disable_stuff( $data ) {return false;}
 
 
 
+
+
+
+
 function setesmpass_foot() {
 
 //placeholder for footer actions

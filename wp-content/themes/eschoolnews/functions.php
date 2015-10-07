@@ -63,4 +63,7 @@ require_once( 'library/php-widgets.php' );
 /** Add Options Page */
 require_once( 'library/options-page.php' );
 
+/** Add Settings for registration */
+require_once('library/options-registration.php')
+
 ?>
