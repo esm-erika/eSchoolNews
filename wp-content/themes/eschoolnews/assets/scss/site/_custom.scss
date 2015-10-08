@@ -161,33 +161,52 @@ nav.tab-bar .tab-bar-section.middle {
 		padding-right: 0.9375rem !important;
 	}
 
-	.center-menu li:not(.has-form) a:not(.button) {
-		background-color: #fff;
-		color: #333;
-		text-transform: uppercase;
-		font-size: 13px;
+	.center-menu {
+
+		li a {
+			background: #fff;
+			color: #333;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+
+		li .dropdown {
+
+			li a {
+				background: #fff;
+			}
+
+			// li.title h5 a {
+			// //
+			// }
+		}
 	}
 
-	.center-menu li.active:not(.has-form) a:not(.button) {
-		background-color: #fff;
-		// color: #fff;
-	}
+	// .center-menu li:not(.has-form) a:not(.button) {
+	// 	background-color: #fff;
+	// 	color: #333;
+	// 	text-transform: uppercase;
+	// 	font-size: 13px;
+	// }
 
-	.center-menu li:not(.has-form) a:not(.button):hover {
-		color: #336699;
-	}
+	// .center-menu li.active:not(.has-form) a:not(.button) {
+	// 	background-color: #fff;
+	// 	// color: #fff;
+	// }
 
-	.center-menu li.active:not(.has-form) a:hover:not(.button) {
-		background: #ffffff;
-	}
+	// .center-menu li:not(.has-form) a:not(.button):hover {
+	// 	color: #336699;
+	// }
+
+	// .center-menu li.active:not(.has-form) a:hover:not(.button) {
+	// 	background: #ffffff;
+	// }
 
 	ul.top-bar-menu {
 		border-bottom: 5px solid #333;
 	}
 
-	.dropdown li.title h5 a {
-		//
-	}
+	
 
 }
 
