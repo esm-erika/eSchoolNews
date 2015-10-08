@@ -80,7 +80,6 @@
         <div class="row">
           <div class="medium-12 columns">
             <h3>Subscribe to Our Newsletters</h3>
-            <p>Select from our list of newsletters to subscribe:</p>
           </div>
         </div>
 
