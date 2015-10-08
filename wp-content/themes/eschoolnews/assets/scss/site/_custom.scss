@@ -161,6 +161,11 @@ nav.tab-bar .tab-bar-section.middle {
 		padding-right: 0.9375rem !important;
 	}
 
+	.has-dropdown>a:after {
+		border: none;
+		display: none;
+	}
+
 	.center-menu li:not(.has-form) a:not(.button) {
 		background-color: #fff;
 		color: #333;
