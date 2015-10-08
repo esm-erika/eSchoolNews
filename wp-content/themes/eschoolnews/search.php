@@ -14,12 +14,22 @@ get_header(); ?>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
-		<h2><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
+		<h3><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h3>
 
 	<?php if ( have_posts() ) : ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header>
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					<?php foundationpress_entry_meta(); ?>
+				</header>
+				<footer>
+					<?php //$tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
+				</footer>
+			</article>
+
 		<?php endwhile; ?>
 
 		<?php else : ?>
