@@ -191,12 +191,12 @@ nav.tab-bar .tab-bar-section.middle {
 		border-top: 5px solid #333;
 
 		li:not(.has-form):not(.active)>a:not(.button) {
-			background: #fff;
+			background: #eee;
 			color: #333;
 			font-weight: 700;
 			text-transform: capitalize;
 			text-align: left;
-			border-bottom: 1px solid #ccc;
+			border-bottom: 1px solid #fff;
 		}
 
 		li:not(.has-form):not(.active)>a:not(.button):hover {
