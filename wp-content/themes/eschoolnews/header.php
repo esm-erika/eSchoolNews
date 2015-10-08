@@ -127,11 +127,14 @@
 
       <div id="drop2" data-dropdown-content class="f-dropdown content small search-drop" aria-hidden="true" tabindex="-1">
         <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-          <label>
-            <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+          <div class="row collapse">
+            <div class="small-9 columns">
             <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-          </label>
-          <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+            </div>
+            <div class="small-3 columns">
+          <input style="padding: 0;" type="submit" class="button postfix" value="Go" />
+          </div>
+          </div>
         </form>
       </div>
 
