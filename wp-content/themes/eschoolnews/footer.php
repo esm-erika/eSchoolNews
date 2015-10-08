@@ -39,7 +39,7 @@
 </div>
 <div class="row copyright">
 	<div class="small-12 large-6 columns small-text-center large-text-left">
-		&copy; Copyright <?php echo date("Y") ?> eSchoolMedia & eSchool News. All Rights Reserved.
+		&copy; Copyright <?php echo date("Y") ?> eSchoolMedia &amp; eSchool News. All Rights Reserved.
 	</div>
 	<div class="small-12 large-6 columns text-right small-text-center large-text-right">
 		7920 Norfolk Ave, Suite 900, Bethesda, MD 20814 | 1-800-394-0115
@@ -56,28 +56,6 @@
 </div>
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
-
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/vendor/jquery.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/vendor/fastclick.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/foundation.min.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
-
-<script type="text/javascript">
-	$(document).foundation('tab','equalizer','reflow');
-
-	    equalizer: {
-	    	// Specify if Equalizer should make elements equal height once they become stacked.
-	    	equalize_on_stack: true,
-	    	// Allow equalizer to resize hidden elements
-	    	act_on_hidden_el: false
-	  	}
-
-	  	tab: {
-	      callback : function(tab) {
-	        console.log(tab);
-	      }
-	    }
-  </script>
 
 </body>
 </html>
