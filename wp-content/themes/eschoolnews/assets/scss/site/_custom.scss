@@ -124,6 +124,10 @@ nav.tab-bar .tab-bar-section.middle {
 .sticky.fixed {
 	border-bottom: 1px solid #ccc;
 	background-color: #fff;
+
+	ul.top-bar-menu {
+		border-bottom: 0;
+	}
 }
 
 
@@ -136,7 +140,7 @@ nav.tab-bar .tab-bar-section.middle {
 }
 
 .top-bar-section{
-	background: #fff;
+	background: transparent;
 
  ul li {
 	background: #fff;
@@ -174,10 +178,15 @@ nav.tab-bar .tab-bar-section.middle {
 		background: #ffffff;
 	}
 
+	ul.top-bar-menu {
+		border-bottom: 5px solid #333;
+	}
+
 }
 
 .top-bar {
 	text-align: center;
+	background: #fff;
 
 	ul.center-menu {
 		display: inline-block;
@@ -205,6 +214,8 @@ nav.tab-bar {
 		padding: 5px;
 	}
 }
+
+
 
 nav.small-nav {
 	margin-top: 10px;
@@ -573,7 +584,7 @@ footer.container > div {
 			//padding-bottom: 10px;
 			margin-bottom: 30px;
 			margin-top: 30px;
-			//border-bottom: 5px solid #333;
+			
 		}
 
 		.widget_adrotate_widgets:first-child {
