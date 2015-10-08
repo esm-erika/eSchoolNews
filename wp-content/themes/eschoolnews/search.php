@@ -25,6 +25,7 @@ get_header(); ?>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<?php foundationpress_entry_meta(); ?>
 				</header>
+				<hr />
 			</article>
 
 		<?php endwhile; ?>
