@@ -18,7 +18,6 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 	border-bottom: 1px solid #999;
 	display: inline-block;
 	padding-bottom: 5px;
-
 }
 
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
@@ -45,7 +44,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	}
 }
 
-p.category,  {
+p.category  {
 	background-color: #e31936;
 	color: #fff;
 	padding: 2px 5px;
@@ -184,6 +183,10 @@ nav.tab-bar .tab-bar-section.middle {
 
 	ul.top-bar-menu {
 		border-bottom: 5px solid #333;
+	}
+
+	.dropdown li.title h5 a {
+		//
 	}
 
 }
