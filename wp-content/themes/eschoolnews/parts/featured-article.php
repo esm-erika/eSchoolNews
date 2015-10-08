@@ -37,9 +37,6 @@
 
 		<article class="small-12 large-6 columns">
 
-
-			
-
 			<header> 
 					<span class="flag"><a href="#">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -47,7 +44,7 @@
 
 				<div class="excerpt">
 					<?php 
-					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 100, $more = '' ), true); 
 					?>
 				</div>
 			</header>
