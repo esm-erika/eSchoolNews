@@ -118,8 +118,8 @@
 
     <div class="small-12 medium-6 columns small-text-center medium-text-right">
       <div class="social right">
-        <a href="#" class="right"><i class="fi-social-twitter medium"></i></a>
-        <a href="#" class="right"><i class="fi-social-facebook medium"></i></a>
+        <a href="http://www.twitter.com/eschoolnews" target="new" class="right"><i class="fi-social-twitter medium"></i></a>
+        <a href="http://www.facebook.com/eschoolnews/" target="new" class="right"><i class="fi-social-facebook medium"></i></a>
 
       </div>
 
