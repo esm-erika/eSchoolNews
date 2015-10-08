@@ -41,7 +41,7 @@
 			
 
 			<header> 
-					<p class="category"><a href="#">Featured</a></p>
+					<span class="flag"><a href="#">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<p class="author">By <?php the_author(); ?></p>
 
