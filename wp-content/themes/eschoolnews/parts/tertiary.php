@@ -38,8 +38,9 @@
 						
 
 						<header> 
-							<p class="download"><a href="#"><i class="fi-arrow-down"></i> Download</a></p>
-							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+							<h4><?php the_title(); ?></h4>
+							<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 						</header>
 
 						
