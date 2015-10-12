@@ -23,7 +23,7 @@ get_header(); ?>
 
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-12 columns" role="main">
 
 <?php 	$args = array('post_type' => array( 'Webinars' ));
 		$query = new WP_Query( $args );
@@ -38,7 +38,7 @@ get_header(); ?>
 	  
 <section class="tertiary">
 
-		<ul class="small-block-grid-2 large-block-grid-3">
+		<ul class="small-block-grid-1 medium-block-grid-2">
 
 
 
@@ -61,10 +61,9 @@ if($webinar_date >= $todayis){
 						<?php the_post_thumbnail('small-thumb');?>
 
 						<header> 
-							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							<p>
-                            <?php  if($showdate){echo $showdate->format('d F, Y'); echo "<br />";} ?>
-                            <a href="<?php the_field('webinar_registration_link'); ?>">Register Now</a></p>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <h5><?php  if($showdate){echo $showdate->format('d F, Y'); echo "<br />";} ?></h5>
+                            <a class="button radius small" target="new" href="<?php the_field('webinar_registration_link'); ?>">Register Now</a>
 						</header>
 
 						
@@ -180,6 +179,6 @@ if($webinar_date < $todayis){
 
 
 
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
