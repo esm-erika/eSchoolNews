@@ -202,6 +202,10 @@ nav.tab-bar .tab-bar-section.middle {
 		li:not(.has-form):not(.active)>a:not(.button):hover {
 			color: #666;
 		}
+
+		.dropdown {
+			border-top: 0;
+		}
 	}
 
 	ul.top-bar-menu {
@@ -446,7 +450,7 @@ article {
 }
 
 .article-social {
-	margin-top: 20px;
+	margin: 20px 0;
 	// float: right;
 
 	a {
@@ -496,7 +500,11 @@ article {
 	}
 
 	article footer {
-		display: none;
+		background: #fff;
+
+		span.tag {
+			margin-right: 5px;
+		}
 	}
 }
 
