@@ -138,7 +138,7 @@ if($webinar_date < $todayis){
 						<header> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							<p>
-                            <?php  if($showdate){echo $showdate->format('d F, Y'); echo "<br />";} ?>
+                            <?php  if($showdate){echo $showdate->format('F d, Y'); echo "<br />";} ?>
                             <a href="<?php the_field('webinar_registration_link'); ?>">Register Now</a></p>
 						</header>
 
