@@ -38,8 +38,6 @@ get_header(); ?>
 			</header>
 
 			
-<hr/>
-<?php endif; ?>
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="row entry-content">
@@ -128,12 +126,15 @@ get_header(); ?>
 
 			</div>
 
-			<?php 
+
+<?php 
 
 $image = get_field('sponsored_by');
 
 if( !empty($image) ): ?>
+
 <hr/>
+
 <div class="row sponsor">
 	<div class="medium-4 columns">
 	
@@ -143,8 +144,7 @@ if( !empty($image) ): ?>
 	</div>
 </div>
 
-
-
+<?php endif; ?>
 
 
 
