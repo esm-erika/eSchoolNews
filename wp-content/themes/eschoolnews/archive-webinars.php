@@ -49,7 +49,7 @@ get_header(); ?>
 $webinar_date = get_field( "webinar_date" );
 $webinar_registration_link = get_field_object("webinar_registration_link");
 $todayis = date("Ymd");
-$showdate = DateTime::createFromFormat('Ymd', $webinar_date);
+$showdate = DateTime::createFromFormat('m d, Y', $webinar_date);
 if($webinar_date >= $todayis){
 	$count++
 					?>
@@ -123,7 +123,7 @@ if($webinar_date >= $todayis){
 $webinar_date = get_field( "webinar_date" );
 $webinar_registration_link = get_field_object("webinar_registration_link");
 $todayis = date("Ymd");
-$showdate = DateTime::createFromFormat('Ymd', $webinar_date);
+$showdate = DateTime::createFromFormat('m d, Y', $webinar_date);
 if($webinar_date < $todayis){
 	$count++
 					?>
@@ -138,8 +138,8 @@ if($webinar_date < $todayis){
 						<header> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							<p>
-                            <?php  if($showdate){echo $showdate->format('d F, Y'); echo "<br />";} ?>
-                            <a class="button radius" href="<?php the_permalink(); ?>">View Now</a></p>
+							<h5><?php the_field('webinar_date'); ?></h5>
+                            <a class="button radius small" href="<?php the_permalink(); ?>">View Now</a></p>
 						</header>
 
 						
