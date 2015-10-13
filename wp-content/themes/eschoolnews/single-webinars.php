@@ -104,7 +104,7 @@ if( !empty($image) ): ?>
 
 				
 
-				<ul class="medium-block-grid-3">
+				<ul class="medium-block-grid-4">
 
 			<?php while( have_rows('webinar_speakers') ): the_row(); 
 
