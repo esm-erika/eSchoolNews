@@ -34,7 +34,6 @@ get_header(); ?>
 				<h3>Date: <?php the_field('webinar_date'); ?></h3>
 				<h5>Time: <?php the_field('webinar_time'); ?></h5>
 
-				<?php get_template_part('parts/social'); ?>
 			</header>
 
 			<?php 
@@ -44,12 +43,14 @@ $image = get_field('sponsored_by');
 if( !empty($image) ): ?>
 
 <div class="row sponsor">
-	<div class="medium-2 columns">
-		Sponsored By:
+
+	<div class="medium-8 columns">
+		<?php get_template_part('parts/social'); ?>
 	</div>
+
 	<div class="medium-4 columns">
 	
-
+<small>Sponsored By:</small>
 	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 	</div>
