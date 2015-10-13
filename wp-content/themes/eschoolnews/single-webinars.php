@@ -65,10 +65,59 @@ get_header(); ?>
 				} else {
 
 					echo '<div class="large-12 columns">';
+					echo '<h5>About Event</h5>';
 					the_field('webinar_information');
 					echo '</div>';
 
 				} ?>
+
+<hr/>
+				<div class="medium-12 columns">
+
+			<h4>Meet Your Speakers</h4>
+
+				<?php if( have_rows('webinar_speakers') ): ?>
+
+				
+
+				<ul class="medium-block-grid-3">
+
+			<?php while( have_rows('webinar_speakers') ): the_row(); 
+
+				// vars
+				$photo = get_sub_field('speaker_photo');
+				$name = get_sub_field('speaker_name');
+				$title = get_sub_field('speaker_title');
+				$organization = get_sub_field('speaker_organization');
+
+				?>
+
+				<li class="speaker text-center">
+					
+					<?php if( $photo ): ?>	
+						<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
+					<?php endif; ?>
+
+					<?php if( $name ): ?>
+						<h5><?php echo $name; ?></h5>
+					<?php endif; ?>
+					<?php if( $title ): ?>
+						<div><?php echo $title; ?></div>
+					<?php endif; ?>
+					<?php if( $name ): ?>
+						<div><em><?php echo $organization; ?></em></div>
+					<?php endif; ?>
+					
+				</li>
+
+			<?php endwhile; ?>
+
+			</ul>
+
+<?php endif; ?>
+
+</div>
+
 
 			</div>
 
