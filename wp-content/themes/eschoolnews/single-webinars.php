@@ -78,7 +78,7 @@ get_header(); ?>
 
 			</div>
 
-			<hr/>
+			
 
 			<?php 
 
@@ -89,8 +89,8 @@ if( !empty($image) ): ?>
 <div class="row sponsor">
 	<div class="medium-4 medium-right columns">
 	
-<h6 class="right">Sponsored By:</h6>
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+<!-- <h6 class="right">Sponsored By:</h6>
+ -->	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 	</div>
 </div>
