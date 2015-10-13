@@ -9,6 +9,41 @@
 
 ?>
 <aside id="sidebar" class="small-12 large-4 columns">
+
+	<?php 
+	if( is_singular('webinars')) { 
+
+		// The Query
+				$upcoming = array(
+					'post_type' => 'webinars',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'status_webinars',
+							'field' => 'slug',
+							'terms' => 'upcoming-webinars',
+
+							),
+
+						),
+
+					);
+
+				$query = new WP_Query( $upcoming );
+
+				while ( $query->have_posts() ) :
+					$query->the_post(); ?>
+
+				<div class="row">
+					<div class="large-12 columns">
+						<h4><a href="<php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					</div>
+				</div>
+					
+					<?php endwhile; 
+				wp_reset_postdata();
+
+	} ?>
 	
 	<!-- <div class="box-ad"><img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sample-ad.png"/></div> -->
 
