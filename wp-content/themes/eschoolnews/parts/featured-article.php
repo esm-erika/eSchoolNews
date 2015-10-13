@@ -9,9 +9,11 @@
 
 ?>
 
+
+
 <div class="small-12 large-6 columns" role="main">
 
-			
+
 
 <?php if ( have_posts() ) : ?>
 

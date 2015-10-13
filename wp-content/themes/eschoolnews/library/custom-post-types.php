@@ -128,6 +128,7 @@ function webinar_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
@@ -176,6 +177,50 @@ function specialreports_register() {
 	  ); 
  
 	register_post_type( 'special-reports' , $args );
+} 
+
+
+/*===================================================================================
+ * Events
+ * =================================================================================*/
+
+add_action('init', 'events_register');
+ 
+function events_register() {
+ 
+	$labels = array(
+		'name' => _x('Events', 'post type general name'),
+		'singular_name' => _x('Event', 'post type singular name'),
+		'add_new' => _x('Add New', 'webinar item'),
+		'add_new_item' => __('Add New Event'),
+		'edit_item' => __('Edit Event'),
+		'new_item' => __('New Event'),
+		'view_item' => __('View Event'),
+		'search_items' => __('Search Eventss'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-tickets-alt',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => true,
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'events' , $args );
+
+	register_taxonomy("conferences", array("events"), array("hierarchical" => true, "label" => "Conferences", "singular_label" => "Conference", "rewrite" => true));
+
 } 
 
 
