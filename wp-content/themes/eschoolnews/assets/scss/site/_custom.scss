@@ -203,6 +203,12 @@ nav.tab-bar .tab-bar-section.middle {
 			color: #666;
 		}
 
+		li.active:not(.has-form) a:not(.button) {
+			text-transform: capitalize;
+			color: #666;
+			font-weight: 700;
+		}
+
 		.dropdown {
 			border-top: 0;
 		}
@@ -379,6 +385,20 @@ p.login-submit, p.login-remember {
 section.erc-section {
 	//overflow: hidden;
 	//border-top: 5px solid #000;
+}
+
+li.speaker {
+	img {
+		margin-bottom: 10px;
+	}
+
+	h5 {
+		margin-bottom: 0;
+	}
+
+	div {
+		line-height: 1;
+	}
 }
 
 

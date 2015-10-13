@@ -37,6 +37,11 @@ get_header(); ?>
 				<?php get_template_part('parts/social'); ?>
 			</header>
 
+			
+
+<hr/>
+
+			
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="row entry-content">
@@ -44,7 +49,7 @@ get_header(); ?>
 				<?php if ( has_post_thumbnail() ) {
 
 					echo '<div class="large-4 columns">';
-					the_post_thumbnail(); 
+					the_post_thumbnail('full'); 
 					echo '</div>';
 
 					echo '<div class="large-8 columns">';
@@ -65,10 +70,84 @@ get_header(); ?>
 				} else {
 
 					echo '<div class="large-12 columns">';
+					echo '<h5>About Event</h5>';
 					the_field('webinar_information');
 					echo '</div>';
 
 				} ?>
+
+			</div>
+
+			
+
+			<?php 
+
+$image = get_field('sponsored_by');
+
+if( !empty($image) ): ?>
+
+<div class="row sponsor">
+	<div class="medium-4 medium-right columns">
+	
+<!-- <h6 class="right">Sponsored By:</h6>
+ -->	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+	</div>
+</div>
+
+<hr/>
+
+<?php endif; ?>
+			
+			<div class="row">
+
+
+				<div class="medium-12 columns">
+
+			<h4>Meet Your Speakers</h4>
+
+				<?php if( have_rows('webinar_speakers') ): ?>
+
+				
+
+				<ul class="medium-block-grid-4">
+
+			<?php while( have_rows('webinar_speakers') ): the_row(); 
+
+				// vars
+				$photo = get_sub_field('speaker_photo');
+				$name = get_sub_field('speaker_name');
+				$title = get_sub_field('speaker_title');
+				$organization = get_sub_field('speaker_organization');
+
+				?>
+
+				<li class="speaker text-center">
+					
+					<?php if( $photo ): ?>	
+						<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
+					<?php endif; ?>
+
+					<?php if( $name ): ?>
+						<h5><?php echo $name; ?></h5>
+					<?php endif; ?>
+					<?php if( $title ): ?>
+						<div><?php echo $title; ?></div>
+					<?php endif; ?>
+					<?php if( $name ): ?>
+						<div><em><?php echo $organization; ?></em></div>
+					<?php endif; ?>
+					
+				</li>
+
+			<?php endwhile; ?>
+
+			</ul>
+
+<?php endif; ?>
+
+</div>
+
 
 			</div>
 

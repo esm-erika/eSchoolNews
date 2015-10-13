@@ -108,6 +108,7 @@ if($webinar_date >= $todayis){
 			?>
             
 
+<hr/>
 	  
 <section class="tertiary">
 	<h4>Past Webinars</h4>
