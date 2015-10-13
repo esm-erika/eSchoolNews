@@ -19,7 +19,7 @@
 					'tax_query' => array(
 						array(
 
-							'taxonomy' => 'status_webinars',
+							'taxonomy' => 'status-webinars',
 							'field' => 'slug',
 							'terms' => 'upcoming-webinars',
 
@@ -29,14 +29,22 @@
 
 					);
 
-				$query = new WP_Query( $upcoming );
 
+				$query = new WP_Query( $upcoming );
+				
+				
 				while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
+
 				<div class="row">
 					<div class="large-12 columns">
-						<h4><a href="<php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<p><?php 
+                        $showdate = DateTime::createFromFormat('Ymd', get_field( "webinar_date" )); 
+						echo $showdate->format('F d, Y'); ?></p>
+                         
+                        
 					</div>
 				</div>
 					

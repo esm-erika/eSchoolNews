@@ -18,4 +18,10 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+
+function append_query_string($url) {
+    return add_query_arg($_GET, $url);
+}
+add_filter('the_permalink', 'append_query_string');
+
 ?>
