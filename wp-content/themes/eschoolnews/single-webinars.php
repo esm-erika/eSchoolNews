@@ -37,6 +37,25 @@ get_header(); ?>
 				<?php get_template_part('parts/social'); ?>
 			</header>
 
+			<?php 
+
+$image = get_field('sponsored_by');
+
+if( !empty($image) ): ?>
+
+<div class="sponsor">
+	<small>Sponsored By:</small>
+
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+	</div>
+
+<?php endif; ?>
+
+			
+
+			
+
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="row entry-content">
@@ -44,7 +63,10 @@ get_header(); ?>
 				<?php if ( has_post_thumbnail() ) {
 
 					echo '<div class="large-4 columns">';
-					the_post_thumbnail(); 
+					 
+					$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+					$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						
 					echo '</div>';
 
 					echo '<div class="large-8 columns">';
