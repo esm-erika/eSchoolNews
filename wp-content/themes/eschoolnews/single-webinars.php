@@ -37,24 +37,9 @@ get_header(); ?>
 				<?php get_template_part('parts/social'); ?>
 			</header>
 
-			<?php 
-
-$image = get_field('sponsored_by');
-
-if( !empty($image) ): ?>
-
-<div class="row sponsor">
-	<div class="medium-4 columns">
-	
-<h6 class="right">Sponsored By:</h6>
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-	</div>
-</div>
+			
 
 <hr/>
-
-<?php endif; ?>
 
 			
 
@@ -92,7 +77,26 @@ if( !empty($image) ): ?>
 				} ?>
 
 			</div>
+
 			<hr/>
+
+			<?php 
+
+$image = get_field('sponsored_by');
+
+if( !empty($image) ): ?>
+
+<div class="row sponsor">
+	<div class="medium-8 medium-right columns">
+	
+<h6 class="right">Sponsored By:</h6>
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+	</div>
+</div>
+
+<?php endif; ?>
+			
 			<div class="row">
 
 
