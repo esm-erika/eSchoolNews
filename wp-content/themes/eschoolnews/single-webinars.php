@@ -44,14 +44,17 @@ $image = get_field('sponsored_by');
 if( !empty($image) ): ?>
 
 <div class="row sponsor">
-	<div class="medium-6 medium-left">
-	<small>Sponsored By:</small>
+	<div class="medium-2 columns">
+		Sponsored By:
+	</div>
+	<div class="medium-4 columns">
+	
 
 	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 	</div>
 </div>
-
+<hr/>
 <?php endif; ?>
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
