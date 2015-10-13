@@ -203,6 +203,11 @@ nav.tab-bar .tab-bar-section.middle {
 			color: #666;
 		}
 
+		li.active:not(.has-form) a:not(.button) {
+			text-transform: capitalize;
+			color: #666;
+		}
+
 		.dropdown {
 			border-top: 0;
 		}
