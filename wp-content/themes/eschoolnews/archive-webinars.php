@@ -49,7 +49,8 @@ get_header(); ?>
 $webinar_date = get_field( "webinar_date" );
 $webinar_registration_link = get_field_object("webinar_registration_link");
 $todayis = date("Ymd");
-$showdate = DateTime::createFromFormat('m d, Y', $webinar_date);
+$showdate = DateTime::createFromFormat('Ymd', $webinar_date);
+
 if($webinar_date >= $todayis){
 	$count++
 					?>
@@ -62,7 +63,7 @@ if($webinar_date >= $todayis){
 
 						<header> 
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <h5><?php the_field('webinar_date'); ?></h5>
+                            <h5><?php echo $showdate->format('F d, Y'); ?></h5>
                             <a class="button radius small" target="new" href="<?php the_field('webinar_registration_link'); ?>">Register Now</a>
 						</header>
 
