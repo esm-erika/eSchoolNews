@@ -64,6 +64,12 @@ require_once( 'library/php-widgets.php' );
 require_once( 'library/options-page.php' );
 
 /** Add Settings for registration */
-require_once('library/options-registration.php')
+require_once('library/options-registration.php');
+
+/** Add Custom Post Types to Taxonomies [Tags Search] */
+require_once('library/cpt-taxonomy.php');
+
+/** Add Custom Post Types to Tag Cloud */
+require_once('library/tag-cloud.php');
 
 ?>

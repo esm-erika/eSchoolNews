@@ -12,34 +12,33 @@
 
 
 
-
+<div class="medium-12 columns"><h1 class="section-title"><span>
 
 <?php 
 
-if ( is_page('Resources')) {
+if ( is_page()) {
 
-	echo '<div class="medium-12 columns"><h1 class="section-title"><span>';
+	the_title();
+
+} elseif ( is_page('Resources')) {
 
 	echo 'Resources';
 
-	echo '</span></h1></div>';
-
 } elseif ( is_archive()) {
-
-	echo '<div class="medium-12 columns"><h1 class="section-title"><span>';
 
 	post_type_archive_title();
 
-	echo '</span></h1></div>';
+} elseif ( is_tag()) {
 
-} elseif ( is_tax()) {
+	single_tag_title();
 
-	//single_term_title();
+	echo 'tag';
 
-	echo 'Test';
 }
 
 ?>
+
+</span></h1></div>
 
 
 

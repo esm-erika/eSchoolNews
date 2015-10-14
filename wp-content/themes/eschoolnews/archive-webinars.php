@@ -25,7 +25,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
-<?php 	$args = array('post_type' => array( 'Webinars' ));
+<?php 	$args = array('post_type' => array( 'webinars' ));
 		$query = new WP_Query( $args );
 		$count = 0;
 			
@@ -89,7 +89,7 @@ if($webinar_date >= $todayis){
 
 		</ul>
 
-		<h6 class="readmore"><a href="#">See More Webinars &raquo;</a></h6>
+		<!-- <h6 class="readmore"><a href="#">See More Webinars &raquo;</a></h6> -->
 
 	</section>
 
@@ -112,7 +112,7 @@ if($webinar_date >= $todayis){
 <hr/>
 	  
 <section class="tertiary">
-	<h4>Past Webinars</h4>
+	<h4>Archived Webinars</h4>
 
 		<ul class="small-block-grid-2 large-block-grid-3">
 
@@ -129,9 +129,7 @@ $showdate = DateTime::createFromFormat('Ymd', $webinar_date);
 if($webinar_date < $todayis){
 	$count++
 					?>
-						
-					 
-                     
+											 
 					<li>
 					<article>
 
@@ -139,9 +137,8 @@ if($webinar_date < $todayis){
 
 						<header> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							<p>
-							<h5><?php if($showdate){echo $showdate->format('F d, Y');} ?></h5>
-                            <a class="button radius small" href="<?php the_permalink(); ?>">View Now</a></p>
+							<h6><?php if($showdate){echo $showdate->format('F d, Y');} ?></h6>
+                            <a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
 						</header>
 
 						
@@ -165,7 +162,7 @@ if($webinar_date < $todayis){
 
 		</ul>
 
-		<h6 class="readmore"><a href="#">See More Webinars &raquo;</a></h6>
+		<h6 class="readmore"><a href="#">See More Archived Webinars &raquo;</a></h6>
 
 	</section>
 

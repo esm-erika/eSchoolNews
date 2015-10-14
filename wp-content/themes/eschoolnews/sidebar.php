@@ -13,45 +13,17 @@
 	<?php 
 	if( is_singular('webinars')) { 
 
-		// The Query
-				$upcoming = array(
-					'post_type' => 'webinars',
-					'tax_query' => array(
-						array(
+		get_template_part( 'parts/sidebar/upcoming-webinars' );  
 
-							'taxonomy' => 'status-webinars',
-							'field' => 'slug',
-							'terms' => 'upcoming-webinars',
+	}?>
 
-							),
+	<?php if( is_tag()) {
 
-						),
-
-					);
-
-
-				$query = new WP_Query( $upcoming );
-				
-				
-				while ( $query->have_posts() ) :
-					$query->the_post(); ?>
-
-
-				<div class="row">
-					<div class="large-12 columns">
-						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<p><?php 
-                        $showdate = DateTime::createFromFormat('Ymd', get_field( "webinar_date" )); 
-						echo $showdate->format('F d, Y'); ?></p>
-                         
-                        
-					</div>
-				</div>
-					
-					<?php endwhile; 
-				wp_reset_postdata();
+		get_template_part( 'parts/sidebar/tag-cloud' );
 
 	} ?>
+
+	
 	
 	<!-- <div class="box-ad"><img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sample-ad.png"/></div> -->
 

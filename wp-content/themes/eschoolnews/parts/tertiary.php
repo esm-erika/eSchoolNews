@@ -38,7 +38,7 @@
 						
 
 						<header> 
-							<h4><?php the_title(); ?></h4>
+							<h5><?php the_title(); ?></h5>
 							<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
 							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 						</header>
