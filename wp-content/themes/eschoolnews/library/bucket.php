@@ -34,9 +34,8 @@ function LandingRecentItems($catslug, $qty = 3){
 	 $catid = $idObj->term_id;
 	 $category_link = get_category_link( $catid );
 
-echo '<pre>';
-print_r($idObj);
-echo '</pre>';
+if(empty($idObj)){echo '<!--- No category found --->';}else{
+	
 	 	 
  echo '<!-- '.$catname.' -->';
 
@@ -74,6 +73,6 @@ echo '</pre>';
 <hr/>
 <?php wp_reset_postdata(); 
 
-	
+	  }
 	}
 } ?>
