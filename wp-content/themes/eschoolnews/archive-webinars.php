@@ -91,6 +91,8 @@ if($webinar_date >= $todayis){
 
 		<!-- <h6 class="readmore"><a href="#">See More Webinars &raquo;</a></h6> -->
 
+		<hr/>
+
 
 
 	
@@ -109,7 +111,7 @@ if($webinar_date >= $todayis){
 			?>
             
 
-<hr/>
+
 	  
 	<h4>Archived Webinars</h4>
 

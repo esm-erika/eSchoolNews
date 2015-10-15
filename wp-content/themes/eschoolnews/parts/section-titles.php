@@ -28,6 +28,7 @@ if ( is_page()) {
 
 	echo get_queried_object()->name;
 
+
 } 
 
 ?>
