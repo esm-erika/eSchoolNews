@@ -36,7 +36,7 @@ get_header(); ?>
             
 <h4>Upcoming Webinars</h4>
 	  
-<section class="tertiary">
+
 
 		<ul class="small-block-grid-1 medium-block-grid-2">
 
@@ -91,7 +91,7 @@ if($webinar_date >= $todayis){
 
 		<!-- <h6 class="readmore"><a href="#">See More Webinars &raquo;</a></h6> -->
 
-	</section>
+
 
 	
 					<?php endif;?>
@@ -111,7 +111,6 @@ if($webinar_date >= $todayis){
 
 <hr/>
 	  
-<section class="tertiary">
 	<h4>Archived Webinars</h4>
 
 		<ul class="small-block-grid-2 large-block-grid-3">
@@ -164,7 +163,6 @@ if($webinar_date < $todayis){
 
 		<h6 class="readmore"><a href="#">See More Archived Webinars &raquo;</a></h6>
 
-	</section>
 
 	
 					<?php endif;?>
@@ -177,7 +175,6 @@ if($webinar_date < $todayis){
 
 
 
-</div>
 	<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
