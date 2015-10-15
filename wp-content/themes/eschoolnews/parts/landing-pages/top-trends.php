@@ -15,6 +15,11 @@ function LandingRecentItems($catslug, $qty = 3){
 	 $idObj = get_category_by_slug($catslug);
 	 $catname =  $idObj->term_id;
 	
+	 echo '<pre>';
+	 print_r($idObj);
+	 echo '</pre>';
+	 
+	 	 
  echo '<!-- '.$catname.' -->';
 
 	$query_1 = array(
