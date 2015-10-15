@@ -59,7 +59,7 @@ function LandingRecentItems($catslug, $qty = 3){
 
 <!--- fun test ---->
 
-<?php LandingRecentItems('21st-century-skills', 3) ?>
+<?php LandingRecentItems('funding', 3) ?>
 
 <!-- fun test end --->
 
