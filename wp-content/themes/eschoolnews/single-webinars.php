@@ -33,7 +33,7 @@ get_header(); ?>
 
 				<h3>Date: <?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
-				echo $showdate->format('F d, Y'); ?></h3>
+				if($showdate){ echo $showdate -> format('F d, Y');} ?></h3>
 				<h5>Time: <?php the_field('webinar_time'); ?></h5>
 
 				<?php get_template_part('parts/social'); ?>

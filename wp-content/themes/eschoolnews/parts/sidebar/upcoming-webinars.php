@@ -1,3 +1,5 @@
+<h3 class="section-title"><span>Upcoming Webinars</span></h3>
+
 <?php // The Query
 				$upcoming = array(
 					'post_type' => 'webinars',
