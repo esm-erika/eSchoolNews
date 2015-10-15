@@ -33,6 +33,10 @@ function LandingRecentItems($catslug, $qty = 3){
 	 $catname =  $idObj->name;
 	 $catid = $idObj->term_id;
 	 $category_link = get_category_link( $catid );
+
+echo '<pre>';
+print_r($idObj);
+echo '</pre>';
 	 	 
  echo '<!-- '.$catname.' -->';
 
