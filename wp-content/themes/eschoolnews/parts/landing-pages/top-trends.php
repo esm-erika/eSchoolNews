@@ -8,7 +8,7 @@
 <?php 
 
 function LandingRecentItems($catslug, $qty = 3){
-	if($catname == null){
+	if($catslug == null){
 		echo '<!--- No Category Passed --->';	
 	} else {
 	 $catid = get_cat_ID( $catslug );
