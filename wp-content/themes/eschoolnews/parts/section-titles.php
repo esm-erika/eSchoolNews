@@ -29,6 +29,7 @@ if ( is_page()) {
 	echo get_queried_object()->name;
 
 } 
+
 ?>
 
 </span></h1></div>

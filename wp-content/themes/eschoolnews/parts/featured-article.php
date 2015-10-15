@@ -9,7 +9,7 @@
 
 ?>
 
-
+<h1 class="section-title"><span>Featured Story</span></h1>
 
 <div class="small-12 large-6 columns" role="main">
 

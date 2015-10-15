@@ -131,7 +131,7 @@ if( !empty($image) ): ?>
 					<?php endif; ?>
 
 					<?php if( $name ): ?>
-						<h5><?php echo $name; ?></h5>
+						<h6><?php echo $name; ?></h6>
 					<?php endif; ?>
 					<?php if( $title ): ?>
 						<div><?php echo $title; ?></div>
