@@ -4,68 +4,6 @@
 ?>
 
 
-
-<?php 
-
-function LandingRecentItems($catslug, $qty = 3){
-	if($catslug == null){
-		echo '<!--- No Category Passed --->';	
-	} else {
-	 $idObj = get_category_by_slug($catslug);
-	 $catname =  $idObj->name;
-	 $catid = $idObj->term_id;
-	 $category_link = get_category_link( $catid );
-	 	 
- echo '<!-- '.$catname.' -->';
-
-	$query_1 = array(
-		'cat' => $catid,
-		'posts_per_page' => $qty
-
-		);
-
-	$query_1 = new WP_Query( $query_1 );
- ?>
-<h4><?php  echo $catname; ?></h4>
-<ul class="small-block-grid-2 large-block-grid-3">
-	<?php // The Loop
-	while ( $query_1->have_posts() ) :
-		$query_1->the_post(); ?>
-	<li>
-		<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		} ?>
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<div class="excerpt">
-		<?php 
-			echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 20, $more = '' ), true); 
-		?> 
-		</div>
-	</li>
-
-<?php endwhile; ?>
-
-</ul>
-
-<h6><a href="<?php echo $category_link; ?>">Read more <strong><?php echo $catname; ?></strong> Posts &raquo;</a></h6>
-
-<hr/>
-<?php wp_reset_postdata(); 
-
-	
-	}
-}
-
-?>
-
-
-<!--- fun test ---->
-
-<?php LandingRecentItems('funding', 3) ?>
-
-<!-- fun test end --->
-
-
 <!-- 21ST CENTURY SKILLS -->
 
 <?php 
@@ -204,47 +142,7 @@ function LandingRecentItems($catslug, $qty = 3){
 <?php wp_reset_postdata(); ?>
 
 
-<!-- FUNDING -->
-
-<?php 
-
-	$query_4 = array(
-		'category_name' => 'funding',
-		'posts_per_page' => '3'
-		);
-
-	$query_4 = new WP_Query( $query_4 );
-
-
- ?>
-
-<h4>Funding</h4>
-
-<ul class="small-block-grid-2 large-block-grid-3">
-
-	<?php // The Loop
-	while ( $query_4->have_posts() ) :
-		$query_4->the_post(); ?>
-
-	<li>
-		<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		} ?>
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<div class="excerpt">
-		<?php 
-			echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 20, $more = '' ), true); 
-		?> 
-		</div>
-	</li>
-
-<?php endwhile; ?>
-</ul>
-
-<h6><a href="#">Read more <strong>Funding</strong> Posts &raquo;</a></h6>
-
-<hr/>
-<?php wp_reset_postdata(); ?>
+<?php LandingRecentItems('funding', 3) ?>
 
 
 <!-- INNOVATION CORNER -->
