@@ -12,7 +12,8 @@ function LandingRecentItems($catslug, $qty = 3){
 		echo '<!--- No Category Passed --->';	
 	} else {
 	 $catid = get_cat_ID( $catslug );
-	 $catname = get_category_by_slug($catslug);
+	 $idObj = get_category_by_slug($catslug);
+	 $catname =  $idObj->term_id;
 	
  echo '<!-- '.$catname.' -->';
 
