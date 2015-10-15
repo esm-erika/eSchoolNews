@@ -28,7 +28,7 @@ if ( is_page()) {
 
 	post_type_archive_title();
 
-} elseif ( is_tag()) {
+} elseif ( is_tag() || is_tax() ) {
 
 	single_tag_title();
 
