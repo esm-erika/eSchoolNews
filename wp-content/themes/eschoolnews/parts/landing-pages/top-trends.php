@@ -33,7 +33,7 @@ function LandingRecentItems($catslug, $qty = 3){
 
 	$query_1 = new WP_Query( $query_1 );
  ?>
-<h4><?php  echo '<!-- '.$catname.' -->'; ?></h4>
+<h4><?php  echo $catname; ?></h4>
 <ul class="small-block-grid-2 large-block-grid-3">
 	<?php // The Loop
 	while ( $query_1->have_posts() ) :
@@ -54,7 +54,7 @@ function LandingRecentItems($catslug, $qty = 3){
 
 </ul>
 
-<h6><a href="<?php get_category_link( $catid ); ?> ">Read more <strong><?php echo '<!-- '.$catname.' -->'; ?></strong> Posts &raquo;</a></h6>
+<h6><a href="<?php get_category_link( $catid ); ?> ">Read more <strong><?php echo $catname; ?></strong> Posts &raquo;</a></h6>
 
 <hr/>
 <?php wp_reset_postdata(); 
