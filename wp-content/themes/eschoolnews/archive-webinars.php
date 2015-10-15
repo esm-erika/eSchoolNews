@@ -177,7 +177,7 @@ if($webinar_date < $todayis){
 
 
 
-
+</div>
 	<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
