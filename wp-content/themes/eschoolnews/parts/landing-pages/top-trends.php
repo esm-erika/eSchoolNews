@@ -14,14 +14,7 @@ function LandingRecentItems($catslug, $qty = 3){
 	 $idObj = get_category_by_slug($catslug);
 	 $catname =  $idObj->name;
 	 $catid = $idObj->term_id;
-	 
-	 echo $catname."!!!!!!!!!!!!!";
-	 echo $idObj->name;
-	 	
-	 echo '<pre>';
-	 print_r($idObj);
-	 echo '</pre>';
-	 
+	 $category_link = get_category_link( $catid );
 	 	 
  echo '<!-- '.$catname.' -->';
 
@@ -54,7 +47,7 @@ function LandingRecentItems($catslug, $qty = 3){
 
 </ul>
 
-<h6><a href="<?php get_category_link( $catid ); ?> ">Read more <strong><?php echo $catname; ?></strong> Posts &raquo;</a></h6>
+<h6><a href="<?php echo $category_link; ?>">Read more <strong><?php echo $catname; ?></strong> Posts &raquo;</a></h6>
 
 <hr/>
 <?php wp_reset_postdata(); 
