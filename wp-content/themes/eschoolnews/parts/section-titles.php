@@ -26,15 +26,9 @@ if ( is_page()) {
 
 } elseif ( is_archive()) {
 
-	post_type_archive_title();
+	echo get_queried_object()->name;
 
-} elseif ( is_tag() || is_tax() ) {
-
-	single_tag_title();
-
-	echo 'tag';
-
-}
+} 
 
 ?>
 

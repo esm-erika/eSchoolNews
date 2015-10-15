@@ -119,7 +119,22 @@ echo $data_field_name1; ?>" value="<?php echo $opt_val1; ?>" ><br>
 <input type="hidden" name="<?php echo $hidden_field_name2; ?>" value="Y">
 <label for="<?php echo $data_field_name2; ?>">Registration Form ID (Compact Registration):</label>
  <input type="text" name="<?php echo $data_field_name2; ?>" value="<?php echo $opt_val2; ?>" >
-</p><hr />
+</p>
+
+<h3>Gravity Forms Multi-Site License:</h3>
+<p><strong>e26f56fedf600c61669a9e37a675f5f8</strong></p>
+
+<h3>reCAPTCHA Public Key</h3>
+<p><strong>6Lce1L4SAAAAAE-WM95isPqmvKMtPM-ntDstLBQb</strong></p>
+<small>Required to use the reCAPTCHA field.</small>
+
+<h3>reCAPTCHA Private Key</h3>
+<p><strong>6Lce1L4SAAAAABWtJAb3EEImIQyt2EfFRL6eSo63</strong></p>
+<small>Required to use the reCAPTCHA field.</small>
+
+
+
+<hr />
 
 <p class="submit">
 <input type="submit" name="Submit" class="button-primary" value="Save Changes" />

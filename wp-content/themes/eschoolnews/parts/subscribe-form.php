@@ -69,13 +69,13 @@ hidden{
 </style>
 
  <!-- load jquery via CDN -->
-	<?php /*<script src="<?php bloginfo( 'template_url' ); ?>/assets/javascript/magic.js"></script> <!-- load our javascript file -->
+	<script src="<?php bloginfo( 'template_url' ); ?>/assets/javascript/magic.js"></script> <!-- load our javascript file -->
 
 
 
 	<!-- OUR FORM -->
 	<form action="<?php bloginfo( 'template_url' ); ?>/parts/process.php" method="POST">
-		*/ ?>
+		
 
   <div class="row">
     <div class="medium-12 columns">
