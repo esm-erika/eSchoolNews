@@ -24,11 +24,9 @@ get_header(); ?>
 		
 	<?php get_template_part( 'parts/featured-article' ); ?>
 
-	<hr class="thick"/>
 
 </div>
 
-	
 
 <div class="row">
 
@@ -39,6 +37,8 @@ get_header(); ?>
 <div class="bottom">
 
 	<div class="row">
+
+		<hr class="thick"/>
 
 	<div class="small-12 large-8 columns">
 
