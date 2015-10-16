@@ -334,6 +334,14 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 // Misc Styles
 
+hr.thick {
+	border: solid #333;
+    border-width: 5px 0 0;
+    clear: both;
+    height: 0;
+    margin: 1.25rem 0 1.1875rem
+}
+
 .f-dropdown.content {
 	outline: 0;
 }

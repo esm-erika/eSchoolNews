@@ -59,7 +59,7 @@ if($webinar_date >= $todayis){
 					<li>
 					<article>
 
-						<?php the_post_thumbnail('small-thumb');?>
+						<?php the_post_thumbnail('full');?>
 
 						<header> 
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

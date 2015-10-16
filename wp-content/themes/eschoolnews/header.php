@@ -83,7 +83,7 @@
           </div>
         </div>
 
-        <?php get_template_part( 'parts/subscribe-form' ); ?>
+        <?php //get_template_part( 'parts/subscribe-form' ); ?>
 
       </div>
 
