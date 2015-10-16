@@ -11,6 +11,8 @@
 
 <section class="tertiary">
 
+	<hr/>
+
 	<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>
 
 
