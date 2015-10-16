@@ -24,13 +24,18 @@ if ( is_page()) {
 
 	echo 'Resources';
 
+} elseif ( is_post_type_archive('special-reports')) {
+
+	echo 'Special Reports';
+
+
 } elseif ( is_archive()) {
 
 	echo get_queried_object()->name;
 
 
-} 
 
+}
 ?>
 
 </span></h1></div>

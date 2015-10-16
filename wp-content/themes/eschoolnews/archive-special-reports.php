@@ -31,6 +31,7 @@ get_header(); ?>
 
 				// The Query
 				$args = array(
+					'post_type' => 'special-reports',
 					'posts_per_page' => '5',
 					'orderby' => 'date'
 					);
@@ -42,7 +43,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li data-equalizer>
+				<li>
 						<?php if ( has_post_thumbnail() ) {
 							the_post_thumbnail('full');
 						} ?>
@@ -68,7 +69,7 @@ get_header(); ?>
 
 				// The Query
 				$args2 = array(
-					//'posts_per_page' => '-1',
+					'post_type' => 'special-reports',
 					'orderby' => 'date'
 					);
 

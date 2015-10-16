@@ -23,28 +23,32 @@ get_header(); ?>
 
 		<?php }?>
 
+		<?php do_action( 'foundationpress_before_content' ); ?>
 
+		<?php while ( have_posts() ) : the_post(); ?>
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<header>
+				<!-- <p class="date"><?php the_time('F j, Y'); ?></p> -->
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h5><?php the_date(); ?></h5>
 
+				<?php get_template_part('parts/social'); ?>
+			</header>
 
-						  <?php if ( has_post_thumbnail() ) {
-							the_post_thumbnail('full');
-						} ?>
-					</div>
-					<div class="small-12 medium-8 columns">
+			
 
-						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-							<header>
-							<h3><?php the_title(); ?></h3>
-							<p><?php the_date(); ?></p>
+			<hr/>
 
-							<?php get_template_part('parts/social'); ?>
-						</header>
+			
 
-								<?php do_action( 'foundationpress_before_content' ); ?>
+			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
+			<div class="entry-content">
 
-						  <div class="content"><?php the_content(); ?></div>
-					
-							<?php 
+				<?php the_content(); ?>
+
+				</div>
+
+				<?php 
 
 							$file = get_field('report_file');
 
@@ -53,20 +57,16 @@ get_header(); ?>
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
 
 							<?php endif; ?>
-						  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-						</div>
-					</div>
 
-	</div>
 
-	</div>
+</article>
 
 
 
 
 
 
-
+<hr/>
 
 <footer class="panel tags">
 	<h6>Related Tags</h6>
@@ -80,6 +80,7 @@ get_header(); ?>
 <?php //comments_template(); ?>
 <?php do_action( 'foundationpress_post_after_comments' ); ?>
 </article>
+<?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
