@@ -188,14 +188,16 @@ get_header(); ?>
 
 
 
+<hr/>
 
-
-
+<?php if( has_tag()) { ?>
 <footer class="panel tags">
 	<h6>Related Tags</h6>
 	<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
 	<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
 </footer>
+
+<?php } ?>
 
 <?php get_template_part('parts/social'); ?>
 
