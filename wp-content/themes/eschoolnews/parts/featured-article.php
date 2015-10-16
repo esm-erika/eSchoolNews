@@ -64,7 +64,5 @@
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
-<hr class="thick"/>
-
 </div>
 

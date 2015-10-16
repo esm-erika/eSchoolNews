@@ -24,6 +24,8 @@ get_header(); ?>
 		
 	<?php get_template_part( 'parts/featured-article' ); ?>
 
+	<hr class="thick"/>
+
 </div>
 
 	
