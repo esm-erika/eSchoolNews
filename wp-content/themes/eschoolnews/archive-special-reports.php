@@ -62,22 +62,22 @@ get_header(); ?>
 			<h4>More Special Reports</h4>
 
 
-			
+
 
 			<?php
 
 				// The Query
-				$args = array(
-					'posts_per_page' => '-1',
+				$args2 = array(
+					//'posts_per_page' => '-1',
 					'orderby' => 'date'
 					);
 
-				$query = new WP_Query( $args ); ?>
+				$query2 = new WP_Query( $args2 ); ?>
 
 
 				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
+				 while ( $query2->have_posts() ) :
+					$query2->the_post(); ?>
 
 			<div class="row">
 				<div class="small-6 medium-4 columns">
