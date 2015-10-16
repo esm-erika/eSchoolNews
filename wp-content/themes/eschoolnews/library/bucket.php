@@ -70,7 +70,6 @@ if(empty($idObj)){echo '<!--- No category found --->';}else{
 
 <h6><a href="<?php echo $category_link; ?>">Read more <strong><?php echo $catname; ?></strong> Posts &raquo;</a></h6>
 
-<hr/>
 <?php wp_reset_postdata(); 
 
 	  }
