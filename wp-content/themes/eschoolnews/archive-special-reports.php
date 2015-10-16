@@ -47,7 +47,7 @@ get_header(); ?>
 						<?php if ( has_post_thumbnail() ) {
 							the_post_thumbnail('full');
 						} ?>
-						<h5><?php the_title(); ?></h5>
+						<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 						<p><?php the_date(); ?></p>
 						<a class="button radius tiny" href="<?php the_permalink(); ?>">View Report</a>
 						  
@@ -87,7 +87,7 @@ get_header(); ?>
 						} ?>
 				</div>
 				<div class="small-6 medium-8 columns">
-					<h3><?php the_title(); ?></h3>
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p><?php the_date(); ?></p>
 					<p class="excerpt">
 						<?php 

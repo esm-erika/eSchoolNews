@@ -31,10 +31,10 @@ get_header(); ?>
 				<!-- <p class="date"><?php the_time('F j, Y'); ?></p> -->
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<h3>Date: <?php 
+				<h5><strong>Date:</strong> <?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
-				if($showdate){ echo $showdate -> format('F d, Y');} ?></h3>
-				<h5>Time: <?php the_field('webinar_time'); ?></h5>
+				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
+				<h5><strong>Time:</strong> <?php the_field('webinar_time'); ?></h5>
 
 				<?php get_template_part('parts/social'); ?>
 			</header>
