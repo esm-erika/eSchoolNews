@@ -23,7 +23,6 @@ get_header(); ?>
 
 		<?php }?>
 
-		<?php do_action( 'foundationpress_before_content' ); ?>
 
 
 
@@ -32,8 +31,17 @@ get_header(); ?>
 						} ?>
 					</div>
 					<div class="small-12 medium-8 columns">
+
+						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+							<header>
 							<h3><?php the_title(); ?></h3>
 							<p><?php the_date(); ?></p>
+
+							<?php get_template_part('parts/social'); ?>
+						</header>
+
+								<?php do_action( 'foundationpress_before_content' ); ?>
+
 						  <div class="content"><?php the_content(); ?></div>
 					
 							<?php 
@@ -72,7 +80,6 @@ get_header(); ?>
 <?php //comments_template(); ?>
 <?php do_action( 'foundationpress_post_after_comments' ); ?>
 </article>
-<?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
