@@ -19,7 +19,22 @@ get_header(); ?>
 
 		get_template_part( 'parts/landing-pages/top-trends' );
 
-	}?>
+	} elseif ( is_page('thought-leadership')) {
+		get_template_part( 'parts/landing-pages/thought-leadership' );
+	
+	} elseif( is_page('technology')) {
+		get_template_part( 'parts/landing-pages/technology' );
+	
+	} elseif( is_page('digital-curriculum')) {
+		get_template_part( 'parts/landing-pages/digital-curriculum' );
+	
+	} elseif( is_page('colleague-corner')) {
+		get_template_part( 'parts/landing-pages/colleague-corner' );
+	
+	} else {
+		echo '<!-- NO RESULTS -->';
+
+	} ?>
 
 	
 	</div>
