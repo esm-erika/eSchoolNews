@@ -56,7 +56,7 @@ get_header(); ?>
 
 				<?php the_content(); ?>
 
-				</div>
+				
 
 				<?php 
 
@@ -67,6 +67,8 @@ get_header(); ?>
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
 
 							<?php endif; ?>
+
+							</div>
 
 
 </article>
