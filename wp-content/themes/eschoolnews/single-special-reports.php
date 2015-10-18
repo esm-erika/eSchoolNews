@@ -42,7 +42,17 @@ get_header(); ?>
 			
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-			<div class="entry-content">
+			<div class="entry-content row">
+
+				<?php if ( has_post_thumbnail() ) {
+					echo '<div class="small-12 medium-4 columns">';
+							the_post_thumbnail('full');
+					echo '</div>';
+					echo '<div class="small-12 medium-8 columns">';
+						
+				} else {
+					echo '<div class="medium-12">';
+				} ?>
 
 				<?php the_content(); ?>
 

@@ -70,7 +70,8 @@ get_header(); ?>
 				// The Query
 				$args2 = array(
 					'post_type' => 'special-reports',
-					'orderby' => 'date'
+					'orderby' => 'date',
+					'offset' => '5'
 					);
 
 				$query2 = new WP_Query( $args2 ); ?>
