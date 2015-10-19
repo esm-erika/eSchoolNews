@@ -211,6 +211,7 @@ nav.tab-bar .tab-bar-section.middle {
 
 		.dropdown {
 			border-top: 0;
+			border-left: 1px solid #fff;
 		}
 	}
 
@@ -333,6 +334,14 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 
 // Misc Styles
+
+hr.thick {
+	border: solid #333;
+    border-width: 5px 0 0;
+    clear: both;
+    height: 0;
+    margin: 1.25rem 0 1.1875rem
+}
 
 .f-dropdown.content {
 	outline: 0;
@@ -592,15 +601,15 @@ footer.container > div {
 }
 
 .bottom > .row {
-	border-top: 5px solid #333;
+	//border-top: 5px solid #333;
 	
 }
 
 .bottom {
 
 	section {
-		margin-top: 20px;
-		border-top: 1px solid #ccc;
+		//margin-top: 20px;
+		//border-top: 1px solid #ccc;
 		//padding-top: 20px;
 	}
 
@@ -743,6 +752,10 @@ footer.container > div {
 
 
 // Footer Styles
+
+footer.panel {
+	clear: both;
+}
 
 footer {
 

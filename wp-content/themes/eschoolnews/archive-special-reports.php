@@ -24,31 +24,94 @@ get_header(); ?>
 
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-12 columns" role="main">
+
+		<ul class="medium-block-grid-3" data-equalizer>
+		    <?php
+
+				// The Query
+				$args = array(
+					'post_type' => 'special-reports',
+					'posts_per_page' => '5',
+					'orderby' => 'date'
+					);
+
+				$query = new WP_Query( $args ); ?>
+
+
+				<?php // The Loop
+				 while ( $query->have_posts() ) :
+					$query->the_post(); ?>
+
+				<li>
+						<?php if ( has_post_thumbnail() ) {
+							the_post_thumbnail('full');
+						} ?>
+						<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+						<p><?php the_date(); ?></p>
+						<a class="button radius tiny" href="<?php the_permalink(); ?>">View Report</a>
+						  
+				</li>
+					
+					<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
+			</ul>
+
+			<hr class="thick"/>
+
+			<h4>More Special Reports</h4>
 
 
 
-	<?php if ( have_posts() ) : ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
+			<?php
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+				// The Query
+				$args2 = array(
+					'post_type' => 'special-reports',
+					'orderby' => 'date',
+					'offset' => '5'
+					);
 
-	<?php endif; // End have_posts() check. ?>
+				$query2 = new WP_Query( $args2 ); ?>
 
-	<?php /* Display navigation to next/previous pages when applicable */ ?>
-	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php } ?>
+
+				<?php // The Loop
+				 while ( $query2->have_posts() ) :
+					$query2->the_post(); ?>
+
+			<div class="row">
+				<div class="small-6 medium-4 columns">
+					<?php if ( has_post_thumbnail() ) {
+							the_post_thumbnail('full');
+						} ?>
+				</div>
+				<div class="small-6 medium-8 columns">
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<p><?php the_date(); ?></p>
+					<p class="excerpt">
+						<?php 
+					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 100, $more = '' ), true); 
+					?>
+					</p>
+
+					<a class="button radius small" href="<?php the_permalink(); ?>">
+						View Report
+					</a>
+
+				</div>
+				
+			</div>
+
+			<hr/>
+
+			<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
+
 
 	</div>
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
