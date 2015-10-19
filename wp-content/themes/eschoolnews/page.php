@@ -21,6 +21,23 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
+<?php  $astused = get_post_meta($id, '_wp_esmad_template', true);
+$oldtemplate = get_post_meta($id, '_wp_post_template', true);
+
+
+
+   ?>
+<?php if($oldtemplate){ echo 'OLD TEMPLATE USED!!!!'; //using old template
+	
+require_once( 'library/boxes.php' );	
+include('single-coa.php');
+	
+	
+	
+	   } else { //not using old template ?>    
+    
+    
+    
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -37,6 +54,8 @@ get_header(); ?>
 			<?php comments_template(); ?>
 			<?php do_action( 'foundationpress_page_after_comments' ); ?>
 		</article>
+<?php } //end old template check ?>
+
 	<?php endwhile;?>
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
