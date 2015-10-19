@@ -72,4 +72,7 @@ require_once('library/cpt-taxonomy.php');
 /** Add Custom Post Types to Tag Cloud */
 require_once('library/tag-cloud.php');
 
+/** List tags only from Custom Post Type */
+require_once('library/cpt-tags.php');
+
 ?>

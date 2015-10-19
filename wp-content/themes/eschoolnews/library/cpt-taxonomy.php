@@ -5,7 +5,7 @@ if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] )
 
 // Get all your post types
 
-$post_types = array( 'post', 'webinars' );
+$post_types = array( 'post', 'webinars', 'whitepapers', 'special-reports', 'ercs' );
 
 $query->set( 'post_type', $post_types );
 return $query;

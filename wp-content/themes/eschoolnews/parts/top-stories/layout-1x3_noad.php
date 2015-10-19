@@ -20,12 +20,8 @@
 
 			<?php
 			if ( is_front_page() ) {
-				query_posts( array ( 'post_type' => 'post', 'posts_per_page' => 3, 'cat' => -4 ));
-			} elseif (is_category()) {
-				global $query_string;
-				query_posts( $query_string . '&posts_per_page=3&offset=1' );
-			}
-			?>
+				query_posts( array ( 'post_type' => 'post', 'posts_per_page' => 3 ));
+			} ?>
 
 <ul class="small-block-grid-1 medium-block-grid-3">
 

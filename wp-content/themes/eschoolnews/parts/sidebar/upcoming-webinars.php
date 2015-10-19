@@ -1,3 +1,4 @@
+<article>
 <h3 class="section-title"><span>Upcoming Webinars</span></h3>
 
 <?php // The Query
@@ -37,3 +38,4 @@
 					
 					<?php endwhile; 
 				wp_reset_postdata(); ?>
+			</article>
