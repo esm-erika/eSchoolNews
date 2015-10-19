@@ -14,7 +14,9 @@
 	//	if( is_user_logged_in()){
 			//gravity_form(10, false, false, false, $esnautofill); 
 			//}else {
-			gravity_form(216, false, false, false, $esnautofill); 
+	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
+				
+			gravity_form($opt_val3, false, false, false, $esnautofill); 
 	//	}
 		
 		

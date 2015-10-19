@@ -41,10 +41,17 @@ function esm_menu_page(){
     $opt_name2 = 'esm_gravity_sf_reg_form'; //Registration Form
     $hidden_field_name2 = 'esm_gravity_sf_reg_form_submit';
     $data_field_name2 = 'esm_gravity_sf_reg_form';		
+
+    $opt_name3 = 'esm_gravity_sf_subscribe'; //Registration Form
+    $hidden_field_name3 = 'esm_gravity_sf_subscribe_submit';
+    $data_field_name3 = 'esm_gravity_sf_subscribe_form';		
+
+
     // Read in existing option value from database
     $opt_val = get_option( $opt_name );
 	$opt_val1 = get_option( $opt_name1 );
 	$opt_val2 = get_option( $opt_name2 );
+	$opt_val3 = get_option( $opt_name3 );
 
     // See if the user has posted us some information
     // If they did, this hidden field will be set to 'Y'
@@ -86,6 +93,21 @@ $updated = 0;
 
     }	
 
+
+   if( isset($_POST[ $hidden_field_name3 ]) && $_POST[ $hidden_field_name3 ] == 'Y' ) {
+        // Read their posted value
+        $opt_val3 = $_POST[ $data_field_name3 ];
+
+        // Save the posted value in the database
+        update_option( $opt_name3, $opt_val3 );
+
+        // Put an settings updated message on the screen
+		
+		$updated = 1;
+
+    }
+
+
 if($updated == "1"){
 echo '<div class="updated"><p><strong>Settings saved</strong></p></div>';
 }
@@ -119,6 +141,13 @@ echo $data_field_name1; ?>" value="<?php echo $opt_val1; ?>" ><br>
 <input type="hidden" name="<?php echo $hidden_field_name2; ?>" value="Y">
 <label for="<?php echo $data_field_name2; ?>">Registration Form ID (Compact Registration):</label>
  <input type="text" name="<?php echo $data_field_name2; ?>" value="<?php echo $opt_val2; ?>" >
+</p>
+
+
+<p>
+<input type="hidden" name="<?php echo $hidden_field_name3; ?>" value="Y">
+<label for="<?php echo $data_field_name3; ?>">Email Subscribe Form ID (In Header):</label>
+ <input type="text" name="<?php echo $data_field_name3; ?>" value="<?php echo $opt_val3; ?>" >
 </p>
 
 <h3>Gravity Forms Multi-Site License:</h3>
