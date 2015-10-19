@@ -22,38 +22,10 @@ get_header(); ?>
 
 	<div class="small-12 medium-8 columns">
 
-
-		<?php // The Query
-				$args3 = array(
-					'post_type' => array('ercs','special-reports','whitepapers'),
-					'posts_per_page' => '1',
-					'meta_key'		=> 'featured',
-					'meta_value'	=> 'yes'
-					);
-
-
-				$featured = new WP_Query( $args3 ); ?>
-
-				<?php if( $featured->have_posts() ):
-				 while( $featured->have_posts() ) : $featured->the_post(); ?>
-
-			<div class="panel">
-				<h4>Featured</h4>
-				<h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-			</div>
-
-
-		<?php endwhile; ?>
-
-		<?php endif;
-				wp_reset_postdata(); ?>
-
-
 		<h4>New Resources</h4>
 
 		<ul class="large-block-grid-2">
 
-		<?php do_action( 'foundationpress_before_content' ); ?>
 
 		<?php // The Query
 				$args = array(
@@ -89,8 +61,6 @@ get_header(); ?>
 		</li>
 	<?php endwhile; 
 				wp_reset_postdata(); ?>
-
-	<?php do_action( 'foundationpress_after_content' ); ?>
 
 </ul>
 <hr/>
