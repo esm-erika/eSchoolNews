@@ -1,13 +1,15 @@
 <?php
 /**
- * The main template file
+ * The template for displaying archive pages
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
+ * Used to display archive-type pages if nothing more specific matches a query.
+ * For example, puts together date-based pages if no date.php file exists.
  *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+ * If you'd like to further customize these archive views, you may create a
+ * new template file for each one. For example, tag.php (Tag archives),
+ * category.php (Category archives), author.php (Author archives), etc.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
  * @subpackage FoundationPress
@@ -16,109 +18,34 @@
 
 get_header(); ?>
 
-<div class="row top">
+<div class="row">
 
-	<?php get_template_part( 'parts/ads/leaderboard' ); ?>
+			<?php get_template_part( 'parts/section-titles' ); ?>
 
-	<h1 class="columns"><?php single_cat_title(); ?></h1>
-	
-			
-			<?php //get_template_part( 'parts/featured-article' ); ?>
+<!-- Row for main content area -->
+	<div class="small-12 large-8 columns" role="main">
 
-		<div class="small-12 large-6 columns" role="main">
+	<?php if ( have_posts() ) : ?>
 
-			
-
-<?php if ( have_posts() ) : ?>
-
-		<?php do_action( 'foundationpress_before_content' ); ?>
-
-		<?php
-			if ( is_front_page() ) {
-				query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ));
-			} elseif ( is_category()) {
-				
-				global $query_string;
-				query_posts( $query_string . '&posts_per_page=1' );
-			}
-
-		?>
-
+		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			
-
-			<?php the_post_thumbnail(); ?>
-
-		</div>
-
-		<article class="small-12 large-6 columns">
-
-
-			
-
-			<header> 
-				<p class="date"><?php the_time('F j, Y'); ?></p>
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<div class="excerpt">
-					<?php 
-					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-					?>
-				</div>
-			</header>
-
-		</article>
-
+			<?php get_template_part( 'content', get_post_format() ); ?>
 		<?php endwhile; ?>
 
-		<?php wp_reset_query(); ?>
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
 
-	<?php endif;?>
+	<?php endif; // End have_posts() check. ?>
 
-	<?php rewind_posts(); ?>
-
-
-	<?php do_action( 'foundationpress_after_content' ); ?>
-
-</div>
-
-
-
-</div>
-
-	
-
-	<div class="row">
-		<div class="small-12 large-12 columns right-column top-stories">
-
-		<?php get_template_part( 'parts/top-stories' ); ?>
+	<?php /* Display navigation to next/previous pages when applicable */ ?>
+	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+		</nav>
+	<?php } ?>
 
 	</div>
-	</div>
-
-
-<div class="bottom">
-
-	<div class="row">
-
-	<div class="small-12 large-8 columns">
-
-			<?php get_template_part('parts/secondary'); ?>		
-
-		<!-- secondary -->
-
-		
-		<?php get_template_part('parts/tertiary'); ?>
-
-		<!-- tertiary -->
-
-</div>
-
 	<?php get_sidebar(); ?>
-
 </div>
-
-
-		<?php //get_template_part('parts/quaternary'); ?>
-
-		<?php get_footer(); ?>
-
+<?php get_footer(); ?>
