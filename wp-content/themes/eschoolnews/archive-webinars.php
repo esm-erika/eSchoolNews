@@ -77,7 +77,7 @@ if($webinar_date >= $todayis){
 
 						<header class="large-8 columns"> 
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <h5><?php if($showdate){echo $showdate->format('F d, Y');} ?></h5>
+                            <h6><?php if($showdate){echo $showdate->format('F d, Y');} ?></h6>
                             <a class="button radius small" target="new" href="<?php the_field('webinar_registration_link'); ?>">Register Now</a>
 						</header>
 
