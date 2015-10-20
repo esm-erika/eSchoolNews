@@ -25,7 +25,11 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
-<?php 	$args = array('post_type' => array( 'webinars' ));
+<?php 	$args = array('post_type' => array( 'webinars' ),
+            'meta_key' => 'webinar_date',
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC'
+);
 		$query = new WP_Query( $args );
 		$count = 0;
 			
@@ -100,7 +104,7 @@ if($webinar_date >= $todayis){
 
 
 
-<?php 	$args = array('post_type' => array( 'Webinars' ));
+<?php 	$args = array('post_type' => array( 'Webinars' ),'meta_key' => 'webinar_date','orderby' => 'meta_value_num','order' => 'DESC');
 		$query = new WP_Query( $args );
 		$count = 0;
 				//loop the post and look for past items. Save them for output. 
