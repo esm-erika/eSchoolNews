@@ -26,7 +26,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
-		<ul class="medium-block-grid-3" data-equalizer>
+		<ul class="medium-block-grid-2" data-equalizer>
 		    <?php
 
 				// The Query
@@ -44,12 +44,34 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<li>
-						<?php if ( has_post_thumbnail() ) {
-							the_post_thumbnail('full');
-						} ?>
+					<div class="row">
+						<div class="large-4 columns">
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						</div>
+						<div class="large-8 columns">
 						<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 						<p><?php the_date(); ?></p>
-						<a class="button radius tiny" href="<?php the_permalink(); ?>">View Report</a>
+
+						
+
+						<ul class="stack-for-small radius secondary button-group">
+							<?php 
+
+							$file = get_field('report_file');
+
+							if( $file ): ?>
+						  <li><a href="<?php echo $file['url']; ?>" class="button tiny">Download</a></li>
+						  <?php endif; ?>
+						  <li><a href="<?php the_permalink(); ?>" class="button tiny">Read More</a></li>
+						</ul>
+					</div>
+
+						</div>
 						  
 				</li>
 					
@@ -96,9 +118,16 @@ get_header(); ?>
 					?>
 					</p>
 
-					<a class="button radius small" href="<?php the_permalink(); ?>">
-						View Report
-					</a>
+					<ul class="stack-for-small radius secondary button-group">
+							<?php 
+
+							$file = get_field('report_file');
+
+							if( $file ): ?>
+						  <li><a href="<?php echo $file['url']; ?>" class="button tiny">Download</a></li>
+						  <?php endif; ?>
+						  <li><a href="<?php the_permalink(); ?>" class="button tiny">Read More</a></li>
+						</ul>
 
 				</div>
 				
