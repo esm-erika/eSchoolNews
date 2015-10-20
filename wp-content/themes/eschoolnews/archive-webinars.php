@@ -27,7 +27,7 @@ get_header(); ?>
 
 <?php 	$args = array('post_type' => array( 'webinars' ),
             'meta_key' => 'webinar_date',
-            'orderby' => 'meta_value_num',
+            'orderby' => 'meta_value meta_value_num',
             'order' => 'DESC'
 );
 		$query = new WP_Query( $args );
@@ -104,7 +104,7 @@ if($webinar_date >= $todayis){
 
 
 
-<?php 	$args = array('post_type' => array( 'Webinars' ),'meta_key' => 'webinar_date','orderby' => 'meta_value_num','order' => 'DESC');
+<?php 	$args = array('post_type' => array( 'Webinars' ),'meta_key' => 'webinar_date','orderby' => 'meta_value meta_value_num','order' => 'DESC');
 		$query = new WP_Query( $args );
 		$count = 0;
 				//loop the post and look for past items. Save them for output. 
