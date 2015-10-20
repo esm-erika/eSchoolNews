@@ -38,6 +38,7 @@ function whitepaper_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
@@ -84,6 +85,7 @@ function erc_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
@@ -173,6 +175,7 @@ function specialreports_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  

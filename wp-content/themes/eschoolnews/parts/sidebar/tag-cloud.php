@@ -1,11 +1,12 @@
+<article class="tag-cloud">
 <h3 class="section-title"><span>Tag Cloud</span></h3>
 
 <?php $args = array(
-	'smallest'                  => 14, 
-	'largest'                   => 14,
+	'smallest'                  => 11, 
+	'largest'                   => 11,
 	'unit'                      => 'px', 
 	'number'                    => 45,  
-	'format'                    => 'list',
+	'format'                    => 'flat',
 	'separator'                 => "\n",
 	'orderby'                   => 'name', 
 	'order'                     => 'ASC',
@@ -21,3 +22,4 @@
 wp_tag_cloud( $args );
 
 ?>
+</article>

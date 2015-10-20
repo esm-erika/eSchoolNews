@@ -11,7 +11,7 @@
 <aside id="sidebar" class="small-12 large-4 columns">
 
 	<?php 
-	if( is_singular('webinars')) { 
+	if( is_singular('webinars') || is_page('Resources')) { 
 
 		get_template_part( 'parts/sidebar/upcoming-webinars' );  
 
@@ -20,6 +20,18 @@
 	<?php if( is_tag()) {
 
 		get_template_part( 'parts/sidebar/tag-cloud' );
+
+	} ?>
+
+	<?php if(is_front_page() && is_home()){
+
+		get_template_part( 'parts/sidebar/professional-development' );
+
+	} ?>
+
+	<?php if(is_page('Resources')){
+
+		get_template_part( 'parts/sidebar/topics' );
 
 	} ?>
 
