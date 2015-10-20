@@ -59,17 +59,17 @@ echo '<div class="row">';
 				box_lead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 			} else if ($Col_style == 'mlead'){ 
 				box_multilead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
-			} else if($Col_style == 'rota') {
+			}/* else if($Col_style == 'rota') {
 				box_rota($Col_qty,$Col_offset, $astf, $astc, $Col_cat);
 			} else if($Col_style == 'rotp') {
 				box_rotp($Col_qty,$Col_offset, $astf, $astc, $Col_cat);						
-			} else if($Col_style == 'art') {
+			}*/ else if($Col_style == 'art' || 'art2' || 'art3' || 'rota' || 'rotp' ) {
 				box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
-			} else if($Col_style == 'art2') {
+			} /*else if($Col_style == 'art2') {
 				box_art_2($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
 			} else if($Col_style == 'art3') {
 				box_art_3($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
-			} else if($Col_style == 'cont') {
+			} */ else if($Col_style == 'cont') {
 				if (have_posts()) : while (have_posts()) : the_post();
 					echo '<div class="extracontent">';
 					the_content();
@@ -110,11 +110,11 @@ if(!empty($collist2)){
 	
 		if ($Col_style == 'lead'){ 
 			box_lead_300($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
-		} else if($Col_style == 'rota') { 
+		} /* else if($Col_style == 'rota') { 
 			box_rota_300($Col_qty,$Col_offset,$astf,$astc,$Col_cat);
 		} else if($Col_style == 'rotp') {
 			box_rotp_300($Col_qty,$Col_offset,$astf,$astc,$Col_cat);
-		} else if($Col_style == 'art') { 
+		} */ else if($Col_style == 'art' || 'rota' || 'rotp') { 
 			box_art_300($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
 		} else if($Col_style == 'cont') {
 			if (have_posts()) : while (have_posts()) : the_post();

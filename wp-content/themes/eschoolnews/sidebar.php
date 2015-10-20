@@ -35,6 +35,13 @@
 
 	} ?>
 
+	<?php
+	if( is_singular()) { 
+
+		get_template_part( 'parts/sidebar/related-content' );  
+	
+		}
+	 ?>
 	
 	
 	<!-- <div class="box-ad"><img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sample-ad.png"/></div> -->
