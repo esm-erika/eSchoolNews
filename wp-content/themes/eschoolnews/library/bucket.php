@@ -53,9 +53,13 @@ if(empty($idObj)){echo '<!--- No category found --->';}else{
 	while ( $query_1->have_posts() ) :
 		$query_1->the_post(); ?>
 	<li>
-		<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		} ?>
+		<?php 
+		    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+		    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		?>
+
+		<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		<div class="excerpt">
 		<?php 
@@ -83,5 +87,15 @@ function is_post_type($type){
     if($type == get_post_type($wp_query->post->ID)) return true;
     return false;
 }
+
+  
+// add categories to attachments  
+function wptp_add_categories_to_attachments() {
+      register_taxonomy_for_object_type( 'category', 'attachment' );  
+}  
+add_action( 'init' , 'wptp_add_categories_to_attachments' ); 
+
+
+
 
 ?>
