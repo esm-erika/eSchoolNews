@@ -33,9 +33,12 @@ if ( is_page()) {
 
 	echo get_queried_object()->name;
 
-
-
+} elseif ( is_category()) {
+	
+	single_cat_title();
 }
+
+
 ?>
 
 </span></h1></div>
