@@ -11,7 +11,7 @@
     'tag__in' => $tag_ids,
     'post__not_in' => array($post->ID),
     'posts_per_page'=>4, // Number of related posts to display.
-    'caller_get_posts'=>1,
+    'ignore_sticky_posts'=>1,
 	'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' )    );
   
     $my_query = new wp_query( $args );

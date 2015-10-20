@@ -43,9 +43,10 @@ wp_reset_postdata(); ?>
 </section>
 <hr/>
 <section class="events">
+	<h5>Events</h5>
 <?php // The Query
 $events = array(
-	'post_type' => 'eventss',
+	'post_type' => 'events',
 	'posts_per_page' => '3',
 	'tax_query' => array(
 		array(

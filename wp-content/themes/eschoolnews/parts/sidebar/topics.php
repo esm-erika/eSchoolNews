@@ -1,5 +1,5 @@
 <article>
-	<ul style="margin: 0; border: 1px solid #d8d8d8; background-color: #f2f2f2; padding: 1rem;">
+	<ul style="margin: 0;">
 		<h3 class="section-title"><span>Popular Resource Topics</span></h3>
 
 	<?php $archive_tags = post_type_tags( 'ercs', 'whitepapers' );
