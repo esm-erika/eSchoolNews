@@ -1,7 +1,3 @@
-<article>
-<section>
-<h3 class="section-title"><span>Related posts</span></h3>
-
 <?php 
     $orig_post = $post;
     global $post;
@@ -20,9 +16,21 @@
   
     $my_query = new wp_query( $args );
 	
+if ( have_posts() ) {	
+?>
+<article>
+<section>
+<h3 class="section-title"><span>Related posts</span></h3>	
+<?php
     while( $my_query->have_posts() ) {
       $my_query->the_post();
     ?>
+
+
+
+
+
+
 
 <div class="row">
 	<div class="large-12 columns">
@@ -42,9 +50,15 @@
     
 	
 	 }
+	 
+
+	 
     }
+?>	
+</section>
+</article>
+<?php	
+	}
     $post = $orig_post;
     wp_reset_query();
 ?>
-</section>
-</article>
