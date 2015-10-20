@@ -42,6 +42,14 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 		<li <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+
 			<header>
 			
 				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
@@ -80,8 +88,16 @@ get_header(); ?>
 				while ( $query2->have_posts() ) :
 					$query2->the_post(); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>" style="margin-bottom: 1rem;">
-			<header>
+				<article class="row" style="margin-bottom: 1rem;">
+					<div class="large-4 columns">
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+					</div>
+			<header class="large-8 columns">
 			
 				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php 
