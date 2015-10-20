@@ -33,7 +33,12 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			
 
-			<?php the_post_thumbnail('full') ?>
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 
 		</div>
 

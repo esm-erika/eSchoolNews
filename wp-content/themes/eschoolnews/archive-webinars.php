@@ -62,17 +62,27 @@ if($webinar_date >= $todayis){
 					
 					<li>
 					<article>
+						<div class="row">
 
-						<?php the_post_thumbnail('full');?>
+							<div class="large-4 columns">
 
-						<header> 
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+
+					</div>
+
+						<header class="large-8 columns"> 
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <h5><?php if($showdate){echo $showdate->format('F d, Y');} ?></h5>
                             <a class="button radius small" target="new" href="<?php the_field('webinar_registration_link'); ?>">Register Now</a>
 						</header>
 
 						
-
+						</div>
 					</article>
 
 					</li>
@@ -138,8 +148,12 @@ if($webinar_date < $todayis){
 					<li>
 					<article>
 
-						<?php the_post_thumbnail('small-thumb');?>
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
 
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 						<header> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							<h6><?php if($showdate){echo $showdate->format('F d, Y');} ?></h6>
