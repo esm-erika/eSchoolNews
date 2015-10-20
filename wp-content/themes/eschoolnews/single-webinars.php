@@ -106,11 +106,11 @@ get_header(); ?>
 
 	<div class="medium-12 columns">
 
-		<h4>Meet Your Speakers</h4>
+		
 
 		<?php if( have_rows('webinar_speakers') ): ?>
 
-
+		<h4>Meet Your Speakers</h4>
 
 		<ul class="medium-block-grid-4">
 

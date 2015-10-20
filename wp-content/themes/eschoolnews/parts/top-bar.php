@@ -26,8 +26,6 @@
         <nav class="top-bar" data-topbar role="navigation">
             <section class="top-bar-section">
 
-                <?php foundationpress_top_bar_l(); ?>
-                <?php foundationpress_top_bar_r(); ?>
                 <?php foundationpress_top_bar_c(); ?>
                
             </section>
