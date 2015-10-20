@@ -23,7 +23,7 @@
 
     <div class="sticky">
 
-        <nav class="top-bar show-for-small" data-topbar role="navigation">
+        <nav class="top-bar" data-topbar role="navigation">
             <section class="top-bar-section">
 
                 <?php foundationpress_top_bar_l(); ?>
