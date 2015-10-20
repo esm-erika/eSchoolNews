@@ -129,7 +129,7 @@ if($webinar_date >= $todayis){
 	  
 	<h4>Archived Webinars</h4>
 
-		<ul class="small-block-grid-2 large-block-grid-3">
+		<ul class="small-block-grid-1 large-block-grid-2">
 
 
 
@@ -147,6 +147,8 @@ if($webinar_date < $todayis){
 											 
 					<li>
 					<article>
+						<div class="row">
+							<div class="large-4 columns">
 
 						<?php 
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
@@ -154,14 +156,13 @@ if($webinar_date < $todayis){
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-						<header> 
+						</div>
+						<header class="large-8 columns"> 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							<h6><?php if($showdate){echo $showdate->format('F d, Y');} ?></h6>
                             <a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
 						</header>
-
-						
-
+					</div>
 					</article>
 
 					</li>
