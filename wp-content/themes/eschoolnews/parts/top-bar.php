@@ -25,9 +25,23 @@
 
         <nav class="top-bar" data-topbar role="navigation">
             <section class="top-bar-section">
+            <?php
+			//category fix
+				if(is_archive()){
+					$wp_query = NULL;
+					$wp_query = new WP_Query(array('post_type' => 'post'));
+				}
+			?>
                 <?php foundationpress_top_bar_l(); ?>
                 <?php foundationpress_top_bar_r(); ?>
                 <?php foundationpress_top_bar_c(); ?>
+                
+                <?php
+
+
+				
+				 ?>
+                
             </section>
         </nav>
 
