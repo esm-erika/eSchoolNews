@@ -33,9 +33,11 @@ if ( is_page()) {
 
 	echo get_queried_object()->name;
 
-} elseif ( is_category()) {
+} elseif ( is_archive()) {
 	
 	single_cat_title();
+
+	echo 'TEST';
 }
 
 
