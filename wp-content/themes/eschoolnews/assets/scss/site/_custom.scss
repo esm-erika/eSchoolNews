@@ -892,6 +892,13 @@ div.registration-form {
 				#gf_content_col_1 {
 					border-left: 0 !important;
 
+					ul.gform_fields {
+
+						br {
+							display: none;
+						}
+					}
+
 					div:first-child {
 						background-color: #fff !important;
 						color: #222 !important;
