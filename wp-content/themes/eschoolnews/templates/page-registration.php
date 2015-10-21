@@ -398,11 +398,12 @@ $formsuccess = validateint($_GET['success']);
 
 <?php global $theme_options, $suvi; ?>
 <div class="row">
+
+<?php get_template_part( 'parts/section-titles' ); ?>
 	<div class="small-12 large-12 columns">
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	 		<?php the_title(); ?>
 <p>
 As a registered member you will have complete access to all our breaking news, educator resources and all our special reports on eSchool News, eCampus News, and eClassroom News.
 </p>

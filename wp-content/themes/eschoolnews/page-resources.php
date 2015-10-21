@@ -70,7 +70,7 @@ get_header(); ?>
 				wp_reset_postdata(); ?>
 
 </ul>
-<hr/>
+<hr class="thick" />
 <section>
 <h4>Resources</h4>
 

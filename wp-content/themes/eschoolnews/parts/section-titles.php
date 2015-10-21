@@ -24,6 +24,10 @@ if ( is_page()) {
 
 	echo 'Resources';
 
+} elseif ( is_page('Registration')) {
+
+	echo 'Registration';
+
 } elseif ( is_post_type_archive('special-reports')) {
 
 	echo 'Special Reports';
