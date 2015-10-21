@@ -885,18 +885,21 @@ footer {
 div.gform_wrapper {
 	max-width: 100%;
 
+	form {
+
 	.gform_body {
 
 		#gf_content_col_1 {
-		border-left: 0;
+		border-left: 0 !important;
 
 		div:first-child {
-			background-color: #fff;
-			color: #000;
+			background-color: #fff !important;
+			color: #000 ;
 		}
 		
 		}
 	}
+}
 }
 
 @media only screen and (min-width: 40.0625em) {

@@ -400,7 +400,7 @@ $formsuccess = validateint($_GET['success']);
 <div class="row">
 
 <?php get_template_part( 'parts/section-titles' ); ?>
-	<div class="small-12 large-12 columns">
+	<div class="small-12 large-12 columns registration-form">
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
