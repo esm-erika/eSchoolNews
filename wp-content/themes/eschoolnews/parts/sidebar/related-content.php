@@ -12,12 +12,7 @@
 	foreach($tags as $individual_tag){ $tag_ids[] = $individual_tag->term_id;}
 	$cats = wp_get_post_categories($post->ID);
     $cat_ids = array();
-    foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat->term_id;}
-
-	echo "<!-- ";
-	print_r($cat_ids);
-	print_r($tag_ids);
-	echo " --> ";
+	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
 
 	$args=array(
     'post__not_in' => array($post->ID),
