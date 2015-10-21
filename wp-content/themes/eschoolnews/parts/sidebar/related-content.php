@@ -18,6 +18,14 @@
 	print_r($cats);
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
 	
+
+
+//	echo "cat ids:<br>";
+//	print_r($cat_ids);
+//	echo "tag ids:";
+//	print_r($tag_ids);
+//	echo "<br> --> ";
+
 	if(empty($tag_ids) || empty($cat_ids)){
 		if(empty($tag_ids)){ 
 
