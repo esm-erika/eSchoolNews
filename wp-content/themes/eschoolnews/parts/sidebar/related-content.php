@@ -17,6 +17,8 @@
     echo "cats:";
 	print_r($cats);
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
+	
+
 
 	echo "cat ids:<br>";
 	print_r($cat_ids);
@@ -24,22 +26,55 @@
 	print_r($tag_ids);
 	echo "<br> --> ";
 
-	$args=array(
-    'post__not_in' => array($post->ID),
-    'posts_per_page'=>5, // Number of related posts to display.
-    'ignore_sticky_posts'=>1,
-	'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
-	'tax_query' => array(
-	    'relation' => 'OR',
-		array(
+	if(empty($tag_ids) || empty($cat_ids)){
+		if(empty($tag_ids)){ 
+
+			$args=array(
+			'post__not_in' => array($post->ID),
+			'posts_per_page'=>5, // Number of related posts to display.
+			'ignore_sticky_posts'=>1,
+			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
 			'category__in ' => $cat_ids
-		),
-		array(
+			);
+
+
+		 }
+		if(empty($cat_ids)){ 
+		
+			$args=array(
+			'post__not_in' => array($post->ID),
+			'posts_per_page'=>5, // Number of related posts to display.
+			'ignore_sticky_posts'=>1,
+			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
 			'tag__in' => $tag_ids
+			);
+		
+		
+		 }	
+	
+	} else {
+
+		$args=array(
+		'post__not_in' => array($post->ID),
+		'posts_per_page'=>5, // Number of related posts to display.
+		'ignore_sticky_posts'=>1,
+		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
+		'tax_query' => array(
+			'relation' => 'OR',
+			array(
+				'category__in ' => $cat_ids
+			),
+			array(
+				'tag__in' => $tag_ids
+			)
 		)
-	)
-	 
-	 );
+		 
+		);
+		
+	}	
+
+
+
 
 
     $my_query = new wp_query( $args );
