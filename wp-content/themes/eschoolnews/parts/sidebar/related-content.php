@@ -9,10 +9,20 @@
     global $post;
     $tags = wp_get_post_tags($post->ID);
     $tag_ids = array();
+    echo "<!-- post id".$post->ID." tags:";
+	print_r($tags);
 	foreach($tags as $individual_tag){ $tag_ids[] = $individual_tag->term_id;}
 	$cats = wp_get_post_categories($post->ID);
     $cat_ids = array();
+    echo "cats:";
+	print_r($cats);
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
+
+	echo "cat ids:<br>";
+	print_r($cat_ids);
+	echo "tag ids:";
+	print_r($tag_ids);
+	echo "<br> --> ";
 
 	$args=array(
     'post__not_in' => array($post->ID),
