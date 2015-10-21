@@ -877,8 +877,26 @@ footer {
 		color: #fff;
 		margin-bottom: 20px;
 	}
+}
 
-	
+
+// Gravity Forms
+
+.gform_wrapper {
+	max-width: 100%;
+
+	.gform_body {
+
+		#gf_content_col_1 {
+		border-left: 0;
+
+		div:first-child {
+			background-color: #fff;
+			color: #000;
+		}
+		
+		}
+	}
 }
 
 @media only screen and (min-width: 40.0625em) {
