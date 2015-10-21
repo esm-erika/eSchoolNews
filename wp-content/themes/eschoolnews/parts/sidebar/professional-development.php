@@ -1,6 +1,6 @@
 <article>
-<h3 class="section-title"><span>Professional Development</span></h3>
-
+<h4>Professional Development</h4>
+<br/>
 <section class="webinars">
 	<h5>Webinars</h5>
 <?php // The Query
@@ -31,7 +31,7 @@ while ( $query->have_posts() ) :
 <div class="row">
 	<div class="large-12 columns">
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<p><?php 
+		<p class="date"><?php 
 		$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
 		if($showdate){ echo $showdate -> format('F d, Y');} ?></p>
 

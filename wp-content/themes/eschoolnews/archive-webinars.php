@@ -39,7 +39,7 @@ get_header(); ?>
 			?>
             
 <h4>Upcoming Webinars</h4>
-	  
+	  <br/>
 
 
 		<ul class="small-block-grid-1 medium-block-grid-2">
@@ -129,6 +129,7 @@ if($webinar_date >= $todayis){
 
 	  
 	<h4>Archived Webinars</h4>
+	<br/>
 
 		<ul class="small-block-grid-1 large-block-grid-2">
 
@@ -182,8 +183,6 @@ if($webinar_date < $todayis){
                    	<?php wp_reset_query(); ?>
 
 		</ul>
-
-		<h6 class="readmore"><a href="#">See More Archived Webinars &raquo;</a></h6>
 
 
 	

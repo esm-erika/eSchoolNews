@@ -1,6 +1,6 @@
 <article>
-<h3 class="section-title"><span>Upcoming Webinars</span></h3>
-
+<h4>Upcoming Webinars</h4>
+<br/>
 <?php // The Query
 				$upcoming = array(
 					'post_type' => 'webinars',
@@ -28,7 +28,7 @@
 				<div class="row">
 					<div class="large-12 columns">
 						<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-						<p><?php 
+						<p class="date"><?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
 				if($showdate){ echo $showdate -> format('F d, Y');} ?></p>
                          
@@ -38,4 +38,6 @@
 					
 					<?php endwhile; 
 				wp_reset_postdata(); ?>
+
+				<h6 class="readmore"><a href="<?php site_url('/'); ?>webinars">See more Webinars &raquo;</a></h6>
 			</article>

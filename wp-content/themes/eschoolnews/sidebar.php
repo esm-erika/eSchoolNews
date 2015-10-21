@@ -11,7 +11,7 @@
 <aside id="sidebar" class="small-12 large-4 columns">
 
 	<?php 
-	if( is_singular('webinars') || is_page('Resources')) { 
+	if( is_singular('webinars') || is_page('Resources') || is_post_type_archive('events')) { 
 
 		get_template_part( 'parts/sidebar/upcoming-webinars' );  
 
@@ -39,6 +39,14 @@
 	if( is_singular()) { 
 
 		get_template_part( 'parts/sidebar/related-content' );  
+	
+		}
+	 ?>
+
+	 <?php
+	if( is_post_type_archive('whitepapers' )) { 
+
+		get_template_part( 'parts/sidebar/company-categories' );  
 	
 		}
 	 ?>

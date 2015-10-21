@@ -29,6 +29,7 @@ get_header(); ?>
 		  <li class="tab-title" role="presentation"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
 		  <li class="tab-title" role="presentation"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
 </ul>
+<br/>
 	
 <!-- Row for main content area -->
 	<div class="small-8 medium-8 columns" role="main">
@@ -58,11 +59,9 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<li data-equalizer>
-					<div class="panel" data-equalizer-watch>
 						<h4><?php the_title(); ?></h4>
 						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
-					</div>
 				</li>
 					
 					<?php endwhile; ?>
@@ -219,10 +218,8 @@ get_header(); ?>
 					$query->the_post(); ?>
 				
 				<li>
-					<div class="panel">
 					<h4><?php the_title(); ?></h4>
 					<a href="#">Download</a>
-				</div>
 				</li>
 					
 					<?php endwhile; ?>
@@ -237,33 +234,8 @@ get_header(); ?>
 
 
 	</div>
-	<?php //get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
-	<div class="small-12 medium-4 columns">
-		<?php 
-//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
-
-$taxonomy     = 'company_categories';
-$orderby      = 'name'; 
-$show_count   = 0;      // 1 for yes, 0 for no
-$pad_counts   = 0;      // 1 for yes, 0 for no
-$hierarchical = 1;      // 1 for yes, 0 for no
-$title        = '';
-
-$args = array(
-  'taxonomy'     => $taxonomy,
-  'orderby'      => $orderby,
-  'show_count'   => $show_count,
-  'pad_counts'   => $pad_counts,
-  'hierarchical' => $hierarchical,
-  'title_li'     => $title
-);
-?>
-
-<ul>
-<?php wp_list_categories( $args ); ?>
-</ul>
-	</div>
 
 </div>
 <?php get_footer(); ?>

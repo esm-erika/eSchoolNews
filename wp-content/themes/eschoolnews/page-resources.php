@@ -23,6 +23,7 @@ get_header(); ?>
 	<div class="small-12 medium-8 columns">
 
 		<h4>New Resources</h4>
+		<br/>
 
 		<ul class="large-block-grid-2">
 
@@ -73,6 +74,7 @@ get_header(); ?>
 <hr class="thick" />
 <section>
 <h4>Resources</h4>
+<br/>
 
 <?php // The Query
 				$args2 = array(

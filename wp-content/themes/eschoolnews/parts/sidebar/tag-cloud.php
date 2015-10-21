@@ -1,5 +1,6 @@
 <article class="tag-cloud">
-<h3 class="section-title"><span>Tag Cloud</span></h3>
+<h4>Tag Cloud</h4>
+<br/>
 
 <?php $args = array(
 	'smallest'                  => 11, 

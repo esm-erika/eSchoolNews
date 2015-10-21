@@ -25,6 +25,7 @@ get_header(); ?>
 	<!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 		<h4>Featured ERCs</h4>
+		<br/>
 
 		<?php
 
@@ -105,6 +106,7 @@ get_header(); ?>
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h4>Active ERCs</h4>
+			<br/>
 
 			<ul class="medium-block-grid-1">
 
