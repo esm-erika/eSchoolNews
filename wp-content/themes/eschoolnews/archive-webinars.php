@@ -99,6 +99,7 @@ if($webinar_date >= $todayis){
 					
 					
 					?>
+					
                    	<?php wp_reset_query(); ?>
 
 		</ul>

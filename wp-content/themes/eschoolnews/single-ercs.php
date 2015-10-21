@@ -139,6 +139,11 @@ get_header(); ?>
 
 		?>
 
+
+		<div class="sponsor">
+			
+		</div>
+
 	
 
 	

@@ -141,7 +141,7 @@ get_header(); ?>
 					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 
 
-					<h6><?php the_title(); ?></h6>
+					<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 
 				</li>
 
