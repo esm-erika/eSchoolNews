@@ -902,9 +902,12 @@ div.registration-form {
 					div:first-child {
 						background-color: #fff !important;
 						color: #222 !important;
-						font-family: 'Raleway', sans-serif;
-					    font-weight: 600;
-					    font-size: 1.125rem;
+
+						span {
+							font-family: 'Raleway', sans-serif;
+							font-weight: 600;
+							font-size: 1.125rem;
+						}
 					}
 
 				}
