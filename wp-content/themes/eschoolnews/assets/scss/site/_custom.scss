@@ -883,25 +883,27 @@ footer {
 // Gravity Forms
 
 div.registration-form {
-div.gform_wrapper {
-	max-width: 100%;
+	div.gform_wrapper {
+		max-width: 100%;
 
-	form {
+		form {
+			.gform_body {
 
-	.gform_body {
+				#gf_content_col_1 {
+					border-left: 0 !important;
 
-		#gf_content_col_1 {
-		border-left: 0 !important;
+					div:first-child {
+						background-color: #fff !important;
+						color: #222 !important;
+						font-family: 'Raleway', sans-serif;
+					    font-weight: 600;
+					    font-size: 1.125rem;
+					}
 
-		div:first-child {
-			background-color: #fff !important;
-			color: #000 ;
-		}
-		
+				}
+			}
 		}
 	}
-}
-}
 }
 
 @media only screen and (min-width: 40.0625em) {
