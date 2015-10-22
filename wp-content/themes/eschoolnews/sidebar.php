@@ -10,12 +10,28 @@
 ?>
 <aside id="sidebar" class="small-12 large-4 columns">
 
+	<?php if(is_page('Resources')){
+
+		get_template_part( 'parts/sidebar/topics' );
+
+	} ?>
+
 	<?php 
-	if( is_singular('webinars') || is_page('Resources') || is_post_type_archive('events')) { 
+	if( is_page('Resources') || is_post_type_archive('events')) { 
 
 		get_template_part( 'parts/sidebar/upcoming-webinars' );  
 
 	}?>
+
+	  <?php
+	if( is_singular('webinars')) { 
+
+		get_template_part( 'parts/sidebar/sponsored-by' ); 
+
+		get_template_part( 'parts/sidebar/speakers' ); 
+	
+		}
+	 ?>
 
 	<?php if( is_tag()) {
 
@@ -26,12 +42,6 @@
 	<?php if(is_front_page() && is_home()){
 
 		get_template_part( 'parts/sidebar/professional-development' );
-
-	} ?>
-
-	<?php if(is_page('Resources')){
-
-		get_template_part( 'parts/sidebar/topics' );
 
 	} ?>
 
@@ -50,6 +60,10 @@
 	
 		}
 	 ?>
+
+	
+
+
 	
 	
 	<!-- <div class="box-ad"><img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sample-ad.png"/></div> -->

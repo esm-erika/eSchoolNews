@@ -31,10 +31,10 @@ get_header(); ?>
 				<!-- <p class="date"><?php the_time('F j, Y'); ?></p> -->
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<h5><strong>Date:</strong> <?php 
+				<h5><i class="fi-calendar"></i> <?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
 				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
-				<h5><strong>Time:</strong> <?php the_field('webinar_time'); ?></h5>
+				<h5><i class="fi-clock"></i> <?php the_field('webinar_time'); ?></h5>
 
 				<?php get_template_part('parts/social'); ?>
 			</header>
@@ -80,117 +80,13 @@ get_header(); ?>
 
 			</div>
 
-			
+<?php if( ! has_tag()){
+ echo '<hr/>';
+} ?>
 
-			<?php 
-
-			$image = get_field('sponsored_by');
-
-			if( !empty($image) ): ?>
-
-			<div class="row sponsor">
-				<div class="medium-4 medium-right columns">
-
-<!-- <h6 class="right">Sponsored By:</h6>
--->	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-</div>
-</div>
-
-<hr class="thick"/>
-
-<?php endif; ?>
-
-<div class="row">
-
-
-	<div class="medium-12 columns">
-
-		
-
-		<?php if( have_rows('webinar_speakers') ): ?>
-
-		<h4>Meet Your Speakers</h4>
-
-		<ul class="medium-block-grid-4">
-
-			<?php while( have_rows('webinar_speakers') ): the_row(); 
-
-				// vars
-			$photo = get_sub_field('speaker_photo');
-			$name = get_sub_field('speaker_name');
-			$title = get_sub_field('speaker_title');
-			$organization = get_sub_field('speaker_organization');
-			$bio = get_sub_field('speaker_bio');
-
-			?>
-
-			<li class="speaker text-center">
-
-				<?php if( $photo ): ?>	
-				<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
-			<?php endif; ?>
-
-			<?php if( $name ): ?>
-			<h6><?php echo $name; ?></h6>
-		<?php endif; ?>
-		<?php if( $title ): ?>
-		<div><?php echo $title; ?></div>
-	<?php endif; ?>
-	<?php if( $name ): ?>
-	<div><em><?php echo $organization; ?></em></div>
-<?php endif; ?>
-<?php if( $bio): ?>
-	<a href="#" style="margin-top: .5rem;" class="button radius tiny" data-reveal-id="<?php echo $name; ?>">Speaker Bio</a>
-
-	<div id="<?php echo $name; ?>" class="reveal-modal" data-reveal aria-labelledby="<?php echo $name; ?>" aria-hidden="true" role="dialog">
-		<div class="row">
-			<div class="small-12 medium-4">
-				<?php if( $photo ): ?>	
-				<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
-			<?php endif; ?>
-
-			<?php if( $name ): ?>
-			<h6><?php echo $name; ?></h6>
-		<?php endif; ?>
-		<?php if( $title ): ?>
-		<div><?php echo $title; ?></div>
-	<?php endif; ?>
-	<?php if( $name ): ?>
-	<div><em><?php echo $organization; ?></em></div>
-<?php endif; ?>
-</div>
-<div class="small-12 medium-8 columns">
-	<?php if( $bio): ?>
-	<div class="bio">
-		<?php echo $bio; ?>
-	</div>
-<?php endif; ?>
-<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
-<?php endif; ?>
-
-
-</li>
-
-<?php endwhile; ?>
-
-</ul>
-
-<?php endif; ?>
-
-</div>
-
-
-</div>
-
-
-
-
-
-<hr/>
 
 <?php if( has_tag()) { ?>
+
 <footer class="panel tags">
 	<h6>Related Tags</h6>
 	<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>

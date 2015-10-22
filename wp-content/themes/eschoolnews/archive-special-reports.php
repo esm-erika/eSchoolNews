@@ -44,7 +44,7 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<li>
-					<div class="row">
+					<article class="row">
 						<div class="large-4 columns">
 						<?php 
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
@@ -54,24 +54,22 @@ get_header(); ?>
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 						</div>
 						<div class="large-8 columns">
-						<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-						<p><?php the_date(); ?></p>
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<p class="small-caps"><?php the_date(); ?></p>
 
-						
-
-						<ul class="stack-for-small radius secondary button-group">
 							<?php 
 
 							$file = get_field('report_file');
 
 							if( $file ): ?>
-						  <li><a href="<?php echo $file['url']; ?>" class="button tiny">Download</a></li>
+						  <a href="<?php echo $file['url']; ?>" class="button radius tiny">Download Report</a>
 						  <?php endif; ?>
-						  <li><a href="<?php the_permalink(); ?>" class="button tiny">Read More</a></li>
-						</ul>
+
+						  <a href="<?php the_permalink(); ?>" class="button tiny readmore">Read More</a>
+						
 					</div>
 
-						</div>
+						</article>
 						  
 				</li>
 					
@@ -83,6 +81,8 @@ get_header(); ?>
 			<hr class="thick"/>
 
 			<h4>More Special Reports</h4>
+
+			<br/>
 
 
 

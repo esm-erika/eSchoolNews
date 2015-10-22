@@ -84,14 +84,23 @@
 
 <div class="row">
 	<div class="large-12 columns">
-<?php /* //Prints the CPT and links to the archive page for that CPT
+<?php //Prints the CPT and links to the archive page for that CPT
 							$post_type = get_post_type_object( get_post_type($post) );
 							echo '<span class="flag content">';
 							echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
 							echo $post_type->labels->singular_name; 
-							echo '</a></span>';*/
-							?>    
+							echo '</a></span>';
+							?>  
+
+													<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img class="thumb" data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+  
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+		<p class="small-caps"><?php the_time('F j, Y'); ?></p>
 	</div>
 </div>
 
