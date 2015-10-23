@@ -1,6 +1,8 @@
 <article>
 <h4>Webinars</h4>
 <br/>
+
+<ul>
 <?php // The Query
 				$upcoming = array(
 					'post_type' => 'webinars',
@@ -26,7 +28,7 @@
 					$query->the_post(); ?>
 
 
-				<ul>
+				
 					<li>
 						<div class="date"><?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -36,10 +38,12 @@
                          
                         
 					</li>
-				</ul>
+				
 					
 					<?php endwhile; 
 				wp_reset_postdata(); ?>
+
+				</ul>
 
 				<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">See more Webinars &raquo;</a></h6>
 			</article>
