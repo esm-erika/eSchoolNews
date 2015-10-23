@@ -39,5 +39,5 @@
 					<?php endwhile; 
 				wp_reset_postdata(); ?>
 
-				<h6 class="readmore"><a href="<?php site_url('/'); ?>webinars">See more Webinars &raquo;</a></h6>
+				<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">See more Webinars &raquo;</a></h6>
 			</article>
