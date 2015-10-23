@@ -4,6 +4,7 @@
 <?php // The Query
 				$upcoming = array(
 					'post_type' => 'webinars',
+					'posts_per_page' => '5',
 					'tax_query' => array(
 						array(
 
