@@ -48,9 +48,6 @@ wp_reset_postdata(); ?>
 $events = array(
 	'post_type' => 'events',
 	'posts_per_page' => '3',
-
-		),
-
 	);
 
 $query2 = new WP_Query( $events );
