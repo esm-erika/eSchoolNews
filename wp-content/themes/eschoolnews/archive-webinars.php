@@ -25,7 +25,8 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
-<?php 	$args = array('post_type' => array( 'webinars' ),
+<?php 	$args = array(
+			'post_type' => array( 'webinars' ),
             'meta_key' => 'event_date',
             'orderby' => 'meta_value meta_value_num',
             'order' => 'DESC'
@@ -88,7 +89,11 @@ if($webinar_date >= $todayis){
 
 					<?php 
 					} //check if in date range
-					endwhile; 
+					endwhile; ?>
+
+					<hr/>
+
+					<?php
 					$upcomingwebinars = ob_get_clean( );
 					if($count > 0){
 						echo $upcomingwebinars;	
@@ -98,10 +103,11 @@ if($webinar_date >= $todayis){
 					
 					
 					?>
+
 					
                    	<?php wp_reset_query(); ?>
 
-                   	<hr/>
+                   
 
 		</ul>
 

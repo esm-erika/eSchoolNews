@@ -25,8 +25,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
-		<h4>Upcoming Events</h4>
-		<br/>
+		
 
 		<?php
 
@@ -37,6 +36,11 @@ get_header(); ?>
 					);
 
 				$query = new WP_Query( $args ); ?>
+
+				<?php if( $query->have_posts() ) : ?>
+
+				<h4>Upcoming Events</h4>
+		<br/>
 
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
@@ -60,9 +64,12 @@ get_header(); ?>
 		</article>
 
 				<?php endwhile; ?>
+
+				<hr class="thick"/>
+			<?php endif; ?>
 				<?php wp_reset_postdata(); ?>
 
-		<hr class="thick"/>
+		
 
 		<h4>Conference News</h4>
 		<br/>
