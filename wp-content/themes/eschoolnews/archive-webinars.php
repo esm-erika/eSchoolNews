@@ -26,7 +26,7 @@ get_header(); ?>
 	<div class="small-12 medium-12 columns" role="main">
 
 <?php 	$args = array('post_type' => array( 'webinars' ),
-            'meta_key' => 'webinar_date',
+            'meta_key' => 'event_date',
             'orderby' => 'meta_value meta_value_num',
             'order' => 'DESC'
 );
@@ -50,8 +50,8 @@ get_header(); ?>
 <?php
 						 while ( have_posts() ) : the_post(); 
 					
-$webinar_date = get_field( "webinar_date" );
-$webinar_registration_link = get_field_object("webinar_registration_link");
+$webinar_date = get_field( "event_date" );
+$webinar_registration_link = get_field_object("registration_link");
 $todayis = date("Ymd");
 $showdate = DateTime::createFromFormat('Ymd', $webinar_date);
 
@@ -76,9 +76,9 @@ if($webinar_date >= $todayis){
 					</div>
 
 						<header class="large-8 columns"> 
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                             <h6><?php if($showdate){echo $showdate->format('F d, Y');} ?></h6>
-                            <a class="button radius small" target="new" href="<?php the_field('webinar_registration_link'); ?>">Register Now</a>
+                            <a class="button radius small" target="new" href="<?php the_field('registration_link'); ?>">Register Now</a>
 						</header>
 
 						
@@ -116,7 +116,7 @@ if($webinar_date >= $todayis){
 
 
 
-<?php 	$args = array('post_type' => array( 'Webinars' ),'meta_key' => 'webinar_date','orderby' => 'meta_value meta_value_num','order' => 'DESC');
+<?php 	$args = array('post_type' => array( 'Webinars' ),'meta_key' => 'event_date','orderby' => 'meta_value meta_value_num','order' => 'DESC');
 		$query = new WP_Query( $args );
 		$count = 0;
 				//loop the post and look for past items. Save them for output. 
@@ -140,8 +140,8 @@ if($webinar_date >= $todayis){
 <?php
 						 while ( have_posts() ) : the_post(); 
 					
-$webinar_date = get_field( "webinar_date" );
-$webinar_registration_link = get_field_object("webinar_registration_link");
+$webinar_date = get_field( "event_date" );
+$webinar_registration_link = get_field_object("registration_link");
 $todayis = date("Ymd");
 $showdate = DateTime::createFromFormat('Ymd', $webinar_date);
 if($webinar_date < $todayis){
