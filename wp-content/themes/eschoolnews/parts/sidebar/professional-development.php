@@ -12,7 +12,7 @@ $upcoming = array(
 
 			'taxonomy' => 'status-webinars',
 			'field' => 'slug',
-			'terms' => 'upcoming-webinars',
+			'terms' => 'archived-webinars',
 
 			),
 
@@ -30,10 +30,10 @@ while ( $query->have_posts() ) :
 
 <div class="row">
 	<div class="large-12 columns">
+		<div class="date"><?php 
+		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<p class="date"><?php 
-		$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
-		if($showdate){ echo $showdate -> format('F d, Y');} ?></p>
 
 	</div>
 </div>
@@ -48,19 +48,10 @@ wp_reset_postdata(); ?>
 $events = array(
 	'post_type' => 'events',
 	'posts_per_page' => '3',
-	'tax_query' => array(
-		array(
-
-			//'taxonomy' => 'status-webinars',
-			//'field' => 'slug',
-			//'terms' => 'upcoming-webinars',
-
-			),
 
 		),
 
 	);
-
 
 $query2 = new WP_Query( $events );
 
@@ -71,11 +62,10 @@ while ( $query2->have_posts() ) :
 
 <div class="row">
 	<div class="large-12 columns">
+		<div><?php 
+		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<p><?php 
-		$showdate = DateTime::createFromFormat('Ymd', get_field('webinar_date'));
-		if($showdate){ echo $showdate -> format('F d, Y');} ?></p>
-
 	</div>
 </div>
 
