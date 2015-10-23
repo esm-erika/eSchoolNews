@@ -1,5 +1,5 @@
 <article>
-<h4>Upcoming Webinars</h4>
+<h4>Webinars</h4>
 <br/>
 <?php // The Query
 				$upcoming = array(
@@ -9,7 +9,7 @@
 
 							'taxonomy' => 'status-webinars',
 							'field' => 'slug',
-							'terms' => 'upcoming-webinars',
+							'terms' => 'archived-webinars',
 
 							),
 

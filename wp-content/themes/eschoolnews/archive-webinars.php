@@ -61,8 +61,8 @@ if($webinar_date >= $todayis){
 						
 					
 					<li>
-					<article>
-						<div class="row">
+					<article class="row">
+						
 
 							<div class="large-4 columns">
 
@@ -82,7 +82,6 @@ if($webinar_date >= $todayis){
 						</header>
 
 						
-						</div>
 					</article>
 
 					</li>
@@ -102,11 +101,13 @@ if($webinar_date >= $todayis){
 					
                    	<?php wp_reset_query(); ?>
 
+                   	<hr/>
+
 		</ul>
 
 		<!-- <h6 class="readmore"><a href="#">See More Webinars &raquo;</a></h6> -->
 
-		<hr/>
+		
 
 
 

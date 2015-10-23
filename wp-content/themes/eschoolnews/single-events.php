@@ -28,8 +28,13 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
+				<!-- <p class="date"><?php the_time('F j, Y'); ?></p> -->
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<h5><?php the_date(); ?></h5>
+
+				<h5><i class="fi-calendar"></i> <?php 
+				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
+				<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
 
 				<?php get_template_part('parts/social'); ?>
 			</header>
@@ -41,47 +46,50 @@ get_header(); ?>
 			
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-			<div class="entry-content row">
+			<div class="row entry-content">
 
 				<?php if ( has_post_thumbnail() ) {
-					echo '<div class="small-12 medium-4 columns">';
-							the_post_thumbnail('full');
+
+					echo '<div class="large-4 columns">';
+					the_post_thumbnail('full'); 
 					echo '</div>';
-					echo '<div class="small-12 medium-8 columns">';
-						
+
+					echo '<div class="large-8 columns">';
+					
+					the_field('event_information'); 
+					
+					if (get_field('registration_link')) {
+
+						echo '<a class="button radius" href="';
+
+						the_field('registration_link');
+
+						echo '" target="new">Register Now</a>';
+					}
+
+					echo '</div>';
+
 				} else {
-					echo '<div class="medium-12">';
+
+					echo '<div class="large-12 columns">';
+					echo '<h5>About Event</h5>';
+					the_field('event_information');
+					echo '</div>';
+
 				} ?>
 
-				<?php the_content(); ?>
+			</div>
 
-				
+<?php if( ! has_tag()){
+ echo '<hr/>';
+} ?>
 
-							<?php 
-
-							$file = get_field('report_file');
-
-							if( $file ): ?>
-								
-								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
-
-							<?php endif; ?>
-
-							</div>
-
-
-</article>
-
-
-
-
-
-
-<hr/>
 
 <?php if( has_tag()) { ?>
+
 <footer class="panel tags">
 	<h6>Related Tags</h6>
+	<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
 	<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
 </footer>
 

@@ -42,9 +42,18 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h3 class="entry-title"><?php the_title(); ?></h3>
+				<article class="row">
+					<div class="large-4 columns">
+						<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+					</div>
+
+			<header class="large-8 columns">
+				<h4 class="entry-title"><?php the_title(); ?></h4>
 				<p class="date"><?php the_time('F j, Y'); ?></p>
 				<p><?php the_tags('<span class="flag event">','</span><span class="flag event">','</span>'); ?></p>
 			</header>
@@ -58,12 +67,14 @@ get_header(); ?>
 		<h4>Conference News</h4>
 		<br/>
 
+		<div class="row">
+
 	<?php
 
 				// The Query
 				$args = array(
 					'post_type' => 'post',
-					'posts_per_page' => '5',
+					'posts_per_page' => '6',
 					'orderby' => 'date',
 					'tag' => 'aasa, alas, ascd, blc, cosn, cue, fetc, infocomm, iste, nsba, tcea, event, events, conference, conferences'
 					);
@@ -74,17 +85,18 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<article class="large-6 columns">
 			<header>
-				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<div class="date"><?php the_time('F j, Y'); ?></div>
+				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				<h6>By <?php the_author(); ?></h6>
-				<p class="date"><?php the_time('F j, Y'); ?></p>
 				
 			</header>
 		</article>
 
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
+			</div>
 
 		
 	</div>
