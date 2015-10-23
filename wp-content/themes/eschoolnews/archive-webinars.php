@@ -161,9 +161,9 @@ if($webinar_date < $todayis){
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 						</div>
 						<header class="large-8 columns"> 
-							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							<h6><?php if($showdate){echo $showdate->format('F d, Y');} ?></h6>
-                            <a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
+                            <a class="button radius tiny" href="<?php the_permalink(); ?>">View Now</a>
 						</header>
 					</div>
 					</article>
