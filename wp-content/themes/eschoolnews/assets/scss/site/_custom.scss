@@ -749,6 +749,15 @@ footer.container > div {
 		display: block;
 		margin: auto;
 	}
+
+	ul {
+		margin-left: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: 1.1rem;
+		}
+	}
 }
 
 .widget {
