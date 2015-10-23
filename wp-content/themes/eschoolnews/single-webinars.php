@@ -59,7 +59,7 @@ get_header(); ?>
 					
 					if (get_field('registration_link')) {
 
-						echo '<a class="button radius" href="';
+						echo '<a class="button small radius" href="';
 
 						the_field('registration_link');
 

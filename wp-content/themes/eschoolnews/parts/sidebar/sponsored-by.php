@@ -6,7 +6,7 @@
 			if( !empty($image) ): ?>
 			<article id="sponsored-by">
 
-				<div class="small-caps">Webinar Sponsored By:</div>
+				<p class="small-caps">Webinar Sponsored By:</p>
 
 	
 
