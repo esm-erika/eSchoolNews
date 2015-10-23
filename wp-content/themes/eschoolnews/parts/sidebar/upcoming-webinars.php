@@ -26,8 +26,8 @@
 					$query->the_post(); ?>
 
 
-				<div class="row">
-					<div class="large-12 columns">
+				<ul>
+					<li>
 						<div class="date"><?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 				if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
@@ -35,8 +35,8 @@
 
                          
                         
-					</div>
-				</div>
+					</li>
+				</ul>
 					
 					<?php endwhile; 
 				wp_reset_postdata(); ?>
