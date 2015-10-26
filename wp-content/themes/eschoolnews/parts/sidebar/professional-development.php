@@ -54,7 +54,7 @@ $events = array(
 
 $query2 = new WP_Query( $events ); ?>
 
-<?php if ( $query->have_posts() ) : ?>
+<?php if ( $query2->have_posts() ) : ?>
 
 <hr/>
 <section class="events">
