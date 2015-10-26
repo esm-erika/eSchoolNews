@@ -34,7 +34,16 @@
 
 					<?php while ( have_posts() ) : the_post(); ?>
 						
-					<li> <article>
+					<li> 
+						<article>
+
+						<?php //Prints the CPT and links to the archive page for that CPT
+							$post_type = get_post_type_object( get_post_type($post) );
+							echo '<span class="flag content">';
+							echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
+							echo $post_type->labels->singular_name; 
+							echo '</a></span>';
+							?>
 					
 
 						<?php 
@@ -45,18 +54,23 @@
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 
 						<header> 
- 
-							<?php //Prints the CPT and links to the archive page for that CPT
-							$post_type = get_post_type_object( get_post_type($post) );
-							echo '<span class="flag content">';
-							echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
-							echo $post_type->labels->singular_name; 
-							echo '</a></span>';
-							?>
+							
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+							<?php if( is_post_type('webinars')) { ?>
+
+							<h5><i class="fi-calendar"></i> <?php 
+							$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+							if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
+							<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+
+							<?php } ?>
+
+
 						</header>
 
-					</article></li>
+					</article>
+				</li>
 
 					<?php endwhile; ?>
 

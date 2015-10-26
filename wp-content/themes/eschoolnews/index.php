@@ -42,7 +42,7 @@ get_header(); ?>
 
 	<div class="small-12 large-8 columns">
 
-			<?php get_template_part('parts/secondary'); ?>		
+			<?php get_template_part('parts/resources-section'); ?>		
 
 		<!-- secondary -->
 
