@@ -1,6 +1,7 @@
 <article>
 <section>
-<h3 class="section-title"><span>Related posts</span></h3>	
+<h4>Related Posts</h4>	
+<br/>
 <?php 
 
 //$args = array( 'category__in => 6870, 'tag__in' => array( 'tag1', 'tag2' ), 'showposts' => 2 );

@@ -3,6 +3,7 @@
 <br/>
 <section class="webinars">
 	<h5>Webinars</h5>
+	<ul>
 <?php // The Query
 $upcoming = array(
 	'post_type' => 'webinars',
@@ -28,45 +29,53 @@ while ( $query->have_posts() ) :
 	$query->the_post(); ?>
 
 
-<div class="row">
-	<div class="large-12 columns">
+<li>
 		<div class="date"><?php 
 		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-	</div>
-</div>
+</li>
 
 <?php endwhile; 
 wp_reset_postdata(); ?>
+
+</ul>
+
+<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">More Webinars &raquo;</a></h6>
 </section>
 <hr/>
 <section class="events">
 	<h5>Events</h5>
+
+	
 <?php // The Query
 $events = array(
 	'post_type' => 'events',
 	'posts_per_page' => '3',
 	);
 
-$query2 = new WP_Query( $events );
+$query2 = new WP_Query( $events ); ?>
 
+<?php if ( $query->have_posts() ) : ?>
 
-while ( $query2->have_posts() ) :
+<ul>
+<?php while ( $query2->have_posts() ) :
 	$query2->the_post(); ?>
 
 
-<div class="row">
-	<div class="large-12 columns">
+<li>
 		<div><?php 
 		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-	</div>
-</div>
+</li>
 
-<?php endwhile; 
+<?php endwhile; ?>
+<?php endif;
 wp_reset_postdata(); ?>
+
+<h6 class="readmore"><a href="<?php site_url(); ?>/events">More Events &raquo;</a></h6>
+
 </section>
 </article>
