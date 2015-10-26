@@ -3,4 +3,4 @@
 <?php LandingRecentItems('professional-development', 3) ?>
 <?php LandingRecentItems('research', 3) ?>
 <?php LandingRecentItems('school-administration', 3) ?>
-<?php LandingRecentItems('superintendents-corner', 3) ?>
+<?php LandingRecentItems('superintendents-center', 3) ?>
