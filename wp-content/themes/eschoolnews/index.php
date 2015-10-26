@@ -47,7 +47,7 @@ get_header(); ?>
 		<!-- secondary -->
 
 		
-		<?php get_template_part('parts/tertiary'); ?>
+		<?php get_template_part('parts/whitepaper-section'); ?>
 
 		<!-- tertiary -->
 
@@ -61,8 +61,6 @@ get_header(); ?>
 
 </div>
 
-
-		<?php //get_template_part('parts/quaternary'); ?>
 
 
 
