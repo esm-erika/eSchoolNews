@@ -16,7 +16,7 @@
 	<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>
 
 
-		<ul class="small-block-grid-2 large-block-grid-3">
+		<ul class="small-block-grid-1 large-block-grid-2">
 
 
 			<?php if ( have_posts() ) : ?>
@@ -31,17 +31,21 @@
 						
 					
 					<li>
-					<article>
+					<article class="row">
 
-						<?php //the_post_thumbnail('small-thumb');  
+						<div class="medium-4 columns">
+
+						<?php   
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small-thumb' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 						?>
+
+					</div>
 						
 
-						<header> 
+						<header class="medium-8 columns"> 
 							<h5><?php the_title(); ?></h5>
-							<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+							<a href="#" class="button tiny radius" data-reveal-id="<?php the_ID(); ?>">Download</a>
 							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 						</header>
 
