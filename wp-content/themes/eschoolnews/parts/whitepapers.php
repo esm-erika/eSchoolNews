@@ -61,7 +61,6 @@
 
 					<?php endif;?>
 
-					<?php rewind_posts(); ?>
 
 		</ul>
 
