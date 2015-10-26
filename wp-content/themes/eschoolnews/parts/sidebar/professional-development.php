@@ -3,6 +3,7 @@
 <br/>
 <section class="webinars">
 	<h5>Webinars</h5>
+	<br/>
 	<ul>
 <?php // The Query
 $upcoming = array(
@@ -44,11 +45,7 @@ wp_reset_postdata(); ?>
 
 <h6 class="readmore"><a href="<?php site_url(); ?>/webinars">More Webinars &raquo;</a></h6>
 </section>
-<hr/>
-<section class="events">
-	<h5>Events</h5>
 
-	
 <?php // The Query
 $events = array(
 	'post_type' => 'events',
@@ -58,6 +55,11 @@ $events = array(
 $query2 = new WP_Query( $events ); ?>
 
 <?php if ( $query->have_posts() ) : ?>
+
+<hr/>
+<section class="events">
+	<h5>Events</h5>
+	<br/>
 
 <ul>
 <?php while ( $query2->have_posts() ) :
@@ -72,10 +74,12 @@ $query2 = new WP_Query( $events ); ?>
 </li>
 
 <?php endwhile; ?>
-<?php endif;
-wp_reset_postdata(); ?>
+
 
 <h6 class="readmore"><a href="<?php site_url(); ?>/events">More Events &raquo;</a></h6>
 
 </section>
+
+<?php endif;
+wp_reset_postdata(); ?>
 </article>
