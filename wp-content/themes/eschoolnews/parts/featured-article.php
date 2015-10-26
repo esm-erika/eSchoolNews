@@ -10,11 +10,8 @@
 ?>
 
 
-<?php if ( have_posts() ) : ?>
 
-<h1 class="section-title"><span>Featured</span></h1>
 
-<div class="small-12 large-6 columns" role="main">
 
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
@@ -86,6 +83,11 @@
 		}
 
 				?>
+
+				<h1 class="section-title"><span>Featured</span></h1>
+
+<div class="small-12 large-6 columns" role="main">
+	
 
 				<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 			
