@@ -67,14 +67,23 @@ span.flag {
 	display: inline-block;
 	margin: 0 0 .25rem 0;
 	line-height: 1;
-		border-width: 1px;
-		border-style: solid;
-		background-color: #f2f2f2;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #f2f2f2;
 	border-color: #d8d8d8;
 
 	a {
 		color: #369;
 	}
+}
+
+span.flag:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 
 span.tag {
@@ -388,6 +397,10 @@ a.button.readmore {
 
 // Misc Styles
 
+img.thumb {
+	margin: 0 0 0.25rem 0;
+}
+
 hr.thick {
 	border: solid #333;
     border-width: 5px 0 0;
@@ -470,7 +483,7 @@ li.speaker {
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
-	
+
 	 iframe {
 		position: absolute;
 		top: 0;
