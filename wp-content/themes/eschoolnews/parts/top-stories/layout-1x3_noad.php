@@ -18,14 +18,30 @@
 
 		<div class="columns large-12">
 
-			<?php
-			if ( is_front_page() ) {
-				query_posts( array ( 'post_type' => 'post', 'posts_per_page' => 3 ));
-			} ?>
+			<?php // The Query
+
+			$topstories = new WP_Query(array(
+				'post_type' => 'post',
+				'posts_per_page' => 3
+				)); 
+
+				if ( is_category() ) {
+
+					global $cat;
+
+					$topstories = new WP_Query(array(
+					'cat' => $cat,
+					'post_type' => 'post',
+					'posts_per_page' => 3
+					)); 
+
+
+				}
+			 ?>
 
 <ul class="small-block-grid-1 medium-block-grid-3">
 
-	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>			
+				<?php while ( $topstories->have_posts() ) : $topstories -> the_post(); ?>
 
 	<li>
 
@@ -47,9 +63,9 @@
 
 	<?php endwhile; ?>
 
-	<?php wp_reset_query(); ?>
+		<?php wp_reset_query(); ?>
 
-<?php endif;?>
+	<?php //endif;?>
 
 </ul>
 

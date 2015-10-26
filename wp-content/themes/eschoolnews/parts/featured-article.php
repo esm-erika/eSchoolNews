@@ -9,28 +9,87 @@
 
 ?>
 
-<h1 class="section-title"><span>Featured Story</span></h1>
-
-<div class="small-12 large-6 columns" role="main">
 
 
 
 <?php if ( have_posts() ) : ?>
 
+	<div class="row">
+<h1 class="section-title"><span>Featured</span></h1>
+
+<div class="small-12 large-6 columns" role="main">
+
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
-		<?php
-			if ( is_front_page() ) {
-				query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ));
-			} elseif ( is_category()) {
-				
-				global $query_string;
-				query_posts( $query_string . '&posts_per_page=1' );
-			}
+		<?php // The Query
 
-		?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			
+			if( is_home() || is_front_page()) {
+			$featured = new WP_Query(array(
+				'meta_query' => array(
+					array(
+						'key' => 'featured',
+						'value' => '1',
+						'compare' => '=='
+						)
+					),
+				'posts_per_page' => 1
+				)); 
+
+		} elseif ( is_category()) {
+			
+			global $cat;
+
+
+			$featured = new WP_Query(array(
+				'cat' => $cat,
+				'meta_query' => array(
+					array(
+						'key' => 'featured',
+						'value' => '1',
+						'compare' => '=='
+						)
+					),
+				'posts_per_page' => 1
+				)); 
+
+
+		} elseif ( is_singular( array( 'webinars', 'whitepapers', 'specialreports', 'ercs' )) ) {
+
+			$post_type = get_post_type( $post->ID );
+
+			$featured = new WP_Query(array(
+				'post_type' => $post_type,
+				'meta_query' => array(
+					array(
+						'key' => 'featured',
+						'value' => '1',
+						'compare' => '=='
+						)
+					),
+				'posts_per_page' => 1
+				)); 
+
+		} elseif ( is_page('resources')) {
+
+			$featured = new WP_Query(array(
+				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports'),
+				'meta_query' => array(
+					array(
+						'key' => 'featured',
+						'value' => '1',
+						'compare' => '=='
+						)
+					),
+				'posts_per_page' => 1
+				)); 
+
+		}
+
+				?>
+
+				<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 			
 
 						<?php 
@@ -62,12 +121,19 @@
 
 		<?php wp_reset_query(); ?>
 
-	<?php endif;?>
+		<hr class="thick"/>
 
-	<?php rewind_posts(); ?>
+		</div>
+	</div>
+
+
+
+	<?php endif;?>
 
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
-</div>
+	
+
+
 
