@@ -9,13 +9,13 @@
 
 ?>
 
+
+<?php if ( have_posts() ) : ?>
+
 <h1 class="section-title"><span>Featured</span></h1>
 
 <div class="small-12 large-6 columns" role="main">
 
-
-
-<?php if ( have_posts() ) : ?>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -126,7 +126,6 @@
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
-	<hr class="thick"/>
-
+<!--  -->
 </div>
 
