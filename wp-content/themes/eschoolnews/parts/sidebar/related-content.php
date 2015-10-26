@@ -72,6 +72,8 @@
 //if ( have_posts() ) {	
 ?>
 
+<ul>
+
 <?php
     while( $my_query->have_posts() ) {
       $my_query->the_post();
@@ -79,12 +81,7 @@
 
 
 
-
-
-
-
-<div class="row">
-	<div class="large-12 columns">
+<li>
 <?php //Prints the CPT and links to the archive page for that CPT
 							$post_type = get_post_type_object( get_post_type($post) );
 							echo '<span class="flag content">';
@@ -99,11 +96,10 @@
 						?>
 
 						<img class="thumb" data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-  
+  		
+  		<div class="small-caps"><?php the_time('F j, Y'); ?></div>
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<p class="small-caps"><?php the_time('F j, Y'); ?></p>
-	</div>
-</div>
+</li>
 
 
      <?php 
@@ -114,6 +110,8 @@
 
 	 
 ?>	
+
+</ul>
 </section>
 </article>
 <?php	
