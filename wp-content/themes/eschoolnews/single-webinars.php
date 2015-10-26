@@ -47,16 +47,36 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="row entry-content">
 
-				<?php if ( has_post_thumbnail() ) {
+				<?php 
+
+				echo '<h5 class="columns">About Event</h5>';
+
+				if ( has_post_thumbnail() ) {
 
 					echo '<div class="large-4 columns">';
 					the_post_thumbnail('full'); 
 					echo '</div>';
 
 					echo '<div class="large-8 columns">';
+
+
+				} else {
+
+					echo '<div class="large-12 columns">';
+
+				}
 					
-					the_field('event_information'); 
-					
+
+					if (get_field('youtube_embed')) {
+						echo '<div class="videoWrapper">';
+						echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
+						the_field('youtube_embed');
+						echo '" frameborder="0" allowfullscreen></iframe>';
+						echo '</div>';
+					}
+
+					the_field('event_information');
+
 					if (get_field('registration_link')) {
 
 						echo '<a class="button small radius" href="';
@@ -65,17 +85,10 @@ get_header(); ?>
 
 						echo '" target="new">Register Now</a>';
 					}
-
+				
 					echo '</div>';
 
-				} else {
-
-					echo '<div class="large-12 columns">';
-					echo '<h5>About Event</h5>';
-					the_field('event_information');
-					echo '</div>';
-
-				} ?>
+				 ?>
 
 			</div>
 
@@ -85,7 +98,7 @@ get_header(); ?>
 
 
 <?php if( has_tag()) { ?>
-
+<br/>
 <footer class="panel tags">
 	<h6>Related Tags</h6>
 	<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
