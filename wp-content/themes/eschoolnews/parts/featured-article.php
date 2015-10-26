@@ -9,15 +9,13 @@
 
 ?>
 
+<h1 class="section-title"><span>Featured</span></h1>
+
+<div class="small-12 large-6 columns" role="main">
 
 
 
 <?php if ( have_posts() ) : ?>
-
-	<div class="row">
-<h1 class="section-title"><span>Featured</span></h1>
-
-<div class="small-12 large-6 columns" role="main">
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -121,11 +119,6 @@
 
 		<?php wp_reset_query(); ?>
 
-		<hr class="thick"/>
-
-		</div>
-	</div>
-
 
 
 	<?php endif;?>
@@ -133,7 +126,7 @@
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
-	
+	<hr class="thick"/>
 
-
+</div>
 
