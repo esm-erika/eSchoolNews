@@ -91,8 +91,11 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -121,7 +124,11 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -151,7 +158,11 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -180,9 +191,10 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 				
-				<li>
-					<h4><?php the_title(); ?></h4>
-					<a href="#">Download</a>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
