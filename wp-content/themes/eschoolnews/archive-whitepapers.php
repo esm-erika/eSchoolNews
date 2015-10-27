@@ -59,7 +59,8 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
+                        <h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
@@ -95,6 +96,7 @@ get_header(); ?>
 					$query->the_post(); ?>
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
+                        <?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
@@ -129,6 +131,7 @@ get_header(); ?>
 
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
@@ -164,6 +167,7 @@ get_header(); ?>
 
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
@@ -198,6 +202,7 @@ get_header(); ?>
 				
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
