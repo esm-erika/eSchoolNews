@@ -47,7 +47,7 @@ get_header(); ?>
 
 				// The Query
 				$args = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand'
 					);
 
@@ -60,8 +60,14 @@ get_header(); ?>
 
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+						<a href="#" data-reveal-id="a<?php the_slug(); ?>">Download</a>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
+<div id="a<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="a<?php the_slug(); ?>" aria-hidden="true" role="dialog">
+  <h2 id="a<?php the_ID(); ?>"><?php the_title(); ?></h2>
+  <hr/>
+  <?php the_content(); ?>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>                        
 				</li>
 					
 					<?php endwhile; ?>
@@ -80,19 +86,9 @@ get_header(); ?>
 
 				// The Query
 				$args2 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'digital',
-
-							),
-
-						),
-
+					'taxonomy' => 'subject_categories',
 					);
 
 				$query = new WP_Query( $args2 ); ?>
@@ -101,8 +97,17 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="b<?php the_slug(); ?>">Download</a>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
+<div id="b<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="b<?php the_slug(); ?>" aria-hidden="true" role="dialog">
+  <h2 id="b<?php the_ID(); ?>"><?php the_title(); ?></h2>
+  <hr/>
+  <?php the_content(); ?>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -118,18 +123,9 @@ get_header(); ?>
 
 				// The Query
 				$args3 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'mobile-online',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
 
 					);
 
@@ -140,7 +136,17 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="c<?php the_slug(); ?>">Download</a>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
+<div id="c<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="c<?php the_slug(); ?>" aria-hidden="true" role="dialog">
+  <h2 id="c<?php the_ID(); ?>"><?php the_title(); ?></h2>
+  <hr/>
+  <?php the_content(); ?>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -157,18 +163,9 @@ get_header(); ?>
 
 				// The Query
 				$args4 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'technologies',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
 
 					);
 
@@ -179,7 +176,17 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="d<?php the_slug(); ?>">Download</a>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
+<div id="d<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="d<?php the_slug(); ?>" aria-hidden="true" role="dialog">
+  <h2 id="d<?php the_ID(); ?>"><?php the_title(); ?></h2>
+  <hr/>
+  <?php the_content(); ?>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -195,18 +202,9 @@ get_header(); ?>
 
 				// The Query
 				$args5 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'technologies',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
 
 					);
 
@@ -217,9 +215,16 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 				
-				<li>
-					<h4><?php the_title(); ?></h4>
-					<a href="#">Download</a>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<a href="#" data-reveal-id="e<?php the_slug(); ?>">Download</a>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
+<div id="e<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="e<?php the_slug(); ?>" aria-hidden="true" role="dialog">
+  <h2 id="e<?php the_ID(); ?>"><?php the_title(); ?></h2>
+  <hr/>
+  <?php the_content(); ?>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
 				</li>
 					
 					<?php endwhile; ?>
