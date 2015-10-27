@@ -47,7 +47,7 @@ get_header(); ?>
 
 				// The Query
 				$args = array(
-					'post_type' => 'whitepapers',
+					//'post_type' => 'whitepapers',
 					'orderby' => 'rand'
 					);
 
@@ -80,9 +80,19 @@ get_header(); ?>
 
 				// The Query
 				$args2 = array(
-					'post_type' => 'whitepapers',
+					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'taxonomy' => 'subject_categories',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'digital',
+
+							),
+
+						),
+
 					);
 
 				$query = new WP_Query( $args2 ); ?>
@@ -91,11 +101,8 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-				</li>
+
+				<li><?php the_title(); ?></li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -111,9 +118,18 @@ get_header(); ?>
 
 				// The Query
 				$args3 = array(
-					'post_type' => 'whitepapers',
+					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'taxonomy' => 'subject_categories',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'mobile-online',
+
+							),
+
+						),
 
 					);
 
@@ -124,11 +140,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-				</li>
+				<li><?php the_title(); ?></li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -145,9 +157,18 @@ get_header(); ?>
 
 				// The Query
 				$args4 = array(
-					'post_type' => 'whitepapers',
+					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'taxonomy' => 'subject_categories',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'technologies',
+
+							),
+
+						),
 
 					);
 
@@ -158,11 +179,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-				</li>
+				<li><?php the_title(); ?></li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -178,9 +195,18 @@ get_header(); ?>
 
 				// The Query
 				$args5 = array(
-					'post_type' => 'whitepapers',
+					//'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'taxonomy' => 'subject_categories',
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'subject_categories',
+							'field' => 'slug',
+							'terms' => 'technologies',
+
+							),
+
+						),
 
 					);
 
@@ -191,10 +217,9 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 				
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
+				<li>
+					<h4><?php the_title(); ?></h4>
+					<a href="#">Download</a>
 				</li>
 					
 					<?php endwhile; ?>
