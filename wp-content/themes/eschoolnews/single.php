@@ -43,7 +43,7 @@ include('single-coa.php');
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
-				<p class="date"><?php the_time('F j, Y'); ?></p>
+				<div class="date"><?php the_time('F j, Y'); ?></div>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<p class="author">By <?php the_author(); ?></p>
 			
