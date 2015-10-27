@@ -47,7 +47,7 @@ get_header(); ?>
 
 				// The Query
 				$args = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand'
 					);
 
@@ -59,8 +59,9 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
+                        <h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
@@ -80,19 +81,11 @@ get_header(); ?>
 
 				// The Query
 				$args2 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'digital',
-
-							),
-
-						),
-
+					'taxonomy' => 'subject_categories',
+					'term' => 'curriculum-whitepapers'
+					
 					);
 
 				$query = new WP_Query( $args2 ); ?>
@@ -101,8 +94,12 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+                        <?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -118,18 +115,10 @@ get_header(); ?>
 
 				// The Query
 				$args3 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'mobile-online',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
+					'term' => 'digital-whitepapers'
 
 					);
 
@@ -140,7 +129,12 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -157,18 +151,10 @@ get_header(); ?>
 
 				// The Query
 				$args4 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'technologies',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
+					'term' => 'mobile-online-whitepapers'
 
 					);
 
@@ -179,7 +165,12 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li><?php the_title(); ?></li>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+				</li>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -195,18 +186,10 @@ get_header(); ?>
 
 				// The Query
 				$args5 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'technologies',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
+					'term' => 'technologies-whitepapers'
 
 					);
 
@@ -217,9 +200,11 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 				
-				<li>
-					<h4><?php the_title(); ?></h4>
-					<a href="#">Download</a>
+				<li data-equalizer>
+						<h4><?php the_title(); ?></h4>
+						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
