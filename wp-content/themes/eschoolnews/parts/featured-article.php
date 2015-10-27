@@ -83,8 +83,16 @@
 				<?php if ( $featured->have_posts() ) : ?>
 
 
-				<h1 class="section-title"><span>Featured</span></h1>
+				<?php if( is_page('resources')) {
+					echo '';
 
+				} else {
+					echo '<h1 class="section-title"><span>Featured</span></h1>';
+				}?>
+
+
+</div>
+<div class="row">
 <div class="small-12 large-6 columns" role="main">
 
 
@@ -126,7 +134,14 @@
 
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
-
-<!--  -->
 </div>
+<div class="row">
+<!--  -->
+<?php if( is_page('resources')) {
+
+echo '<hr class="thick" />';
+
+}?>
+
+
 
