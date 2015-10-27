@@ -122,6 +122,9 @@
   <?php get_template_part( 'parts/top-bar' ); ?>
 
   <section class="container" role="document">
+    
    <?php do_action( 'foundationpress_after_header' ); ?>
 
-
+<div class="row">
+	<?php get_template_part( 'parts/ads/leaderboard' ); ?>  
+</div>

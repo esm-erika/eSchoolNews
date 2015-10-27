@@ -20,7 +20,7 @@ get_header(); ?>
 
 <div id="featured-article" class="row top">
 
-	<?php get_template_part( 'parts/ads/leaderboard' ); ?>
+	<?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 		
 	<?php get_template_part( 'parts/featured-article' ); ?>
 
