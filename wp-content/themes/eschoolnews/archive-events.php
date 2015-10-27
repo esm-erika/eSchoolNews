@@ -58,7 +58,7 @@ get_header(); ?>
 
 			<header class="large-8 columns">
 				<div class="date"><?php the_time('F j, Y'); ?></div>
-				<h4 class="entry-title"><?php the_title(); ?></h4>
+				<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
 				<p><?php the_tags('<span class="flag event">','</span><span class="flag event">','</span>'); ?></p>
 			</header>
 		</article>

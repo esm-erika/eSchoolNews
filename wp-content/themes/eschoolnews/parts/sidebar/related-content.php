@@ -90,10 +90,10 @@
 							echo '</a></span>';
 							?>  
 
-													<?php 
+													<?php if( has_post_thumbnail()) {
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						?>
+						} ?>
 
 						<img class="thumb" data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
   		

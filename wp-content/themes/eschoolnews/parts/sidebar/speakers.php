@@ -1,11 +1,12 @@
-<?php if( have_rows('webinar_speakers') ): ?>
+<?php if( have_rows('speakers') ): ?>
 
 	<article>
 
 		<h4>Meet Your Speakers</h4>
 		<br/>
 
-		<ul class="medium-block-grid-2">
+		<ul>
+
 
 			<?php while( have_rows('speakers') ): the_row(); 
 
@@ -18,10 +19,19 @@
 
 			?>
 
-			<li class="speaker text-center">
+			<li class="row speaker">
 
-				<?php if( $photo ): ?>	
+				
+
+			<?php if( $photo ): ?>	
+			<div class="medium-5 columns">
 				<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
+			</div>
+			<div class="medium-7 columns">
+			<?php endif; ?>
+
+			<?php if( ! $photo ): ?>	
+				<div class="medium-12 columns">
 			<?php endif; ?>
 
 			<?php if( $name ): ?>
@@ -63,12 +73,13 @@
 </div>
 <?php endif; ?>
 
-
+</div>
 </li>
 
 <?php endwhile; ?>
 
-</ul>
 
 <?php endif; ?>
+
+</ul>
 </article>

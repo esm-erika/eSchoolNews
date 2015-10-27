@@ -26,12 +26,18 @@
 	  <?php
 	if( is_singular('webinars')) { 
 
-		get_template_part( 'parts/sidebar/sponsored-by' ); 
-
-		get_template_part( 'parts/sidebar/speakers' ); 
+		get_template_part( 'parts/sidebar/sponsored-by' );  
 	
 		}
 	 ?>
+
+
+	 <?php if(is_singular( array('webinars', 'events') )) {
+
+	 	get_template_part( 'parts/sidebar/speakers' );
+	 }
+
+	  ?>
 
 	<?php if( is_tag()) {
 

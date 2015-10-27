@@ -28,7 +28,6 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
-				<!-- <p class="date"><?php the_time('F j, Y'); ?></p> -->
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
 				<h5><i class="fi-calendar"></i> <?php 
@@ -44,66 +43,68 @@ get_header(); ?>
 			<hr/>
 
 			
-
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="row entry-content">
 
-				<?php if ( has_post_thumbnail() ) {
+				<?php 
 
-					echo '<div class="large-4 columns">';
+				echo '<div class="large-12 columns">';
+
+				
+
+				if ( has_post_thumbnail() ) {
+
 					the_post_thumbnail('full'); 
-					echo '</div>';
 
-					echo '<div class="large-8 columns">';
+					echo '<br/><br/>';
+
 					
-					the_field('event_information'); 
+				}
+
 					
-					if (get_field('registration_link')) {
 
-						echo '<a class="button radius" href="';
+				echo '<h5>About Event</h5>';
 
-						the_field('registration_link');
+				the_field('event_information');
 
-						echo '" target="new">Register Now</a>';
-					}
+				if (get_field('registration_link')) {
 
-					echo '</div>';
+					echo '<a class="button small radius" href="';
 
-				} else {
+					the_field('registration_link');
 
-					echo '<div class="large-12 columns">';
-					echo '<h5>About Event</h5>';
-					the_field('event_information');
-					echo '</div>';
+					echo '" target="new">Register Now</a>';
+				}
+				
+				echo '</div>';
 
-				} ?>
+				?>
 
 			</div>
 
-<?php if( ! has_tag()){
- echo '<hr/>';
-} ?>
+			<?php if( ! has_tag()){
+				echo '<hr/>';
+			} ?>
 
 
-<?php if( has_tag()) { ?>
+			<?php if( has_tag()) { ?>
+			<br/>
+			<footer class="panel tags">
+				<h6>Related Tags</h6>
+				<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
+			</footer>
 
-<footer class="panel tags">
-	<h6>Related Tags</h6>
-	<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-	<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
-</footer>
+			<?php } ?>
 
-<?php } ?>
+			<?php get_template_part('parts/social'); ?>
 
-<?php get_template_part('parts/social'); ?>
+			<?php do_action( 'foundationpress_post_before_comments' ); ?>
+			<?php //comments_template(); ?>
+			<?php do_action( 'foundationpress_post_after_comments' ); ?>
+		</article>
+	<?php endwhile;?>
 
-<?php do_action( 'foundationpress_post_before_comments' ); ?>
-<?php //comments_template(); ?>
-<?php do_action( 'foundationpress_post_after_comments' ); ?>
-</article>
-<?php endwhile;?>
-
-<?php do_action( 'foundationpress_after_content' ); ?>
+	<?php do_action( 'foundationpress_after_content' ); ?>
 
 </div>
 
