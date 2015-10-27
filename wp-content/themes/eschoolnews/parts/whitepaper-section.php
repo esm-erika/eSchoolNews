@@ -45,7 +45,7 @@
 
 						<header class="medium-8 columns"> 
 							<h5><?php the_title(); ?></h5>
-							<a href="#" class="button tiny radius" data-reveal-id="<?php the_ID(); ?>">Download</a>
+							<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 						</header>
 
