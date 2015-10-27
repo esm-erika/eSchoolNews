@@ -43,7 +43,9 @@
    <div class="inner-wrap">
 
      <?php do_action( 'foundationpress_layout_start' ); ?>
-
+<div class="row">
+	<?php get_template_part( 'parts/ads/leaderboard' ); ?>  
+</div>
      <nav class="tab-bar">
       <section class="left-small">
        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
@@ -126,5 +128,5 @@
    <?php do_action( 'foundationpress_after_header' ); ?>
 
 <div class="row">
-	<?php get_template_part( 'parts/ads/leaderboard' ); ?>  
+	<?php get_template_part( 'parts/ads/billboard' ); ?>  
 </div>
