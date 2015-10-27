@@ -82,17 +82,7 @@ get_header(); ?>
 				$args2 = array(
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'digital',
-
-							),
-
-						),
-
+					'taxonomy' => 'subject_categories',
 					);
 
 				$query = new WP_Query( $args2 ); ?>
@@ -120,16 +110,7 @@ get_header(); ?>
 				$args3 = array(
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'mobile-online',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
 
 					);
 
@@ -159,16 +140,7 @@ get_header(); ?>
 				$args4 = array(
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'technologies',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
 
 					);
 
@@ -197,16 +169,7 @@ get_header(); ?>
 				$args5 = array(
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'subject_categories',
-							'field' => 'slug',
-							'terms' => 'technologies',
-
-							),
-
-						),
+					'taxonomy' => 'subject_categories',
 
 					);
 
