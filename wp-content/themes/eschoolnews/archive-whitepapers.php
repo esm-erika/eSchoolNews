@@ -94,7 +94,7 @@ get_header(); ?>
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
 						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -127,7 +127,7 @@ get_header(); ?>
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
 						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -161,7 +161,7 @@ get_header(); ?>
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
 						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -194,7 +194,7 @@ get_header(); ?>
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
 						<a href="#" data-reveal-id="<?php the_slug(); ?>">Download</a>
-						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
