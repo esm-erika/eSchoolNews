@@ -18,8 +18,15 @@ get_header(); ?>
 	<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
 
+
+
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
+
+
+	<?php get_template_part( 'parts/featured-article' ); ?>
+
+	
 	<div class="small-12 medium-8 columns">
 
 		<h4>New Resources</h4>
