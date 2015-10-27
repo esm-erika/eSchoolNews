@@ -76,11 +76,9 @@
       <div id="subscribe-drop" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
         
 
-        <div class="row">
-          <div class="medium-12 columns">
+        
             <h3>Subscribe to Our Newsletters</h3>
-          </div>
-        </div>
+         
 
         <?php get_template_part( 'parts/subscribe-form' ); ?>
 
