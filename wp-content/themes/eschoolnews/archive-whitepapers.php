@@ -83,6 +83,8 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
+					'term' => 'curriculum-whitepapers'
+					
 					);
 
 				$query = new WP_Query( $args2 ); ?>
@@ -114,6 +116,7 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
+					'term' => 'digital-whitepapers'
 
 					);
 
@@ -148,6 +151,7 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
+					'term' => 'mobile-online-whitepapers'
 
 					);
 
@@ -181,6 +185,7 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
+					'term' => 'technologies-whitepapers'
 
 					);
 
