@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="row">
 
 
-	<?php get_template_part( 'parts/ads/leaderboard' ); ?>
+	<?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 	
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
