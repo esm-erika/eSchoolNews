@@ -42,13 +42,14 @@ get_header(); ?>
 <section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
 		 
 		    <h3>All White Papers</h3>
-		    <ul class="medium-block-grid-2" data-equalizer>
+		    <ul class="medium-block-grid-2">
 		    <?php
 
 				// The Query
 				$args = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand'
+					'orderby' => 'rand',
+					'post_per_page' => ''
 					);
 
 				$query = new WP_Query( $args ); ?>
@@ -58,11 +59,26 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li data-equalizer>
-                        <h4><?php the_title(); ?></h4>
-						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+				<li>
+					<div class="row">
+						<div class="medium-4 columns">
+							<?php 
+
+						if( has_post_thumbnail()) {
+
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						 
+						 } ?> 
+                    	</div>
+                    	<div class="medium-8 columns">
+
+                    	<h5><?php the_title(); ?></h5>
+						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+					</div>
+					</div>
 				</li>
 					
 					<?php endwhile; ?>
@@ -94,11 +110,26 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-                        <?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+				<li>
+						<div class="row">
+						<div class="medium-4 columns">
+							<?php 
+
+						if( has_post_thumbnail()) {
+
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						 
+						 } ?> 
+                    	</div>
+                    	<div class="medium-8 columns">
+
+                    	<h5><?php the_title(); ?></h5>
+						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+					</div>
+					</div>
 				</li>
 					
 					<?php endwhile; ?>
@@ -130,10 +161,25 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+						<div class="row">
+						<div class="medium-4 columns">
+							<?php 
+
+						if( has_post_thumbnail()) {
+
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						 
+						 } ?> 
+                    	</div>
+                    	<div class="medium-8 columns">
+
+                    	<h5><?php the_title(); ?></h5>
+						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+					</div>
+					</div>
 				</li>
 					
 					<?php endwhile; ?>
@@ -165,11 +211,26 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+				<li>
+						<div class="row">
+						<div class="medium-4 columns">
+							<?php 
+
+						if( has_post_thumbnail()) {
+
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						 
+						 } ?> 
+                    	</div>
+                    	<div class="medium-8 columns">
+
+                    	<h5><?php the_title(); ?></h5>
+						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+					</div>
+					</div>
 				</li>
 					
 					<?php endwhile; ?>
@@ -200,11 +261,26 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 				
-				<li data-equalizer>
-						<h4><?php the_title(); ?></h4>
-						<?php the_post_thumbnail( 'thumbnail', 'wp-post-image' ); ?> 
+				<li>
+						<div class="row">
+						<div class="medium-4 columns">
+							<?php 
+
+						if( has_post_thumbnail()) {
+
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						 
+						 } ?> 
+                    	</div>
+                    	<div class="medium-8 columns">
+
+                    	<h5><?php the_title(); ?></h5>
+						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+					</div>
+					</div>
 				</li>
 					
 					<?php endwhile; ?>
