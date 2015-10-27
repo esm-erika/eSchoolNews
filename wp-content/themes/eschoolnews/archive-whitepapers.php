@@ -60,14 +60,8 @@ get_header(); ?>
 
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="a<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-<div id="a<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="a<?php the_slug(); ?>" aria-hidden="true" role="dialog">
-  <h2 id="a<?php the_ID(); ?>"><?php the_title(); ?></h2>
-  <hr/>
-  <?php the_content(); ?>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>                        
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -99,14 +93,8 @@ get_header(); ?>
 					$query->the_post(); ?>
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="b<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-<div id="b<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="b<?php the_slug(); ?>" aria-hidden="true" role="dialog">
-  <h2 id="b<?php the_ID(); ?>"><?php the_title(); ?></h2>
-  <hr/>
-  <?php the_content(); ?>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -138,14 +126,8 @@ get_header(); ?>
 
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="c<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-<div id="c<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="c<?php the_slug(); ?>" aria-hidden="true" role="dialog">
-  <h2 id="c<?php the_ID(); ?>"><?php the_title(); ?></h2>
-  <hr/>
-  <?php the_content(); ?>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -178,14 +160,8 @@ get_header(); ?>
 
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="d<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-<div id="d<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="d<?php the_slug(); ?>" aria-hidden="true" role="dialog">
-  <h2 id="d<?php the_ID(); ?>"><?php the_title(); ?></h2>
-  <hr/>
-  <?php the_content(); ?>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
@@ -217,14 +193,8 @@ get_header(); ?>
 				
 				<li data-equalizer>
 						<h4><?php the_title(); ?></h4>
-						<a href="#" data-reveal-id="e<?php the_slug(); ?>">Download</a>
-						<?php // get_template_part( 'parts/whitepapers-modal' ); ?>
-<div id="e<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="e<?php the_slug(); ?>" aria-hidden="true" role="dialog">
-  <h2 id="e<?php the_ID(); ?>"><?php the_title(); ?></h2>
-  <hr/>
-  <?php the_content(); ?>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 				</li>
 					
 					<?php endwhile; ?>
