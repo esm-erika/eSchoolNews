@@ -47,7 +47,7 @@ get_header(); ?>
 
 				// The Query
 				$args = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand'
 					);
 
@@ -80,7 +80,7 @@ get_header(); ?>
 
 				// The Query
 				$args2 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -118,7 +118,7 @@ get_header(); ?>
 
 				// The Query
 				$args3 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -157,7 +157,7 @@ get_header(); ?>
 
 				// The Query
 				$args4 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -195,7 +195,7 @@ get_header(); ?>
 
 				// The Query
 				$args5 = array(
-					//'post_type' => 'whitepapers',
+					'post_type' => 'whitepapers',
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
