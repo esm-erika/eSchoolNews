@@ -129,11 +129,6 @@
 		<?php wp_reset_query(); ?>
 
 
-
-	<?php endif;?>
-
-
-	<?php do_action( 'foundationpress_after_content' ); ?>
 </div>
 <div class="row">
 <!--  -->
@@ -142,6 +137,13 @@
 echo '<hr class="thick" />';
 
 }?>
+
+
+	<?php endif;?>
+
+
+	<?php do_action( 'foundationpress_after_content' ); ?>
+
 
 
 
