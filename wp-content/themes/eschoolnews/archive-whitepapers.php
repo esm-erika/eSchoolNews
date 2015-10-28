@@ -90,7 +90,7 @@ get_header(); ?>
 							?>
 						</p>
 						
-						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
@@ -157,7 +157,7 @@ get_header(); ?>
 							?>
 						</p>
 						
-						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
@@ -224,7 +224,7 @@ get_header(); ?>
 							?>
 						</p>
 						
-						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
@@ -289,7 +289,7 @@ get_header(); ?>
 							?>
 						</p>
 						
-						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
@@ -355,7 +355,7 @@ get_header(); ?>
 							?>
 						</p>
 						
-						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+						<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
