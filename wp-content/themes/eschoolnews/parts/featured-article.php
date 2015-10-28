@@ -132,7 +132,6 @@
 
 
 </div>
-<div class="row">
 <!--  -->
 <?php if( is_page('resources')) {
 

@@ -1,16 +1,18 @@
 <?php
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+  	
+    $post_types = get_post_types();
 
-function add_custom_types_to_tax( $query ) {
-if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+        if ( $post_type )
+            $post_type = $post_type;
+        else
+            $post_type = $post_types;
 
-// Get all your post types
+        $query->set('post_type', $post_type);
 
-$post_types = array( 'post', 'webinars', 'whitepapers', 'special-reports', 'ercs' );
-
-$query->set( 'post_type', $post_types );
-return $query;
+    return $query;
+    }
 }
-}
-add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
-
 ?>

@@ -99,9 +99,9 @@ get_header(); ?>
 
 <?php if( has_tag()) { ?>
 <br/>
-<footer class="panel tags">
+<footer class="panel related-tags">
 	<h6>Related Tags</h6>
-	<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
+	<p><?php the_tags('','',''); ?></p>
 </footer>
 
 <?php } ?>

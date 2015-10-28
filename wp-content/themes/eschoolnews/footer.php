@@ -24,7 +24,7 @@
 	<?php do_action( 'foundationpress_before_footer' ); ?>
 	<div class="row newsletters">
 
-	<h5 class="columns">Principal Newsletters</h5>
+	<h5 class="columns">Newsletters</h5>
 	<?php dynamic_sidebar( 'publication-widgets' ); ?>
 </div>
 	<?php do_action( 'foundationpress_after_footer' ); ?>
