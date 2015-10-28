@@ -74,8 +74,9 @@
 	</div>
 <?php endif; ?>
 </div>
-<?php endif; ?>
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+<?php endif; ?>
 
 </div>
 </li>

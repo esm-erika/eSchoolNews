@@ -1,5 +1,5 @@
 <article class="company-categories">
-	<h4>Whitepapers By Company</h4>
+	<h4>White Papers By Company</h4>
 	<br/>
 <?php 
 //list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
