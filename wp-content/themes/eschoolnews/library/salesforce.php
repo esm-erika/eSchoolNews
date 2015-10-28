@@ -24,10 +24,10 @@ mail('vcarlson@eschoolnews.com','SF Function called',$local_box_cache);
 		$USERNAME = "sfdcadmin1@eschoolnews.com"; //- variable that contains your Salesforce.com username (must be in the form of an email)
 		$PASSWORD = "eSNadm1n"; //- variable that contains your Salesforce.com password
 		$TOKEN = "qhO7UhNTUrYp8XU5eF1SRomDp"; //- variable that contains your Salesforce.com password
-		require_once ( ABSPATH . '/soapclient/SforceEnterpriseClient.php');
-		require_once ( ABSPATH . '/soapclient/SforceHeaderOptions.php');
+		require_once ( ABSPATH . 'soapclient/SforceEnterpriseClient.php');
+		require_once ( ABSPATH . 'soapclient/SforceHeaderOptions.php');
 		// Salesforce Login information
-		$wsdl = ABSPATH . '/soapclient/eSNenterprise.wsdl.xml';
+		$wsdl = ABSPATH . 'soapclient/eSNenterprise.wsdl.xml';
 		$mySforceConnectionu = new SforceEnterpriseClient();
 		$mySoapClient = $mySforceConnectionu->createConnection($wsdl);
 		$mylogin = $mySforceConnectionu->login($USERNAME, $PASSWORD.$TOKEN);

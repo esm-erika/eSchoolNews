@@ -67,7 +67,7 @@
 	if( is_post_type_archive('whitepapers' )) { 
 		get_template_part( 'parts/ads/embeddedbanner' );
 		get_template_part( 'parts/sidebar/company-categories' );  
-		get_template_part( 'parts/ads/embeddedbanner-2' );
+		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	
 		}
 	 ?>
