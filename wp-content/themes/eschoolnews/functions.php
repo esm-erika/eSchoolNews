@@ -67,7 +67,7 @@ require_once( 'library/options-page.php' );
 require_once('library/options-registration.php');
 
 /** Add Custom Post Types to Taxonomies [Tags Search] */
-//require_once('library/cpt-taxonomy.php');
+require_once('library/cpt-taxonomy.php');
 
 /** Add Custom Post Types to Tag Cloud */
 require_once('library/tag-cloud.php');
