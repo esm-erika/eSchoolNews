@@ -103,7 +103,8 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
-					'term' => 'curriculum-whitepapers'
+					'term' => 'curriculum-whitepapers',
+					'posts_per_page' => '-1'
 					
 					);
 
@@ -154,7 +155,8 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
-					'term' => 'digital-whitepapers'
+					'term' => 'digital-whitepapers',
+					'posts_per_page' => '-1'
 
 					);
 
@@ -204,7 +206,8 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
-					'term' => 'mobile-online-whitepapers'
+					'term' => 'mobile-online-whitepapers',
+					'posts_per_page' => '-1'
 
 					);
 
@@ -254,7 +257,8 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
-					'term' => 'technologies-whitepapers'
+					'term' => 'technologies-whitepapers',
+					'posts_per_page' => '-1'
 
 					);
 
