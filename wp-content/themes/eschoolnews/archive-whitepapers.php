@@ -60,15 +60,27 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 					<div class="row">
-						<div class="medium-4 columns">
+						
 							<?php 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
 						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-                    	</div>
+							
+							</div>
                     	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+                    	
 
                     	<h5><?php the_title(); ?></h5>
 
@@ -116,19 +128,34 @@ get_header(); ?>
 					$query->the_post(); ?>
 				
 					<div class="row">
-						<div class="medium-4 columns">
-							<?php 
+						<?php 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
 						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-                    	</div>
+							
+							</div>
                     	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+                    	
 
                     	<h5><?php the_title(); ?></h5>
 
-                    	<?php the_content(); ?>
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
@@ -168,19 +195,34 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<div class="row">
-						<div class="medium-4 columns">
-							<?php 
+						<?php 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
 						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-                    	</div>
+							
+							</div>
                     	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+                    	
 
                     	<h5><?php the_title(); ?></h5>
 
-                    	<?php the_content(); ?>
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
@@ -188,7 +230,6 @@ get_header(); ?>
 					</div>
 
 					<hr/>
-
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
@@ -219,19 +260,34 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 				<div class="row">
-						<div class="medium-4 columns">
-							<?php 
+						<?php 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
 						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-                    	</div>
+							
+							</div>
                     	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+                    	
 
                     	<h5><?php the_title(); ?></h5>
 
-                    	<?php the_content(); ?>
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
@@ -270,19 +326,34 @@ get_header(); ?>
 					$query->the_post(); ?>
 				
 				<div class="row">
-						<div class="medium-4 columns">
-							<?php 
+						<?php 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
 						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-                    	</div>
+							
+							</div>
                     	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+                    	
 
                     	<h5><?php the_title(); ?></h5>
 
-                    	<?php the_content(); ?>
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
