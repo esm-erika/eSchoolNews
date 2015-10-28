@@ -63,7 +63,7 @@ span.flag, span.tag {
 	display: block;
 }
 
-.flag a {
+span.flag a {
 	padding: 4px 5px;
 	text-transform: uppercase;
 	font-size: 11px;
@@ -80,7 +80,7 @@ span.flag, span.tag {
 
 
 
-.tag a {
+span.tag a, .related-tags a {
 	padding: 4px 5px;
 	text-transform: uppercase;
 	font-size: 11px;
