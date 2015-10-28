@@ -25,3 +25,4 @@ $args = array(
 <?php wp_list_categories( $args ); ?>
 </ul>
 </div>
+</article>
