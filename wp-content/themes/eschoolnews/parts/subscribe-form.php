@@ -3,8 +3,7 @@
     <div class="medium-12 columns">
 
       <div class="row"> 
-                    <h6>Select from our list of newsletters to subscribe:</h6>
-  
+                     
   
   		<?php  
 		
@@ -16,7 +15,7 @@
 			//}else {
 	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
 				
-			gravity_form($opt_val3, false, false, false, $esnautofill); 
+			gravity_form($opt_val3, false, true, false, $esnautofill, true); 
 	//	}
 		
 		
