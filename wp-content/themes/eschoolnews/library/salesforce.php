@@ -1,7 +1,18 @@
 <?php 
 
 function SF_Account_Upsert($entry, $form){
-	
+
+ob_start( );
+
+print_r($form);
+
+$local_box_cache = ob_get_clean( );
+echo $local_box_cache;
+
+
+
+mail('vcarlson@eschoolnews.com','SF Function called',$local_box_cache);
+
 	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
 		
 	if($opt_val3 == $form){ 	
