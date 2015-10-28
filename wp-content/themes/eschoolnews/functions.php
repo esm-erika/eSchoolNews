@@ -75,4 +75,10 @@ require_once('library/tag-cloud.php');
 /** List tags only from Custom Post Type */
 require_once('library/cpt-tags.php');
 
+/** Add functions to gravity forms */
+require_once('library/gravity.php');
+
+/** Add functions to connect to Salesforce */
+require_once('library/salesforce.php');
+
 ?>
