@@ -20,25 +20,26 @@ $upcoming = array(
 	);
 
 
-$query = new WP_Query( $upcoming );
+$query = new WP_Query( $upcoming ); ?>
 
+<ul>
 
-while ( $query->have_posts() ) :
+<?php while ( $query->have_posts() ) :
 	$query->the_post(); ?>
 
 
-<div class="row">
-	<div class="large-12 columns">
+<li>
 		<div class="date"><?php 
 		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-	</div>
-</div>
+</li>
 
 <?php endwhile; 
 wp_reset_postdata(); ?>
+
+</ul>
 
 <h6 class="readmore"><a href="<?php site_url(); ?>/webinars">More Webinars &raquo;</a></h6>
 

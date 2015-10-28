@@ -248,12 +248,14 @@ nav.tab-bar .tab-bar-section.middle {
 		}
 
 		li:not(.has-form):not(.active)>a:not(.button):hover {
-			color: #666;
+			color: #fff;
+			background-color: #369;
 		}
 
 		li.active:not(.has-form) a:not(.button) {
 			text-transform: capitalize;
-			color: #666;
+			color: #fff;
+			background-color: #333;
 			font-weight: 700;
 		}
 
@@ -446,6 +448,22 @@ p.login-submit, p.login-remember {
 
 .tabs dd>a, .tabs .tab-title>a {
 	outline: 0;
+}
+
+.post-type-archive-whitepapers ul.tabs {
+	//border-bottom: 1px solid #999;
+}
+
+.tabs dd.active a, .tabs .tab-title.active a {
+	background-color: #369;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.tabs dd>a, .tabs .tab-title>a {
+	background-color: #999;
+	margin-right: 1px;
+	color: #333;
 }
 
 section.erc-section {

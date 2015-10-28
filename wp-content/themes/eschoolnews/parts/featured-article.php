@@ -91,27 +91,29 @@
 				}?>
 
 
-</div>
+
 <div class="row">
-<div class="small-12 large-6 columns" role="main">
+
 
 
 				<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 			
+						<div class="small-12 large-6 columns" role="main">
 
-						<?php 
+						<?php
+
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						?>
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+						
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 
-		</div>
+						</div>
 
-		<article class="small-12 large-6 columns">
+						<article class="small-12 large-6 columns">		
 
 			<header> 
-					<span class="flag"><a href="#">Featured</a></span>
+					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<p class="author">By <?php the_author(); ?></p>
 

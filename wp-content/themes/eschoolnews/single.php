@@ -49,6 +49,8 @@ include('single-coa.php');
 			
 			<?php get_template_part('parts/social'); ?>
 			 </header>
+
+			 <hr/>
 			
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
@@ -108,11 +110,19 @@ include('single-coa.php');
 					</div>
 				</div>
 
-				<footer>
+				<?php if( ! has_tag()){
+				 echo '<hr/>';
+				} ?>
 
-				<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
+
+				<?php if( has_tag()) { ?>
+				<br/>
+				<footer class="panel tags">
+					<h6>Related Tags</h6>
+					<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>
+				</footer>
+
+				<?php } ?>
 			<?php do_action( 'foundationpress_post_before_comments' ); ?>
 			<?php //comments_template(); ?>
 			<?php do_action( 'foundationpress_post_after_comments' ); ?>

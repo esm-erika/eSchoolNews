@@ -77,9 +77,13 @@ get_header(); ?>
 
 
 
-<hr/>
+<?php if( ! has_tag()){
+ echo '<hr/>';
+} ?>
+
 
 <?php if( has_tag()) { ?>
+<br/>
 <footer class="panel tags">
 	<h6>Related Tags</h6>
 	<p><?php the_tags('<span class="flag tag">','</span><span class="flag tag">','</span>'); ?></p>

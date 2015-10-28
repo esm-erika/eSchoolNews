@@ -19,21 +19,35 @@
 
 	<ul class="small-block-grid-1 medium-block-grid-2">
 
-		<?php if ( have_posts() ) : ?>
+		<?php // The Query
 
-					<?php
-						if ( is_front_page() ) {
-							query_posts( array ( 'post_type' => array('webinars','ercs','special-reports'), 'posts_per_page' => 2, 'orderby' =>'rand'));
-		
-						} elseif( is_category()) {
 
-							//global $query_string;
-							//query_posts( $query_string . '&posts_per_page=2&category_name=category-2' );
-						}
-					?>
+			
+		if( is_home() || is_front_page()) {
+			$resources = new WP_Query(array(
+				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports'),
+				'posts_per_page' => '6'
+				)); 
 
-					<?php while ( have_posts() ) : the_post(); ?>
+		} elseif ( is_category()) {
+			
+			global $cat;
+
+
+			$resources = new WP_Query(array(
+				'cat' => $cat,
+				'posts_per_page' => '6',
+				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports')
+				)); 
 						
+
+					}?>
+
+
+				<?php if ( $resources->have_posts() ) : 
+
+				while ( $resources->have_posts() ) : $resources -> the_post(); ?>
+				
 					<li> 
 						<article>
 
@@ -78,7 +92,6 @@
 
 				<?php endif;?>
 
-				<?php rewind_posts(); ?>
 
 			</ul>
 
