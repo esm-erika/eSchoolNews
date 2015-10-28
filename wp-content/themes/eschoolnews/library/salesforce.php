@@ -5,6 +5,8 @@ function SF_Account_Upsert($entry, $form){
 	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
 		
 	if($opt_val3 == $form){ 	
+	
+	mail('vcarlson@eschoolnews.com','SF Subscription request made','line 9');
 		global $wpdb;
 	
 		ini_set("soap.wsdl_cache_enabled", "0");
@@ -123,16 +125,21 @@ function SF_Account_Upsert($entry, $form){
 			$newperson['PersonHasOptedOutOfEmail'] = false; 
 		}	
 		
+		mail('vcarlson@eschoolnews.com','SF Subscription request newperson', $newperson );
+		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
-		//echo '<pre>'. print_r($newperson).'</pre>';
+		echo '<pre>'. print_r($newperson).'</pre>';
 		
 		
 		if ($upsertResponse->success==1)
 		{
 			//Saved for later use							
+					mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 138');
+			
 		} else { 
 			$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
+			mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 142');
 		} 
 	
 	$formsuccess = validateint($_GET['success']);
