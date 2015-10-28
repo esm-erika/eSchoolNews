@@ -3,8 +3,7 @@
     <div class="medium-12 columns">
 
       <div class="row"> 
-                    <h6>Select from our list of newsletters to subscribe:</h6>
-  
+                     
   
   		<?php  
 		
