@@ -22,6 +22,7 @@ get_header(); ?>
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
+
 <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
 		  <li class="tab-title" role="presentation"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
@@ -29,7 +30,6 @@ get_header(); ?>
 		  <li class="tab-title" role="presentation"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
 		  <li class="tab-title" role="presentation"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
 </ul>
-<br/>
 	
 <!-- Row for main content area -->
 	<div class="small-8 medium-8 columns" role="main">
@@ -41,14 +41,14 @@ get_header(); ?>
 
 <section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
 		 
-		    <h3>All White Papers</h3>
-		    <ul class="medium-block-grid-2">
+		    <h4>All White Papers</h4>
+		    <br/>
 		    <?php
 
 				// The Query
 				$args = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand',
+					//'orderby' => 'rand',
 					'post_per_page' => ''
 					);
 
@@ -59,46 +59,45 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li>
 					<div class="row">
 						<div class="medium-4 columns">
 							<?php 
 
-						if( has_post_thumbnail()) {
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						 
-						 } ?> 
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
                     	</div>
                     	<div class="medium-8 columns">
 
                     	<h5><?php the_title(); ?></h5>
+
+                    	<?php the_content(); ?>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
-				</li>
+
+					<hr/>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
-			</ul>
 		
 
 		  </section>
  
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel2">
-		    <h3>Curriculum</h3>
-		    <ul class="medium-block-grid-2">
+		    <h4>Curriculum</h4>
+		    <br/>
 
 		    <?php
 
 				// The Query
 				$args2 = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand',
+					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'curriculum-whitepapers'
 					
@@ -110,44 +109,46 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
-				<li>
-						<div class="row">
+				
+					<div class="row">
 						<div class="medium-4 columns">
 							<?php 
 
-						if( has_post_thumbnail()) {
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						 
-						 } ?> 
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
                     	</div>
                     	<div class="medium-8 columns">
 
                     	<h5><?php the_title(); ?></h5>
+
+                    	<?php the_content(); ?>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
-				</li>
+
+					<hr/>
+
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
-		   </ul>
+		 
 		  </section>
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel3">
-		    <h3>Digital</h3>
+		    <h4>Digital</h4>
+		    <br/>
 
-		    <ul class="medium-block-grid-2">
 
 		    <?php
 
 				// The Query
 				$args3 = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand',
+					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'digital-whitepapers'
 
@@ -160,45 +161,44 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li data-equalizer>
-						<div class="row">
+				<div class="row">
 						<div class="medium-4 columns">
 							<?php 
 
-						if( has_post_thumbnail()) {
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						 
-						 } ?> 
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
                     	</div>
                     	<div class="medium-8 columns">
 
                     	<h5><?php the_title(); ?></h5>
+
+                    	<?php the_content(); ?>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
-				</li>
-					
+
+					<hr/>
+
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
-			</ul>
 		  </section>
 		  <section role="tabpanel" aria-hidden="true" class="content" id="panel4">
 
-		    <h3>Mobile &amp; Online Learning</h3>
+		    <h4>Mobile &amp; Online Learning</h4>
+		    <br/>
 
-		    <ul class="medium-block-grid-2">
 
 		    <?php
 
 				// The Query
 				$args4 = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand',
+					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'mobile-online-whitepapers'
 
@@ -211,44 +211,44 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li>
-						<div class="row">
+				<div class="row">
 						<div class="medium-4 columns">
 							<?php 
 
-						if( has_post_thumbnail()) {
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						 
-						 } ?> 
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
                     	</div>
                     	<div class="medium-8 columns">
 
                     	<h5><?php the_title(); ?></h5>
+
+                    	<?php the_content(); ?>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
-				</li>
-					
+
+					<hr/>
+
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
 			</ul>
 		  </section>
 		<section role="tabpanel" aria-hidden="true" class="content" id="panel5">
-			<h3>Technologies</h3>
+			<h4>Technologies</h4>
+			<br/>
 
-			<ul class="medium-block-grid-2">
 
 			<?php
 
 				// The Query
 				$args5 = array(
 					'post_type' => 'whitepapers',
-					'orderby' => 'rand',
+					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'technologies-whitepapers'
 
@@ -261,31 +261,30 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 				
-				<li>
-						<div class="row">
+				<div class="row">
 						<div class="medium-4 columns">
 							<?php 
 
-						if( has_post_thumbnail()) {
+							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
 
-							$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						 
-						 } ?> 
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
                     	</div>
                     	<div class="medium-8 columns">
 
                     	<h5><?php the_title(); ?></h5>
+
+                    	<?php the_content(); ?>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 					</div>
 					</div>
-				</li>
+
+					<hr/>
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
-			</ul>
 		
 		</section> 
 

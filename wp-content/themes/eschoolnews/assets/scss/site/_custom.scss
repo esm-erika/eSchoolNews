@@ -452,18 +452,36 @@ p.login-submit, p.login-remember {
 
 .post-type-archive-whitepapers ul.tabs {
 	//border-bottom: 1px solid #999;
+	padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+
 }
 
 .tabs dd.active a, .tabs .tab-title.active a {
+	background-color: #333;
+	color: #fff;
+	//border-bottom: 1px solid #fff;
+}
+
+.tabs dd>a:hover, .tabs .tab-title>a:hover {
 	background-color: #369;
 	color: #fff;
-	border-bottom: 1px solid #fff;
 }
 
 .tabs dd>a, .tabs .tab-title>a {
 	background-color: #999;
 	margin-right: 1px;
 	color: #333;
+}
+
+.tabs-content>.content {
+	padding: 0.9375rem;
+}
+
+.tabs-content>.content.active {
+	//border-width: 0px 1px 1px 1px; 
+	//border-style: solid;
+	//border-color: #999;
 }
 
 section.erc-section {
