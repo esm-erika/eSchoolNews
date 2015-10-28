@@ -49,7 +49,7 @@ get_header(); ?>
 				$args = array(
 					'post_type' => 'whitepapers',
 					//'orderby' => 'rand',
-					'post_per_page' => ''
+					'post_per_page' => '-1'
 					);
 
 				$query = new WP_Query( $args ); ?>
