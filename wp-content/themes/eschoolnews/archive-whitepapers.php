@@ -72,7 +72,11 @@ get_header(); ?>
 
                     	<h5><?php the_title(); ?></h5>
 
-                    	<?php the_content(); ?>
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
 						
 						<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
