@@ -16,7 +16,7 @@
 			//}else {
 	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
 				
-			gravity_form($opt_val3, false, false, false, $esnautofill, true); 
+			gravity_form($opt_val3, false, true, false, $esnautofill, true); 
 	//	}
 		
 		
