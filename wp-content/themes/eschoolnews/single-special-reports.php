@@ -59,7 +59,7 @@ get_header(); ?>
 
 							<?php 
 
-							$file = get_field('report_file');
+							$file = get_field('download_file');
 
 							if( $file ): ?>
 								

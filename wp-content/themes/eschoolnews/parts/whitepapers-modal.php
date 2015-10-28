@@ -18,9 +18,31 @@
 ?>
 
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
+  <div class="row">
+
+  	<?php 
+
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
+
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+							
+							</div>
+                    	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+  
   <h2 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h2>
 
-  <hr/>
+ 
   <?php the_content(); ?>
   
 
@@ -143,10 +165,23 @@ echo '</a></p>';
 
 
 <?php */ } ?>
+
+<?php 
+
+							$file = get_field('download_file');
+
+							if( $file ): ?>
+								
+								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Whitepaper</a>
+
+							<?php endif; ?>
+
+
+
   
+  </div>
   
-  
-  
+  </div>
   
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>

@@ -59,7 +59,7 @@ get_header(); ?>
 
 							<?php 
 
-							$file = get_field('report_file');
+							$file = get_field('download_files');
 
 							if( $file ): ?>
 						  <a href="<?php echo $file['url']; ?>" class="button radius tiny">Download Report</a>
@@ -121,7 +121,7 @@ get_header(); ?>
 					<ul class="stack-for-small radius secondary button-group">
 							<?php 
 
-							$file = get_field('report_file');
+							$file = get_field('download_files');
 
 							if( $file ): ?>
 						  <li><a href="<?php echo $file['url']; ?>" class="button tiny">Download</a></li>
