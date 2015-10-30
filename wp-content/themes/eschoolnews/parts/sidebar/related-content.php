@@ -1,7 +1,7 @@
 <article>
 <section>
 <h4>Related Posts</h4>	
-<br/>
+
 <?php 
 
 //$args = array( 'category__in => 6870, 'tag__in' => array( 'tag1', 'tag2' ), 'showposts' => 2 );
@@ -50,7 +50,7 @@
 		'post__not_in' => array($post->ID),
 		'posts_per_page'=>5, // Number of related posts to display.
 		'ignore_sticky_posts'=>1,
-		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
+		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events', 'post' ),  
 		'tax_query' => array(
 			'relation' => 'OR',
 			array(
@@ -89,16 +89,17 @@
 							echo $post_type->labels->singular_name; 
 							echo '</a></span>';
 							?>  
-
-													<?php if( has_post_thumbnail()) {
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						} ?>
-
-						<img class="thumb" data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
   		
-  		<div class="small-caps"><?php the_time('F j, Y'); ?></div>
+
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+		<div class="small-caps"> 
+  			<?php if( 'post' == get_post_type()){ 
+  				echo 'By ';
+  				the_author();	 	
+  			 } else {
+  			 	echo '';
+  			 } ?>
+  		</div>
 </li>
 
 

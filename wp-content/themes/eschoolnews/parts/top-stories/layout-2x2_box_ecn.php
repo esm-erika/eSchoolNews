@@ -38,8 +38,8 @@
 		<article>
 
 			<header> 
-				<span class="flag"><a href="#">News</a></span>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+				<span class="flag"><a href="<?php site_url(); ?>/top-stories">News</a></span>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<div class="excerpt">
 						<?php 
 						echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '' ), true); 
@@ -59,7 +59,7 @@
 
 </ul>
 
-<h6 class="readmore"><a href="#">Read More Top Stories &raquo;</a></h6>
+<h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">Read All Top Stories &raquo;</a></h6>
 </div>
 
 </div> <!-- end row -->

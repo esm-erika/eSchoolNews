@@ -9,10 +9,10 @@
 
 ?>
 
+<h1 class="section-title"><span><i class="fi-page-filled"></i> Top <?php single_cat_title(); ?> Stories</span></h1>
+
+
 <div class="small-12 large-12 columns right-column top-stories">
-
-
-	<h1 class="section-title"><span><i class="fi-page-filled"></i> Top <?php single_cat_title(); ?> Stories</span></h1>
 
 	<div class="row">
 
@@ -48,8 +48,8 @@
 		<article>
 
 			<header> 
-				<span class="flag"><a href="#">News</a></span>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+				<span class="flag"><a href="<?php site_url(); ?>/top-stories">News</a></span>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<div class="excerpt">
 						<?php 
 						echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '' ), true); 
@@ -69,7 +69,7 @@
 
 </ul>
 
-<h6 class="readmore"><a href="#">Read More Top Stories &raquo;</a></h6>
+<h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">Read All Top Stories &raquo;</a></h6>
 </div>
 
 </div> <!-- end row -->

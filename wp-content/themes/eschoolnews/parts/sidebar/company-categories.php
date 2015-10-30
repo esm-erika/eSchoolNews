@@ -24,5 +24,4 @@ $args = array(
 <ul>
 <?php wp_list_categories( $args ); ?>
 </ul>
-</div>
 </article>

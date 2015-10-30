@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 	// text-transform: uppercase;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
@@ -34,7 +34,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	//font-size: 55px;
 	font-weight: 400;
 	text-align: center;
-	padding: 30px 0 30px 0;
+	padding: 0px 0 30px 0;
 	margin: 0;
 
 	i {
@@ -69,12 +69,12 @@ span.flag a {
 	font-size: 11px;
 	letter-spacing: 0px;
 	display: inline-block;
-	margin: 0 0 .25rem 0;
+	//margin: 0 0 .25rem 0;
 	line-height: 1;
 	border-width: 1px;
 	border-style: solid;
 	background-color: #f2f2f2;
-	border-color: #d8d8d8;
+	border-color: #ccc;
 	color: #369;
 }
 
@@ -126,7 +126,7 @@ span.tag a, .related-tags a {
 		padding-bottom: 1.5rem;
 
 		h3, h4, h5, h6 {
-			margin-bottom: 0;
+			//margin-bottom: 0;
 		}
 	}
 
@@ -332,8 +332,21 @@ nav.small-nav {
 
 }
 
-.login {
+.login, .welcome {
 	margin-right: 20px;
+}
+
+.welcome-menu {
+	a {
+		font-size: 85%;
+		display: inline-block;
+		padding-right: 10px;
+	}
+
+	a:first-child {
+		border-right: 1px solid #ccc;
+		margin-right: 10px;
+	}
 }
 
 .login.open:after, .subscribe.open:after {
@@ -549,7 +562,22 @@ article {
 
 	}
 
-	.date, .small-caps {
+	.date {
+		padding: 4px 5px;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 0px;
+		display: inline-block;
+		line-height: 1;
+		border-width: 1px;
+		border-style: solid;
+		background-color: #f2f2f2;
+		border-color: #ccc;
+		color: #369;
+		float: left;
+	}
+
+	.small-caps {
 		text-transform: uppercase;
 		font-size: 12px;
 		line-height: 12px;
@@ -631,6 +659,7 @@ article {
 
 		.entry-title {
 			clear: both;
+			margin-top: 0;
 		}
 	}
 
@@ -691,7 +720,7 @@ article {
 	text-align: center;
 	//background-color: #333;
 	//padding: 20px 0;
-	margin-bottom: 20px;
+	margin: 20px 0;
 }
 
 
@@ -699,7 +728,7 @@ article {
 
 .container > div {
 	//border-top: 5px solid #333;
-	padding-top: 20px;
+	//padding-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -736,8 +765,12 @@ footer.container > div {
 
 #sidebar {
 
+	.ad-container {
+		margin-top: 0px;
+	}
+
 	article {
-		border: 1px solid #d8d8d8;
+		border: 1px solid #ccc;
 		padding: 1.25rem;
 		margin-bottom: 1rem;
 	}
@@ -812,10 +845,15 @@ footer.container > div {
 
 	ul {
 		margin-left: 0;
+		margin-bottom: 0;
 
 		li {
 			list-style: none;
 			margin-bottom: 1.1rem;
+		}
+
+		li:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

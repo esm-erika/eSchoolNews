@@ -47,9 +47,82 @@
   
 
 
-<?php
+
+
+<?php 
+
+							/* $file = get_field('download_file');
+
+							if( $file ): ?>
+								
+								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Whitepaper</a>
+
+							<?php endif; ?> */
+
+		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
+		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
+		$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
+		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
+		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
+		$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
+		$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
+		$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
+		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
+		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+?>
+<style type="text/css">select {border:1px solid #888}</style>
+
+		
+	<?php // include('slide.php'); 
+	
+		
+        
+		
+ //       	 if (have_posts()) : while (have_posts()) : the_post(); 
+			/* Check if the user logged in and then if answerred IBM questions*/
+			global $page; 
+		
+	 		if (($bypassreg == 1) or (is_user_logged_in())) { 
+				
+				 $showpagecontent = 1; 
+			}elseif ( isset($_GET['ps']) ) {
+				$esmpassvals = explode ( "-" , $_GET['ps']);
+				if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){	$wpuid=$esmpassvals[0];
+				get_userdata( $userid );
+				$showpagecontent=1;
+				} elseif (strpos($wpuid,'999999999')) { $showpagecontent = 1;				
+} elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { $wpuid = '999999999'; $showpagecontent = 1; 
+
+} else {$showpagecontent=0;}
+			
+			}elseif (isset($_COOKIE['esmpass']))  {
+				
+				$esmpasscookvals = explode ( "-" , $_COOKIE['esmpass']);
+				if (isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 15 || isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 18 ){
+					$showpagecontent=1;
+				} 
+				
+			} else {
+				//prompt for login
+				$showpagecontent = 0;
+			}
+            if ($showpagecontent == 0){ ?>	
+<!-- showpagecontent == 0 -->
+				<?php	} else { ?>
+<!-- showpagecontent == 1 -->
+			<?php	}  ?>
+
+
+<!--start slider dependents-->
+<!--end slider dependents-->
+	<?php if($showpagecontent == 1){ 	
+			if (!$WPcpl){
+
+				//	the_content(); no need it is above.
+
+
 if ($WPForm != null) {
-/*
+
 			if ( isset($_GET['ps']) ) {
 				$esmpassvals = explode ( "-" , $_GET['ps']);	
 					if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){
@@ -83,8 +156,8 @@ if ($WPForm != null) {
 		);
 
 
-gravity_form( $WPForm , false, false, false, $WPautofill);  
-
+gravity_form( $WPForm , false, false, false, $WPautofill, true);  
+	
 
 }else if ($WPURL != null) { 
 echo '<p><a href="'.$WPURL.'" target="_blank">';
@@ -98,12 +171,10 @@ echo '</a></p>';
 }
 
 ?>
+</td></tr></table>
 
-
-<?php */
+<?php 
 } else {
-/*	
-	
 ?>
 <table width="100%"><tr><td valign="top" style="vertical-align:top; padding-top:20px; padding-right:10px">
 	<?php the_content(); ?>
@@ -146,17 +217,17 @@ if ($WPForm != null) {
 		);
 
 
-gravity_form( $WPForm , false, false, false, $WPautofill);  
+gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
 }else if ($WPURL != null) { 
-echo '<p><a href="'.$WPURL.'" target="_blank">';
+echo '<p>';
  if ($WPcbt != null) { 
-		echo'<img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" />';
+		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 		} else{
-		echo'<img class="alignright" src="http://www.eschoolnews.com/files/2011/10/download-whitepaper.gif" alt="Download Whitepaper" width="364" height="76" border="0" />';	 
+		echo'<a href="'.$WPURL.'" target="_blank"><a class="button radius small" href="'.$WPURL.'">Download Whitepaper</a>';	 
 	 
 	 }
-echo '</a></p>'; 
+echo '</p>'; 
 }
 
 ?>
@@ -164,21 +235,51 @@ echo '</a></p>';
 
 
 
-<?php */ } ?>
-
-<?php 
-
-							$file = get_field('download_file');
-
-							if( $file ): ?>
-								
-								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Whitepaper</a>
-
-							<?php endif; ?>
+<?php }
 
 
 
-  
+if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';}
+
+if ($WPfooter != null) { echo $WPfooter;} 
+
+						?>
+
+
+
+<?php } else { ?>
+
+
+
+<div style="border:#CCCCCC solid 1px; padding:10px;">
+<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
+<p><strong>Free registration required to view this resource.</strong><br />
+<br />
+Register today and receive free access to all our news and resources and the ability to customize your news by topic with My eSchool News.<br /><br />
+<a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode(get_permalink()); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
+<br />
+<br />
+Already a member? Log in
+<div>Username: <input type="text" name="log" id="log" value="" /></div>
+<div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
+<input type="submit" name="submit" value="Login" class="button">
+<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
+<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+<br />
+<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
+
+</form>	
+</div>
+                                    
+
+
+<?php			}//end showpagecontent check
+?>
+
+
+
+						<?php // endwhile; else : endif; ?>
+				
   </div>
   
   </div>

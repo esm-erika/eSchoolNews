@@ -135,7 +135,7 @@ if($webinar_date >= $todayis){
 
 
 	  
-	<h4>Recorded Webinars</h4>
+	<h4>Recently Recorded Webinars</h4>
 	<br/>
 
 		<ul class="small-block-grid-1 large-block-grid-2">

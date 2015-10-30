@@ -9,7 +9,7 @@
 
 ?>
 
-	<div class="small-12 large-12 columns ad-container">
+	<div class="ad-container">
 	<?php // echo adrotate_group('1'); 
 		
 	if ($astused > 0){

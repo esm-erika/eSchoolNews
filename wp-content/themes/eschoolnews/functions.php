@@ -81,4 +81,7 @@ require_once('library/gravity.php');
 /** Add functions to connect to Salesforce */
 require_once('library/salesforce.php');
 
+/** Add login functions */
+require_once('library/login.php');
+
 ?>

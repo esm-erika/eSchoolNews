@@ -29,8 +29,6 @@ get_header(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<h5><?php the_date(); ?></h5>
-
 				<?php get_template_part('parts/social'); ?>
 			</header>
 

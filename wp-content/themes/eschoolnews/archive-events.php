@@ -57,11 +57,12 @@ get_header(); ?>
 					</div>
 
 			<header class="large-8 columns">
-				<div class="date"><?php the_time('F j, Y'); ?></div>
 				<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+				<div class="small-caps"><?php the_time('F j, Y'); ?></div>
 				<p><?php the_tags('<span class="flag event">','</span><span class="flag event">','</span>'); ?></p>
 			</header>
 		</article>
+		<br/>
 
 				<?php endwhile; ?>
 
@@ -72,8 +73,7 @@ get_header(); ?>
 		
 
 		<h4>Conference News</h4>
-		<br/>
-<ul class="large-block-grid-2">
+		
 		
 
 	<?php
@@ -92,18 +92,18 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li>
 
-				<article>
-			<header>
-				<div class="date"><?php the_time('F j, Y'); ?></div>
-				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<h6>By <?php the_author(); ?></h6>
-				
+				<article class="row">
+			<header class="small-12 columns">
+				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<div class="small-caps">By <?php the_author(); ?></div>
+				<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
+
 			</header>
 		</article>
 
-	</li>
+		<hr/>
+
 
 		
 
@@ -111,7 +111,6 @@ get_header(); ?>
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			
-</ul>
 		
 	</div>
 	<?php get_sidebar(); ?>

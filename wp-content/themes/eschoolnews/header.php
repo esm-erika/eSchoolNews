@@ -64,12 +64,32 @@
 
     <div class="small-12 medium-6 search columns small-text-center medium-text-left">
 
+    <?php if ( ! is_user_logged_in() ) { ?>
 
       <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
 
-      <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-hidden="true" tabindex="-1">
+      <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-autoclose="false" aria-hidden="true" tabindex="-1">
         <?php wp_login_form(); ?>
       </div>
+
+   <?php }?>
+
+   <?php 
+
+   global $current_user;
+
+   if ( is_user_logged_in() ) {
+ 
+    $current_user = wp_get_current_user();
+
+    echo '<div class="welcome left">';
+
+    echo 'Welcome <strong>' . $current_user->user_firstname . '</strong>! <br/>'; 
+
+    echo '</div>';
+
+    }?>
+
 
       <a href="#" data-reveal-id="subscribe-drop" class="subscribe">Subscribe</a>
 
@@ -87,13 +107,21 @@
 
       </div>
 
+      <?php if ( is_user_logged_in()) {
+
+        echo '<div class="welcome-menu"><a href="#">My eSchool News</a>';
+
+        echo '<a class="logout" href="' . wp_logout_url( home_url() ) . '">Logout</a></div>';
+
+      } ?>
+
     </div>
 
     <div class="small-12 medium-6 columns small-text-center medium-text-right">
       <div class="social right">
         <a href="http://www.twitter.com/eschoolnews" target="new" class="right"><i class="fi-social-twitter medium"></i></a>
         <a href="http://www.facebook.com/eschoolnews/" target="new" class="right"><i class="fi-social-facebook medium"></i></a>
-        <a href="mailto:webmaster@eschoolnews.com"><i class="fi-mail medium"></i></a>
+        <a href="<?php site_url(); ?>/contact"><i class="fi-mail medium"></i></a>
       </div>
 
       <a href="#" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="search"> <i class="fi-magnifying-glass"></i> Search</a>
@@ -125,6 +153,6 @@
     
    <?php do_action( 'foundationpress_after_header' ); ?>
 
-<div class="row">
+
 	<?php get_template_part( 'parts/ads/billboard' ); ?>  
-</div>
+

@@ -1,6 +1,5 @@
 <article>
-<h4>Webinars</h4>
-<br/>
+<h4>Recorded Webinars</h4>
 
 <?php // The Query
 $upcoming = array(
@@ -29,11 +28,7 @@ $query = new WP_Query( $upcoming ); ?>
 
 
 <li>
-		<div class="date"><?php 
-		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
-		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-
+	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 </li>
 
 <?php endwhile; 
@@ -41,9 +36,8 @@ wp_reset_postdata(); ?>
 
 </ul>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">More Webinars &raquo;</a></h6>
+<br/>
+<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">View All Webinars &raquo;</a></h6>
 
 			
-
-
-				</article>
+</article>

@@ -9,12 +9,11 @@
 
 ?>
 
-
-<section class="secondary">
+<div class="row">
 
 <h1 class="section-title"><span><i class="fi-bookmark"></i> Resources</span></h1>
 
-<div class="row">
+
 	<div class="columns medium-12">
 
 	<ul class="small-block-grid-1 medium-block-grid-2">
@@ -71,8 +70,7 @@
 							
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
-							<?php if( is_post_type('webinars')) { ?>
-
+							<?php if( 'webinars' == get_post_type()){ ?>
 							<h5><i class="fi-calendar"></i> <?php 
 							$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 							if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
@@ -96,9 +94,8 @@
 			</ul>
 
 
-				<h6 class="readmore"><a href="<?php echo home_url(); ?>/resources">See More Resources &raquo;</a></h6>
+				<h6 class="readmore"><a href="<?php echo home_url(); ?>/resources">Read All Resources &raquo;</a></h6>
 
 			</div>
 		</div>
 
-				</section>

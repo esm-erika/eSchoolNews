@@ -13,7 +13,6 @@
 
 get_header(); ?>
 
-<div class="row">
 
 	<?php // get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
@@ -24,7 +23,17 @@ get_header(); ?>
 
 
 
+
+
 	<?php get_template_part( 'parts/featured-article' ); ?>
+
+	<div class="row">
+
+		<?php if( is_page('resources')) {
+
+echo '<hr class="thick" />';
+
+}?>
 
 	
 	<div class="small-12 medium-8 columns">
@@ -32,7 +41,6 @@ get_header(); ?>
 		<h4>New Resources</h4>
 		<br/>
 
-		<ul class="large-block-grid-2">
 
 
 		<?php // The Query
@@ -49,39 +57,64 @@ get_header(); ?>
 				while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-		<li <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<article class="row">
 
-						<?php 
-						    //$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    //$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						?>
+					
 
-						<!-- <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]"> -->
-			<header>
-			
-				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					<?php 
+							
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
+
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+							
+							</div>
+
+						  
+
+						    
+
+						                        	<header class="medium-8 columns">
+
+				<?php 
 						$post_type = get_post_type_object( get_post_type($post) );
 						echo '<span class="flag content">';
 						echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
 						echo $post_type->labels->singular_name; 
 						echo '</a></span>';
 					?>
+			
+				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					
 				<div class="excerpt">
 				<?php 
 				//echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '' ), true); 
 				?>
 			</div>
 			</header>
-		</li>
+		</article>
+		<br/>
 	<?php endwhile; 
 				wp_reset_postdata(); ?>
 
-</ul>
+			</div>
+
+				<?php get_sidebar(); ?>
+</div>
+
+
+<div class="row">
+
 <hr class="thick" />
-<section>
-<h4>Resources</h4>
+
+<div class="medium-12 columns">
+<h4>Additional Resources</h4>
+
 <br/>
+
+<ul class="medium-block-grid-2">
 
 <?php // The Query
 				$args2 = array(
@@ -96,18 +129,8 @@ get_header(); ?>
 				while ( $query2->have_posts() ) :
 					$query2->the_post(); ?>
 
-				<article class="row" style="margin-bottom: 1rem;">
-					<div class="large-4 columns">
-						<?php 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						?>
-
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-					</div>
-			<header class="large-8 columns">
-			
-				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<li><article class="row">
+			<header class="large-12 columns">
 				<?php 
 
 				$post_type = get_post_type_object( get_post_type($post) );
@@ -116,22 +139,23 @@ get_header(); ?>
 				echo $post_type->labels->singular_name; 
 				echo '</a></span>';
 				?>
+			
+				<h5 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+				
 				<div class="excerpt">
 				<?php 
 				//echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '' ), true); 
 				?>
 			</div>
 			</header>
-		</article>
+		</article></li>
 
 				<?php endwhile; 
 				wp_reset_postdata(); ?>
 
-</section>
+</ul>
+
+
 </div>
 
-
-
-<?php get_sidebar(); ?>
-</div>
 <?php get_footer(); ?>

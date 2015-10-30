@@ -1,12 +1,11 @@
 <article class="tag-cloud">
 <h4>Tag Cloud</h4>
-<br/>
 
 <?php $args = array(
 	'smallest'                  => 11, 
 	'largest'                   => 11,
 	'unit'                      => 'px', 
-	'number'                    => 45,  
+	'number'                    => 20,  
 	'format'                    => 'flat',
 	'separator'                 => "\n",
 	'orderby'                   => 'name', 

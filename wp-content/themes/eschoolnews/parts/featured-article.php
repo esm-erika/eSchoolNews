@@ -9,13 +9,13 @@
 
 ?>
 
+<div class="row">
+
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
 		<?php // The Query
-
-
-			
+		
 			if( is_home() || is_front_page()) {
 			$featured = new WP_Query(array(
 				'meta_query' => array(
@@ -65,10 +65,10 @@
 		} elseif ( is_page('resources')) {
 
 			$featured = new WP_Query(array(
-				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports'),
+				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports', 'events'),
 				'meta_query' => array(
 					array(
-						'key' => 'featured',
+						'key' => 'featured_resource',
 						'value' => '1',
 						'compare' => '=='
 						)
@@ -92,7 +92,7 @@
 
 
 
-<div class="row">
+
 
 
 
@@ -102,7 +102,7 @@
 
 						<?php
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 						
 
@@ -115,11 +115,11 @@
 			<header> 
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="author">By <?php the_author(); ?></p>
+				<p class="small-caps">By <?php the_author(); ?></p>
 
 				<div class="excerpt">
 					<?php 
-					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 100, $more = '' ), true); 
+					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
 					?>
 				</div>
 			</header>
@@ -131,20 +131,12 @@
 		<?php wp_reset_query(); ?>
 
 
-</div>
+
 <!--  -->
-<?php if( is_page('resources')) {
-
-echo '<hr class="thick" />';
-
-}?>
-
+</div>
 
 	<?php endif;?>
 
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
-
-
-
-
+	

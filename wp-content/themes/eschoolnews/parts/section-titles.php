@@ -12,7 +12,7 @@
 
 
 
-<div class="medium-12 columns"><h1 class="section-title"><span>
+<h1 class="section-title"><span>
 
 <?php 
 
@@ -24,6 +24,10 @@ if ( is_page()) {
 
 	echo 'Resources';
 
+} elseif ( is_page('Top Stories')) {
+
+	echo 'Top Stories';
+
 } elseif ( is_page('Registration')) {
 
 	echo 'Registration';
@@ -31,6 +35,10 @@ if ( is_page()) {
 } elseif ( is_post_type_archive('special-reports')) {
 
 	echo 'Special Reports';
+
+//} elseif ( is_post_type_archive('whitepapers')) {
+
+	//echo 'White Papers';
 
 
 } elseif ( is_archive()) {
@@ -47,7 +55,7 @@ if ( is_page()) {
 
 ?>
 
-</span></h1></div>
+</span></h1>
 
 
 

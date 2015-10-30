@@ -2,8 +2,7 @@
 <h4>Professional Development</h4>
 <br/>
 <section class="webinars">
-	<h5>Webinars</h5>
-	<br/>
+	<h5>Recorded Webinars</h5>
 	<ul>
 <?php // The Query
 $upcoming = array(
@@ -30,12 +29,8 @@ while ( $query->have_posts() ) :
 	$query->the_post(); ?>
 
 
-<li>
-		<div class="date"><?php 
-		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
-		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-
+<li>	
+	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 </li>
 
 <?php endwhile; 
@@ -43,7 +38,9 @@ wp_reset_postdata(); ?>
 
 </ul>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">More Webinars &raquo;</a></h6>
+<br/>
+
+<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">Read All Webinars &raquo;</a></h6>
 </section>
 
 <?php // The Query
@@ -59,24 +56,24 @@ $query2 = new WP_Query( $events ); ?>
 <hr/>
 <section class="events">
 	<h5>Events</h5>
-	<br/>
 
 <ul>
 <?php while ( $query2->have_posts() ) :
 	$query2->the_post(); ?>
 
 
-<li>
+<li>	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		<div class="small-caps"><?php 
 		$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 		if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 </li>
 
 <?php endwhile; ?>
+</ul>
 
+<br/>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/events">More Events &raquo;</a></h6>
+<h6 class="readmore"><a href="<?php site_url(); ?>/events">Read All Events &raquo;</a></h6>
 
 </section>
 

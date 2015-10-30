@@ -9,9 +9,10 @@
 
 ?>
 
-<section class="tertiary">
+<div class="row">
+<hr/>
 
-	<hr/>
+	
 
 	<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>
 
@@ -36,16 +37,18 @@
 						<div class="medium-4 columns">
 
 						<?php   
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small-thumb' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 						?>
+
+												<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 
 					</div>
 						
 
 						<header class="medium-8 columns"> 
 							<h5><?php the_title(); ?></h5>
-							<a href="#" class="button tiny radius" data-reveal-id="<?php the_slug(); ?>">Download</a>
+							<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 						</header>
 
@@ -64,6 +67,6 @@
 
 		</ul>
 
-		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">See More White Papers &raquo;</a></h6>
+		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">Read All White Papers &raquo;</a></h6>
 
-	</section>
+	</div>
