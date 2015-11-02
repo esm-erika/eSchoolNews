@@ -34,6 +34,10 @@ if($Col2d_enabled == '1'){  $collist = array_push($collist2,'2d'); }
 
 //check for col 1 and 2 then set widths
 
+$meta = get_post_meta($post_id);
+echo "<pre>";
+print_r($meta);
+echo "</pre>";
 
 if(!empty($collist1)){
 echo '<div class="row">';
