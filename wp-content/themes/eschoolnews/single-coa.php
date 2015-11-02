@@ -2,7 +2,8 @@
 Template Name: 3 Column Page
 
 */ 
-include_once (TEMPLATEPATH . '/library/boxes.php');
+require_once( 'library/boxes.php' );
+//include_once (TEMPLATEPATH . '/library/boxes.php');
 
 
 ?>

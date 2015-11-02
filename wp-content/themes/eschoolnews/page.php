@@ -29,7 +29,7 @@ $oldtemplate = get_post_meta($id, '_wp_post_template', true);
    ?>
 <?php if($oldtemplate){ echo 'OLD TEMPLATE USED!!!!'; //using old template
 	
-require_once( 'library/boxes.php' );	
+//require_once( 'library/boxes.php' );	
 include('single-coa.php');
 	
 	
