@@ -12,7 +12,15 @@
 
 <div class="small-12 large-8 columns right-column top-stories">
 
-
+<?php if(is_category()) {
+	echo '<h2>Top ';
+	single_cat_title();
+	echo ' Stories</h2>';
+} else {
+	echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Top ';
+	single_cat_title(); 
+	echo ' Stories</span></h1>';
+} ?>
 	
 
 	<div class="row">

@@ -124,8 +124,10 @@ $webinars = new WP_Query(array(
 							<article>
 								<header>
 									<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+
 								
-								<p class="related-tags">
+								<div class="related-tags">
 
 									<?php
 									$posttags = get_the_tags();
@@ -138,9 +140,10 @@ $webinars = new WP_Query(array(
 										}
 									}
 									?>
-								</p>
+								</div>
 								</header>
 							</article>
+							<hr/>
 
 							<?php endwhile; 
 							wp_reset_postdata(); ?>

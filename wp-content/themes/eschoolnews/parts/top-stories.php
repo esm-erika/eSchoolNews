@@ -11,16 +11,6 @@
 
 <?php // get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
-<?php if(is_category()) {
-	echo '<h2>Top ';
-	single_cat_title();
-	echo ' Stories</h2>';
-} else {
-	echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Top ';
-	single_cat_title(); 
-	echo ' Stories</span></h1>';
-} ?>
-
 <?php 
 
 			if(get_field('layout_select', 'option') == "layout-2x2_halfpage"){

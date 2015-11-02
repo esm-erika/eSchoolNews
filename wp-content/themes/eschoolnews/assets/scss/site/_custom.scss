@@ -407,8 +407,14 @@ img.thumb {
 	margin: 0 0 0.25rem 0;
 }
 
+hr {
+	border: solid #ccc;
+	border-width: 1px 0 0;
+}
+ 
+
 hr.thick {
-	border: solid #333;
+	border: solid #333 !important;
     border-width: 5px 0 0;
     clear: both;
     height: 0;

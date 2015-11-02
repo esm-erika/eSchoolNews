@@ -40,7 +40,9 @@ get_header(); ?>
 
 	<div class="small-12 large-8 columns">
 
-		<?php get_template_part('parts/resources-section'); ?>		
+		<?php get_template_part('parts/resources-section'); ?>	
+
+		<?php get_template_part('parts/whitepaper-section'); ?>	
 
 
 	</div>
@@ -49,7 +51,7 @@ get_header(); ?>
 </div>
 
 
-<?php get_template_part('parts/whitepaper-section'); ?>
+
 
 </div>
 

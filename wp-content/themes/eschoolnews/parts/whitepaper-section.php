@@ -37,6 +37,8 @@
 <div class="row">
 <hr/>
 
+<div class="small-12 medium-12 columns">
+
 	<?php if(is_category()) {
 	echo '<h2>';
 	single_cat_title();
@@ -91,5 +93,6 @@
 		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">Read All White Papers &raquo;</a></h6>
 
 	</div>
+</div>
 
 	<?php endif;?>

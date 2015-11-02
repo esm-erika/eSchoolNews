@@ -36,16 +36,18 @@
 
 <div class="row">
 
-	<?php if(is_category()) {
+	
+
+
+	<div class="columns medium-12">
+
+		<?php if(is_category()) {
 		echo '<h2>';
 		single_cat_title();
 		echo ' Resources</h2>';
 	} else {
 		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
 	} ?>
-
-
-	<div class="columns medium-12">
 
 	<ul class="small-block-grid-1 medium-block-grid-2">
 
