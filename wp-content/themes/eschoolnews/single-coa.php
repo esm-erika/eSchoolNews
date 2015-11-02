@@ -134,7 +134,7 @@ if(!empty($collist2)){
 	echo '</div>'; //close col 2
 
 }
-echo '</div>'; //close row
+if(!empty($collist1)){ echo '</div>'; /* close row */ }
 
 
 /*
