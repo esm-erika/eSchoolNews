@@ -9,25 +9,8 @@
 
 ?>
 
-<div class="row">
-
-	<?php if(is_category()) {
-	echo '<h2>';
-	single_cat_title();
-	echo ' Resources</h2>';
-} else {
-	echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
-} ?>
-
-
-	<div class="columns medium-12">
-
-	<ul class="small-block-grid-1 medium-block-grid-2">
-
-		<?php // The Query
-
-
-			
+<?php // The Query
+	
 		if( is_home() || is_front_page()) {
 			$resources = new WP_Query(array(
 				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports'),
@@ -49,9 +32,26 @@
 					}?>
 
 
-				<?php if ( $resources->have_posts() ) : 
+				<?php if ( $resources->have_posts() ) : ?> 
 
-				while ( $resources->have_posts() ) : $resources -> the_post(); ?>
+<div class="row">
+
+	<?php if(is_category()) {
+		echo '<h2>';
+		single_cat_title();
+		echo ' Resources</h2>';
+	} else {
+		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
+	} ?>
+
+
+	<div class="columns medium-12">
+
+	<ul class="small-block-grid-1 medium-block-grid-2">
+
+		
+
+				<?php while ( $resources->have_posts() ) : $resources -> the_post(); ?>
 				
 					<li> 
 						<article>
@@ -94,8 +94,7 @@
 
 					<?php wp_reset_query(); ?>
 
-				<?php endif;?>
-
+				
 
 			</ul>
 
@@ -104,4 +103,6 @@
 
 			</div>
 		</div>
+
+		<?php endif;?>
 

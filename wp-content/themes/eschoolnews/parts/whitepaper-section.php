@@ -9,6 +9,31 @@
 
 ?>
 
+<?php // The Query
+	
+		if( is_home() || is_front_page()) {
+			$whitepapers = new WP_Query(array(
+				'post_type' => 'whitepapers',
+				'posts_per_page' => '6'
+				)); 
+
+		} elseif ( is_category()) {
+			
+			global $cat;
+
+
+			$whitepapers = new WP_Query(array(
+				'cat' => $cat,
+				'posts_per_page' => '6',
+				'post_type' => 'whitepapers'
+				)); 
+						
+
+					}?>
+
+
+				<?php if ( $whitepapers->have_posts() ) : ?> 
+
 <div class="row">
 <hr/>
 
@@ -25,15 +50,8 @@
 		<ul class="small-block-grid-1 large-block-grid-2">
 
 
-			<?php if ( have_posts() ) : ?>
+			<?php while ( $whitepapers->have_posts() ) : $whitepapers -> the_post(); ?>
 
-					<?php
-						// if ( is_front_page() ) {
-							query_posts( array ( 'post_type' => array('whitepapers'), 'posts_per_page' => 6, 'orderby' =>'rand'));
-						//}
-					?>
-
-					<?php while ( have_posts() ) : the_post(); ?>
 						
 					
 					<li>
@@ -63,11 +81,9 @@
 
 					</li>
 
-					<?php endwhile; ?>
+					<?php endwhile; wp_reset_query(); ?>
 
-					<?php wp_reset_query(); ?>
-
-					<?php endif;?>
+					
 
 
 		</ul>
@@ -75,3 +91,5 @@
 		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">Read All White Papers &raquo;</a></h6>
 
 	</div>
+
+	<?php endif;?>
