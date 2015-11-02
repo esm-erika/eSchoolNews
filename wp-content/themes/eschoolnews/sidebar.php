@@ -22,70 +22,60 @@
 
 	<?php if(is_post_type_archive('events')){
 		get_template_part( 'parts/sidebar/conferences' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	} ?>
 
 	<?php 
 	if( is_page('Resources') || is_post_type_archive('events')) { 
-		//get_template_part( 'parts/ads/embeddedbanner' );
 		get_template_part( 'parts/sidebar/upcoming-webinars' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	} ?>
 
 	<?php 
-	if( is_post_type_archive('webinars')) { 
+	if( is_post_type_archive('webinars') || is_search()) { 
 		get_template_part( 'parts/sidebar/resources' );
 	} ?>
 
 	  <?php
 	if( is_singular('webinars')) { 
-		//get_template_part( 'parts/ads/embeddedbanner' );
 		get_template_part( 'parts/sidebar/sponsored-by' );  
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 		}
 	 ?>
 
 
 	 <?php if(is_singular( array('webinars', 'events') )) {
-		//get_template_part( 'parts/ads/embeddedbanner' );
 	 	get_template_part( 'parts/sidebar/speakers' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	 }
 
 	  ?>
 
 	<?php if( is_tag() || is_page('Top Stories')) {
-		//get_template_part( 'parts/ads/embeddedbanner' );
 		get_template_part( 'parts/sidebar/tag-cloud' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 
 	} ?>
 
 	<?php if(is_front_page() && is_home() || is_category() || is_page('Top Stories')){
-		//get_template_part( 'parts/ads/embeddedbanner' );
 		get_template_part( 'parts/sidebar/professional-development' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 
 	} ?>
 
 	<?php
 	if( is_singular('post')) { 
-		//get_template_part( 'parts/ads/embeddedbanner' );
 		get_template_part( 'parts/sidebar/related-content' );  
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	
 		}
 	 ?>
 
 	 <?php
 	if( is_post_type_archive('whitepapers' )) { 
-		//get_template_part( 'parts/ads/embeddedbanner' );
-		get_template_part( 'parts/sidebar/company-categories' );  
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
-	
+		get_template_part( 'parts/sidebar/company-categories' );  	
 		}
 	 ?>
 
+
+	<?php
+		if( is_category()) { 
+			get_template_part( 'parts/sidebar/most-popular' );  	
+			}
+	 ?>
 	 <?php get_template_part( 'parts/ads/embeddedbanner-2' ); ?>
 	
 
