@@ -32,6 +32,11 @@
 		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	} ?>
 
+	<?php 
+	if( is_post_type_archive('webinars')) { 
+		get_template_part( 'parts/sidebar/resources' );
+	} ?>
+
 	  <?php
 	if( is_singular('webinars')) { 
 		//get_template_part( 'parts/ads/embeddedbanner' );

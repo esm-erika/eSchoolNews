@@ -1,7 +1,6 @@
 <article>
 
 <?php $popular = array(
-
     'post_type' => 'post',
     'posts_per_page' => 10,
     'meta_key' => 'post_views_count',

@@ -13,7 +13,7 @@
 	
 		if( is_home() || is_front_page()) {
 			$resources = new WP_Query(array(
-				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports'),
+				'post_type' => array( 'whitepapers', 'ercs', 'specialreports'),
 				'posts_per_page' => '6'
 				)); 
 
@@ -25,7 +25,7 @@
 			$resources = new WP_Query(array(
 				'cat' => $cat,
 				'posts_per_page' => '6',
-				'post_type' => array( 'whitepapers', 'erc', 'webinars', 'specialreports')
+				'post_type' => array( 'whitepapers', 'ercs', 'specialreports')
 				)); 
 						
 
