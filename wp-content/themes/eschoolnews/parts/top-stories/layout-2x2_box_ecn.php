@@ -9,7 +9,6 @@
 
 ?>
 
-<h1 class="section-title"><span><i class="fi-page-filled"></i> Top <?php single_cat_title(); ?> Stories</span></h1>
 
 <div class="small-12 large-8 columns right-column top-stories">
 
