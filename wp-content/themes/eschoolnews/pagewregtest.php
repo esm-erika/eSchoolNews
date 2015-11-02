@@ -1,4 +1,4 @@
 <?php
-include('single-coa.php');
+include('page.php');
 ?>
 
