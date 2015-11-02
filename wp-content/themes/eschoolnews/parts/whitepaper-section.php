@@ -12,9 +12,14 @@
 <div class="row">
 <hr/>
 
-	
+	<?php if(is_category()) {
+	echo '<h2>';
+	single_cat_title();
+	echo ' White Papers</h2>';
+} else {
+	echo '<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>';
+} ?>
 
-	<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>
 
 
 		<ul class="small-block-grid-1 large-block-grid-2">

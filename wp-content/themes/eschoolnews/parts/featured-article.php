@@ -83,12 +83,20 @@
 				<?php if ( $featured->have_posts() ) : ?>
 
 
+				
+
 				<?php if( is_page('resources')) {
 					echo '';
 
-				} else {
-					echo '<h1 class="section-title"><span>Featured</span></h1>';
-				}?>
+				} elseif (is_category()) {
+					echo '<h2>';
+					single_cat_title();
+					echo ' Featured Story</h2>';
+				}else{
+
+				echo '<h1 class="section-title"><span>Featured</span></h1>';
+
+					} ?>
 
 
 

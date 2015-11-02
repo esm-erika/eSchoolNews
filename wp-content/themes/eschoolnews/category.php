@@ -19,7 +19,7 @@ get_header(); ?>
 
 <?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 
-	<?php //get_template_part( 'parts/section-titles' ); ?>
+	<?php get_template_part( 'parts/section-titles' ); ?>
 
 
 <?php get_template_part( 'parts/featured-article' ); ?>

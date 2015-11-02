@@ -11,7 +11,13 @@
 
 <div class="row">
 
-<h1 class="section-title"><span><i class="fi-bookmark"></i> Resources</span></h1>
+	<?php if(is_category()) {
+	echo '<h2>';
+	single_cat_title();
+	echo ' Resources</h2>';
+} else {
+	echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
+} ?>
 
 
 	<div class="columns medium-12">
