@@ -27,19 +27,19 @@ class Custom_Admin {
         _default_wp_die_handler(__('You do not have sufficient permissions to access this page.'));
     }
 
-    // public function modify_menus() 
-    // {
-    //     remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
-    //     remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
+    public function modify_menus() 
+    {
+        remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
+        remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
 
-    //     // Appearance Menu
-    //     global $menu;
-    //     global $submenu;
-    //     if (isset($menu[60][0])) {
-    //         $menu[60][0] = "Menus"; // Rename Appearance to Menus
-    //     }
-    //     unset($submenu['themes.php'][6]); // Customize
-    // }
+        // // Appearance Menu
+        // global $menu;
+        // global $submenu;
+        // if (isset($menu[60][0])) {
+        //     $menu[60][0] = "Menus"; // Rename Appearance to Menus
+        // }
+        // unset($submenu['themes.php'][6]); // Customize
+    }
 
     // Remove 'Administrator' from the list of roles if the current user is not an admin
     public function editable_roles( $roles ){
