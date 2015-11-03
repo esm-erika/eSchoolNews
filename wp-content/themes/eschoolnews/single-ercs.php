@@ -16,7 +16,7 @@ if($template == 'single-olddata.php'){
 echo "<!--". $template." -->	";
 include('single-coa.php');
 }else{
-echo "<!--". $template." - ".$postid." - ".$id." -->	";
+echo "<!--". $template." - ".$postid." - ".$id." - ".$post->ID." -->	";
 ?>
 
 
