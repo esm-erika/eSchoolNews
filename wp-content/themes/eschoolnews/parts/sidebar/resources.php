@@ -12,6 +12,10 @@ if(is_post_type_archive('webinars' )) {
 	));
 } ?>
 
+<article>
+	<h4>Resources</h4>
+	<br/>
+
 	<ul>
 
 		<?php while ( $resources->have_posts() ) : $resources -> the_post(); ?>
