@@ -13,9 +13,7 @@
 <div class="small-12 large-8 columns right-column top-stories">
 
 <?php if(is_category()) {
-	echo '<h2>Top ';
-	single_cat_title();
-	echo ' Stories</h2>';
+	echo '';
 } else {
 	echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Top ';
 	single_cat_title(); 
@@ -66,7 +64,7 @@
 
 </ul>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">Read All Top Stories &raquo;</a></h6>
+<h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">See All Top Stories &raquo;</a></h6>
 </div>
 
 </div> <!-- end row -->

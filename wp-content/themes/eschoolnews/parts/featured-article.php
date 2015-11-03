@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="row">
+<div class="row" id="featured">
 
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
@@ -89,9 +89,7 @@
 					echo '';
 
 				} elseif (is_category()) {
-					echo '<h2>';
-					single_cat_title();
-					echo ' Featured Story</h2>';
+					echo '';
 				}else{
 
 				echo '<h1 class="section-title"><span>Featured</span></h1>';
@@ -140,11 +138,11 @@
 
 
 
+
 <!--  -->
 </div>
 
 	<?php endif;?>
 
 
-	<?php do_action( 'foundationpress_after_content' ); ?>
 	

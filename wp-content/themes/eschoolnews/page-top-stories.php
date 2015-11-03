@@ -56,9 +56,9 @@ $query = new WP_Query( $topstories ); ?>
 						
 
 			
-						<span class="flag content"><a href="<?php the_permalink(); ?>">News</a>
+						<span class="flag content"><a href="<?php the_permalink(); ?>">News</a></span>
 
-				<h4 class="entry-title"><?php the_title(); ?></h4>
+				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				<div class="small-caps">By <?php the_author(); ?></div>
 				<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
 </article>
