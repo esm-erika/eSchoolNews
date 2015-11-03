@@ -13,8 +13,10 @@ $template = get_post_meta($post_id,'_wp_post_template',true);
 
 
 if($template == 'single-olddata.php'){ 
+echo "<!--". $template." -->	";
 include('single-coa.php');
 }else{
+echo "<!--". $template." -->	";
 ?>
 
 
