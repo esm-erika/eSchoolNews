@@ -9,7 +9,13 @@
 
 ?>
 <div class="article-social clearfix">
-    <a href="#" class="left"><i class="fi-social-facebook medium"></i> <small>12 Shares</small></a>
+   <!--  <a href="#" class="left"><i class="fi-social-facebook medium"></i> <small>12 Shares</small></a>
     <a href="#" class="left"><i class="fi-social-twitter medium"></i> <small>25 Tweets</small></a>
-    <a href="#" class="left"><i class="fi-mail medium"></i> <small>54 Emailed</small></a>
+    <a href="#" class="left"><i class="fi-mail medium"></i> <small>54 Emailed</small></a> -->
+
+    <?php 
+		if ( function_exists( 'sharing_display' ) ) {
+		    sharing_display( '', true );
+		}
+     ?>
 </div>

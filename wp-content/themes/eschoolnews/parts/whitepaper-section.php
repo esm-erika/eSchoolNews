@@ -40,9 +40,9 @@
 <div class="small-12 medium-12 columns">
 
 	<?php if(is_category()) {
-	echo '<h2>';
+	echo '<h3>';
 	single_cat_title();
-	echo ' White Papers</h2>';
+	echo ' White Papers</h3>';
 } else {
 	echo '<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>';
 } ?>
@@ -90,7 +90,7 @@
 
 		</ul>
 
-		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">Read All White Papers &raquo;</a></h6>
+		<h6 class="readmore"><a href="<?php echo home_url(); ?>/whitepapers">See All White Papers &raquo;</a></h6>
 
 	</div>
 </div>

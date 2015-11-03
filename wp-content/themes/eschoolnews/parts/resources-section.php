@@ -42,9 +42,9 @@
 	<div class="columns medium-12">
 
 		<?php if(is_category()) {
-		echo '<h2>';
+		echo '<h3>';
 		single_cat_title();
-		echo ' Resources</h2>';
+		echo ' Resources</h3>';
 	} else {
 		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
 	} ?>
@@ -101,7 +101,7 @@
 			</ul>
 
 
-				<h6 class="readmore"><a href="<?php echo home_url(); ?>/resources">Read All Resources &raquo;</a></h6>
+				<h6 class="readmore"><a href="<?php echo home_url(); ?>/resources">See All Resources &raquo;</a></h6>
 
 			</div>
 		</div>
