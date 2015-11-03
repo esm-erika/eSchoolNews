@@ -62,22 +62,7 @@ $webinars = new WP_Query(array(
 							</div>
 							<header class="small-12 medium-8 columns">
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-								<!-- <h6>Related Tags</h6> -->
-								<p class="related-tags">
-
-									<?php
-									$posttags = get_the_tags();
-									$count=0;
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											$count++;
-											echo '<a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a> ';
-											if( $count >5 ) break;
-										}
-									}
-									?>
-								</p>
+								
 								</header>
 
 							</article>
@@ -127,20 +112,7 @@ $webinars = new WP_Query(array(
 
 
 								
-								<div class="related-tags">
 
-									<?php
-									$posttags = get_the_tags();
-									$count=0;
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											$count++;
-											echo '<a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a> ';
-											if( $count >5 ) break;
-										}
-									}
-									?>
-								</div>
 								</header>
 							</article>
 							<hr/>
