@@ -1,6 +1,8 @@
 <?php
 /*
-Template Name:  page reg options
+Single Post Template: Old Template Converter
+Description: Template for displaying old pages from other template
+
  * The template for displaying all old single posts in the new theme
  *
  * @package WordPress
