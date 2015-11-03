@@ -2,44 +2,44 @@
 
 // Customizes 'Editor' role to have the ability to modify menus, add new users
 // and more.
-// class Custom_Admin {
-//     // Add our filters
-//     public function __construct(){
-//         // Allow editor to edit theme options (ie Menu)
-//         add_action('init', array($this, 'init'));
-//         add_filter('editable_roles', array($this, 'editable_roles'));
-//         add_filter('map_meta_cap', array($this, 'map_meta_cap'), 10, 4);
-//     }
+class Custom_Admin {
+    // Add our filters
+    public function __construct(){
+        // Allow editor to edit theme options (ie Menu)
+        add_action('init', array($this, 'init'));
+        add_filter('editable_roles', array($this, 'editable_roles'));
+        add_filter('map_meta_cap', array($this, 'map_meta_cap'), 10, 4);
+    }
 
-//     public function init() {
-//         if ($this->is_client_admin()) {
-//             // Disable access to the theme/widget pages if not admin
-//             add_action('admin_head', array($this, 'modify_menus'));
-//             add_action('load-themes.php', array($this, 'wp_die'));
-//             add_action('load-widgets.php', array($this, 'wp_die'));
-//             add_action('load-customize.php', array($this, 'wp_die'));
+    public function init() {
+        if ($this->is_client_admin()) {
+            // Disable access to the theme/widget pages if not admin
+            add_action('admin_head', array($this, 'modify_menus'));
+            add_action('load-themes.php', array($this, 'wp_die'));
+            add_action('load-widgets.php', array($this, 'wp_die'));
+            add_action('load-customize.php', array($this, 'wp_die'));
 
-//             add_filter('user_has_cap', array($this, 'user_has_cap'));
-//         }
-//     }
+            add_filter('user_has_cap', array($this, 'user_has_cap'));
+        }
+    }
 
-//     public function wp_die() {
-//         _default_wp_die_handler(__('You do not have sufficient permissions to access this page.'));
-//     }
+    public function wp_die() {
+        _default_wp_die_handler(__('You do not have sufficient permissions to access this page.'));
+    }
 
-//     public function modify_menus() 
-//     {
-//         remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
-//         remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
+    public function modify_menus() 
+    {
+        remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
+        remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
 
-//         // Appearance Menu
-//         global $menu;
-//         global $submenu;
-//         if (isset($menu[60][0])) {
-//             $menu[60][0] = "Menus"; // Rename Appearance to Menus
-//         }
-//         unset($submenu['themes.php'][6]); // Customize
-//     }
+        // Appearance Menu
+        global $menu;
+        global $submenu;
+        if (isset($menu[60][0])) {
+            $menu[60][0] = "Menus"; // Rename Appearance to Menus
+        }
+        unset($submenu['themes.php'][6]); // Customize
+    }
 
     // Remove 'Administrator' from the list of roles if the current user is not an admin
     public function editable_roles( $roles ){
