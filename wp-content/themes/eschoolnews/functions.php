@@ -90,4 +90,7 @@ require_once('library/login.php');
 /** Move Sharing Buttons Jetpack */
 require_once('library/sharing-tools.php');
 
+/** Move Sharing Buttons Jetpack */
+require_once('library/most-popular.php');
+
 ?>
