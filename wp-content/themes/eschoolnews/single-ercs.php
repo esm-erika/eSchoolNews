@@ -7,7 +7,19 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header(); 
+$template = get_post_meta($post->ID,'_wp_post_template',true);
+
+
+
+if($template == 'single-olddata.php'){ 
+echo "<!--". $template." -->	";
+include('single-coa.php');
+}else{
+echo "<!--". $template." - ".$postid." - ".$id." - ".$post->ID." -->	";
+?>
+
+
 
 <div class="row">
 
@@ -150,4 +162,6 @@ get_header(); ?>
 	
 	<?php //get_sidebar(); ?>
 </div>
-<?php get_footer(); ?>
+<?php 
+}
+get_footer(); ?>
