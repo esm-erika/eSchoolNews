@@ -1,6 +1,7 @@
 <?php
-/**
- * The template for displaying all single posts and attachments
+/*
+Template Name:  page reg options
+ * The template for displaying all old single posts in the new theme
  *
  * @package WordPress
  * @subpackage FoundationPress

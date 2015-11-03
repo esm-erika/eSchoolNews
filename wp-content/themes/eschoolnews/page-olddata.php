@@ -1,10 +1,7 @@
 <?php
-/**
- * The template for displaying pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
+/*
+Template Name:  page reg options
+ * The template for displaying all old single pages in the new theme
  *
  * @package WordPress
  * @subpackage FoundationPress
