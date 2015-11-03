@@ -19,7 +19,6 @@
 		$query = new WP_Query( $popular ); ?>
 
 		<ul>
-
 			<?php while ( $query->have_posts() ) :
 			$query->the_post(); ?>
 
