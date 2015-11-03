@@ -8,7 +8,7 @@
  */
 
 get_header(); 
-$template = get_post_meta($post->ID,'wp_post_template',true);
+$template = get_post_meta($post->ID,'_wp_post_template',true);
 
 
 
