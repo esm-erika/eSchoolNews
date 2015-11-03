@@ -9,14 +9,10 @@
 
 get_header(); 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
-
-
-
 if($template == 'single-olddata.php'){ 
-echo "<!--". $template." -->	";
 include('single-coa.php');
 }else{
-echo "<!--". $template." - ".$postid." - ".$id." - ".$post->ID." -->	";
+
 ?>
 
 
