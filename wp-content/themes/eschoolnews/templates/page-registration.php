@@ -68,6 +68,8 @@ add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
 if($_GET["zipc"]){ $esnautofill = array(zip => $InstInZip->$_GET["zipc"]); }
 	 
  }
+ 
+ /*
 function SF_Account_Upsert($entry, $form){
 
 //upload information to salesforce from the final form.
@@ -389,6 +391,8 @@ if ($upsertResponse->success==1){
 $formsuccess = validateint($_GET['success']);
 
 }
+
+*/
 
 ?>
 
