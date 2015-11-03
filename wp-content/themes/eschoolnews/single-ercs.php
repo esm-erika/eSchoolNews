@@ -8,7 +8,7 @@
  */
 
 get_header(); 
-$template = get_post_meta($post_id,'wp_post_template',true);
+$template = get_post_meta($postid,'wp_post_template',true);
 
 
 
@@ -16,7 +16,7 @@ if($template == 'single-olddata.php'){
 echo "<!--". $template." -->	";
 include('single-coa.php');
 }else{
-echo "<!--". $template." -->	";
+echo "<!--". $template." - ".$postid." - ".$id." -->	";
 ?>
 
 
