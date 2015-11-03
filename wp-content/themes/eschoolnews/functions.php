@@ -85,7 +85,7 @@ require_once('library/salesforce.php');
 require_once('library/login.php');
 
 /** Added capabilities to Editor role */
-//require_once('library/add-editor-cap.php');
+require_once('library/add-editor-cap.php');
 
 /** Move Sharing Buttons Jetpack */
 require_once('library/sharing-tools.php');
