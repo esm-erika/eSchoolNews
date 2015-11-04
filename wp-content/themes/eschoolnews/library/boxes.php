@@ -202,10 +202,10 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 // start code to cache
     ob_start( );
 ?>			
-<div class="small-8 medium-8 columns">
-				<?php if(strlen($theboxtitle) ==  '0'){ ?>
+<div class="small-8 medium-8 columns" role="main">
+				<h4><?php if(strlen($theboxtitle) ==  '0'){ ?>
 					<a href="<?php echo get_category_link($box_art_cat);?>"><?php echo get_cat_name($box_art_cat); ?></a>
-				<?php } else { echo '<a href="'. get_category_link($box_art_cat);echo $aststr.'">'.$theboxtitle.'</a>'; } ?>								
+				<?php } else { echo '<a href="'. get_category_link($box_art_cat);echo $aststr.'">'.$theboxtitle.'</a>'; } ?>								</h4>
 
 
 <?php
@@ -223,7 +223,7 @@ while ($query->have_posts()) : $query->the_post();
 ?>
 
 <?php if($showthumb == 1 and has_post_thumbnail()){ ?>
-<div class="small-4 medium-3 large-2 columns">
+<div class="small-4 medium-3 large-3 columns">
 <?php
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
@@ -231,7 +231,7 @@ while ($query->have_posts()) : $query->the_post();
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 </div>
-<div class="small-8 medium-9 large-10 columns">	
+<div class="small-8 medium-9 large-9 columns">	
 <?php } else {
 ?>	
 <div class="small-12 medium-12 large-12 columns">	
@@ -245,7 +245,7 @@ while ($query->have_posts()) : $query->the_post();
 							?>
 						</p>
 											
-											
+	<hr />										
 
 		   <?php if($count == $qty) { ?>
 			
