@@ -52,7 +52,9 @@ $iserc = 1;
 echo '<div class="row">';
  get_template_part( 'parts/ads/erctop' ); 
  
- echo the_content();
+ $content = apply_filters( 'the_content', get_the_content() );
+ $content = str_replace( ']]>', ']]&gt;', $content );
+ echo $content;
  
  
 echo '</div>';
