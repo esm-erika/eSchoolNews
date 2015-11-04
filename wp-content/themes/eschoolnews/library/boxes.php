@@ -196,11 +196,10 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 //insert cache query
 			$box_qt = 'art_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
-if(!$_GET['clearcache']){ $local_box_cache = get_transient( $box_q ); }
-			
-			if (false === ($local_box_cache) ){
+			//$local_box_cache = get_transient( $box_q ); 
+			//if (false === ($local_box_cache) ){
 // start code to cache
-    ob_start( );
+//    ob_start( );
 ?>			
 <div class="small-8 medium-8 columns" role="main">
 				<h4><?php if(strlen($theboxtitle) ==  '0'){ echo get_cat_name($box_art_cat); 
@@ -266,19 +265,19 @@ while ($query->have_posts()) : $query->the_post();
 
 <?php
 	
-    $local_box_cache = ob_get_clean( );
-echo $local_box_cache;
+//    $local_box_cache = ob_get_clean( );
+//echo $local_box_cache;
 // end the code to cache
 
 //end cache query 
-	if( current_user_can( 'edit_post' ) ) {
+//	if( current_user_can( 'edit_post' ) ) {
 //you cannot cache it
-} else {
-set_transient($box_q ,$local_box_cache, 60 * 15);
-}
-} else { 
-echo $local_box_cache;
-}
+//} else {
+//set_transient($box_q ,$local_box_cache, 60 * 15);
+//}
+//} else { 
+//echo $local_box_cache;
+//}
 
 }
 add_shortcode('box_art', 'article_list_shortcode');
