@@ -19,15 +19,19 @@ if(!filter_var($astcset, FILTER_VALIDATE_INT))
 	$astc = $astcset;	
 }
 
-$pageadset = $_GET['ast'];
-if(!filter_var($pageadset, FILTER_VALIDATE_INT))
-{//reserved for default ad set
-	$astused = 1;
+$astused = get_post_meta($post_id, '_wp_esmad_template', true);
+if($astused > 1){
+ $astf = $astused; 
 } else {
-	// Retrieve adset info from page
-	$astused = $pageadset;	
+	$pageadset = $_GET['ast'];
+	if(!filter_var($pageadset, FILTER_VALIDATE_INT))
+	{//reserved for default ad set
+		$astused = 1;
+	} else {
+		// Retrieve adset info from page
+		$astused = $pageadset;	
+	}
 }
-
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
