@@ -8,6 +8,25 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
+global $post, $page;
+$post_id = $post->ID;
+$astcset = $_GET['astc'];
+if(!filter_var($astcset, FILTER_VALIDATE_INT))
+{//reserved for default ad set
+	$astc = 1;
+} else {
+// Retrieve adset info from url
+	$astc = $astcset;	
+}
+
+$pageadset = $_GET['ast'];
+if(!filter_var($pageadset, FILTER_VALIDATE_INT))
+{//reserved for default ad set
+	$astused = 1;
+} else {
+	// Retrieve adset info from page
+	$astused = $pageadset;	
+}
 
 ?>
 <!doctype html>

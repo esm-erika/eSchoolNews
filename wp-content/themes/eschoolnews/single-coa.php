@@ -19,8 +19,17 @@ $adset_follow = get_post_meta($post_id, '_ast_follow', true);
 if($adset_follow > 0){$astf = $astused;} else {$astf = 0;}
 
 
-//$rows1 = list();
+
 $Col1a_enabled = get_post_meta($post_id, '_Col1a_enable', true);
+$Col1b_enabled = get_post_meta($post_id, '_Col1b_enable', true);
+$Col1c_enabled = get_post_meta($post_id, '_Col1c_enable', true);
+$Col1d_enabled = get_post_meta($post_id, '_Col1d_enable', true);
+
+$Col2a_enabled = get_post_meta($post_id, '_Col2a_enable', true);
+$Col2b_enabled = get_post_meta($post_id, '_Col2b_enable', true);
+$Col2c_enabled = get_post_meta($post_id, '_Col2c_enable', true);
+$Col2d_enabled = get_post_meta($post_id, '_Col2d_enable', true);
+
 $collist1 = array();
 if($Col1a_enabled == '1'){  $collist = array_push($collist1,'1a'); }
 if($Col1b_enabled == '1'){  $collist = array_push($collist1,'1b'); }
@@ -34,7 +43,7 @@ if($Col2d_enabled == '1'){  $collist = array_push($collist2,'2d'); }
 
 //check for col 1 and 2 then set widths
 
-$meta = get_post_meta($post_id);
+//$meta = get_post_meta($post_id);
 //echo "<pre>";
 //print_r($meta);
 //echo "</pre>";
