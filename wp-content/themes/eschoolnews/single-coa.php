@@ -58,11 +58,13 @@ echo '<div class="row">';
 	}
 
 		foreach($collist1 as $row){
-echo "<pre>";
-print_r($row);
-echo "</pre>";
-echo $row;
-			$astc = ${'Col'.$row.'_cat'};
+//echo "<pre>";
+//print_r($row);
+//echo "</pre>";
+//echo $row;
+			$astcvar = 'Col'.$row.'_cat';
+			$astc = ${$astcvar};
+			
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
 			$Col_rotate = get_post_meta($post_id, '_Col'.$row.'_rotate', true);
