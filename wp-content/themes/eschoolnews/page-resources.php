@@ -78,13 +78,7 @@ echo '<hr class="thick" />';
 
 						                        	<header class="medium-8 columns">
 
-				<?php 
-						$post_type = get_post_type_object( get_post_type($post) );
-						echo '<span class="flag content">';
-						echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
-						echo $post_type->labels->singular_name; 
-						echo '</a></span>';
-					?>
+				<?php get_template_part('parts/flags'); ?>
 			
 				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					

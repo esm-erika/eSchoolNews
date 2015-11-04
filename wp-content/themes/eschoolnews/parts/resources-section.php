@@ -59,13 +59,7 @@ $resourcessection = 0;
 					<li> 
 						<article>
 
-						<?php //Prints the CPT and links to the archive page for that CPT
-							$post_type = get_post_type_object( get_post_type($post) );
-							echo '<span class="flag content">';
-							echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
-							echo $post_type->labels->singular_name; 
-							echo '</a></span>';
-							?>
+						<?php get_template_part('parts/flags'); ?>
 					
 
 						<?php 

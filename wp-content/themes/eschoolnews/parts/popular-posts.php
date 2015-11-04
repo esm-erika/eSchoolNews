@@ -1,4 +1,3 @@
-<article>
 	<h4>Most Popular</h4>
 	<br/>
 
@@ -18,17 +17,16 @@
 
 		$query = new WP_Query( $popular ); ?>
 
-		<ul>
 			<?php while ( $query->have_posts() ) :
 			$query->the_post(); ?>
 
-			<li>
+			<article>
+				<header>
 				<?php get_template_part('parts/flags'); ?>
 				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				</li>
+				</header>
+			</article>
 
 			<?php endwhile;
 			wp_reset_postdata(); ?>
-		</ul>
 
-	</article>

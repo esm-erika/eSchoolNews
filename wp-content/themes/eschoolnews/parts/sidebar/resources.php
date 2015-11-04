@@ -21,13 +21,7 @@ if(is_post_type_archive('webinars' )) {
 		<?php while ( $resources->have_posts() ) : $resources -> the_post(); ?>
 
 		<li>
-<?php //Prints the CPT and links to the archive page for that CPT
-$post_type = get_post_type_object( get_post_type($post) );
-echo '<span class="flag content">';
-echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
-echo $post_type->labels->singular_name; 
-echo '</a></span>';
-?>  
+<?php get_template_part('parts/flags'); ?> 
 
 
 <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>

@@ -12,16 +12,7 @@ get_header(); ?>
 <div class="row top">
 	<div class="small-12 large-8 columns" role="main">
 
-		<?php if( is_singular( array('ercs','whitepapers','webinars','special-reports') )) {?>
-
-		<?php $post_type = get_post_type_object( get_post_type($post) );
-
-		echo '<span class="flag content">';
-		echo '<a href="' . site_url('/') . get_post_type( get_the_ID() ) . '">';
-		echo $post_type->labels->singular_name; 
-		echo '</a></span>'; ?>
-
-		<?php }?>
+		<?php get_template_part('parts/flags'); ?>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 

@@ -119,7 +119,7 @@ if(!filter_var($pageadset, FILTER_VALIDATE_INT))
             <h3>Subscribe to Our Newsletters</h3>
          
 
-        <?php get_template_part( 'parts/subscribe-form' ); ?>
+        <?php //get_template_part( 'parts/subscribe-form' ); ?>
 
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 
