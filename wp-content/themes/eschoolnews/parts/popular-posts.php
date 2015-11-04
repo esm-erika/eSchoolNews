@@ -26,8 +26,18 @@
 				<header>
 				<?php get_template_part('parts/flags'); ?>
 				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+					<?php if ($post->post_type == "post") { ?>
+
+					<div class="small-caps">By <?php the_author(); ?></div>
+					<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>	
+
+					<?php } ?>	
+
 				</header>
 			</article>
+
+			<hr/>
 
 			<?php endwhile;
 			wp_reset_postdata(); ?>

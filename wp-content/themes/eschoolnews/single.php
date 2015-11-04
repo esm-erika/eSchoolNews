@@ -43,9 +43,7 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<div class="small-caps">By <?php the_author(); ?></div>
-							<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
-
+				
 			
 			<?php get_template_part('parts/social'); ?>
 			 </header>
