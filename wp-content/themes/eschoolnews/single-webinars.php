@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class="row top">
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-8 columns" role="main">
 
 		<?php if( is_singular( array('ercs','whitepapers','webinars','special-reports') )) {?>
 
@@ -57,16 +57,16 @@ get_header(); ?>
 
 				if ( has_post_thumbnail() ) {
 
-					echo '<div class="large-4 columns">';
+					echo '<div class="medium-4 columns">';
 					the_post_thumbnail('full'); 
 					echo '</div>';
 
-					echo '<div class="large-8 columns">';
+					echo '<div class="medium-8 columns">';
 
 
 				} else {
 
-					echo '<div class="large-12 columns">';
+					echo '<div class="medium-12 columns">';
 
 				}
 					
@@ -81,7 +81,7 @@ get_header(); ?>
 
 					the_field('event_information');
 
-					if (has_term( 'archived-webinars', 'status-webinars' )) {
+					if (has_term( 'upcoming-webinars', 'status-webinars' )) {
 
 						if (get_field('registration_link')) {
 
