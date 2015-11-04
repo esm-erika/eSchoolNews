@@ -12,7 +12,7 @@ require_once( 'library/boxes.php' );
 
 $post_id = $post->ID;
 
- get_template_part( 'parts/section-titles' ); 
+echo '<h1 class="section-title"><span>'.the_title().'</span></h1>';
 
 //$astused = get_post_meta($post_id, '_wp_esmad_template', true);
 
