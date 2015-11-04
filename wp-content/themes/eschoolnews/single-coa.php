@@ -100,7 +100,7 @@ echo '<div class="row">';
 		
 		}
 
-	echo '</div>'; //close col 1
+	echo '</div><!-- end -->'; //close col 1
 } //col 1
 
 if(!empty($collist2)){
