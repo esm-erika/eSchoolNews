@@ -196,8 +196,8 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 //insert cache query
 			$box_qt = 'art_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
-
-			$local_box_cache = get_transient( $box_q );
+if(!$_GET['clearcache']){ $local_box_cache = get_transient( $box_q ); }
+			
 			if (false === ($local_box_cache) ){
 // start code to cache
     ob_start( );
