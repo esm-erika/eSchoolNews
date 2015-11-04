@@ -12,11 +12,11 @@ require_once( 'library/boxes.php' );
 
 $post_id = $post->ID;
 
-$astused = get_post_meta($post_id, '_wp_esmad_template', true);
+//$astused = get_post_meta($post_id, '_wp_esmad_template', true);
 
-$adset_follow = get_post_meta($post_id, '_ast_follow', true);
+//$adset_follow = get_post_meta($post_id, '_ast_follow', true);
 
-if($adset_follow > 0){$astf = $astused;} else {$astf = 0;}
+//if($adset_follow > 0){$astf = $astused;} else {$astf = 0;}
 
 
 
@@ -53,7 +53,7 @@ echo '<div class="row">';
 	}
 
 		foreach($collist1 as $row){
-			
+			$astf = $astused;
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
 			$Col_rotate = get_post_meta($post_id, '_Col'.$row.'_rotate', true);
