@@ -58,7 +58,9 @@ echo '<div class="row">';
 	}
 
 		foreach($collist1 as $row){
-
+echo "<pre>";
+print_r($row);
+echo "</pre>";
 			$astc = ${'Col'.$row.'_cat'};
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
