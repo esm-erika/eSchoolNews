@@ -243,7 +243,7 @@ while ($query->have_posts()) : $query->the_post();
 							?>
 						</p>
 											
-	<hr />										
+									
 
 		   <?php if($count == $qty) { ?>
 			
