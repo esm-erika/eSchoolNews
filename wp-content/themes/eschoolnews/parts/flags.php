@@ -9,7 +9,7 @@
 		echo 'News'; 
 		echo '</a></span>';
 	
-	} elseif {
+	} else {
 
 		$post_type = get_post_type_object( get_post_type($post) );
 
