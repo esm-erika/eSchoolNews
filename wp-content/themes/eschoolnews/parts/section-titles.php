@@ -49,7 +49,7 @@ if ( is_page()) {
 	
 	single_cat_title();
 
-	echo 'TEST';
+	//echo 'TEST';
 }
 
 

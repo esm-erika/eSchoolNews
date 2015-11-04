@@ -12,6 +12,8 @@ require_once( 'library/boxes.php' );
 
 $post_id = $post->ID;
 
+ get_template_part( 'parts/section-titles' ); 
+
 //$astused = get_post_meta($post_id, '_wp_esmad_template', true);
 
 //$adset_follow = get_post_meta($post_id, '_ast_follow', true);
