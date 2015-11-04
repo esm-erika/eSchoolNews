@@ -41,12 +41,7 @@ if($Col2b_enabled == '1'){  $collist = array_push($collist2,'2b'); }
 if($Col2c_enabled == '1'){  $collist = array_push($collist2,'2c'); }
 if($Col2d_enabled == '1'){  $collist = array_push($collist2,'2d'); }
 
-//check for col 1 and 2 then set widths
 
-//$meta = get_post_meta($post_id);
-//echo "<pre>";
-//print_r($meta);
-//echo "</pre>";
 
 if(!empty($collist1)){
 echo '<div class="row">';
@@ -58,15 +53,7 @@ echo '<div class="row">';
 	}
 
 		foreach($collist1 as $row){
-//echo "<pre>";
-//print_r($row);
-//echo "</pre>";
-//echo $row;
-			$astcvar = 'Col'.$row.'_cat';
-			echo $astcvar;
-			$$astc = $astcvar;
-			echo 'sdfsdf';
-			echo $astc;
+			
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
 			$Col_rotate = get_post_meta($post_id, '_Col'.$row.'_rotate', true);
@@ -76,49 +63,44 @@ echo '<div class="row">';
 			$Col_adspot = get_post_meta($post_id, '_Col'.$row.'_adspot', true);
 			$Col_title = get_post_meta($post_id, '_Col'.$row.'_title', true);
 			$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
-echo '<!-- '.
-' astc:'.$astc.
-' Col_style:'.$Col_style.
-' Col_showthumb:'.$Col_showthumb.
-' Col_rotate:'.$Col_rotate.
-' Col_cat:'.$Col_cat.
-' Col_qty:'.$Col_qty.
-' Col_htmlbody:'.$Col_htmlbody.
-' Col_adspot:'.$Col_adspot.
-' Col_title:'.$Col_title.
-' Col_offset:'.$Col_offset.
-' -->';
+			$astc = $Col_cat;
 
 			if ($Col_style == 'lead'){
+				echo '<!-- lead -->';
 				box_lead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 			} else if ($Col_style == 'mlead'){ 
 				box_multilead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
+				echo '<!-- mlead -->';
 			}/* else if($Col_style == 'rota') {
 				box_rota($Col_qty,$Col_offset, $astf, $astc, $Col_cat);
 			} else if($Col_style == 'rotp') {
 				box_rotp($Col_qty,$Col_offset, $astf, $astc, $Col_cat);						
-			}*/ else if($Col_style == 'art' || 'art2' || 'art3' || 'rota' || 'rotp' ) {
+			}*/ else if($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) {
+				echo '<!-- art -->';
 				box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 			} /*else if($Col_style == 'art2') {
 				box_art_2($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
 			} else if($Col_style == 'art3') {
 				box_art_3($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 			} */ else if($Col_style == 'cont') {
+				echo '<!-- content -->';
 				if (have_posts()) : while (have_posts()) : the_post();
 					echo '<div class="extracontent">';
 					the_content();
 					echo '</div>';
 				endwhile; else : endif;
 			} else if($Col_style == 'html') {
+				echo '<!-- html -->';
 				echo $Col_htmlbody;
 //				echo apply_filters('the_content', $Col_htmlbody);
 			} else if($Col_style == 'ads') {
+				echo '<!-- ad -->';
 				box_ad($Col_adspot);
 			}
 		
 		}
 
-	echo '</div>'; //close col 1
+	echo '</div><!-- end -->'; //close col 1
 } //col 1
 
 if(!empty($collist2)){
