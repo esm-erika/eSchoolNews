@@ -62,10 +62,12 @@ $webinars = new WP_Query(array(
 							</div>
 							<header class="small-12 medium-8 columns">
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+																<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
+
 								
 								</header>
 
-								<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
 
 							</article>
 
@@ -114,6 +116,7 @@ $webinars = new WP_Query(array(
 
 
 								
+																		<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
 
 								</header>
 							</article>
