@@ -41,12 +41,7 @@ if($Col2b_enabled == '1'){  $collist = array_push($collist2,'2b'); }
 if($Col2c_enabled == '1'){  $collist = array_push($collist2,'2c'); }
 if($Col2d_enabled == '1'){  $collist = array_push($collist2,'2d'); }
 
-//check for col 1 and 2 then set widths
 
-//$meta = get_post_meta($post_id);
-//echo "<pre>";
-//print_r($meta);
-//echo "</pre>";
 
 if(!empty($collist1)){
 echo '<div class="row">';
@@ -58,12 +53,6 @@ echo '<div class="row">';
 	}
 
 		foreach($collist1 as $row){
-//echo "<pre>";
-//print_r($row);
-//echo "</pre>";
-//echo $row;
-
-
 			
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
@@ -75,18 +64,6 @@ echo '<div class="row">';
 			$Col_title = get_post_meta($post_id, '_Col'.$row.'_title', true);
 			$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
 			$astc = $Col_cat;
-echo '<!-- '.
-' astc:'.$astc.
-' Col_style:'.$Col_style.
-' Col_showthumb:'.$Col_showthumb.
-' Col_rotate:'.$Col_rotate.
-' Col_cat:'.$Col_cat.
-' Col_qty:'.$Col_qty.
-' Col_htmlbody:'.$Col_htmlbody.
-' Col_adspot:'.$Col_adspot.
-' Col_title:'.$Col_title.
-' Col_offset:'.$Col_offset.
-' -->';
 
 			if ($Col_style == 'lead'){
 				echo '<!-- lead -->';
