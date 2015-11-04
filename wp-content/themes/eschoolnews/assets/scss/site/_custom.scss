@@ -29,6 +29,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	text-decoration: underline;
 }
 
+small {
+	font-size: 70%;
+}
+
 .section-title {
 	font-family: 'Forum', cursive;
 	//font-size: 55px;
@@ -77,8 +81,6 @@ span.flag a {
 	border-color: #ccc;
 	color: #369;
 }
-
-
 
 span.tag a, .related-tags a {
 	padding: 4px 5px;
