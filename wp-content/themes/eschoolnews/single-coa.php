@@ -45,12 +45,19 @@ if($Col2b_enabled == '1'){  $collist = array_push($collist2,'2b'); }
 if($Col2c_enabled == '1'){  $collist = array_push($collist2,'2c'); }
 if($Col2d_enabled == '1'){  $collist = array_push($collist2,'2d'); }
 
+if ( is_singular( array( 'ercs' ) ) ) { 
 
+$iserc = 1;
+
+echo '<div class="row">';
+ get_template_part( 'parts/ads/erctop' ); 
+echo '</div>';
+ }
 
 if(!empty($collist1)){
 echo '<div class="row">';
 
-	if(empty($collist2)){
+	if(empty($collist2) and !$iserc == 1){
 		echo '<div class="small-12 large-12 columns">';		
 	} else{
 		echo '<div class="small-12 large-8 columns">';		
@@ -108,7 +115,7 @@ echo '<div class="row">';
 	echo '</div><!-- end -->'; //close col 1
 } //col 1
 
-if(!empty($collist2)){
+if(!empty($collist2) or $iserc == 1){
 
 	if(empty($collist1)){
 	echo '<div class="row">'; //open the row 
@@ -157,6 +164,11 @@ if(!empty($collist2)){
 }
 if(!empty($collist1)){ echo '</div>'; /* close row */ }
 
+if ( $iserc == 1 ) { 
+echo '<div class="row">';
+ get_template_part( 'parts/ads/ercbottom' ); 
+echo '</div>';
+ }
 
 /*
 ?>
