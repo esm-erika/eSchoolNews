@@ -51,6 +51,10 @@ $iserc = 1;
 
 echo '<div class="row">';
  get_template_part( 'parts/ads/erctop' ); 
+ 
+ echo the_content();
+ 
+ 
 echo '</div>';
  }
 
