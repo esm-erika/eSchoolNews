@@ -25,7 +25,7 @@
 			<article>
 				<header>
 				<?php get_template_part('parts/flags'); ?>
-				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
 					<?php if ($post->post_type == "post") { ?>
 
