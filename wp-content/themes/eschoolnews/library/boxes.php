@@ -190,7 +190,7 @@ function box_art($qty = 4,$theorder = 'date', $showthumb = 1, $thecat = 0, $offs
 $box_art_cat = 0 ? current_catID() : $thecat;
 $aststr = '';
 if($ast > 0){ $aststr = '?ast='.$ast;
- if($astc > 0){ $aststr = $aststr.'&astc='.$astc;}
+ if($thecat > 0){ $aststr = $aststr.'&astc='.$thecat;}
 }
 
 //insert cache query
