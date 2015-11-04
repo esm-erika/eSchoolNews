@@ -258,7 +258,7 @@ while ($query->have_posts()) : $query->the_post();
 		  <?php  } ?>
 	</div>
 </div>										
-
+<hr />
 <?php $count++; endwhile; wp_reset_query(); ?>
 
 </div>
