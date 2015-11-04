@@ -76,7 +76,7 @@ echo '<div class="row">';
 			} else if($Col_style == 'rotp') {
 				box_rotp($Col_qty,$Col_offset, $astf, $astc, $Col_cat);						
 			}*/ else if($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) {
-				echo '<!-- art -->';
+				echo '<!-- art'.$astc.' -->';
 				box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 			} /*else if($Col_style == 'art2') {
 				box_art_2($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
