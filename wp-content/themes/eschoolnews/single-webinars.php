@@ -30,10 +30,14 @@ get_header(); ?>
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
+				<?php if ( has_term( 'upcoming-webinars', 'status-webinars' ) ) { ?>
+
 				<h5><i class="fi-calendar"></i> <?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
 				<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+
+				<?php } ?>
 
 				<?php get_template_part('parts/social'); ?>
 			</header>
@@ -77,13 +81,20 @@ get_header(); ?>
 
 					the_field('event_information');
 
-					if (get_field('registration_link')) {
+					if (has_term( 'archived-webinars', 'status-webinars' )) {
 
-						echo '<a class="button small radius" href="';
+						if (get_field('registration_link')) {
 
-						the_field('registration_link');
+							echo '<a class="button small radius" href="';
 
-						echo '" target="new">Register Now</a>';
+							the_field('registration_link');
+
+							echo '" target="new">Register Now</a>';
+						}
+					} else {
+
+						echo '';
+
 					}
 				
 					echo '</div>';

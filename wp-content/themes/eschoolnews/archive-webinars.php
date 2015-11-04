@@ -65,6 +65,8 @@ $webinars = new WP_Query(array(
 								
 								</header>
 
+								<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
+
 							</article>
 
 

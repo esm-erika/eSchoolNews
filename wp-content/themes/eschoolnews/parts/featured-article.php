@@ -104,7 +104,7 @@
 
 				<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 			
-						<div class="small-12 large-6 columns" role="main">
+						<div class="small-12 medium-6 columns" role="main">
 
 						<?php
 
@@ -116,7 +116,7 @@
 
 						</div>
 
-						<article class="small-12 large-6 columns">		
+						<article class="small-12 medium-6 columns">		
 
 			<header> 
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
