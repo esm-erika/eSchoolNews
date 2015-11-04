@@ -201,7 +201,7 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 // start code to cache
 //    ob_start( );
 ?>			
-<div class="small-8 medium-8 columns" role="main">
+<div class="columns" role="main">
 				<h4><?php if(strlen($theboxtitle) ==  '0'){ echo get_cat_name($box_art_cat); 
 				 } else { echo $theboxtitle; } ?></h4>
 

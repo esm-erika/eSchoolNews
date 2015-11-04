@@ -85,14 +85,15 @@ echo '<div class="row">';
 			} */ else if($Col_style == 'cont') {
 				echo '<!-- content -->';
 				if (have_posts()) : while (have_posts()) : the_post();
-					echo '<div class="extracontent">';
+					echo '<div class="columns">';
 					the_content();
 					echo '</div>';
 				endwhile; else : endif;
 			} else if($Col_style == 'html') {
 				echo '<!-- html -->';
-				echo $Col_htmlbody;
-//				echo apply_filters('the_content', $Col_htmlbody);
+				echo '<div class="columns">';
+				echo apply_filters('the_content', $Col_htmlbody);
+				echo '</div>';
 			} else if($Col_style == 'ads') {
 				echo '<!-- ad -->';
 				box_ad($Col_adspot);
