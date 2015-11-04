@@ -6,7 +6,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+$whitepapersection = 0;
 ?>
 
 <?php // The Query
@@ -33,6 +33,7 @@
 
 
 				<?php if ( $whitepapers->have_posts() ) : ?> 
+                <?php $whitepapersection = 1; ?>
 
 <div class="row">
 <hr/>
@@ -84,9 +85,6 @@
 					</li>
 
 					<?php endwhile; wp_reset_query(); ?>
-
-					
-
 
 		</ul>
 

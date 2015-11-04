@@ -6,7 +6,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+$resourcessection = 0;
 ?>
 
 <?php // The Query
@@ -33,6 +33,7 @@
 
 
 				<?php if ( $resources->have_posts() ) : ?> 
+                <?php $resourcessection = 1; ?>
 
 <div class="row">
 

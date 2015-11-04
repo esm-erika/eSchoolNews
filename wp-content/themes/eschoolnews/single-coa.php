@@ -58,6 +58,7 @@ echo '<div class="row">';
 	}
 
 		foreach($collist1 as $row){
+
 			$astc = ${'Col'.$row.'_cat'};
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
@@ -80,6 +81,7 @@ echo '<!-- '.
 ' Col_title:'.$Col_title.
 ' Col_offset:'.$Col_offset.
 ' -->';
+
 			if ($Col_style == 'lead'){
 				box_lead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 			} else if ($Col_style == 'mlead'){ 
@@ -101,7 +103,8 @@ echo '<!-- '.
 					echo '</div>';
 				endwhile; else : endif;
 			} else if($Col_style == 'html') {
-				echo apply_filters('the_content', $Col_htmlbody);
+				echo $Col_htmlbody;
+//				echo apply_filters('the_content', $Col_htmlbody);
 			} else if($Col_style == 'ads') {
 				box_ad($Col_adspot);
 			}

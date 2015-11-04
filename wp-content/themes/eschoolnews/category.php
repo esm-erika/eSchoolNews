@@ -44,8 +44,9 @@ get_header(); ?>
 		<?php get_template_part('parts/resources-section'); ?>	
 
 		<?php get_template_part('parts/whitepaper-section'); ?>	
-
-
+		
+		<?php if($resourcessection == 0 and $whitepapersection == 0){ echo '<!-- display other content  -->'; 
+		/* get_template_part('parts/????'); */ }?>
 
 	</div>
 
