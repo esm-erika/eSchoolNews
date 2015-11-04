@@ -728,9 +728,9 @@ article {
 
 .ad-container {
 	text-align: center;
-	//background-color: #333;
-	//padding: 20px 0;
 	margin: 20px 0;
+	padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
 }
 
 
@@ -777,6 +777,13 @@ footer.container > div {
 
 	.ad-container {
 		margin-top: 0px;
+		padding-left: 0;
+		padding-right: 0;
+
+		img {
+			max-width: 100% !important;
+			height: auto !important;
+		}
 	}
 
 	article {
