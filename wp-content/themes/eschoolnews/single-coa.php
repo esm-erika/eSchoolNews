@@ -64,8 +64,9 @@ echo '<div class="row">';
 //echo $row;
 			$astcvar = 'Col'.$row.'_cat';
 			echo $astcvar;
-			$astc = $$astcvar;
-			
+			$$astc = $astcvar;
+			echo 'sdfsdf';
+			echo $astcvar;
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
 			$Col_rotate = get_post_meta($post_id, '_Col'.$row.'_rotate', true);
