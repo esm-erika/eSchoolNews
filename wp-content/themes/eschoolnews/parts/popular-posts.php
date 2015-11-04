@@ -2,9 +2,9 @@
 	<br/>
 
 	<?php $popular = array(
-		// 'post_type' => array(
-		// 	'post', 'ercs', 'webinars', 'whitepapers'
-		// ),
+		'post_type' => array(
+			'post', 'ercs', 'webinars', 'whitepapers'
+		),
 		'posts_per_page' => 10,
 		'meta_key' => 'post_views_count',
 		'orderby' => 'meta_value_num',
