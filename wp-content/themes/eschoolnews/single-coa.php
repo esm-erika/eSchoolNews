@@ -63,7 +63,8 @@ echo '<div class="row">';
 //echo "</pre>";
 //echo $row;
 			$astcvar = 'Col'.$row.'_cat';
-			$astc = ${$astcvar};
+			echo $astcvar;
+			$astc = $$astcvar;
 			
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
