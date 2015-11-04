@@ -29,6 +29,7 @@ get_header(); ?>
 <div class="row">
 
 	<?php get_template_part( 'parts/top-stories' ); ?>
+
 </div>
 
 
@@ -38,11 +39,12 @@ get_header(); ?>
 
 	<hr class="thick"/>
 
-	<div class="small-12 large-8 columns">
+	<div class="small-12 medium-8 columns">
 
 		<?php get_template_part('parts/resources-section'); ?>	
 
 		<?php get_template_part('parts/whitepaper-section'); ?>	
+
 
 
 	</div>
