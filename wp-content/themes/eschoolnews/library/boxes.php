@@ -219,12 +219,12 @@ $query = new WP_Query( $args );
 while ($query->have_posts()) : $query->the_post();
 
 ?>
-
+<div class="row" >
 <?php if($showthumb == 1 and has_post_thumbnail()){ ?>
 <div class="small-4 medium-4 large-4 columns">
 <?php
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
 ?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -256,9 +256,9 @@ while ($query->have_posts()) : $query->the_post();
 			
 			<?php } ?>
 		  <?php  } ?>
-
+	</div>
 </div>										
-
+<hr />
 <?php $count++; endwhile; wp_reset_query(); ?>
 
 </div>
