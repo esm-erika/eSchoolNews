@@ -201,68 +201,71 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 			if (false === ($local_box_cache) ){
 // start code to cache
     ob_start( );
-?>			<span class="catname">
+?>			
+<div class="small-8 medium-8 columns">
 				<?php if(strlen($theboxtitle) ==  '0'){ ?>
 					<a href="<?php echo get_category_link($box_art_cat);?>"><?php echo get_cat_name($box_art_cat); ?></a>
 				<?php } else { echo '<a href="'. get_category_link($box_art_cat);echo $aststr.'">'.$theboxtitle.'</a>'; } ?>								
-			</span>				
-								<?php
-								$count = 1;
-								$args = array(
-								  'post__not_in'=>$do_not_duplicate,
-								  'offset'=> $offset,
-								  'posts_per_page' => $qty,
-								  'orderby'=> $theorder,
-								  'cat' => $box_art_cat
-								);
+
+
+<?php
+$count = 1;
+$args = array(
+'post__not_in'=>$do_not_duplicate,
+'offset'=> $offset,
+'posts_per_page' => $qty,
+'orderby'=> $theorder,
+'cat' => $box_art_cat
+);
 $query = new WP_Query( $args );
 while ($query->have_posts()) : $query->the_post();
 
 ?>
-								
-									<div class="featuredpost<?php // if($count == $qty) { echo ' lastpost'; } ?>">
-									<?php if($showthumb == 1){ 
 
+<?php if($showthumb == 1 and has_post_thumbnail()){ ?>
+<div class="small-4 medium-3 large-2 columns">
+<?php
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-						?>
+?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-
-									<?php } ?>	
-									<?php if ( in_category( array( 10650,10651,10652,144,11112 ) )) {	
-if ( in_category( 144 )) { echo '<span style="color:red; font-weight:bold;"><em>Digital Issue Article</em></span>'; }											
-if ( in_category( 10650 )) { echo '<span style="color:#039; font-weight:bold;"><em>News</em></span>'; }											
-if ( in_category( 10651 )) { echo '<span style="color:#039; font-weight:bold;"><em>Opinion</em></span>'; }											
-if ( in_category( 10652 )) { echo '<span style="color:#039; font-weight:bold;"><em>How-to</em></span>'; }
-if ( in_category( 11112 )) { echo '<span style="color:#039; font-weight:bold;"><em>Resource</em></span>'; }											
-											} ?>	
-											<h2 class="posttitle">
-												<a href="<?php the_permalink();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" ><?php the_title(); ?></a>
-											</h2>							
+</div>
+<div class="small-8 medium-9 large-10 columns">	
+<?php } else {
+?>	
+<div class="small-12 medium-12 large-12 columns">	
+<?php } ?>	
+<h5>
+<a href="<?php the_permalink();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" ><?php the_title(); ?></a></h5>
 											
-											<p><?php echo the_excerpt(); ?>&hellip;</p>
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
 											
 											
 
 		   <?php if($count == $qty) { ?>
-  			<div class="morenews"><strong><?php if(strlen($theboxtitle) ==  '0'){ ?>
-				<a href="<?php echo get_category_link($box_art_cat);  if ($astused > 1){echo '?ast='.$astused; if($astc > 0){ echo '&astc='.$astc;} } ?>">View all <?php echo get_cat_name($box_art_cat); ?></a>
+			
+			<?php if(strlen($theboxtitle) ==  '0'){ ?>
+				<h6><a href="<?php echo get_category_link($box_art_cat);  if ($astused > 1){echo '?ast='.$astused; if($astc > 0){ echo '&astc='.$astc;} } ?>">View all <?php echo get_cat_name($box_art_cat); ?></a></h6>
+			
 			<?php } else { ?> 
-            <a href="<?php echo get_category_link($box_art_cat);  if ($astused > 1){echo '?ast='.$astused; if($astc > 0){ echo '&astc='.$astc;} } ?>">View all <?php echo $theboxtitle; ?></a>
-			<?php } ?></strong></div>
+            
+            <h6><a href="<?php echo get_category_link($box_art_cat);  if ($astused > 1){echo '?ast='.$astused; if($astc > 0){ echo '&astc='.$astc;} } ?>">View all <?php echo $theboxtitle; ?></a></h6>
+			
+			<?php } ?>
 		  <?php  } ?>
 
-										
-									</div><!-- .featuredpost -->
-								<?php $count++; endwhile; wp_reset_query(); ?>
+</div>										
+
+<?php $count++; endwhile; wp_reset_query(); ?>
+
+</div>
 
 <?php
-
-echo '<div class="clear"></div>';	
-	
-	
-	
 	
     $local_box_cache = ob_get_clean( );
 echo $local_box_cache;
