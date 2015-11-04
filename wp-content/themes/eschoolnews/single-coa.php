@@ -52,9 +52,11 @@ $iserc = 1;
 echo '<div class="row">';
  get_template_part( 'parts/ads/erctop' ); 
  
- $content = apply_filters( 'the_content', get_the_content($post_id) );
- $content = str_replace( ']]>', ']]&gt;', $content );
- echo $content;
+	$content_post = get_post($post_id);
+	$content = $content_post->post_content;
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	echo $content;
  
  
 echo '</div>';
