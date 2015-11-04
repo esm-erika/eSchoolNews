@@ -62,11 +62,9 @@ echo '<div class="row">';
 //print_r($row);
 //echo "</pre>";
 //echo $row;
-			$astcvar = 'Col'.$row.'_cat';
-			echo $astcvar;
-			$$astc = $astcvar;
-			echo 'sdfsdf';
-			echo $astc;
+
+
+			
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
 			$Col_rotate = get_post_meta($post_id, '_Col'.$row.'_rotate', true);
@@ -76,6 +74,7 @@ echo '<div class="row">';
 			$Col_adspot = get_post_meta($post_id, '_Col'.$row.'_adspot', true);
 			$Col_title = get_post_meta($post_id, '_Col'.$row.'_title', true);
 			$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
+			$astc = $Col_cat;
 echo '<!-- '.
 ' astc:'.$astc.
 ' Col_style:'.$Col_style.
