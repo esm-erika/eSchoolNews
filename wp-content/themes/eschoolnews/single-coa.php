@@ -68,7 +68,18 @@ echo '<div class="row">';
 			$Col_adspot = get_post_meta($post_id, '_Col'.$row.'_adspot', true);
 			$Col_title = get_post_meta($post_id, '_Col'.$row.'_title', true);
 			$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
-		
+echo '<!-- '.
+' astc:'.$astc.
+' Col_style:'.$Col_style.
+' Col_showthumb:'.$Col_showthumb.
+' Col_rotate:'.$Col_rotate.
+' Col_cat:'.$Col_cat.
+' Col_qty:'.$Col_qty.
+' Col_htmlbody:'.$Col_htmlbody.
+' Col_adspot:'.$Col_adspot.
+' Col_title:'.$Col_title.
+' Col_offset:'.$Col_offset.
+' -->';
 			if ($Col_style == 'lead'){
 				box_lead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 			} else if ($Col_style == 'mlead'){ 
