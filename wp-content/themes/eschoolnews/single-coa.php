@@ -143,7 +143,7 @@ if(!empty($collist2) or $iserc == 1){
 		echo '<div class="small-12 large-4 columns">';		
 	}
 
-if( ($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) and ($iserc == 1)){  ?>
+if($iserc == 1){  ?>
 <article>
 <section>
 <h4>Table of Contents</h4>	
