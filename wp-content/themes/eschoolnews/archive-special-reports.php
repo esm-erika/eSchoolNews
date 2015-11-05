@@ -117,24 +117,23 @@ get_header(); ?>
 						} ?>
 				</div>
 				<div class="small-6 medium-8 columns">
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p><?php the_date(); ?></p>
-					<p class="excerpt">
+					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<p class="small-caps"><?php the_date(); ?></p>
+					<!-- <p class="excerpt"> -->
 						<?php 
-					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 100, $more = '' ), true); 
+					//echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 100, $more = '' ), true); 
 					?>
-					</p>
+					<!-- </p> -->
 
-					<ul class="stack-for-small radius secondary button-group">
-							<?php 
+					<?php 
 
 							$file = get_field('download_files');
 
 							if( $file ): ?>
-						  <li><a href="<?php echo $file['url']; ?>" class="button tiny">Download</a></li>
+						  <a href="<?php echo $file['url']; ?>" class="button radius tiny">Download Report</a>
 						  <?php endif; ?>
-						  <li><a href="<?php the_permalink(); ?>" class="button tiny">Read More</a></li>
-						</ul>
+
+						  <a href="<?php the_permalink(); ?>" class="button tiny readmore">Read More</a>
 
 				</div>
 				
