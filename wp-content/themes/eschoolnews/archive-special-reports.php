@@ -92,7 +92,7 @@ get_header(); ?>
 			<br/>
 
 
-
+		<ul class="medium-block-grid-2">
 
 			<?php
 
@@ -109,7 +109,7 @@ get_header(); ?>
 				<?php // The Loop
 				 while ( $query2->have_posts() ) :
 					$query2->the_post(); ?>
-
+<li>
 			<div class="row">
 				<div class="small-6 medium-4 columns">
 					<?php if ( has_post_thumbnail() ) {
@@ -139,14 +139,15 @@ get_header(); ?>
 				</div>
 				
 			</div>
+		</li>
 
-			<hr/>
+			
 
 			<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
 
-
+</ul>
 	</div>
 	
 </div>
