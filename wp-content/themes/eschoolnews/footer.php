@@ -11,6 +11,10 @@
 
 ?>
 
+<div class="ad-container">
+	<!-- Add Anchor Ad -->
+</div>
+
 </section>
 
 <section id="publications">
