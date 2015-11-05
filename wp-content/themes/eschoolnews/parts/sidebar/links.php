@@ -1,3 +1,6 @@
+<article>
+    <h4>Sponsored Links</h4>
+    <br/>
 <?php $args = array(
     'orderby'          => 'rand',
     'order'            => 'ASC',
@@ -21,3 +24,5 @@
 <ul>
     <?php wp_list_bookmarks( $args ); ?> 
 </ul>
+
+</article>
