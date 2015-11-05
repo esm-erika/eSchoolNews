@@ -120,6 +120,7 @@ echo '<div class="row">';
 				echo '<div class="columns">';
 				echo apply_filters('the_content', $Col_htmlbody);
 				echo '</div>';
+				echo '<!-- end html -->';				
 			} else if($Col_style == 'ads') {
 				echo '<!-- ad -->';
 				box_ad($Col_adspot);
