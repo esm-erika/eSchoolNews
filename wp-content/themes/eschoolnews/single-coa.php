@@ -117,7 +117,7 @@ echo '<div class="row">';
 				echo '<!-- ad -->';
 				box_ad($Col_adspot);
 			}
-if($iserc == 1){ 
+if( ($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) and ($iserc == 1)){ 
 
 if(strlen($Col_title) > 0){ echo '<p style="font-weight:bold"><a href="'.$row.'">'.$Col_title.'</a></p>'; } else { echo '<p style="font-weight:bold"><a href="'.$row.'">'.get_cat_name($Col_cat).'</a></p>'; }
 		$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col_cat);
