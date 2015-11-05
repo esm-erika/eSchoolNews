@@ -116,7 +116,8 @@ get_header(); ?>
 							the_post_thumbnail('full');
 						} ?>
 				</div>
-				<div class="small-6 medium-8 columns">
+				<article class="small-6 medium-8 columns">
+
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 						<p class="small-caps"><?php the_time('F j, Y'); ?></p>
 				
@@ -130,7 +131,7 @@ get_header(); ?>
 
 						  <a href="<?php the_permalink(); ?>" class="button tiny readmore">Read More</a>
 
-				</div>
+				</article>
 				
 			</div>
 		</li>
