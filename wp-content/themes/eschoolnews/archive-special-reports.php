@@ -54,7 +54,7 @@ get_header(); ?>
 						</div>
 						<div class="large-8 columns">
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<p class="small-caps"><?php the_date(); ?></p>
+						<p class="small-caps"><?php the_time('F j, Y'); ?></p>
 
 							<?php 
 
@@ -118,7 +118,7 @@ get_header(); ?>
 				</div>
 				<div class="small-6 medium-8 columns">
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					<p class="small-caps"><?php the_date(); ?></p>
+					<p class="small-caps"><?php the_time('F j, Y'); ?></p>
 					<!-- <p class="excerpt"> -->
 						<?php 
 					//echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 100, $more = '' ), true); 
