@@ -30,7 +30,7 @@
 	} ?>
 
 	<?php 
-	if( is_post_type_archive('webinars') || is_search()) { 
+	if( is_post_type_archive('webinars') || is_search() || is_post_type_archive( 'special-reports')) { 
 		get_template_part( 'parts/sidebar/resources' );
 	} ?>
 
