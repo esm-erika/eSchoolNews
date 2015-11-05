@@ -93,21 +93,13 @@ echo '<div class="row">';
 				$maketoc = 1;
 				box_multilead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 				echo '<!-- mlead -->';
-			}/* else if($Col_style == 'rota') {
-				box_rota($Col_qty,$Col_offset, $astf, $astc, $Col_cat);
-			} else if($Col_style == 'rotp') {
-				box_rotp($Col_qty,$Col_offset, $astf, $astc, $Col_cat);						
-			}*/ else if($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) {
+			} else if($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) {
 				echo '<!-- art -->';
 				$maketoc = 1;
 				box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 				
 				echo '<!-- end art -->';
-			} /*else if($Col_style == 'art2') {
-				box_art_2($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
-			} else if($Col_style == 'art3') {
-				box_art_3($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
-			} */ else if($Col_style == 'cont') {
+			} else if($Col_style == 'cont') {
 				echo '<!-- content -->';
 				if (have_posts()) : while (have_posts()) : the_post();
 					echo '<div class="columns">';
@@ -125,30 +117,31 @@ echo '<div class="row">';
 				echo '<!-- ad -->';
 				box_ad($Col_adspot);
 			}
+					
+					
+			if($maketoc == 1){
+			$toc = '';
+			if(strlen($Col_title) > 0){ 
+			$toc = $toc . '<p style="font-weight:bold"><a href="#'.$row.'">'.$Col_title.'</a></p>'; 
+			} else { 
+			$toc = $toc . '<p style="font-weight:bold"><a href="#'.$row.'">'.get_cat_name($Col_cat).'</a></p>'; }
 			
+			$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col_cat);
+			while ($query5->have_posts()) : $query5->the_post(); 
+			$toc = $toc . '<ul><li><a href="'. get_permalink(). '?ast='.$astused.'&astc='.$Col_cat.'" rel="bookmark">'. get_the_title() .'</a></li></ul>';
 			
-if($maketoc == 1){
-$toc = '';
-if(strlen($Col_title) > 0){ 
-$toc = $toc . '<p style="font-weight:bold"><a href="#'.$row.'">'.$Col_title.'</a></p>'; 
-} else { 
-$toc = $toc . '<p style="font-weight:bold"><a href="#'.$row.'">'.get_cat_name($Col_cat).'</a></p>'; }
+			 $e++; endwhile; wp_reset_query(); 
+			} elseif($maketoc == 2){
+			
+				
+			}
 
-$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col_cat);
-while ($query5->have_posts()) : $query5->the_post(); 
-$toc = $toc . '<ul><li><a href="'. get_permalink(). '?ast='.$astused.'&astc='.$Col_cat.'" rel="bookmark">'. get_the_title() .'</a></li></ul>';
 
- $e++; endwhile; wp_reset_query(); 
-} elseif($maketoc == 2){
 
-	
+
+	} //col 1 foreach
+echo '</div><!-- end -->'; //close col 1
 }
-
-
-
-	echo '</div><!-- end -->'; //close col 1
-} //col 1
-
 if(!empty($collist2) or $iserc == 1){
 
 	if(empty($collist1)){
@@ -158,19 +151,21 @@ if(!empty($collist2) or $iserc == 1){
 		echo '<div class="small-12 large-4 columns">';		
 	}
 
- ?>
-<article>
-<section>
-<h4>Table of Contents</h4>	
-   
-<?php echo $toc; ?>
-
-
-</div>
-</section>
-</article>
-
-<?	
+	if($iserc == 1){
+	?>
+	
+	<article>
+	<section>
+	<h4>Table of Contents</h4>	
+	   
+	<?php echo $toc; ?>
+	
+	
+	</div>
+	</section>
+	</article>
+	
+	<?	
 	}
 
 	foreach($collist2 as $row){

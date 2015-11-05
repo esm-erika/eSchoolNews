@@ -31,6 +31,9 @@ class Custom_Admin {
     {
         remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
         remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
+        remove_submenu_page( 'customize.php', 'customize.php' ); // hide the customize submenu	
+		remove_submenu_page( 'nav-menus.php', 'nav-menus.php' ); // hide the submenu		
+		remove_submenu_page( 'widgets.php', 'widgets.php' ); // hide the submenu	
 
         // Appearance Menu
         global $menu;
