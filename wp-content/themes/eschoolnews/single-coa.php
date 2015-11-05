@@ -101,6 +101,8 @@ echo '<div class="row">';
 				echo '<!-- art -->';
 				$maketoc = 1;
 				box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
+				
+				echo '<!-- end art -->';
 			} /*else if($Col_style == 'art2') {
 				box_art_2($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
 			} else if($Col_style == 'art3') {
