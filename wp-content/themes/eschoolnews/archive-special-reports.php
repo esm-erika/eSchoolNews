@@ -24,9 +24,8 @@ get_header(); ?>
 
 
 <!-- Row for main content area -->
-	<div class="small-12 medium-12 columns" role="main">
+	<div class="small-12 medium-8 columns" role="main">
 
-		<ul class="medium-block-grid-2" data-equalizer>
 		    <?php
 
 				// The Query
@@ -43,7 +42,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<li>
+				
 					<article class="row">
 						<div class="large-4 columns">
 						<?php 
@@ -70,13 +69,21 @@ get_header(); ?>
 					</div>
 
 						</article>
+						<hr/>
 						  
-				</li>
+				
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
 			</ul>
+
+		</div>
+		<?php get_sidebar(); ?>
+	</div>
+
+	<div class="row">
+		<div class="small-12 medium-12">
 
 			<hr class="thick"/>
 
@@ -141,6 +148,6 @@ get_header(); ?>
 
 
 	</div>
-	<?php //get_sidebar(); ?>
+	
 </div>
 <?php get_footer(); ?>

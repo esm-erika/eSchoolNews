@@ -29,6 +29,10 @@ function foundationpress_theme_support() {
 
 	// Declare WooCommerce support per http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
 	add_theme_support( 'woocommerce' );
+
+	// Links Manager
+	add_filter('pre_option_link_manager_enabled', '__return_true');
+
 }
 
 add_action( 'after_setup_theme', 'foundationpress_theme_support' );

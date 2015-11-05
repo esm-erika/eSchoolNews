@@ -79,6 +79,11 @@ include('single-coa.php');
 
 							<ul class="icons right">
 								<?php 
+									$email = get_the_author_meta( 'user_email' );
+									if ( $email && $email != '' ) {
+										echo '<li class="email left"><a href="mailto:' . esc_url($email) . '"><i class="fi-mail"></i></a></li>';
+									}
+
 									$rss_url = get_the_author_meta( 'rss_url' );
 									if ( $rss_url && $rss_url != '' ) {
 										echo '<li class="rss left"><a href="' . esc_url($rss_url) . '"><i class="fi-rss"></i></a></li>';
