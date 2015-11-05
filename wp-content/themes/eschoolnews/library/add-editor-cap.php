@@ -29,19 +29,18 @@ class Custom_Admin {
 
     public function modify_menus() 
     {
-        remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
-        remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
-        remove_submenu_page( 'customize.php', 'customize.php' ); // hide the customize submenu	
-		remove_submenu_page( 'nav-menus.php', 'nav-menus.php' ); // hide the submenu		
-		remove_submenu_page( 'widgets.php', 'widgets.php' ); // hide the submenu	
+
+        remove_menu_page( 'themes.php' );
+        //remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
+        //remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
 
         // Appearance Menu
-        global $menu;
-        global $submenu;
-        if (isset($menu[60][0])) {
-            $menu[60][0] = "Menus"; // Rename Appearance to Menus
-        }
-        unset($submenu['themes.php'][6]); // Customize
+        //global $menu;
+        //global $submenu;
+        //if (isset($menu[60][0])) {
+          //  $menu[60][0] = "Menus"; // Rename Appearance to Menus
+        //}
+        //unset($submenu['themes.php'][6]); // Customize
     }
 
     // Remove 'Administrator' from the list of roles if the current user is not an admin
