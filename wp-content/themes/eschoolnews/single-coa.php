@@ -84,7 +84,7 @@ echo '<div class="row">';
 			$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
 			$astc = $Col_cat;
 			$maketoc = 0;
-			
+			echo '<!-- '.$astc.' ~ '.$Col_cat.' -->';
 			if ($Col_style == 'lead'){
 				echo '<!-- lead -->';
 				$maketoc = 1;
