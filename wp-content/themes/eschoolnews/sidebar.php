@@ -77,6 +77,11 @@
 			}
 	 ?>
 	 <?php get_template_part( 'parts/ads/embeddedbanner-2' ); ?>
+
+	 <?php if ( is_home() || is_front_page() ) {
+	 	get_template_part( 'parts/sidebar/links' );
+
+	 } ?>
 	
 
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
