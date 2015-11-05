@@ -117,14 +117,14 @@ echo '<div class="row">';
 				echo '<!-- ad -->';
 				box_ad($Col_adspot);
 			}
-if( ($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) and ($iserc == 1)){ 
 
+/*
 if(strlen($Col_title) > 0){ echo '<p style="font-weight:bold"><a href="'.$row.'">'.$Col_title.'</a></p>'; } else { echo '<p style="font-weight:bold"><a href="'.$row.'">'.get_cat_name($Col_cat).'</a></p>'; }
 		$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col_cat);
 		while ($query5->have_posts()) : $query5->the_post(); ?>
 			<ul><li><a href="<?php the_permalink() ?><?php echo '?ast='.$astused.'&astc='.$Col_cat; ?>" rel="bookmark"><?php the_title(); ?></a></li></ul>
-		<?php $e++; endwhile; wp_reset_query();
-		}
+		<?php $e++; endwhile; wp_reset_query(); */
+		
 
 
 
@@ -143,7 +143,7 @@ if(!empty($collist2) or $iserc == 1){
 		echo '<div class="small-12 large-4 columns">';		
 	}
 
-if($iserc == 1){ ?>
+if( ($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) and ($iserc == 1)){  ?>
 <article>
 <section>
 <h4>Table of Contents</h4>	
