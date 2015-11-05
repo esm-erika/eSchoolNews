@@ -14,6 +14,15 @@
 
 	<?php get_template_part( 'parts/ads/embeddedbanner' );?>
 
+	<?php if($astc){
+		get_template_part( 'parts/sidebar/astc' );
+	} ?>
+
+	<?php if(is_page('Resources')){
+		get_template_part( 'parts/sidebar/topics' );
+		//get_template_part( 'parts/ads/embeddedbanner-2' );
+	} ?>
+
 	<?php if(is_page('Resources')){
 		get_template_part( 'parts/sidebar/topics' );
 		//get_template_part( 'parts/ads/embeddedbanner-2' );

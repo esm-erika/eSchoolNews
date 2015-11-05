@@ -10,9 +10,11 @@
  */
 
 ?>
-
 <div class="ad-container">
-	<!-- Add Anchor Ad -->
+	<?php get_template_part( 'parts/ads/ercbottom' ); ?>
+</div>
+<div class="ad-container">
+	<?php get_template_part( 'parts/ads/anchorboard' ); ?>
 </div>
 
 </section>

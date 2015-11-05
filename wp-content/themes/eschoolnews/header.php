@@ -177,5 +177,7 @@ if($astused > 1){
    <?php do_action( 'foundationpress_after_header' ); ?>
 
 
-	<?php get_template_part( 'parts/ads/billboard' ); ?>  
+	<?php get_template_part( 'parts/ads/billboard' ); ?>
+	<?php get_template_part( 'parts/ads/erctop' ); ?>    
+      
 

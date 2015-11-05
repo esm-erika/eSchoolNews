@@ -190,7 +190,7 @@ function box_art($qty = 4,$theorder = 'date', $showthumb = 1, $thecat = 0, $offs
 $box_art_cat = 0 ? current_catID() : $thecat;
 $aststr = '';
 if($ast > 0){ $aststr = '?ast='.$ast;
- if($thecat > 0){ $aststr = $aststr.'&astc='.$thecat;}
+ if($astc > 0){ $aststr = $aststr.'&astc='.$astc;}
 }
 
 //insert cache query
@@ -235,7 +235,7 @@ while ($query->have_posts()) : $query->the_post();
 <div class="small-12 medium-12 large-12 columns">	
 <?php } ?>	
 <h5>
-<a href="<?php the_permalink();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" ><?php the_title(); echo $aststr; ?></a></h5>
+<a href="<?php the_permalink();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" ><?php the_title(); ?></a></h5>
 											
                     	<p class="excerpt">
 							<?php 
