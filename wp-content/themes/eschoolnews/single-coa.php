@@ -11,6 +11,7 @@ require_once( 'library/boxes.php' );
 <?php //set variables for testing and to allow flexibility later on...
 
 $post_id = $post->ID;
+$astused = get_post_meta($post_id, '_wp_esmad_template', true);
 
 echo '<h1 class="section-title"><span>';
 echo the_title();
@@ -73,6 +74,7 @@ echo '<div class="row">';
 
 		foreach($collist1 as $row){
 			$astf = $astused;
+			if($astf == ""){ $Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true); }
 			$Col_style = get_post_meta($post_id, '_Col'.$row.'_style', true);
 			$Col_showthumb = get_post_meta($post_id, '_Col'.$row.'_showthumb', true);
 			$Col_rotate = get_post_meta($post_id, '_Col'.$row.'_rotate', true);
