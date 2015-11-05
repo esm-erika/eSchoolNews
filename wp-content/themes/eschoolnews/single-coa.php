@@ -48,7 +48,7 @@ if($Col2d_enabled == '1'){  $collist = array_push($collist2,'2d'); }
 if ( is_singular( array( 'ercs' ) ) ) { 
 
 $iserc = 1;
-
+$toc = '';
 echo '<div class="row">';
  get_template_part( 'parts/ads/erctop' ); 
  
@@ -83,11 +83,14 @@ echo '<div class="row">';
 			$Col_title = get_post_meta($post_id, '_Col'.$row.'_title', true);
 			$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
 			$astc = $Col_cat;
-
+			$maketoc = 0;
+			
 			if ($Col_style == 'lead'){
 				echo '<!-- lead -->';
+				$maketoc = 1;
 				box_lead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 			} else if ($Col_style == 'mlead'){ 
+				$maketoc = 1;
 				box_multilead($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_title,$Col_offset, $astf, $astc);
 				echo '<!-- mlead -->';
 			}/* else if($Col_style == 'rota') {
@@ -96,6 +99,7 @@ echo '<div class="row">';
 				box_rotp($Col_qty,$Col_offset, $astf, $astc, $Col_cat);						
 			}*/ else if($Col_style == 'art' || $Col_style == 'art2' || $Col_style == 'art3' || $Col_style == 'rota' || $Col_style == 'rotp' ) {
 				echo '<!-- art -->';
+				$maketoc = 1;
 				box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 			} /*else if($Col_style == 'art2') {
 				box_art_2($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
@@ -109,6 +113,7 @@ echo '<div class="row">';
 					echo '</div>';
 				endwhile; else : endif;
 			} else if($Col_style == 'html') {
+				$maketoc = 2;
 				echo '<!-- html -->';
 				echo '<div class="columns">';
 				echo apply_filters('the_content', $Col_htmlbody);
@@ -117,19 +122,26 @@ echo '<div class="row">';
 				echo '<!-- ad -->';
 				box_ad($Col_adspot);
 			}
+			
+			
+if($maketoc == 1){
+$toc = '';
+if(strlen($Col_title) > 0){ 
+$toc = $toc . '<p style="font-weight:bold"><a href="'.$row.'">'.$Col_title.'</a></p>'; 
+} else { 
+$toc = $toc . '<p style="font-weight:bold"><a href="'.$row.'">'.get_cat_name($Col_cat).'</a></p>'; }
 
-/*
-if(strlen($Col_title) > 0){ echo '<p style="font-weight:bold"><a href="'.$row.'">'.$Col_title.'</a></p>'; } else { echo '<p style="font-weight:bold"><a href="'.$row.'">'.get_cat_name($Col_cat).'</a></p>'; }
-		$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col_cat);
-		while ($query5->have_posts()) : $query5->the_post(); ?>
-			<ul><li><a href="<?php the_permalink() ?><?php echo '?ast='.$astused.'&astc='.$Col_cat; ?>" rel="bookmark"><?php the_title(); ?></a></li></ul>
-		<?php $e++; endwhile; wp_reset_query(); */
-		
+$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col_cat);
+while ($query5->have_posts()) : $query5->the_post(); 
+$toc = $toc . '<ul><li><a href="'. the_permalink(). '?ast='.$astused.'&astc='.$Col_cat.'" rel="bookmark">'. the_title() .'</a></li></ul>';
+
+ $e++; endwhile; wp_reset_query(); 
+} elseif($maketoc == 2){
+
+	
+}
 
 
-
-		
-		}
 
 	echo '</div><!-- end -->'; //close col 1
 } //col 1
@@ -143,34 +155,18 @@ if(!empty($collist2) or $iserc == 1){
 		echo '<div class="small-12 large-4 columns">';		
 	}
 
-if($iserc == 1){  ?>
+ ?>
 <article>
 <section>
 <h4>Table of Contents</h4>	
    
-<?php 
-	if($Col1a_style == 'ads'){ //skip 
-	} else if($Col1a_style == 'html'){
-	if(strlen($Col1a_title) > 0){ echo '<p style="font-weight:bold"><a href="'.$row.'">'.$Col1a_title.'</a></p>'; }
-	} else {
-	if(strlen($Col1a_title) > 0){ echo '<p style="font-weight:bold"><a href="'.$row.'">'.$Col1a_title.'</a></p>'; } else { echo '<p style="font-weight:bold"><a href="'.$row.'">'.get_cat_name($Col1a_cat).'</a></p>'; }
-	
-		 
-		$e = 1; $query5 = new WP_Query();$query5->query('cat='.$Col1a_cat);
-		while ($query5->have_posts()) : $query5->the_post(); ?>
-			<ul><li><a href="<?php the_permalink() ?><?php echo '?ast='.$astused.'&astc='.$Col1a_cat; ?>" rel="bookmark"><?php the_title(); ?></a></li></ul>
-		<?php $e++; endwhile; wp_reset_query();
-		
-} ?>
+<?php echo $toc; ?>
 
 
 </div>
-
-
-
-
 </section>
 </article>
+
 <?	
 	}
 
@@ -213,43 +209,11 @@ if($iserc == 1){  ?>
 }
 if(!empty($collist1) or $iserc == 1){ echo '</div>'; /* close row */ }
 
+
 if ( $iserc == 1 ) { 
 echo '<div class="row">';
  get_template_part( 'parts/ads/ercbottom' ); 
 echo '</div>';
+
  }
 
-/*
-?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div>
-			<footer>
-				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
-		</article>
-
-	<?php //end old first column  ?>
-	</div>
-
-
-	
-    <!-- right side  -->
-	<?php //old second column  ?>
-    
-	<?php //end old second column  ?>
-    
-    </div>
-
-</div>
-
-*/ ?>
