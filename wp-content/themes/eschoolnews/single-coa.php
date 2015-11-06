@@ -51,7 +51,7 @@ if ( is_singular( array( 'ercs' ) ) ) {
 $iserc = 1;
 $toc = '';
 echo '<div class="row">';
- get_template_part( 'parts/ads/erctop' ); 
+// get_template_part( 'parts/ads/erctop' ); 
  
 	$content_post = get_post($post_id);
 	$content = $content_post->post_content;
