@@ -24,7 +24,7 @@
 			
 			 $e++; endwhile; wp_reset_query(); 
 
-	if(e ==1){ ?>
+	if($e ==1){ ?>
         </ul>	
 	</section>
 	</article> 
