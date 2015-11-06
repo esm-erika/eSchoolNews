@@ -18,86 +18,75 @@
 
 get_header(); ?>
 
-<div class="row">
+<?php get_template_part( 'parts/section-titles' ); ?>
 
-	<?php get_template_part( 'parts/section-titles' ); ?>
 
-	<!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
-		<h4>Featured ERCs</h4>
-		<br/>
-
-		<?php
-
-				// The Query
-		$args = array(
-			'tax_query' => array(
-				array(
-
-					'taxonomy' => 'status',
-					'field' => 'slug',
-					'terms' => 'active',
-
+	<?php $featured = new WP_Query(array(
+		'post_type' => 'ercs',
+				'meta_query' => array(
+					array(
+						'key' => 'featured_resource',
+						'value' => '1',
+						'compare' => '=='
+						)
 					),
+				'posts_per_page' => 1
+				)); ?>
 
-				),
+				<?php if ( $featured->have_posts() ) : ?>
+				
+				<div class="row">
+				
 
-			'meta_query' => array(
-				array(
-					'key' => 'featured',
-					'value' => '1',
-					'compare' => '=='
-					)
-				)
-			);
+				<div class="small-12 medium-12 columns" role="main">
+					<h4>Featured</h4>
 
-			$query = new WP_Query( $args ); ?>
+							<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 
-
-				<?php // The Loop
-				while ( $query->have_posts() ) :
-					$query->the_post(); ?>
-
-				<div class="panel callout radius">
+							<div>
 
 					<?php 
-						    //$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-					$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-					?>
 
-					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)]">
+					$image = get_field('masthead_image');
 
-					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					if( !empty($image) ): ?>
+
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				<?php endif; ?>
+
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+					<?php if( get_field('masthead_text')): ?>
+		<div>
+			<?php the_field('masthead_text') ?>
+		</div>
+	<?php endif; ?>
+
+	<h6 class="readmore"><a href="<?php the_permalink(); ?>">Read More &raquo;</a></h6>
 
 				</div>
 
+							<?php endwhile; ?>
+
+		<?php wp_reset_query(); ?>
+		<hr class="thick"/>
+</div>
+</div>
+
+<?php endif;?>
 
 
 
-				
 
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
 
-			<?php
-				//list terms in a given taxonomy (useful as a widget for twentyten)
-				$taxonomy = 'sponsor';
-				$tax_terms = get_terms($taxonomy);
-				?>
-				<ul>
-				<?php
-				foreach ($tax_terms as $tax_term) {
-				echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
-				}
-				?>
-			</ul>
 
-		</div>
-		<div class="small-12 medium-4 columns">
+	<div class="row">
+		<div class="small-12 medium-8 columns">
+
+					
 			<h4>Active ERCs</h4>
-			<br/>
 
-			<ul class="medium-block-grid-1">
+			<ul class="medium-block-grid-2">
 
 				<?php
 
@@ -125,22 +114,44 @@ get_header(); ?>
 					$query2->the_post(); ?>
 
 				<?php 
-				$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-				$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-				?>
+
+					$image = get_field('masthead_image');
+
+					if( !empty($image) ): ?>
 				<li>
-					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+					<a href="<?php the_permalink(); ?>">
 
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
 
-					<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 
 				</li>
 
-			<?php endwhile; ?>
+			<?php endif; endwhile; ?>
 			<?php wp_reset_postdata(); ?>
+		</ul>
 
+		<hr/>
+
+	<h4>Sponsors</h4>
+
+<?php
+				//list terms in a given taxonomy (useful as a widget for twentyten)
+				$taxonomy = 'sponsor';
+				$tax_terms = get_terms($taxonomy);
+				?>
+				<ul>
+				<?php
+				foreach ($tax_terms as $tax_term) {
+				echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
+				}
+				?>
+			</ul>
+	
 			
 
-		</div>
-	</div>
+</div>
+
+	<?php echo get_sidebar(); ?>
+</div>
 	<?php get_footer(); ?>

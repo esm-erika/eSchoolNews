@@ -75,10 +75,7 @@
 					),
 				'posts_per_page' => 1
 				)); 
-
-		}
-
-				?>
+		} ?>
 
 				<?php if ( $featured->have_posts() ) : ?>
 
@@ -90,6 +87,8 @@
 
 				} elseif (is_category()) {
 					echo '';
+
+
 				}else{
 
 				echo '<h1 class="section-title"><span>Featured</span></h1>';

@@ -51,13 +51,13 @@
 
 <?php 
 
-							/* $file = get_field('download_file');
+/* $file = get_field('download_file');
 
-							if( $file ): ?>
-								
-								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Whitepaper</a>
+if( $file ): ?>
+	
+	<a class="button radius small" href="<?php echo $file['url']; ?>">Download Whitepaper</a>
 
-							<?php endif; ?> */
+<?php endif; ?> */
 
 		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
 		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
