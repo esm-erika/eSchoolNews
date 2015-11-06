@@ -56,11 +56,15 @@ get_header(); ?>
 
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-					<?php if( get_field('masthead_text')): ?>
-		<div>
-			<?php the_field('masthead_text') ?>
-		</div>
-	<?php endif; ?>
+					
+		
+			<?php if( get_field('masthead_text')): ?>
+			<div>
+				<?php the_field('masthead_text') ?>
+			</div>
+			<?php endif; ?>
+		
+
 
 	<h6 class="readmore"><a href="<?php the_permalink(); ?>">Read More &raquo;</a></h6>
 
@@ -117,21 +121,24 @@ get_header(); ?>
 				while ( $query2->have_posts() ) :
 					$query2->the_post(); ?>
 
-				<?php 
+				
+				<li>
+					<a href="<?php the_permalink(); ?>">
+						<?php 
 
 					$image = get_field('masthead_image');
 
 					if( !empty($image) ): ?>
-				<li>
-					<a href="<?php the_permalink(); ?>">
 
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+				</a>
 
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 
 				</li>
 
-			<?php endif; endwhile; ?>
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 
