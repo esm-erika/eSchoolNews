@@ -97,7 +97,7 @@ get_header(); ?>
 
 							'taxonomy' => 'status',
 							'field' => 'slug',
-							'terms' => 'active',
+							'terms' => 'active-erc',
 
 							),
 
