@@ -1,4 +1,3 @@
-<!-- atsc -->
 <?php $astcset = $_GET['astc'];
 	if(!filter_var($astcset, FILTER_VALIDATE_INT))
 	{//reserved for default ad set
@@ -7,9 +6,7 @@
 	// Retrieve adset info from url
 		$astc = $astcset;	
 	}	
-	echo '<!-- a '.$astc. ' -->';
 	 if($astc > 1){
-echo '<!-- b '.$astc. ' -->';
 			$e = 1; $query5 = new WP_Query();$query5->query('cat='.$astc);
 			while ($query5->have_posts()) : $query5->the_post(); 
 			if($e == 1){ ?>
@@ -18,10 +15,10 @@ echo '<!-- b '.$astc. ' -->';
             <section>
             <h4>Table of Contents</h4>	
                 <ul>				
-				
-			<?php	}
-			// echo '<li><a href="'. the_permalink(). '?ast='.$astused.'&astc='.$astc.'" rel="bookmark">'. the_title() .'</a></li>';
-			
+			<?php	} ?>
+			<li><a href="<?php the_permalink();echo '?ast='.$astused.'&astc='.$astc; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" ><?php the_title(); ?></a></li>
+<?php			// echo '<li><a href="'. the_permalink(). '?ast='.$astused.'&astc='.$astc.'" rel="bookmark">'. the_title() .'</a></li>';
+ 			
 			 $e++; endwhile; wp_reset_query(); 
 
 	if($e > 0){ ?>
