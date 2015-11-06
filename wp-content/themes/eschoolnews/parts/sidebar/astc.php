@@ -1,4 +1,18 @@
-	<article>
+<?php $astcset = $_GET['astc'];
+	if(!filter_var($astcset, FILTER_VALIDATE_INT))
+	{//reserved for default ad set
+		$astc = 1;
+	} else {
+	// Retrieve adset info from url
+		$astc = $astcset;	
+	}	
+	
+	 if($astc > 1){
+		get_template_part( 'parts/sidebar/astc' );
+	} 	
+?>    
+    
+    <article>
 	<section>
 	<h4>Table of Contents</h4>	
         <ul>
