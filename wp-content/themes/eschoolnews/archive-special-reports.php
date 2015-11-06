@@ -80,7 +80,7 @@ get_header(); ?>
 
 		</div>
 		<?php get_sidebar(); ?>
-	</div>
+	
 
 	<div class="row">
 		<div class="small-12 medium-12">
