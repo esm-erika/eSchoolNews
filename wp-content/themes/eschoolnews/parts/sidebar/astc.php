@@ -20,7 +20,7 @@ echo '<!-- b '.$astc. ' -->';
                 <ul>				
 				
 			<?php	}
-			echo '<li><a href="'. the_permalink(). '?ast='.$astused.'&astc='.$astc.'" rel="bookmark">'. the_title() .'</a></li>';
+			// echo '<li><a href="'. the_permalink(). '?ast='.$astused.'&astc='.$astc.'" rel="bookmark">'. the_title() .'</a></li>';
 			
 			 $e++; endwhile; wp_reset_query(); 
 
