@@ -86,12 +86,12 @@ get_header(); ?>
 					
 			<h4>Active ERCs</h4>
 
-			<ul class="medium-block-grid-2">
 
 				<?php
 
 				// The Query
 				$args = array(
+					'posts_per_page' => -1,
 					'tax_query' => array(
 						array(
 
@@ -107,6 +107,10 @@ get_header(); ?>
 					);
 
 					$query2 = new WP_Query( $args ); ?>
+							
+
+				<ul class="medium-block-grid-2">
+
 
 
 				<?php // The Loop

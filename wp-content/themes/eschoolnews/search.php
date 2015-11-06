@@ -22,6 +22,7 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header>
+					<?php get_template_part( 'parts/flags' ); ?>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<div class="small-caps">By <?php the_author(); ?></div>
 							<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
