@@ -123,7 +123,7 @@ if($astused > 1){
             <h3>Subscribe to Our Newsletters</h3>
          
 
-        <?php //get_template_part( 'parts/subscribe-form' ); ?>
+        <?php get_template_part( 'parts/subscribe-form' ); ?>
 
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 
@@ -177,7 +177,5 @@ if($astused > 1){
    <?php do_action( 'foundationpress_after_header' ); ?>
 
 
-	<?php get_template_part( 'parts/ads/billboard' ); ?>
-	<?php get_template_part( 'parts/ads/erctop' ); ?>    
-      
+	<?php get_template_part( 'parts/ads/billboard' ); ?>      
 

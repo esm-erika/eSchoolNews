@@ -123,19 +123,7 @@ get_header(); ?>
 
 				
 				<li>
-					<a href="<?php the_permalink(); ?>">
-						<?php 
-
-					$image = get_field('masthead_image');
-
-					if( !empty($image) ): ?>
-
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					<?php endif; ?>
-				</a>
-
-					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-
+					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 				</li>
 
 			<?php endwhile; ?>
