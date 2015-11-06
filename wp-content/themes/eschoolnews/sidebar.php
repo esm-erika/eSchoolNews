@@ -14,7 +14,7 @@
 
 	<?php get_template_part( 'parts/ads/embeddedbanner' );?>
 
-	<?php if($astc){
+	<?php if($astused > 1){
 		get_template_part( 'parts/sidebar/astc' );
 	} ?>
 
