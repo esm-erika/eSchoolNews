@@ -178,6 +178,6 @@ if($astused > 1){
 
 
 	<?php get_template_part( 'parts/ads/billboard' ); ?>
-	<?php // get_template_part( 'parts/ads/erctop' ); ?>    
+	<?php get_template_part( 'parts/ads/erctop' ); ?>    
       
 
