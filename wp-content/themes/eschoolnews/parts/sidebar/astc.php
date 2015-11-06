@@ -7,9 +7,9 @@
 	// Retrieve adset info from url
 		$astc = $astcset;	
 	}	
-	echo '<!-- '.$astc. ' -->';
+	echo '<!-- a '.$astc. ' -->';
 	 if($astc > 1){
-
+echo '<!-- b '.$astc. ' -->';
 			$e = 1; $query5 = new WP_Query();$query5->query('cat='.$astc);
 			while ($query5->have_posts()) : $query5->the_post(); 
 			if(e ==1){ ?>
