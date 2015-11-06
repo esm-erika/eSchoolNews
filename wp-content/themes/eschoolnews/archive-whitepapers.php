@@ -48,7 +48,6 @@ get_header(); ?>
 				// The Query
 				$args = array(
 					'post_type' => 'whitepapers',
-					//'orderby' => 'rand',
 					'posts_per_page' => '-1'
 					);
 
@@ -86,14 +85,14 @@ get_header(); ?>
 
                     	<p class="excerpt">
 							<?php 
-							echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
 							?>
 						</p>
 						
 						<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
-if ( is_user_logged_in()  and !$WPForm > 0) { ?>
+						if ( is_user_logged_in()  and !$WPForm > 0) { ?>
 
 							<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
 
@@ -127,7 +126,6 @@ if ( is_user_logged_in()  and !$WPForm > 0) { ?>
 				// The Query
 				$args2 = array(
 					'post_type' => 'whitepapers',
-					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'curriculum-whitepapers',
 					'posts_per_page' => '-1'
@@ -209,7 +207,6 @@ if ( is_user_logged_in()  and !$WPForm > 0){ ?>
 				// The Query
 				$args3 = array(
 					'post_type' => 'whitepapers',
-					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'digital-whitepapers',
 					'posts_per_page' => '-1'
@@ -286,7 +283,6 @@ if ( is_user_logged_in()  and !$WPForm > 0) {?>
 				// The Query
 				$args4 = array(
 					'post_type' => 'whitepapers',
-					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'mobile-online-whitepapers',
 					'posts_per_page' => '-1'
@@ -364,7 +360,6 @@ if ( is_user_logged_in()  and !$WPForm > 0)  {?>
 				// The Query
 				$args5 = array(
 					'post_type' => 'whitepapers',
-					//'orderby' => 'rand',
 					'taxonomy' => 'subject_categories',
 					'term' => 'technologies-whitepapers',
 					'posts_per_page' => '-1'
@@ -391,7 +386,8 @@ if ( is_user_logged_in()  and !$WPForm > 0)  {?>
 						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 							
 							</div>
-                    	<div class="medium-8 columns">
+                    		
+                    		<div class="medium-8 columns">
 
 						    <?php }else{ ?>
 
@@ -408,7 +404,7 @@ if ( is_user_logged_in()  and !$WPForm > 0)  {?>
 							?>
 						</p>
 						
-<?php
+				<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
 if ( is_user_logged_in() and !$WPForm > 0)  { ?>
