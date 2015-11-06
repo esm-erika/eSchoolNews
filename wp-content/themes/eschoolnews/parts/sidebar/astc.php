@@ -1,3 +1,4 @@
+<!-- atsc -->
 <?php $astcset = $_GET['astc'];
 	if(!filter_var($astcset, FILTER_VALIDATE_INT))
 	{//reserved for default ad set
@@ -6,10 +7,9 @@
 	// Retrieve adset info from url
 		$astc = $astcset;	
 	}	
-	
+	echo '<!-- '.$astc. ' -->';
 	 if($astc > 1){
-		get_template_part( 'parts/sidebar/astc' );
-	} 	
+
 ?>    
     
     <article>
@@ -29,4 +29,5 @@
         </ul>	
 	</div>
 	</section>
-	</article>
+	</article> 
+<?php } ?>
