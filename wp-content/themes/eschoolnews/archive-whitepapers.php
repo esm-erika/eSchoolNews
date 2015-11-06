@@ -59,6 +59,15 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 					<div class="row">
+
+<?php
+if( current_user_can( 'edit_post' ) ) {
+	echo 'Visible by logged in Editor or better only!<pre>';
+		
+	print_r($post);
+	echo '</pre>';	
+	
+}?>
 						
 							<?php 
 
