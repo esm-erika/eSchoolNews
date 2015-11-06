@@ -10,11 +10,13 @@
  */
 
 ?>
+<div class="row">
 <div class="ad-container">
 	<?php get_template_part( 'parts/ads/ercbottom' ); ?>
 </div>
 <div class="ad-container">
 	<?php get_template_part( 'parts/ads/anchorboard' ); ?>
+</div>
 </div>
 
 </section>

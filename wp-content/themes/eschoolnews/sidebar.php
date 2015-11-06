@@ -23,12 +23,6 @@
 		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	} ?>
 
-	<?php if(is_page('Resources')){
-		get_template_part( 'parts/sidebar/topics' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
-	} ?>
-
-
 	<?php if(is_post_type_archive('events')){
 		get_template_part( 'parts/sidebar/conferences' );
 	} ?>
@@ -39,7 +33,7 @@
 	} ?>
 
 	<?php 
-	if( is_post_type_archive('webinars') || is_search() || is_post_type_archive( 'special-reports')) { 
+	if( is_post_type_archive('webinars') || is_search() || is_post_type_archive( 'special-reports') || is_post_type_archive( 'ercs')) { 
 		get_template_part( 'parts/sidebar/resources' );
 	} ?>
 

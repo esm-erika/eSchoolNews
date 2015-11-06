@@ -115,6 +115,15 @@ include('single-coa.php');
 
 			        		endif;
 
+
+							$file = get_field('upload_file');
+
+							if( $file ): 
+								
+								echo '<a class="button radius small" href="' . $file['url'] . '"><i class="fi-arrow-down"></i> Download</a>';
+
+							endif;
+
 			        		if( $video ):
 
 			        			echo '<i class="fi-play-video"></i>';
