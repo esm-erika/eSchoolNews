@@ -171,15 +171,14 @@ echo '</a></p>';
 }
 
 ?>
-</td></tr></table>
+
 
 <?php 
 } else {
 ?>
-<table width="100%"><tr><td valign="top" style="vertical-align:top; padding-top:20px; padding-right:10px">
+
+
 	<?php the_content(); ?>
-</td>
-<td valign="top" style="vertical-align:top; padding-left:10px; border-left:#CCC 1px solid">
 
 <?php
 if ($WPForm != null) {
