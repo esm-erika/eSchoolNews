@@ -312,7 +312,11 @@ nav.tab-bar {
 	}
 }
 
-
+nav.middle {
+	.title {
+		margin-bottom: 20px;
+	}
+}
 
 nav.small-nav {
 	margin-top: 10px;
@@ -378,6 +382,10 @@ a.search {
 	line-height: 30px;
 }
 
+.left-small {
+	z-index: 200;
+}
+
 .search-drop {
 
 	input {
@@ -433,11 +441,11 @@ hr.thick {
 
 .social {
 
-	margin-left: 20px;
+	
 
 	a {
-		font-size: 30px;
-		padding-left: 10px;
+		font-size: 24px;
+		padding: 0 5px;
 		line-height: 0;
 	}
 }
