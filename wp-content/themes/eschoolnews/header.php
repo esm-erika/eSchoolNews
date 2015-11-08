@@ -68,22 +68,11 @@ if($astused > 1){
      <?php do_action( 'foundationpress_layout_start' ); ?>
 
      <nav class="tab-bar">
-      <section class="left-small">
+      <section class="left-small show-for-small-up hide-for-large-up">
        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
      </section>
-     <section class="middle tab-bar-section show-for-small-up">
-
-       <h1 class="title">
-        <?php //bloginfo( 'name' ); ?>
-        <a href="<?php echo home_url(); ?>">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eschoolnewslogo.png"/>
-        </a>
-      </h1>
-
-    </section>
-  </nav>
-
-  <nav class="small-nav row small-collapse medium-uncollapse">
+     
+     <section class="small-nav row small-collapse medium-uncollapse">
 
     <div class="small-12 medium-6 search columns small-text-center medium-text-left">
 
@@ -123,7 +112,7 @@ if($astused > 1){
             <h3>Subscribe to Our Newsletters</h3>
          
 
-        <?php get_template_part( 'parts/subscribe-form' ); ?>
+        <?php //get_template_part( 'parts/subscribe-form' ); ?>
 
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 
@@ -141,15 +130,56 @@ if($astused > 1){
     </div>
 
     <div class="small-12 medium-6 columns small-text-center medium-text-right">
-      <div class="social right">
-        <a href="http://www.twitter.com/eschoolnews" target="new" class="right"><i class="fi-social-twitter medium"></i></a>
-        <a href="http://www.facebook.com/eschoolnews/" target="new" class="right"><i class="fi-social-facebook medium"></i></a>
-        <a href="<?php site_url(); ?>/contact"><i class="fi-mail medium"></i></a>
+
+      <div class="row">
+
+      
+      
+      <div class="small-12 medium-8 columns">
+        <a href="#" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="search hide-for-small-only"> <i class="fi-magnifying-glass"></i> Search</a>
+
+        <div id="drop2" data-dropdown-content class="f-dropdown content medium search-drop" aria-hidden="true" tabindex="-1">
+          <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+            <div class="row collapse">
+              <div class="small-9 columns">
+              <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+              </div>
+              <div class="small-3 columns">
+            <input style="padding: 0;" type="submit" class="button postfix" value="Go" />
+            </div>
+            </div>
+          </form>
+        </div>
       </div>
 
-      <a href="#" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="search"> <i class="fi-magnifying-glass"></i> Search</a>
+      <div class="small-12 medium-4 columns">
+        <div class="social">
+          <a href="http://www.twitter.com/eschoolnews" target="new" class="right"><i class="fi-social-twitter medium"></i></a>
+          <a href="http://www.facebook.com/eschoolnews/" target="new" class="right"><i class="fi-social-facebook medium"></i></a>
+          <a href="<?php site_url(); ?>/contact"><i class="fi-mail medium"></i></a>
+        </div>
+      </div>
 
-      <div id="drop2" data-dropdown-content class="f-dropdown content small search-drop" aria-hidden="true" tabindex="-1">
+      </section>
+  </div>
+  </nav>
+
+ 
+
+  
+
+   <nav class="row middle show-for-small-up hide-for-large-up">
+    <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
+        <?php //bloginfo( 'name' ); ?>
+        <a href="<?php echo home_url(); ?>">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eschoolnewslogo.png"/>
+        </a>
+      </h1>
+  </nav>
+
+  <div class="row show-for-small-only">
+        <div class="small-12 columns">
+
         <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
           <div class="row collapse">
             <div class="small-9 columns">
@@ -160,11 +190,9 @@ if($astused > 1){
           </div>
           </div>
         </form>
+
+        </div>
       </div>
-
-    </div>
-
-  </nav>
 
   <?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
