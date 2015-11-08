@@ -44,6 +44,12 @@ include('single-coa.php');
 
 	?>	
 
+	<?php 
+
+		$image = get_field('masthead_image');
+
+		if( !empty($image) ): ?>
+
 		<div class="small-12 medium-12 columns">
 			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		</div>
@@ -95,19 +101,20 @@ include('single-coa.php');
 			        		$readmorelink = get_sub_field('read_more_link');
 			        		$video = get_sub_field('video_link');
 
-			        		echo '<article class="panel">';
+			        		echo '<article class="panel row">';
 			        		
 			        		if ( $thumbnail ):
 
-			        			//echo '<div class="small-12 medium-6 columns">';
+			        			echo '<div class="small-12 medium-6 columns">';
 
 			        			echo '<img src="' . $thumbnail['url'] . '" />';
 
-			        			//echo '</div>';
+
+			        			echo '</div>';
 
 			        		endif;
 
-			        		//echo '<div class="small-12 medium-6 columns">';
+			        		echo '<div class="small-12 medium-6 columns">';
 
 
 			        		if( $title ):
@@ -149,7 +156,7 @@ include('single-coa.php');
 
 			        		endif;
 
-			        		//echo '</div>';
+			        		echo '</div>';
 
 			        		echo '</article>';
 
