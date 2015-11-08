@@ -154,7 +154,7 @@ span.tag a, .related-tags a {
 // Tab Bar Section
 
 nav.tab-bar {
-	height: 4.8125rem;
+	//height: 4.8125rem;
 }
 
 nav.tab-bar .tab-bar-section.middle {
@@ -334,6 +334,10 @@ nav.small-nav {
 
 }
 
+#loginform {
+	color: #222;
+}
+
 .login, .welcome {
 	margin-right: 20px;
 }
@@ -370,7 +374,7 @@ nav.small-nav {
 }
 
 a.search {
-	display: inline-block;
+	display: inline-block !important;
 	line-height: 30px;
 }
 
@@ -1083,7 +1087,7 @@ div.registration-form {
 @media only screen and (min-width: 64.0625em) {
 
 	nav.tab-bar {
-		display: none;
+		//display: none;
 	}
 
 	.quaternary article {
