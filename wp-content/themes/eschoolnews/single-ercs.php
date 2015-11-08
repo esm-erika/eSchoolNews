@@ -47,7 +47,7 @@ include('single-coa.php');
 		<div class="small-12 medium-12 columns">
 			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		</div>
-	<?php endif; ?>
+	<?php //endif; ?>
 
 	<?php if( get_field('masthead_text')): ?>
 		<div class="small-12 medium-12 columns" role="main">
