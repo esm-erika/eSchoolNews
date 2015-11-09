@@ -92,7 +92,7 @@ get_header(); ?>
 		<div class="small-12 medium-8 columns">
 
 					
-			<h4>Active ERCs</h4>
+			<!-- <h4>Active ERCs</h4> -->
 
 
 				<?php
