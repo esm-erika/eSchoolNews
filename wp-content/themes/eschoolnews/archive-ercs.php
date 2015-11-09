@@ -23,7 +23,7 @@ get_header(); ?>
 
 	<?php $featured = new WP_Query(array(
 		'post_type' => 'ercs',
-		'posts_per_page' => -1,
+		'posts_per_page' => 1,
 					'tax_query' => array(
 						array(
 
@@ -41,8 +41,8 @@ get_header(); ?>
 				<div class="row">
 				
 
-				<div class="small-12 medium-12 columns  featured-slick" role="main">
-					<!-- <h4>Featured</h4> -->
+				<div class="small-12 medium-12 columns" role="main">
+					<div class="featured-slick">
 
 							<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 
@@ -62,9 +62,9 @@ get_header(); ?>
 					
 		
 			<?php if( get_field('masthead_text')): ?>
-			<div>
+			
 				<?php the_field('masthead_text') ?>
-			</div>
+			
 			<?php endif; ?>
 		
 
@@ -76,6 +76,7 @@ get_header(); ?>
 							<?php endwhile; ?>
 
 		<?php wp_reset_query(); ?>
+	</div>
 		<hr class="thick"/>
 </div>
 </div>

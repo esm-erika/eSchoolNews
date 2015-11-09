@@ -63,16 +63,20 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-  $('.featured-slick').slick();
-});
-</script>
 
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
+
+<script type="text/javascript" src="<?php //echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.featured-slick').slick({
+  	adaptiveHeight: true
+  });
+});
+</script>
 
 </body>
 </html>
