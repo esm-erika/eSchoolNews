@@ -6,27 +6,29 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
-?>
-<?php
-		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-		$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-		$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-		$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-		$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+	global $page; 
+	$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
+	$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
+	$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
+	$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
+	$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
+	$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
+	$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
+	$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
+	$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
+	$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
 
 
+	if (($bypassreg == 1) or (is_user_logged_in())) {
+		 $showpagecontent = 1; 
+	} else {
+		 $showpagecontent = 0; 
+	}
+	
 ?>
 
 <div class="row">
 
-
-						
 							<?php 
 
 							if (has_post_thumbnail()) { ?>
@@ -113,16 +115,7 @@ if( $file ): ?>
 
 <?php endif; ?> */
 
-		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-		$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-		$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-		$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-		$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+
 ?>
 <style type="text/css">select {border:1px solid #888}</style>
 
@@ -132,43 +125,9 @@ if( $file ): ?>
 		
         
 		
- //       	 if (have_posts()) : while (have_posts()) : the_post(); 
-			/* Check if the user logged in and then if answerred IBM questions*/
-			global $page; 
-		
-	 		if (($bypassreg == 1) or (is_user_logged_in())) { 
-				
-				 $showpagecontent = 1; 
-			}elseif ( isset($_GET['ps']) ) {
-				$esmpassvals = explode ( "-" , $_GET['ps']);
-				if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){	$wpuid=$esmpassvals[0];
-				get_userdata( $userid );
-				$showpagecontent=1;
-				} elseif (strpos($wpuid,'999999999')) { $showpagecontent = 1;				
-} elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { $wpuid = '999999999'; $showpagecontent = 1; 
-
-} else {$showpagecontent=0;}
-			
-			}elseif (isset($_COOKIE['esmpass']))  {
-				
-				$esmpasscookvals = explode ( "-" , $_COOKIE['esmpass']);
-				if (isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 15 || isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 18 ){
-					$showpagecontent=1;
-				} 
-				
-			} else {
-				//prompt for login
-				$showpagecontent = 0;
-			}
-            if ($showpagecontent == 0){ ?>	
-<!-- showpagecontent == 0 -->
-				<?php	} else { ?>
-<!-- showpagecontent == 1 -->
-			<?php	}  ?>
+ ?>
 
 
-<!--start slider dependents-->
-<!--end slider dependents-->
 	<?php if($showpagecontent == 1){ 	
 			if (!$WPcpl){
 
