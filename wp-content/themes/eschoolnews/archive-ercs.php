@@ -39,7 +39,7 @@ get_header(); ?>
 				
 
 				<div class="small-12 medium-12 columns" role="main">
-					<h4>Featured</h4>
+					<!-- <h4>Featured</h4> -->
 
 							<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 
@@ -56,11 +56,15 @@ get_header(); ?>
 
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-					<?php if( get_field('masthead_text')): ?>
-		<div>
-			<?php the_field('masthead_text') ?>
-		</div>
-	<?php endif; ?>
+					
+		
+			<?php if( get_field('masthead_text')): ?>
+			<div>
+				<?php the_field('masthead_text') ?>
+			</div>
+			<?php endif; ?>
+		
+
 
 	<h6 class="readmore"><a href="<?php the_permalink(); ?>">Read More &raquo;</a></h6>
 
@@ -117,21 +121,12 @@ get_header(); ?>
 				while ( $query2->have_posts() ) :
 					$query2->the_post(); ?>
 
-				<?php 
-
-					$image = get_field('masthead_image');
-
-					if( !empty($image) ): ?>
+				
 				<li>
-					<a href="<?php the_permalink(); ?>">
-
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
-
-					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-
+					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 				</li>
 
-			<?php endif; endwhile; ?>
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 
