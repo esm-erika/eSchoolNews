@@ -85,12 +85,11 @@ include('single-coa.php');
 
 			        			echo '<img src="' . $thumbnail['url'] . '" />';
 
+			        			echo '</div>';
 
-			        			echo '</div></div>';
+			        		else :
 
-			        		//elseif( !empty($thumbnail) ):
-
-			        			//echo '<div class="small-12 medium-12 columns>';			        			
+			        			echo '<div class="small-12 medium-12 columns">';			        			
 
 			        		endif;
 
@@ -174,7 +173,8 @@ include('single-coa.php');
 	<?php //get_sidebar(); ?>
 </div>
 
+<?php } ?>
+
 <?php
 get_footer(); ?>
 
-<?php } ?>
