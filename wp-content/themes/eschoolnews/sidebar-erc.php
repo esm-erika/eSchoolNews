@@ -9,7 +9,7 @@
 
 ?>
 <aside id="sidebar" class="small-12 medium-4 columns">
-	
+	<br/>
 	<div class="ad-container">
 
 		<a href="#">
