@@ -157,7 +157,7 @@ include('single-coa.php');
 			        		endif;
 
 
-							$file = get_field('upload_file');
+							$file = get_sub_field('upload_file');
 
 							if( $file ): 
 								
