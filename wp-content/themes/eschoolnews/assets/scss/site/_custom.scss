@@ -558,13 +558,13 @@ li.speaker {
 
 .erc-sponsors {
 
-	a:first-child {
+	li:first-child {
 		padding-left: 0 !important;
 	}
 
-	a {
-		padding: 0 10px;
-
+	li {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 
