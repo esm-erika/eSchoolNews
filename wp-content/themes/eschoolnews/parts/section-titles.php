@@ -40,6 +40,9 @@ if ( is_page()) {
 
 	echo 'Education Resource Centers';
 
+} elseif ( is_post_type_archive('whitepapers')) {
+
+	echo 'White Papers';
 
 } elseif ( is_archive()) {
 
