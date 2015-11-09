@@ -69,7 +69,7 @@ if ( isset($_GET['ps']) ) {
 
 
 
-if (1 == 2) { //(($bypassreg == 1) or (is_user_logged_in())) 
+if(is_user_logged_in()){ //(($bypassreg == 1) or (is_user_logged_in())) 
 //logged in user 
 
 //insert cache before form
