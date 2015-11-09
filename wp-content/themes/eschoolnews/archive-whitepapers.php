@@ -43,7 +43,6 @@ get_header(); ?>
 
 				$query = new WP_Query( $args ); 
 
-				$query = new WP_Query( $args2 ); 
 				// The Loop
 				 while ( $query->have_posts() ) :
 					$query->the_post(); 
