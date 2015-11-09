@@ -39,7 +39,7 @@ get_header(); ?>
 				
 
 				<div class="small-12 medium-12 columns" role="main">
-					<h4>Featured</h4>
+					<!-- <h4>Featured</h4> -->
 
 							<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 
