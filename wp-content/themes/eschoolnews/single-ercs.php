@@ -21,31 +21,6 @@ include('single-coa.php');
 
 	<?php 
 
-	// $image = get_field('masthead_image');
-
-	// if( !empty($image) ) {
-
-	// 	if ($astused > 0){
-	// // ast used defined   How to do this in the new?
-	// 	} else {
-	// 		$pageadset = $_GET['ast'];
-	// 		if(filter_var($pageadset, FILTER_VALIDATE_INT))
-	// {//reserved for default ad set
-	// 	$astused = $pageadset;	
-	// } else {
-	// 	// Retrieve adset info from URL query vars
-	// 	$astused = 1;
-
-	// }
-	// if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);}
-
-
-	// } 
-
-	?>	
-
-	<?php 
-
 		$image = get_field('masthead_image');
 
 		if( !empty($image) ): ?>
@@ -53,7 +28,7 @@ include('single-coa.php');
 		<div class="small-12 medium-12 columns">
 			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		</div>
-	<?php //endif; ?>
+	<?php endif; ?>
 
 	<?php if( get_field('masthead_text')): ?>
 		<div class="small-12 medium-12 columns" role="main">
@@ -101,7 +76,8 @@ include('single-coa.php');
 			        		$readmorelink = get_sub_field('read_more_link');
 			        		$video = get_sub_field('video_link');
 
-			        		echo '<article class="panel row">';
+			        		echo '<article class="panel">';
+			        		echo '<div class="row">';
 			        		
 			        		if ( $thumbnail ):
 
@@ -110,7 +86,11 @@ include('single-coa.php');
 			        			echo '<img src="' . $thumbnail['url'] . '" />';
 
 
-			        			echo '</div>';
+			        			echo '</div></div>';
+
+			        		//elseif( !empty($thumbnail) ):
+
+			        			//echo '<div class="small-12 medium-12 columns>';			        			
 
 			        		endif;
 
@@ -193,4 +173,8 @@ include('single-coa.php');
 	
 	<?php //get_sidebar(); ?>
 </div>
-<?php get_footer(); ?>
+
+<?php
+get_footer(); ?>
+
+<?php } ?>
