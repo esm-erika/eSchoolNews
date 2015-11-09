@@ -25,24 +25,18 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
-	<?php if ( have_posts() ) : ?>
+	<?php
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+	if ($post->post_type == "whitepapers") {
 
-		<header>
-			<?php get_template_part( 'parts/flags' ); ?>
-			<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-		</header>
+		get_template_part( 'parts/whitepapers-modal' );
 
-		<hr/>
+	} else {
 
-		<?php endwhile; ?>
+		echo '<h4>' . the_title() . '</h4>';
+		echo '<hr>';
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-
-	<?php endif; // End have_posts() check. ?>
+	} ?>
 
 	<?php /* Display navigation to next/previous pages when applicable */ ?>
 	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
@@ -51,6 +45,8 @@ get_header(); ?>
 			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 		</nav>
 	<?php } ?>
+
+
 
 	</div>
 	<?php get_sidebar(); ?>
