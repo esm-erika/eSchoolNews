@@ -63,7 +63,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){

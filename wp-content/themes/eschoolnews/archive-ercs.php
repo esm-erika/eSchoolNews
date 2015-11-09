@@ -38,10 +38,10 @@ get_header(); ?>
 
 				<?php if ( $featured->have_posts() ) : ?>
 				
-				<div class="row featured-slick">
+				<div class="row">
 				
 
-				<div class="small-12 medium-12 columns" role="main">
+				<div class="small-12 medium-12 columns  featured-slick" role="main">
 					<!-- <h4>Featured</h4> -->
 
 							<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
