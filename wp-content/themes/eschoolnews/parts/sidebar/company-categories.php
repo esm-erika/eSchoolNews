@@ -1,5 +1,7 @@
 <?php if ( is_tax() ) {
+	echo '<div class="text-center">';
 	echo '<a class="button" href="' . site_url('/') . 'whitepapers">&laquo; Back to All White Papers</a>';
+	echo '</div>';
 }?>
 
 <article class="company-categories">
