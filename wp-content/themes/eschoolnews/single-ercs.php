@@ -87,13 +87,13 @@ include('single-coa.php');
 
 			        			echo '</div>';
 
-			        		else :
+			        		endif;
+
+			        		if( !empty($image) ):
 
 			        			echo '<div class="small-12 medium-12 columns">';			        			
 
 			        		endif;
-
-			        		echo '<div class="small-12 medium-6 columns">';
 
 
 			        		if( $title ):
