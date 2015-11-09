@@ -62,7 +62,7 @@ get_header(); ?>
 					'post_type' => 'whitepapers',
 					'taxonomy' => 'subject_categories',
 					'term' => 'curriculum-whitepapers',
-					'posts_per_page' => '2'
+					'posts_per_page' => '1'
 					);
 				$query = new WP_Query( $args2 ); 
 				// The Loop
