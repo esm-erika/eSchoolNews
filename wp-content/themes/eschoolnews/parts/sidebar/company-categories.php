@@ -1,4 +1,9 @@
 <article class="company-categories">
+
+<?php if ( is_tax() ) {
+	echo '<a class="button" href="' . site_url('/') . 'whitepapers">Back to White Papers</a>';
+}?>
+
 	<h4>White Papers By Company</h4>
 	<br/>
 <?php 

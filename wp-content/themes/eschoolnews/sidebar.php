@@ -68,7 +68,7 @@
 	 ?>
 
 	 <?php
-	if( is_post_type_archive('whitepapers' )) { 
+	if( is_post_type_archive('whitepapers' ) || is_tax()) { 
 		get_template_part( 'parts/sidebar/company-categories' );  	
 		}
 	 ?>
