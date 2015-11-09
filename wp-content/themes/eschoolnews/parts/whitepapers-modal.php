@@ -173,11 +173,11 @@ if ($WPForm != null && 1==2) {
 
 
 //insert cache after form
-$local_box_cache = get_transient( $box_li_2 );
+//$local_box_cache = get_transient( $box_li_2 );
 
-if (false === ($local_box_cache) ){
+//if (false === ($local_box_cache) ){
 // start code to cache
-    ob_start( );
+  //  ob_start( );
 
 
 
@@ -224,18 +224,18 @@ if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:non
 
 
 
-    $local_box_cache = ob_get_clean( );
-	echo $local_box_cache;
+    //$local_box_cache = ob_get_clean( );
+	//echo $local_box_cache;
 // end the code to cache
 
-	if( current_user_can( 'edit_post' ) ) {
+	//if( current_user_can( 'edit_post' ) ) {
 		//you cannot cache it
-	} else {
+//	} else {
 		set_transient($box_li_2 ,$local_box_cache, 60 * 15);
-	}
-} else { 
-echo $local_box_cache;
-}		 
+//	}
+//} else { 
+//echo $local_box_cache;
+//}		 
 //end cache after form
 
 
