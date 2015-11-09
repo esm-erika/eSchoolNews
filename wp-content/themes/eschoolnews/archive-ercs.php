@@ -127,6 +127,14 @@ get_header(); ?>
 
 				
 				<li>
+					<?php 
+
+					$image = get_field('masthead_image');
+
+					if( !empty($image) ): ?>
+
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				<?php endif; ?>
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 				</li>
 
