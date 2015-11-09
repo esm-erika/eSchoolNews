@@ -100,7 +100,7 @@ include('single-coa.php');
 
 			        		if( $title ):
 
-			        			echo '<h4>' . $title . '</h4>';
+			        			echo '<h5>' . $title . '</h5>';
 
 			        		endif;
 
