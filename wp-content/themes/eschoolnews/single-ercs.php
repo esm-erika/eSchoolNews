@@ -87,9 +87,11 @@ include('single-coa.php');
 
 			        			echo '</div>';
 
+			        			echo '<div class="small-12 medium-6 columns">';
+
 			        		endif;
 
-			        		if( !empty($thumbnail) ):
+			        		if( empty($thumbnail) ):
 
 			        			echo '<div class="small-12 medium-12 columns">';			        			
 
@@ -135,7 +137,7 @@ include('single-coa.php');
 
 			        		endif;
 
-			        		echo '</div>';
+			        		echo '</div></div>';
 
 			        		echo '</article>';
 
