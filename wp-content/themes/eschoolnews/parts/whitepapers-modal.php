@@ -163,7 +163,7 @@ echo $local_box_cache;
 //end cache before form
 
 
-if ($WPForm != null) {
+if ($WPForm != null && 1==2) {
 	
 	//form
 		gravity_form( $WPForm , false, false, false, $WPautofill, true);  
