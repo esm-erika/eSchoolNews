@@ -1,8 +1,8 @@
-<article class="company-categories">
-
 <?php if ( is_tax() ) {
-	echo '<a class="button" href="' . site_url('/') . 'whitepapers">Back to White Papers</a>';
+	echo '<a class="button" href="' . site_url('/') . 'whitepapers">&laquo; Back to All White Papers</a>';
 }?>
+
+<article class="company-categories">
 
 	<h4>White Papers By Company</h4>
 	<br/>
