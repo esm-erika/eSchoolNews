@@ -132,6 +132,8 @@ get_header(); ?>
 
 		<hr/>
 
+		<div class="erc-sponsors">
+
 	<h4>Sponsors</h4>
 
 <?php
@@ -139,13 +141,14 @@ get_header(); ?>
 				$taxonomy = 'sponsor';
 				$tax_terms = get_terms($taxonomy);
 				?>
-				<ul>
+				
 				<?php
 				foreach ($tax_terms as $tax_term) {
-				echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
+				echo '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a>';
 				}
 				?>
-			</ul>
+	</div>
+			
 	
 			
 
