@@ -19,16 +19,42 @@ include('single-coa.php');
 
 <div class="row">
 
+<?php
+	$image = get_field('masthead_image');
+
+	if( !empty($image) ) {
+
+		echo '<div class="small-12 medium-12 columns">';
+		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+		echo '</div>';
+
+	} elseif ($astused > 0){
+		// ast used defined   How to do this in the new?
+	} else {
+			$pageadset = $_GET['ast'];
+		if(filter_var($pageadset, FILTER_VALIDATE_INT))
+		{//reserved for default ad set
+			$astused = $pageadset;	
+		} else {
+			// Retrieve adset info from URL query vars
+			$astused = 1;
+		}
+	}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);
+	}
+
+	?>
+
 	<?php 
 
-		$image = get_field('masthead_image');
+		//$image = get_field('masthead_image');
 
-		if( !empty($image) ): ?>
+		//if( !empty($image) ): ?>
 
-		<div class="small-12 medium-12 columns">
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		</div>
-	<?php endif; ?>
+		<!-- <div class="small-12 medium-12 columns"> -->
+			<!-- <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> -->
+		<!-- </div> -->
+	<?php //endif; ?>
 
 	<?php if( get_field('masthead_text')): ?>
 		<div class="small-12 medium-12 columns" role="main">
