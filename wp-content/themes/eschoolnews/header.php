@@ -55,7 +55,7 @@ if($astused > 1){
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css"/>
 
   <!-- slick-theme.css default styling -->
-  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/>
+  <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/> -->
 
   <?php wp_head(); ?>
 </head>
@@ -112,7 +112,7 @@ if($astused > 1){
           <h3>Subscribe to Our Newsletters</h3>
 
 
-          <?php //get_template_part( 'parts/subscribe-form' ); ?>
+          <?php get_template_part( 'parts/subscribe-form' ); ?>
 
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 
@@ -121,7 +121,7 @@ if($astused > 1){
 
         <?php if ( is_user_logged_in()) {
 
-          echo '<div class="welcome-menu"><a href="#">My eSchool News</a>';
+          echo '<div class="welcome-menu text-left"><a href="#">My eSchool News</a>';
 
           echo '<a class="logout" href="' . wp_logout_url( home_url() ) . '">Logout</a></div>';
 

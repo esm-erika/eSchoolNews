@@ -62,6 +62,12 @@
 	<?php do_action( 'foundationpress_layout_end' ); ?>
 	</div>
 </div>
+
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<?php $(document).ready(function(){
+  $('.featured-slick').slick();
+}); ?>
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 

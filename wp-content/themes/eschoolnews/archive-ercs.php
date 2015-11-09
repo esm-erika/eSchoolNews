@@ -23,19 +23,22 @@ get_header(); ?>
 
 	<?php $featured = new WP_Query(array(
 		'post_type' => 'ercs',
-				'meta_query' => array(
-					array(
-						'key' => 'featured_resource',
-						'value' => '1',
-						'compare' => '=='
-						)
-					),
-				'posts_per_page' => 1
+		'posts_per_page' => -1,
+					'tax_query' => array(
+						array(
+
+							'taxonomy' => 'status',
+							'field' => 'slug',
+							'terms' => 'active-erc',
+
+							),
+
+						),
 				)); ?>
 
 				<?php if ( $featured->have_posts() ) : ?>
 				
-				<div class="row">
+				<div class="row featured-slick">
 				
 
 				<div class="small-12 medium-12 columns" role="main">
