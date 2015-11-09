@@ -161,7 +161,7 @@ include('single-coa.php');
 
 							if( $file ): 
 								
-								echo '<a class="button radius small" href="' . $file['url'] . '"><i class="fi-arrow-down"></i> Download</a>';
+								echo '<a class="button radius tiny" href="' . $file['url'] . '"><i class="fi-arrow-down"></i> Download</a>';
 
 							endif;
 
