@@ -36,9 +36,9 @@ if ( is_page()) {
 
 	echo 'Special Reports';
 
-//} elseif ( is_post_type_archive('whitepapers')) {
+} elseif ( is_post_type_archive('ercs')) {
 
-	//echo 'White Papers';
+	echo 'Education Resource Centers';
 
 
 } elseif ( is_archive()) {
