@@ -28,7 +28,6 @@ get_header(); ?>
 				</ul>
 			</div>
 		</article>
-
 	</div>
 	<?php get_sidebar(); ?>
 </div>
