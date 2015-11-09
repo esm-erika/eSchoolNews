@@ -80,7 +80,7 @@ if (false === ($local_box_cache) ){
     ob_start( );
 ?>
 <div class="row">
-<?php 
+<?php /*
 if (has_post_thumbnail()) { ?>
 	<div class="medium-4 columns">
         <?php
@@ -146,7 +146,7 @@ $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full
 
 <?php the_content(); 
 
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////// */
 
     $local_box_cache = ob_get_clean( );
 	echo $local_box_cache;
@@ -182,7 +182,7 @@ if (false === ($local_box_cache) ){
 
 
 //code here
-
+/*
 	
 if ($WPForm != null) {
 // supress & reserve for caching somehow.
@@ -211,7 +211,7 @@ if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:non
 
 
 
-</div>
+</div> */ ?>
 </div>
 
 <hr/>
