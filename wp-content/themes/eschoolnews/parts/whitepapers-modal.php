@@ -101,7 +101,7 @@ if (has_post_thumbnail()) { ?>
         echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
         ?>
         </p>
-<?php /*
+
 						<?php
                         if ( !$WPForm > 0) { ?>
                           <a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
@@ -119,7 +119,7 @@ if (has_post_thumbnail()) { ?>
         <?php //whitepapers-modal ?>
 
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
-<div class="row">
+<?php /*<div class="row">
 
 <?php 
 
@@ -205,10 +205,10 @@ if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:non
 //</div>
 
 //</div>
-?>
+?>*/ ?>
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
-*/ ?>
+
 
 
 </div> 
