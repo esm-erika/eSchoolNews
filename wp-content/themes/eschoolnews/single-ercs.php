@@ -58,9 +58,17 @@ include('single-coa.php');
 
 	<?php if( get_field('masthead_text')): ?>
 		<div class="small-12 medium-12 columns" role="main">
-			<p><?php the_field('masthead_text') ?></p>
+			<div class="row">
+				<div class="small-12 medium-8 columns">
+					<p><?php the_field('masthead_text') ?></p>
+				</div>
+				
+					<?php get_sidebar('erc'); ?>
+				
+			</div>
 		</div>
 	<?php endif; ?>
+
 
 	<?php
 
