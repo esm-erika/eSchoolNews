@@ -220,10 +220,6 @@ Already a member? Log in
 <hr/>
 <?php // end modal ?>
 
-	</div>
-</div>
-
-<hr/>
 
 <?
 /// end unk user
