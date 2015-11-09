@@ -112,6 +112,18 @@ include('single-coa.php');
 
 			        		echo '<article class="panel">';
 			        		echo '<div class="row">';
+
+			        		if( $title ):
+
+			        			echo '<h5>' . $title . '</h5>';
+
+			        		endif;
+
+			        		if( $subtitle ):
+
+			        			echo '<h6>' . $subtitle . '</h6>';
+
+			        		endif;
 			        		
 			        		if ( $thumbnail ):
 
@@ -131,18 +143,6 @@ include('single-coa.php');
 
 			        		endif;
 
-
-			        		if( $title ):
-
-			        			echo '<h5>' . $title . '</h5>';
-
-			        		endif;
-
-			        		if( $subtitle ):
-
-			        			echo '<h6>' . $subtitle . '</h6>';
-
-			        		endif;
 
 			        		if( $excerpt ):
 
