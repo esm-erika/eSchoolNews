@@ -129,6 +129,12 @@ echo $local_box_cache;
 
 	} else {
 //unknown user
+
+$local_box_cache = get_transient( $box_lo_1 );
+
+if (false === ($local_box_cache) ){
+// start code to cache
+    ob_start( );
 ?>
 <div class="row">
 <?php 
@@ -222,6 +228,23 @@ Already a member? Log in
 
 
 <?
+
+    $local_box_cache = ob_get_clean( );
+	echo $local_box_cache;
+// end the code to cache
+
+	if( current_user_can( 'edit_post' ) ) {
+		set_transient($box_lo_1 ,$local_box_cache, 6 * 15); //delete this line temporary for testing
+	} else {
+		set_transient($box_lo_1 ,$local_box_cache, 60 * 15);
+	}
+} else { 
+echo $local_box_cache;
+}		 
+//end cache unk
+
 /// end unk user
+
+
 	}
 ?>
