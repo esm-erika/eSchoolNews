@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for whitepaper with modal display
+ * Template part for top bar menu
  *
  * @package WordPress
  * @subpackage FoundationPress
@@ -9,67 +9,13 @@
 
 ?>
 <?php
-		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-		$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
+
+
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-		$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-		$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-		$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
 		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
-
-
 ?>
-
-<div class="row">
-
-
-						
-							<?php 
-
-							if (has_post_thumbnail()) { ?>
-
-							<div class="medium-4 columns">
-
-							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
-
-						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
-							
-							</div>
-                    	<div class="medium-8 columns">
-
-						    <?php }else{ ?>
-
-						    <div class="medium-12 columns">
-
-						    <?php } ?>
-                    	
-
-                    	<h5><?php the_title(); ?></h5>
-
-                    	<p class="excerpt">
-							<?php 
-							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
-							?>
-						</p>
-						
-						<?php
-						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-
-						if ( is_user_logged_in()  and !$WPForm > 0) { ?>
-
-							<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
-
-
-						<?php } else { // not logged in ?>
-					
-                        
-                        <a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
-
-
 
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
   <div class="row">
@@ -339,12 +285,3 @@ Already a member? Log in
   
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
-
-
-                        
-                        
-                        <?php } ?>
-					</div>
-					</div>
-
-					<hr/>
