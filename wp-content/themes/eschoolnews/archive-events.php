@@ -53,7 +53,7 @@ get_header(); ?>
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 					</div>
 
 			<header class="large-8 columns">

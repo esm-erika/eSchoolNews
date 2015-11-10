@@ -58,7 +58,7 @@ if(empty($idObj)){echo '<!--- No category found --->';}else{
 		    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 		?>
 
-		<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+		<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		<div class="excerpt">

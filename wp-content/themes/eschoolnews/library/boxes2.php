@@ -67,7 +67,7 @@ if ( in_category( 11112 )) { echo '<span style="color:#039; font-weight:bold;"><
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>		
 											<p><?php echo the_excerpt(); ?>&hellip;</p>
@@ -148,7 +148,7 @@ if ($count == 1) { ?>
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
 					<h2 class="postTitle"><a href="<?php the_permalink(); echo $aststr; ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -173,7 +173,7 @@ if ($count == 1) { ?>
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
 				
@@ -263,7 +263,7 @@ while ($query->have_posts()) : $query->the_post();
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
 					<h2 class="postTitle"><a href="<?php the_permalink();echo $aststr; ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -336,7 +336,7 @@ while ($query->have_posts()) : $query->the_post();
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
 									<?php if ( in_category( array( 10650,10651,10652,144,11112 ) )) {	
@@ -428,7 +428,7 @@ while ($query->have_posts()) : $query->the_post();
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
                                 <h2 class="postTitle"><a href="<?php the_permalink();echo $aststr; ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -451,7 +451,7 @@ while ($query->have_posts()) : $query->the_post();
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
 		                        <?php if ( in_category( array( 10650,10651,10652,144,11112 ) )) {	
@@ -559,7 +559,7 @@ if ( in_category( 11112 )) { echo '<span style="color:#039; font-weight:bold;"><
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>		
 											<p><?php echo the_excerpt(); ?>&hellip;</p>
@@ -752,7 +752,7 @@ while ($query->have_posts()) : $query->the_post();
 						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 									<?php } ?>	
 										

@@ -48,7 +48,7 @@ get_header(); ?>
 
 				<div class="small-12 large-4 columns" role="main">
 
-					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 				</div>
 				<header class="small-12 large-8 columns">
 

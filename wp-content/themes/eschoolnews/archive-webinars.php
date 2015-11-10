@@ -58,7 +58,7 @@ $webinars = new WP_Query(array(
 								$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 								?>
 
-								<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+								<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 							</div>
 							<header class="small-12 medium-8 columns">
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
