@@ -41,7 +41,7 @@ get_template_part( 'parts/whitepapers-modalvars' );
 				// The Query
 				$args = array(
 					'post_type' => 'whitepapers',
-					'posts_per_page' => '-1'
+					'posts_per_page' => '10'
 					);
 
 				$query = new WP_Query( $args ); 
@@ -64,7 +64,7 @@ get_template_part( 'parts/whitepapers-modalvars' );
 					'post_type' => 'whitepapers',
 					'taxonomy' => 'subject_categories',
 					'term' => 'curriculum-whitepapers',
-					'posts_per_page' => '-1'
+					'posts_per_page' => '10'
 					);
 				$query = new WP_Query( $args2 ); 
 				// The Loop
@@ -87,7 +87,7 @@ get_template_part( 'parts/whitepapers-modalvars' );
 					'post_type' => 'whitepapers',
 					'taxonomy' => 'subject_categories',
 					'term' => 'digital-whitepapers',
-					'posts_per_page' => '-1'
+					'posts_per_page' => '10'
 
 					);
 
@@ -113,7 +113,7 @@ get_template_part( 'parts/whitepapers-modalvars' );
 					'post_type' => 'whitepapers',
 					'taxonomy' => 'subject_categories',
 					'term' => 'mobile-online-whitepapers',
-					'posts_per_page' => '-1'
+					'posts_per_page' => '10'
 
 					);
 
@@ -136,7 +136,7 @@ get_template_part( 'parts/whitepapers-modalvars' );
 					'post_type' => 'whitepapers',
 					'taxonomy' => 'subject_categories',
 					'term' => 'technologies-whitepapers',
-					'posts_per_page' => '-1'
+					'posts_per_page' => '10'
 
 					);
 
