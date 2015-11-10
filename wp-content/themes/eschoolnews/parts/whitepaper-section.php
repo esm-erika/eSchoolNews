@@ -36,9 +36,11 @@ $whitepapersection = 0;
                 <?php $whitepapersection = 1; ?>
 
 <div class="row">
-<hr/>
+
 
 <div class="small-12 medium-12 columns">
+
+	<hr class="thick"/>
 
 	<?php if(is_category()) {
 	echo '<h3>';
