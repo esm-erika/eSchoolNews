@@ -64,7 +64,7 @@ get_header(); ?>
 						
 							<?php 
 
-							if (has_post_thumbnail()) { get_terms() ?>
+							if (has_post_thumbnail()) { ?>
 
 							<div class="medium-4 columns">
 
