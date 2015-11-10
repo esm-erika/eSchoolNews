@@ -3,6 +3,8 @@
 Template Name: eSN Reg with Agile and SF connect
 */
 
+
+
 function validateint($inData) {
   $intRetVal = -1;
   $IntValue = intval($inData);
@@ -399,7 +401,19 @@ $formsuccess = validateint($_GET['success']);
 <?php get_header(); 
 
 ?>
+<style type="text/css">
 
+#recaptcha_area, #recaptcha_table {
+    table-layout:auto !important;
+ }
+
+.recaptcha_is_showing_audio embed { height: 0; width: 0; }
+
+#recaptcha_area input[type="text"] {
+  display: inline-block !important;
+  height: auto !important;
+}
+</style>
 <?php global $theme_options, $suvi; ?>
 <div class="row">
 
