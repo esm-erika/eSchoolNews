@@ -63,8 +63,8 @@ if ( in_category( 11112 )) { echo '<span style="color:#039; font-weight:bold;"><
 											</h2>							
 									<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -144,8 +144,8 @@ if ($count == 1) { ?>
 			<div class="featuredPost2">
 					<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -169,8 +169,8 @@ if ($count == 1) { ?>
 			<div class="featuredpost<?php // if($count == $qty) { echo ' lastpost'; } ?>">
 			<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -259,8 +259,8 @@ while ($query->have_posts()) : $query->the_post();
 			<div class="featuredPost2" <?php if($count > 1){ echo 'style="border-top:#999 dotted 1px; padding-top:10px;margin-top:10px;"'; } ?>>
 					<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -332,8 +332,8 @@ while ($query->have_posts()) : $query->the_post();
 									<div class="featuredpost<?php // if($count == $qty) { echo ' lastpost'; } ?>">
 									<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -424,8 +424,8 @@ while ($query->have_posts()) : $query->the_post();
                         <div class="featuredPost2">
                              	<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -447,8 +447,8 @@ while ($query->have_posts()) : $query->the_post();
 						<div class="featuredpost<?php if($count == $qty) { echo ' lastpost'; } ?>">
 						<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -555,8 +555,8 @@ if ( in_category( 11112 )) { echo '<span style="color:#039; font-weight:bold;"><
 											</h2>							
 									<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -748,8 +748,8 @@ while ($query->have_posts()) : $query->the_post();
                               	<div class="featuredpost<?php // if($count == $qty) { echo ' lastpost'; } ?>">
 									<?php if($showthumb == 1){ 
 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
