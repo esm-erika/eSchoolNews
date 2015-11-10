@@ -58,7 +58,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row">
+					<div class="row  <?php $tags = wp_get_post_tags($post->id); foreach ( $tags as $tag ) { echo " ".$tag->slug ; } ?>">
 
 
 						
@@ -108,9 +108,10 @@ get_header(); ?>
                         
                         	<?php } ?>
 					</div>
-					</div>
-
 					<hr/>
+                    </div>
+
+					
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
