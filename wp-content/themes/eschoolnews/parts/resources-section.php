@@ -75,7 +75,7 @@ $resourcessection = 0;
 							} else {
 
 								echo '<h4> <a href="';
-								get_permalink(); 
+								the_permalink(); 
 								echo '">';
 								the_title();
 								echo '</a></h4>';

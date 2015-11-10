@@ -57,7 +57,7 @@ $whitepapersection = 0;
 
 						
 					
-					<li>
+					<li <?php post_class(); ?>>
 					<article class="row">
 
 						<div class="medium-4 columns">
