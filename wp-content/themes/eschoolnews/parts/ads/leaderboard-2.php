@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for leaderboard 2 ad
+ * Template part for leaderboard ad
  *
  * @package WordPress
  * @subpackage FoundationPress
@@ -9,7 +9,7 @@
 
 ?>
 
-	<div class="small-12 large-12 columns ad-container">
+	<div class="ad-container">
 	<?php // echo adrotate_group('1'); 
 		
 	if ($astused > 0){
@@ -24,7 +24,7 @@
 			$astused = 1;
 		}
 	}
-	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,23);}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,5);}
 		
 	?>
         
