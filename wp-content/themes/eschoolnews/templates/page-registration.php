@@ -432,7 +432,7 @@ $formsuccess = validateint($_GET['success']);
 
 #recaptcha_area,#recaptcha_table{width:318px!important}
 
-.recaptchatable,#recaptcha_area tr,#recaptcha_area td,#recaptcha_area th{margin:0!important!important;border:0!important!important;padding:0!important!important;border-collapse:collapse!important!important;vertical-align:middle!important}
+.recaptchatable,#recaptcha_area tr,#recaptcha_area td,#recaptcha_area th{margin:0!important;border:0!important;padding:0!important;border-collapse:collapse!important;vertical-align:middle!important}
 
 .recaptchatable *{margin:0!important;padding:0!important;border:0!important;font-family:helvetica,sans-serif!important;font-size:8pt!important;color:black!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important}
 
@@ -442,19 +442,19 @@ $formsuccess = validateint($_GET['success']);
 
 .recaptchatable #recaptcha_image #recaptcha_ad_image{display:block!important;position:absolute!important;top:0!important}
 
-.recaptchatable img{border:0!important!important;margin:0!important!important;padding:0!important}
+.recaptchatable img{border:0!important;margin:0!important;padding:0!important}
 
-.recaptchatable a,.recaptchatable a:hover{cursor:pointer!important;outline:none!important;border:0!important!important;padding:0!important!important;text-decoration:none!important;color:blue!important;background:none!important!important;font-weight:normal!important}
+.recaptchatable a,.recaptchatable a:hover{cursor:pointer!important;outline:none!important;border:0!important;padding:0!important;text-decoration:none!important;color:blue!important;background:none!important;font-weight:normal!important}
 
-.recaptcha_input_area{position:relative!important!important;width:153px!important!important;height:45px!important!important;margin-left:7px!important!important;margin-right:7px!important!important;background:none!important}
+.recaptcha_input_area{position:relative!important;width:153px!important;height:45px!important;margin-left:7px!important;margin-right:7px!important;background:none!important}
 
-.recaptchatable label.recaptcha_input_area_text{margin:0!important!important;padding:0!important!important;position:static!important!important;top:auto!important!important;left:auto!important!important;right:auto!important!important;bottom:auto!important!important;background:none!important!important;height:auto!important!important;width:auto!important}
+.recaptchatable label.recaptcha_input_area_text{margin:0!important;padding:0!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;background:none!important;height:auto!important;width:auto!important}
 
 .recaptcha_theme_red label.recaptcha_input_area_text,.recaptcha_theme_white label.recaptcha_input_area_text{color:black!important}
 
 .recaptcha_theme_blackglass label.recaptcha_input_area_text{color:white!important}
 
-.recaptchatable #recaptcha_response_field{width:153px!important!important;position:relative!important!important;bottom:7px!important!important;padding:0!important!important;margin:15px 0 0 0!important!important;font-size:10pt!important}
+.recaptchatable #recaptcha_response_field{width:153px!important;position:relative!important;bottom:7px!important;padding:0!important;margin:15px 0 0 0!important;font-size:10pt!important}
 
 .recaptcha_theme_blackglass #recaptcha_response_field,.recaptcha_theme_white #recaptcha_response_field{border:1px solid gray!important}
 
