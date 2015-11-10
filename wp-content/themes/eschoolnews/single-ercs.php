@@ -115,7 +115,7 @@ include('single-coa.php');
 
 			        		if( $title ):
 
-			        			echo '<h5 class="columns">' . $title . '</h5>';
+			        			echo '<h4 class="columns">' . $title . '</h4>';
 
 			        		endif;
 
