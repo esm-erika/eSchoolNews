@@ -44,7 +44,7 @@ include('single-coa.php');
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<div class="small-caps">By <?php the_author(); ?></div>
-							<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
+							<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
 
 			
 			<?php get_template_part('parts/social'); ?>
@@ -56,13 +56,21 @@ include('single-coa.php');
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content">
 
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="row">
-					<div class="column">
-						<?php the_post_thumbnail( '', array('class' => 'th') ); ?>
-					</div>
-				</div>
-			<?php endif; ?>
+	
+			<?php if( get_field('remove_featured_image') ) :
+    
+    			echo '';
+			 
+			 elseif ( has_post_thumbnail()) :
+
+    				echo '<div class="row">';
+    				echo '<div class="column">';
+    				the_post_thumbnail( '', array('class' => 'th') );
+    				echo '</div></div>';
+
+    			
+    		endif;
+			 ?>
 
 			<?php the_content(); ?>
 			</div>

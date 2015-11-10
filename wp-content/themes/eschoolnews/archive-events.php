@@ -97,7 +97,7 @@ get_header(); ?>
 			<header class="small-12 columns">
 				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<div class="small-caps">By <?php the_author(); ?></div>
-				<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
+				<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
 
 			</header>
 		</article>
