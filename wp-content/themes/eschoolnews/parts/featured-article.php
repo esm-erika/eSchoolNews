@@ -81,9 +81,6 @@
 
 
 
-
-
-
 				<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 			
 						<div class="small-12 medium-6 columns" role="main">
@@ -114,6 +111,8 @@
 
 		</article>
 
+	</div>
+
 		<?php endwhile; ?>
 
 		<?php wp_reset_query(); ?>
@@ -126,5 +125,6 @@
 
 	<?php endif;?>
 
+<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
 	

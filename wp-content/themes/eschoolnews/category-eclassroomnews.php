@@ -102,6 +102,8 @@ $featured = new WP_Query(array(
 	
 </div>
 
+<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
+
 
 <div class="row">
 
