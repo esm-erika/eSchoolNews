@@ -6,6 +6,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
+get_template_part( 'parts/whitepapers-modalvars' );  
 $whitepapersection = 0;
 ?>
 

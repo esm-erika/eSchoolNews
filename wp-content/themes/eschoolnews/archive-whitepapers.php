@@ -8,7 +8,10 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header(); 
+get_template_part( 'parts/whitepapers-modalvars' ); 
+
+?>
 
 <div class="row">
 
