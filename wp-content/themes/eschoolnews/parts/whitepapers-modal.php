@@ -152,11 +152,11 @@ $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full
 	echo $local_box_cache;
 // end the code to cache
 
-	if( current_user_can( 'edit_post' ) ) {
+	//if( current_user_can( 'edit_post' ) ) {
 		//you cannot cache it
-	} else {
-		set_transient($box_li_1 ,$local_box_cache, 60 * 15);
-	}
+	//} else {
+		set_transient($box_li_1 ,$local_box_cache, 6 * 15);
+	//}
 } else { 
 echo $local_box_cache;
 }		 
