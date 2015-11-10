@@ -13,7 +13,7 @@ $resourcessection = 0;
 	
 		if( is_home() || is_front_page()) {
 			$resources = new WP_Query(array(
-				'post_type' => array( 'whitepapers', 'ercs', 'specialreports'),
+				'post_type' => array( 'ercs', 'specialreports'),
 				'posts_per_page' => '6'
 				)); 
 
