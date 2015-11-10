@@ -20,24 +20,7 @@
 			$featured = new WP_Query(array(
 				'meta_query' => array(
 					array(
-						'key' => 'featured',
-						'value' => '1',
-						'compare' => '=='
-						)
-					),
-				'posts_per_page' => 1
-				)); 
-
-		} elseif ( is_category()) {
-			
-			global $cat;
-
-
-			$featured = new WP_Query(array(
-				'cat' => $cat,
-				'meta_query' => array(
-					array(
-						'key' => 'featured',
+						'key' => 'front_page',
 						'value' => '1',
 						'compare' => '=='
 						)
