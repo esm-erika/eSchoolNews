@@ -65,24 +65,8 @@ $resourcessection = 0;
 
 						<header class="small-8 medium-8 columns"> 
 							<?php get_template_part('parts/flags'); ?>
-
-							<?php if ( 'whitepapers' == get_post_type()) {
-
-								echo '<h4>';
-								the_title();
-								echo '</h4>';
-
-							} else {
-
-								echo '<h4> <a href="';
-								the_permalink(); 
-								echo '">';
-								the_title();
-								echo '</a></h4>';
-
-							} ?>
-							
-
+				<h4> <a href="<?php the_permalink();?>"><?php the_title( ); ?></a></h4>
+								
 							<?php if( 'webinars' == get_post_type()){ ?>
 							<h5><i class="fi-calendar"></i> <?php 
 							$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
