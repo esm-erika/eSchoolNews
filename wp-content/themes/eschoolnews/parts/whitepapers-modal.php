@@ -6,7 +6,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+	$postid=$post->ID;
 	$box_li_1 = $blog_id.'_whitepaper_li_1_'.$postid;
 	$box_li_2 = $blog_id.'_whitepaper_li_2_'.$postid;
 	$box_lo_1 = $blog_id.'_whitepaper_lo_1_'.$postid;

@@ -21,7 +21,6 @@
 	$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
 	$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 	$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
-	$postid=$post->ID;
 	$blog_id = get_current_blog_id();
 
 
