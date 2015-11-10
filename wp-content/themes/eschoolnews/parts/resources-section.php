@@ -25,7 +25,7 @@ $resourcessection = 0;
 				'cat' => $cat,
 				'tag' => $categorytags,
 				'posts_per_page' => '6',
-				'post_type' => array( 'whitepapers', 'ercs', 'specialreports')
+				'post_type' => array( 'ercs', 'specialreports')
 			)); 
 
 					}?>
