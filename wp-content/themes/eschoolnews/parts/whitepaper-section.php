@@ -6,7 +6,6 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-get_template_part( 'parts/whitepapers-modalvars' );  
 $whitepapersection = 0;
 ?>
 
@@ -61,7 +60,7 @@ $whitepapersection = 0;
 					<li>
 					<article class="row">
 
-						<?php /* <div class="medium-4 columns">
+						<div class="medium-4 columns">
 
 						<?php   
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
@@ -75,15 +74,14 @@ $whitepapersection = 0;
 
 						<header class="medium-8 columns"> 
 							<h5><?php the_title(); ?></h5>
-							<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a> */?>
+							<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
 							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
-					<?php /*
-                    	</header>
+						</header>
 
 						
 
 					</article>
-						*/ ?>
+
 					</li>
 
 					<?php endwhile; wp_reset_query(); ?>
