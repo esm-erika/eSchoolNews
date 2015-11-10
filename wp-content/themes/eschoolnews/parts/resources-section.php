@@ -35,7 +35,7 @@ $resourcessection = 0;
                 <?php $resourcessection = 1; ?>
 
 <div class="row">
-	<div class="columns medium-12">
+	<div class="small-12 medium-12 columns">
 
 		<?php if(is_category()) {
 		echo '<h3>';
@@ -45,17 +45,15 @@ $resourcessection = 0;
 		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
 	} ?>
 
-	<ul class="small-block-grid-1 medium-block-grid-2">
-
 		
 
 				<?php while ( $resources->have_posts() ) : $resources -> the_post(); ?>
 				
-					<li> 
-						<article>
-
-						<?php get_template_part('parts/flags'); ?>
 					
+						<article class="row">
+
+						
+					<div class="small-4 medium-4 columns">
 
 						<?php 
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
@@ -63,8 +61,10 @@ $resourcessection = 0;
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
+					</div>
 
-						<header> 
+						<header class="small-8 medium-8 columns"> 
+							<?php get_template_part('parts/flags'); ?>
 
 							<?php if ( 'whitepapers' == get_post_type()) {
 
@@ -95,7 +95,9 @@ $resourcessection = 0;
 						</header>
 
 					</article>
-				</li>
+
+					<hr>
+				
 
 					<?php endwhile; ?>
 
@@ -103,7 +105,7 @@ $resourcessection = 0;
 
 				
 
-			</ul>
+			
 
 
 				<h6 class="readmore"><a href="<?php echo home_url(); ?>/resources">See All Resources &raquo;</a></h6>
