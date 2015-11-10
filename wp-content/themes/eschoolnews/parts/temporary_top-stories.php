@@ -29,3 +29,5 @@
 			<?php endwhile;
 			wp_reset_postdata(); ?>
 
+		<h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">See All Top Stories &raquo;</a>
+
