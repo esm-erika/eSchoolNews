@@ -14,7 +14,6 @@ if(is_post_type_archive('webinars' )) {
 
 <article>
 	<h4>Resources</h4>
-	<br/>
 
 	<ul>
 
