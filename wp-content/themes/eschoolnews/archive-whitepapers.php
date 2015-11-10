@@ -58,7 +58,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row  <?php $term_list = wp_get_post_terms($post->ID, 'my_taxonomy', array("fields" => "all"));
+					<div class="row  <?php $term_list = wp_get_post_terms($post->ID, 'Subjects', array("fields" => "all"));
 echo "<!-- ";
 print_r($term_list);
 echo " --> ";
