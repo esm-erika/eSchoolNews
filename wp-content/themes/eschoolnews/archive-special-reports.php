@@ -46,8 +46,8 @@ get_header(); ?>
 					<article class="row">
 						<div class="large-4 columns">
 						<?php 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
 						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
@@ -112,9 +112,12 @@ get_header(); ?>
 <li>
 			<div class="row">
 				<div class="small-6 medium-4 columns">
-					<?php if ( has_post_thumbnail() ) {
-							the_post_thumbnail('full');
-						} ?>
+					<?php 
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						?>
+
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
 				</div>
 				<article class="small-6 medium-8 columns">
 

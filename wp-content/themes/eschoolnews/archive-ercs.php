@@ -148,7 +148,7 @@ get_header(); ?>
 
 	<h4>Sponsors</h4>
 
-<?php
+			<?php
 				//list terms in a given taxonomy (useful as a widget for twentyten)
 				$taxonomy = 'sponsor';
 				$tax_terms = get_terms($taxonomy);
