@@ -59,7 +59,7 @@ get_header(); ?>
 					$query->the_post(); ?>
 
 					<div class="row  <?php 
-					$terms = wp_get_post_terms( $post->ID, 'Subjects' );
+					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					
 echo "<!-- " .print_r($terms) .  " --> ";
 					//$tags = wp_get_post_tags($post->id); foreach ( $tags as $tag ) { echo " ".$tag->slug ; } ?>">
