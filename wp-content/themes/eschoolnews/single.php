@@ -72,7 +72,7 @@ include('single-coa.php');
     		endif;
 			 ?>
 
-			<?php the_content(); ?>
+			 <?php the_content("<br />...continue reading " . the_title('', '', false)); ?>
 			</div>
 
 			<?php get_template_part('parts/social'); ?>
