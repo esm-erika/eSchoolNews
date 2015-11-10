@@ -123,7 +123,9 @@
 
 <!--  -->
 </div>
-
+	
+	<?php get_template_part( 'parts/ads/leaderboard' ); ?>
+	
 	<?php endif;?>
 
 
