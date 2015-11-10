@@ -6,6 +6,17 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
+	//$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
+	//$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
+	//$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
+	$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
+	$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
+	$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
+	//$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
+	//$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
+	$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
+	$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+	
 	$postid=$post->ID;
 	$box_li_1 = $blog_id.'_whitepaper_li_1_'.$postid;
 	$box_li_2 = $blog_id.'_whitepaper_li_2_'.$postid;

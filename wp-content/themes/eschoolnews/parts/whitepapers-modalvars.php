@@ -11,16 +11,6 @@
 *
 */
 	global $page; 
-	$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-	$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-	$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-	$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-	$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-	$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-	$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-	$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-	$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-	$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
 	$blog_id = get_current_blog_id();
 
 
