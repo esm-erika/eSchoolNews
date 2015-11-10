@@ -25,7 +25,7 @@ get_header(); ?>
 					<?php get_template_part( 'parts/flags' ); ?>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<div class="small-caps">By <?php the_author(); ?></div>
-							<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>		
+							<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
 				</header>
 				<hr />
 			</article>
