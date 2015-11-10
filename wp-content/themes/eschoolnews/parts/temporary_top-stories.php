@@ -1,11 +1,13 @@
 	<h4>Top Stories</h4>
 	<br/>
 
-	<?php $popular = new WP_query array(
+	<?php
+
+	$popular = new WP_Query(array(
 		'post_type' => 'post',
-		'posts_per_page' => 10,
-			),
-		); ?>
+		'posts_per_page' => '10'
+
+)); ?>
 
 			<?php while ( $popular->have_posts() ) :
 			$popular->the_post(); ?>
