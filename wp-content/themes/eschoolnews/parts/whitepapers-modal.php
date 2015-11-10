@@ -61,7 +61,7 @@ if (has_post_thumbnail()) { ?>
         <?php //whitepapers-modal ?>
 
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
-<?php /*<div class="row">
+<div class="row">
 
 <?php 
 
@@ -88,24 +88,24 @@ $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full
 
 <?php the_content(); 
 
-//////////////////////////////////////////////////////// */
+////////////////////////////////////////////////////////
 
     $local_box_cache = ob_get_clean( );
 	echo $local_box_cache;
 // end the code to cache
 
-	//if( current_user_can( 'edit_post' ) ) {
+	if( current_user_can( 'edit_post' ) ) {
 		//you cannot cache it
-	//} else {
+	} else {
 		set_transient($box_li_1 ,$local_box_cache, 6 * 15);
-	//}
+	}
 } else { 
 echo $local_box_cache;
 }		 
 //end cache before form
 
 
-if ($WPForm != null && 1==2) {
+if ($WPForm != null) {
 	
 	//form
 		gravity_form( $WPForm , false, false, false, $WPautofill, true);  
@@ -115,16 +115,13 @@ if ($WPForm != null && 1==2) {
 
 
 //insert cache after form
-//$local_box_cache = get_transient( $box_li_2 );
+$local_box_cache = get_transient( $box_li_2 );
 
-//if (false === ($local_box_cache) ){
+if (false === ($local_box_cache) ){
 // start code to cache
-  //  ob_start( );
-
-
-
+  ob_start( );
 //code here
-/*
+
 	
 if ($WPForm != null) {
 // supress & reserve for caching somehow.
@@ -147,7 +144,7 @@ if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:non
 //</div>
 
 //</div>
-?>*/ ?>
+?>
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
@@ -166,18 +163,18 @@ if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:non
 
 
 
-    //$local_box_cache = ob_get_clean( );
-	//echo $local_box_cache;
+ $local_box_cache = ob_get_clean( );
+echo $local_box_cache;
 // end the code to cache
 
-	//if( current_user_can( 'edit_post' ) ) {
+	if( current_user_can( 'edit_post' ) ) {
 		//you cannot cache it
-//	} else {
+	} else {
 		set_transient($box_li_2 ,$local_box_cache, 60 * 15);
-//	}
-//} else { 
-//echo $local_box_cache;
-//}		 
+	}
+} else { 
+echo $local_box_cache;
+}		 
 //end cache after form
 
 
@@ -302,4 +299,6 @@ echo $local_box_cache;
 
 
 	}
+	
+	
 ?>
