@@ -19,11 +19,11 @@ $whitepapersection = 0;
 
 		} elseif ( is_category()) {
 			
-			global $cat;
+			//get_template_part( 'parts/category-tags' );
 
 
 			$whitepapers = new WP_Query(array(
-				'cat' => $cat,
+				//'cat' => $cat,
 				'posts_per_page' => '6',
 				'post_type' => 'whitepapers'
 				)); 
@@ -64,10 +64,10 @@ $whitepapersection = 0;
 
 						<?php   
 						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-												<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+												<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 					</div>
 						

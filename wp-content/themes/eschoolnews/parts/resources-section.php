@@ -19,15 +19,14 @@ $resourcessection = 0;
 
 		} elseif ( is_category()) {
 			
-			global $cat;
-
+			//get_template_part( 'parts/category-tags' );
 
 			$resources = new WP_Query(array(
 				'cat' => $cat,
+				'tag' => $categorytags,
 				'posts_per_page' => '6',
 				'post_type' => array( 'whitepapers', 'ercs', 'specialreports')
-				)); 
-						
+			)); 
 
 					}?>
 
@@ -36,10 +35,6 @@ $resourcessection = 0;
                 <?php $resourcessection = 1; ?>
 
 <div class="row">
-
-	
-
-
 	<div class="columns medium-12">
 
 		<?php if(is_category()) {
@@ -63,15 +58,30 @@ $resourcessection = 0;
 					
 
 						<?php 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 						?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 						<header> 
+
+							<?php if ( 'whitepapers' == get_post_type()) {
+
+								echo '<h4>';
+								the_title();
+								echo '</h4>';
+
+							} else {
+
+								echo '<h4> <a href="';
+								get_permalink(); 
+								echo '">';
+								the_title();
+								echo '</a></h4>';
+
+							} ?>
 							
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 							<?php if( 'webinars' == get_post_type()){ ?>
 							<h5><i class="fi-calendar"></i> <?php 
