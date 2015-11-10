@@ -58,7 +58,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row  <?php $tags = get_tags($post->id); foreach ( $tags as $tag ) { echo " ".$tag->slug ; } ?>">
+					<div class="row  <?php $tags = wp_get_post_tags($post->id); foreach ( $tags as $tag ) { echo " ".$tag->slug ; } ?>">
 
 
 						
