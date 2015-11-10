@@ -69,15 +69,84 @@ if ( isset($_GET['ps']) ) {
 
 
 
-if (1 == 2) { //(($bypassreg == 1) or (is_user_logged_in())) 
+if (1==2) { //(($bypassreg == 1) or (is_user_logged_in())) 
 //logged in user 
 
 //insert cache before form
-$local_box_cache = get_transient( $box_q );
+$local_box_cache = get_transient( $box_li_1 );
 
 if (false === ($local_box_cache) ){
 // start code to cache
     ob_start( );
+?>
+<div class="row">
+<?php 
+if (has_post_thumbnail()) { ?>
+	<div class="medium-4 columns">
+        <?php
+		$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+        $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
+
+        <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+       
+	</div>
+    <div class="medium-8 columns">
+        
+<?php }else{ ?>
+    <div class="medium-12 columns">
+<?php } ?>
+		<h5><?php the_title(); ?></h5>
+        <p class="excerpt">
+        <?php 
+        echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+        ?>
+        </p>
+
+						<?php
+                        if ( !$WPForm > 0) { ?>
+                          <a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
+                        
+
+						<?php } else { // not logged in ?>
+					
+                        
+                        <a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+                        
+                        
+                        	<?php } ?>
+
+        <?php //whitepapers-modal ?>
+
+<div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
+<?php /*<div class="row">
+
+<?php 
+
+if (has_post_thumbnail()) { ?>
+
+<div class="medium-4 columns">
+
+<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?> 
+
+<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]">
+
+</div>
+<div class="medium-8 columns">
+
+<?php }else{ ?>
+
+<div class="medium-12 columns">
+
+<?php } ?>
+
+<h2 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h2>
+
+
+<?php the_content(); 
+
+//////////////////////////////////////////////////////// */
 
     $local_box_cache = ob_get_clean( );
 	echo $local_box_cache;
@@ -86,44 +155,88 @@ if (false === ($local_box_cache) ){
 	if( current_user_can( 'edit_post' ) ) {
 		//you cannot cache it
 	} else {
-		set_transient($box_q ,$local_box_cache, 60 * 15);
+		set_transient($box_li_1 ,$local_box_cache, 60 * 15);
 	}
 } else { 
 echo $local_box_cache;
 }		 
 //end cache before form
 
-//form
-	gravity_form( $WPForm , false, false, false, $WPautofill, true);  
-//end form
+
+if ($WPForm != null && 1==2) {
+	
+	//form
+		gravity_form( $WPForm , false, false, false, $WPautofill, true);  
+	//end form
+
+}
+
 
 //insert cache after form
-$local_box_cache = get_transient( $box_q );
+//$local_box_cache = get_transient( $box_li_2 );
 
-if (false === ($local_box_cache) ){
+//if (false === ($local_box_cache) ){
 // start code to cache
-    ob_start( );
+  //  ob_start( );
 
-    $local_box_cache = ob_get_clean( );
-	echo $local_box_cache;
+
+
+//code here
+/*
+	
+if ($WPForm != null) {
+// supress & reserve for caching somehow.
+} else if ($WPURL != null) { 
+echo '<p><a href="'.$WPURL.'" target="_blank">';
+ if ($WPcbt != null) { 
+		echo'<img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" />';
+		} else{
+?>
+<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
+<?php 
+	 }
+echo '</a></p>'; 
+}
+
+if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';}
+
+
+
+//</div>
+
+//</div>
+?>*/ ?>
+<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+
+
+</div> 
+</div>
+
+<hr/>
+
+
+<?php
+
+
+
+
+
+
+    //$local_box_cache = ob_get_clean( );
+	//echo $local_box_cache;
 // end the code to cache
 
-	if( current_user_can( 'edit_post' ) ) {
+	//if( current_user_can( 'edit_post' ) ) {
 		//you cannot cache it
-	} else {
-		set_transient($box_q ,$local_box_cache, 60 * 15);
-	}
-} else { 
-echo $local_box_cache;
-}		 
+//	} else {
+		set_transient($box_li_2 ,$local_box_cache, 60 * 15);
+//	}
+//} else { 
+//echo $local_box_cache;
+//}		 
 //end cache after form
-
-
-
-
-
-
-
 
 
 
