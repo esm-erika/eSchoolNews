@@ -12,6 +12,7 @@
 
         <div class="title-area row show-for-large-up">
             <div class="name large-5 large-centered columns">
+                <div class="show-for-large-up" style="height: 20px;"></div>
                 <h1>
                     <a href="<?php echo home_url(); ?>">
                         <?php //bloginfo( 'name' ); ?>
