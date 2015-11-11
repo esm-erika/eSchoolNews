@@ -26,19 +26,8 @@ get_header(); ?>
 <script>
 $(document).ready(function(){
 	
-	$("#hide").click(function(){
-       $("p").hide();
-    });
-    $("#show").click(function(){
-       $("p").show();
-    });
-	
 	$("#all").click(function(){
-        $("curriculum-whitepapers").show();
-		$("digital-whitepapers").show();
-		$("technologies-whitepapers").show();
-		$("mobile-online-whitepapers").show();
-		
+        $("div.row.all").show();
     });
 
 	$("#curriculum").click(function(){
@@ -68,13 +57,6 @@ $(document).ready(function(){
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
     });
-	$("#Hide").click(function(){
-        $("curriculum-whitepapers").hide();
-		$("digital-whitepapers").hide();
-		$("mobile-online-whitepapers").hide();
-		$("technologies-whitepapers").hide();
-    });	
-	
 });
 </script>
 
@@ -84,11 +66,8 @@ $(document).ready(function(){
 <button id="digital">Digital</button>
 <button id="mobile">Mobile &amp; Online Learning</button>
 <button id="technologies">Technologies</button>
-<button id="Hide">Hide All (test)</button>
 </div>
-<button id="hide">Hide</button>
-<button id="show">Show</button>
-<p>If you click on the "Hide" button, all "p" will disappear.</p>
+
 
 <!-- <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
@@ -125,7 +104,7 @@ $(document).ready(function(){
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row<?php 
+					<div class="row all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
 
