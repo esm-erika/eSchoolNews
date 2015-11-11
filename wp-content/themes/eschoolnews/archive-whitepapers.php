@@ -26,10 +26,11 @@ get_header(); ?>
 <script>
 $(document).ready(function(){
 	$("#panel1").click(function(){
-        $("div.row.curriculum-whitepapers").show();
-		$("div.row.digital-whitepapers").show();
-		$("div.row.technologies-whitepapers").show();
-		$("div.row.mobile-online-whitepapers").show();
+        $("curriculum-whitepapers").show();
+		$("digital-whitepapers").show();
+		$("technologies-whitepapers").show();
+		$("mobile-online-whitepapers").show();
+		
     });
 
 	$("#panel2").click(function(){
@@ -60,7 +61,10 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").show();
     });
 	$("#panel6").click(function(){
-        $("div.row").hide();
+        $("curriculum-whitepapers").hide();
+		$("digital-whitepapers").hide();
+		$("mobile-online-whitepapers").hide();
+		$("technologies-whitepapers").hide();
     });	
 	
 });
@@ -91,7 +95,7 @@ $(document).ready(function(){
 	<div class="tabs-content">
         
 
-<section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
+<section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
 		    <h4>All White Papers</h4>
 		    <br/>
