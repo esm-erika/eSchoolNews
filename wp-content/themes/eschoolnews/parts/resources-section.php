@@ -75,6 +75,8 @@ $resourcessection = 0;
 
 							<?php } ?>
 
+							<?php the_field('masthead_text') ?>
+
 
 						</header>
 

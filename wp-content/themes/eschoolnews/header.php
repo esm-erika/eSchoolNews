@@ -68,15 +68,21 @@ get_template_part( 'library/logged-in-check' ); ?>
 
      <?php do_action( 'foundationpress_layout_start' ); ?>
 
-     <nav class="tab-bar">
-      <section class="left-small show-for-small-up hide-for-large-up">
+     <nav class="tab-bar show-for-small-up hide-for-medium-up">
+      <section class="left-small ">
        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
      </section>
+     </nav>
      
-     <section class="small-nav row small-collapse medium-uncollapse">
+     <section class="small-nav row">
 
-      <div class="small-12 medium-6 search columns small-text-center medium-text-left">
+  <div class="show-for-medium-up" style="height: 20px;"></div>
 
+
+      <div class="small-12 medium-6 small-offset-1 medium-offset-0 search columns small-only-text-center medium-text-left">
+        
+        <div class="row">
+          <div class="small-12 medium-6 columns">
         <?php if ( ! is_user_logged_in() ) { ?>
 
         <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
@@ -95,16 +101,26 @@ get_template_part( 'library/logged-in-check' ); ?>
 
           $current_user = wp_get_current_user();
 
-          echo '<div class="welcome left">';
+          echo '<div class="welcome">';
 
           echo 'Welcome <strong>' . $current_user->user_firstname . '</strong>! <br/>'; 
 
           echo '</div>';
 
-        }?>
 
 
-        <a href="#" data-reveal-id="subscribe-drop" class="subscribe">Subscribe</a>
+          echo '<div class="welcome-menu small-only-text-center text-left"><a href="#">My eSchool News</a>';
+
+          echo '<a class="logout" href="' . wp_logout_url( home_url() ) . '">Logout</a></div>';
+
+        } ?>
+
+      </div>
+
+        <div class="small-12 medium-6 columns">
+
+
+        <a href="#" data-reveal-id="subscribe-drop" class="subscribe hide-for-small-only">Subscribe</a>
 
         <div id="subscribe-drop" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
@@ -120,13 +136,11 @@ get_template_part( 'library/logged-in-check' ); ?>
 
         </div>
 
-        <?php if ( is_user_logged_in()) {
+        
 
-          echo '<div class="welcome-menu text-left"><a href="#">My eSchool News</a>';
+      </div>
 
-          echo '<a class="logout" href="' . wp_logout_url( home_url() ) . '">Logout</a></div>';
-
-        } ?>
+      </div>
 
       </div>
 
@@ -134,7 +148,7 @@ get_template_part( 'library/logged-in-check' ); ?>
 
         <div class="row">
 
-          <div class="small-12 large-8 columns hide-for-small-only">
+          <div class="small-12 medium-8 columns hide-for-small-only">
             <a href="#" data-dropdown="drop2" aria-controls="drop2" aria-expanded="false" class="search hide-for-small-only"> <i class="fi-magnifying-glass"></i> Search</a>
 
             <div id="drop2" data-dropdown-content class="f-dropdown content medium search-drop" aria-hidden="true" tabindex="-1">
@@ -151,7 +165,8 @@ get_template_part( 'library/logged-in-check' ); ?>
             </div>
           </div>
 
-          <div class="small-12 large-4 columns social">
+          <div class="small-11 medium-uncentered medium-4 small-only-text-center columns social">
+            <div class="show-for-small-only" style="height: 20px;"></div>
             <a href="http://www.twitter.com/eschoolnews" target="new"><i class="fi-social-twitter medium"></i></a>
             <a href="http://www.facebook.com/eschoolnews/" target="new"><i class="fi-social-facebook medium"></i></a>
             <a href="<?php site_url(); ?>/contact"><i class="fi-mail medium"></i></a>
@@ -160,9 +175,10 @@ get_template_part( 'library/logged-in-check' ); ?>
         </div>
 
         </section>
-    </nav>
+    
 
     <nav class="row middle show-for-small-up hide-for-large-up">
+      <div class="show-for-medium-only" style="height: 20px;"></div>
       <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
         <?php //bloginfo( 'name' ); ?>
         <a href="<?php echo home_url(); ?>">

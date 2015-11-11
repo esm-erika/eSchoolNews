@@ -302,8 +302,13 @@ nav.tab-bar {
 		border-right: none;
 	}
 
-	.menu-icon span::after {
-		box-shadow: 0 0 0 1px #333,0 7px 0 1px #333,0 14px 0 1px #333;
+
+	.menu-icon {
+		background-color: #222;
+
+		span::after {
+		box-shadow: 0 0 0 1px #fff,0 7px 0 1px #fff,0 14px 0 1px #fff;
+	}
 	}
 
 	h1.title {

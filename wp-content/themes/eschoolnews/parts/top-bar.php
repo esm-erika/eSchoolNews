@@ -8,9 +8,9 @@
  */
 
 ?>
-<div class="top-bar-container contain-to-grid show-for-large-up">
+<div class="top-bar-container contain-to-grid show-for-medium-up">
 
-        <div class="title-area row">
+        <div class="title-area row show-for-large-up">
             <div class="name large-5 large-centered columns">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
@@ -23,8 +23,8 @@
 
     <div class="sticky">
 
-        <nav class="top-bar" data-topbar role="navigation">
-            <section class="top-bar-section">
+        <nav class="top-bar row" data-topbar role="navigation">
+            <section class="top-bar-section medium-12 columns">
 
                 <?php foundationpress_top_bar_c(); ?>
                
