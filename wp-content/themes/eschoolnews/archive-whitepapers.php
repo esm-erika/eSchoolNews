@@ -445,7 +445,7 @@ if ( is_user_logged_in() and !$WPForm > 0)  { ?>
 
 
 </div>
-
+<div class="row">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -457,5 +457,9 @@ $(document).ready(function(){
     });
 });
 </script>
+<p>If you click on the "Hide" button, I will disappear.</p>
 
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</div>
 <?php get_footer(); ?>
