@@ -81,7 +81,7 @@ $webinars = new WP_Query(array(
 			</div>
 
 			<div class="row">
-				<hr class="thick">
+				
 
 				<?php
 				$morewebinars = new WP_Query(array(
@@ -102,6 +102,8 @@ $webinars = new WP_Query(array(
 						));  ?> 
 
 						<div class="small-12 medium-8 columns" role="main">
+
+							<hr class="thick">
 
 
 							<h4>Additional Recorded Webinars</h4>

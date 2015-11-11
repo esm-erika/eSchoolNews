@@ -116,9 +116,11 @@ $featured = new WP_Query(array(
 
 <div class="row">
 
-	<hr class="thick"/>
+	
 
 	<div class="small-12 medium-8 columns">
+
+		<hr class="thick"/>
 
 		<?php get_template_part('parts/resources-section'); ?>	
 

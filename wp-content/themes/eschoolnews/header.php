@@ -177,7 +177,7 @@ if($astused > 1){
     
 
     <nav class="row middle show-for-small-up hide-for-large-up">
-      <div class="show-for-medium-only" style="height: 20px;"></div>
+      <div class="show-for-small-up hide-for-large-up" style="height: 20px;"></div>
       <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
         <?php //bloginfo( 'name' ); ?>
         <a href="<?php echo home_url(); ?>">
