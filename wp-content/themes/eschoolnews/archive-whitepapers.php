@@ -26,38 +26,38 @@ get_header(); ?>
 <script>
 $(document).ready(function(){
 	$("#panel1").click(function(){
-        $("div.curriculum-whitepapers").show();
-		$("div.digital-whitepapers").show();
-		$("div.technologies-whitepapers").show();
-		$("div.mobile-online-whitepapers").show();
+        $("div.row.curriculum-whitepapers").show();
+		$("div.row.digital-whitepapers").show();
+		$("div.row.technologies-whitepapers").show();
+		$("div.row.mobile-online-whitepapers").show();
     });
 
 	$("#panel2").click(function(){
-		$("div.digital-whitepapers").hide();
-		$("div.technologies-whitepapers").hide();
-		$("div.mobile-online-whitepapers").hide();
-        $("div.curriculum-whitepapers").show();
+		$("div.row.digital-whitepapers").hide();
+		$("div.row.technologies-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").hide();
+        $("div.row.curriculum-whitepapers").show();
     });
 
 	$("#panel3").click(function(){
-        $("div.curriculum-whitepapers").hide();
-		$("div.technologies-whitepapers").hide();
-		$("div.mobile-online-whitepapers").hide();
-		$("div.digital-whitepapers").show();
+        $("div.row.curriculum-whitepapers").hide();
+		$("div.row.technologies-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").hide();
+		$("div.row.digital-whitepapers").show();
     });
 
 	$("#panel4").click(function(){
-        $("div.curriculum-whitepapers").hide();
-		$("div.digital-whitepapers").hide();
-		$("div.technologies-whitepapers").hide();
-		$("div.mobile-online-whitepapers").show();
+        $("div.row.curriculum-whitepapers").hide();
+		$("div.row.digital-whitepapers").hide();
+		$("div.row.technologies-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").show();
     });	
     
 	$("#panel5").click(function(){
-        $("div.curriculum-whitepapers").hide();
-		$("div.digital-whitepapers").hide();
-		$("div.mobile-online-whitepapers").hide();
-		$("div.technologies-whitepapers").show();
+        $("div.row.curriculum-whitepapers").hide();
+		$("div.row.digital-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").hide();
+		$("div.row.technologies-whitepapers").show();
     });
 	$("#panel6").click(function(){
         $("div.row").hide();
