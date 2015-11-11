@@ -451,10 +451,17 @@ if ( is_user_logged_in() and !$WPForm > 0)  { ?>
 $(document).ready(function(){
     $("#hide").click(function(){
         $("div.curriculum-whitepapers").hide();
+		$("div.digital-whitepapers").hide();
+		$("div.technologies-whitepapers").hide();
+		$("div.mobile-online-whitepapers").hide();
     });
     $("#show").click(function(){
         $("div.curriculum-whitepapers").show();
+		$("div.digital-whitepapers").show();
+		$("div.technologies-whitepapers").show();
+		$("div.mobile-online-whitepapers").show();
     });
+	
 });
 </script>
 <p>If you click on the "Hide" button, I will disappear.</p>
