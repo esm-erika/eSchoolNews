@@ -94,7 +94,7 @@ get_header(); ?>
 						<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
-						if ( is_user_logged_in()  and !$WPForm > 0) { ?>
+						if ( (is_user_logged_in() or $showpagecontent == 1 ) and !$WPForm > 0) { ?>
 
 							<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
 

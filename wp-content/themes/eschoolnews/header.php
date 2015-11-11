@@ -32,7 +32,8 @@ if($astused > 1){
     $astused = $pageadset;  
   }
 }
-?>
+//check if user is logged in
+get_template_part( 'library/logged-in-check' ); ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 <head>

@@ -21,6 +21,7 @@
 					$sfuid = $sfuidSP;
 					$PersonContactIdPS = get_user_meta($wpuid, 'PersonContactId', true );
 					$PersonContactId = $PersonContactIdPS;
+					$showcontent = 1;
 		}
 		if (isset($_COOKIE['esmpass'])) {
 				$esmpasscookvals = explode ( "-" , $_COOKIE['esmpass']);
@@ -33,6 +34,8 @@
 				if (isset($esmpasscookvals[3]) && strlen($esmpasscookvals[3]) == 15 || isset($esmpasscookvals[3]) && strlen($esmpasscookvals[3]) == 18 ){
 					$PersonContactId=$esmpasscookvals[3];
 				} 
+				$showcontent = 1;
+				
 		}
 
 if ( isset($_GET['ps']) ) {
@@ -43,6 +46,7 @@ if ( isset($_GET['ps']) ) {
 						$sfuidSP=$esmpassvals[1];}
 					if (isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 15 || ($pscheck==1) && isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 18 ){
 						$PersonContactIdPS=$esmpassvals[2];} 
+				$showcontent = 1;
 			}
 		
 		$WPautofill = array(
