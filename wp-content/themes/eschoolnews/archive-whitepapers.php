@@ -22,14 +22,66 @@ get_header(); ?>
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#panel1").click(function(){
+        $("div.row.curriculum-whitepapers").show();
+		$("div.row.digital-whitepapers").show();
+		$("div.row.technologies-whitepapers").show();
+		$("div.row.mobile-online-whitepapers").show();
+    });
 
-<ul class="tabs" data-tab role="tablist">
-		  <li class="tab-title active" role="presentation"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel3" role="tab" tabindex="0" aria-selected="true" aria-controls="panel3">Digital</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
-		  <li class="tab-title" role="presentation"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
-</ul>
+	$("#panel2").click(function(){
+		$("div.row.digital-whitepapers").hide();
+		$("div.row.technologies-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").hide();
+        $("div.row.curriculum-whitepapers").show();
+    });
+
+	$("#panel3").click(function(){
+        $("div.row.curriculum-whitepapers").hide();
+		$("div.row.technologies-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").hide();
+		$("div.row.digital-whitepapers").show();
+    });
+
+	$("#panel4").click(function(){
+        $("div.row.curriculum-whitepapers").hide();
+		$("div.row.digital-whitepapers").hide();
+		$("div.row.technologies-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").show();
+    });	
+    
+	$("#panel5").click(function(){
+        $("div.row.curriculum-whitepapers").hide();
+		$("div.row.digital-whitepapers").hide();
+		$("div.row.mobile-online-whitepapers").hide();
+		$("div.row.technologies-whitepapers").show();
+    });
+	$("#panel6").click(function(){
+        $("div.row").hide();
+    });	
+	
+});
+</script>
+
+<div class="row">
+<button id="#panel1">All White Papers</button>
+<button id="#panel2">Curriculum</button>
+<button id="#panel3">Digital</button>
+<button id="#panel4">Mobile &amp; Online Learning</button>
+<button id="#panel5">Technologies</button>
+<button id="#panel6">Hide All (test)</button>
+</div>
+
+<!-- <ul class="tabs" data-tab role="tablist">
+		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
+		  <li class="tab-title" role="presentation" id="#panel2"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
+		  <li class="tab-title" role="presentation" id="#panel3"><a href="#panel3" role="tab" tabindex="0" aria-selected="true" aria-controls="panel3">Digital</a></li>
+		  <li class="tab-title" role="presentation" id="#panel4"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
+		  <li class="tab-title" role="presentation" id="#panel5"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
+</ul> -->
 	
 <!-- Row for main content area -->
 	<div class="small-8 medium-8 columns" role="main">
@@ -58,11 +110,9 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row  <?php 
+					<div class="row<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
-					
-echo "<!-- " .print_r($terms) .  " --> ";
-					//$tags = wp_get_post_tags($post->id); foreach ( $tags as $tag ) { echo " ".$tag->slug ; } ?>">
+					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
 
 
 						
@@ -447,4 +497,5 @@ if ( is_user_logged_in() and !$WPForm > 0)  { ?>
 
 
 </div>
+
 <?php get_footer(); ?>
