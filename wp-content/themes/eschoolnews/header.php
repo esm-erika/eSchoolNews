@@ -215,5 +215,5 @@ get_template_part( 'library/logged-in-check' ); ?>
      <?php do_action( 'foundationpress_after_header' ); ?>
 
 
-     <?php get_template_part( 'parts/ads/billboard' ); ?>      
+     <?php //get_template_part( 'parts/ads/billboard' ); ?>      
 
