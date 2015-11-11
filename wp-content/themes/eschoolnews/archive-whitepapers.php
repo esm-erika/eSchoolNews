@@ -62,13 +62,14 @@ $(document).ready(function(){
 	
 });
 </script>
-<!-- 
-<div class="row">
-<p>If you click on the "Hide" button, I will disappear.</p>
 
-<button id="hide">Hide</button>
-<button id="show">Show</button>
-</div> -->
+<div class="row">
+<button id="#panel1">All White Papers</button>
+<button id="#panel2">Curriculum</button>
+<button id="#panel3">Digital</button>
+<button id="#panel4">Mobile &amp; Online Learning</button>
+<button id="#panel5">Technologies</button>
+</div>
 
 <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
