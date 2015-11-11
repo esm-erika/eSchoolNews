@@ -25,7 +25,7 @@ get_header(); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$("#panel1").click(function(){
+	$("#all").click(function(){
         $("curriculum-whitepapers").show();
 		$("digital-whitepapers").show();
 		$("technologies-whitepapers").show();
@@ -33,34 +33,34 @@ $(document).ready(function(){
 		
     });
 
-	$("#panel2").click(function(){
+	$("#curriculum").click(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
         $("div.row.curriculum-whitepapers").show();
     });
 
-	$("#panel3").click(function(){
+	$("#digital").click(function(){
         $("div.row.curriculum-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.digital-whitepapers").show();
     });
 
-	$("#panel4").click(function(){
+	$("#mobile").click(function(){
         $("div.row.curriculum-whitepapers").hide();
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").show();
     });	
     
-	$("#panel5").click(function(){
+	$("#technologies").click(function(){
         $("div.row.curriculum-whitepapers").hide();
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
     });
-	$("#panel6").click(function(){
+	$("#Hide").click(function(){
         $("curriculum-whitepapers").hide();
 		$("digital-whitepapers").hide();
 		$("mobile-online-whitepapers").hide();
@@ -71,12 +71,12 @@ $(document).ready(function(){
 </script>
 
 <div class="row">
-<button id="#panel1">All White Papers</button>
-<button id="#panel2">Curriculum</button>
-<button id="#panel3">Digital</button>
-<button id="#panel4">Mobile &amp; Online Learning</button>
-<button id="#panel5">Technologies</button>
-<button id="#panel6">Hide All (test)</button>
+<button id="#all">All White Papers</button>
+<button id="#curriculum">Curriculum</button>
+<button id="#digital">Digital</button>
+<button id="#mobile">Mobile &amp; Online Learning</button>
+<button id="#technologies">Technologies</button>
+<button id="#Hide">Hide All (test)</button>
 </div>
 
 <!-- <ul class="tabs" data-tab role="tablist">
