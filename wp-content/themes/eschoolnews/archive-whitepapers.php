@@ -58,7 +58,7 @@ get_header(); ?>
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row  <?php 
+					<div class="row<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
 
@@ -445,4 +445,17 @@ if ( is_user_logged_in() and !$WPForm > 0)  { ?>
 
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>
+
 <?php get_footer(); ?>
