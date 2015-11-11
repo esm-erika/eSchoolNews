@@ -61,11 +61,13 @@ $(document).ready(function(){
 </script>
 
 <div class="row">
-<button id="all">All White Papers</button>
-<button id="curriculum">Curriculum</button>
-<button id="digital">Digital</button>
-<button id="mobile">Mobile &amp; Online Learning</button>
-<button id="technologies">Technologies</button>
+	<div class="small-12 medium-12 columns">
+		<button id="all">All White Papers</button>
+		<button id="curriculum">Curriculum</button>
+		<button id="digital">Digital</button>
+		<button id="mobile">Mobile &amp; Online Learning</button>
+		<button id="technologies">Technologies</button>
+	</div>
 </div>
 
 
