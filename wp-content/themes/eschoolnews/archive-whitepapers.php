@@ -25,6 +25,14 @@ get_header(); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+	
+	$("#hide").click(function(){
+       $("p").hide();
+    });
+    $("#show").click(function(){
+       $("p").show();
+    });
+	
 	$("#all").click(function(){
         $("curriculum-whitepapers").show();
 		$("digital-whitepapers").show();
@@ -71,13 +79,16 @@ $(document).ready(function(){
 </script>
 
 <div class="row">
-<button id="#all">All White Papers</button>
-<button id="#curriculum">Curriculum</button>
-<button id="#digital">Digital</button>
-<button id="#mobile">Mobile &amp; Online Learning</button>
-<button id="#technologies">Technologies</button>
-<button id="#Hide">Hide All (test)</button>
+<button id="all">All White Papers</button>
+<button id="curriculum">Curriculum</button>
+<button id="digital">Digital</button>
+<button id="mobile">Mobile &amp; Online Learning</button>
+<button id="technologies">Technologies</button>
+<button id="Hide">Hide All (test)</button>
 </div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<p>If you click on the "Hide" button, all "p" will disappear.</p>
 
 <!-- <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
