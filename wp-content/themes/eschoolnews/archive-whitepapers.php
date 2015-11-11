@@ -60,10 +60,7 @@ $(document).ready(function(){
 		$("div.technologies-whitepapers").show();
     });
 	$("#panel6").click(function(){
-        $("div.curriculum-whitepapers").hide();
-		$("div.digital-whitepapers").hide();
-		$("div.technologies-whitepapers").hide();
-		$("div.mobile-online-whitepapers").hide();
+        $("div.row").hide();
     });	
 	
 });
@@ -75,7 +72,7 @@ $(document).ready(function(){
 <button id="#panel3">Digital</button>
 <button id="#panel4">Mobile &amp; Online Learning</button>
 <button id="#panel5">Technologies</button>
-<button id="#panel6">Hide All tagged(test)</button>
+<button id="#panel6">Hide All (test)</button>
 </div>
 
 <!-- <ul class="tabs" data-tab role="tablist">
