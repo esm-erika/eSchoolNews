@@ -450,10 +450,10 @@ if ( is_user_logged_in() and !$WPForm > 0)  { ?>
 <script>
 $(document).ready(function(){
     $("#hide").click(function(){
-        $("p").hide();
+        $("div.curriculum-whitepapers").hide();
     });
     $("#show").click(function(){
-        $("p").show();
+        $("div.curriculum-whitepapers").show();
     });
 });
 </script>
