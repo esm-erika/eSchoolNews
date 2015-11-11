@@ -59,6 +59,12 @@ $(document).ready(function(){
 		$("div.mobile-online-whitepapers").hide();
 		$("div.technologies-whitepapers").show();
     });
+	$("#panel6").click(function(){
+        $("div.curriculum-whitepapers").hide();
+		$("div.digital-whitepapers").hide();
+		$("div.technologies-whitepapers").hide();
+		$("div.mobile-online-whitepapers").hide();
+    });	
 	
 });
 </script>
@@ -69,15 +75,16 @@ $(document).ready(function(){
 <button id="#panel3">Digital</button>
 <button id="#panel4">Mobile &amp; Online Learning</button>
 <button id="#panel5">Technologies</button>
+<button id="#panel6">Hide All tagged(test)</button>
 </div>
 
-<ul class="tabs" data-tab role="tablist">
+<!-- <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
 		  <li class="tab-title" role="presentation" id="#panel2"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
 		  <li class="tab-title" role="presentation" id="#panel3"><a href="#panel3" role="tab" tabindex="0" aria-selected="true" aria-controls="panel3">Digital</a></li>
 		  <li class="tab-title" role="presentation" id="#panel4"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
 		  <li class="tab-title" role="presentation" id="#panel5"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
-</ul>
+</ul> -->
 	
 <!-- Row for main content area -->
 	<div class="small-8 medium-8 columns" role="main">
