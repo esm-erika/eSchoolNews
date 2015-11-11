@@ -60,17 +60,20 @@ $(document).ready(function(){
 });
 </script>
 
+
+</div>
+
 <div class="row">
-	<div class="small-12 medium-12 columns">
+<div class="small-12 medium-12 columns">
 		<button id="all">All White Papers</button>
 		<button id="curriculum">Curriculum</button>
 		<button id="digital">Digital</button>
 		<button id="mobile">Mobile &amp; Online Learning</button>
 		<button id="technologies">Technologies</button>
 	</div>
-</div>
+	</div>
 
-
+<div class="row">
 <?php /* <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
 		  <li class="tab-title" role="presentation" id="#panel2"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
