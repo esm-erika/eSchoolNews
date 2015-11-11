@@ -82,35 +82,7 @@ if( $file ): ?>
 			/* Check if the user logged in and then if answerred IBM questions*/
 			global $page; 
 		
-	 		if (($bypassreg == 1) or (is_user_logged_in())) { 
-				
-				 $showpagecontent = 1; 
-			}elseif ( isset($_GET['ps']) ) {
-				$esmpassvals = explode ( "-" , $_GET['ps']);
-				if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){	$wpuid=$esmpassvals[0];
-				get_userdata( $userid );
-				$showpagecontent=1;
-				} elseif (strpos($wpuid,'999999999')) { $showpagecontent = 1;				
-} elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { $wpuid = '999999999'; $showpagecontent = 1; 
-
-} else {$showpagecontent=0;}
-			
-			}elseif (isset($_COOKIE['esmpass']))  {
-				
-				$esmpasscookvals = explode ( "-" , $_COOKIE['esmpass']);
-				if (isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 15 || isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 18 ){
-					$showpagecontent=1;
-				} 
-				
-			} else {
-				//prompt for login
-				$showpagecontent = 0;
-			}
-            if ($showpagecontent == 0){ ?>	
-<!-- showpagecontent == 0 -->
-				<?php	} else { ?>
-<!-- showpagecontent == 1 -->
-			<?php	}  ?>
+?>
 
 
 <!--start slider dependents-->
