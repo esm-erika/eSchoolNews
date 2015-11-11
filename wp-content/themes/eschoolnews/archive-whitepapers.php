@@ -22,6 +22,53 @@ get_header(); ?>
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#panel1").click(function(){
+        $("div.curriculum-whitepapers").show();
+		$("div.digital-whitepapers").show();
+		$("div.technologies-whitepapers").show();
+		$("div.mobile-online-whitepapers").show();
+    });
+
+	$("#panel2").click(function(){
+		$("div.digital-whitepapers").hide();
+		$("div.technologies-whitepapers").hide();
+		$("div.mobile-online-whitepapers").hide();
+        $("div.curriculum-whitepapers").show();
+    });
+
+	$("#panel3").click(function(){
+        $("div.curriculum-whitepapers").hide();
+		$("div.technologies-whitepapers").hide();
+		$("div.mobile-online-whitepapers").hide();
+		$("div.digital-whitepapers").show();
+    });
+
+	$("#panel4").click(function(){
+        $("div.curriculum-whitepapers").hide();
+		$("div.digital-whitepapers").hide();
+		$("div.technologies-whitepapers").hide();
+		$("div.mobile-online-whitepapers").show();
+    });	
+    
+	$("#panel5").click(function(){
+        $("div.curriculum-whitepapers").hide();
+		$("div.digital-whitepapers").hide();
+		$("div.mobile-online-whitepapers").hide();
+		$("div.technologies-whitepapers").show();
+    });
+	
+});
+</script>
+<!-- 
+<div class="row">
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</div> -->
 
 <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
@@ -445,28 +492,5 @@ if ( is_user_logged_in() and !$WPForm > 0)  { ?>
 
 
 </div>
-<div class="row">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#hide").click(function(){
-        $("div.curriculum-whitepapers").hide();
-		$("div.digital-whitepapers").hide();
-		$("div.technologies-whitepapers").hide();
-		$("div.mobile-online-whitepapers").hide();
-    });
-    $("#show").click(function(){
-        $("div.curriculum-whitepapers").show();
-		$("div.digital-whitepapers").show();
-		$("div.technologies-whitepapers").show();
-		$("div.mobile-online-whitepapers").show();
-    });
-	
-});
-</script>
-<p>If you click on the "Hide" button, I will disappear.</p>
 
-<button id="hide">Hide</button>
-<button id="show">Show</button>
-</div>
 <?php get_footer(); ?>
