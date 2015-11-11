@@ -25,55 +25,49 @@ get_header(); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$("#panel1").click(function(){
-        $("div.row.curriculum-whitepapers").show();
-		$("div.row.digital-whitepapers").show();
-		$("div.row.technologies-whitepapers").show();
-		$("div.row.mobile-online-whitepapers").show();
+	
+	$("#all").click(function(){
+        $("div.row.all").show();
     });
 
-	$("#panel2").click(function(){
+	$("#curriculum").click(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
         $("div.row.curriculum-whitepapers").show();
     });
 
-	$("#panel3").click(function(){
+	$("#digital").click(function(){
         $("div.row.curriculum-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.digital-whitepapers").show();
     });
 
-	$("#panel4").click(function(){
+	$("#mobile").click(function(){
         $("div.row.curriculum-whitepapers").hide();
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").show();
     });	
     
-	$("#panel5").click(function(){
+	$("#technologies").click(function(){
         $("div.row.curriculum-whitepapers").hide();
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
     });
-	$("#panel6").click(function(){
-        $("div.row").hide();
-    });	
-	
 });
 </script>
 
 <div class="row">
-<button id="#panel1">All White Papers</button>
-<button id="#panel2">Curriculum</button>
-<button id="#panel3">Digital</button>
-<button id="#panel4">Mobile &amp; Online Learning</button>
-<button id="#panel5">Technologies</button>
-<button id="#panel6">Hide All (test)</button>
+<button id="all">All White Papers</button>
+<button id="curriculum">Curriculum</button>
+<button id="digital">Digital</button>
+<button id="mobile">Mobile &amp; Online Learning</button>
+<button id="technologies">Technologies</button>
 </div>
+
 
 <!-- <ul class="tabs" data-tab role="tablist">
 		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
@@ -91,7 +85,7 @@ $(document).ready(function(){
 	<div class="tabs-content">
         
 
-<section role="tabpanel" aria-hidden="false" class="content active" id="panel1">
+<section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
 		    <h4>All White Papers</h4>
 		    <br/>
@@ -110,7 +104,7 @@ $(document).ready(function(){
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row<?php 
+					<div class="row all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
 
