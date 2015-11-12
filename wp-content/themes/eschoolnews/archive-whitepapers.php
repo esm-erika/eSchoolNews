@@ -121,10 +121,10 @@ $(document).ready(function(){
 <section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
 		    <h4 id="AllTitle">All White Papers</h4>
-		    <h4 id="CurriculumTitle">Curriculum</h4>
-		    <h4 id="DigitalTitle">Digital</h4>
-		    <h4 id="MobileTitle">Mobile &amp; Online Learning</h4>
-            <h4 id="TechnologiesTitle">Technologies</h4>
+		    <h4 id="CurriculumTitle" style="display:none;">Curriculum</h4>
+		    <h4 id="DigitalTitle" style="display:none;">Digital</h4>
+		    <h4 id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</h4>
+            <h4 id="TechnologiesTitle" style="display:none;">Technologies</h4>
 
 		    <br/>
 		    <?php
