@@ -24,7 +24,6 @@ get_header();
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
 		$("h4#CurriculumTitle").hide();
@@ -142,7 +141,7 @@ $(document).ready(function(){
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="row all<?php 
+					<div class="panel row all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
 
@@ -168,8 +167,11 @@ $(document).ready(function(){
 
 						    <?php } ?>
                     	
-
-                    	<h5><?php the_title(); ?></h5>
+						<header>
+                    		<h3><?php the_title(); ?></h3>
+                    		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
+                    		<hr/>
+                    	</header>
 
                     	<p class="excerpt">
 							<?php 
@@ -194,8 +196,9 @@ $(document).ready(function(){
                         
                         	<?php } ?>
 					</div>
-					<hr/>
                     </div>
+
+                    <br/>
 
 					
 					

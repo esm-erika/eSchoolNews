@@ -23,10 +23,18 @@ get_header(); ?>
 
 				<?php if ( has_term( 'upcoming-webinars', 'status-webinars' ) ) { ?>
 
-				<h5><i class="fi-calendar"></i> <?php 
+				<h6><i class="fi-calendar"></i> <?php 
 				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
-				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
-				<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+				if($showdate){ echo $showdate -> format('F d, Y');} ?></h6>
+				<h6><i class="fi-clock"></i> <?php the_field('event_time'); ?></h6>
+
+				<?php } ?>
+
+				<?php if ( has_term( 'archived-webinars', 'status-webinars' ) ) { ?>
+
+				<div class="posted-on"><i class="fi-calendar"></i> <strong>Posted on:</strong> <?php 
+				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+				if($showdate){ echo $showdate -> format('F d, Y');} ?></div>
 
 				<?php } ?>
 

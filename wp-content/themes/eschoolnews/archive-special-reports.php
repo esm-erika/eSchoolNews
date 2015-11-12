@@ -54,7 +54,7 @@ get_header(); ?>
 						</div>
 						<div class="large-8 columns">
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<p class="small-caps"><?php the_time('F j, Y'); ?></p>
+						<!-- <p class="small-caps"><?php //the_time('F j, Y'); ?></p> -->
 
 							<?php 
 
