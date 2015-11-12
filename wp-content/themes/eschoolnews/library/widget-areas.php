@@ -33,8 +33,8 @@ function foundationpress_sidebar_widgets() {
 	  'id' => 'publication-widgets',
 	  'name' => __( 'Publication widgets', 'foundationpress' ),
 	  'description' => __( 'Drag widgets to publications container', 'foundationpress' ),
-	  'before_widget' => '<article id="%1$s" class="small-6 medium-3 columns widget %2$s">',
-	  'after_widget' => '</article>',
+	  'before_widget' => '<article id="%1$s" class="small-6 medium-3 columns widget %2$s"><a href="#" data-reveal-id="subscribe-drop">',
+	  'after_widget' => '</a></article>',
 	  'before_title' => '<h5 style="display: none;">',
 	  'after_title' => '</h5>',
 	));
