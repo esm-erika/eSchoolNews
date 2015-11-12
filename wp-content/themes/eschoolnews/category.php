@@ -19,7 +19,11 @@ get_header(); ?>
 
 <?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 
-	<?php get_template_part( 'parts/section-titles' ); ?>
+<div class="row">
+	<div class="small-12 medium-12 columns">
+		<?php get_template_part( 'parts/section-titles' ); ?>
+	</div>
+</div>
 
 <div class="row" id="featured">
 <?php 
