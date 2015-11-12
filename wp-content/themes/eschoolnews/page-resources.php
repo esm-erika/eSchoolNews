@@ -29,14 +29,16 @@ get_header(); ?>
 
 	<div class="row">
 
+		
+	
+	<div class="small-12 medium-8 columns">
+
 		<?php if( is_page('resources')) {
 
 echo '<hr class="thick" />';
 
 }?>
 
-	
-	<div class="small-12 medium-8 columns">
 
 		<h4>New Resources</h4>
 		<br/>
@@ -101,9 +103,10 @@ echo '<hr class="thick" />';
 
 <div class="row">
 
-<hr class="thick" />
+
 
 <div class="medium-12 columns">
+	<hr class="thick" />
 <h4>Additional Resources</h4>
 
 <br/>

@@ -192,11 +192,14 @@ nav.tab-bar .tab-bar-section.middle {
 
  ul li {
 	background: #fff;
+
+
 	}
 }
 
 .top-bar-section>ul>.divider, .top-bar-section>ul>[role="separator"] {
 	border-right: none;
+	display: none !important;
 }
 
 .top-bar-section {
@@ -214,6 +217,8 @@ nav.tab-bar .tab-bar-section.middle {
 		border: none;
 		display: none;
 	}
+
+
 
 	.center-menu li:not(.has-form) a:not(.button) {
 		background-color: #fff;
@@ -288,7 +293,7 @@ nav.tab-bar .tab-bar-section.middle {
 		display: inline-block;
 
 		li.divider:first-child {
-			display: none;
+			display: none !important;
 		}
 	}
 
@@ -297,6 +302,7 @@ nav.tab-bar .tab-bar-section.middle {
 
 nav.tab-bar {
 	background: #fff;
+	float: left;
 
 	.left-small {
 		border-right: none;
@@ -1116,6 +1122,11 @@ div.registration-form {
 		}
 
 	}
+
+	ul.center-menu li {
+		float: none;
+		display: inline-block;
+	}
 }
 
 
@@ -1124,6 +1135,8 @@ div.registration-form {
 		display: block;
 	}
 
+	
+
 }
 
 
@@ -1131,6 +1144,11 @@ div.registration-form {
 
 	nav.tab-bar {
 		//display: none;
+	}
+
+	nav.top-bar .top-bar-section ul.center-menu li {
+		float: left;
+
 	}
 
 	.quaternary article {

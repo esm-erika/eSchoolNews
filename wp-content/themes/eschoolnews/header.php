@@ -180,7 +180,7 @@ if( esm_is_user_logged_in() ){ echo esm_is_user_logged_in() . 'logged in <Br>'; 
     
 
     <nav class="row middle show-for-small-up hide-for-large-up">
-      <div class="show-for-medium-only" style="height: 20px;"></div>
+      <div class="show-for-small-up hide-for-large-up" style="height: 20px;"></div>
       <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
         <?php //bloginfo( 'name' ); ?>
         <a href="<?php echo home_url(); ?>">
@@ -217,5 +217,5 @@ if( esm_is_user_logged_in() ){ echo esm_is_user_logged_in() . 'logged in <Br>'; 
      <?php do_action( 'foundationpress_after_header' ); ?>
 
 
-     <?php get_template_part( 'parts/ads/billboard' ); ?>      
+     <?php //get_template_part( 'parts/ads/billboard' ); ?>      
 
