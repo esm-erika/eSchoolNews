@@ -41,6 +41,7 @@ $resourcessection = 0;
 		echo '<h4>';
 		single_cat_title();
 		echo ' Resources</h4>';
+		echo '<br/>';
 	} else {
 		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
 	} ?>
