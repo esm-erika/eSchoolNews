@@ -24,6 +24,7 @@
 			$astused = 1;
 		}
 	}
+ echo '    <!-- skyscraper '.$astused.' --> '; 	
 	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,7);}
 		
 	?>

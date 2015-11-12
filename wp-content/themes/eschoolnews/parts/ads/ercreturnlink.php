@@ -24,6 +24,7 @@
 			$astused = 1;
 		}
 	}
+	 echo '    <!-- erc return banner '.$astused.' --> '; 	
 	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,24);}
 		
 	?>

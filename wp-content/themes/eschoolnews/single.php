@@ -42,7 +42,7 @@ include('single-coa.php');
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title"><?php the_title(); ?>aaaaaaaaaaa</h1>
 				<div class="small-caps">By <?php the_author(); ?></div>
 							<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
 
