@@ -43,15 +43,15 @@ $whitepapersection = 0;
 	<hr class="thick"/>
 
 	<?php if(is_category()) {
-	echo '<h3>';
+	echo '<h4>';
 	single_cat_title();
-	echo ' White Papers</h3>';
+	echo ' White Papers</h4>';
 } else {
 	echo '<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>';
 } ?>
 
 
-
+<br/>
 		<ul class="small-block-grid-1 large-block-grid-2">
 
 

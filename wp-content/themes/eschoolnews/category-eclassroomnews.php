@@ -20,7 +20,7 @@ get_header(); ?>
 <?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 
 <div class="row">
-	<div class="small-12 medium-7 medium-centered columns">
+	<div class="small-12 medium-4 medium-centered columns">
 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eclassroomnewslogo.png" alt="eClassroom News"/>
 	<hr/>
 </div>
@@ -119,8 +119,6 @@ $featured = new WP_Query(array(
 	
 
 	<div class="small-12 medium-8 columns">
-
-		<hr class="thick"/>
 
 		<?php get_template_part('parts/resources-section'); ?>	
 

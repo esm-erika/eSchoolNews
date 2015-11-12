@@ -37,10 +37,12 @@ $resourcessection = 0;
 <div class="row">
 	<div class="small-12 medium-12 columns">
 
+		<hr class="thick"/>
+		
 		<?php if(is_category()) {
-		echo '<h3>';
+		echo '<h4>';
 		single_cat_title();
-		echo ' Resources</h3>';
+		echo ' Resources</h4>';
 	} else {
 		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
 	} ?>
