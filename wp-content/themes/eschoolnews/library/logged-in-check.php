@@ -101,7 +101,7 @@ if (is_user_logged_in()) {
 
 if($showpagecontent == 1) {
 
-if($_COOKIE['esmpass']){$esmpass_COOKIE = $_COOKIE['esmpass'];} else { $esmpass_COOKIE = $value; }
+if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
 	
 	$WPautofill = array(
 	wpuidSP => $wpuidSP,
@@ -118,10 +118,22 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = $_COOKIE['esmpass'];} else { $esmpass_
 $showpagecontent = 0;	
 //echo '114 showpagecontent = ' . $showpagecontent . '<br>';	
 }
+
+
+function esm_is_user_logged_in(){
+     if($GLOBALS['showpagecontent'] == 1){
+		return TRUE ;
+	 } else {
+		return FALSE ;
+	 }
+}
+
+
+
 /*
 echo '<pre>';
 print_r($WPautofill);
 echo '';
 echo 'showpagecontent = ' . $showpagecontent . '<br>';
 echo 'esmpass = ' . $_COOKIE['esmpass'] . '<br>';
-echo '</pre>';*/
+echo '</pre>';*/echo '<!-- lic showpagecontent = ' .$showpagecontent. ' -->';?>

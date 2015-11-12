@@ -33,7 +33,9 @@ if($astused > 1){
   }
 }
 //check if user is logged in
-get_template_part( 'library/logged-in-check' ); ?>
+get_template_part( 'library/logged-in-check' ); 
+if( esm_is_user_logged_in() ){ echo esm_is_user_logged_in() . 'logged in <Br>'; }
+?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 <head>
