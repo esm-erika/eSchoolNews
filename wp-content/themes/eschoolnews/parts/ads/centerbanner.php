@@ -24,6 +24,7 @@
 			$astused = 1;
 		}
 	}
+	echo '    <!-- center banner '.$astused.' --> '; 
 	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,8);}
 		
 	?>
