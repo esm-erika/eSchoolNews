@@ -8,7 +8,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-global $post, $page;
+global $post, $page, $esmuser; 
 $post_id = $post->ID;
 $astcset = $_GET['astc'];
 if(!filter_var($astcset, FILTER_VALIDATE_INT))
@@ -33,7 +33,8 @@ if($astused > 1){
   }
 }
 //check if user is logged in
-get_template_part( 'library/logged-in-check' ); ?>
+get_template_part( 'library/logged-in-check' ); 
+?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 <head>
