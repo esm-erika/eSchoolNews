@@ -16,7 +16,39 @@
 function new_excerpt_more( $more ) {
 	return '';
 }
-//add_filter('excerpt_more', 'new_excerpt_more');  //removed to allow more
+add_filter('excerpt_more', 'new_excerpt_more');  
+
+
+
+
+/**
+ * Add prev and next links to a numbered page link list
+ */
+function wp_link_pages_args_prevnext_add($args)
+{
+    global $page, $numpages, $more, $pagenow;
+
+    if (!$args['next_or_number'] == 'next_and_number') 
+        return $args; # exit early
+
+    $args['next_or_number'] = 'number'; # keep numbering for the main part
+    if (!$more)
+        return $args; # exit early
+
+    if($page-1) # there is a previous page
+        $args['before'] .= _wp_link_page($page-1)
+            . $args['link_before']. $args['previouspagelink'] . $args['link_after'] . '</a>'
+        ;
+
+    if ($page<$numpages) # there is a next page
+        $args['after'] = _wp_link_page($page+1)
+            . $args['link_before'] . ' ' . $args['nextpagelink'] . $args['link_after'] . '</a>'
+            . $args['after']
+        ;
+
+    return $args;
+}
+add_filter('wp_link_pages_args', 'wp_link_pages_args_prevnext_add');
 
 
 function append_query_string($url) {
