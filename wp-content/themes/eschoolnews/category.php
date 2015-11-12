@@ -142,8 +142,6 @@ $featured = new WP_Query(array(
 
 	<div class="small-12 medium-8 columns">
 
-		<hr class="thick"/>
-
 		<?php get_template_part('parts/resources-section'); ?>	
 
 		<?php get_template_part('parts/whitepaper-section'); ?>	
