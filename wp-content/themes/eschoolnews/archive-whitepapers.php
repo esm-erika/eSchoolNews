@@ -27,9 +27,18 @@ get_header();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
         $("div.row.all").show();
+		$("h4#AllTitle").show();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();		
+		
     });
 
 	$("#curriculum").click(function(){
@@ -37,6 +46,12 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
         $("div.row.curriculum-whitepapers").show();
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").show();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();		
+
     });
 
 	$("#digital").click(function(){
@@ -44,6 +59,12 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.digital-whitepapers").show();
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").show();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();		
+
     });
 
 	$("#mobile").click(function(){
@@ -51,6 +72,12 @@ $(document).ready(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").show();
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").show();
+		$("h4#TechnologiesTitle").hide();		
+
     });	
     
 	$("#technologies").click(function(){
@@ -58,6 +85,12 @@ $(document).ready(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").show();		
+
     });
 });
 </script>
@@ -66,23 +99,16 @@ $(document).ready(function(){
 </div>
 
 <div class="row">
-<div class="small-12 medium-12 columns">
+	<div class="small-12 medium-12 columns">
 		<button id="all">All White Papers</button>
 		<button id="curriculum">Curriculum</button>
 		<button id="digital">Digital</button>
 		<button id="mobile">Mobile &amp; Online Learning</button>
 		<button id="technologies">Technologies</button>
 	</div>
-	</div>
+</div>
 
 <div class="row">
-<?php /* <ul class="tabs" data-tab role="tablist">
-		  <li class="tab-title active" role="presentation" id="#panel1"><a href="#panel1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel1">All White Papers</a></li>
-		  <li class="tab-title" role="presentation" id="#panel2"><a href="#panel2" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2">Curriculum</a></li>
-		  <li class="tab-title" role="presentation" id="#panel3"><a href="#panel3" role="tab" tabindex="0" aria-selected="true" aria-controls="panel3">Digital</a></li>
-		  <li class="tab-title" role="presentation" id="#panel4"><a href="#panel4" role="tab" tabindex="0" aria-selected="true" aria-controls="panel4">Mobile &amp; Online Learning</a></li>
-		  <li class="tab-title" role="presentation" id="#panel5"><a href="#panel5" role="tab" tabindex="0" aria-selected="true" aria-controls="panel5">Technologies</a></li>
-</ul> */ ?>
 	
 <!-- Row for main content area -->
 	<div class="small-8 medium-8 columns" role="main">
@@ -94,7 +120,12 @@ $(document).ready(function(){
 
 <section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
-		    <h4>All White Papers</h4>
+		    <h4 id="AllTitle">All White Papers</h4>
+		    <h4 id="CurriculumTitle">Curriculum</h4>
+		    <h4 id="DigitalTitle">Digital</h4>
+		    <h4 id="MobileTitle">Mobile &amp; Online Learning</h4>
+            <h4 id="TechnologiesTitle">Technologies</h4>
+
 		    <br/>
 		    <?php
 
