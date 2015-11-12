@@ -20,7 +20,14 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 function append_query_string($url) {
-    return add_query_arg($_GET, $url);
+	$getarg = '';
+	if(filter_var($_GET['ast'], FILTER_VALIDATE_INT)){$getarg = $getarg.'ast='. $_GET['ast'].'&';}
+	if(filter_var($_GET['astc'], FILTER_VALIDATE_INT)){$getarg = $getarg.'astc='. $_GET['astc'].'&';}
+
+if(filter_var($_GET['ps'], FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>"/[a-zA-Z\-]/")))){ $getarg = $getarg.'ps='. $_GET['ps'].'&'; } 
+	
+    return add_query_arg($getarg, $url);
+	
 }
 add_filter('the_permalink', 'append_query_string');
 
