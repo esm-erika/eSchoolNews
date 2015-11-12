@@ -1,3 +1,5 @@
+	<hr class="thick"/>
+
 	<h4>Top Stories</h4>
 	<br/>
 
