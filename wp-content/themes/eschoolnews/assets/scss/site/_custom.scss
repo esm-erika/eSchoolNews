@@ -979,6 +979,16 @@ footer.container > div {
 	.sites, .newsletters {
 		article {
 			margin-bottom: 20px;
+
+		.widget_sp_image-description {
+			text-align: center;
+		}
+		
+		.has-tip {
+			font-weight: normal;
+			font-size: 80%;
+		}
+
 		}
 
 		img {
