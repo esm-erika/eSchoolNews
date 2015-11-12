@@ -70,6 +70,9 @@
 
 	</a>
 </h6>
+
+		<hr class="thick"/>
+
 </div>
 
 </div> <!-- end row -->

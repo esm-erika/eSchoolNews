@@ -77,6 +77,9 @@
 </ul>
 
 <h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">See All Top Stories &raquo;</a></h6>
+
+		<hr class="thick"/>
+
 </div>
 
 </div> <!-- end row -->

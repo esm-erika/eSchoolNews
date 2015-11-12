@@ -36,8 +36,6 @@ $resourcessection = 0;
 
 <div class="row">
 	<div class="small-12 medium-12 columns">
-
-		<hr class="thick"/>
 		
 		<?php if(is_category()) {
 		echo '<h4>';

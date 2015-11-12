@@ -114,3 +114,5 @@
 
 			</ul>
 		</div>
+
+				<hr class="thick"/>
