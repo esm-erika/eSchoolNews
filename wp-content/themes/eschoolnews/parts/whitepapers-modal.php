@@ -24,7 +24,7 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	); 
 
 
-echo '<!-- ' .$showpagecontent. ' -->';
+
 
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
@@ -82,8 +82,8 @@ echo '<!-- ' .$showpagecontent. ' -->';
 		
 <?php global $page; ?>
 
-<?php if($showpagecontent == 1){ 	
-			if (!$WPcpl){
+<?php if(esm_is_user_logged_in()){ 	
+			
 
 				//	the_content(); no need it is above.
 
@@ -102,7 +102,7 @@ echo '<p><a href="'.$WPURL.'" target="_blank">';
 	 
 	 }
 echo '</a></p>'; 
-}
+
 
 ?>
 

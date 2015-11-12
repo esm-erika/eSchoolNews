@@ -12,7 +12,7 @@
 */
 
 
-global $post, $wpdb, $user ;
+global $post, $wpdb, $user, $esmuser; 
 	
 if (is_user_logged_in()) {
 
@@ -102,16 +102,16 @@ if (is_user_logged_in()) {
 if($showpagecontent == 1) {
 
 if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
-	
-	$WPautofill = array(
-	wpuidSP => $wpuidSP,
+	global $esmuser;
+	$esmuser = array(
+	esmuserwpuidSP => $wpuidSP,
 	sfuidSP => $sfuidSP,
 	PersonContactIdPS => $PersonContactIdPS,
 	wpuid => $wpuid,
 	sfuid => $sfuid,
 	PersonContactId => $PersonContactId,	
 	esmpassvalue => $esmpass_COOKIE,	
-	astc => $astc			
+	showpagecontent => $showpagecontent			
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';	
 } else {
@@ -121,12 +121,15 @@ $showpagecontent = 0;
 
 
 function esm_is_user_logged_in(){
-     if($GLOBALS['showpagecontent'] == 1){
+global $esmuser;	
+  if($esmuser['showpagecontent'] == 1){
 		return TRUE ;
 	 } else {
 		return FALSE ;
-	 }
+	 } 
+
 }
+
 
 
 
@@ -136,4 +139,4 @@ print_r($WPautofill);
 echo '';
 echo 'showpagecontent = ' . $showpagecontent . '<br>';
 echo 'esmpass = ' . $_COOKIE['esmpass'] . '<br>';
-echo '</pre>';*/echo '<!-- lic showpagecontent = ' .$showpagecontent. ' -->';?>
+echo '</pre>';*/
