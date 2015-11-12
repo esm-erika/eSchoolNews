@@ -16,21 +16,13 @@
 function new_excerpt_more( $more ) {
 	return '';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+//add_filter('excerpt_more', 'new_excerpt_more');  //removed to allow more
 
 
 function append_query_string($url) {
-	
-	$getarg = '';
-	if(filter_var($_GET['ast'], FILTER_VALIDATE_INT)){$getarg = $getarg.'ast='. $_GET['ast'].'&';}
-	if(filter_var($_GET['astc'], FILTER_VALIDATE_INT)){$getarg = $getarg.'astc='. $_GET['astc'].'&';}
-
-if(filter_var($_GET['ps'], FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>"/[a-zA-Z\-]/")))){ $getarg = $getarg.'ps='. $_GET['ps'].'&'; } 
-	
-    return add_query_arg($getarg, $url);
-	
+    return add_query_arg($_GET, $url);
 }
-//add_filter('the_permalink', 'append_query_string');
+//add_filter('the_permalink', 'append_query_string'); //removed prevent query string addition in all cases
 
 
 function LandingRecentItems($catslug, $qty = 3){
