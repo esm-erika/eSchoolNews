@@ -72,7 +72,11 @@ include('single-coa.php');
     		endif;
 			 ?>
 
-			 <?php the_content("<br />...continue reading " . the_title('', '', false)); ?>
+			 <?php the_content(); 
+			 wp_link_pages( array ( 'next_or_number' => 'next',
+			  'before' => '<div id="page-links">',
+			  'after' => '</div>' ) );
+			 ?>
 			
             </div>
 
