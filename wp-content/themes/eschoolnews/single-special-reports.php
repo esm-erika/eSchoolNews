@@ -66,7 +66,9 @@ get_header(); ?>
 					
 				} else {
 				the_excerpt(); 
-					wp_login_form();
+				echo '<p><strong>Free registration required to view this resource.</strong></p>
+';
+				wp_login_form();
 				}
 
 				?>
