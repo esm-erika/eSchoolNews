@@ -75,8 +75,14 @@ include('single-coa.php');
 				$showpagecontent = 1;
 			} else { 
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
-				if($astc > 1){
-					$showpagecontent = 0;
+				
+				$astcset = $_GET['astc'];
+				if(filter_var($astcset, FILTER_VALIDATE_INT)){
+					if($astcset > 1){ $astpagecontent = 0; }
+				}
+				
+				if($astpagecontent == 0){
+					$showpagecontent = 0; 
 				} else if($reg_requirement == 1){
 					$showpagecontent = 0;
 				} else {
