@@ -7,10 +7,10 @@
  * @since FoundationPress 1.0.0
  */
 
-//function custom_excerpt_length( $length ) {
-//	return 20;
-//}
-//add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 function new_excerpt_more( $more ) {
