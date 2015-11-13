@@ -66,7 +66,7 @@ get_header(); ?>
 					
 				} else {
 				the_excerpt(); 
-				echo '<p><strong>You must be a registered user to view this resource.</strong></p>
+				echo '<p><strong>You must be a registered user to view this resource.</strong></p><p>Login:</p>
 ';
 				wp_login_form();
 				}
