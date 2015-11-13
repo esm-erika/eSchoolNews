@@ -81,14 +81,13 @@ include('single-coa.php');
 			}
 
 				if($showpagecontent == 0){
-				the_excerpt()
+				the_excerpt(); echo '...'
 			?>
 
 <div style="border:#CCCCCC solid 1px; padding:10px;">
 <form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
 <p><strong>Free registration required to view this resource.</strong><br />
 <br />
-Register today and receive free access to all our news and resources and the ability to customize your news by topic with My eSchool News.<br /><br />
 <a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode(get_permalink()); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
 <br />
 <br />
@@ -109,23 +108,19 @@ Already a member? Log in
 					
 				} else {
 					 the_content(); 
+					  wp_link_pages(array(
+							'before' => '<p>' . __('Pages:'),
+							'after' => '</p>',
+							'next_or_number' => 'next_and_number', # activate parameter overloading
+							'nextpagelink' => __('Next'),
+							'previouspagelink' => __('Previous'),
+							'pagelink' => '%',
+							'echo' => 1 )
+						);
+					 
+					 
+					 
 				}
-				
-				 
-				 
-			 //wp_link_pages( array ( 'next_or_number' => 'next',
-			 // 'before' => '<div id="page-links">',
-			 // 'after' => '</div>' ) );
-			 
-			 wp_link_pages(array(
-    'before' => '<p>' . __('Pages:'),
-    'after' => '</p>',
-    'next_or_number' => 'next_and_number', # activate parameter overloading
-    'nextpagelink' => __('Next'),
-    'previouspagelink' => __('Previous'),
-    'pagelink' => '%',
-    'echo' => 1 )
-);
 			 ?>
 			
             </div>
