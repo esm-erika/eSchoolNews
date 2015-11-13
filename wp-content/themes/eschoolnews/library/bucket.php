@@ -122,5 +122,37 @@ function is_post_type($type){
 }
 
 
+function set_postdisplay($content){
+global $post, $user, $esmuser;
+
+	$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true);
+
+		/*	0 : Default
+		1 : Required
+		2 : Not Required */
+	if($reg_requirement == 0){
+		$bypassreg = 0;
+	} else if($reg_requirement == 1){
+		$bypassreg = 1;
+	} else if($reg_requirement == 2){
+		$bypassreg = 0;
+	} else { $bypassreg = 0; }
+
+if ($bypassreg == 0 or esm_is_user_logged_in() ){ return $content; } 
+else {
+
+$excerpt = apply_filters('get_the_excerpt', $single->post_excerpt);
+
+	$content = $excerpt . wp_login_form(array('echo' => false));
+	
+	 }
+	
+}
+
+
+add_filter('the_content', 'set_postdisplay');
+
+
+
 
 ?>
