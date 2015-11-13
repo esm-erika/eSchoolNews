@@ -16,6 +16,25 @@
 
 get_header(); ?>
 
+<?php 
+
+global $cat;
+
+	// get parent category slug
+	$parentCatList = get_category_parents($cat,false,',');
+	$parentCatListArray = explode(",",$parentCatList);
+	$topParentName = $parentCatListArray[0];
+	$sdacReplace = array(" " => "-", "(" => "", ")" => "");
+	$topParent = strtolower(strtr($topParentName,$sdacReplace));
+	$currCat = 'view-all-' . $topParent;
+
+if( is_category( $currCat )){ 
+
+	include (TEMPLATEPATH . '/category-view-all.php');
+
+} ?>
+
+
 
 <?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 
@@ -28,7 +47,7 @@ get_header(); ?>
 <div class="row" id="featured">
 <?php 
 			
-global $cat;
+
 
 
 $featured = new WP_Query(array(

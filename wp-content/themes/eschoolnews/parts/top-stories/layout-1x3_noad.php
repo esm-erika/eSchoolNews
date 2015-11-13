@@ -26,8 +26,7 @@
 		<div class="columns large-12">
 
 			<?php // The Query
-
-			$topstories = new WP_Query(array(
+				$topstories = new WP_Query(array(
 				'post_type' => 'post',
 				'posts_per_page' => 3
 				)); 
@@ -42,9 +41,7 @@
 					'posts_per_page' => 3
 					)); 
 
-
-				}
-			 ?>
+			 } ?>
 
 <ul class="small-block-grid-1 medium-block-grid-3">
 
@@ -76,7 +73,26 @@
 
 </ul>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/top-stories">See All Top Stories &raquo;</a></h6>
+<h6 class="readmore">
+
+<?php  
+
+$current_category = get_category ($cat); 
+$catplug = $current_category->slug;
+
+	if (is_category()) {
+
+?>
+	<a href="<?php site_url(); ?>/<?php echo $catplug; ?>/view-all-<?php echo $catplug; ?>">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
+
+<?php } else { ?>
+
+	<a href="<?php site_url(); ?>/top-stories">See All Top Stories &raquo;</a>
+
+</h6>
+
+<?php } ?>
+
 
 		<hr class="thick"/>
 
