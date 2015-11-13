@@ -7,16 +7,23 @@
  * @since FoundationPress 1.0.0
  */
 
-function custom_excerpt_length( $length ) {
-	return 30;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-
-//function new_excerpt_more( $more ) {
-//	return '';
+//function custom_excerpt_length( $length ) {
+//	return 20;
 //}
-//add_filter('excerpt_more', 'new_excerpt_more');  
+//add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function string_limit_words($string, $word_limit)
+{
+  $words = explode(' ', $string, ($word_limit + 1));
+  if(count($words) > $word_limit)
+  array_pop($words);
+  return implode(' ', $words);
+}
+
+function new_excerpt_more( $more ) {
+	return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');  
 
 
 

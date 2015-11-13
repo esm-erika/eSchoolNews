@@ -91,7 +91,7 @@ include('single-coa.php');
 			}
 
 				if($showpagecontent == 0){
-				the_excerpt(); echo '...'
+				string_limit_words(get_the_excerpt(), 35);
 			?>
 
 <div style="border:#CCCCCC solid 1px; padding:10px;">
