@@ -75,7 +75,9 @@ include('single-coa.php');
 				$showpagecontent = 1;
 			} else { 
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
-				if($reg_requirement == 1){
+				if($astc > 1){
+					$showpagecontent = 0;
+				} else if($reg_requirement == 1){
 					$showpagecontent = 0;
 				} else {
 					$showpagecontent = 1;
