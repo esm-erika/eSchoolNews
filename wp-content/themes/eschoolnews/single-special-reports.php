@@ -41,21 +41,35 @@ get_header(); ?>
 						
 				} else {
 					echo '<div class="medium-12">';
-				} ?>
+				} 
 
-				<?php the_content(); ?>
 
-				
+			if (esm_is_user_logged_in()){
+				$showpagecontent = 1;
+			} else { 
+				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
+				if($reg_requirement == 2){
+					$showpagecontent = 1;
+				} else {
+					$showpagecontent = 0;
+				}
+			}
 
-							<?php 
+				if($showpagecontent == 1){
+					the_content();
+					$file = get_field('download_file');
 
-							$file = get_field('download_file');
-
-							if( $file ): ?>
-								
+							if( $file ){ ?>
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
+							<?php } 
 
-							<?php endif; ?>
+					
+				} else {
+				the_excerpt(); 
+					wp_login_form();
+				}
+
+				?>
 
 							</div>
 
