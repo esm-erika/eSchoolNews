@@ -211,7 +211,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 		?>
 	
 <div class="row top">
-	<div class="small-12  medium-6 large-8 columns" role="main">	
+	<div class="small-12  medium-6 large-6 columns" role="main">	
     		
 <table class="form-container">
 	<tr>
@@ -356,7 +356,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 	</td>
     </tr></table>
 </div>    
-<div class="small-12  medium-6 large-4 columns" role="main">    
+<div class="small-12 medium-6 large-6 columns" role="main">    
 <table class="form-container">
 <tr>    
 	<td>
