@@ -121,10 +121,10 @@ Already a member? Log in
 	wp_link_pages(array(
 			    'before' => '<div id="page-links">' . __(''),
 			    'after' => '</div>',
-			    'next_or_number' => 'next', # activate parameter overloading
+			    'next_or_number' => 'next_and_numbers', # activate parameter overloading
 			    'nextpagelink' => __('Next Page'),
 			    'previouspagelink' => __('Previous Page'),
-			    'pagelink' => '',
+			    'pagelink' => '%',
 			    'echo' => 1 )); ?>
 					 
 					 
