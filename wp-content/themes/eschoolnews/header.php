@@ -188,7 +188,7 @@ get_template_part( 'library/logged-in-check' );
       </h1>
     </nav>
 
-    <div class="row show-for-small-only">
+    <div class="row mobile-search show-for-small-only">
       <div class="small-12 columns">
 
         <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">

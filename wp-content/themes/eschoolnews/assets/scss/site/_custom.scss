@@ -1183,3 +1183,16 @@ div.registration-form {
 	}
 
 }
+
+@media print {
+
+	a[href]:after {
+    content: none !important;
+  }
+
+  div.mobile-search, nav.middle {
+  	display: none !important;
+  }
+
+
+}
