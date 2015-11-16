@@ -99,4 +99,7 @@ require_once('library/pagination.php');
 /** Pagination */
 require_once('library/next-page.php');
 
+/** Pagination */
+require_once('library/custom-link-pages.php');
+
 ?>

@@ -28,13 +28,13 @@
  */
 function custom_wp_link_pages( $args = '' ) {
 	$defaults = array(
-		'before' => '<div id="post-pagination">' . __( 'Pages:' ), 
+		'before' => '<div id="post-pagination">' . __( '' ), 
 		'after' => '</div>',
-		'text_before' => '',
-		'text_after' => '',
+		'text_before' => '<span class="numbers">',
+		'text_after' => '</span>',
 		'next_or_number' => 'number', 
-		'nextpagelink' => __( 'Next Page' ),
-		'previouspagelink' => __( 'Previous Page' ),
+		'nextpagelink' => __( '<span class="button small radius next">Next Page &raquo;</span>' ),
+		'previouspagelink' => __( '<span class="button small radius prev">&laquo; Previous Page</span>' ),
 		'pagelink' => '%',
 		'echo' => 1
 	);

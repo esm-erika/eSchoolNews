@@ -430,6 +430,15 @@ a.button.readmore {
 	color: #369 !important;
 }
 
+#post-pagination a span.numbers {
+	// border-radius: 100%;
+	// padding: 0.875rem 0.9375rem;
+ //    font-size: 0.8125rem;
+ //    background-color: #336699;
+ //    color: #fff !important;
+ //    outline: 0;
+ //    display: inline-block;
+}
 
 // Misc Styles
 
@@ -1172,5 +1181,29 @@ div.registration-form {
 			margin-top: 0px;
 		}
 	}
+
+}
+
+@media print {
+
+	div.name {
+		img {
+			width: 50%;
+			margin: auto;
+		}		
+	}
+
+	a[href]:after {
+    content: none !important;
+  }
+
+  footer, footer.container .copyright {
+  	color: #000 !important;
+  }
+
+  div.mobile-search, nav.middle, section.small-nav, nav.tab-bar, #sidebar, #publications, .ad-container, footer.container .row, section.top-bar-section {
+  	display: none !important;
+  }
+
 
 }
