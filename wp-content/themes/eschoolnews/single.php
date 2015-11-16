@@ -73,20 +73,17 @@ include('single-coa.php');
 			 ?>
 
 			 <?php the_content(); 
-			 //wp_link_pages( array ( 'next_or_number' => 'next',
-			 // 'before' => '<div id="page-links">',
-			 // 'after' => '</div>' ) );
+			
 			 
 			 wp_link_pages(array(
-    'before' => '<p>' . __('Pages:'),
-    'after' => '</p>',
-    'next_or_number' => 'next_and_number', # activate parameter overloading
-    'nextpagelink' => __('Next'),
-    'previouspagelink' => __('Previous'),
-    'pagelink' => '%',
-    'echo' => 1 )
-);
-			 ?>
+			    'before' => '<div id="page-links">' . __(''),
+			    'after' => '</div>',
+			    'next_or_number' => 'next', # activate parameter overloading
+			    'nextpagelink' => __('Next Page'),
+			    'previouspagelink' => __('Previous Page'),
+			    'pagelink' => '',
+			    'echo' => 1 )
+			); ?>
 			
             </div>
 

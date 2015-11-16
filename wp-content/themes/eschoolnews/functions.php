@@ -94,6 +94,9 @@ require_once('library/sharing-tools.php');
 require_once('library/most-popular.php');
 
 /** Pagination */
-require_once('library/pagination.php');
+//require_once('library/pagination.php');
+
+/** Pagination */
+require_once('library/next-page.php');
 
 ?>
