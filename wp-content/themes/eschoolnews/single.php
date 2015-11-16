@@ -111,26 +111,25 @@ Already a member? Log in
 <a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
 
 </form>	
-</div> <?php
+</div> 
 
+<?php } else { ?>
 
+<?php the_content(); ?>
 
-					
-				} else {
-					 the_content(); 
-					   wp_link_pages(array(
+<?php
+	wp_link_pages(array(
 			    'before' => '<div id="page-links">' . __(''),
 			    'after' => '</div>',
 			    'next_or_number' => 'next', # activate parameter overloading
 			    'nextpagelink' => __('Next Page'),
 			    'previouspagelink' => __('Previous Page'),
 			    'pagelink' => '',
-			    'echo' => 1 );
+			    'echo' => 1 )); ?>
 					 
 					 
 					 
-				}
-			 ?>
+				<?php } ?>
 			
             </div>
 
