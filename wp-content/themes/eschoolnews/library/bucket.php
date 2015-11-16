@@ -12,6 +12,13 @@
 //}
 //add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+function string_limit_words($string, $word_limit)
+{
+  $words = explode(' ', $string, ($word_limit + 1));
+  if(count($words) > $word_limit)
+  array_pop($words);
+  return implode(' ', $words);
+}
 
 function new_excerpt_more( $more ) {
 	return '';
@@ -120,7 +127,5 @@ function is_post_type($type){
     if($type == get_post_type($wp_query->post->ID)) return true;
     return false;
 }
-
-
 
 ?>

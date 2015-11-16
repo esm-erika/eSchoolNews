@@ -70,20 +70,67 @@ include('single-coa.php');
 
     			
     		endif;
-			 ?>
 
-			 <?php the_content(); 
-			
-			 
-			 wp_link_pages(array(
+			if (esm_is_user_logged_in()){
+				$showpagecontent = 1;
+			} else { 
+				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
+				
+				$astcset = $_GET['astc'];
+				if(filter_var($astcset, FILTER_VALIDATE_INT)){
+					if($astcset > 1){ $astpagecontent = 0; }
+				}
+				
+				if($astpagecontent == 0){
+					$showpagecontent = 0; 
+				} else if($reg_requirement == 1){
+					$showpagecontent = 0;
+				} else {
+					$showpagecontent = 1;
+				}
+			}
+
+				if($showpagecontent == 0){
+				echo string_limit_words(get_the_excerpt(), 35).'...</br>';
+			?>
+
+<div style="border:#CCCCCC solid 1px; padding:10px;">
+<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
+<p><strong>Free registration required to view this resource.</strong><br />
+<br />
+<a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode(get_permalink()); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
+<br />
+<br />
+Already a member? Log in
+<div>Username: <input type="text" name="log" id="log" value="" /></div>
+<div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
+<input type="submit" name="submit" value="Login" class="button">
+<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
+<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+<br />
+<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
+
+</form>	
+</div> <?php
+
+
+
+					
+				} else {
+					 the_content(); 
+					   wp_link_pages(array(
 			    'before' => '<div id="page-links">' . __(''),
 			    'after' => '</div>',
 			    'next_or_number' => 'next', # activate parameter overloading
 			    'nextpagelink' => __('Next Page'),
 			    'previouspagelink' => __('Previous Page'),
 			    'pagelink' => '',
-			    'echo' => 1 )
-			); ?>
+			    'echo' => 1 );
+					 
+					 
+					 
+				}
+			 ?>
 			
             </div>
 
