@@ -1186,6 +1186,12 @@ div.registration-form {
 
 @media print {
 
+	div.name {
+		img {
+			width: 40%;
+		}		
+	}
+
 	a[href]:after {
     content: none !important;
   }
