@@ -118,14 +118,18 @@ Already a member? Log in
 <?php the_content(); ?>
 
 <?php
-	wp_link_pages(array(
-			    'before' => '<div id="page-links">' . __(''),
-			    'after' => '</div>',
-			    'next_or_number' => 'next_and_numbers', # activate parameter overloading
-			    'nextpagelink' => __('Next Page'),
-			    'previouspagelink' => __('Previous Page'),
-			    'pagelink' => '%',
-			    'echo' => 1 )); ?>
+	// wp_link_pages(array(
+	// 		    'before' => '<div id="page-links">' . __(''),
+	// 		    'after' => '</div>',
+	// 		    'next_or_number' => 'next_and_numbers', # activate parameter overloading
+	// 		    'nextpagelink' => __('Next Page'),
+	// 		    'previouspagelink' => __('Previous Page'),
+	// 		    'pagelink' => '%',
+	// 		    'echo' => 1 )); 
+
+custom_wp_link_pages();
+
+			    ?>
 					 
 					 
 					 
