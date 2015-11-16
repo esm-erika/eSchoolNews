@@ -179,7 +179,11 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 	}
 </script>
 
-<h1 style="padding:20px 0px 10px 0px;">Your User Profile</h1>
+<div class="row top">
+	<div class="small-12 large-12 columns" role="main">	
+
+<h1 class="section-title"><span>Your User Profile</span></h1>
+
 <?php /* <div style="border:#ccc solid 1px;">
 <img src="http://www.eschoolnews.com/wp-content/themes/advanced-newspaper/images/MyeSchoolNewsNew.gif" alt="My eSchool News - New! Create your own custom news site" height="32" width="980">
 <br />
@@ -205,9 +209,10 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						echo $message;
 					}
 		?>
+	
 <div class="row top">
-	<div class="small-12 large-12 columns" role="main">		
-		
+	<div class="small-12  medium-6 large-8 columns" role="main">	
+    		
 <table class="form-container">
 	<tr>
 		<td>
@@ -349,6 +354,11 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
             </p>
 		
 	</td>
+    </tr></table>
+</div>    
+<div class="small-12  medium-6 large-8 columns" role="main">    
+<table class="form-container">
+<tr>    
 	<td>
 
 <span class="catname" style="margin-left:15px;">Password</span>
