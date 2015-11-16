@@ -404,7 +404,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='esn_today__c'>eSchool News Today</label></th>
 			</tr>			
 			<tr>
-				<td><h4>Daily breaking news headlines</h4></th>
+				<td style="padding-bottom:5px;">Daily breaking news headlines</td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -661,43 +661,14 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 Not logged in below
 
  */		
-
+?>
+<div class="row top">
+	<div class="small-12  medium-6 large-6 columns" role="main">
+<?php
 if ( !is_user_logged_in() ){			 ?>
-			<p class="error">You must login to access this page.</p>	
-			<p>
-			<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">		
-			<table style="padding:10px 0px 0px 30px;" class="form-table">
-
-			<tr>
-				<th><label for='log'>Username:&nbsp;&nbsp; </label></th>
-				<td>
-					<input type="text" name="log" id="log" value="" style="width:200px" />
-				</td>
-			</tr>
-			<tr>
-				<th><label for='pwd'>Password:&nbsp;&nbsp; </label></th>
-				<td>
-					<input name="pwd" id="pwd" type="password" value="" style="width:200px" />  
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" style="text-align:right;">
-					<input type="submit" name="submit" value="Login" class="button">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
-					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
-					&nbsp;<a href="<?php echo get_option('home'); ?>/wp-login.php?action=register&redirect_to=">Register</a>&nbsp;|&nbsp;
-					<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
-				</td>
-			</tr>
-			</table>
-
-			</form>		
-			</p>						
-						
+			<h4>You must login to access this page.</h4>	
+<?php wp_login_form(); ?>						
+</div></div>
 <?php	
 	} 
 	
