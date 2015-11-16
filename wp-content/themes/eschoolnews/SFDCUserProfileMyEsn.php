@@ -389,7 +389,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='esn_this_week__c'>Innovation Weekly</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <em>Weekly on Monday</em></th>
+				<td style="padding-bottom:5px;">The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <em>Weekly on Monday</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -400,6 +400,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 					?>	
 				</td>
 			</tr>
+
 			<tr>
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='esn_today__c'>eSchool News Today</label></th>
 			</tr>			
@@ -419,7 +420,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='esn_tools_for_schools__c'>eSchool News Tools for Schools</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <em>Weekly on Wednesday</em></th>
+				<td style="padding-bottom:5px;">Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <em>Weekly on Wednesday</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -434,7 +435,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='Ed_Resource_Alert__c'>Ed Resource Alert</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more. <em>Schedule varies</em></th>
+				<td style="padding-bottom:5px;">Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more. <em>Schedule varies</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -467,7 +468,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='partner_offers__c'>Special Offers from School Technology Vendors</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Get valuable offers from eSchool News technology vendors <em>Schedule varies</em></th>
+				<td style="padding-bottom:5px;">Get valuable offers from eSchool News technology vendors <em>Schedule varies</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -487,7 +488,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='eclassroom_news__c'>eClassroom News</label></th>
 			</tr>
 			<tr>			
-				<td style="padding-bottom:5px;">Technology news and resources for teachers.</th>
+				<td style="padding-bottom:5px;">Technology news and resources for teachers.</td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -502,7 +503,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='ecn_this_week__c'>eCampus News THIS WEEK</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <em>Weekly on Monday</em></th>
+				<td style="padding-bottom:5px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <em>Weekly on Monday</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -513,11 +514,12 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 					?>	
 				</td>
 			</tr>
+            
 			<tr>
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='ecn_today__c'>eCampus News TODAY</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Daily breaking news headlines</th>
+				<td style="padding-bottom:5px;">Daily breaking news headlines</td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -532,7 +534,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='ecn_offers__c'>Special Offers from eCampus News Online</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em></th>
+				<td style="padding-bottom:5px;">Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -547,7 +549,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='ecn_partners__c'>Special Offers from Campus Technology Vendors</label></th>
 			</tr>
 			<tr>
-				<td style="padding-bottom:5px;">Get valuable offers from higher-ed technology vendors <em>Schedule varies</em></th>
+				<td style="padding-bottom:5px;">Get valuable offers from higher-ed technology vendors <em>Schedule varies</em></td>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
@@ -565,80 +567,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 			</tr>
             <tr>
             <td colspan="2">
-            
-            
-<?php /* if ($sf_data!=null){ ?>
-		
-<span class="catname" style="margin-left:15px;">Subscriptions</span>
-		
-		<table style="padding:10px 0px 0px 30px; width:450px;" class="form-table">
-	<?php
-			$regURL="http://www.eschoolnews.com/subscribe/?sfid=".htmlspecialchars($sf_profile->Id)."&em=".htmlspecialchars($sf_profile->PersonEmail)."&source=";
-			foreach($sf_data['actions'] as &$subscription) {
-				
-				if ( $subscription['name'] != ""){
-					$sf_school = strpos($subscription['name'], "eSchoolNews");
-					$sf_campus = strpos($subscription['name'], "eCampusNews");
-					$sf_classroom = strpos($subscription['name'], "eClassroomNews");
-				}				
-				
-				echo "<tr><td width='70%' style='border-bottom:#ccc solid 1px; padding-bottom:10px;'>";
-				
-				if ($sf_school !== false){
-				echo "<img src='http://www.eschoolnews.com/files/2011/09/eSchoolNewsCover.jpg' width='75' height='100' align='left' style='padding-right:5px;' />";
-				}elseif ($sf_campus !== false){
-				echo "<img src='http://ecampusnews.eschoolmedia.com/files/2011/09/eCampusNewsCover.jpg' width='75' height='100' align='left' style='padding-right:5px;' />";
-				}elseif ($classroom !== false){
-				echo "";
-				}
-				
-				
-				echo "<strong>".htmlspecialchars($subscription['name'])."</strong><br />"; 
-				if ($sf_school !== false){
-				echo "The premier education publication, features the top school technology news stories, expert columns, best practices, and special reports.<br /><em>Digital Format, 10 issues per year</em>";
-				}elseif ($sf_campus !== false){
-				echo "Our higher ed puplication, features the top school technology news stories, expert columns, best practices, and special reports.<br /><em>Digital Format, 10 issues per year</em>";
-				}elseif ($classroom !== false){
-				echo "eClassroom News features the top school technology news stories, expert columns, best practices, and special reports.";
-				} 				
-				echo "</td><td width='30%' style='border-bottom:#ccc solid 1px;'><strong>";
-				
-				switch ( $subscription['action'] ){
-					case "Cancel":
-						echo "Expires " .  $subscription['expiration'] ."<br/>";
-						echo "<a href='javascript:Cancel(\"".$subscription['srid']."\")'>Cancel</a><br/>";	
-						echo "<a href='".$regURL.htmlspecialchars($subscription['source'])."' target='_new' >Renew</a>";	
-						break;
-					case "Renew":
-						echo "Expired " .  $subscription['expiration'] ."<br/>";
-						echo "<a href='".$regURL.htmlspecialchars($subscription['source'])."' target='_new' >Renew</a>";	
-						break;
-					case "Subscribe":
-						echo "<a href='".$regURL.htmlspecialchars($subscription['source'])."' target='_new'>Subscribe</a>";	
-						break;
-					default:
-						echo $subscription['action'];	
-						break;
-				}
-				echo "</strong></td></tr>";
-			} 
-		} else {
-
-			switch($status){
-				case 'confirm':
-				
-				echo '<span class="catname" style="margin-left:15px;">Subscriptions</span>';
-				
-				echo '<h3 style="padding:20px 50px">Your profile was recently updated, please <a href="'.$_SERVER["REQUEST_URI"].'?'.$wp_id.time().'">click here to refresh your subscription information.</a></h3><p><br /><br /><br /><br /></p>';
-			}
-
-		}
-	?>
-	<tr><td>
-	
-	</td><td></td></tr>
-	</table>
-	*/ ?>        
+       
             </td>
             </tr>
             
