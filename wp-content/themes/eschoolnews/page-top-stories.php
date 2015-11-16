@@ -20,21 +20,28 @@ get_header(); ?>
 
 	<?php // The Query
 
-	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+			// Define custom query parameters
+		$topstories_args = array( 'post_type' => 'post');
 
-	$topstories = new WP_Query(array(
-		'post_type' => 'post',
-		//'posts_per_page' => '-1',
-		'page' => $paged
+		// Get current page and append to custom query parameters array
+		$topstories_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
-		)); ?>
+		// Instantiate custom query
+		$topstories = new WP_Query( $topstories_args );
 
-		<?php if ( $topstories->have_posts() ) : ?>
+		// Pagination fix
+		$temp_query = $wp_query;
+		$wp_query   = NULL;
+		$wp_query   = $topstories; ?>
 
-		<?php pagination($topstories->max_num_pages) ?>
 
-		<?php while ( $topstories->have_posts() ) :
-		$topstories->the_post(); ?>
+
+
+		<?php 
+			if ( $topstories->have_posts() ) :
+		    while ( $topstories->have_posts() ) :
+		        $topstories->the_post();
+		 ?>
 
 
 		<article class="row">
@@ -70,14 +77,28 @@ get_header(); ?>
 					<hr/>
 
 
-				<?php endwhile; ?>
 
-
-
-			<?php endif;
+			<?php
+			
+			endwhile;
+			endif;
+			// Reset postdata
 			wp_reset_postdata(); ?>
 
-							<?php pagination($topstories->max_num_pages) ?>
+
+			<?php 
+
+			pagination($topstories->max_num_pages);
+				
+				// Custom query loop pagination
+				//previous_posts_link( 'Older Posts' );
+				//next_posts_link( 'Newer Posts', $topstories->max_num_pages );
+
+
+			$wp_query = NULL;
+			$wp_query = $temp_query;
+			 ?>
+
 
 
 
