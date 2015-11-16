@@ -180,14 +180,14 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 </script>
 
 <h1 style="padding:20px 0px 10px 0px;">Your User Profile</h1>
-<div style="border:#ccc solid 1px;">
+<?php /* <div style="border:#ccc solid 1px;">
 <img src="http://www.eschoolnews.com/wp-content/themes/advanced-newspaper/images/MyeSchoolNewsNew.gif" alt="My eSchool News - New! Create your own custom news site" height="32" width="980">
 <br />
 <div style="margin:10px 20px 20px 20px;">
     My eSchool News provides you the latest news by the categories you select. <br />
     <a href="http://www.eschoolnews.com/profile/preferences/" target="_blank" style="font-size:14px; font-weight:bold;">Click here to select your news by category</a>
 </div>
-</div>
+</div> */ ?>
 
 <form name="eSNSFDC" id="eSNSFDC" action="" method="post">
 
@@ -205,7 +205,8 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						echo $message;
 					}
 		?>
-		
+<div class="row top">
+	<div class="small-12 large-12 columns" role="main">		
 		
 <table class="form-container">
 	<tr>
@@ -632,7 +633,8 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
             </tr>
             
 		</table>
-	        
+	</div>
+</div>	        
                 <input type="hidden" name="sfAction" value="update" />
                 <input type="hidden" name="srId" value="" />
                 <input type="hidden" name="user_id" id="user_id" <?php echo 'value="'. htmlspecialchars($sf_profile->Id).'"' ?> />

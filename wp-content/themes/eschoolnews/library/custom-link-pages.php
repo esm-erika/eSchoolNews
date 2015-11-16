@@ -53,7 +53,7 @@ function custom_wp_link_pages( $args = '' ) {
 				$j = str_replace( '%', $i, $pagelink );
 				$output .= ' ';
 				if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )
-					$output .= _wp_link_page( $i );
+					$output .= 'asdasdasdds'. _wp_link_page( $i );
 				else
 					$output .= '<span class="current-post-page">';
 
