@@ -110,7 +110,7 @@ get_template_part( 'library/logged-in-check' );
 
 
 
-          echo '<div class="welcome-menu small-only-text-center text-left"><a href="#">My eSchool News</a>';
+          echo '<div class="welcome-menu small-only-text-center text-left"><a href="/profile">Profile</a>';
 
           echo '<a class="logout" href="' . wp_logout_url( home_url() ) . '">Logout</a></div>';
 
