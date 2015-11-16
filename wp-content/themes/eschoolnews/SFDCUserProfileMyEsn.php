@@ -216,7 +216,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 <table class="form-container">
 	<tr>
 		<td>
-<span class="catname">User and Address Information</span>
+<h4>User and Address Information</h4>
 		
 	<table class="form-table">
 		<tr>
@@ -361,7 +361,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 <tr>    
 	<td>
 
-<span class="catname" style="margin-left:15px;">Password</span>
+<h4>Password</h4>
 
 	<table style="padding:10px 0px 20px 30px;" class="form-table">
 		<tr>
@@ -382,7 +382,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 			    <input type="submit" class="button-primary" id="profileSubmit" value="Update Profile" name="submit" style="margin:0px 30px; padding:5px;" />
             </p>
 
-<span class="catname" style="margin-left:15px;">Please select the eMail newsletters you would like to receive:</span>
+<h4>Please select the eMail newsletters you would like to receive:</h4>
 
 		<table style="padding:10px 0px 20px 30px;" class="form-table">
 			<tr>
@@ -404,7 +404,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th colspan="2" style="border-bottom:#ccc solid 1px;"><label for='esn_today__c'>eSchool News Today</label></th>
 			</tr>			
 			<tr>
-				<td style="padding-bottom:5px;">Daily breaking news headlines</th>
+				<td><h4>Daily breaking news headlines</h4></th>
 				<td style="width:130px;">
 					<?php
 						$aSub = eSNAP_Subs();
