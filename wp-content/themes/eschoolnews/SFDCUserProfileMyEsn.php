@@ -329,7 +329,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aGrade = eSNAP_Grade();
 						for ($i=0; $i<count($aGrade);$i++){
 							$sel = (strpos($sf_profile->Grade_Level__c, $aGrade[$i])===false)?'':'checked="checked"';
-							echo '<label><input type="checkbox" name="grade_level__c[]" value="' . $aGrade[$i] . '" ' . $sel . ' />&nbsp;'. $aGrade[$i] . '</label><br />';
+							echo '<label><input type="checkbox" name="grade_level__c[]" value="' . $aGrade[$i] . '" ' . $sel . ' />&nbsp;'. $aGrade[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -341,7 +341,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSubject = eSNAP_Subject();
 						for ($i=0; $i<count($aSubject);$i++){
 							$sel = (strpos($sf_profile->Subject_Taught__c, $aSubject[$i])===false)?'':'checked="checked"';
-							echo '<label><input type="checkbox" name="subject_taught__c[]" value="' . $aSubject[$i] . '" ' . $sel . ' />&nbsp;'. $aSubject[$i] . '</label><br />';
+							echo '<label><input type="checkbox" name="subject_taught__c[]" value="' . $aSubject[$i] . '" ' . $sel . ' />&nbsp;'. $aSubject[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -395,7 +395,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_This_Week__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="esn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -410,7 +410,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_Today__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -425,7 +425,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_Tools_For_Schools__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_tools_for_schools__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="esn_tools_for_schools__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -440,7 +440,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->Ed_Resource_Alert__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="Ed_Resource_Alert__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="Ed_Resource_Alert__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -456,7 +456,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_Offers__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="esn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -473,7 +473,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->Partner_Offers__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="partner_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="partner_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -493,7 +493,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eClassroom_News__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="eclassroom_news__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="eclassroom_news__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -508,7 +508,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_This_Week__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="ecn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -523,7 +523,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_Today__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="ecn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -538,7 +538,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_Offers__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="ecn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
@@ -553,7 +553,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_Partners__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_partners__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label><br />';
+							echo '<label><input type="radio" name="ecn_partners__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 					?>	
 				</td>
