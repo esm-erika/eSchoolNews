@@ -227,28 +227,28 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				<th><label for='personemail'><font color="red">*</font>Email</label></th>
 				<td>
 				<?php if ($sf_email_check == 0){ ?>
-				<input style="width:250px;" type='text' name='personemail' id='personemail' class='regular-text' <?php echo 'value="'. $current_user->user_email.'"'  ?>/>
+				<input  type='text' name='personemail' id='personemail' class='regular-text' <?php echo 'value="'. $current_user->user_email.'"'  ?>/>
 				 <?php } else { ?> 
-				<input style="width:250px;" type='text' name='personemail' id='personemail' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->PersonEmail).'"'  ?>/>
+				<input  type='text' name='personemail' id='personemail' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->PersonEmail).'"'  ?>/>
 				<?php } ?>
 				</td>
 			</tr>
 			<tr>
 				<th><label for='firstname'><font color="red">*</font>First Name</label></th>
-				<td><input style="width:250px;" type='text' name='firstname' id='firstname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->FirstName).'"'  ?>/></td>
+				<td><input  type='text' name='firstname' id='firstname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->FirstName).'"'  ?>/></td>
 			</tr>
 			<tr>
 				<th><label for='lastname'><font color="red">*</font>Last Name</label></th>
-				<td><input style="width:250px;" type='text' name='lastname' id='lastname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->LastName).'"'  ?> /></td>
+				<td><input  type='text' name='lastname' id='lastname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->LastName).'"'  ?> /></td>
 			</tr>
 			<tr>
 				<th><label for='organization__c'><font color="red">*</font>Organization</label></th>
-				<td><input style="width:250px;" type='text' name='organization__c' id='organization__c' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->Organization__c).'"'  ?>/></td>
+				<td><input  type='text' name='organization__c' id='organization__c' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->Organization__c).'"'  ?>/></td>
 			</tr>
 			<tr>
 				<th><label for='company_type__c'><font color="red">*</font>Organization Type</label></th>
 				<td>
-					<select style="width:250px;" name='company_type__c' id='company_type__c'>
+					<select  name='company_type__c' id='company_type__c'>
 					<?php
 						$aOrgType = eSNAP_Organization_Type();
 						for ($i=0; $i<count($aOrgType);$i++){
@@ -262,7 +262,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 			<tr>
 				<th><label for='persontitle'><font color="red">*</font>Title</label></th>
 				<td>
-					<select style="width:250px;" name='persontitle' id='persontitle'>
+					<select  name='persontitle' id='persontitle'>
 					<?php
 						$aTitle = eSNAP_Title();
 						for ($i=0; $i<count($aTitle);$i++){
@@ -275,20 +275,20 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 			</tr>
 			<tr>
 				<th><label for='personmailingstreet'><font color="red">*</font>Address</label></th>
-				<td><input style="width:250px;" type='text' name='personmailingstreet' id='personmailingstreet' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingStreet).'"'  ?>/></td>
+				<td><input  type='text' name='personmailingstreet' id='personmailingstreet' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingStreet).'"'  ?>/></td>
 			</tr>
 			<tr>
 				<th><label for='Mailing_Address_2__c'>Address 2</label></th>
-				<td><input style="width:250px;" type='text' name='Mailing_Address_2__c' id='Mailing_Address_2__c' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->Mailing_Address_2__c).'"'  ?>/></td>
+				<td><input  type='text' name='Mailing_Address_2__c' id='Mailing_Address_2__c' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->Mailing_Address_2__c).'"'  ?>/></td>
 			</tr>
 			<tr>
 				<th><label for='personmailingcity'><font color="red">*</font>City</label></th>
-				<td><input style="width:250px;" type='text' name='personmailingcity' id='personmailingcity' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingCity).'"'  ?>/></td>
+				<td><input  type='text' name='personmailingcity' id='personmailingcity' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingCity).'"'  ?>/></td>
 			</tr>
 			<tr>
 				<th><label for='personmailingstate'><font color="red">*</font>State or Province</label></th>
 				<td>
-					<select style="width:250px;" name='personmailingstate' id='personmailingstate'>
+					<select  name='personmailingstate' id='personmailingstate'>
 					<?php
 						$aState = eSNAP_State();
 						for ($i=0; $i<count($aState);$i++){
@@ -301,12 +301,12 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 			</tr>
 			<tr>
 				<th><label for='personmailingpostalcode'><font color="red">*</font>Zip or Postal Code</label></th>
-				<td><input style="width:250px;" type='text' name='personmailingpostalcode' id='personmailingpostalcode' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingPostalCode).'"'  ?>/></td>
+				<td><input  type='text' name='personmailingpostalcode' id='personmailingpostalcode' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingPostalCode).'"'  ?>/></td>
 			</tr>
 			<tr>
 					<th><label for='personmailingcountry'><font color="red">*</font>Country</label></th>
 					<td>
-						<select style="width:250px;" name='personmailingcountry' id='personmailingcountry'>
+						<select  name='personmailingcountry' id='personmailingcountry'>
 					<?php
 						$aCountry = eSNAP_Country();
 						for ($i=0; $i<count($aCountry);$i++){
@@ -320,7 +320,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 				</tr>
 			<tr>
 				<th><label for='phone'><font color="red">*</font>Phone</label></th>
-				<td><input style="width:250px;" type='text' name='phone' id='phone' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->Phone).'"' ?>  /></td>
+				<td><input  type='text' name='phone' id='phone' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->Phone).'"' ?>  /></td>
 			</tr>
 			<tr>
 				<th><label for='grade_level__c'><font color="red">*</font>What Grade Level do you teach?</label></th>
