@@ -11,9 +11,11 @@
 
 ?>
 <div class="row">
-	<div class="ad-container">
-		<?php get_template_part( 'parts/ads/ercbottom' ); ?>
-	</div>
+<?php if ($astused > 0){ ?>
+    <div class="ad-container">
+        <?php get_template_part( 'parts/ads/ercbottom' ); ?>
+    </div>
+<?php } ?>
 	<div class="ad-container">
 		<?php get_template_part( 'parts/ads/anchorboard' ); ?>
 	</div>

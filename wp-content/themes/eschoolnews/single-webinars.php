@@ -77,8 +77,12 @@ get_header(); ?>
 						echo '" frameborder="0" allowfullscreen></iframe>';
 						echo '</div>';
 					}
-
+					
+					if (get_field('event_information')) {
 					the_field('event_information');
+					} else {
+						the_content();
+					}
 
 					if (has_term( 'upcoming-webinars', 'status-webinars' )) {
 
