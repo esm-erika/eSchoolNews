@@ -22,7 +22,6 @@
 </div>
 
 
-
 <section id="publications">
 
 	<div class="row sites">
@@ -59,6 +58,8 @@
 	
 </section> -->
 <a class="exit-off-canvas"></a>
+
+</div>
 
 <?php do_action( 'foundationpress_layout_end' ); ?>
 </div>
