@@ -57,12 +57,13 @@ get_header(); ?>
 
 				if($showpagecontent == 1){
 					the_content();
+					
 					$file = get_field('download_file');
 
 							if( $file ){ ?>
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
 							<?php } 
-
+					custom_wp_link_pages();
 					
 				} else {
 				the_excerpt(); 
