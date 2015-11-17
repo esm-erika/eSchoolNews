@@ -10,7 +10,7 @@ $resourcessection = 0;
 ?>
 
 <?php // The Query
-	
+
 		if( is_home() || is_front_page()) {
 			$resources = new WP_Query(array(
 				'post_type' => array( 'ercs', 'specialreports'),
@@ -19,7 +19,7 @@ $resourcessection = 0;
 
 		} elseif ( is_category()) {
 			
-			//get_template_part( 'parts/category-tags' );
+			get_template_part( 'parts/category-tags' );
 
 			$resources = new WP_Query(array(
 				'cat' => $cat,
