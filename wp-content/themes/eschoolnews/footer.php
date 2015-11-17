@@ -54,12 +54,10 @@
 		</div>
 	</div>
 </footer>
-<!-- <section id="sites">
-	
-</section> -->
-<a class="exit-off-canvas"></a>
 
 </div>
+<a class="exit-off-canvas"></a>
+
 
 <?php do_action( 'foundationpress_layout_end' ); ?>
 </div>
