@@ -151,7 +151,7 @@ custom_wp_link_pages();
 								<?php 
 									$email = get_the_author_meta( 'user_email' );
 									if ( $email && $email != '' ) {
-										echo '<li class="email left"><a href="mailto:' . esc_url($email) . '"><i class="fi-mail"></i></a></li>';
+										echo '<li class="email left"><a href="mailto:' . $email . '"><i class="fi-mail"></i></a></li>';
 									}
 
 									$rss_url = get_the_author_meta( 'rss_url' );
