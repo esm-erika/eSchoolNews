@@ -1,5 +1,5 @@
 <?php 
-
+/*
 global $cat;
 
 if ( in_category('21st Century Skills')) {
@@ -148,4 +148,4 @@ $resources = new WP_Query(array(
 	'posts_per_page' => '6',
 	'post_type' => array( 'whitepapers', 'ercs', 'specialreports')
 )); 
-
+*/
