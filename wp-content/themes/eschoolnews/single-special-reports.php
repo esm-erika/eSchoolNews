@@ -63,7 +63,12 @@ get_header(); ?>
 							if( $file ){ ?>
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
 							<?php } 
-					custom_wp_link_pages();
+
+
+					custom_wp_link_pages(array(
+						'text_before' => '<span class="button round" style="padding:5px 10px;">2</span>'));
+
+
 					
 				} else {
 				the_excerpt(); 
