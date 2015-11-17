@@ -138,7 +138,8 @@ if ( in_category('21st Century Skills')) {
 		);
 
 } else {
-	$categorytags = $cat
+
+	$categorytags = $cat;
 
 }
 
