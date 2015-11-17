@@ -97,10 +97,6 @@ global $cat;
 					<hr/>
 
 
-				<?php endwhile; ?>
-
-
-
 			<?php
 			
 			endwhile;
