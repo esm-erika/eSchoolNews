@@ -66,7 +66,7 @@ get_header(); ?>
 
 
 					custom_wp_link_pages(array(
-						'text_before' => '<span class="button round" style="padding:5px 10px;">2</span>'));
+						'text_before' => '<span class="button round" style="padding:5px 10px;">'));
 
 
 					
