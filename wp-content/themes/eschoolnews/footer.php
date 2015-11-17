@@ -58,10 +58,10 @@
 </div>
 <a class="exit-off-canvas"></a>
 
-
+</div>
 <?php do_action( 'foundationpress_layout_end' ); ?>
-</div>
-</div>
+
+
 
 
 
