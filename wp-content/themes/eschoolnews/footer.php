@@ -78,9 +78,5 @@ $(document).ready(function(){
 });
 </script> -->
 
-<script>
-$(document).foundation('offcanvas', 'reflow');
-</script>
-
 </body>
 </html>
