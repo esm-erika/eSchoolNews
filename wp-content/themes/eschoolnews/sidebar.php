@@ -14,7 +14,7 @@
 
 	<?php 
 
-		if ( ! is_singular('whitepapers') || ! in_category('leading-the-digital-leap')) {
+		if ( ! is_singular('whitepapers') || ! in_category('11351')) {
 			get_template_part( 'parts/ads/embeddedbanner' );
 
 	} ?>
@@ -36,6 +36,12 @@
 	if( is_page('Resources') || is_post_type_archive('events')) { 
 		get_template_part( 'parts/sidebar/upcoming-webinars' );
 	} ?>
+
+	<?php
+		if( in_category('11351')) { 
+			get_template_part( 'parts/sidebar/digital-leap' );  	
+		}
+	 ?>
 
 	<?php 
 	if( is_post_type_archive('webinars') || is_search() || is_post_type_archive( 'special-reports') || is_post_type_archive( 'ercs')) { 
@@ -85,16 +91,12 @@
 			}
 	 ?>
 
-	 <?php
-		if( in_category('11351')) { 
-			get_template_part( 'parts/sidebar/digital-leap' );  	
-		}
-	 ?>
+	 
 
 
 	 <?php 
 
-	 if ( ! is_singular('whitepapers') || ! in_category('leading-the-digital-leap')) {
+	 if ( ! is_singular('whitepapers') || ! in_category('11351')) {
 
 	 	get_template_part( 'parts/ads/embeddedbanner-2' ); 
 
