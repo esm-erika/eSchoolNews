@@ -11,6 +11,9 @@
 <?php
 
 if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
+global $esmuser;
+	
+	
 	
 	$WPautofill = array(
 	wpuidSP => $wpuidSP,
@@ -22,7 +25,9 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	esmpassvalue => $esmpass_COOKIE,	
 	astc => $astc			
 	); 
-
+echo '<pre> 28';
+print_r($esmuser);
+echo '</pre>';
 
 
 
