@@ -26,6 +26,8 @@ global $esmuser;
 
 echo '<pre> 28';
 print_r($esmuser);
+echo '29'.$esmuser->esmpassvalue;
+echo '30'.$esmuser[esmpassvalue];
 echo '</pre>';
 
 
