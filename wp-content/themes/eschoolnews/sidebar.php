@@ -14,7 +14,7 @@
 
 	<?php 
 
-		if ( ! is_singular('whitepapers') || ! in_category('11351')) {
+		if ( ! is_singular('whitepapers') || ! is_category('11351')) {
 			get_template_part( 'parts/ads/embeddedbanner' );
 
 	} ?>
@@ -96,7 +96,7 @@
 
 	 <?php 
 
-	 if ( ! is_singular('whitepapers') || ! in_category('11351')) {
+	 if ( ! is_singular('whitepapers') || ! is_category('11351')) {
 
 	 	get_template_part( 'parts/ads/embeddedbanner-2' ); 
 
