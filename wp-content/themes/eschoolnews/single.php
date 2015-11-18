@@ -6,7 +6,9 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+if ( in_category( 'Leading the Digital Leap' )) { // can be removed with 4.4 update -- thank you ahead of public release documentation.
+	include('single-post-leading-the-digital-leap.php');
+} else {
 get_header(); ?>
 
 <div class="row top">
@@ -31,7 +33,8 @@ $oldtemplate = get_post_meta($id, '_wp_post_template', true);
 
 
    ?>
-<?php if($oldtemplate){ echo '<!-- '.$oldtemplate.' -->'; //using old template
+<?php 
+if($oldtemplate){ echo '<!-- '.$oldtemplate.' -->'; //using old template
 	
 //require_once( 'library/boxes.php' );	
 include('single-coa.php');
@@ -214,4 +217,4 @@ custom_wp_link_pages();
 	
 	<?php get_sidebar(); ?>
 </div>
-<?php get_footer(); ?>
+<?php get_footer(); }?>
