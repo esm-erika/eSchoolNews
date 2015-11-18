@@ -128,11 +128,13 @@
 
 <?php }?>
 
+<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
+
 
 	<?php endif;?>
 
 </div>
 
-<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
+
 
 	
