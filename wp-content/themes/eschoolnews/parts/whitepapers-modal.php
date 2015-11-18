@@ -88,7 +88,9 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 
 
 if ($WPForm != null) {
-
+echo '<pre> 91';
+print_r($WPautofill);
+echo '</pre>';
 gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 	
 
@@ -147,7 +149,9 @@ if ($WPForm != null) {
 		esmpassvalue => $_COOKIE['esmpass'],	
 		astc => $astc		
 		);
-
+echo '<pre> 152';
+print_r($WPautofill);
+echo '</pre>';
 
 gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
