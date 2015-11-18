@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="row" id="featured">
+
 
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
@@ -63,7 +63,7 @@
 				<?php if ( $featured->have_posts() ) : ?>
 
 
-				
+				<div class="row" id="featured">
 
 				<?php if( is_page('resources')) {
 					echo '';
