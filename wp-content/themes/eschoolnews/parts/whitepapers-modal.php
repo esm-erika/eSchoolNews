@@ -24,13 +24,6 @@ global $esmuser;
 	astc => $astc			
 	); 
 
-echo '<pre> 28';
-print_r($WPautofill);
-
-echo '</pre>';
-
-
-
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
@@ -93,9 +86,7 @@ echo '</pre>';
 
 
 if ($WPForm != null) {
-echo '<pre> 91';
-print_r($WPautofill);
-echo '</pre>';
+
 gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 	
 
@@ -123,40 +114,18 @@ echo '</p>';
 <?php
 if ($WPForm != null) {
 
-			if ( isset($_GET['ps']) ) {
-				$esmpassvals = explode ( "-" , $_GET['ps']);	
-					if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){
-						$wpuidSP=$esmpassvals[0];} 
-					if (isset($esmpassvals[1]) && strlen($esmpassvals[1]) == 15 || ($pscheck==1) && isset($esmpassvals[1]) && strlen($esmpassvals[1]) == 18 ){
-						$sfuidSP=$esmpassvals[1];}
-					if (isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 15 || ($pscheck==1) && isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 18 ){
-						$PersonContactIdPS=$esmpassvals[2];} 
-			}
-			if (isset($_COOKIE['esmpass'])) {
-				$esmpasscookvals = explode ( "-" , $_COOKIE['esmpass']);
-				if (isset($esmpasscookvals[1]) && is_numeric($esmpasscookvals[1])){
-					$wpuid=$esmpasscookvals[1];
-				} 
-				if (isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 15 || isset($esmpasscookvals[2]) && strlen($esmpasscookvals[2]) == 18 ){
-				$sfuid=$esmpasscookvals[2];
-				} 
-				if (isset($esmpasscookvals[3]) && strlen($esmpasscookvals[3]) == 15 || isset($esmpasscookvals[3]) && strlen($esmpasscookvals[3]) == 18 ){
-					$PersonContactId=$esmpasscookvals[3];
-				} 
-			}
-		$WPautofill = array(
-		wpuidSP => $wpuidSP,
-		sfuidSP => $sfuidSP,
-		PersonContactIdPS => $PersonContactIdPS,
-		wpuid => $wpuid,
-		sfuid => $sfuid,
-		PersonContactId => $PersonContactId,	
-		esmpassvalue => $_COOKIE['esmpass'],	
-		astc => $astc		
-		);
-echo '<pre> 152';
-print_r($WPautofill);
-echo '</pre>';
+global $esmuser;
+
+	$WPautofill = array(
+	wpuidSP => $esmuser[wpuid],
+	sfuidSP => $esmuser[sfuidSP],
+	PersonContactIdPS => $esmuser[PersonContactIdPS],
+	wpuid => $esmuser[wpuid],
+	sfuid => $esmuser[sfuid],
+	PersonContactId => $esmuser[PersonContactId],	
+	esmpassvalue => $esmuser[esmpassvalue],	
+	astc => $astc			
+	); 
 
 gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
