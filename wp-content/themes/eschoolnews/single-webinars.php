@@ -78,7 +78,7 @@ get_header(); ?>
 						echo '</div>';
 					}
 					
-					if (get_field('event_information')) {
+					if (get_field('event_information') or ( have_rows('speakers')) ) {
 					the_field('event_information');
 					} else {
 						the_content();
