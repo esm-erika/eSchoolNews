@@ -77,7 +77,6 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
 ?>
-<style type="text/css">select {border:1px solid #888}</style>
 
 		
 <?php global $page; ?>
@@ -94,14 +93,14 @@ gravity_form( $WPForm , false, false, false, $WPautofill, true);
 	
 
 }else if ($WPURL != null) { 
-echo '<p><a href="'.$WPURL.'" target="_blank">';
+echo '<p>';
  if ($WPcbt != null) { 
-		echo'<img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" />';
+
+		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 		} else{
-		echo'<img class="alignright" src="http://www.eschoolnews.com/files/2011/10/download-whitepaper.gif" alt="Download Whitepaper" width="364" height="76" border="0" />';	 
-	 
+		echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';
 	 }
-echo '</a></p>'; 
+echo '</p>'; 
 
 
 ?>
@@ -157,7 +156,7 @@ echo '<p>';
  if ($WPcbt != null) { 
 		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 		} else{
-		echo'<a href="'.$WPURL.'" target="_blank"><a class="button radius small" href="'.$WPURL.'">Download Whitepaper</a>';	 
+		echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';	 
 	 
 	 }
 echo '</p>'; 

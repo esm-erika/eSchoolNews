@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
 
-							<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit" > Download </a>
+							<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
 
 
 						<?php } else { // not logged in ?>
@@ -198,7 +198,7 @@ $(document).ready(function(){
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
                         
                         
-                        	<?php } ?>
+                        <?php } ?>
 					</div>
                     </div>
 

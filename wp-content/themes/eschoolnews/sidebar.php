@@ -12,7 +12,12 @@
 
 <aside id="sidebar" class="small-12 medium-4 columns">
 
-	<?php get_template_part( 'parts/ads/embeddedbanner' );?>
+	<?php 
+
+		if ( ! is_singular('whitepapers')) {
+			get_template_part( 'parts/ads/embeddedbanner' );
+
+	} ?>
 
 	<?php
 		get_template_part( 'parts/sidebar/astc' );
@@ -79,7 +84,14 @@
 			//get_template_part( 'parts/sidebar/most-popular' );  	
 			}
 	 ?>
-	 <?php get_template_part( 'parts/ads/embeddedbanner-2' ); ?>
+
+	 <?php 
+
+	 if ( ! is_singular('whitepapers')) {
+
+	 	get_template_part( 'parts/ads/embeddedbanner-2' ); 
+
+	 } ?>
 
 	 <?php if ( is_home() || is_front_page() ) {
 	 	get_template_part( 'parts/sidebar/links' );
