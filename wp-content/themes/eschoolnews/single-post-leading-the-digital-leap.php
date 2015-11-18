@@ -27,9 +27,6 @@ get_header(); ?>
 
 <?php  $astused = get_post_meta($id, '_wp_esmad_template', true);
 $oldtemplate = get_post_meta($id, '_wp_post_template', true);
-
-
-
    ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -53,7 +50,7 @@ $oldtemplate = get_post_meta($id, '_wp_post_template', true);
 <?php
 
 $pagedln=get_post_meta($post->ID, 'Digital Leap Newsletter URL', $single = true);
-echo '<iframe src="'.$pagedln.'" style="width: 100%; height: 2200px;"></iframe>'; 
+echo '<iframe src="'.$pagedln.'" style="width: 100%; height: 1500px;" scrolling="yes"></iframe>'; 
 
 ?>
 
@@ -147,6 +144,6 @@ custom_wp_link_pages();
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar('digital-leap'); ?>
+	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
