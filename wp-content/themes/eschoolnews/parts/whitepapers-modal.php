@@ -14,20 +14,19 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 global $esmuser;
 
 	$WPautofill = array(
-	wpuidSP => $esmuser->wpuid,
-	sfuidSP => $esmuser->sfuidSP,
-	PersonContactIdPS => $esmuser->PersonContactIdPS,
-	wpuid => $esmuser->wpuid,
-	sfuid => $esmuser->sfuid,
-	PersonContactId => $esmuser->PersonContactId,	
-	esmpassvalue => $esmuser->esmpassvalue,	
+	wpuidSP => $esmuser[wpuid],
+	sfuidSP => $esmuser[sfuidSP],
+	PersonContactIdPS => $esmuser[PersonContactIdPS],
+	wpuid => $esmuser[wpuid],
+	sfuid => $esmuser[sfuid],
+	PersonContactId => $esmuser[PersonContactId],	
+	esmpassvalue => $esmuser[esmpassvalue],	
 	astc => $astc			
 	); 
 
 echo '<pre> 28';
-print_r($esmuser);
-echo '29'.$esmuser->esmpassvalue;
-echo '30'.$esmuser[esmpassvalue];
+print_r($WPautofill);
+
 echo '</pre>';
 
 
