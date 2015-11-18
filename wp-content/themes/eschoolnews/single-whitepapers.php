@@ -39,7 +39,7 @@ get_header(); ?>
 
 						    <hr/>
  
-  <?php the_content(); echo '42'; ?>
+  <?php the_content(); ?>
 
   <?php 
 
