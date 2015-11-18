@@ -86,7 +86,7 @@
 	 ?>
 
 	 <?php
-		if( in_category('leading-the-digital-leap')) { 
+		if( in_category('11351')) { 
 			get_template_part( 'parts/sidebar/digital-leap' );  	
 		}
 	 ?>
