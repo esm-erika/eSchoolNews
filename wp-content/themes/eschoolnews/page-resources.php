@@ -26,13 +26,9 @@ get_header(); ?>
 
 
 
-
-
 <?php get_template_part( 'parts/featured-article' ); ?>
 
 <div class="row">
-
-
 	
 	<div class="small-12 medium-8 columns">
 
@@ -92,6 +88,7 @@ get_header(); ?>
 <div class="row">
 
 	<div class="medium-12 columns">
+		
 		<hr class="thick" />
 		<h4>Additional Resources</h4>
 
