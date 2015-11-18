@@ -14,7 +14,7 @@
 
 	<?php 
 
-		if ( ! is_singular('whitepapers')) {
+		if ( ! is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
 			get_template_part( 'parts/ads/embeddedbanner' );
 
 	} ?>
@@ -85,9 +85,16 @@
 			}
 	 ?>
 
+	 <?php
+		if( in_category('leading-the-digital-leap')) { 
+			get_template_part( 'parts/sidebar/digital-leap' );  	
+		}
+	 ?>
+
+
 	 <?php 
 
-	 if ( ! is_singular('whitepapers')) {
+	 if ( ! is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
 
 	 	get_template_part( 'parts/ads/embeddedbanner-2' ); 
 
