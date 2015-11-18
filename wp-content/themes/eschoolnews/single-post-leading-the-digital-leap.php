@@ -15,7 +15,7 @@ get_header(); ?>
 				<?php 
 				//if( is_singular( array('ercs','whitepapers','webinars','special-reports') )) {
 								
-				get_template_part('parts/flags');
+				//get_template_part('parts/flags');
 				
 				?>
 
