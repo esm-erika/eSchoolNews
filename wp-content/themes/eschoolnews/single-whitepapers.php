@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
 
-						    <div class="medium-12 columns">
+						    
 
 						 
 
@@ -25,9 +25,11 @@ get_header(); ?>
   
   <h1 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h1>
 
+  <hr/>
+
   						<?php 
 
-							if (has_post_thumbnail()) { ?>
+							if ( has_post_thumbnail() ) { ?>
 
 
 							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
@@ -37,9 +39,20 @@ get_header(); ?>
 
 						    <?php } ?>
 
-						    <hr/>
+			
+						<?php 
+						if ( have_posts() ) {
+							while ( have_posts() ) {
+								the_post(); 
+								//
+								the_content();
+								//
+							} // end while
+						} // end if
+						?>			    
  
-  <?php the_content(); ?>
+
+ 
 
   <?php 
 
@@ -178,7 +191,7 @@ Already a member? Log in
 <a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
 
 </form>	
-</div>
+
                                     
 
 
