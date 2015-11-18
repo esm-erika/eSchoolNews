@@ -14,10 +14,15 @@
 
 	<?php 
 
-		if ( ! is_singular('whitepapers') || ! is_category('11351')) {
+		if ( ! is_singular('whitepapers') || ! in_category('11351')) {
 			get_template_part( 'parts/ads/embeddedbanner' );
 
 	} ?>
+
+	<?php if ( in_category('leading-the-digital-leap')) 
+
+		echo 'THIS IS IT!';
+	?>
 
 	<?php
 		get_template_part( 'parts/sidebar/astc' );
@@ -96,7 +101,7 @@
 
 	 <?php 
 
-	 if ( ! is_singular('whitepapers') || ! is_category('11351')) {
+	 if ( ! is_singular('whitepapers') || ! in_category('11351')) {
 
 	 	get_template_part( 'parts/ads/embeddedbanner-2' ); 
 
