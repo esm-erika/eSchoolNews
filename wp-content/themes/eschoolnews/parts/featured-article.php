@@ -118,12 +118,20 @@
 		<?php wp_reset_query(); ?>
 
 
+<?php if( is_page('resources')) { ?>
 
+<div class="row">
+	<div class="small-12 medium-12 columns">
+<hr class="thick" />
+</div>
+</div>
 
-<!--  -->
-<!-- </div> -->
+<?php }?>
+
 
 	<?php endif;?>
+
+</div>
 
 <?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
