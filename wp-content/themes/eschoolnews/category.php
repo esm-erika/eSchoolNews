@@ -32,7 +32,7 @@ if( is_category( $currCat )){
 
 	include (TEMPLATEPATH . '/category-view-all.php');
 
-} ?>
+} else { ?>
 
 
 
@@ -215,3 +215,5 @@ echo $local_box_cache;
 
 
 <?php get_footer(); ?>
+
+<?php } ?>

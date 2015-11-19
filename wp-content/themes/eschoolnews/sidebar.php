@@ -14,23 +14,22 @@
 
 	<?php 
 
-		if ( ! is_singular('whitepapers') || ! in_category('11351')) {
-			get_template_part( 'parts/ads/embeddedbanner' );
+	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
+
+		echo '';
+
+	} else {
+
+		get_template_part( 'parts/ads/embeddedbanner' );
 
 	} ?>
 
-	<?php if ( in_category('leading-the-digital-leap')) 
-
-		echo 'THIS IS IT!';
-	?>
-
 	<?php
-		get_template_part( 'parts/sidebar/astc' );
+	get_template_part( 'parts/sidebar/astc' );
 	?>
 
 	<?php if(is_page('Resources')){
 		get_template_part( 'parts/sidebar/topics' );
-		//get_template_part( 'parts/ads/embeddedbanner-2' );
 	} ?>
 
 	<?php if(is_post_type_archive('events')){
@@ -43,28 +42,28 @@
 	} ?>
 
 	<?php
-		if( in_category('11351')) { 
-			get_template_part( 'parts/sidebar/digital-leap' );  	
-		}
-	 ?>
+	if( in_category('leading-the-digital-leap')) { 
+		get_template_part( 'parts/sidebar/digital-leap' );  	
+	}
+	?>
 
 	<?php 
-	if( is_post_type_archive('webinars') || is_search() || is_post_type_archive( 'special-reports') || is_post_type_archive( 'ercs')) { 
+	if( is_post_type_archive( array('webinars', 'special-reports', 'ercs')) || is_search() || is_singular('whitepapers')) { 
 		get_template_part( 'parts/sidebar/resources' );
 	} ?>
 
-	  <?php
+	<?php
 	if( is_singular('webinars')) { 
 		get_template_part( 'parts/sidebar/sponsored-by' );  
-		}
-	 ?>
+	}
+	?>
 
 
-	 <?php if(is_singular( array('webinars', 'events') )) {
-	 	get_template_part( 'parts/sidebar/speakers' );
-	 }
+	<?php if(is_singular( array('webinars', 'events') )) {
+		get_template_part( 'parts/sidebar/speakers' );
+	}
 
-	  ?>
+	?>
 
 	<?php if( is_tag() || is_page('Top Stories')) {
 		get_template_part( 'parts/sidebar/tag-cloud' );
@@ -79,38 +78,39 @@
 	<?php
 	if( is_singular('post')) { 
 		get_template_part( 'parts/sidebar/related-content' );  
-	
-		}
-	 ?>
 
-	 <?php
+	}
+	?>
+
+	<?php
 	if( is_post_type_archive('whitepapers' ) || is_tax()) { 
 		get_template_part( 'parts/sidebar/company-categories' );  	
-		}
-	 ?>
+	}
+	?>
 
 
 	<?php
-		if( is_category()) { 
+	if( is_category()) { 
 			//get_template_part( 'parts/sidebar/most-popular' );  	
-			}
-	 ?>
+	}
+	?>
 
-	 
+	<?php 
 
+	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
 
-	 <?php 
+		echo '';
 
-	 if ( ! is_singular('whitepapers') || ! in_category('11351')) {
+	} else {
 
-	 	get_template_part( 'parts/ads/embeddedbanner-2' ); 
+		get_template_part( 'parts/ads/embeddedbanner-2' ); 
 
-	 } ?>
+	} ?>
 
-	 <?php if ( is_home() || is_front_page() ) {
-	 	get_template_part( 'parts/sidebar/links' );
+	<?php if ( is_home() || is_front_page() ) {
+		get_template_part( 'parts/sidebar/links' );
 
-	 } ?>
+	} ?>
 	
 
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
