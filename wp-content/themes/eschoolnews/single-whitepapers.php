@@ -18,7 +18,7 @@ get_header(); ?>
 
 		<div class="medium-4 columns">
 
-			<?php 
+		<?php 
 
 		if ( has_post_thumbnail() ) { ?>
 
@@ -37,6 +37,8 @@ get_header(); ?>
 		<?php get_template_part('parts/flags'); ?>
 
 		<h1 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h1>
+		
+		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
 		<hr/>
 
