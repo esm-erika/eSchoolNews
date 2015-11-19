@@ -48,7 +48,7 @@
 	?>
 
 	<?php 
-	if( is_post_type_archive('webinars') || is_search() || is_post_type_archive( 'special-reports') || is_post_type_archive( 'ercs')) { 
+	if( is_post_type_archive( array('webinars', 'special-reports', 'ercs')) || is_search() || is_singular('whitepapers')) { 
 		get_template_part( 'parts/sidebar/resources' );
 	} ?>
 
