@@ -14,13 +14,13 @@
 
 	<?php 
 
-	if ( ! is_singular('whitepapers')) {
-
-		get_template_part( 'parts/ads/embeddedbanner' );
-
-	} elseif (in_category('leading-the-digital-leap')) {
+	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
 
 		echo '';
+
+	} else {
+
+		get_template_part( 'parts/ads/embeddedbanner' );
 
 	} ?>
 
@@ -97,13 +97,13 @@
 
 	<?php 
 
-	if ( ! is_singular('whitepapers')) {
-
-		get_template_part( 'parts/ads/embeddedbanner-2' ); 
-
-	} elseif (in_category('leading-the-digital-leap')) {
+	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
 
 		echo '';
+
+	} else {
+
+		get_template_part( 'parts/ads/embeddedbanner-2' ); 
 
 	} ?>
 
