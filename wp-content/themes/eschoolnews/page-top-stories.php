@@ -21,7 +21,7 @@ get_header(); ?>
 	<?php // The Query
 
 			// Define custom query parameters
-		$topstories_args = array( 'post_type' => 'post');
+		$topstories_args = array( 'post_type' => 'post', 'posts_per_page' => '10');
 
 		// Get current page and append to custom query parameters array
 		$topstories_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
