@@ -10,29 +10,9 @@
  */
 global $post, $page, $esmuser; 
 $post_id = $post->ID;
-$astcset = $_GET['astc'];
-if(!filter_var($astcset, FILTER_VALIDATE_INT))
-{//reserved for default ad set
-  $astc = 1;
-} else {
-// Retrieve adset info from url
-  $astc = $astcset; 
-}
 
-$astused = get_post_meta($post_id, '_wp_esmad_template', true);
-if($astused > 1){
- $astf = $astused; 
-} else {
-  $pageadset = $_GET['ast'];
-  if(!filter_var($pageadset, FILTER_VALIDATE_INT))
-  {//reserved for default ad set
-    $astused = 1;
-  } else {
-    // Retrieve adset info from page
-    $astused = $pageadset;  
-  }
-}
-//check if user is logged in
+//check if there are ads and if user is logged in
+get_template_part( 'library/ad-check' );
 get_template_part( 'library/logged-in-check' ); 
 ?>
 <!doctype html>

@@ -11,7 +11,8 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 }
 
 //insert cache query
-			$box_qt = 'blead_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
+			global $astc, $astused;
+$box_qt = 'blead_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$astused."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 
 			$local_box_cache = get_transient( $box_q );
@@ -126,7 +127,8 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 }
 
 //insert cache query
-			$box_qt = 'bmlead_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
+			global $astc, $astused;
+$box_qt = 'bmlead_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$astused."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 
 			$local_box_cache = get_transient( $box_q );
@@ -194,7 +196,8 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 }
 
 //insert cache query
-			$box_qt = 'art_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
+			global $astc, $astused;
+$box_qt = 'art_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$astused."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 			//$local_box_cache = get_transient( $box_q ); 
 			//if (false === ($local_box_cache) ){
@@ -293,7 +296,8 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 }
 
 //insert cache query
-			$box_qt = 'blead300_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
+			global $astc, $astused;
+$box_qt = 'blead300_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$astused."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 
 			$local_box_cache = get_transient( $box_q );
@@ -405,7 +409,8 @@ if($ast > 0){ $aststr = '?ast='.$ast;
 }
 
 //insert cache query
-			$box_qt = 'art300_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$ast."_".$astc;
+			global $astc, $astused;
+$box_qt = 'art300_'.$qty.'_'.$theorder.'_'.$showthumb."_".$thecat."_".$offset."_".$theboxtitle."_".$astused."_".$astc;
 			$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 
 			$local_box_cache = get_transient( $box_q );
