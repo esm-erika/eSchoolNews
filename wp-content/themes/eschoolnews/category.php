@@ -32,7 +32,7 @@ if( is_category( $currCat )){
 
 	include (TEMPLATEPATH . '/category-view-all.php');
 
-} ?>
+} else { ?>
 
 
 
@@ -183,3 +183,5 @@ $featured = new WP_Query(array(
 
 
 <?php get_footer(); ?>
+
+<?php } ?>
