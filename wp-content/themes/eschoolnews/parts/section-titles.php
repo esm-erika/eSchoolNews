@@ -10,8 +10,6 @@
 
 ?>
 
-
-
 <h1 class="section-title"><span>
 
 <?php 
