@@ -28,11 +28,29 @@ global $cat;
 	$topParent = strtolower(strtr($topParentName,$sdacReplace));
 	$currCat = 'view-all-' . $topParent;
 
+
 if( is_category( $currCat )){ 
 
 	include (TEMPLATEPATH . '/category-view-all.php');
 
-} else { ?>
+} else { 
+
+
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]
+$cat_name = get_category(get_query_var('cat'))->term_id;
+global $astc, $astused;
+$box_qt = 'esm_c_top_cata_a'.$astused."c".$astc.'c'.$cat_name;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	// start code to cache
+		ob_start( );
+			echo '<!-- c -->';
+
+?>
 
 
 
@@ -151,8 +169,24 @@ $featured = new WP_Query(array(
 	<?php get_template_part( 'parts/top-stories' ); ?>
 
 </div>
+<?php 
+			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
 
+echo $local_box_cache;
 
+}
+?>
 
 
 <div class="row">

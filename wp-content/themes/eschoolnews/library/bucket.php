@@ -121,7 +121,7 @@ if(empty($idObj)){echo '<!--- No category found --->';}else{
 	}
 } 
 
-// Add is_post_type to conditional
+//Add is_post_type to conditional
 function is_post_type($type){
    global $wp_query;
     if($type == get_post_type($wp_query->post->ID)) return true;
