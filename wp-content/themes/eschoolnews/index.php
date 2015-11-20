@@ -83,7 +83,4 @@ echo $local_box_cache;
 <?php get_template_part('parts/whitepaper-section'); ?>
 
 
-
-
-
 <?php get_footer(); ?>

@@ -16,11 +16,11 @@ get_header();
 global $cat;
 
 // get parent category slug
-	$parentCatList = get_category_parents($cat,false,',');
-	$parentCatListArray = explode(",",$parentCatList);
-	$topParentName = $parentCatListArray[0];
-	$sdacReplace = array(" " => "-", "(" => "", ")" => "");
-	$topParent = strtolower(strtr($topParentName,$sdacReplace));
+$parentCatList = get_category_parents($cat,false,',');
+$parentCatListArray = explode(",",$parentCatList);
+$topParentName = $parentCatListArray[0];
+$sdacReplace = array(" " => "-", "(" => "", ")" => "");
+$topParent = strtolower(strtr($topParentName,$sdacReplace));
 
 	//echo '<pre>';
 	//var_dump($topParent);
@@ -33,96 +33,66 @@ global $cat;
 
 	<br/>
 
-				<h1 class="section-title"><span><?php echo $topParentName ?> Top Stories</span></h1>
+	<h1 class="section-title"><span><?php echo $topParentName ?> Top Stories</span></h1>
 
 
 	<div class="small-12 large-8 columns" role="main">
 
-	<?php // The Query
-
-			// Define custom query parameters
-		$topstories_args = array( 'post_type' => 'post');
-
-		// Get current page and append to custom query parameters array
-		$topstories_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-
-		// Instantiate custom query
-		$topstories = new WP_Query( $topstories_args );
+		<?php
+  // set up or arguments for our custom query
+		//$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+		$query_args = array(
+			'post_type' => 'post',
+			'category_name' => $topParent,
+			'posts_per_page' => 5,
+			'paged' => $paged
+			);
+  // create a new instance of WP_Query
+		$the_query = new WP_Query( $query_args );
 
 		// Pagination fix
 		$temp_query = $wp_query;
 		$wp_query   = NULL;
-		$wp_query   = $topstories; ?>
+		$wp_query   = $the_query; 
+
+		?>
 
 
+		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
+		<article>
+			<h1><?php echo the_title(); ?></h1>
+			<div class="excerpt">
+				<?php the_excerpt(); ?>
+			</div>
+		</article>
+	<?php endwhile; ?>
 
-
-		<?php 
-			if ( $topstories->have_posts() ) :
-		    while ( $topstories->have_posts() ) :
-		        $topstories->the_post();
-		 ?>
-
-
-		<article class="row">
-
-
-			<?php if (has_post_thumbnail( )) { 
-
-				$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
-				$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?>
-
-
-				<div class="small-12 large-4 columns" role="main">
-
-					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
-				</div>
-				<header class="small-12 large-8 columns">
-
-					<?php } ?>
-
-					<?php if ( ! has_post_thumbnail( )) { ?>
-					<header class="small-12 large-12 columns">
-						<?php } ?>
-
-						
-
-
-						<span class="flag content"><a href="<?php the_permalink(); ?>">News</a></span>
-
-						<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<div class="small-caps">By <?php the_author(); ?></div>
-						<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
-					</article>
-					<hr/>
-
-
-			<?php
-			
-			endwhile;
-			endif;
-			// Reset postdata
-			wp_reset_postdata(); ?>
-
-
+	<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+	<nav class="prev-next-posts">
+		<div class="prev-posts-link">
 			<?php 
-
-			pagination($topstories->max_num_pages);
-				
-				// Custom query loop pagination
-				//previous_posts_link( 'Older Posts' );
-				//next_posts_link( 'Newer Posts', $topstories->max_num_pages );
-
+			echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link 
+			echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link 
 
 			$wp_query = NULL;
 			$wp_query = $temp_query;
-			 ?>
 
-
-
-
+			?>
 		</div>
+	</nav>
+	<?php } ?>
 
+<?php else: ?>
+	<article>
+		<h1>Sorry...</h1>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	</article>
+<?php endif; ?>
+
+
+
+
+</div>
 <?php 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
@@ -163,3 +133,4 @@ echo $local_box_cache;
 ?>
 	</div>
 	<?php get_footer(); ?>
+
