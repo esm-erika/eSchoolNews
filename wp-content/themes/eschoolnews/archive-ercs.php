@@ -19,7 +19,9 @@
 get_header(); ?>
 <?php 
 //insert cache query
-$box_qt = 'esm_c_ercarc_';
+Global $page;
+
+$box_qt = 'esm_c_ercarc_pg'.$page;
 $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 $local_box_cache = get_transient( $box_q );
 if (false === ($local_box_cache) ){
