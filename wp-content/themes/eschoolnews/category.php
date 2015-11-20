@@ -48,7 +48,7 @@ if (false === ($local_box_cache) ){
 
 	// start code to cache
 		ob_start( );
-			echo '<!-- c -->';
+			echo '<!-- c '. 'esm_c_top_cata_a'.$astused."c".$astc.'c'.$cat_name .'-->';
 
 ?>
 
