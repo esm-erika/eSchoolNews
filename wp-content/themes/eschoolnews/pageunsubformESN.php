@@ -552,9 +552,11 @@ if(validate_email2($unsubemail)){
 
                         
                     	
- <?php if(!$hidesec2 == 1){ ?>                        
-                        <div style="float:left; width:45%; margin:10px;">
-      
+ <?php if(!$hidesec2 == 1){ ?>
+ 
+ <div class="row">
+	<div class="small-12 large-6 columns">	
+
 <?php if(!$eschool_news_this_week == 1){ ?>    	                
                         <div><input name="eschool_news_this_week" value="eschool_news_this_week" type="checkbox"> <label style="font-weight:bold;" for="eschool_news_this_week">Innovation Weekly</label>
         	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div>
@@ -598,20 +600,10 @@ if(validate_email2($unsubemail)){
 
  <?php } ?>
 
+</div>
 
+<div class="small-12 large-6 columns">
 
-
-
-
-
-                                         
-                         
-                        </div>
-                        
-                        
-<div style="float:left; width:45%; margin:10px;">
-	                   
-                 
 <?php if(!$ecampus_news_this_week == 1){ ?>                                                
 	                    <div><input name="ecampus_news_this_week" value="ecampus_news_this_week" type="checkbox"> <label style="font-weight:bold;" for="ecampus_news_this_week">Reinventing Higher Education</label>
         	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div>
@@ -665,12 +657,11 @@ if(validate_email2($unsubemail)){
  <?php } ?>                       
                         
                       </div>                        
+<input name="submit" value="Unsubscribe" type="submit" class="button" >                        
+ </div>                       
                         
                         
-                        
-                        
-                      <input name="submit" value="Unsubscribe" type="submit" class="button" >
-                     </div>
+
 
 </form>
 <?php }
