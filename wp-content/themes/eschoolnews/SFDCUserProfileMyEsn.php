@@ -591,10 +591,12 @@ Not logged in below
 
  */		
 ?>
+
+<?php
+if ( !is_user_logged_in() ){ ?>
+
 <div class="row">
 	<div class="small-12  medium-12 columns" role="main">
-<?php
-if ( !is_user_logged_in() ){			 ?>
 			<h4>You must login to access this page.</h4>	
 <?php wp_login_form(); ?>						
 </div></div>
