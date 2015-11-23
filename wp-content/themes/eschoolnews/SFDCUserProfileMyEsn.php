@@ -179,7 +179,7 @@ if (empty($_POST["subject_taught__c"])){$sf_req_fields = 1;}
 	}
 </script>
 
-<div class="row top">
+<div class="row">
 	<div class="small-12 large-12 columns" role="main">	
 
 <h1 class="section-title"><span>Your User Profile</span></h1>
@@ -591,8 +591,8 @@ Not logged in below
 
  */		
 ?>
-<div class="row top">
-	<div class="small-12  medium-6 large-6 columns" role="main">
+<div class="row">
+	<div class="small-12  medium-12 columns" role="main">
 <?php
 if ( !is_user_logged_in() ){			 ?>
 			<h4>You must login to access this page.</h4>	
