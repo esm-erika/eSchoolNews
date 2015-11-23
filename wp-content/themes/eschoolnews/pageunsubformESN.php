@@ -429,22 +429,20 @@ if(validate_email2($unsubemail)){
 <div class="row">
 	<div class="small-12 large-12 columns" role="main">	
 			<h1 class="section-title"><span><?php the_title(); ?></span></h1>
-		
+	</div>
+</div>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<?php the_content(); ?>
-                 <?php 
-				if ($emailtounsubcheck == 1) { 
-				?>
-	                    <p> Please allow 72 hours for your email to be removed from all our email lists. </p>
+<div class="row">
+	<div class="small-12 large-12 columns" role="main">	
+        <?php the_content(); ?>
+<?php if ($emailtounsubcheck == 1) { ?>
+			<p> Please allow 72 hours for your email to be removed from all our email lists. </p>
+			<p>We do not wish for you to receive emails that you do not want to receive. You may contact customer service by email at <a href="mailto:custserv@eSchoolnews.com">custserv@eSchoolnews.com</a> or you may call customer service at 1-800-394-0115 x199.</p>
+	</div>
+</div>
+<?php } else { ?>
 
-<p>We do not wish for you to receive emails that you do not want to receive. You may contact customer service by email at <a href="mailto:custserv@eSchoolnews.com">custserv@eSchoolnews.com</a> or you may call customer service at 1-800-394-0115 x199.</p>
-
-				<?php 
-				} else {
-				
-				?>
-               
-                <form name="sub1" id="sub1" action="?<?php echo generateRandomString(); ?>" method="post">
+<form name="sub1" id="sub1" action="?<?php echo generateRandomString(); ?>" method="post">
                     <div style="width:90%; padding:20px; margin:10px; float:left; display:block;">
                      
                      
@@ -553,9 +551,9 @@ if(validate_email2($unsubemail)){
 
                         
                     	
-                        
+ <?php if(!$hidesec2 == 1){ ?>                        
                         <div style="float:left; width:45%; margin:10px;">
-<?php if(!$hidesec2 == 1){ ?>       
+      
 <?php if(!$eschool_news_this_week == 1){ ?>    	                
                         <div><input name="eschool_news_this_week" value="eschool_news_this_week" type="checkbox"> <label style="font-weight:bold;" for="eschool_news_this_week">Innovation Weekly</label>
         	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div>
@@ -670,19 +668,13 @@ if(validate_email2($unsubemail)){
                         
                         
                         
-                      <div style="padding-left: 50px;"><input name="submit" value="Unsubscribe" type="submit"></div>
+                      <button><input name="submit" value="Unsubscribe" type="submit"></button>
                      </div>
-                    </form>
 
-				
+</form>
+<?php }
 
-				<?php } ?>   
-                    
-            
-		<?php endwhile; else : endif; ?>
-
-	</div>
-</div>	
-	
-	<?php  get_footer(); ?>
-
+		endwhile; else : endif;
+		
+get_footer();
+?>
