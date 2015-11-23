@@ -13,6 +13,16 @@
 
 get_header(); ?>
 
+
+
+
+
+<?php echo get_query_var( 'paged' ); ?>
+
+
+
+
+
 <div class="row">
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
