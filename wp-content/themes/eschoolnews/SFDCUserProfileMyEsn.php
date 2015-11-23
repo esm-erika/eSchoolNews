@@ -212,9 +212,9 @@ function Cancel (Id){
 						<label for="user_login">Username</label>
 						<strong><?php echo $current_user->user_login;  ?></strong>
 					</div>
-				</div>
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+				
+					<div class="small-6 columns">
 						<label for='personemail'><span style="color: red;">*</span>Email</label>
 
 						<?php if ($sf_email_check == 0){ ?>
@@ -224,30 +224,23 @@ function Cancel (Id){
 						<?php } ?>
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='firstname'><span style="color: red;">*</span>First Name</label>
 						<input  type='text' name='firstname' id='firstname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->FirstName).'"'  ?>/>
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='lastname'><font color="red">*</font>Last Name</label>
 						<input  type='text' name='lastname' id='lastname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->LastName).'"'  ?> />
 					</div>
-				</div>
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+			
+					<div class="small-6 columns">
 						<label for='organization__c'><font color="red">*</font>Organization</label>
 						<input  type='text' name='organization__c' id='organization__c' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->Organization__c).'"'  ?>/>
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='company_type__c'><font color="red">*</font>Organization Type</label>
 
 						<select  name='company_type__c' id='company_type__c'>
