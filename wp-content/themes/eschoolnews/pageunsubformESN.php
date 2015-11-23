@@ -447,19 +447,19 @@ if(validate_email2($unsubemail)){
                      
                      
                      <?php if($urldatacheck == 1){ ?>
-                       <h2 style="margin:10px;"> Please confirm the email address that you wish to unsubscribe from our lists.</h2>
+                       <h5 style="margin:10px;"> Please confirm the email address that you wish to unsubscribe from our lists.</h5>
                     <p style="margin:10px;"><label style="font-weight:bold;" for="emailtounsub">Email: </label><input name="emailtounsub" maxlength="250" size="50" type="text" <?php if($urldatacheck == 1){echo 'value="'.$unsubemail.'"';}?> >
                     </p>
                      
                      <?php } else { ?>
                      
-                        <h2 style="margin:10px;"> Please enter the email address that you wish to unsubscribe from our lists.</h2>
+                        <h5> Please enter the email address that you wish to unsubscribe from our lists.</h5>
                     <p style="margin:10px;"><label style="font-weight:bold;" for="emailtounsub">Email: </label><input name="emailtounsub" maxlength="250" size="50" type="text" value="" /> 
                         </p>
                         
                      <?php } ?>                        
-
-<div style="width:600px;">
+<div class="row">
+	<div class="small-12 large-12 columns">	
 	                   
 <?php if($eschool_news_this_week == 1){ ?>    	                
                         <div><input name="eschool_news_this_week" value="eschool_news_this_week" type="checkbox" checked="checked"> <label style="font-weight:bold;" for="eschool_news_this_week">Innovation Weekly</label>
@@ -546,8 +546,9 @@ if(validate_email2($unsubemail)){
                     	</div>                        
 <?php } ?>
 
- </div>               
-                           
+
+	</div>
+</div>               
 
                         
                     	
