@@ -17,7 +17,13 @@ get_header(); ?>
 
 
 
-<?php echo get_query_var( 'paged' ); ?>
+<?php 
+
+$cat_name = get_category(get_query_var('cat'))->term_id;
+
+echo get_query_var( 'paged' ); 
+echo $cat_name;
+?>
 
 
 
