@@ -668,7 +668,7 @@ if(validate_email2($unsubemail)){
                         
                         
                         
-                      <button><input name="submit" value="Unsubscribe" type="submit"></button>
+                      <input name="submit" value="Unsubscribe" type="submit" class="button" >
                      </div>
 
 </form>
