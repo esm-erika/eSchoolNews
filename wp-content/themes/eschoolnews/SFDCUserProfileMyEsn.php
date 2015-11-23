@@ -202,8 +202,8 @@ function Cancel (Id){
 		}
 		?>
 
-		<div class="row top">
-			<div class="small-12  medium-6 large-6 columns" role="main">	
+		<div class="row">
+			<div class="small-12  medium-12 columns" role="main">	
 
 				<h4>User and Address Information</h4>
 
@@ -392,7 +392,7 @@ function Cancel (Id){
 			</div>
 
 
-			<div class="small-12 medium-6 large-6 columns" role="main">    
+			<div class="small-12 medium-12 columns" role="main">    
 
 				<div class="row medium-collapse">
 					<div class="small-12 columns">
@@ -656,7 +656,11 @@ function Cancel (Id){
 </form>
 
 </div>
-</div>	
+</div>
+
+</div>
+</div>
+
 <p>&nbsp;</p>
 <?php 
 break;
