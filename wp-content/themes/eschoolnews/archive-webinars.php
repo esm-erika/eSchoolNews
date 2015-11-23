@@ -17,6 +17,18 @@
  */
 
 get_header(); ?>
+<?php 
+//insert cache query
+global $page;
+$box_qt = 'esm_c_arcwebinar_menu_pg'.$page;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+	// start code to cache
+		ob_start( );
+		echo '<!-- c -->'; 
+		?>
+		
 
 <?php
 $webinars = new WP_Query(array(
@@ -130,7 +142,24 @@ $webinars = new WP_Query(array(
 					</div>
 
 
+		<?php
+		echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
 
+echo $local_box_cache;
+
+}
+?>
 
 
 
