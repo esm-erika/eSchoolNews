@@ -353,8 +353,10 @@ function Cancel (Id){
 						?>	
 
 					</div>
+
+
 				
-					<div class="small-6 columns">
+					<div class="small-12 columns">
 
 						<p class="submit">
 							<input type="submit" class="button" id="profileSubmit" value="Update Profile" name="submit" style="margin:10px 30px; padding:10px 20px; font-size:16px;" />
@@ -363,6 +365,8 @@ function Cancel (Id){
 				</div>
 
 			</div>
+
+			<hr/>
 
 
 			<div class="small-12 medium-12 columns" role="main">    
@@ -397,11 +401,13 @@ function Cancel (Id){
 					<div class="small-12 columns">
 
 			<p class="submit">
-				<input type="submit" class="button-primary" id="profileSubmit" value="Update Profile" name="submit" style="margin:0px 30px; padding:5px;" />
+				<input type="submit" class="button-primary" id="profileSubmit" value="Update Password" name="submit" style="margin:0px 30px; padding:5px;" />
 			</p>
 
 				</div>
 			</div>
+
+			<hr/>
 
 		
 
@@ -410,12 +416,13 @@ function Cancel (Id){
 
 			<h4>Please select the eMail newsletters you would like to receive:</h4>
 
-			<h6><label for='esn_this_week__c'>Innovation Weekly</label> </h6>
+		<div class="row">
+			<div class="small-6 columns">
+
 				
-
 			<div class="row">
-					<div class="small-6 columns">
-
+					<div class="small-12 columns">
+<h6>Innovation Weekly</h6>
 					The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <em>Weekly on Monday</em>
 				</div>
 					<div class="small-6 columns">
@@ -429,13 +436,9 @@ function Cancel (Id){
 					</div>
 				</div>
 
-				
-				<h6><label for='esn_today__c'>eSchool News Today</label></h6>
-				
-
 				<div class="row">
 					<div class="small-6 columns">
-
+<h6>eSchool News Today</h6>
 					Daily breaking news headlines
 				</div>
 					<div class="small-6 columns">
@@ -448,13 +451,11 @@ function Cancel (Id){
 						?>	
 					</div>
 				</div>
-				
-				
-
-				<h6><label for='esn_tools_for_schools__c'>eSchool News Tools for Schools</label></h6>
+			
 				
 				<div class="row">
 					<div class="small-6 columns">
+				<h6>eSchool News Tools for Schools</h6>
 
 						Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <em>Weekly on Wednesday</em>
 					</div>
@@ -469,11 +470,16 @@ function Cancel (Id){
 					</div>
 				</div>
 
-				
-				<h6><label for='Ed_Resource_Alert__c'>Ed Resource Alert</label></h6>
+			</div></div>
+
+
+			<div class="row">
+			<div class="small-6 columns">
 					
 					<div class="row">
 					<div class="small-6 columns">
+					<h6>Ed Resource Alert</h6>
+
 						Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more. <em>Schedule varies</em>
 					</div>
 					<div class="small-16 columns">
@@ -487,11 +493,12 @@ function Cancel (Id){
 					</div>
 				</div>
 
-				<h6><label for='esn_offers__c'>Special Offers from eSchool News</label></h6>
 				
 
 				<div class="row">
 					<div class="small-6 columns">
+										<h6>Special Offers from eSchool News</h6>
+
 					Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em>
 				</div>
 					<div class="small-6 columns">
@@ -506,11 +513,12 @@ function Cancel (Id){
 				</div>
 
 					
-				<h6><label for='partner_offers__c'>Special Offers from School Technology Vendors</label></h6>
 				
 
 				<div class="row">
 					<div class="small-6 columns">
+										<h6>Special Offers from School Technology Vendors</h6>
+
 					Get valuable offers from eSchool News technology vendors <em>Schedule varies</em>
 				</div>
 					<div class="small-6 columns">
@@ -523,6 +531,9 @@ function Cancel (Id){
 						?>	
 					</div>
 				</div>
+
+			</div>
+		</div>
 
 			
 			<div class="row medium-collapse">
