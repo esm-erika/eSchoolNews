@@ -656,7 +656,11 @@ function Cancel (Id){
 </form>
 
 </div>
-</div>	
+</div>
+
+</div>
+</div>
+	
 <p>&nbsp;</p>
 <?php 
 break;
