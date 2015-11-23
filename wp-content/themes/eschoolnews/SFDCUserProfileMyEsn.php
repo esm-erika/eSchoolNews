@@ -208,7 +208,7 @@ function Cancel (Id){
 				<h4>User and Address Information</h4>
 
 				<div class="row medium-collapse">
-					<div class="small-12 columns">
+					<div class="small-6 columns">
 						<label for="user_login">Username</label>
 						<strong><?php echo $current_user->user_login;  ?></strong>
 					</div>
@@ -224,7 +224,9 @@ function Cancel (Id){
 						<?php } ?>
 
 					</div>
-				
+				</div>
+
+				<div class="row medium-collapse">
 					<div class="small-6 columns">
 						<label for='firstname'><span style="color: red;">*</span>First Name</label>
 						<input  type='text' name='firstname' id='firstname' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->FirstName).'"'  ?>/>
@@ -254,10 +256,8 @@ function Cancel (Id){
 						</select>
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='persontitle'><font color="red">*</font>Title</label>
 
 						<select  name='persontitle' id='persontitle'>
@@ -271,32 +271,24 @@ function Cancel (Id){
 						</select>
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='personmailingstreet'><font color="red">*</font>Address</label>
 						<input  type='text' name='personmailingstreet' id='personmailingstreet' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingStreet).'"'  ?>/>
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='Mailing_Address_2__c'>Address 2</label>
 						<input  type='text' name='Mailing_Address_2__c' id='Mailing_Address_2__c' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->Mailing_Address_2__c).'"'  ?>/>
 					</div>
-				</div>		
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 
 						<label for='personmailingcity'><font color="red">*</font>City</label>
 						<input  type='text' name='personmailingcity' id='personmailingcity' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingCity).'"'  ?>/>
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+			
+					<div class="small-6 columns">
 						<label for='personmailingstate'><font color="red">*</font>State or Province</label>
 
 						<select  name='personmailingstate' id='personmailingstate'>
@@ -310,17 +302,13 @@ function Cancel (Id){
 						</select>
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='personmailingpostalcode'><font color="red">*</font>Zip or Postal Code</label>
 						<input  type='text' name='personmailingpostalcode' id='personmailingpostalcode' class='regular-text' <?php echo 'value="'. htmlspecialchars($sf_profile->PersonMailingPostalCode).'"'  ?>/>
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='personmailingcountry'><font color="red">*</font>Country</label>
 
 						<select  name='personmailingcountry' id='personmailingcountry'>
@@ -334,17 +322,13 @@ function Cancel (Id){
 						</select>
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='phone'><font color="red">*</font>Phone</label>
 						<input  type='text' name='phone' id='phone' class='regular-text'  <?php echo 'value="'. htmlspecialchars($sf_profile->Phone).'"' ?>  />
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='grade_level__c'><font color="red">*</font>What Grade Level do you teach?</label></th>
 
 						<?php
@@ -356,10 +340,8 @@ function Cancel (Id){
 						?>	
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 						<label for='subject_taught__c'><font color="red">*</font>What Subject(s) do you teach?</label>
 
 						<?php
@@ -371,10 +353,8 @@ function Cancel (Id){
 						?>	
 
 					</div>
-				</div>
-
-				<div class="row medium-collapse">
-					<div class="small-12 columns">
+				
+					<div class="small-6 columns">
 
 						<p class="submit">
 							<input type="submit" class="button" id="profileSubmit" value="Update Profile" name="submit" style="margin:10px 30px; padding:10px 20px; font-size:16px;" />
