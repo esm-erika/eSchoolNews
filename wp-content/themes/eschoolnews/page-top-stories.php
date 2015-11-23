@@ -37,24 +37,7 @@ if (false === ($local_box_cache) ){
 
 
 
-<?php
-			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
-		$local_box_cache = ob_get_clean( );
-	// end the code to cache
-		echo $local_box_cache;
-	//end cache query 
-	
-	if( current_user_can( 'edit_post' ) ) {
-		//you cannot cache it
-	} else {
-		set_transient($box_q ,$local_box_cache, 60 * 10);
-	}
-} else { 
 
-echo $local_box_cache;
-
-}
-?>
 
 
 
@@ -149,6 +132,26 @@ echo $local_box_cache;
 
 
 		</div>
+
+<?php
+			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
+
+echo $local_box_cache;
+
+}
+?>
+
 
 <?php 
 //insert cache query
