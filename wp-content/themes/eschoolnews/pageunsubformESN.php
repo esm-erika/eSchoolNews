@@ -426,39 +426,19 @@ if(validate_email2($unsubemail)){
  ?>
 
 <?php get_header(); ?>
-<style>
-div.tweetthis p {display:none !important}
-div.tweetthis {display:none !important}
-div.wp-socializer {display:none !important}
-div.wp-socializer.16px {display:none !important}
-</style>
-	<div id="innerLeft">
+<div class="row">
+	<div class="small-12 large-12 columns" role="main">	
+			<h1 class="section-title"><span><?php the_title(); ?></span></h1>
+		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<div id="entryMeta">		
-				<h2 class="singlePageTitle"><?php //the_title(); ?></h2>
-			</div>
-			
-            <div id="ExpandedContent">
-				<div class="post">
-					<p><?php the_content(); ?></p>
+			<?php the_content(); ?>
                  <?php 
 				if ($emailtounsubcheck == 1) { 
 				?>
-                
-                
-                
-				<div style="width:90%; padding:20px; margin:10px;">
-                    
 	                    <p> Please allow 72 hours for your email to be removed from all our email lists. </p>
-                        <p>
-                        
-                        
-                  <div style="padding:5px 20px;">
-							
-           		  </div>
-                        We do not wish for you to receive emails that you do not want to receive. You may contact customer service by email at <a href="mailto:custserv@eSchoolnews.com">custserv@eSchoolnews.com</a> or you may call customer service at 1-800-394-0115 x199.
-                		</p>
-                  </div>
+
+<p>We do not wish for you to receive emails that you do not want to receive. You may contact customer service by email at <a href="mailto:custserv@eSchoolnews.com">custserv@eSchoolnews.com</a> or you may call customer service at 1-800-394-0115 x199.</p>
+
 				<?php 
 				} else {
 				
@@ -695,23 +675,14 @@ div.wp-socializer.16px {display:none !important}
                     </form>
 
 				
-				
-				<div class="clear"></div>
+
 				<?php } ?>   
                     
-				</div>
-			</div><!-- Enf of innerContent -->
             
 		<?php endwhile; else : endif; ?>
-		<div class="clear"></div>
-	</div><!-- End of innerLeft (Content + Middle sidebar) -->
-	
-	<div class="clear"></div>
-    
+
+	</div>
+</div>	
 	
 	<?php  get_footer(); ?>
 
-</div><!-- enf od wrapper -->
-
-</body>
-</html>
