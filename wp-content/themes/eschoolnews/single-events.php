@@ -9,6 +9,27 @@
 
 get_header(); ?>
 
+
+
+
+<?php 
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]t[if a tag page]
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+
+global $astc, $astused;
+$post_id = get_the_ID(); 
+$box_qt = 'esm_c_sevntbody_a'.$astused."c".$astc.'c'.'p'.$post_id;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	// start code to cache
+		ob_start( );
+			echo '<!-- c a'.$astused."c".$astc.'c'.'p'.$post_id.'-->';
+?>
+
 <div class="row top">
 	<div class="small-12 large-8 columns" role="main">
 
@@ -98,7 +119,24 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 </div>
+<?php
+			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
 
+echo $local_box_cache;
+
+}
+?>
 <?php 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
