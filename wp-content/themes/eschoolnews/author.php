@@ -52,7 +52,7 @@ echo $local_box_cache;
 	<?php // get_template_part( 'parts/ads/leaderboard' ); ?>
 	
 			
-			<?php get_template_part( 'parts/featured-article' ); ?>
+			<?php // get_template_part( 'parts/featured-article' ); ?>
 
 
 
