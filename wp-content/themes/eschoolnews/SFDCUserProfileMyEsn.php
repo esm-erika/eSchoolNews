@@ -427,7 +427,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_This_Week__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="esn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -442,7 +442,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_Today__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					
@@ -460,7 +460,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_Tools_For_Schools__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_tools_for_schools__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="esn_tools_for_schools__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -476,7 +476,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->Ed_Resource_Alert__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="Ed_Resource_Alert__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="Ed_Resource_Alert__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -494,7 +494,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eSN_Offers__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="esn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="esn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -508,7 +508,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->Partner_Offers__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="partner_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="partner_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -530,7 +530,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eClassroom_News__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="eclassroom_news__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="eclassroom_news__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -546,7 +546,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_This_Week__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="ecn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -563,7 +563,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_Today__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="ecn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -577,7 +577,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_Offers__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="ecn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
@@ -595,7 +595,7 @@ function Cancel (Id){
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
 							$sel = ($sf_profile->eCN_Partners__c==$aSub[$i])?'checked="checked"':'';
-							echo '<label><input type="radio" name="ecn_partners__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
+							echo '<input type="radio" name="ecn_partners__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
 						}
 						?>	
 					</div>
