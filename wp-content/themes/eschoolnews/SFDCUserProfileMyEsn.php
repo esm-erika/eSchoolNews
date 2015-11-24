@@ -206,6 +206,7 @@ function Cancel (Id){
 			<div class="small-12  medium-12 columns" role="main">	
 
 				<h4>User and Address Information</h4>
+				<br/>
 
 				<div class="row medium-collapse">
 					<div class="small-6 columns">
@@ -375,6 +376,7 @@ function Cancel (Id){
 					<div class="small-12 columns">
 
 						<h4>Password</h4>
+					</br>
 
 						<p>If you would like to change the password type a new one.</p>
 
@@ -414,6 +416,7 @@ function Cancel (Id){
 					
 
 			<h4>Please select the eMail newsletters you would like to receive:</h4>
+			<br/>
 				
 			<div class="row">
 			<div class="small-6 columns">
@@ -517,6 +520,7 @@ function Cancel (Id){
 			<hr/>
 
 			<h4>Newsletters from eSchool Media's Companion Websites:</h4>
+			<br/>
 
 			
 				
@@ -637,7 +641,8 @@ if ( !is_user_logged_in() ){ ?>
 
 <div class="row">
 	<div class="small-12  medium-12 columns" role="main">
-		<h4>You must login to access this page.</h4>	
+		<h4>You must login to access this page.</h4>
+		<br/>	
 		<?php wp_login_form(); ?>						
 	</div></div>
 	<?php	
