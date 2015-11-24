@@ -411,12 +411,10 @@ function Cancel (Id){
 
 		
 
-			<div class="row medium-collapse">
-					<div class="small-12 columns">
+			<div class="row medium-collapse">		
 
 			<h4>Please select the eMail newsletters you would like to receive:</h4>
 
-		<div class="row">
 			<div class="small-6 columns">
 
 				
@@ -432,14 +430,13 @@ function Cancel (Id){
 						}
 						?>	
 					</div>
-				</div>
+				
 
-				<div class="row">
+				
 					<div class="small-6 columns">
 <h6>eSchool News Today</h6>
 					Daily breaking news headlines
-				</div>
-					<div class="small-6 columns">
+				
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -447,7 +444,7 @@ function Cancel (Id){
 							echo '<label><input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' />&nbsp;'. $aSub[$i] . '</label>';
 						}
 						?>	
-					</div>
+					
 				</div>
 			
 				
