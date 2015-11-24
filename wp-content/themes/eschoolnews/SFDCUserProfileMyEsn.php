@@ -359,7 +359,7 @@ function Cancel (Id){
 					<div class="small-12 columns">
 
 						<p class="submit">
-							<input type="submit" class="button" id="profileSubmit" value="Update Profile" name="submit" style="margin:10px 30px; padding:10px 20px; font-size:16px;" />
+							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
 						</p>
 					</div>
 				</div>
@@ -401,7 +401,7 @@ function Cancel (Id){
 					<div class="small-12 columns">
 
 			<p class="submit">
-				<input type="submit" class="button-primary" id="profileSubmit" value="Update Password" name="submit" style="margin:0px 30px; padding:5px;" />
+				<input type="submit" class="button radius" id="profileSubmit" value="Update Password" name="submit" />
 			</p>
 
 				</div>
@@ -420,12 +420,10 @@ function Cancel (Id){
 			<div class="small-6 columns">
 
 				
-			<div class="row">
-					<div class="small-12 columns">
+			
 <h6>Innovation Weekly</h6>
 					The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <em>Weekly on Monday</em>
-				</div>
-					<div class="small-6 columns">
+				
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
