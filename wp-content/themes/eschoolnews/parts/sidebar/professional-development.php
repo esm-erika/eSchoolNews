@@ -40,7 +40,7 @@ wp_reset_postdata(); ?>
 
 <br/>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">Read All Webinars &raquo;</a></h6>
+<h6 class="readmore"><a href="<?php site_url(); ?>/webinars">See All Webinars &raquo;</a></h6>
 </section>
 
 <?php // The Query
@@ -73,7 +73,7 @@ $query2 = new WP_Query( $events ); ?>
 
 <br/>
 
-<h6 class="readmore"><a href="<?php site_url(); ?>/events">Read All Events &raquo;</a></h6>
+<h6 class="readmore"><a href="<?php site_url(); ?>/events">See All Events &raquo;</a></h6>
 
 </section>
 
