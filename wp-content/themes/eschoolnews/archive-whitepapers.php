@@ -193,7 +193,7 @@ $(document).ready(function(){
 
 						<?php } else { // not logged in ?>
 					
-                        <a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
+                        <a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download White Paper</a>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
                         
                         
