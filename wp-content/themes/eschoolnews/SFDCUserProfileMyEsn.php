@@ -414,7 +414,8 @@ function Cancel (Id){
 			<div class="row medium-collapse">		
 
 			<h4>Please select the eMail newsletters you would like to receive:</h4>
-
+				
+			<div class="row">
 			<div class="small-6 columns">
 
 				
@@ -446,6 +447,7 @@ function Cancel (Id){
 						?>	
 					
 				</div>
+			</div>
 			
 				
 				<div class="row">
@@ -463,21 +465,14 @@ function Cancel (Id){
 						}
 						?>	
 					</div>
-				</div>
-
-			</div></div>
-
-
-			<div class="row">
+				
 			<div class="small-6 columns">
 					
-					<div class="row">
-					<div class="small-6 columns">
+					
 					<h6>Ed Resource Alert</h6>
 
 						Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more. <em>Schedule varies</em>
-					</div>
-					<div class="small-16 columns">
+					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -495,8 +490,7 @@ function Cancel (Id){
 										<h6>Special Offers from eSchool News</h6>
 
 					Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em>
-				</div>
-					<div class="small-6 columns">
+			
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -505,18 +499,12 @@ function Cancel (Id){
 						}
 						?>	
 					</div>
-				</div>
-
-					
 				
-
-				<div class="row">
 					<div class="small-6 columns">
 										<h6>Special Offers from School Technology Vendors</h6>
 
 					Get valuable offers from eSchool News technology vendors <em>Schedule varies</em>
-				</div>
-					<div class="small-6 columns">
+				
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
