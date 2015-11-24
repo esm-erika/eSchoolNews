@@ -411,7 +411,7 @@ function Cancel (Id){
 
 		
 
-			<div class="row medium-collapse">		
+					
 
 			<h4>Please select the eMail newsletters you would like to receive:</h4>
 				
@@ -514,24 +514,18 @@ function Cancel (Id){
 					</div>
 				</div>
 
-			</div>
-		</div>
-
-			
-			<div class="row medium-collapse">
-					<div class="small-12 columns">
+			<hr/>
 
 			<h4>Newsletters from eSchool Media's Companion Websites:</h4>
 
-			<h6><label for='eclassroom_news__c'>eClassroom News</label></h6>
+			
 				
 
 				<div class="row">
-				<div class="small-6 columns">			
+				<div class="small-6 columns">	
+				<h6>eClassroom News</h6>		
 					Technology news and resources for teachers.
-				</div>
-
-				<div class="small-6 columns">
+				
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -540,15 +534,14 @@ function Cancel (Id){
 						}
 						?>	
 					</div>
-				</div>
+			
 
-				<h6><label for='ecn_this_week__c'>eCampus News THIS WEEK</label></h6>
 				
-				<div class="row">
+				
 					<div class="small-6 columns">
+						<h6>eCampus News THIS WEEK</h6>
 						Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <em>Weekly on Monday</em>
-					</div>
-					<div class="small-6 columns">
+					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -559,13 +552,13 @@ function Cancel (Id){
 					</div>
 				</div>
 
-				<h6><label for='ecn_today__c'>eCampus News TODAY</label></h6>
 				
 				<div class="row">
 					<div class="small-6 columns">
+						<h6>eCampus News TODAY</h6>
+
 						Daily breaking news headlines
-					</div>
-					<div class="small-6 columns">
+					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -574,15 +567,12 @@ function Cancel (Id){
 						}
 						?>	
 					</div>
-				</div>
-
-				<h6><label for='ecn_offers__c'>Special Offers from eCampus News Online</label></h6>
 				
-				<div class="row">
 					<div class="small-6 columns">
+						<h6>Special Offers from eCampus News Online</h6>
+
 						Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em>
-					</div>
-					<div class="small-6 columns">
+					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -594,13 +584,13 @@ function Cancel (Id){
 				</div>
 
 				
-				<h6><label for='ecn_partners__c'>Special Offers from Campus Technology Vendors</label></h6>
 				
 				<div class="row">
 					<div class="small-6 columns">
+						<h6>Special Offers from Campus Technology Vendors</h6>
+
 						Get valuable offers from higher-ed technology vendors <em>Schedule varies</em>
-					</div>
-					<div class="small-6 columns">
+					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
@@ -611,8 +601,7 @@ function Cancel (Id){
 					</div>
 				</div>
 
-			</div>
-		</div>
+			
 
         
 <input type="hidden" name="sfAction" value="update" />
