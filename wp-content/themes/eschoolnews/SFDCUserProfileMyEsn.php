@@ -421,7 +421,7 @@ function Cancel (Id){
 				
 			
 <h6>Innovation Weekly</h6>
-					The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <em>Weekly on Monday</em>
+					<p>The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <br/><em>Weekly on Monday</em></p>
 				
 						<?php
 						$aSub = eSNAP_Subs();
@@ -436,7 +436,7 @@ function Cancel (Id){
 				
 					<div class="small-6 columns">
 <h6>eSchool News Today</h6>
-					Daily breaking news headlines
+					<p>Daily breaking news headlines</p>
 				
 						<?php
 						$aSub = eSNAP_Subs();
@@ -454,7 +454,7 @@ function Cancel (Id){
 					<div class="small-6 columns">
 				<h6>eSchool News Tools for Schools</h6>
 
-						Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <em>Weekly on Wednesday</em>
+						<p>Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <br/><em>Weekly on Wednesday</em></p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
@@ -470,7 +470,7 @@ function Cancel (Id){
 					
 					<h6>Ed Resource Alert</h6>
 
-						Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more. <em>Schedule varies</em>
+						<p>Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more. <br/><em>Schedule varies</em></p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
@@ -488,7 +488,7 @@ function Cancel (Id){
 					<div class="small-6 columns">
 										<h6>Special Offers from eSchool News</h6>
 
-					Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em>
+					<p>Get valuable offers and discounts on publications, conferences and professional development breakthroughs <br><em>Schedule varies</em></p>
 			
 						<?php
 						$aSub = eSNAP_Subs();
@@ -502,7 +502,7 @@ function Cancel (Id){
 					<div class="small-6 columns">
 										<h6>Special Offers from School Technology Vendors</h6>
 
-					Get valuable offers from eSchool News technology vendors <em>Schedule varies</em>
+					<p>Get valuable offers from eSchool News technology vendors <br><em>Schedule varies</em></p>
 				
 						<?php
 						$aSub = eSNAP_Subs();
@@ -524,7 +524,7 @@ function Cancel (Id){
 				<div class="row">
 				<div class="small-6 columns">	
 				<h6>eClassroom News</h6>		
-					Technology news and resources for teachers.
+					<p>Technology news and resources for teachers.</p>
 				
 						<?php
 						$aSub = eSNAP_Subs();
@@ -540,7 +540,7 @@ function Cancel (Id){
 				
 					<div class="small-6 columns">
 						<h6>eCampus News THIS WEEK</h6>
-						Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <em>Weekly on Monday</em>
+						<p>Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <br><em>Weekly on Monday</em></p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
@@ -557,7 +557,7 @@ function Cancel (Id){
 					<div class="small-6 columns">
 						<h6>eCampus News TODAY</h6>
 
-						Daily breaking news headlines
+						<p>Daily breaking news headlines</p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
@@ -571,7 +571,7 @@ function Cancel (Id){
 					<div class="small-6 columns">
 						<h6>Special Offers from eCampus News Online</h6>
 
-						Get valuable offers and discounts on publications, conferences and professional development breakthroughs <em>Schedule varies</em>
+						<p>Get valuable offers and discounts on publications, conferences and professional development breakthroughs <br/><em>Schedule varies</em></p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
@@ -589,7 +589,7 @@ function Cancel (Id){
 					<div class="small-6 columns">
 						<h6>Special Offers from Campus Technology Vendors</h6>
 
-						Get valuable offers from higher-ed technology vendors <em>Schedule varies</em>
+						<p>Get valuable offers from higher-ed technology vendors <br/><em>Schedule varies</em></p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
