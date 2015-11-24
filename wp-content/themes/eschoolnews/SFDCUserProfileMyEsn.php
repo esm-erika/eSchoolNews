@@ -455,8 +455,7 @@ function Cancel (Id){
 				<h6>eSchool News Tools for Schools</h6>
 
 						Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <em>Weekly on Wednesday</em>
-					</div>
-					<div class="small-6 columns">
+					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
