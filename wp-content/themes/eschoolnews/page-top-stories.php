@@ -14,6 +14,9 @@
 get_header(); ?>
 
 <?php 
+
+
+
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
 $cat_name = get_category(get_query_var('cat'))->term_id;
@@ -49,7 +52,8 @@ if (false === ($local_box_cache) ){
 	<?php // The Query
 
 			// Define custom query parameters
-		$topstories_args = array( 'post_type' => 'post', 'posts_per_page' => '10');
+		$exclude_val = get_option( 'esm_top_story_exclude_form' );	
+		$topstories_args = array( 'post_type' => 'post', 'posts_per_page' => '10', 'cat' => -$exclude_val);
 
 		// Get current page and append to custom query parameters array
 		$topstories_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;

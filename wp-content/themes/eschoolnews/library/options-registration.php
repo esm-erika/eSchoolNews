@@ -131,12 +131,16 @@ function esm_menu_page(){
     $hidden_field_name3 = 'esm_gravity_sf_subscribe_submit';
     $data_field_name3 = 'esm_gravity_sf_subscribe_form';		
 
+    $opt_name4 = 'esm_top_story_exclude'; 
+    $hidden_field_name4 = 'esm_top_story_exclude_submit';
+    $data_field_name4 = 'esm_top_story_exclude_form';	
 
     // Read in existing option value from database
     $opt_val = get_option( $opt_name );
 	$opt_val1 = get_option( $opt_name1 );
 	$opt_val2 = get_option( $opt_name2 );
 	$opt_val3 = get_option( $opt_name3 );
+	$opt_val4 = get_option( $opt_name4 );
 
     // See if the user has posted us some information
     // If they did, this hidden field will be set to 'Y'
@@ -192,6 +196,19 @@ $updated = 0;
 
     }
 
+   if( isset($_POST[ $hidden_field_name4 ]) && $_POST[ $hidden_field_name4 ] == 'Y' ) {
+        // Read their posted value
+        $opt_val4 = $_POST[ $data_field_name4 ];
+
+        // Save the posted value in the database
+        update_option( $opt_name4, $opt_val4 );
+
+        // Put an settings updated message on the screen
+		
+		$updated = 1;
+
+    }
+
 
 if($updated == "1"){
 echo '<div class="updated"><p><strong>Settings saved</strong></p></div>';
@@ -231,6 +248,15 @@ echo '<p>' . $text . '</p>';
 
 
 <form name="form1" method="post" action="">
+<p>
+
+<input type="hidden" name="<?php echo $hidden_field_name4; ?>" value="Y">
+<label style="width:300px" for="<?php echo $data_field_name4; ?>">Categories to exclude from top story archive page (by id comma delimited):</label>
+ <input type="text" name="<?php echo $data_field_name4; ?>" value="<?php echo $opt_val4; ?>" ><br>
+
+</p>
+
+
 <p>In order to use the registration form you need to import the forms to use into Gravity Forms.<br>
  <a href="<?php echo get_template_directory_uri() . '/library/gravityforms-registration-forms.zip'; ?>">Click here to download a zipped file that contains the forms</a>. 
 <p>
