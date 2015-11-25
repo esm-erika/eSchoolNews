@@ -21,21 +21,8 @@ get_header(); ?>
 
 global $cat;
 
-	// get parent category slug
-	//$parentCatList = get_category_parents($cat,false,',');
-	//$parentCatListArray = explode(",",$parentCatList);
-	//$topParentName = $parentCatListArray[0];
-	//$sdacReplace = array(" " => "-", "(" => "", ")" => "");
-	//$topParent = strtolower(strtr($topParentName,$sdacReplace));
-	//$currCat = 'view-all-' . $topParent;
-
-
 if ( is_paged() ){
 
-	// include (TEMPLATEPATH . '/category-view-all.php');
-	echo 'paged';	//   get_template_part( 'content', 'first-page' );
-	
-	
 ?>
 
 <div class="row">
@@ -44,77 +31,23 @@ if ( is_paged() ){
 
 	<h1 class="section-title"><span><?php single_cat_title(); ?> Top Stories</span></h1>
 
-
 	<div class="small-12 large-8 columns" role="main">
 
 		<?php
-  // set up or arguments for our custom query
-		//$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-/*if($page == 2){
-	
-echo 'page 2';
-
-		$query_args = array(
-			'post_type' => 'post',
-			'cat' => $cat,
-			'offset' => 3,
-			'posts_per_page' => 2
-			//'category_name' => $topParent,
-			
-			);
-  // create a new instance of WP_Query
-		$the_query = new WP_Query( $query_args );
-
-		// Pagination fix
-		//$temp_query = $wp_query;
-		//$wp_query   = NULL;
-		//$wp_query   = $the_query; 
-
-
-		?>
-
-
-		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
-		<article>
-			<h1><?php echo the_title(); ?></h1>
-			<div class="excerpt">
-				<?php the_excerpt(); ?>
-			</div>
-		</article>
-	<?php endwhile; ?>
-<?php endif; 
-
-
-} */
+  
 					
 		$pageoffset = $paged - 1;
 		$query_args = array(
 			'post_type' => 'post',
 			'cat' => $cat,
-			//'category_name' => $topParent,
 			'posts_per_page' => 10,
 			'paged' => $pageoffset
 			);
-  // create a new instance of WP_Query
 		$the_query = new WP_Query( $query_args );
 
-		// Pagination fix
-		//$temp_query = $wp_query;
-		//$wp_query   = NULL;
-		//$wp_query   = $the_query; 
 
-
-		?>
-
-
-		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
-		<? /* <article>
-			<h1><?php echo the_title(); ?></h1>
-			<div class="excerpt">
-				<?php the_excerpt(); ?>
-			</div>
-		</article> */ ?>
-        
+		if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
+		
 			<article>
 				<header>
 				<?php //get_template_part('parts/flags'); ?>
@@ -199,17 +132,6 @@ echo 'page 2';
 	<?php get_footer(); 
 
 
-
-
-
-
-
-
-
-
-
-	
-	
 	
 } else { 
 
