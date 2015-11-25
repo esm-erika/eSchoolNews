@@ -42,7 +42,7 @@ if ( is_paged() ){
 
 	<br/>
 
-	<h1 class="section-title"><span><?php echo $topParentName ?> Top Stories</span></h1>
+	<h1 class="section-title"><span><?php single_cat_title(); ?> Top Stories</span></h1>
 
 
 	<div class="small-12 large-8 columns" role="main">
