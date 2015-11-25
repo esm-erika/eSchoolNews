@@ -93,7 +93,7 @@ echo 'page 2';
 			'cat' => $cat,
 			//'category_name' => $topParent,
 			'posts_per_page' => 5,
-			'paged' => $paged
+			'paged' => $pageoffset
 			);
   // create a new instance of WP_Query
 		$the_query = new WP_Query( $query_args );
@@ -109,7 +109,7 @@ echo 'page 2';
 
 		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
 		<article>
-			<h1><?php echo $paged . $pageoffset; echo the_title(); ?></h1>
+			<h1><?php echo the_title(); ?></h1>
 			<div class="excerpt">
 				<?php the_excerpt(); ?>
 			</div>
