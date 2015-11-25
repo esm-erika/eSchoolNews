@@ -50,7 +50,7 @@ if ( is_paged() ){
 		<?php
   // set up or arguments for our custom query
 		//$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-if($page == 2){
+/*if($page == 2){
 	
 echo 'page 2';
 
@@ -85,7 +85,7 @@ echo 'page 2';
 <?php endif; 
 
 
-}
+} */
 					
 		$query_args = array(
 			'post_type' => 'post',
