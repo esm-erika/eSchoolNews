@@ -50,7 +50,42 @@ if ( is_paged() ){
 		<?php
   // set up or arguments for our custom query
 		//$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+if($page == 2){
+	
+echo 'page 2';
 
+		$query_args = array(
+			'post_type' => 'post',
+			'cat' => $cat,
+			'offset' => 3,
+			'posts_per_page' => 2
+			//'category_name' => $topParent,
+			
+			);
+  // create a new instance of WP_Query
+		$the_query = new WP_Query( $query_args );
+
+		// Pagination fix
+		//$temp_query = $wp_query;
+		//$wp_query   = NULL;
+		//$wp_query   = $the_query; 
+
+
+		?>
+
+
+		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
+		<article>
+			<h1><?php echo the_title(); ?></h1>
+			<div class="excerpt">
+				<?php the_excerpt(); ?>
+			</div>
+		</article>
+	<?php endwhile; ?>
+<?php endif; 
+
+
+}
 					
 		$query_args = array(
 			'post_type' => 'post',
@@ -66,6 +101,7 @@ if ( is_paged() ){
 		//$temp_query = $wp_query;
 		//$wp_query   = NULL;
 		//$wp_query   = $the_query; 
+
 
 		?>
 
