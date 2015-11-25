@@ -38,12 +38,12 @@ function esm_transient_delete( $clear_all ) {
 
 		// Build and execute required SQL
 
-		if ( $clear_all ) {
+		//if ( $clear_all ) {
 
 			$sql = "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_%'";
 			$clean = $wpdb -> query( $sql );
 
-		} else {
+		/* } else {
 
 			$sql = "
 				DELETE
@@ -84,7 +84,7 @@ function esm_transient_delete( $clear_all ) {
 			";
 
 			$clean = $wpdb -> query( $sql );
-		}
+		} */
 
 		// Save options field with number & timestamp
 
