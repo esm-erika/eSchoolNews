@@ -226,7 +226,7 @@ echo '<p>' . $text . '</p>';
 ?>
 
 
-<p><button><a href="?clearcache">Click to clear eSM Page cache</a></button></p>
+<p><button><a href="?page=custompage&clearcache">Click to clear eSM Page cache</a></button></p>
 
 
 
