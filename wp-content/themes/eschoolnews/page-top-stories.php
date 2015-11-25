@@ -75,10 +75,10 @@ if (false === ($local_box_cache) ){
 		        $topstories->the_post();
 		 ?>
 
-
+		
 		<article class="row">
-
-
+		<?php print_r($topstories_args); ?>
+		
 			<?php if (has_post_thumbnail( )) { 
 
 				$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
