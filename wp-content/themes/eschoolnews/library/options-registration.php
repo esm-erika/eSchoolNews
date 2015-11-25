@@ -40,7 +40,10 @@ function esm_transient_delete( $clear_all ) {
 
 		//if ( $clear_all ) {
 
-			$sql = "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_%'";
+//where option_name LIKE '%_transient_%' or  option_name LIKE '%_transient_blead%' or  option_name LIKE '%_transient_art%'
+
+
+			$sql = "DELETE FROM $wpdb->options WHERE option_name LIKE '%_transient_esm_c_%' or  option_name LIKE '%_transient_blead%' or  option_name LIKE '%_transient_art%' or option_name LIKE '%_transient_timeout_esm_c_%' or  option_name LIKE '%_transient_timeout_blead%' or  option_name LIKE '%_transient_timeout_art%'";
 			$clean = $wpdb -> query( $sql );
 
 		/* } else {
@@ -227,10 +230,10 @@ echo '<div class="updated"><p><strong>Settings saved</strong></p></div>';
     ?>
 
 
-<h3>Remove All Transients</h3>
+<h3>Remove All eSM Transients</h3>
 <?php
 global $wpdb;
-$total_transients = $wpdb -> get_var( "SELECT COUNT(*) FROM $wpdb->options WHERE option_name LIKE '%_transient_timeout_%'" );
+$total_transients = $wpdb -> get_var( "SELECT COUNT(*) FROM $wpdb->options WHERE option_name LIKE '%_transient_esm_c_%' or  option_name LIKE '%_transient_blead%' or  option_name LIKE '%_transient_art%'" );
 $text =  sprintf( __( 'There are currently %s timed transients in the database.', 'transient-cleaner' ), $total_transients );
 
 if ( $total_transients > 0 ) {
