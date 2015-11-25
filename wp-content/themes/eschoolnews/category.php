@@ -92,7 +92,7 @@ echo 'page 2';
 			'post_type' => 'post',
 			'cat' => $cat,
 			//'category_name' => $topParent,
-			'posts_per_page' => 5,
+			'posts_per_page' => 10,
 			'paged' => $pageoffset
 			);
   // create a new instance of WP_Query
@@ -108,12 +108,27 @@ echo 'page 2';
 
 
 		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
-		<article>
+		<? /* <article>
 			<h1><?php echo the_title(); ?></h1>
 			<div class="excerpt">
 				<?php the_excerpt(); ?>
 			</div>
-		</article>
+		</article> */ ?>
+        
+			<article>
+				<header>
+				<?php //get_template_part('parts/flags'); ?>
+				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<div class="small-caps">By <?php the_author(); ?></div>
+					<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>	
+
+				
+
+				</header>
+			</article>
+
+			<hr/>
+        
 	<?php endwhile; ?>
 
 	<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
