@@ -54,7 +54,7 @@ if (false === ($local_box_cache) ){
 			// Define custom query parameters
 		$exclude_val = get_option( 'esm_top_story_exclude_form' );	
 		$topstories_args = array( 'post_type' => 'post', 'posts_per_page' => '10', 'cat' => -$exclude_val);
-
+ print_r($topstories_args); 
 		// Get current page and append to custom query parameters array
 		$topstories_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
@@ -64,7 +64,7 @@ if (false === ($local_box_cache) ){
 		// Pagination fix
 		$temp_query = $wp_query;
 		$wp_query   = NULL;
-		$wp_query   = $topstories; ?>
+		$wp_query   = $topstories;  print_r($topstories_args); ?>
 
 
 
