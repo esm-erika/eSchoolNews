@@ -22,12 +22,12 @@ get_header(); ?>
 global $cat;
 
 	// get parent category slug
-	$parentCatList = get_category_parents($cat,false,',');
-	$parentCatListArray = explode(",",$parentCatList);
-	$topParentName = $parentCatListArray[0];
-	$sdacReplace = array(" " => "-", "(" => "", ")" => "");
-	$topParent = strtolower(strtr($topParentName,$sdacReplace));
-	$currCat = 'view-all-' . $topParent;
+	//$parentCatList = get_category_parents($cat,false,',');
+	//$parentCatListArray = explode(",",$parentCatList);
+	//$topParentName = $parentCatListArray[0];
+	//$sdacReplace = array(" " => "-", "(" => "", ")" => "");
+	//$topParent = strtolower(strtr($topParentName,$sdacReplace));
+	//$currCat = 'view-all-' . $topParent;
 
 
 if ( is_paged() ){
@@ -37,11 +37,6 @@ if ( is_paged() ){
 	
 	
 ?>
-
-
-
-
-
 
 <div class="row">
 
@@ -55,9 +50,12 @@ if ( is_paged() ){
 		<?php
   // set up or arguments for our custom query
 		//$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+
+					
 		$query_args = array(
 			'post_type' => 'post',
-			'category_name' => $topParent,
+			'cat' => $cat,
+			//'category_name' => $topParent,
 			'posts_per_page' => 5,
 			'paged' => $paged
 			);
@@ -65,9 +63,9 @@ if ( is_paged() ){
 		$the_query = new WP_Query( $query_args );
 
 		// Pagination fix
-		$temp_query = $wp_query;
-		$wp_query   = NULL;
-		$wp_query   = $the_query; 
+		//$temp_query = $wp_query;
+		//$wp_query   = NULL;
+		//$wp_query   = $the_query; 
 
 		?>
 
