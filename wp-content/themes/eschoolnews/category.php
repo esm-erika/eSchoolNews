@@ -69,9 +69,9 @@ if ( is_paged() ){
 		<div class="prev-posts-link">
 			
 			<?php 
-			echo '<button>';
+			echo '<button class="button">';
 			echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link 
-			echo '</button><button>';
+			echo '</button><button class="button">';
 
 			echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link 
 			echo '</button>';
