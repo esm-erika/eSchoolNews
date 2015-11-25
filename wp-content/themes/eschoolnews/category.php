@@ -67,14 +67,18 @@ if ( is_paged() ){
 	<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
 	<nav class="prev-next-posts">
 		<div class="prev-posts-link">
+			
 			<?php 
+			echo '<button>';
 			echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link 
-			echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link 
+			echo '</button><button>';
 
+			echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link 
+			echo '</button>';
 			$wp_query = NULL;
 			$wp_query = $temp_query;
 
-			?>
+			?></button>
 		</div>
 	</nav>
 	<?php } ?>
