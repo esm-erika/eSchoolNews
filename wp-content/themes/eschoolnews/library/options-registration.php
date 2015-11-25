@@ -24,6 +24,91 @@ add_action( 'admin_menu', 'register_esm_menu_page' );
 function register_esm_menu_page(){
 	add_menu_page( 'eSchool Media Settings', 'eSM Settings', 'manage_options', 'custompage', 'esm_menu_page', get_template_directory_uri() . '/assets/images/icons/esm-sf-icon.png', 1); 
 }
+function esm_transient_delete( $clear_all ) {
+
+	$cleaned = 0;
+
+	global $_wp_using_ext_object_cache;
+
+	if ( !$_wp_using_ext_object_cache ) {
+
+		$options = atc_get_options();
+
+		global $wpdb;
+
+		// Build and execute required SQL
+
+		if ( $clear_all ) {
+
+			$sql = "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_%'";
+			$clean = $wpdb -> query( $sql );
+
+		} else {
+
+			$sql = "
+				DELETE
+					a, b
+				FROM
+					{$wpdb->options} a, {$wpdb->options} b
+				WHERE
+					a.option_name LIKE '_transient_%' AND
+					a.option_name NOT LIKE '_transient_timeout_%' AND
+					b.option_name = CONCAT(
+						'_transient_timeout_',
+						SUBSTRING(
+							a.option_name,
+							CHAR_LENGTH('_transient_') + 1
+						)
+					)
+				AND b.option_value < UNIX_TIMESTAMP()
+			";
+
+			$clean = $wpdb -> query( $sql );
+
+			$sql = "
+				DELETE
+					a, b
+				FROM
+					{$wpdb->options} a, {$wpdb->options} b
+				WHERE
+					a.option_name LIKE '_site_transient_%' AND
+					a.option_name NOT LIKE '_site_transient_timeout_%' AND
+					b.option_name = CONCAT(
+						'_site_transient_timeout_',
+						SUBSTRING(
+							a.option_name,
+							CHAR_LENGTH('_site_transient_') + 1
+						)
+					)
+				AND b.option_value < UNIX_TIMESTAMP()
+			";
+
+			$clean = $wpdb -> query( $sql );
+		}
+
+		// Save options field with number & timestamp
+
+		$results[ 'timestamp' ] = time() + ( get_option( 'gmt_offset' ) * 3600 );
+
+		$option_name = 'transient_clean_';
+		if ( $clear_all ) { $option_name .= 'all'; } else { $option_name .= 'expired'; }
+		update_option( $option_name, $results );
+
+		// Optimize the table after the deletions
+
+		if ( ( ( $options[ 'upgrade_optimize' ] ) && ( $clear_all ) ) or ( ( $options[ 'clean_optimize' ] ) && ( !$clear_all ) ) ) {
+			$wpdb -> query( "OPTIMIZE TABLE $wpdb->options" );
+		}
+	}
+
+	return $cleaned;
+}
+
+$clearcache = $_GET['clearcache'];
+if($clearcache){esm_transient_delete( 'clear_all' );
+echo '<div class="updated"><p><strong>Cache Cleared</strong></p></div>';
+}
+
 
 function esm_menu_page(){ 
     //must check that the user has the required capability 
@@ -123,6 +208,27 @@ echo '<div class="updated"><p><strong>Settings saved</strong></p></div>';
 
     // settings form
     ?>
+
+
+<h3>Remove All Transients</h3>
+<?php
+global $wpdb;
+$total_transients = $wpdb -> get_var( "SELECT COUNT(*) FROM $wpdb->options WHERE option_name LIKE '%_transient_timeout_%'" );
+$text =  sprintf( __( 'There are currently %s timed transients in the database.', 'transient-cleaner' ), $total_transients );
+
+if ( $total_transients > 0 ) {
+
+	$expired_transients = $wpdb -> get_var( "SELECT COUNT(*) FROM $wpdb->options WHERE option_name LIKE '%_transient_timeout_%' AND option_value < UNIX_TIMESTAMP()" );
+	$text .= ' ' . sprintf( __( '%s have expired.', 'transient-cleaner' ), $expired_transients );
+
+} 
+echo '<p>' . $text . '</p>';
+?>
+
+
+<p><button><a href="?clearcache">Click to clear eSM Page cache</a></button></p>
+
+
 
 <form name="form1" method="post" action="">
 <p>In order to use the registration form you need to import the forms to use into Gravity Forms.<br>

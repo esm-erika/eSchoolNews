@@ -15,9 +15,8 @@
                 <div class="show-for-large-up" style="height: 20px;"></div>
                 <h1>
                     <a href="<?php echo home_url(); ?>">
-                        <?php //bloginfo( 'name' ); ?>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eschoolnewslogo.png"/>
-                    </a>
+                        
+<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>" />                    </a>
                 </h1>
             </div>
         </div>
