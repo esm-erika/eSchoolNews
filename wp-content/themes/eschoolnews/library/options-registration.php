@@ -107,11 +107,14 @@ function esm_transient_delete( $clear_all ) {
 	return $cleaned;
 }
 
-$clearcache = $_GET['clearcache'];
-if($clearcache == 'clear'){esm_transient_delete('clear');
-echo '<div class="updated"><p><strong>Cache Cleared</strong></p></div>';
-}
 
+
+if( isset($_POST[ 'Submit' ]) && $_POST[ 'Submit' ] == 'Click to clear eSM Page cache' ) {
+
+esm_transient_delete('clear');
+echo '<div class="updated"><p><strong>Cache Cleared</strong></p></div>';
+
+}
 
 function esm_menu_page(){ 
     //must check that the user has the required capability 
@@ -246,8 +249,11 @@ echo '<p>' . $text . '</p>';
 ?>
 
 
-<p><button class="button-primary"><a style="color:#FFFFFF" href="?page=custompage&clearcache=clear">Click to clear eSM Page cache</a></button></p>
-
+<form name="cacheform" method="post" action="">
+<p>
+<p class="submit">
+<input type="submit" name="Submit" class="button-primary" value="Click to clear eSM Page cache" />
+</form>
 
 
 <form name="form1" method="post" action="">
