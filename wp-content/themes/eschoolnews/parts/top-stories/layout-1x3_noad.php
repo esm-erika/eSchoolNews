@@ -82,10 +82,12 @@ $catplug = $current_category->slug;
 
 	if (is_category()) {
 
-?>
+ next_posts_link('&laquo; Older Entries') ;
+
+ /* ?>
 	<a href="<?php site_url(); ?>/<?php echo $catplug; ?>/view-all-<?php echo $catplug; ?>">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
 
-<?php } else { ?>
+<?php */ } else { ?>
 
 	<a href="<?php site_url(); ?>/top-stories">See All Top Stories &raquo;</a>
 

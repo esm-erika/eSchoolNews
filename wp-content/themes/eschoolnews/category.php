@@ -14,9 +14,18 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header(); 
 
-<?php 
+if ( is_paged() ){
+
+	//echo '<h1>paged</h1>';	//   get_template_part( 'content', 'first-page' );
+
+} else {
+
+	//echo '<h1>not paged</h1>';	//   get_template_part( 'content', 'paged' );
+
+}
+
 
 global $cat;
 
