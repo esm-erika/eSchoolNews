@@ -65,7 +65,7 @@ if (false === ($local_box_cache) ){
 		// Pagination fix
 		$temp_query = $wp_query;
 		$wp_query   = NULL;
-		$wp_query   = $topstories;  print_r($topstories_args); ?>
+		$wp_query   = $topstories;  ?>
 
 
 
