@@ -52,7 +52,7 @@ if (false === ($local_box_cache) ){
 	<?php // The Query
 
 			// Define custom query parameters
-		$exclude_val = get_option( 'esm_top_story_exclude_form' );	
+		$exclude_val = get_option( 'esm_top_story_exclude' );	
 		echo 'aaa'.$exclude_val.'aaa';
 		$topstories_args = array( 'post_type' => 'post', 'posts_per_page' => '10', 'cat' => -$exclude_val);
  print_r($topstories_args); 
