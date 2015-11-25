@@ -76,7 +76,7 @@
 <h6 class="readmore">
 
 <?php  
-
+global $cat;
 $current_category = get_category ($cat); 
 $catplug = $current_category->slug;
 
