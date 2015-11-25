@@ -105,7 +105,7 @@ function esm_transient_delete( $clear_all ) {
 }
 
 $clearcache = $_GET['clearcache'];
-if($clearcache == 'clear'){esm_transient_delete();
+if($clearcache == 'clear'){esm_transient_delete('clear');
 echo '<div class="updated"><p><strong>Cache Cleared</strong></p></div>';
 }
 
