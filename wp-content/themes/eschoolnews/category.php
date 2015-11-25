@@ -18,12 +18,6 @@ get_header(); ?>
 
 <?php 
 
-if ( is_paged() ){
-	echo 'paged';	//   get_template_part( 'content', 'first-page' );
-} else {
-	echo 'not paged';	//   get_template_part( 'content', 'paged' );
-
-
 
 global $cat;
 
@@ -36,15 +30,17 @@ global $cat;
 	$currCat = 'view-all-' . $topParent;
 
 
-if( is_category( $currCat )){ 
+if ( is_paged() ){
 
-	include (TEMPLATEPATH . '/category-view-all.php');
-
+	// include (TEMPLATEPATH . '/category-view-all.php');
+	echo 'paged';	//   get_template_part( 'content', 'first-page' );
 } else { 
 
 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]
+global $page;
+echo $page;
 $cat_name = get_category(get_query_var('cat'))->term_id;
 global $astc, $astused;
 $box_qt = 'esm_c_top_cata_a'.$astused."c".$astc.'c'.$cat_name;
@@ -258,8 +254,5 @@ echo $local_box_cache;
 <?php get_footer(); ?>
 
 <?php } ?>
-	
-<?php	
-} ?>
 
 
