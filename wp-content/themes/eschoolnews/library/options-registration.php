@@ -28,11 +28,11 @@ function esm_transient_delete( $clear_all ) {
 
 	$cleaned = 0;
 
-	global $_wp_using_ext_object_cache;
+	//global $_wp_using_ext_object_cache;
 
-	if ( !$_wp_using_ext_object_cache ) {
+	//if ( !$_wp_using_ext_object_cache ) {
 
-		$options = atc_get_options();
+		//$options = atc_get_options();
 
 		global $wpdb;
 
@@ -84,7 +84,7 @@ function esm_transient_delete( $clear_all ) {
 			";
 
 			$clean = $wpdb -> query( $sql );
-		} */
+		} 
 
 		// Save options field with number & timestamp
 
@@ -100,7 +100,7 @@ function esm_transient_delete( $clear_all ) {
 			$wpdb -> query( "OPTIMIZE TABLE $wpdb->options" );
 		}
 	}
-
+*/
 	return $cleaned;
 }
 
