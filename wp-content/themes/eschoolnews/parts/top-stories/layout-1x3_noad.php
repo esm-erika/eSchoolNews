@@ -83,9 +83,7 @@ $catplug = $current_category->slug;
 	if (is_category()) {
 
 ?>
-	<?php /*<a href="<?php site_url(); ?>/<?php echo $catplug; ?>/view-all-<?php echo $catplug; ?>">See All <?php single_cat_title(); ?> Top Stories &raquo;</a> */ ?>
-<a href="<?php current_page_url() ?>/page/2/">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
-
+	<a href="<?php site_url(); ?>/<?php echo $catplug; ?>/page/2/>">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
 
 <?php } else { ?>
 
