@@ -71,7 +71,7 @@ if ( is_paged() ){
 			<?php 
 			echo '<button class="button">';
 			echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link 
-			echo '</button><button class="button">';
+			echo '</button><button class="button right">';
 
 			echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link 
 			echo '</button>';
