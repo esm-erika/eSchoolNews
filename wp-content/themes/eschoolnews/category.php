@@ -69,12 +69,12 @@ if ( is_paged() ){
 		<div class="prev-posts-link">
 			
 			<?php 
-			echo '<button class="button">';
-			echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link 
-			echo '</button><button class="button right">';
+			echo '';
+			echo get_next_posts_link( '<button class="button">Older Entries</button>', $the_query->max_num_pages ); // display older posts link 
+			echo '';
 
-			echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link 
-			echo '</button>';
+			echo get_previous_posts_link( '<button class="button right">Newer Entries</button>' ); // display newer posts link 
+			echo '';
 			$wp_query = NULL;
 			$wp_query = $temp_query;
 
