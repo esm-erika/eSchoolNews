@@ -82,8 +82,15 @@ $catplug = $current_category->slug;
 
 	if (is_category()) {
 
+echo '<!-- '.$current_category->count.' -->';
+
 ?>
-	<a href="<?php site_url(); ?>/<?php echo $catplug; ?>/page/2/">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
+
+
+
+    <a href="<?php site_url(); ?>/<?php echo $catplug; ?>/page/2/">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
+
+
 
 <?php } else { ?>
 
