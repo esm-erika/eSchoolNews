@@ -137,7 +137,6 @@ return get_post_meta($post->ID, $name, true);
 }
 add_shortcode('field', 'field_func');
 
-
 function current_page_url() {
 	$pageURL = 'http';
 	if( isset($_SERVER["HTTPS"]) ) {
