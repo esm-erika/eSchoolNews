@@ -612,24 +612,31 @@ function Cancel (Id){
 					</div>
 				</div>
 
-					<div class="small-12 columns">
-
-						<p class="submit">
-							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
-						</p>
-					</div>			
-
         
 <input type="hidden" name="sfAction" value="update" />
 <input type="hidden" name="srId" value="" />
 <input type="hidden" name="user_id" id="user_id" <?php echo 'value="'. htmlspecialchars($sf_profile->Id).'"' ?> />
 
+
+
+</div>
+					<div class="small-12 columns">
+
+						<p class="submit">
+							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
+						</p>
+					</div>
+
+</div>
+
+
 </form>
 
 </div>
-</div>
 
-</div>
+
+
+
 </div>
 
 <p>&nbsp;</p>
