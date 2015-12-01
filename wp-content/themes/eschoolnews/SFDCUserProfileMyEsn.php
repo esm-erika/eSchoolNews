@@ -429,14 +429,17 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 			
 <h6>Innovation Weekly</h6>
 					<p>The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <br/><em>Weekly on Monday</em></p>
-				
+
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_This_Week__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
+echo '</div>';
 						}
-						?>	
+						?>
+                        	
 					</div>
 				
 
@@ -448,8 +451,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_Today__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
+echo '</div>';
 						}
 						?>	
 					
@@ -466,9 +471,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_Tools_For_Schools__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_tools_for_schools__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+	echo '</div>';					}
 						?>	
 					</div>
 				
@@ -482,9 +488,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->Ed_Resource_Alert__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="Ed_Resource_Alert__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				</div>
@@ -500,9 +507,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_Offers__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				
@@ -514,9 +522,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->Partner_Offers__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="partner_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+	echo '</div>';					}
 						?>	
 					</div>
                     
@@ -544,9 +553,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eClassroom_News__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="eclassroom_news__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 			
@@ -560,9 +570,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_This_Week__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				</div>
@@ -577,9 +588,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_Today__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				
@@ -591,9 +603,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_Offers__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				</div>
@@ -609,9 +622,10 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_Partners__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_partners__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+	echo '</div>';					}
 						?>	
 					</div>
 				</div>
