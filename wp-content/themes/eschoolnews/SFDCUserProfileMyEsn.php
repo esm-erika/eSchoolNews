@@ -331,28 +331,32 @@ function Cancel (Id){
 				
 					<div class="small-6 columns">
 						<label for='grade_level__c'><font color="red">*</font>What Grade Level do you teach?</label></th>
-
+<div class="small-12 large-6 columns">
 						<?php
 						$aGrade = eSNAP_Grade();
 						for ($i=0; $i<count($aGrade);$i++){
+if($i == 8)echo '</div><div class="small-12 large-6 columns">';
 							$sel = (strpos($sf_profile->Grade_Level__c, $aGrade[$i])===false)?'':'checked="checked"';
 							echo '<label><input type="checkbox" name="grade_level__c[]" value="' . $aGrade[$i] . '" ' . $sel . ' />&nbsp;'. $aGrade[$i] . '</label>';
 						}
 						?>	
-
+</div>
 					</div>
 				
 					<div class="small-6 columns">
 						<label for='subject_taught__c'><font color="red">*</font>What Subject(s) do you teach?</label>
-
+<div class="small-12 large-6 columns">
 						<?php
 						$aSubject = eSNAP_Subject();
 						for ($i=0; $i<count($aSubject);$i++){
+
+if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 							$sel = (strpos($sf_profile->Subject_Taught__c, $aSubject[$i])===false)?'':'checked="checked"';
 							echo '<label><input type="checkbox" name="subject_taught__c[]" value="' . $aSubject[$i] . '" ' . $sel . ' />&nbsp;'. $aSubject[$i] . '</label>';
+
 						}
 						?>	
-
+</div>
 					</div>
 
 
@@ -408,31 +412,38 @@ function Cancel (Id){
 			<br/>
 				
 			<div class="row">
-			<div class="small-6 columns">
+			<div class="small-12 medium-6 large-6 columns">
 
 			<h6>Innovation Weekly</h6>
 					<p>The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <br/><em>Weekly on Monday</em></p>
-				
+
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_This_Week__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
+echo '</div>';
 						}
-						?>	
+						?>
+                        	
 					</div>
 				
 
 				
-					<div class="small-6 columns">
-					<h6>eSchool News Today</h6>
+
+					<div class="small-12 medium-6 large-6 columns">
+<h6>eSchool News Today</h6>
+
 					<p>Daily breaking news headlines</p>
 				
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_Today__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
+echo '</div>';
 						}
 						?>	
 					
@@ -441,7 +452,7 @@ function Cancel (Id){
 			
 				
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 				<h6>eSchool News Tools for Schools</h6>
 
 						<p>Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <br/><em>Weekly on Wednesday</em></p>
@@ -449,13 +460,14 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_Tools_For_Schools__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_tools_for_schools__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+	echo '</div>';					}
 						?>	
 					</div>
 				
-			<div class="small-6 columns">
+			<div class="small-12 medium-6 large-6 columns">
 					
 					
 					<h6>Ed Resource Alert</h6>
@@ -465,9 +477,10 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->Ed_Resource_Alert__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="Ed_Resource_Alert__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				</div>
@@ -475,7 +488,7 @@ function Cancel (Id){
 				
 
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 										<h6>Special Offers from eSchool News</h6>
 
 					<p>Get valuable offers and discounts on publications, conferences and professional development breakthroughs <br><em>Schedule varies</em></p>
@@ -483,13 +496,14 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eSN_Offers__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="esn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 										<h6>Special Offers from School Technology Vendors</h6>
 
 					<p>Get valuable offers from eSchool News technology vendors <br><em>Schedule varies</em></p>
@@ -497,11 +511,14 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->Partner_Offers__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="partner_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+	echo '</div>';					}
 						?>	
 					</div>
+                    
+                  
 				</div>
 
 			<hr/>
@@ -513,39 +530,41 @@ function Cancel (Id){
 				
 
 				<div class="row">
-				<div class="small-6 columns">	
+				<div class="small-12 medium-6 large-6 columns">	
 				<h6>eClassroom News</h6>		
 					<p>Technology news and resources for teachers.</p>
 				
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eClassroom_News__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="eclassroom_news__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 			
 
 				
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>eCampus News THIS WEEK</h6>
 						<p>Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <br><em>Weekly on Monday</em></p>
 					
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_This_Week__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_this_week__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				</div>
 
 				
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>eCampus News TODAY</h6>
 
 						<p>Daily breaking news headlines</p>
@@ -553,13 +572,14 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_Today__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_today__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>Special Offers from eCampus News Online</h6>
 
 						<p>Get valuable offers and discounts on publications, conferences and professional development breakthroughs <br/><em>Schedule varies</em></p>
@@ -567,9 +587,10 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_Offers__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_offers__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+echo '</div>';						}
 						?>	
 					</div>
 				</div>
@@ -577,7 +598,7 @@ function Cancel (Id){
 				
 				
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>Special Offers from Campus Technology Vendors</h6>
 
 						<p>Get valuable offers from higher-ed technology vendors <br/><em>Schedule varies</em></p>
@@ -585,26 +606,39 @@ function Cancel (Id){
 						<?php
 						$aSub = eSNAP_Subs();
 						for ($i=0; $i<count($aSub);$i++){
+echo '<div class="small-12 large-6 columns">';
 							$sel = ($sf_profile->eCN_Partners__c==$aSub[$i])?'checked="checked"':'';
 							echo '<input type="radio" name="ecn_partners__c" value="' . $aSub[$i] . '" ' . $sel . ' /><label>'. $aSub[$i] . '</label>';
-						}
+	echo '</div>';					}
 						?>	
 					</div>
 				</div>
-
-			
 
         
 <input type="hidden" name="sfAction" value="update" />
 <input type="hidden" name="srId" value="" />
 <input type="hidden" name="user_id" id="user_id" <?php echo 'value="'. htmlspecialchars($sf_profile->Id).'"' ?> />
 
+
+
+</div>
+					<div class="small-12 columns">
+
+						<p class="submit">
+							<input type="submit" class="button radius" id="profileSubmit" value="Update Email Preferences" name="submit" />
+						</p>
+					</div>
+
+</div>
+
+
 </form>
 
 </div>
-</div>
 
-</div>
+
+
+
 </div>
 
 <p>&nbsp;</p>

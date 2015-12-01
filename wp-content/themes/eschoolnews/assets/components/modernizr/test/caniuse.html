@@ -6,7 +6,7 @@
 <!-- pull in latest modernizr -->
 <script src="../modernizr.js"></script>
 
-<script src="./caniuse_files/jquery.min.js"></script>
+<script async="async" src="./caniuse_files/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./caniuse_files/style.css">
 
 <script>
@@ -675,13 +675,13 @@ transform: translate3d(-234px, 0, 0) rotate3d(0, 1, 0, -70deg);</div></div>
 setResult('video0', !!document.createElement('video').canPlayType);
 </script></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="video1" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="video1" class="interact"></div><video width="160" height="120" controls>
 	<source src="video.mp4" type="video/mp4">
 	<source src="video.ogv" type="video/ogv">
 	<source src="video.webm" type="video/webm">
 </video><div class="info">Video with controls and all three formats available.</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="video2" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="video2" class="interact"></div><video width="160" height="120" controls>
 	<source src="mimevid.php?type=.mp4" type="video/mp4">
 	<source src="mimevid.php?type=.ogv" type="video/ogg">
 	<source src="mimevid.php?type=.webm" type="video/webm">
@@ -1231,13 +1231,13 @@ var v = document.createElement('video');
 setResult('mpeg40', !!(v.canPlayType && v.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"').replace(/no/, '')));
 </script></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="mpeg41" class="interact"></div><video src="video.mp4" width="160" height="120" controls="">fail</video><div class="info">Video, no MIME, no type attribute.</div></div>
+<div class="test_wrap"><h3>Interact</h3><div id="mpeg41" class="interact"></div><video src="video.mp4" width="160" height="120" controls>fail</video><div class="info">Video, no MIME, no type attribute.</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="mpeg42" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="mpeg42" class="interact"></div><video width="160" height="120" controls>
  <source src="video.mp4" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
 </video><div class="info">Video with source element</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="mpeg43" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="mpeg43" class="interact"></div><video width="160" height="120" controls>
  <source src="mimevid.php?type=.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
 </video><div class="info">Video with source element and MIME set</div></div>
 
@@ -1248,13 +1248,13 @@ var v = document.createElement('video');
 setResult('ogv0', !!(v.canPlayType && v.canPlayType('video/ogg; codecs="theora"').replace(/no/, '')));
 </script></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="ogv1" class="interact"></div><video src="video.ogv" width="160" height="120" controls="">fail</video><div class="info">Video, no MIME, no type attribute.</div></div>
+<div class="test_wrap"><h3>Interact</h3><div id="ogv1" class="interact"></div><video src="video.ogv" width="160" height="120" controls>fail</video><div class="info">Video, no MIME, no type attribute.</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="ogv2" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="ogv2" class="interact"></div><video width="160" height="120" controls>
  <source src="mimevid.php?type=.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
 </video><div class="info">Video with source element and MIME set</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="ogv3" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="ogv3" class="interact"></div><video width="160" height="120" controls>
  <source src="video.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
 </video><div class="info">Video with source element</div></div>
 
@@ -1265,13 +1265,13 @@ var v = document.createElement('video');
 setResult('webm0', !!(v.canPlayType && v.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/no/, '')));
 </script></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="webm1" class="interact"></div><video src="video.webm" width="160" height="120" controls="">fail</video><div class="info">Video, no MIME, no type attribute.</div></div>
+<div class="test_wrap"><h3>Interact</h3><div id="webm1" class="interact"></div><video src="video.webm" width="160" height="120" controls>fail</video><div class="info">Video, no MIME, no type attribute.</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="webm2" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="webm2" class="interact"></div><video width="160" height="120" controls>
  <source src="video.webm" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
 </video><div class="info">Video with source element</div></div>
 
-<div class="test_wrap"><h3>Interact</h3><div id="webm3" class="interact"></div><video width="160" height="120" controls="">
+<div class="test_wrap"><h3>Interact</h3><div id="webm3" class="interact"></div><video width="160" height="120" controls>
  <source src="mimevid.php?type=.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
 </video><div class="info">Video with source element and MIME set</div></div>
 
