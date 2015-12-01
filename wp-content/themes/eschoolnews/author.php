@@ -46,50 +46,15 @@ echo $local_box_cache;
 
 }
 ?>
-
-<div id="featured-article" class="row top">
-
-	<?php // get_template_part( 'parts/ads/leaderboard' ); ?>
-	
-			
-			<?php // get_template_part( 'parts/featured-article' ); ?>
-
-
-
-
-</div>
-
 	
 
 	<div class="row">
 		<div class="small-12 large-12 columns right-column top-stories">
 
-		<?php get_template_part( 'parts/top-stories' ); ?>
 
 	</div>
 	</div>
 
-
-<div class="bottom">
-
-	<div class="row">
-
-	<div class="small-12 large-8 columns">
-
-			<?php get_template_part('parts/secondary'); ?>		
-
-		<!-- secondary -->
-
-		
-		<?php get_template_part('parts/tertiary'); ?>
-
-		<!-- tertiary -->
-
-
-
-
-
-</div>
 
 <?php 
 //insert cache query
@@ -133,8 +98,7 @@ echo $local_box_cache;
 </div>
 
 
-		<?php //get_template_part('parts/quaternary'); ?>
-
+<?php get_sidebar(); ?>
 
 
 <?php get_footer(); ?>

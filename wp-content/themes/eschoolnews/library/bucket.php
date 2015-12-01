@@ -150,4 +150,12 @@ function current_page_url() {
 	}
 	return $pageURL;
 }
+
+function wpse_category_set_post_types( $query ){
+    if( $query->is_category() && $query->is_main_query() ){
+        $query->set( 'post_type', array( 'post', 'whitepapers' ) );
+    }
+}
+add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
+
 ?>

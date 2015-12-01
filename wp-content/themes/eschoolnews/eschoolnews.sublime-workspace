@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"parent",
+				"parentslug"
+			],
+			[
+				"singe",
+				"single_cat_title"
+			],
+			[
+				"is_ca",
+				"is_category"
+			],
+			[
 				"get_temp",
 				"get_template_part"
 			],
@@ -60,14 +72,6 @@
 	"buffers":
 	[
 		{
-			"file": "archive-ercs.php",
-			"settings":
-			{
-				"buffer_size": 2985,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/Users/erikawithak/Sites/eschoolnews/wp-config.php",
 			"settings":
 			{
@@ -76,37 +80,34 @@
 			}
 		},
 		{
-			"contents": "<?php\n/**\n * The template for displaying all single posts and attachments\n *\n * @package WordPress\n * @subpackage FoundationPress\n * @since FoundationPress 1.0.0\n */\n\nget_header(); \n$template = get_post_meta($post->ID,'_wp_post_template',true);\nif($template == 'single-olddata.php'){ \ninclude('single-coa.php');\n}else{\n\n?>\n\n\n\n<div class=\"row\">\n\n	<?php \n\n	$image = get_field('masthead_image');\n\n	if( !empty($image) ) {\n					<img src=\"<?php echo $image['url']; ?>\" alt=\"<?php echo $image['alt']; ?>\" />\n\n\n	}\n\n		if ($astused > 0){\n	// ast used defined   How to do this in the new?\n		} else {\n			$pageadset = $_GET['ast'];\n			if(filter_var($pageadset, FILTER_VALIDATE_INT))\n	{//reserved for default ad set\n		$astused = $pageadset;	\n	} else {\n		// Retrieve adset info from URL query vars\n		$astused = 1;\n\n	}\n	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);}\n\n\n	} ?>	\n\n	<?php if( get_field('masthead_text')): ?>\n		<div class=\"small-12 medium-12 columns\" role=\"main\">\n			<p><?php the_field('masthead_text') ?></p>\n		</div>\n	<?php endif; ?>\n\n	<?php\n\n		// check if the repeater field has rows of data\n		if( have_rows('add_section') ):\n\n			echo '<section class=\"erc-section\">';\n\n		 	// loop through the rows of data\n		    while ( have_rows('add_section') ) : the_row();\n\n		        if(get_sub_field('how_many_columns') == \"one\") {\n		        	echo '<div class=\"small-12 medium-12 columns\">';\n		      \n		       } elseif(get_sub_field('how_many_columns') == \"two\") {\n		        	echo '<div class=\"small-12 medium-6 columns\">';\n\n		       }\n\n		        	if( get_sub_field('section_title')):\n\n		        		echo '<h3 style=\"color:';\n		        		the_field('base_color'); \n		        		echo ';\">';\n		        		echo the_sub_field('section_title');\n		        		echo '</h3>';\n\n		        	endif;\n\n		        	if( have_rows('erc_article')):\n\n		        		while( have_rows('erc_article')) : the_row();\n\n			        		//variables\n			        		$thumbnail = get_sub_field('article_thumbnail');\n			        		$title = get_sub_field('article_title');\n			        		$subtitle = get_sub_field('article_subtitle');\n			        		$excerpt = get_sub_field('article_excerpt');\n			        		$readmorelink = get_sub_field('read_more_link');\n			        		$video = get_sub_field('video_link');\n\n			        		echo '<article class=\"panel\">';\n			        		\n			        		if ( $thumbnail ):\n\n			        			//echo '<div class=\"small-12 medium-6 columns\">';\n\n			        			echo '<img src=\"' . $thumbnail['url'] . '\" />';\n\n			        			//echo '</div>';\n\n			        		endif;\n\n			        		//echo '<div class=\"small-12 medium-6 columns\">';\n\n\n			        		if( $title ):\n\n			        			echo '<h4>' . $title . '</h4>';\n\n			        		endif;\n\n			        		if( $subtitle ):\n\n			        			echo '<h6>' . $subtitle . '</h6>';\n\n			        		endif;\n\n			        		if( $excerpt ):\n\n			        			echo '<p>' . $excerpt . '</p>';\n\n			        		endif;\n\n			        		if( $readmorelink ):\n\n			        			echo '<a href=\"' . $readmorelink . '\">Read more</a>';\n\n			        		endif;\n\n\n							$file = get_field('upload_file');\n\n							if( $file ): \n								\n								echo '<a class=\"button radius small\" href=\"' . $file['url'] . '\"><i class=\"fi-arrow-down\"></i> Download</a>';\n\n							endif;\n\n			        		if( $video ):\n\n			        			echo '<i class=\"fi-play-video\"></i>';\n\n			        		endif;\n\n			        		//echo '</div>';\n\n			        		echo '</article>';\n\n\n		        		endwhile;\n\n		        	endif;\n\n\n\n		        	echo '</div>';\n\n\n		    endwhile;\n\n		else :\n\n		    // no rows found\n\n		endif;\n\n	echo '</section>';\n\n		?>\n\n\n		<div class=\"sponsor\">\n			\n		</div>\n\n	\n\n	\n	\n	<?php //get_sidebar(); ?>\n</div>\n<?php \n}\nget_footer(); ?>",
-			"file": "single-ercs.php",
-			"file_size": 3730,
-			"file_write_time": 1446847032000000,
+			"file": "SFDCUserProfileMyEsn.php",
 			"settings":
 			{
-				"buffer_size": 3667,
+				"buffer_size": 22966,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "taxonomy.php",
+			"file": "single.php",
 			"settings":
 			{
-				"buffer_size": 1703,
+				"buffer_size": 5543,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "search.php",
+			"file": "parts/featured-article.php",
 			"settings":
 			{
-				"buffer_size": 1566,
+				"buffer_size": 2455,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "parts/ads/erctop.php",
+			"file": "parts/resources-section.php",
 			"settings":
 			{
-				"buffer_size": 626,
+				"buffer_size": 2104,
 				"line_ending": "Unix"
 			}
 		},
@@ -114,23 +115,39 @@
 			"file": "header.php",
 			"settings":
 			{
-				"buffer_size": 6248,
+				"buffer_size": 8183,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "parts/whitepapers-modal.php",
+			"file": "parts/top-bar.php",
 			"settings":
 			{
-				"buffer_size": 9378,
+				"buffer_size": 1042,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sidebar.php",
+			"file": "parts/whitepaper-section.php",
 			"settings":
 			{
-				"buffer_size": 2067,
+				"buffer_size": 1784,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "parts/ads/billboard.php",
+			"settings":
+			{
+				"buffer_size": 666,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/scss/site/_custom.scss",
+			"settings":
+			{
+				"buffer_size": 15425,
 				"line_ending": "Unix"
 			}
 		}
@@ -175,109 +192,134 @@
 	},
 	"file_history":
 	[
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/footer.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/erctop.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/bucket.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-whitepapers.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/whitepapers-modal.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page-top-stories.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/professional-development.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/scss/site/_custom.scss",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/custom-post-types.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/header.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/resources-section.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/category.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/category-tags.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/author.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/sidebar.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-whitepapers.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/category-view-all.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/featured-article.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page-resources.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/whitepapers-modal.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/resources.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/astc.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/category.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-whitepapers.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/links.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/sidebar.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-special-reports.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/related-content.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/resources-section.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/footer.php",
+		"/Users/erikawithak/Documents/Newsletters/Innovation-Awards_template.html",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-newsletter.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page-view-all.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-webinars.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-special-reports.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-olddata.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-events.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/popular-posts.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/add-editor-cap.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/anchorboard.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/section-titles.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/digital-leap.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-post-leading-the-digital-leap.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/flags.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/theme-support.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/scss/site/_custom.scss",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/most-popular.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-webinars.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/custom-post-types.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/widget-areas.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/social.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/header.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/most-popular.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/sidebar-whitepaper.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-config.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/index.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/ercbottom.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/related-content.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/authors.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/functions.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/next-page.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories/layout-1x3_noad.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/custom-link-pages.php",
+		"/Users/erikawithak/Documents/Websites/prettyboidrag/sidebar.html",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/components/modernizr/test/caniuse_files/style.css",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/foundation_wp_links.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/pagination.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/widget-areas.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/plugins/image-widget/views/widget.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/plugins/image-widget/image-widget.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/search.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/temporary_top-stories.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-special-reports.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/whitepaper-section.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-special-reports.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories/layout-2x2_halfpage.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories/layout-2x2_box_ecn.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-bar.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-ercs.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-webinars.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/category-eclassroomnews.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-whitepapersbackup.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/scss/config/_custom-settings.scss",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/content.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-ercs.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/resources.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/components/foundation/scss/foundation/components/_top-bar.scss",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/scss/config/_settings.scss",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-events.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-webinars-old.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/boxes.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/boxes2.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/whitepapers-modalbackup.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/popular-posts.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/twentyfifteen/index.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/leaderboard.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/leaderboard-2.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/tag.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-olddata.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/erctop.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/sidebar-erc.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/taxonomy.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/company-categories.php",
+		"/Users/erikawithak/eschoolnews-copy-1030/header.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/navigation.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/off-canvas-menu.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/offcanvas-walker.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/conferences.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/menu-walker.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/astc.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/links.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-events.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/add-editor-cap.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/theme-support.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/most-popular.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/social.php",
+		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/most-popular.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/sharing-tools.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/social-sharing.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories/layout-2x2_box_ecn.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories/layout-2x2_halfpage.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-stories/layout-1x3_noad.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page-top-stories.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/whitepaper-section.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-coa.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/search.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-includes/capabilities.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-webinars-old.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/upcoming-webinars.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/tag-cloud.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-config.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/tag-cloud.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/tag.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/professional-development.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/cpt-taxonomy.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/index.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/section-titles.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-events.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/node_modules/bower/node_modules/which/bin/which",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/conferences.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive-ercs.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/company-categories.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/topics.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/billboard.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/leaderboard.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/page-topnews.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/speakers.php",
 		"/Users/erikawithak/Sites/prettyboidrag/wp-config.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/embeddedbanner-3.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/taxonomy.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/archive.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/single-ercs.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/embeddedbanner.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/embeddedbanner-2.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/bucket.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/javascript/social-sharing.js",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/landing-pages/technology.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/landing-pages/digital-curriculum.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/landing-pages/colleague-corner.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/landing-pages/thought-leadership.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/landing-pages/top-trends.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/content.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/whitepapers.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/author.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/sidebar/sponsored-by.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/tertiary.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/php-widgets.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/subscribe-form.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/navigation.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-includes/nav-menu-template.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/options-page.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/halfpage.php",
 		"/Users/erikawithak/Sites/eschoolnews/wp-includes/class-wp-customize-control.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-includes/general-template.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-news/layout-2x2_halfpage.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-news/layout-1x3_noad.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-news/1x3.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/secondary.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/library/the-slug.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/assets/javascript/foundation.js",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/webinars.html",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/ads/leaderboard-2.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/quaternary.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/eschoolnews/parts/top-bar.php",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/FoundationPress/assets/foundation-icons/foundation-icons.css",
-		"/Users/erikawithak/Sites/eschoolnews/wp-content/themes/FoundationPress/library/author-social.php"
+		"/Users/erikawithak/Sites/eschoolnews/wp-includes/general-template.php"
 	],
 	"find":
 	{
@@ -285,7 +327,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"",
@@ -297,6 +339,69 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".top-bar",
+			"submit",
+			"h4",
+			"button",
+			"button ",
+			"Download",
+			"Read All",
+			"Update Profile",
+			"<form",
+			"category-tags",
+			"view-all",
+			"Download",
+			"Downlaod",
+			"Permaili",
+			"Permalink",
+			"/button",
+			"section",
+			">>>>>",
+			"a.left-off-canvas-toggle",
+			"wp_link_pages_args",
+			"button, ",
+			"custom_query",
+			"topstories",
+			"$post",
+			"post",
+			"category_parent_id",
+			"topstories",
+			"hr",
+			".tooltip",
+			"button, .button",
+			"nav.tab-bar",
+			"@media",
+			".center",
+			"divider",
+			"<hr",
+			"<div class=\"row\"><hr",
+			"<hr",
+			"wp_trim_words",
+			"<i",
+			"topbar-breakpoint",
+			"top-bar-breakpoint",
+			"excerpt",
+			"<img data-interchange=\"[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]\">",
+			"($post->ID), 'full'",
+			"($post->ID), 'medium-thumb'",
+			"medium-thumb",
+			"$smallsrc",
+			"$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-thumb' );\n$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );",
+			"post_th",
+			"full",
+			"?>",
+			"text-transform",
+			"<small>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></small>",
+			"Posted on",
+			"get_post",
+			"nav",
+			"nav.",
+			"social-right",
+			"tab-bar",
+			"has-submenu",
+			"off-canvas-menu",
+			"Walker_Nav_Menu",
+			"mobile_nav_position-submenu",
 			"$file",
 			"$post_type",
 			"post_type",
@@ -361,17 +466,7 @@
 			"footer",
 			".section-title",
 			"webinar",
-			"w",
-			"ERC",
-			"erc",
-			".social",
-			"social",
-			"White Paper",
-			"White Papers",
-			"whitepaper",
-			"=&gt;",
-			"<?php",
-			"logo"
+			"w"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -379,6 +474,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<img data-interchange=\"[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]\" alt=\"<?php the_title(); ?>\">",
+			"($post->ID), 'large'",
+			"($post->ID), 'medium'",
+			"$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );\n$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );",
+			"<div class=\"posted-on\">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -389,37 +489,11 @@
 	"groups":
 	[
 		{
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "archive-ercs.php",
-					"settings":
-					{
-						"buffer_size": 2985,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2376,
-								2376
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1364.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/Users/erikawithak/Sites/eschoolnews/wp-config.php",
 					"settings":
 					{
@@ -430,8 +504,8 @@
 						"selection":
 						[
 							[
-								2773,
-								2773
+								673,
+								673
 							]
 						],
 						"settings":
@@ -439,180 +513,44 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 870.0,
+						"translation.y": 311.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "SFDCUserProfileMyEsn.php",
+					"settings":
+					{
+						"buffer_size": 22966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16462,
+								16462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6837.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "single-ercs.php",
+					"file": "single.php",
 					"settings":
 					{
-						"buffer_size": 3667,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								618,
-								618
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 312.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "taxonomy.php",
-					"settings":
-					{
-						"buffer_size": 1703,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								884,
-								884
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 274.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "search.php",
-					"settings":
-					{
-						"buffer_size": 1566,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								617,
-								617
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 127.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "parts/ads/erctop.php",
-					"settings":
-					{
-						"buffer_size": 626,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								97,
-								97
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "header.php",
-					"settings":
-					{
-						"buffer_size": 6248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4215,
-								4215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1596.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "parts/whitepapers-modal.php",
-					"settings":
-					{
-						"buffer_size": 9378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5353,
-								5353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 122.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "sidebar.php",
-					"settings":
-					{
-						"buffer_size": 2067,
+						"buffer_size": 5543,
 						"regions":
 						{
 						},
@@ -629,7 +567,198 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 882.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "parts/featured-article.php",
+					"settings":
+					{
+						"buffer_size": 2455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1685,
+								1685
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1218.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "parts/resources-section.php",
+					"settings":
+					{
+						"buffer_size": 2104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1111,
+								1111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 821.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "header.php",
+					"settings":
+					{
+						"buffer_size": 8183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3743,
+								3743
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3215.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "parts/top-bar.php",
+					"settings":
+					{
+						"buffer_size": 1042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								653,
+								653
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "parts/whitepaper-section.php",
+					"settings":
+					{
+						"buffer_size": 1784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1142,
+								1142
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 937.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "parts/ads/billboard.php",
+					"settings":
+					{
+						"buffer_size": 666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170,
+								170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "assets/scss/site/_custom.scss",
+					"settings":
+					{
+						"buffer_size": 15425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4375,
+								4375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4502.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -679,72 +808,380 @@
 		"selected_items":
 		[
 			[
-				"sid",
-				"sidebar.php"
+				"_cust",
+				"assets/scss/site/_custom.scss"
+			],
+			[
+				"bill",
+				"parts/ads/billboard.php"
 			],
 			[
 				"whi",
-				"parts/whitepapers-modal.php"
+				"parts/whitepaper-section.php"
 			],
 			[
-				"head",
+				"top-bar",
+				"parts/top-bar.php"
+			],
+			[
+				"header",
 				"header.php"
 			],
 			[
-				"erctop",
-				"parts/ads/erctop.php"
-			],
-			[
-				"sear",
-				"search.php"
-			],
-			[
-				"foo",
-				"footer.php"
-			],
-			[
-				"ca",
-				"category.php"
-			],
-			[
-				"page",
-				"page-resources.php"
-			],
-			[
-				"archive",
-				"archive-ercs.php"
+				"reous",
+				"parts/resources-section.php"
 			],
 			[
 				"feat",
 				"parts/featured-article.php"
 			],
 			[
+				"sin",
+				"single.php"
+			],
+			[
+				"buck",
+				"library/bucket.php"
+			],
+			[
+				"archive-w",
+				"archive-whitepapers.php"
+			],
+			[
+				"mod",
+				"parts/whitepapers-modal.php"
+			],
+			[
+				"top",
+				"page-top-stories.php"
+			],
+			[
+				"profe",
+				"parts/sidebar/professional-development.php"
+			],
+			[
+				"_cu",
+				"assets/scss/site/_custom.scss"
+			],
+			[
+				"cust",
+				"library/custom-post-types.php"
+			],
+			[
+				"hea",
+				"header.php"
+			],
+			[
 				"resou",
-				"page-resources.php"
+				"parts/resources-section.php"
+			],
+			[
+				"cate",
+				"category.php"
+			],
+			[
+				"auth",
+				"author.php"
+			],
+			[
+				"head",
+				"header.php"
 			],
 			[
 				"single",
-				"single-ercs.php"
+				"single.php"
 			],
 			[
-				"whitep",
-				"parts/whitepapers-modal.php"
+				"page-top",
+				"page-top-stories.php"
 			],
 			[
-				"white",
-				"parts/whitepapers-modal.php"
+				"foo",
+				"footer.php"
+			],
+			[
+				"cu",
+				"library/custom-post-types.php"
+			],
+			[
+				"page",
+				"page.php"
+			],
+			[
+				"ca",
+				"category.php"
 			],
 			[
 				"archi",
-				"archive-ercs.php"
+				"archive-whitepapers.php"
 			],
 			[
 				"side",
 				"sidebar.php"
 			],
 			[
+				"single-whi",
+				"single-whitepapers.php"
+			],
+			[
+				"section",
+				"parts/section-titles.php"
+			],
+			[
+				"categ",
+				"category-view-all.php"
+			],
+			[
+				"arc",
+				"archive-whitepapers.php"
+			],
+			[
+				"fla",
+				"parts/flags.php"
+			],
+			[
+				"si",
+				"sidebar.php"
+			],
+			[
+				"whie",
+				"parts/whitepapers-modal.php"
+			],
+			[
+				"whitep",
+				"parts/whitepapers-modal.php"
+			],
+			[
+				"fea",
+				"parts/featured-article.php"
+			],
+			[
+				"page-re",
+				"page-resources.php"
+			],
+			[
+				"whit",
+				"archive-whitepapers.php"
+			],
+			[
+				"bu",
+				"library/bucket.php"
+			],
+			[
+				"rela",
+				"parts/sidebar/related-content.php"
+			],
+			[
+				"anc",
+				"parts/ads/anchorboard.php"
+			],
+			[
+				"ercbo",
+				"parts/ads/ercbottom.php"
+			],
+			[
+				"ind",
+				"index.php"
+			],
+			[
+				"catego",
+				"category-view-all.php"
+			],
+			[
+				"catet",
+				"parts/category-tags.php"
+			],
+			[
+				"_cus",
+				"assets/scss/site/_custom.scss"
+			],
+			[
+				"sing",
+				"single.php"
+			],
+			[
+				"styl",
+				"assets/components/modernizr/test/caniuse_files/style.css"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"pag",
+				"library/pagination.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"sect",
+				"parts/section-titles.php"
+			],
+			[
+				"wid",
+				"library/widget-areas.php"
+			],
+			[
+				"layou",
+				"parts/top-stories/layout-1x3_noad.php"
+			],
+			[
+				"topstor",
+				"page-top-stories.php"
+			],
+			[
+				"white",
+				"parts/whitepaper-section.php"
+			],
+			[
+				"single-spe",
+				"single-special-reports.php"
+			],
+			[
+				"single-we",
+				"single-webinars.php"
+			],
+			[
+				"tem",
+				"parts/temporary_top-stories.php"
+			],
+			[
+				"sear",
+				"search.php"
+			],
+			[
+				"in",
+				"index.php"
+			],
+			[
+				"category-tags",
+				"parts/category-tags.php"
+			],
+			[
 				"res",
-				"parts/sidebar/resources.php"
+				"parts/resources-section.php"
+			],
+			[
+				"temp",
+				"parts/temporary_top-stories.php"
+			],
+			[
+				"searc",
+				"search.php"
+			],
+			[
+				"page-reou",
+				"page-resources.php"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"archive-web",
+				"archive-webinars.php"
+			],
+			[
+				"single-er",
+				"single-ercs.php"
+			],
+			[
+				"sett",
+				"assets/scss/config/_settings.scss"
+			],
+			[
+				"",
+				"assets/scss/site/_custom.scss"
+			],
+			[
+				"conte",
+				"content.php"
+			],
+			[
+				"archive",
+				"archive-whitepapers.php"
+			],
+			[
+				"resourc",
+				"parts/resources-section.php"
+			],
+			[
+				"archive-sp",
+				"archive-special-reports.php"
+			],
+			[
+				"archive-events",
+				"archive-events.php"
+			],
+			[
+				"pop",
+				"parts/popular-posts.php"
+			],
+			[
+				"archive-er",
+				"archive-ercs.php"
+			],
+			[
+				"resour",
+				"parts/resources-section.php"
+			],
+			[
+				"archive-whi",
+				"archive-whitepapers.php"
+			],
+			[
+				"foot",
+				"footer.php"
+			],
+			[
+				"top-st",
+				"page-top-stories.php"
+			],
+			[
+				"sec",
+				"parts/section-titles.php"
+			],
+			[
+				"compan",
+				"parts/sidebar/company-categories.php"
+			],
+			[
+				"tax",
+				"taxonomy.php"
+			],
+			[
+				"ercto",
+				"parts/ads/erctop.php"
+			],
+			[
+				"conf",
+				"parts/sidebar/conferences.php"
+			],
+			[
+				"offca",
+				"library/offcanvas-walker.php"
+			],
+			[
+				"off-c",
+				"parts/off-canvas-menu.php"
+			],
+			[
+				"menu-walk",
+				"library/menu-walker.php"
+			],
+			[
+				"navi",
+				"library/navigation.php"
+			],
+			[
+				"sid",
+				"sidebar.php"
+			],
+			[
+				"erctop",
+				"parts/ads/erctop.php"
 			],
 			[
 				"ar",
@@ -759,36 +1196,8 @@
 				"archive-special-reports.php"
 			],
 			[
-				"sing",
-				"single.php"
-			],
-			[
 				"them",
 				"library/theme-support.php"
-			],
-			[
-				"foot",
-				"footer.php"
-			],
-			[
-				"_cu",
-				"assets/scss/site/_custom.scss"
-			],
-			[
-				"pop",
-				"parts/popular-posts.php"
-			],
-			[
-				"_cus",
-				"assets/scss/site/_custom.scss"
-			],
-			[
-				"sin",
-				"single.php"
-			],
-			[
-				"",
-				"parts/popular-posts.php"
 			],
 			[
 				"cat",
@@ -799,18 +1208,6 @@
 				"parts/sidebar/related-content.php"
 			],
 			[
-				"resour",
-				"parts/resources-section.php"
-			],
-			[
-				"single-we",
-				"single-webinars.php"
-			],
-			[
-				"single-spe",
-				"single-special-reports.php"
-			],
-			[
 				"single-o",
 				"single-olddata.php"
 			],
@@ -819,28 +1216,12 @@
 				"single-events.php"
 			],
 			[
-				"hea",
-				"header.php"
-			],
-			[
-				"cust",
-				"library/custom-post-types.php"
-			],
-			[
 				"most",
 				"parts/sidebar/most-popular.php"
 			],
 			[
-				"cate",
-				"category.php"
-			],
-			[
 				"singe-we",
 				"single-webinars.php"
-			],
-			[
-				"fea",
-				"parts/featured-article.php"
 			],
 			[
 				"archive-we",
@@ -851,32 +1232,8 @@
 				"library/custom-post-types.php"
 			],
 			[
-				"_cust",
-				"assets/scss/site/_custom.scss"
-			],
-			[
-				"wid",
-				"library/widget-areas.php"
-			],
-			[
 				"sha",
 				"library/social-sharing.php"
-			],
-			[
-				"fun",
-				"functions.php"
-			],
-			[
-				"top",
-				"parts/top-stories.php"
-			],
-			[
-				"layou",
-				"parts/top-stories/layout-2x2_box_ecn.php"
-			],
-			[
-				"top-st",
-				"parts/top-stories.php"
 			],
 			[
 				"webin",
@@ -901,10 +1258,6 @@
 			[
 				"tag",
 				"parts/sidebar/tag-cloud.php"
-			],
-			[
-				"whit",
-				"parts/whitepaper-section.php"
 			],
 			[
 				"re",
@@ -947,22 +1300,6 @@
 				"parts/top-stories/layout-2x2_box_ecn.php"
 			],
 			[
-				"in",
-				"index.php"
-			],
-			[
-				"topstor",
-				"parts/top-stories.php"
-			],
-			[
-				"inde",
-				"index.php"
-			],
-			[
-				"sect",
-				"parts/section-titles.php"
-			],
-			[
 				"modal",
 				"parts/whitepapers-modal.php"
 			],
@@ -981,214 +1318,6 @@
 			[
 				"company",
 				"parts/sidebar/company-categories.php"
-			],
-			[
-				"topic",
-				"parts/sidebar/topics.php"
-			],
-			[
-				"header",
-				"header.php"
-			],
-			[
-				"lea",
-				"parts/ads/leaderboard.php"
-			],
-			[
-				"bill",
-				"parts/ads/billboard.php"
-			],
-			[
-				"sction",
-				"parts/section-titles.php"
-			],
-			[
-				"tops",
-				"parts/top-stories.php"
-			],
-			[
-				"page-t",
-				"page-topnews.php"
-			],
-			[
-				"rel",
-				"parts/sidebar/related-content.php"
-			],
-			[
-				"resource",
-				"parts/resources-section.php"
-			],
-			[
-				"singl",
-				"single-special-reports.php"
-			],
-			[
-				"se",
-				"parts/section-titles.php"
-			],
-			[
-				"c",
-				"library/custom-post-types.php"
-			],
-			[
-				"sec",
-				"parts/section-titles.php"
-			],
-			[
-				"ind",
-				"index.php"
-			],
-			[
-				"featured",
-				"parts/featured-article.php"
-			],
-			[
-				"speak",
-				"parts/sidebar/speakers.php"
-			],
-			[
-				"cpt-",
-				"library/cpt-taxonomy.php"
-			],
-			[
-				"arch",
-				"archive-whitepapers.php"
-			],
-			[
-				"bil",
-				"parts/ads/billboard.php"
-			],
-			[
-				"feature",
-				"parts/featured-article.php"
-			],
-			[
-				"rela",
-				"parts/sidebar/related-content.php"
-			],
-			[
-				"spea",
-				"parts/sidebar/speakers.php"
-			],
-			[
-				"even",
-				"archive-events.php"
-			],
-			[
-				"singlewe",
-				"single-webinars.php"
-			],
-			[
-				"event",
-				"single-events.php"
-			],
-			[
-				"buck",
-				"library/bucket.php"
-			],
-			[
-				"soci",
-				"library/social-sharing.php"
-			],
-			[
-				"bu",
-				"library/bucket.php"
-			],
-			[
-				"arc",
-				"archive-webinars.php"
-			],
-			[
-				"conten",
-				"content.php"
-			],
-			[
-				"cus",
-				"library/custom-post-types.php"
-			],
-			[
-				"author",
-				"author.php"
-			],
-			[
-				"spo",
-				"parts/sidebar/sponsored-by.php"
-			],
-			[
-				"archive-e",
-				"archive-events.php"
-			],
-			[
-				"tec",
-				"parts/landing-pages/technology.php"
-			],
-			[
-				"cu",
-				"library/custom-post-types.php"
-			],
-			[
-				"we",
-				"archive-webinars.php"
-			],
-			[
-				"ter",
-				"parts/tertiary.php"
-			],
-			[
-				"footer",
-				"footer.php"
-			],
-			[
-				"nav",
-				"library/navigation.php"
-			],
-			[
-				"funct",
-				"functions.php"
-			],
-			[
-				"content",
-				"content.php"
-			],
-			[
-				"heade",
-				"header.php"
-			],
-			[
-				"secon",
-				"parts/secondary.php"
-			],
-			[
-				"the",
-				"library/the-slug.php"
-			],
-			[
-				"archive-w",
-				"archive-whitepapers.php"
-			],
-			[
-				"foundation.js",
-				"assets/javascript/foundation.js"
-			],
-			[
-				"secti",
-				"parts/section-titles.php"
-			],
-			[
-				"lead",
-				"parts/ads/leaderboard-2.php"
-			],
-			[
-				"secion",
-				"parts/section-titles.php"
-			],
-			[
-				"seco",
-				"parts/secondary.php"
-			],
-			[
-				"leade",
-				"parts/ads/leaderboard.php"
 			]
 		],
 		"width": 0.0
