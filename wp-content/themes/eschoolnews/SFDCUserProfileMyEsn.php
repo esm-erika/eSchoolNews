@@ -331,30 +331,32 @@ function Cancel (Id){
 				
 					<div class="small-6 columns">
 						<label for='grade_level__c'><font color="red">*</font>What Grade Level do you teach?</label></th>
-
+<div class="small-12 large-6 columns">
 						<?php
 						$aGrade = eSNAP_Grade();
 						for ($i=0; $i<count($aGrade);$i++){
+if($i == 8)echo '</div><div class="small-12 large-6 columns">';
 							$sel = (strpos($sf_profile->Grade_Level__c, $aGrade[$i])===false)?'':'checked="checked"';
 							echo '<label><input type="checkbox" name="grade_level__c[]" value="' . $aGrade[$i] . '" ' . $sel . ' />&nbsp;'. $aGrade[$i] . '</label>';
 						}
 						?>	
-
+</div>
 					</div>
 				
 					<div class="small-6 columns">
 						<label for='subject_taught__c'><font color="red">*</font>What Subject(s) do you teach?</label>
-
+<div class="small-12 large-6 columns">
 						<?php
 						$aSubject = eSNAP_Subject();
 						for ($i=0; $i<count($aSubject);$i++){
-echo $i;
+
+if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 							$sel = (strpos($sf_profile->Subject_Taught__c, $aSubject[$i])===false)?'':'checked="checked"';
 							echo '<label><input type="checkbox" name="subject_taught__c[]" value="' . $aSubject[$i] . '" ' . $sel . ' />&nbsp;'. $aSubject[$i] . '</label>';
-echo $i;
+
 						}
 						?>	
-
+</div>
 					</div>
 
 
