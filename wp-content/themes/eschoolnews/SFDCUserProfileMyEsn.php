@@ -529,12 +529,7 @@ echo '<div class="small-12 large-6 columns">';
 						?>	
 					</div>
                     
-					<div class="small-12 columns">
-
-						<p class="submit">
-							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
-						</p>
-					</div>                    
+                  
 				</div>
 
 			<hr/>
@@ -641,7 +636,7 @@ echo '<div class="small-12 large-6 columns">';
 					<div class="small-12 columns">
 
 						<p class="submit">
-							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
+							<input type="submit" class="button radius" id="profileSubmit" value="Update Email Preferences" name="submit" />
 						</p>
 					</div>
 
