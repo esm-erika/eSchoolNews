@@ -515,6 +515,13 @@ function Cancel (Id){
 						}
 						?>	
 					</div>
+                    
+					<div class="small-12 columns">
+
+						<p class="submit">
+							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
+						</p>
+					</div>                    
 				</div>
 
 			<hr/>
@@ -605,7 +612,12 @@ function Cancel (Id){
 					</div>
 				</div>
 
-			
+					<div class="small-12 columns">
+
+						<p class="submit">
+							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
+						</p>
+					</div>			
 
         
 <input type="hidden" name="sfAction" value="update" />
