@@ -423,7 +423,7 @@ if($i == 6)echo '</div><div class="small-12 large-6 columns">';
 			<br/>
 				
 			<div class="row">
-			<div class="small-6 columns">
+			<div class="small-12 medium-6 large-6 columns">
 
 				
 			
@@ -444,7 +444,7 @@ echo '</div>';
 				
 
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 <h6>eSchool News Today</h6>
 					<p>Daily breaking news headlines</p>
 				
@@ -463,7 +463,7 @@ echo '</div>';
 			
 				
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 				<h6>eSchool News Tools for Schools</h6>
 
 						<p>Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning. <br/><em>Weekly on Wednesday</em></p>
@@ -478,7 +478,7 @@ echo '<div class="small-12 large-6 columns">';
 						?>	
 					</div>
 				
-			<div class="small-6 columns">
+			<div class="small-12 medium-6 large-6 columns">
 					
 					
 					<h6>Ed Resource Alert</h6>
@@ -499,7 +499,7 @@ echo '</div>';						}
 				
 
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 										<h6>Special Offers from eSchool News</h6>
 
 					<p>Get valuable offers and discounts on publications, conferences and professional development breakthroughs <br><em>Schedule varies</em></p>
@@ -514,7 +514,7 @@ echo '</div>';						}
 						?>	
 					</div>
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 										<h6>Special Offers from School Technology Vendors</h6>
 
 					<p>Get valuable offers from eSchool News technology vendors <br><em>Schedule varies</em></p>
@@ -546,7 +546,7 @@ echo '<div class="small-12 large-6 columns">';
 				
 
 				<div class="row">
-				<div class="small-6 columns">	
+				<div class="small-12 medium-6 large-6 columns">	
 				<h6>eClassroom News</h6>		
 					<p>Technology news and resources for teachers.</p>
 				
@@ -563,7 +563,7 @@ echo '</div>';						}
 
 				
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>eCampus News THIS WEEK</h6>
 						<p>Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning. <br><em>Weekly on Monday</em></p>
 					
@@ -580,7 +580,7 @@ echo '</div>';						}
 
 				
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>eCampus News TODAY</h6>
 
 						<p>Daily breaking news headlines</p>
@@ -595,7 +595,7 @@ echo '</div>';						}
 						?>	
 					</div>
 				
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>Special Offers from eCampus News Online</h6>
 
 						<p>Get valuable offers and discounts on publications, conferences and professional development breakthroughs <br/><em>Schedule varies</em></p>
@@ -614,7 +614,7 @@ echo '</div>';						}
 				
 				
 				<div class="row">
-					<div class="small-6 columns">
+					<div class="small-12 medium-6 large-6 columns">
 						<h6>Special Offers from Campus Technology Vendors</h6>
 
 						<p>Get valuable offers from higher-ed technology vendors <br/><em>Schedule varies</em></p>
