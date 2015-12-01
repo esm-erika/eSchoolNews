@@ -358,10 +358,7 @@ function Cancel (Id){
 
 				
 					<div class="small-12 columns">
-
-						<p class="submit">
 							<input type="submit" class="button radius" id="profileSubmit" value="Update Profile" name="submit" />
-						</p>
 					</div>
 				</div>
 
@@ -378,7 +375,7 @@ function Cancel (Id){
 						<h4>Password</h4>
 					</br>
 
-						<p>If you would like to change the password type a new one.</p>
+						<h6>If you would like to change the password type a new one.</h6>
 
 						<input type="password" name="pass1" id="pass1" size="16" value="" autocomplete="off" /><span class="description"> Otherwise leave this blank.</span><br />
 						<em>Required length 5 characters</em>
@@ -400,20 +397,12 @@ function Cancel (Id){
 				</div>	
 			
 			<div class="row medium-collapse">
-					<div class="small-12 columns">
-
-			<p class="submit">
-				<input type="submit" class="button radius" id="profileSubmit" value="Update Password" name="submit" />
-			</p>
-
+				<div class="small-12 columns">
+					<input type="submit" class="button radius" id="profileSubmit" value="Update Password" name="submit" />
 				</div>
 			</div>
 
 			<hr/>
-
-		
-
-					
 
 			<h4>Please select the eMail newsletters you would like to receive:</h4>
 			<br/>
@@ -421,9 +410,7 @@ function Cancel (Id){
 			<div class="row">
 			<div class="small-6 columns">
 
-				
-			
-<h6>Innovation Weekly</h6>
+			<h6>Innovation Weekly</h6>
 					<p>The week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.  <br/><em>Weekly on Monday</em></p>
 				
 						<?php
@@ -438,7 +425,7 @@ function Cancel (Id){
 
 				
 					<div class="small-6 columns">
-<h6>eSchool News Today</h6>
+					<h6>eSchool News Today</h6>
 					<p>Daily breaking news headlines</p>
 				
 						<?php

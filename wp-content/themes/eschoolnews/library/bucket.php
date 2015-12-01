@@ -137,6 +137,7 @@ return get_post_meta($post->ID, $name, true);
 }
 add_shortcode('field', 'field_func');
 
+
 function current_page_url() {
 	$pageURL = 'http';
 	if( isset($_SERVER["HTTPS"]) ) {
@@ -150,4 +151,12 @@ function current_page_url() {
 	}
 	return $pageURL;
 }
+
+function wpse_category_set_post_types( $query ){
+    if( $query->is_category() && $query->is_main_query() ){
+        $query->set( 'post_type', array( 'post', 'whitepapers' ) );
+    }
+}
+add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
+
 ?>
