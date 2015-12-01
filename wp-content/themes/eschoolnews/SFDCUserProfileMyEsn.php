@@ -348,8 +348,10 @@ function Cancel (Id){
 						<?php
 						$aSubject = eSNAP_Subject();
 						for ($i=0; $i<count($aSubject);$i++){
+echo $i;
 							$sel = (strpos($sf_profile->Subject_Taught__c, $aSubject[$i])===false)?'':'checked="checked"';
 							echo '<label><input type="checkbox" name="subject_taught__c[]" value="' . $aSubject[$i] . '" ' . $sel . ' />&nbsp;'. $aSubject[$i] . '</label>';
+echo $i;
 						}
 						?>	
 
