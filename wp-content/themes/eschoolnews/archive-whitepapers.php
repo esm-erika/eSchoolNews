@@ -187,13 +187,16 @@ $(document).ready(function(){
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
 						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
-
-							<a class="button tiny radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download White Paper</a>
-
+						
+						<div class="text-center">
+							<a class="button small radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download White Paper</a>
+						</div>
 
 						<?php } else { // not logged in ?>
-					
-                        <a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download White Paper</a>
+						
+						<div class="text-center">
+                        	<a href="#" class="button small radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download White Paper</a>
+                    	</div>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
                         
                         
