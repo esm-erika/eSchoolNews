@@ -68,75 +68,15 @@
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 
-<script>
+<!-- <script type="text/javascript" src="<?php //echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
+
+<script type="text/javascript">
 $(document).ready(function(){
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();	
-	$("#all").click(function(){
-        $("div.row.all").show();
-		$("h4#AllTitle").show();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();		
-		
-    });
-
-	$("#curriculum").click(function(){
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-        $("div.row.curriculum-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").show();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();		
-
-    });
-
-	$("#digital").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.digital-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").show();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();		
-
-    });
-
-	$("#mobile").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").show();
-		$("h4#TechnologiesTitle").hide();		
-
-    });	
-    
-	$("#technologies").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.technologies-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").show();		
-
-    });
+  $('.featured-slick').slick({
+  	adaptiveHeight: true
+  });
 });
-</script>
+</script> -->
 
 </body>
 </html>
