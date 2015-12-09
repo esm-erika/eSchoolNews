@@ -14,10 +14,10 @@ if(is_post_type_archive('webinars' )) {
 
 <article>
 
-	<?php if (is_post_type_archive( array('webinars', 'special-reports', 'ercs')) ) { ?>
+	<?php if (is_singular( array('webinars', 'special-reports', 'ercs')) ) { ?>
 	<h4>Other Resources</h4>
 	<?php } else { ?>
-	<h4>Other Resources</h4>
+	<h4>Resources</h4>
 	<?php } ?>
 	<ul>
 
