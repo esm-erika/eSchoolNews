@@ -60,16 +60,28 @@ get_header(); ?>
 					
 					$file = get_field('download_file');
 
+			
+
+						
+
 							if( $file ){ ?>
+							
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
-							<?php } 
+							
+							<?php } elseif( get_field('third_party_file') ) { ?>
+
+								<a class="button radius small" href="<?php the_field('third_party_file'); ?>">Download Report</a>
+
+							<?php } else { ?>
+
+							<?php } ?>
 
 
-					custom_wp_link_pages();
+					<?php custom_wp_link_pages(); ?>
 
 
 					
-				} else {
+				<?php } else {
 				the_excerpt(); 
 				echo '<p><strong>You must be a registered user to view this resource.</strong></p><p>Login:</p>
 ';
