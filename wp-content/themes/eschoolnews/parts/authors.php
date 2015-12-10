@@ -5,8 +5,10 @@
 					</div>
 
 					<div class="small-12 large-10 columns author-bio-text">
-						<h5 class="left small-text-center">
-							<strong>About the Author:</strong> 
+						
+							<strong>About the Author:</strong> <br>
+
+							<h4 class="left small-text-center">
 
 							<?php if ( get_field('contributor_bio') || get_field( 'contributor_name') || get_field('contributor_email') ) { ?>
 							
@@ -14,10 +16,12 @@
 
 							<?php } else { ?>
 
-							<?php echo the_author_posts_link(); ?>
+							<?php //echo the_author_posts_link(); 
+								the_author();
+							?>
 
 							<?php } ?>
-						</h5>
+						</h4>
 
 						<?php if ( get_field('contributor_bio') || get_field( 'contributor_name') || get_field('contributor_email') ) { ?>
 
