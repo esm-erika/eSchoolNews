@@ -13,8 +13,12 @@ if(is_post_type_archive('webinars' )) {
 } ?>
 
 <article>
-	<h4>Resources</h4>
 
+	<?php if (is_singular( array('webinars', 'special-reports', 'ercs', 'whitepapers')) ) { ?>
+	<h4>Other Resources</h4>
+	<?php } else { ?>
+	<h4>Resources</h4>
+	<?php } ?>
 	<ul>
 
 		<?php while ( $resources->have_posts() ) : $resources -> the_post(); ?>
