@@ -16,7 +16,7 @@
 	<?php if(is_category()) {
 	echo '';
 } else {
-	echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Top ';
+	echo '<h1 class="section-title"><span><div class="icon topstories"></div> Top ';
 	single_cat_title(); 
 	echo ' Stories</span></h1>';
 } ?>

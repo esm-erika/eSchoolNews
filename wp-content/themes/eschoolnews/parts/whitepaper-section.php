@@ -45,7 +45,7 @@ $whitepapersection = 0;
 	single_cat_title();
 	echo ' White Papers</h4>';
 } else {
-	echo '<h1 class="section-title"><span><i class="fi-page"></i> White Papers</span></h1>';
+	echo '<h1 class="section-title"><span><div class="icon whitepapers"></div> White Papers</span></h1>';
 } ?>
 
 

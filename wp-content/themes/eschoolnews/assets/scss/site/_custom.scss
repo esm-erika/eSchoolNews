@@ -45,6 +45,42 @@ small {
 		font-size: 24px;
 		margin-bottom: 10px;
 	}
+
+	div.icon {
+		
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.resources {
+		padding-bottom: 24px;
+		background-image: url(../images/icon-resources.png);
+	}
+
+	.whitepapers {
+		padding-bottom: 40px;
+		background-image: url(../images/icon-whitepapers.png);
+	}
+
+	.topstories {
+		padding-bottom: 40px;
+		background-image: url(../images/icon-topstories.png);
+	}
+
+	.registration {
+		padding-bottom: 40px;
+		background-image: url(../images/icon-registration.png);
+	}
+
+	.specialreports {
+		padding-bottom: 40px;
+		background-image: url(../images/icon-specialreports.png);
+	}
+
+	.ercs {
+		padding-bottom: 40px;
+		background-image: url(../images/icon-ercs.png);
+	}
 }
 
 p.category  {

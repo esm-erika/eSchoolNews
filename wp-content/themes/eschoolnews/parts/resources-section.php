@@ -43,7 +43,7 @@ $resourcessection = 0;
 		echo ' Resources</h4>';
 		echo '<br/>';
 	} else {
-		echo '<h1 class="section-title"><span><i class="fi-page-filled"></i> Resources</span></h1>';
+		echo '<h1 class="section-title"><span><div class="icon resources"></div> Resources</span></h1>';
 	} ?>
 
 		

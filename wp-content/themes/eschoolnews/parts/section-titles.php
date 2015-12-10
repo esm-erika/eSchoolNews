@@ -20,26 +20,32 @@ if ( is_page()) {
 
 } elseif ( is_page('Resources')) {
 
+	echo '<div class="icon resources"></div>';
 	echo 'Resources';
 
 } elseif ( is_page('Top Stories')) {
 
+	echo '<div class="icon topstories"></div>';
 	echo 'Top Stories';
 
-} elseif ( is_page('Registration')) {
+} elseif ( is_page_template('page-registration.php')) {
 
+	echo '<div class="icon registration"></div>';
 	echo 'Registration';
 
 } elseif ( is_post_type_archive('special-reports')) {
 
+	echo '<div class="icon specialreports"></div>';
 	echo 'Special Reports';
 
 } elseif ( is_post_type_archive('ercs')) {
 
+	echo '<div class="icon ercs"></div>';
 	echo 'Education Resource Centers';
 
 } elseif ( is_post_type_archive('whitepapers')) {
 
+	echo '<div class="icon whitepapers"></div>';
 	echo 'White Papers';
 
 } elseif ( is_archive()) {

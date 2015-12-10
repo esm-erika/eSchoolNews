@@ -417,7 +417,7 @@ $formsuccess = validateint($_GET['success']);
 <?php global $theme_options, $suvi; ?>
 <div class="row">
 
-<?php get_template_part( 'parts/section-titles' ); ?>
+<h1 class="section-title"><span><div class="icon registration"></div> Registration</span></h1>
 	<div class="small-12 large-12 columns registration-form">
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
