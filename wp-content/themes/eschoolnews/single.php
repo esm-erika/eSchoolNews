@@ -94,7 +94,9 @@ include('single-coa.php');
 			} else { echo '<!-- esm_is_user_logged_in = '. esm_is_user_logged_in(). ' -->';
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
 				echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
+				
 				$astcset = $_GET['astc'];
+				echo '<!-- astcset='.$astcset.' -->';
 				if(filter_var($astcset, FILTER_VALIDATE_INT)){
 					if($astcset > 1){ $astpagecontent = 0; }
 				}
@@ -109,7 +111,7 @@ include('single-coa.php');
 			}
 
 				if($showpagecontent == 0){
-				echo string_limit_words(get_the_excerpt(), 35).'...</br>';
+				echo string_limit_words(get_the_excerpt(), 55).'...</br>';
 			?>
 
 <div style="border:#CCCCCC solid 1px; padding:10px;">
