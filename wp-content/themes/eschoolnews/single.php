@@ -90,10 +90,10 @@ include('single-coa.php');
     		endif;
 
 			if (esm_is_user_logged_in()){
-				$showpagecontent = 1;
-			} else { 
+				$showpagecontent = 1; 
+			} else { echo '<!-- esm_is_user_logged_in = '. esm_is_user_logged_in(). ' -->';
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
-				
+				echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
 				$astcset = $_GET['astc'];
 				if(filter_var($astcset, FILTER_VALIDATE_INT)){
 					if($astcset > 1){ $astpagecontent = 0; }
