@@ -75,7 +75,7 @@ include('single-coa.php');
 			<div class="entry-content">
 
 	
-			<?php if( get_field('remove_featured_image') ) :
+			<?php if( get_field('remove_featured_image') or $post_id < '161335' ) :
     
     			echo '';
 			 
