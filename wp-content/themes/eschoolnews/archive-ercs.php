@@ -78,16 +78,17 @@ if (false === ($local_box_cache) ){
 
 				
 				<article>
-					<?php 
+					<h4>
+						<a href="<?php the_permalink(); ?>">
+						<?php the_title();?>
+						</a>
+					</h4>
 
-					$image = get_field('masthead_image');
+					<?php if(get_field('masthead_text')){
 
-					if( !empty($image) ): ?>
+						echo the_field('masthead_text');
 
-					<a href="<?php the_permalink(); ?>">
-						<img src="<?php echo $image['url']; ?>" alt="<?php the_title();?>" />
-					</a>
-					<?php endif; ?>
+					} ?>
 				</article>
 				<br/>
 
