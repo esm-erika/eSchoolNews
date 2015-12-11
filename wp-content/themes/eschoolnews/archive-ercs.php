@@ -84,10 +84,12 @@ if (false === ($local_box_cache) ){
 
 					if( !empty($image) ): ?>
 
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>
-					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php echo $image['url']; ?>" alt="<?php the_title();?>" />
+					</a>
+					<?php endif; ?>
 				</article>
+				<br/>
 
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
@@ -99,9 +101,7 @@ if (false === ($local_box_cache) ){
 
 	<h4>Sponsors</h4>
 
-	
-
-			<ul class="medium-block-grid-2">
+			<ul class="small-block-grid-2 medium-block-grid-3">
 			 <?php foreach (get_terms('sponsor') as $cat) : ?>
 			 <li>
 				<?php if (function_exists('z_taxonomy_image_url')) { ?>
