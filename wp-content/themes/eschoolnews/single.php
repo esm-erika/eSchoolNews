@@ -88,6 +88,11 @@ include('single-coa.php');
 
     			
     		endif;
+			
+global $esmuser;
+echo '<pre>';
+print_r($esmuser);
+echo '</pre>';
 
 			if (esm_is_user_logged_in()){
 				$showpagecontent = 1; 
