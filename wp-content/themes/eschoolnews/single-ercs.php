@@ -10,6 +10,8 @@
 get_header(); 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
 if($template == 'single-olddata.php'){ 
+echo '<h1>Using COA</h1>';
+
 include('single-coa.php');
 }else{
 
