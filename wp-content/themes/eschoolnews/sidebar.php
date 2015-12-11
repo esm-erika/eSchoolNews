@@ -94,7 +94,7 @@
 			get_template_part( 'parts/ads/embeddedbanner' );
 		
 			//get_template_part( 'parts/sidebar/most-popular' );  	
-			get_template_part( 'parts/sidebar/resources' );
+			get_template_part( 'parts/sidebar/tag-cloud' );
 			//
 			get_template_part( 'parts/ads/embeddedbanner-2' );
 	}
