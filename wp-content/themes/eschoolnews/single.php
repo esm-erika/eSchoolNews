@@ -9,7 +9,14 @@
 if ( in_category( 'Leading the Digital Leap' )) { // can be removed with 4.4 update -- thank you ahead of public release documentation.
 	include('single-post-leading-the-digital-leap.php');
 } else {
-get_header(); ?>
+get_header();
+
+global $esmuser;
+echo '<pre>';
+print_r($esmuser);
+echo '</pre>';
+
+ ?>
 
 <div class="row top">
 	<div class="small-12 large-8 columns" role="main">
@@ -89,11 +96,6 @@ include('single-coa.php');
     			
     		endif;
 			
-global $esmuser;
-echo '<pre>';
-print_r($esmuser);
-echo '</pre>';
-
 			if (esm_is_user_logged_in()){
 				$showpagecontent = 1; 
 			} else { echo '<!-- esm_is_user_logged_in = '. esm_is_user_logged_in(). ' -->';
