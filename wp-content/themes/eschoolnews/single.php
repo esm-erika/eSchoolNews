@@ -9,7 +9,8 @@
 if ( in_category( 'Leading the Digital Leap' )) { // can be removed with 4.4 update -- thank you ahead of public release documentation.
 	include('single-post-leading-the-digital-leap.php');
 } else {
-get_header(); ?>
+get_header();
+ ?>
 
 <div class="row top">
 	<div class="small-12 large-8 columns" role="main">
@@ -88,12 +89,12 @@ include('single-coa.php');
 
     			
     		endif;
-
+			
 			if (esm_is_user_logged_in()){
 				$showpagecontent = 1; 
-			} else { echo '<!-- esm_is_user_logged_in = '. esm_is_user_logged_in(). ' -->';
+			} else { 
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
-				echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
+				//echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
 				
 				$astcset = $_GET['astc'];
 				echo '<!-- astcset='.$astcset.' -->';
@@ -101,7 +102,9 @@ include('single-coa.php');
 					if($astcset > 1){ $astpagecontent = 0; }
 				}
 				
-				if($astpagecontent == 0){
+				echo '<!-- astpagecontent='.$astpagecontent.' -->';
+				
+				if($astpagecontent === 0){
 					$showpagecontent = 0; 
 				} else if($reg_requirement == 1){
 					$showpagecontent = 0;
