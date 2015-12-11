@@ -32,67 +32,7 @@ if (false === ($local_box_cache) ){
 <?php get_template_part( 'parts/section-titles' ); ?>
 
 
-	<?php $featured = new WP_Query(array(
-		'post_type' => 'ercs',
-		'posts_per_page' => 1,
-					'tax_query' => array(
-						array(
-
-							'taxonomy' => 'status',
-							'field' => 'slug',
-							'terms' => 'active-erc',
-
-							),
-
-						),
-				)); ?>
-
-				<?php if ( $featured->have_posts() ) : ?>
-				
-				<div class="row">
-				
-
-				<div class="small-12 medium-12 columns" role="main">
-					<div class="featured-slick">
-
-							<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
-
-							<div>
-
-					<?php 
-
-					$image = get_field('masthead_image');
-
-					if( !empty($image) ): ?>
-
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>
-
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-					
-		
-			<?php if( get_field('masthead_text')): ?>
-			
-				<?php the_field('masthead_text') ?>
-			
-			<?php endif; ?>
-		
-
-
-	<h6 class="readmore"><a href="<?php the_permalink(); ?>">Read More &raquo;</a></h6>
-
-				</div>
-
-							<?php endwhile; ?>
-
-		<?php wp_reset_query(); ?>
-	</div>
-		<hr class="thick"/>
-</div>
-</div>
-
-<?php endif;?>
+	
 
 
 
@@ -128,7 +68,7 @@ if (false === ($local_box_cache) ){
 					$query2 = new WP_Query( $args ); ?>
 							
 
-				<ul class="medium-block-grid-2">
+				
 
 
 
@@ -137,7 +77,7 @@ if (false === ($local_box_cache) ){
 					$query2->the_post(); ?>
 
 				
-				<li>
+				<article>
 					<?php 
 
 					$image = get_field('masthead_image');
@@ -147,11 +87,11 @@ if (false === ($local_box_cache) ){
 					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 				<?php endif; ?>
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-				</li>
+				</article>
 
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-		</ul>
+		
 
 		<hr/>
 
