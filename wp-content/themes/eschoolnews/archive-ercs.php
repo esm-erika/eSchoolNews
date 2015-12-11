@@ -99,20 +99,18 @@ if (false === ($local_box_cache) ){
 
 	<h4>Sponsors</h4>
 
-			<?php
-				//list terms in a given taxonomy (useful as a widget for twentyten)
-				$taxonomy = 'sponsor';
-				$tax_terms = get_terms($taxonomy);
-				?>
+	
 
-				<ul>
-				
-				<?php
-				foreach ($tax_terms as $tax_term) {
-				echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
-				}
-				?>
-				</ul>
+			<ul class="medium-block-grid-2">
+			 <?php foreach (get_terms('sponsor') as $cat) : ?>
+			 <li>
+				<?php if (function_exists('z_taxonomy_image_url')) { ?>
+			 	<a href="<?php echo get_term_link($cat->slug, 'sponsor'); ?>"><img src="<?php echo z_taxonomy_image_url($cat->term_id); ?>" /></a>
+			 	<?php //echo $cat->name; ?>
+			 	<?php } ?>			 
+			 </li>
+			 <?php endforeach; ?>
+			</ul>
 	</div>
 			
 	
