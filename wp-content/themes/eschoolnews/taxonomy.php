@@ -33,7 +33,11 @@ get_header(); ?>
 
 	} else {
 
-		echo '<h4>' . the_title() . '</h4>';
+		echo '<h4><a href="';
+		get_permalink();
+		echo '">';  
+		the_title();
+		echo '</a></h4>';
 		echo '<hr>';
 
 	} ?>
