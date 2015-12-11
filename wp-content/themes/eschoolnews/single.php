@@ -104,7 +104,7 @@ include('single-coa.php');
 				
 				echo '<!-- astpagecontent='.$astpagecontent.' -->';
 				
-				if($astpagecontent == 0){
+				if($astpagecontent === 0){
 					$showpagecontent = 0; 
 				} else if($reg_requirement == 1){
 					$showpagecontent = 0;
