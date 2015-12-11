@@ -93,9 +93,8 @@
 	if( is_category()) { 
 			get_template_part( 'parts/ads/embeddedbanner' );
 		
-			//get_template_part( 'parts/sidebar/most-popular' );  	
-			get_template_part( 'parts/sidebar/tag-cloud' );
-			//
+			echo '<!-- this is a caregory -->';
+			
 			get_template_part( 'parts/ads/embeddedbanner-2' );
 	}
 	?>
