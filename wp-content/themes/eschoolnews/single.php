@@ -10,12 +10,6 @@ if ( in_category( 'Leading the Digital Leap' )) { // can be removed with 4.4 upd
 	include('single-post-leading-the-digital-leap.php');
 } else {
 get_header();
-
-global $esmuser;
-echo '<pre>';
-print_r($esmuser);
-echo '</pre>';
-
  ?>
 
 <div class="row top">
@@ -98,7 +92,7 @@ include('single-coa.php');
 			
 			if (esm_is_user_logged_in()){
 				$showpagecontent = 1; 
-			} else { echo '<!-- esm_is_user_logged_in = '. esm_is_user_logged_in(). ' -->';
+			} else { 
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
 				echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
 				
