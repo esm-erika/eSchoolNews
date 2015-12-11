@@ -48,7 +48,7 @@
 	?>
 
 	<?php 
-	if( is_post_type_archive( array('webinars', 'special-reports', 'ercs')) || is_search() || is_singular('whitepapers')) { 
+	if( is_post_type_archive( array('webinars', 'special-reports', 'ercs')) || is_search() || is_singular('whitepapers') || is_tax('sponsor')) { 
 		get_template_part( 'parts/sidebar/resources' );
 	} ?>
 
@@ -83,7 +83,7 @@
 	?>
 
 	<?php
-	if( is_post_type_archive('whitepapers' ) || is_tax()) { 
+	if( is_post_type_archive('whitepapers' ) || is_tax('company_categories')) { 
 		get_template_part( 'parts/sidebar/company-categories' );  	
 	}
 	?>
