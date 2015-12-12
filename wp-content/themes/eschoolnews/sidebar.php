@@ -11,7 +11,15 @@
 
 
 <aside id="sidebar" class="small-12 medium-4 columns">
-
+	<?php
+	if( is_category()) { 
+    echo ' 16 ';		
+	}
+	?>
+<?php
+if(is_archive())
+    echo ' 21 ';
+?>
 	<?php 
 
 	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
@@ -89,15 +97,7 @@
 	?>
 
 
-	<?php
-	if( is_category()) { 
-		
-	}
-	?>
-<?php
-if(is_archive())
-    echo ' 99 ';
-?>
+
 	<?php 
 
 	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
