@@ -52,6 +52,7 @@ if (false === ($local_box_cache) ){
 		echo '<a href="' . get_field('masthead_url') . '">'; 
 		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</a>';
+		echo '</div>';
 		} else {
 		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</div>';
