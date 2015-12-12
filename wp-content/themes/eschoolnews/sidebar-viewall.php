@@ -11,11 +11,11 @@
 
 
 <aside id="sidebar" class="small-12 medium-4 columns">
-view all
+
 	<?php
 			get_template_part( 'parts/ads/embeddedbanner' );
 		
-			get_template_part( 'parts/sidebar/popular-posts' ); 			
+			get_template_part( 'parts/popular-posts' ); 			
 			
 			get_template_part( 'parts/ads/embeddedbanner-2' );
 	 ?>
