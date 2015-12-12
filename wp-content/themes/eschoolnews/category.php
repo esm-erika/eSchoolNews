@@ -22,7 +22,7 @@ get_header(); ?>
 global $cat;
 
 if ( is_paged() ){
-
+global $page;
 ?>
 
 <div class="row">
