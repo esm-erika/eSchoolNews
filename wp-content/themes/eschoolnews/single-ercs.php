@@ -47,9 +47,13 @@ if (false === ($local_box_cache) ){
 	if( !empty($image) ) {
 
 		echo '<div class="small-12 medium-12 columns">';
+
+		if (get_field('masthead_url')) {
 		echo '<a href="' . get_field('masthead_url') . '">'; 
 		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</a>';
+		} else {
+		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</div>';
 
 	} elseif ($astused > 0){
