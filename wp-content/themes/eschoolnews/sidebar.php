@@ -13,7 +13,7 @@
 <aside id="sidebar" class="small-12 medium-4 columns">
 
 	<?php 
-
+echo '- 16 -';
 	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
 
 		echo '';
