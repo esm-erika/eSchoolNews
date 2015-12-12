@@ -25,7 +25,7 @@ get_header();
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
 <script>
-$(document).ready(function(){
+$(document).ready(function($){
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
 		$("h4#MobileTitle").hide();
