@@ -15,7 +15,7 @@
 	<?php
 			get_template_part( 'parts/ads/embeddedbanner' );
 		
-			get_template_part( 'parts/sidebar/most-popular' ); 			
+			//get_template_part( 'parts/sidebar/most-popular' ); 			
 			
 			get_template_part( 'parts/ads/embeddedbanner-2' );
 	 ?>
