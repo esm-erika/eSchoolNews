@@ -108,8 +108,6 @@ $cat_name = $cat;
 
 $box_qt = 'esm_c_catva_a'.$ast."c".$astc.'c'.$cat_name;
 
-echo '$box_qt =' . $box_qt;
-
 $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 	
 $local_box_cache = get_transient( $box_q );
