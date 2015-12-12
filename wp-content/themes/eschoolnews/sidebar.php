@@ -93,7 +93,7 @@
 	if( is_category()) { 
 			get_template_part( 'parts/ads/embeddedbanner' );
 		
-			echo '<!-- this is a caregory -->';
+			
 			
 			get_template_part( 'parts/ads/embeddedbanner-2' );
 	}

@@ -24,7 +24,12 @@ get_header();
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
-<script>
+
+
+
+</div>
+<script type="text/javascript">
+jQuery.noConflict()(function ($) { // this was missing for me
 $(document).ready(function(){
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -91,12 +96,9 @@ $(document).ready(function(){
 		$("h4#TechnologiesTitle").show();		
 
     });
+	});
 });
 </script>
-
-
-</div>
-
 <div class="row">
 	<div class="small-12 medium-12 columns">
 		
