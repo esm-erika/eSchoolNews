@@ -11,8 +11,8 @@
 
 
 <aside id="sidebar" class="small-12 medium-4 columns">
-
-	<?php 
+view all
+	<?php
 			get_template_part( 'parts/ads/embeddedbanner' );
 		
 			get_template_part( 'parts/sidebar/popular-posts' ); 			
