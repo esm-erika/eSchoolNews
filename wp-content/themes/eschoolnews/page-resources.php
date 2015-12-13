@@ -63,18 +63,40 @@ if (false === ($local_box_cache) ){
 
 
 		<?php // The Query
-		$args = array(
-			'post_type' => array('ercs','special-reports','whitepapers'),
-			'posts_per_page' => '6'
-					//'order'
-			);
+		// $args = array(
+		// 	'post_type' => array('ercs','special-reports','whitepapers'),
+		// 	'posts_per_page' => '6'
+		// 			//'order'
+		// 	);
 
 
-		$query = new WP_Query( $args );
+		// $query = new WP_Query( $args );
 
 
-		while ( $query->have_posts() ) :
-			$query->the_post(); ?>
+		// while ( $query->have_posts() ) :
+		// 	$query->the_post(); 
+
+		$ercs = get_posts(array(
+			'post_type' => 'ercs',
+			'status' => 'active-erc'
+	 		));
+		//second query
+		$specialreports = get_posts(array(
+				'post_type' => 'special-reports'
+		 		));
+		$whitepapers = get_posts(array(
+				'post_type' => 'whitepapers'
+		 		));
+
+		$resources = array_merge( $ercs, $specialreports, $whitepapers ); //combine queries
+
+		// $resources = array(
+		// 	'posts_per_page' => '6'
+		// );
+
+		foreach ( $resources as $post ) : setup_postdata( $post ); 
+
+		?>
 
 		<article class="row">
 
@@ -101,7 +123,7 @@ if (false === ($local_box_cache) ){
 			</header>
 		</article>
 		<br/>
-		<?php endwhile; 
+		<?php endforeach; 
 		wp_reset_postdata(); ?>
 
 	</div>
