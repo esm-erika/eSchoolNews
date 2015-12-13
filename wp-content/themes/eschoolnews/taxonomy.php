@@ -32,6 +32,12 @@ line 31
 
 	<?php 
 if ( have_posts() ) { echo 'line 34';
+
+
+echo '<pre>';
+print_r($post);
+echo '</pre>';
+
 	while ( have_posts() ) { echo 'line 35';
 		the_post(); 
 		//
