@@ -125,11 +125,14 @@ $(document).ready(function(){
 
 <section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
-		    <h4><div id="AllTitle">All White Papers</div>
+		    <h4>
+            <div id="AllTitle">All White Papers</div>
 		    <div id="CurriculumTitle" style="display:none;">Curriculum</div>
 		    <div id="DigitalTitle" style="display:none;">Digital</div>
-		    <div id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</div>
-            <div id="TechnologiesTitle" style="display:none;">Technologies</div></h4>
+		   
+            <div id="TechnologiesTitle" style="display:none;">Technologies</div>
+             <div id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</div>
+             </h4>
 
 		    <br/>
 
