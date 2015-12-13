@@ -188,13 +188,15 @@ if(!empty($collist2) or $iserc == 1){
 		$Col_offset = get_post_meta($post_id, '_Col'.$row.'_offset', true);
 	
 		if ($Col_style == 'lead'){ 
-			box_lead_300($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
+			//box_lead_300($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
+			box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 		} /* else if($Col_style == 'rota') { 
 			box_rota_300($Col_qty,$Col_offset,$astf,$astc,$Col_cat);
 		} else if($Col_style == 'rotp') {
 			box_rotp_300($Col_qty,$Col_offset,$astf,$astc,$Col_cat);
 		} */ else if($Col_style == 'art' || 'rota' || 'rotp') { 
-			box_art_300($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
+			//box_art_300($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title,$astf,$astc);
+			box_art($Col_qty,$Col_rotate,$Col_showthumb,$Col_cat,$Col_offset,$Col_title, $astf, $astc);
 		} else if($Col_style == 'cont') {
 			//if (have_posts()) : while (have_posts()) : the_post();
 			//	echo '<div class="extracontent">';
@@ -217,7 +219,7 @@ if(!empty($collist1) or $iserc == 1){ echo '</div>'; /* close row */ }
 
 if ( $iserc == 1 ) { 
 echo '<div class="row">';
- get_template_part( 'parts/ads/ercbottom' ); 
+ //get_template_part( 'parts/ads/ercbottom' ); 
 echo '</div>';
 
  }
