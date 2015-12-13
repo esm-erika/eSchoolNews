@@ -31,17 +31,17 @@ get_header();
 <script type="text/javascript">
 jQuery.noConflict()(function ($) { // this was missing for me
 $(document).ready(function(){
-		$("span#CurriculumTitle").hide();
-		$("span#DigitalTitle").hide();
-		$("span#MobileTitle").hide();
-		$("span#TechnologiesTitle").hide();	
+		$("div#CurriculumTitle").hide();
+		$("div#DigitalTitle").hide();
+		$("div#MobileTitle").hide();
+		$("div#TechnologiesTitle").hide();	
 	$("#all").click(function(){
         $("div.row.all").show();
-		$("span#AllTitle").show();
-		$("span#CurriculumTitle").hide();
-		$("span#DigitalTitle").hide();
-		$("span#MobileTitle").hide();
-		$("span#TechnologiesTitle").hide();		
+		$("div#AllTitle").show();
+		$("div#CurriculumTitle").hide();
+		$("div#DigitalTitle").hide();
+		$("div#MobileTitle").hide();
+		$("div#TechnologiesTitle").hide();		
 		
     });
 
@@ -50,11 +50,11 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
         $("div.row.curriculum-whitepapers").show();
-		$("span#AllTitle").hide();
-		$("span#CurriculumTitle").show();
-		$("span#DigitalTitle").hide();
-		$("span#MobileTitle").hide();
-		$("span#TechnologiesTitle").hide();		
+		$("div#AllTitle").hide();
+		$("div#CurriculumTitle").show();
+		$("div#DigitalTitle").hide();
+		$("div#MobileTitle").hide();
+		$("div#TechnologiesTitle").hide();		
 
     });
 
@@ -63,11 +63,11 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.digital-whitepapers").show();
-		$("span#AllTitle").hide();
-		$("span#CurriculumTitle").hide();
-		$("span#DigitalTitle").show();
-		$("span#MobileTitle").hide();
-		$("span#TechnologiesTitle").hide();		
+		$("div#AllTitle").hide();
+		$("div#CurriculumTitle").hide();
+		$("div#DigitalTitle").show();
+		$("div#MobileTitle").hide();
+		$("div#TechnologiesTitle").hide();		
 
     });
 
@@ -76,11 +76,11 @@ $(document).ready(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").show();
-		$("span#AllTitle").hide();
-		$("span#CurriculumTitle").hide();
-		$("span#DigitalTitle").hide();
-		$("span#MobileTitle").show();
-		$("span#TechnologiesTitle").hide();		
+		$("div#AllTitle").hide();
+		$("div#CurriculumTitle").hide();
+		$("div#DigitalTitle").hide();
+		$("div#MobileTitle").show();
+		$("div#TechnologiesTitle").hide();		
 
     });	
     
@@ -89,11 +89,11 @@ $(document).ready(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
-		$("span#AllTitle").hide();
-		$("span#CurriculumTitle").hide();
-		$("span#DigitalTitle").hide();
-		$("span#MobileTitle").hide();
-		$("span#TechnologiesTitle").show();		
+		$("div#AllTitle").hide();
+		$("div#CurriculumTitle").hide();
+		$("div#DigitalTitle").hide();
+		$("div#MobileTitle").hide();
+		$("div#TechnologiesTitle").show();		
 
     });
 	});
@@ -125,11 +125,11 @@ $(document).ready(function(){
 
 <section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
-		    <h4><span id="AllTitle">All White Papers</span>
-		    <span id="CurriculumTitle" style="display:none;">Curriculum</span>
-		    <span id="DigitalTitle" style="display:none;">Digital</span>
-		    <span id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</span>
-            <span id="TechnologiesTitle" style="display:none;">Technologies</span></h4>
+		    <h4><div id="AllTitle">All White Papers</div>
+		    <div id="CurriculumTitle" style="display:none;">Curriculum</div>
+		    <div id="DigitalTitle" style="display:none;">Digital</div>
+		    <div id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</div>
+            <div id="TechnologiesTitle" style="display:none;">Technologies</div></h4>
 
 		    <br/>
 
