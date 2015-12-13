@@ -8,12 +8,10 @@
  */
 
 get_header(); 
-
-$cat_name = get_category(get_query_var('cat'))->term_id;
-echo '<h1>'.$cat_name.'</h1>';
-
-					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
-					foreach ( $terms as $term ) { echo " ".$term->slug ; } 
+echo ''11111111111111111;
+$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
+print_r($terms);
+foreach ( $terms as $term ) { echo " ".$term->slug ; } 
 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
 if($template == 'single-olddata.php'){ 
