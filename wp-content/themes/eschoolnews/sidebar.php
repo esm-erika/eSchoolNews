@@ -84,7 +84,8 @@
 
 	<?php
 	if( is_post_type_archive('whitepapers' ) || is_tax('company_categories')) { 
-		get_template_part( 'parts/sidebar/company-categories' );  	
+		get_template_part( 'parts/sidebar/company-categories' );
+	
 	}
 	?>
 

@@ -29,6 +29,8 @@ get_header(); ?>
 
 	if (is_tax('company_categories')) {
 
+		echo 'test';
+
 		get_template_part( 'parts/whitepapers-modal' );
 
 	} else {
