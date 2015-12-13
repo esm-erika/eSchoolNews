@@ -8,11 +8,16 @@
  */
 
 get_header(); 
-$template = get_post_meta($post->ID,'_wp_post_template',true);
-if($template == 'single-olddata.php'){ 
-echo '<h1>Using COA</h1>';
 
-include('single-coa.php');
+$terms = wp_get_post_terms( $post->ID, 'status' );
+foreach ( $terms as $term ) { echo "<!-- ".$term->slug .' -->'; if($term->slug == 'inactive-erc'){ $isinactive = 1;} } 
+
+$template = get_post_meta($post->ID,'_wp_post_template',true);
+if($template == 'single-olddata.php' or $isinactive == 1){ 
+
+
+include('single-olderc.php');
+
 }else{
 
 ?>

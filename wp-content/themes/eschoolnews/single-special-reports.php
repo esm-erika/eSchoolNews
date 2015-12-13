@@ -68,9 +68,9 @@ get_header(); ?>
 							
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
 							
-							<?php } elseif( get_field('third_party_file') ) { ?>
+							<?php } elseif( get_field('WP URL') ) { ?>
 
-								<a class="button radius small" href="<?php the_field('third_party_file'); ?>">Download Report</a>
+								<a class="button radius small" href="<?php the_field('WP URL'); ?>">Download Report</a>
 
 							<?php } else { ?>
 
