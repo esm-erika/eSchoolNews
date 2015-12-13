@@ -103,11 +103,11 @@ $(document).ready(function(){
 	<div class="small-12 medium-12 columns">
 		
 		<ul class="stack-for-small button-group radius">
-			<li><a href="" class="button" id="all">All White Papers</a></li>
-			<li><a href="" class="button" id="curriculum">Curriculum</a></li>
-			<li><a href="" class="button" id="digital">Digital</a></li>
-			<li><a href="" class="button" id="mobile">Mobile &amp; Online Learning</a></li>
-			<li><a href="" class="button" id="technologies">Technologies</a></li>
+			<li><a href="#AllTitle" class="button" id="all">All White Papers</a></li>
+			<li><a href="#CurriculumTitle" class="button" id="curriculum">Curriculum</a></li>
+			<li><a href="#DigitalTitle" class="button" id="digital">Digital</a></li>
+			<li><a href="#MobileTitle" class="button" id="mobile">Mobile &amp; Online Learning</a></li>
+			<li><a href="#TechnologiesTitle" class="button" id="technologies">Technologies</a></li>
 		</ul>
 
 	</div>
@@ -132,6 +132,7 @@ $(document).ready(function(){
             <h4 id="TechnologiesTitle" style="display:none;">Technologies</h4>
 
 		    <br/>
+           
 		    <?php
 
 				// The Query
