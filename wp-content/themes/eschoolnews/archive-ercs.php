@@ -101,17 +101,40 @@ if (false === ($local_box_cache) ){
 		<div class="erc-sponsors">
 
 	<h4>Sponsors</h4>
+ <ul class="medium-block-grid-3">
 
-			<ul class="small-block-grid-2 medium-block-grid-3">
-			 <?php foreach (get_terms('sponsor') as $cat) : ?>
-			 <li>
-				<?php if (function_exists('z_taxonomy_image_url')) { ?>
-			 	<a href="<?php echo get_term_link($cat->slug, 'sponsor'); ?>"><img src="<?php echo z_taxonomy_image_url($cat->term_id); ?>" /></a>
-			 	<?php //echo $cat->name; ?>
-			 	<?php } ?>			 
-			 </li>
-			 <?php endforeach; ?>
-			</ul>
+<?php
+
+        $libargs=array(  
+            'hide_empty'        => 0,  
+            'parent'        => 0,  
+            'taxonomy'      => 'sponsor');  
+
+            $libcats=get_categories($libargs);  
+
+            foreach($libcats as $lc){ 
+                $termlink = get_term_link( $lc->slug, 'sponsor' ); 
+
+                $image = get_field('sponsor_image', 'sponsor_'.$lc->term_id);
+
+        ?>
+
+       
+
+           <li> <a class="single-library-cat" href="<?php echo $termlink; ?>">
+
+               	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                <?php //echo $lc->name; ?>
+            </a></li>
+
+          
+
+        <?php } ?>
+
+
+			 </ul>
+
 	</div>
 			
 	
