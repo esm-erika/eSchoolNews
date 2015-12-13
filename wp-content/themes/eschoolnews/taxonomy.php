@@ -27,13 +27,28 @@ get_header(); ?>
 
 	<?php
 
-	if (is_tax('company_categories')) {
+	if (is_tax('company_categories')) { ?>
 
-		echo 'test';
 
+	<?php 
+if ( have_posts() ) {
+	while ( have_posts() ) {
+		the_post(); 
+		//
 		get_template_part( 'parts/whitepapers-modal' );
+		//
+	} // end while
+} // end if
+?>
 
-	} else {
+		
+
+		<?php  ?>
+
+	
+
+
+	<?php } else {
 
 		echo '<h4><a href="';
 		get_permalink();
