@@ -27,9 +27,7 @@ get_header(); ?>
 
 	<?php
 
-	if ($post->post_type == "whitepapers") {
-
-		echo 'test';
+	if (is_tax('company_categories')) {
 
 		get_template_part( 'parts/whitepapers-modal' );
 
