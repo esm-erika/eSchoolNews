@@ -11,7 +11,9 @@ get_header();
 
 $cat_name = get_category(get_query_var('cat'))->term_id;
 echo '<h1>'.$cat_name.'</h1>';
-print_r($post);
+
+					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
+					foreach ( $terms as $term ) { echo " ".$term->slug ; } 
 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
 if($template == 'single-olddata.php'){ 
