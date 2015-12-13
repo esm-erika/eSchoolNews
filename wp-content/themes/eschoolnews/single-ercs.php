@@ -10,10 +10,10 @@
 get_header(); 
 
 $terms = wp_get_post_terms( $post->ID, 'status' );
-foreach ( $terms as $term ) { echo "!-- ".$term->slug .' -->'; } 
+foreach ( $terms as $term ) { echo "<!-- ".$term->slug .' -->'; if($term->slug == 'inactive-erc'){ $isinactive = 1;} } 
 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
-if($template == 'single-olddata.php'){ 
+if($template == 'single-olddata.php' or $isinactive == 1){ 
 
 
 include('single-olderc.php');
