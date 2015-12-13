@@ -33,7 +33,29 @@ $resourcessection = 0;
 	 		));
 	$resources = array_merge( $ercs, $specialreports ); //combine queries
 
-	foreach ( $resources as $post ) : setup_postdata( $post ); ?>
+	//$postids = array();
+
+	//foreach( $resources as $item ) {
+	//	$postids[]=$item->ID; //create a new query only of the post ids
+	//}
+
+	//$uniqueposts = array_unique($postids); //remove duplicate post ids
+
+	//$posts = get_posts(array(
+	//		'post__in' => $resources, //new query of only the unique post ids on the merged queries from above
+	// 		));
+	//foreach( $posts as $post ) :
+	//setup_postdata($post);
+
+	// $stuff = get_posts(array(
+	// 	'post_type' => $resources,
+	// 	'orderby' => 'date'
+
+	// 	));
+
+	foreach ( $resources as $post ) : setup_postdata( $post ); 
+
+ 	?>
 
 	<?php $resourcessection = 1; ?>
 		
