@@ -31,17 +31,17 @@ get_header();
 <script type="text/javascript">
 jQuery.noConflict()(function ($) { // this was missing for me
 $(document).ready(function(){
-		$("m#CurriculumTitle").hide();
-		$("m#DigitalTitle").hide();
-		$("m#MobileTitle").hide();
-		$("m#TechnologiesTitle").hide();	
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
         $("div.row.all").show();
-		$("m#AllTitle").show();
-		$("m#CurriculumTitle").hide();
-		$("m#DigitalTitle").hide();
-		$("m#MobileTitle").hide();
-		$("m#TechnologiesTitle").hide();		
+		$("h4#AllTitle").show();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();		
 		
     });
 
@@ -50,11 +50,11 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
         $("div.row.curriculum-whitepapers").show();
-		$("m#AllTitle").hide();
-		$("m#CurriculumTitle").show();
-		$("m#DigitalTitle").hide();
-		$("m#MobileTitle").hide();
-		$("m#TechnologiesTitle").hide();		
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").show();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();		
 
     });
 
@@ -63,11 +63,11 @@ $(document).ready(function(){
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.digital-whitepapers").show();
-		$("m#AllTitle").hide();
-		$("m#CurriculumTitle").hide();
-		$("m#DigitalTitle").show();
-		$("m#MobileTitle").hide();
-		$("m#TechnologiesTitle").hide();		
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").show();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").hide();		
 
     });
 
@@ -76,11 +76,11 @@ $(document).ready(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").show();
-		$("m#AllTitle").hide();
-		$("m#CurriculumTitle").hide();
-		$("m#DigitalTitle").hide();
-		$("m#MobileTitle").show();
-		$("m#TechnologiesTitle").hide();		
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").show();
+		$("h4#TechnologiesTitle").hide();		
 
     });	
     
@@ -89,11 +89,11 @@ $(document).ready(function(){
 		$("div.row.digital-whitepapers").hide();
 		$("div.row.mobile-online-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
-		$("m#AllTitle").hide();
-		$("m#CurriculumTitle").hide();
-		$("m#DigitalTitle").hide();
-		$("m#MobileTitle").hide();
-		$("m#TechnologiesTitle").show();		
+		$("h4#AllTitle").hide();
+		$("h4#CurriculumTitle").hide();
+		$("h4#DigitalTitle").hide();
+		$("h4#MobileTitle").hide();
+		$("h4#TechnologiesTitle").show();		
 
     });
 	});
@@ -125,14 +125,11 @@ $(document).ready(function(){
 
 <section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
-		    <h4>
-            <m id="AllTitle">All White Papers</m>
-		    <m id="CurriculumTitle" style="display:none;">Curriculum</m>
-		    <m id="DigitalTitle" style="display:none;">Digital</m>
-		   
-            <m id="TechnologiesTitle" style="display:none;">Technologies</m>
-             <m id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</m>
-             </h4>
+		    <h4 id="AllTitle">All White Papers</h4>
+		    <h4 id="CurriculumTitle" style="display:none;">Curriculum</h4>
+		    <h4 id="DigitalTitle" style="display:none;">Digital</h4>
+		    <h4 id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</h4>
+            <h4 id="TechnologiesTitle" style="display:none;">Technologies</h4>
 
 		    <br/>
 
@@ -151,7 +148,7 @@ $(document).ready(function(){
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div class="panel row all<?php 
+					<div style="margin-bottom:8px;" class="panel row all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
 
@@ -210,7 +207,7 @@ $(document).ready(function(){
 					</div>
                     </div>
 
-                    <br/>
+                   
 
 					
 					
