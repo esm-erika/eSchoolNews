@@ -10,6 +10,8 @@
 get_header(); 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
 if($template == 'single-olddata.php'){ 
+$cat_name = get_category(get_query_var('cat'))->term_id;
+echo $cat_name;
 
 include('single-olderc.php');
 

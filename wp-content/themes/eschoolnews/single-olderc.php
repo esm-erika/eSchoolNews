@@ -17,7 +17,7 @@ echo '<h1 class="section-title"><span>';
 echo the_title();
 echo '</span></h1>';
 
-echo "<p>We're sorry this Educator Resource Center is no longer available.  Below are related articles you may find useful.</p>";
+
 
 //$astused = get_post_meta($post_id, '_wp_esmad_template', true);
 
@@ -54,7 +54,7 @@ $iserc = 1;
 $toc = '';
 echo '<div class="row">';
 // get_template_part( 'parts/ads/erctop' ); 
- 
+ echo "<p><strong>We're sorry this Educator Resource Center is no longer available.  Below are related articles you may find useful.</strong></p>";
 	$content_post = get_post($post_id);
 	$content = $content_post->post_content;
 	$content = apply_filters('the_content', $content);
