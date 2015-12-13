@@ -23,11 +23,13 @@ get_header(); ?>
 			<?php get_template_part( 'parts/section-titles' ); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-8 columns" role="main">
 
 	<?php
 
 	if ($post->post_type == "whitepapers") {
+
+		echo 'test';
 
 		get_template_part( 'parts/whitepapers-modal' );
 
