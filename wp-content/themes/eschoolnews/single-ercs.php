@@ -8,10 +8,9 @@
  */
 
 get_header(); 
-echo '22222';
+
 $terms = wp_get_post_terms( $post->ID, 'status' );
-print_r($terms);
-foreach ( $terms as $term ) { echo " ".$term->slug ; } 
+foreach ( $terms as $term ) { echo "!-- ".$term->slug .' -->'; } 
 
 $template = get_post_meta($post->ID,'_wp_post_template',true);
 if($template == 'single-olddata.php'){ 
