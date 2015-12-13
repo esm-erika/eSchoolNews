@@ -1,4 +1,4 @@
-<?php if ( is_tax() ) {
+<?php if ( is_tax('company_categories') ) {
 	echo '<div class="text-center">';
 	echo '<a class="button" href="' . site_url('/') . 'whitepapers">&laquo; Back to All White Papers</a>';
 	echo '</div>';
