@@ -8,7 +8,7 @@
  */
 
 get_header(); 
-echo ''11111111111111111;
+echo '11111111111111111';
 $terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 print_r($terms);
 foreach ( $terms as $term ) { echo " ".$term->slug ; } 
