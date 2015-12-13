@@ -55,11 +55,11 @@ $toc = '';
 echo '<div class="row">';
 // get_template_part( 'parts/ads/erctop' ); 
  echo "<p><strong>We're sorry this Educator Resource Center is no longer available.  Below are related articles you may find useful.</strong></p>";
-	$content_post = get_post($post_id);
-	$content = $content_post->post_content;
-	$content = apply_filters('the_content', $content);
-	$content = str_replace(']]>', ']]&gt;', $content);
-	echo $content;
+	//$content_post = get_post($post_id);
+	//$content = $content_post->post_content;
+	//$content = apply_filters('the_content', $content);
+	//$content = str_replace(']]>', ']]&gt;', $content);
+	//echo $content;
  
  
 echo '</div>';
