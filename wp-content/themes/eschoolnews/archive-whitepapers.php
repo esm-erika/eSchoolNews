@@ -31,68 +31,68 @@ get_header();
 <script type="text/javascript">
 jQuery.noConflict()(function ($) { // this was missing for me
 $(document).ready(function(){
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();	
+		$("h4#CurriculumTitle").css('display', 'none');
+		$("h4#DigitalTitle").css('display', 'none');
+		$("h4#MobileTitle").css('display', 'none');
+		$("h4#TechnologiesTitle").css('display', 'none');	
 	$("#all").click(function(){
         $("div.row.all").show();
 		$("h4#AllTitle").show();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();		
+		$("h4#CurriculumTitle").css('display', 'none');
+		$("h4#DigitalTitle").css('display', 'none');
+		$("h4#MobileTitle").css('display', 'none');
+		$("h4#TechnologiesTitle").css('display', 'none');		
 		
     });
 
 	$("#curriculum").click(function(){
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
+		$("div.row.digital-whitepapers").css('display', 'none');
+		$("div.row.technologies-whitepapers").css('display', 'none');
+		$("div.row.mobile-online-whitepapers").css('display', 'none');
         $("div.row.curriculum-whitepapers").show();
-		$("h4#AllTitle").hide();
+		$("h4#AllTitle").css('display', 'none');
 		$("h4#CurriculumTitle").show();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();		
+		$("h4#DigitalTitle").css('display', 'none');
+		$("h4#MobileTitle").css('display', 'none');
+		$("h4#TechnologiesTitle").css('display', 'none');		
 
     });
 
 	$("#digital").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
+        $("div.row.curriculum-whitepapers").css('display', 'none');
+		$("div.row.technologies-whitepapers").css('display', 'none');
+		$("div.row.mobile-online-whitepapers").css('display', 'none');
 		$("div.row.digital-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
+		$("h4#AllTitle").css('display', 'none');
+		$("h4#CurriculumTitle").css('display', 'none');
 		$("h4#DigitalTitle").show();
-		$("h4#MobileTitle").hide();
-		$("h4#TechnologiesTitle").hide();		
+		$("h4#MobileTitle").css('display', 'none');
+		$("h4#TechnologiesTitle").css('display', 'none');		
 
     });
 
 	$("#mobile").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
+        $("div.row.curriculum-whitepapers").css('display', 'none');
+		$("div.row.digital-whitepapers").css('display', 'none');
+		$("div.row.technologies-whitepapers").css('display', 'none');
 		$("div.row.mobile-online-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
+		$("h4#AllTitle").css('display', 'none');
+		$("h4#CurriculumTitle").css('display', 'none');
+		$("h4#DigitalTitle").css('display', 'none');
 		$("h4#MobileTitle").show();
-		$("h4#TechnologiesTitle").hide();		
+		$("h4#TechnologiesTitle").css('display', 'none');		
 
     });	
     
 	$("#technologies").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
+        $("div.row.curriculum-whitepapers").css('display', 'none');
+		$("div.row.digital-whitepapers").css('display', 'none');
+		$("div.row.mobile-online-whitepapers").css('display', 'none');
 		$("div.row.technologies-whitepapers").show();
-		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
-		$("h4#MobileTitle").hide();
+		$("h4#AllTitle").css('display', 'none');
+		$("h4#CurriculumTitle").css('display', 'none');
+		$("h4#DigitalTitle").css('display', 'none');
+		$("h4#MobileTitle").css('display', 'none');
 		$("h4#TechnologiesTitle").show();		
 
     });
