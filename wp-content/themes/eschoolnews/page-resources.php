@@ -89,7 +89,9 @@ if (false === ($local_box_cache) ){
 		 		));
 
 		$resources = array_merge( $ercs, $specialreports, $whitepapers ); //combine queries
+echo '<pre>';
 		print_r($resources);
+echo '</pre>';		
 		// $resources = array(
 		// 	'posts_per_page' => '6'
 		// );
