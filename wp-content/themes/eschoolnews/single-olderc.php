@@ -11,7 +11,7 @@ require_once( 'library/boxes.php' );
 <?php //set variables for testing and to allow flexibility later on...
 
 $post_id = $post->ID;
-$astused = get_post_meta($post_id, '_wp_esmad_template', true);
+$astused = 1; // use house ads get_post_meta($post_id, '_wp_esmad_template', true);
 
 echo '<h1 class="section-title"><span>';
 echo the_title();
