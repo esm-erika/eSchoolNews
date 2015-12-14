@@ -29,7 +29,20 @@
 
 					<?php if ($post->post_type == "post") { ?>
 
-					<div class="small-caps">By <?php the_author(); ?></div>
+					<div class="small-caps">
+					By 
+					<?php  if( get_field('Alt Author Read More Name')) {
+
+						the_field('Alt Author Read More Name');
+
+					} else {
+
+						the_author();
+
+					} ?>
+
+				</div>
+					
 					<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>	
 
 					<?php } ?>	
