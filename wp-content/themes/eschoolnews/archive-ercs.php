@@ -60,17 +60,9 @@ if (false === ($local_box_cache) ){
 
 							),
 
-						),
+						));
 
-					
-					);
-
-					$query2 = new WP_Query( $args ); ?>
-							
-
-				
-
-
+				$query2 = new WP_Query( $args ); ?>
 
 				<?php // The Loop
 				while ( $query2->have_posts() ) :

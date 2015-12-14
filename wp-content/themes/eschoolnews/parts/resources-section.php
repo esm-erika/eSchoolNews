@@ -18,31 +18,30 @@ $resourcessection = 0;
 		echo '<h1 class="section-title"><span><div class="icon resources"></div> Resources</span></h1>';
 	} ?>
 
-<?php // The Query
+<?php
 
-	$post_types = get_post_types('special-reports','ercs');
+	$args = array(
+		'post_type' => array('special-reports','ercs'),
+		'posts_per_page' => -1,
+		'tax_query' => array(
+		'relation' => 'OR',
+			array(
+				'taxonomy' => 'status',
+				'field' => 'slug',
+				'terms' => 'active-erc'
+			),
+			// array(
+			// 	'taxonomy' => 'eventtags',
+			// 	'field' => 'slug',
+			// 	'terms' => 'favourite'
+			// )
+		)
+	);
 
-//if( is_home() || is_front_page()) {
+$resources = new WP_Query( $args );
 
-	//first query
-	$ercs = get_posts(array(
-			'post_type' => 'ercs',
-			'status' => 'active-erc'
-	 		));
-	//second query
-	$specialreports = get_posts(array(
-			'post_type' => 'special-reports'
-	 		));
-	$resources = array_merge( $ercs, $specialreports ); //combine queries
-
-	// $resources = array(
-	// 	'posts_per_page' => '6'
-	// );
-
-	foreach ( $resources as $post ) : setup_postdata( $post ); 
-
- 	?>
-
+?>
+<?php while ( $resources->have_posts() ) : $resources->the_post(); ?>
 	<?php $resourcessection = 1; ?>
 		
 
@@ -78,7 +77,7 @@ $resourcessection = 0;
 
 
 
-	<?php endforeach; 
+	<?php endwhile; 
 	wp_reset_postdata();?>
 
 

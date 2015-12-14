@@ -60,21 +60,7 @@ if (false === ($local_box_cache) ){
 		<h4>New Resources</h4>
 		<br/>
 
-
-
 		<?php // The Query
-		// $args = array(
-		// 	'post_type' => array('ercs','special-reports','whitepapers'),
-		// 	'posts_per_page' => '6'
-		// 			//'order'
-		// 	);
-
-
-		// $query = new WP_Query( $args );
-
-
-		// while ( $query->have_posts() ) :
-		// 	$query->the_post(); 
 
 		$ercs = get_posts(array(
 			'post_type' => 'ercs',
@@ -89,20 +75,6 @@ if (false === ($local_box_cache) ){
 		 		));
 
 		$resources = array_merge( $ercs, $specialreports, $whitepapers ); //combine queries
-
-echo '<pre>';
-print_r($resources);
-echo '</pre>';
-/*		usort($resources, function ($item1, $item2) {
-			if ($item1['price'] == $item2['price']) return 0;
-			return $item1['price'] < $item2['price'] ? -1 : 1;
-		}); */
-
-
-
-		// $resources = array(
-		// 	'posts_per_page' => '6'
-		// );
 
 		foreach ( $resources as $post ) : setup_postdata( $post ); 
 
