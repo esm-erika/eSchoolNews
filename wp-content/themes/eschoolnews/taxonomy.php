@@ -137,6 +137,8 @@ if ( have_posts() ) {
 					</div>
 				</article>
 
+				<hr/>
+
 	
 
 
