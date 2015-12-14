@@ -28,22 +28,86 @@ get_header(); ?>
 	<?php
 
 	if (is_tax('company_categories')) { ?>
-line 31
+
 
 	<?php 
-if ( have_posts() ) { echo 'line 34';
-
-
-echo '<pre>';
-print_r($post);
-echo '</pre>';
-
-	while ( have_posts() ) { echo 'line 35';
+if ( have_posts() ) {
+/*	while ( have_posts() ) {
 		the_post(); 
 		//
 		get_template_part( 'parts/whitepapers-modal' );
 		//
-	} // end while
+	} // end while */
+	
+ while ( $query->have_posts() ) :
+					$query->the_post(); ?>
+
+					<div style="margin-bottom:8px;" class="panel row all<?php 
+					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
+					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
+
+
+						
+							<?php 
+
+							if (has_post_thumbnail()) { ?>
+
+							<div class="medium-4 columns">
+
+							<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?> 
+
+						    <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
+							
+							</div>
+                    	<div class="medium-8 columns">
+
+						    <?php }else{ ?>
+
+						    <div class="medium-12 columns">
+
+						    <?php } ?>
+                    	
+						<header>
+                    		<h3><?php the_title(); ?></h3>
+                    		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
+                    		<hr/>
+                    	</header>
+
+                    	<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+						</p>
+						
+						<?php
+						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
+
+						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
+						
+						<div class="text-center">
+							<a class="button small radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download White Paper</a>
+						</div>
+
+						<?php } else { // not logged in ?>
+						
+						<div class="text-center">
+                        	<a href="#" class="button small radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download White Paper</a>
+                    	</div>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+                        
+                        
+                        <?php } ?>
+					</div>
+                    </div>
+
+                   
+
+					
+					
+					<?php endwhile;	
+	
+	
 } // end if
 ?>
 
