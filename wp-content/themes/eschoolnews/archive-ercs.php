@@ -69,18 +69,27 @@ if (false === ($local_box_cache) ){
 					$query2->the_post(); ?>
 
 				
-				<article>
-					<h4>
-						<a href="<?php the_permalink(); ?>">
-						<?php the_title();?>
-						</a>
-					</h4>
+				<article class="row">
+						<div class="small-12 medium-4 columns">
+							<?php if( has_post_thumbnail()){
+								the_post_thumbnail('medium');
+							} ?>
 
-					<?php if(get_field('masthead_text')){
+						</div>
 
-						echo the_field('masthead_text');
+						<div class="small-12 medium-8 columns">
+						<h4>
+							<a href="<?php the_permalink(); ?>">
+							<?php the_title();?>
+							</a>
+						</h4>
 
-					} ?>
+						<?php if(get_field('masthead_text')){
+
+							echo the_field('masthead_text');
+
+						} ?>
+					</div>
 				</article>
 				<br/>
 
