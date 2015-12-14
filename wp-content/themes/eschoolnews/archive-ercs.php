@@ -113,12 +113,14 @@ if (false === ($local_box_cache) ){
 
        
 
-           <li> <a class="single-library-cat" href="<?php echo $termlink; ?>">
+        <li> 
+           	<a class="single-library-cat" href="<?php echo $termlink; ?>">
 
                	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php //echo $lc->name; ?>
-            </a></li>
+            </a>
+        </li>
 
           
 
