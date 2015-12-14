@@ -99,7 +99,7 @@ $webinars = new WP_Query(array(
 				$morewebinars = new WP_Query(array(
 					'post_type' => 'webinars',
 					'offset' => '6',
-					'posts_per_page' => '-1',
+					'posts_per_page' => '6',
 					'tax_query' => array(
 						array(
 
