@@ -90,9 +90,6 @@ if (false === ($local_box_cache) ){
 
 		$resources = array_merge( $ercs, $specialreports, $whitepapers ); //combine queries
 
-usort($resources, function($a, $b) {
-    return $a['ID'] - $b['ID'];
-});
 
 		// $resources = array(
 		// 	'posts_per_page' => '6'
