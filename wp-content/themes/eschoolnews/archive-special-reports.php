@@ -60,7 +60,7 @@ if (false === ($local_box_cache) ){
 								<?php the_post_thumbnail('medium'); ?>
 							</div>
 						<div class="medium-8 columns">
-							<?php } else { ?>
+							<?php } else{ ?>
 
 							<div class="medium-12 columns">
 
@@ -93,6 +93,7 @@ if (false === ($local_box_cache) ){
 			</ul>
 
 		</div>
+
 
 		
 		<?php
@@ -149,8 +150,7 @@ echo $local_box_cache;
 ?>
 	
 
-	<div class="row">
-		<div class="small-12 medium-12">
+	
 
 			<hr class="thick"/>
 
