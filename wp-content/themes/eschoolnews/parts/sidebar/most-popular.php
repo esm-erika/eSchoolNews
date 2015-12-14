@@ -1,5 +1,5 @@
 <article>
-	<h4>Most Popular</h4>
+	<h4>Most Popular Articles</h4>
 	<br/>
 
 	<?php $popular = array(

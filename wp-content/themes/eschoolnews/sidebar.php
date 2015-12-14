@@ -29,7 +29,7 @@
 	?>
 
 	<?php if(is_page('Resources')){
-		get_template_part( 'parts/sidebar/topics' );
+		get_template_part( 'parts/sidebar/most-popular' );
 	} ?>
 
 	<?php if(is_post_type_archive('events')){
