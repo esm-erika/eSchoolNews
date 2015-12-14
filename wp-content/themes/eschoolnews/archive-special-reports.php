@@ -177,16 +177,18 @@ echo $local_box_cache;
 				 while ( $query2->have_posts() ) :
 					$query2->the_post(); ?>
 <li>
-			<div class="row">
-				<div class="small-6 medium-4 columns">
-					<?php 
-						    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
-						    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-						?>
+			
+				<article class="row">
+							<?php if( has_post_thumbnail()){ ?>
+								<div class="medium-4 columns">
+								<?php the_post_thumbnail('medium'); ?>
+							</div>
+						<div class="medium-8 columns">
+							<?php } else{ ?>
 
-						<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
-				</div>
-				<article class="small-6 medium-8 columns">
+							<div class="medium-12 columns">
+
+							<?php } ?>
 
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 						<p class="small-caps"><?php the_time('F j, Y'); ?></p>
@@ -201,9 +203,11 @@ echo $local_box_cache;
 
 						  <a href="<?php the_permalink(); ?>" class="button tiny readmore">Read More</a>
 
+				
+					</div>
 				</article>
 				
-			</div>
+
 		</li>
 
 			
