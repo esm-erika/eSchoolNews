@@ -1,10 +1,14 @@
 <div class="author-bio row">
 
-					<div class="hide-for-small-only large-2 columns author-avatar small-text-center">
-						<?php echo get_avatar($post->post_author, 50); ?>
+					<div class="hide-for-small-only medium-2 columns author-avatar small-text-center">
+						<?php 
+							if(function_exists('get_avatar')) {
+								echo get_avatar($post->post_author, 50); 
+							}
+						?>
 					</div>
 
-					<div class="small-12 large-10 columns author-bio-text">
+					<div class="small-12 medium-10 columns author-bio-text">
 						
 							<strong>About the Author:</strong> <br>
 
