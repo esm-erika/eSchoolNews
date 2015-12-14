@@ -56,11 +56,8 @@ $oldtemplate = get_post_meta($id, '_wp_post_template', true);
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<div class="small-caps">By <?php the_author(); ?></div>
-							<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
+				<h1 class="entry-title"><?php the_title(); ?></h1>		
 
-			
 			<?php get_template_part('parts/social'); ?>
 			 </header>
 
