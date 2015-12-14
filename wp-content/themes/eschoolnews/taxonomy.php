@@ -39,8 +39,7 @@ if ( have_posts() ) {
 		//
 	} // end while */
 	
- while ( $query->have_posts() ) :
-					$query->the_post(); ?>
+ while ( have_posts() ) : the_post(); ?>
 
 					<div style="margin-bottom:8px;" class="panel row all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
