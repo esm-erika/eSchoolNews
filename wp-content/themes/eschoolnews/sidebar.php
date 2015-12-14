@@ -37,7 +37,7 @@
 	} ?>
 
 	<?php 
-	if( is_page('Resources') || is_post_type_archive('events')) { 
+	if( is_post_type_archive('events')) { 
 		get_template_part( 'parts/sidebar/upcoming-webinars' );
 	} ?>
 
