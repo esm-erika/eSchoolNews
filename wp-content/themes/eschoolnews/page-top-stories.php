@@ -104,7 +104,19 @@ if (false === ($local_box_cache) ){
 						<span class="flag content"><a href="<?php the_permalink(); ?>">News</a></span>
 
 						<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<div class="small-caps">By <?php the_author(); ?></div>
+						<div class="small-caps">
+							By 
+							<?php  if( get_field('Alt Author Read More Name')) {
+
+								the_field('Alt Author Read More Name');
+
+							} else {
+
+								the_author();
+
+							} ?>
+
+						</div>
 						<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
 					</article>
 					<hr/>
