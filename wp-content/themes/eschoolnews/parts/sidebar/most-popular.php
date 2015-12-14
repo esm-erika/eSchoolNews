@@ -4,7 +4,7 @@
 
 	<?php $popular = array(
 		'post_type' => 'post',
-		'posts_per_page' => 10,
+		'posts_per_page' => 5,
 		'meta_key' => 'post_views_count',
 		'orderby' => 'meta_value_num',
 
