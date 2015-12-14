@@ -4,7 +4,7 @@
 
     $args = array(
         'orderby'          => 'rand',
-        'order'            => 'ASC',
+        'order'            => 'DESC',
         'limit'            => -1,
         'category'         => ' ',
         'exclude_category' => ' ',
