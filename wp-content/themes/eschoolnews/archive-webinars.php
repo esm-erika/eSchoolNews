@@ -63,16 +63,16 @@ $webinars = new WP_Query(array(
 
 					<li>
 						<article class="row">
-							<div class="small-12 medium-4 columns">
+							<!-- <div class="small-12 medium-4 columns"> -->
 
 								<?php   
-								$smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-								$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+								// $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+								// $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
 								?>
 
-								<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
-							</div>
-							<header class="small-12 medium-8 columns">
+								<!-- <img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>"> -->
+							<!-- </div> -->
+							<header class="small-12 medium-12 columns">
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 																<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
