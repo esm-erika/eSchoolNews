@@ -114,7 +114,7 @@ if (false === ($local_box_cache) ){
        
 
         <li> 
-           	<a class="" href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/middlebury-interactive/">
+           	<a href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/middlebury-interactive/">
                	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/Middlebury396.gif" alt="" scale="0">
 			</a>
         </li>
