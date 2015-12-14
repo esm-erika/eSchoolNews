@@ -71,8 +71,6 @@ if (false === ($local_box_cache) ){
 
 			<header class="large-8 columns">
 				<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-				<div class="small-caps"><?php the_time('F j, Y'); ?></div>
-				<p><?php the_tags('<span class="flag event">','</span><span class="flag event">','</span>'); ?></p>
 			</header>
 		</article>
 		<br/>
