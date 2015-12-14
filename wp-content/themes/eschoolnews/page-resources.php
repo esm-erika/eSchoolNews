@@ -90,6 +90,15 @@ if (false === ($local_box_cache) ){
 
 		$resources = array_merge( $ercs, $specialreports, $whitepapers ); //combine queries
 
+echo '<pre>';
+print_r($resources);
+echo '</pre>';
+/*		usort($resources, function ($item1, $item2) {
+			if ($item1['price'] == $item2['price']) return 0;
+			return $item1['price'] < $item2['price'] ? -1 : 1;
+		}); */
+
+
 
 		// $resources = array(
 		// 	'posts_per_page' => '6'
