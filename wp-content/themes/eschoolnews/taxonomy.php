@@ -112,7 +112,30 @@ if ( have_posts() ) {
 
 		
 
-		<?php  ?>
+		<?php  } elseif( is_tax('sponsor') ) { ?>
+
+				<article class="row">
+						<div class="small-12 medium-4 columns">
+							<?php if( has_post_thumbnail()){
+								the_post_thumbnail('medium');
+							} ?>
+
+						</div>
+
+						<div class="small-12 medium-8 columns">
+						<h4>
+							<a href="<?php the_permalink(); ?>">
+							<?php the_title();?>
+							</a>
+						</h4>
+
+						<?php if(get_field('masthead_text')){
+
+							echo the_field('masthead_text');
+
+						} ?>
+					</div>
+				</article>
 
 	
 

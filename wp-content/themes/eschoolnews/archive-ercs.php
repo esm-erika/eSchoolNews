@@ -123,19 +123,19 @@ if (false === ($local_box_cache) ){
        
 
         <li> 
-           	<a class="" href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/middlebury-interactive/">
-               	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/Middlebury396.gif" alt="" scale="0">
+           	<a class="" href="<?php site_url(); ?>/sponsor/middlebury-interactive/">
+               	<img src="<?php site_url(); ?>/files/2015/12/Middlebury396.gif" alt="" scale="0">
 			</a>
         </li>
 
         <li>
-			<a href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/pcm-g/">
-               	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/PCMGLogo239.gif" alt="PCM-G" scale="0">
+			<a href="<?php site_url(); ?>/sponsor/pcm-g/">
+               	<img src="<?php site_url(); ?>/files/2015/12/PCMGLogo239.gif" alt="PCM-G" scale="0">
 			</a>
         </li>
         <li>
-        	<a href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/pd-learning-network/">
-               	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/pd-learning.gif" alt="PD Learning Network" scale="0">
+        	<a href="<?php site_url(); ?>/sponsor/pd-learning-network/">
+               	<img src="<?php site_url(); ?>/files/2015/12/pd-learning.gif" alt="PD Learning Network" scale="0">
 			 </a>
         </li>
 
