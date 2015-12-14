@@ -46,7 +46,7 @@ if (false === ($local_box_cache) ){
 	// the query
 	$future = new WP_Query( $args ); ?>
 
-	<?php while ( $future->have_posts() ) : the_post(); 
+	<?php while ( $future->have_posts() ) : $future->the_post(); 
 
 	setPostViews(get_the_ID()); ?>
 
@@ -164,8 +164,7 @@ custom_wp_link_pages();
 
 
 
-	<?php endwhile;
-		wp_reset_postdata();?>
+	<?php endwhile;?>
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
