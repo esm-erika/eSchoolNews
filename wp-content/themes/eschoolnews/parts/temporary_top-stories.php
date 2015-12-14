@@ -1,6 +1,6 @@
-	<hr class="thick"/>
+	<!-- <hr class="thick"/> -->
 
-	<h4>Top Stories</h4>
+	<h4>eSchool News Top Stories</h4>
 	<br/>
 
 	<?php
@@ -8,8 +8,9 @@
 	$popular = new WP_Query(array(
 		'post_type' => 'post',
 		'posts_per_page' => '10'
+		//'cat' => $cat
 
-)); ?>
+	)); ?>
 
 			<?php while ( $popular->have_posts() ) :
 			$popular->the_post(); ?>
@@ -20,9 +21,6 @@
 				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					<div class="small-caps">By <?php the_author(); ?></div>
 					<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>	
-
-				
-
 				</header>
 			</article>
 

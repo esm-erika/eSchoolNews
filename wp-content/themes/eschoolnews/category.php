@@ -303,15 +303,20 @@ echo $local_box_cache;
 
 	<div class="small-12 medium-8 columns">
 
-		<?php get_template_part('parts/resources-section'); ?>	
+		<?php 
 
-		<?php get_template_part('parts/whitepaper-section'); ?>	
+		get_template_part('parts/temporary_top-stories');
+		//get_template_part('parts/resources-section'); 
+		//get_template_part('parts/whitepaper-section'); 
+
+		?>	
 		
-		<?php if($resourcessection == 0 and $whitepapersection == 0) { 
+		<?php //if($resourcessection == 0 and $whitepapersection == 0) { 
 			//echo '<!-- display other content  -->'; 
 		 	//get_template_part('parts/popular-posts');
-		 	get_template_part('parts/temporary_top-stories'); 
-		}?>
+		 	//get_template_part('parts/temporary_top-stories'); 
+		//}
+		?>
 
 	</div>
 
