@@ -78,7 +78,7 @@ if (false === ($local_box_cache) ){
 						  <a href="<?php echo $file['url']; ?>" class="button radius tiny">Download Report</a>
 						  <?php endif; ?>
 
-						  <a href="<?php the_permalink(); ?>" class="button tiny readmore">Read More</a>
+						  <a href="<?php the_permalink(); ?>">Read More</a>
 						
 					</div>
 
@@ -198,10 +198,10 @@ echo $local_box_cache;
 							$file = get_field('download_files');
 
 							if( $file ): ?>
-						  <a href="<?php echo $file['url']; ?>" class="button radius tiny">Download Report</a>
+						  <a href="<?php echo $file['url']; ?>">Download Report</a>
 						  <?php endif; ?>
 
-						  <a href="<?php the_permalink(); ?>" class="button tiny readmore">Read More</a>
+						  <a href="<?php the_permalink(); ?>">Read More</a>
 
 				
 					</div>
