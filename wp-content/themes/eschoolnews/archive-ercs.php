@@ -97,29 +97,37 @@ if (false === ($local_box_cache) ){
 
 <?php
 
-        $libargs=array(  
-            'hide_empty'        => 0,  
-            'parent'        => 0,  
-            'taxonomy'      => 'sponsor');  
+        // $libargs=array(  
+        //     'hide_empty'        => 0,  
+        //     'parent'        => 0,  
+        //     'taxonomy'      => 'sponsor');  
 
-            $libcats=get_categories($libargs);  
+        //     $libcats=get_categories($libargs);  
 
-            foreach($libcats as $lc){ 
-                $termlink = get_term_link( $lc->slug, 'sponsor' ); 
+        //     foreach($libcats as $lc){ 
+        //         $termlink = get_term_link( $lc->slug, 'sponsor' ); 
 
-                $image = get_field('sponsor_image', 'sponsor_'.$lc->term_id);
+        //         $image = get_field('sponsor_image', 'sponsor_'.$lc->term_id);
 
         ?>
 
        
 
         <li> 
-           	<a class="single-library-cat" href="<?php echo $termlink; ?>">
+           	<a href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/middlebury-interactive/">
+               	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/Middlebury396.gif" alt="" scale="0">
+			</a>
+        </li>
 
-               	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                <?php //echo $lc->name; ?>
-            </a>
+        <li>
+			<a href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/pcm-g/">
+               	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/PCMGLogo239.gif" alt="PCM-G" scale="0">
+			</a>
+        </li>
+        <li>
+        	<a href="http://eschoolnews.esminc.staging.wpengine.com/sponsor/pd-learning-network/">
+               	<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2015/12/pd-learning.gif" alt="PD Learning Network" scale="0">
+			 </a>
         </li>
 
           
