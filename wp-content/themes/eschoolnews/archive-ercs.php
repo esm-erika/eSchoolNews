@@ -132,7 +132,7 @@ if (false === ($local_box_cache) ){
 
           
 
-        <?php } ?>
+        <?php  ?>
 
 
 			 </ul>
@@ -154,6 +154,7 @@ if (false === ($local_box_cache) ){
 		//you cannot cache it
 	} else {
 		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
 } else { 
 
 echo $local_box_cache;
