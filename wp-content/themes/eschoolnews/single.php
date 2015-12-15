@@ -172,17 +172,9 @@ custom_wp_link_pages();
 
 			<?php 
 
-			$contributor_bio = get_field('contributor_bio');
-
-			if(!empty($contributor_bio)) { 
-
-				echo '';
-
-			} else {
-
 			get_template_part('parts/authors'); 
 
-			} ?>
+			?>
 			
 
 				
