@@ -64,7 +64,7 @@ if (false === ($local_box_cache) ){
 
 		$args = array(
 		'post_type' => array('special-reports','ercs','whitepapers','webinars'),
-		'posts_per_page' => -1,
+		'posts_per_page' => '6',
 	);
 	
 $resources = new WP_Query( $args );

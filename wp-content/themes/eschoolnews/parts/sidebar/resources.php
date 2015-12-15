@@ -14,12 +14,12 @@
 if(is_post_type_archive('webinars' )) {
 	$args = array(
 		'post_type' => array('special-reports','ercs','whitepapers'),
-		'posts_per_page' => -1,
+		'posts_per_page' => '6',
 	);
 } else {
 	$args = array(
 		'post_type' => array('special-reports','ercs','whitepapers','webinars'),
-		'posts_per_page' => -1,
+		'posts_per_page' => '6',
 	);
 } 
 	
