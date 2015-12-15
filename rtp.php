@@ -3,12 +3,12 @@
 define('WP_USE_THEMES', true);
 //get wordpress, bypass check that page exists (supress false 404)
 if ( !defined('ABSPATH') )
-	define('ABSPATH', '/nas/wp/www/cluster-311/esmbethesda-staging/');
-require_once("/nas/wp/www/cluster-311/esmbethesda-staging/wp-config.php");
-require_once('/nas/wp/www/cluster-311/esmbethesda-staging/wp-settings.php');
+	define('ABSPATH', '/nas/wp/www/cluster-311/esminc/');
+require_once("/nas/wp/www/cluster-311/esminc/wp-config.php");
+require_once('/nas/wp/www/cluster-311/esminc/wp-settings.php');
 $wp->init(); $wp->parse_request(); $wp->query_posts();
 $wp->register_globals(); $wp->send_headers();
-require( '/nas/wp/www/cluster-311/esmbethesda-staging/wp-load.php' );
+require( '/nas/wp/www/cluster-311/esminc/wp-load.php' );
 
 
 //get the query vars and validate them
