@@ -20,8 +20,8 @@ function validateint($inData) {
 	$opt_form2 = get_option( 'esm_agile_2_prereg_form' );
 	$opt_form3 = get_option( 'esm_gravity_sf_reg_form' );
 	
-	$gform_akismet_enabled = 'gform_akismet_enabled_'. $$opt_form3 ;
-	$gform_post_submission = 'gform_post_submission_'. $$opt_form3 ;
+	$gform_akismet_enabled = 'gform_akismet_enabled_'. $opt_form3 ;
+	$gform_post_submission = 'gform_post_submission_'. $opt_form3 ;
 
 add_filter($gform_akismet_enabled, "disable_akismet");
 add_action($gform_post_submission, "SF_Account_Upsert", 10, 2);
@@ -435,8 +435,8 @@ As a registered member you will have complete access to all our breaking news, e
 
 
 <?php 
-$opt_form1submit = 'is_submit_'.$$opt_form1;
-$opt_form2submit = 'is_submit_'.$$opt_form2;
+$opt_form1submit = 'is_submit_'.$opt_form1;
+$opt_form2submit = 'is_submit_'.$opt_form2;
 
 if ( ( !isset($_GET["zipc"]) && !isset($_GET["orgtype"]) ) and (empty($_POST) or (!empty($_POST) and ($_POST[$opt_form1submit] == 1)))){ 
 		 gravity_form($opt_form1, false, false, false); 
@@ -484,7 +484,7 @@ if($skipto3 == 1){
 			} else {
 
 //Note when changing drop down values, we also need to use the gform_admin_pre_render so that the right values are displayed when editing the entry.
-$gform_pre_render_form2 = 'gform_pre_render_'. $$opt_form2 ;
+$gform_pre_render_form2 = 'gform_pre_render_'. $opt_form2 ;
 add_filter($gform_pre_render_form2, "populate_radio_buttons");
 
 function populate_radio_buttons($form){

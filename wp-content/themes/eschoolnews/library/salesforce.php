@@ -2,16 +2,6 @@
 
 function SF_Account_Upsert($entry, $form){
 
-ob_start( );
-
-print_r($form);
-
-$local_box_cache = ob_get_clean( );
-echo $local_box_cache;
-
-
-
-mail('vcarlson@eschoolnews.com','SF Function called',$local_box_cache);
 
 	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
 		
@@ -140,7 +130,7 @@ mail('vcarlson@eschoolnews.com','SF Function called',$local_box_cache);
 		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
-		echo '<pre>'. print_r($newperson).'</pre>';
+		
 		
 		
 		if ($upsertResponse->success==1)
