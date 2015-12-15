@@ -617,7 +617,7 @@ echo 'HEY IM at 610';
 	 if($zipcode == 0){ $skipto3 = 1; // checking the zip code if it fails skip to step 3
 	  }
 
-echo 'HEY IM at 620';	  
+echo 'HEY IM at 620'; echo $_GET[orgtype];	  
 	  
 //below check if k-12 or HE then connect to agile and get XML from them.	 
 if (in_array($_GET[orgtype], array('School Building','School District','Federal/State Level Education','K-12 Education','Other'))) { 
