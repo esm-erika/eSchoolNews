@@ -16,23 +16,27 @@ get_header(); ?>
 
 		<div class="row">
 
-		<div class="medium-4 columns">
+		
 
 		<?php 
 
 		if ( has_post_thumbnail() ) { ?>
+		<div class="medium-4 columns">
 
 
-		<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-		$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?> 
+		<?php the_post_thumbnail('medium-portrait'); ?>
+		</div>
+		<div class="medium-8 columns">
 
-		<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
+		<?php } else { ?>
+
+			<div class="medium-12 columns">
+
 
 		<?php } ?>
 
-	</div>
+	
 
-	<div class="medium-8 columns">
 
 		<?php get_template_part('parts/flags'); ?>
 
