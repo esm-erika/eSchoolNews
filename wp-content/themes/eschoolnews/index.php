@@ -78,6 +78,8 @@ echo $local_box_cache;
 }
 ?>
 
+</div>
+
 
 <?php get_template_part('parts/whitepaper-section'); ?>
 
