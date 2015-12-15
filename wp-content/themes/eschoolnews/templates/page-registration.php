@@ -616,6 +616,9 @@ echo 'HEY IM at 610';
 	 
 	 if($zipcode == 0){ $skipto3 = 1; // checking the zip code if it fails skip to step 3
 	  }
+
+echo 'HEY IM at 620';	  
+	  
 //below check if k-12 or HE then connect to agile and get XML from them.	 
 if (in_array($_GET[orgtype], array('School Building','School District','Federal/State Level Education','K-12 Education','Other'))) { 
   $url = 'https://lookupws.agile-ed.com/ServiceVer1.asmx/LookupZipK12?id=eSchoolMedia&accesscode=gk49S2uW3V&zip='.$zipcode;
