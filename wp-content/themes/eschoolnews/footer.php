@@ -56,6 +56,7 @@
 </footer>
 
 </div>
+</div>
 <a class="exit-off-canvas"></a>
 
 </div>
