@@ -56,8 +56,10 @@ include('single-coa.php');
 			} else { ?>
 
 				<div class="small-caps">
-					By 
+					
 					<?php  if( get_field('Alt Author Read More Name')) {
+
+						echo 'By ';
 
 						the_field('Alt Author Read More Name');
 
@@ -66,6 +68,7 @@ include('single-coa.php');
 						the_field('Byline');
 
 					} else {
+						echo 'By ';
 
 						the_author();
 
