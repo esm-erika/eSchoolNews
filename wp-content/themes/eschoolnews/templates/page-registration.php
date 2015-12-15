@@ -632,6 +632,9 @@ echo  $url;
 // not us, skip to step 3
   $xml = simplexml_load_file($url);
 
+echo $xml;
+
+
 if($skipto3 == 1){
 	
 // this is step 3 here in step two if they failed all checks or are not US
@@ -651,6 +654,9 @@ if($skipto3 == 1){
 			} else {
 
 //Note when changing drop down values, we also need to use the gform_admin_pre_render so that the right values are displayed when editing the entry.
+
+echo '658';
+
 $gform_pre_render_form2 = 'gform_pre_render_'. $$opt_form2 ;
 add_filter($gform_pre_render_form2, "populate_radio_buttons");
 
