@@ -174,7 +174,7 @@ custom_wp_link_pages();
 
 			$contributor_bio = get_field('contributor_bio');
 
-			if( get_field('remove_author') || if( !empty($contributor_bio)) { 
+			if(!empty($contributor_bio)) { 
 
 				echo '';
 
