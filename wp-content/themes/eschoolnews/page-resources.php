@@ -63,7 +63,7 @@ if (false === ($local_box_cache) ){
 		<?php // The Query
 
 		$args = array(
-		'post_type' => array('special-reports','ercs','whitepapers','webinars'),
+		'post_type' => array('special-reports','ercs','whitepapers'),
 		'posts_per_page' => '6',
 	);
 	
