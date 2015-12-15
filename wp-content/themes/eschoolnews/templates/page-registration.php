@@ -626,6 +626,8 @@ if (in_array($_GET[orgtype], array('School Building','School District','Federal/
 
   $url = 'https://LookupWS.agile-ed.com/ServiceVer1.asmx/LookupZipHE?id=eSchoolMedia&accesscode=gk49S2uW3V&zip='.$zipcode;
 
+echo  $url;
+
 } else { $skipto3 = 1; }
 // not us, skip to step 3
   $xml = simplexml_load_file($url);
