@@ -77,10 +77,12 @@ echo $local_box_cache;
 
 }
 ?>
+
 </div>
 
 
 <?php get_template_part('parts/whitepaper-section'); ?>
 
-
+</div>
+</div>
 <?php get_footer(); ?>

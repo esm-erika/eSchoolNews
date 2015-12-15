@@ -72,7 +72,7 @@ if (false === ($local_box_cache) ){
 				<article class="row">
 						<div class="small-12 medium-4 columns">
 							<?php if( has_post_thumbnail()){
-								the_post_thumbnail('medium');
+								the_post_thumbnail('medium-portrait');
 							} ?>
 
 						</div>

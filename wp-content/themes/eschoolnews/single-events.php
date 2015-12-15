@@ -66,7 +66,7 @@ if (false === ($local_box_cache) ){
 
 				if ( has_post_thumbnail() ) {
 
-					the_post_thumbnail('full'); 
+					the_post_thumbnail('large-landscape'); 
 
 					echo '<br/><br/>';
 

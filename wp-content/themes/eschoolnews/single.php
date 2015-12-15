@@ -13,7 +13,7 @@ get_header();
  ?>
 
 <div class="row top">
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-8 columns" role="main">
 
 				<?php 
 				//if( is_singular( array('ercs','whitepapers','webinars','special-reports') )) {
@@ -47,6 +47,13 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+			
+
+			<?php if( get_field('remove_author')) { 
+
+				echo '';
+
+			} else { ?>
 
 				<div class="small-caps">
 					By 
@@ -61,6 +68,8 @@ include('single-coa.php');
 					} ?>
 
 				</div>
+
+			<?php } ?>
 
 
 							<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
@@ -83,8 +92,8 @@ include('single-coa.php');
 			 elseif ( has_post_thumbnail()) :
 
     				echo '<div class="row">';
-    				echo '<div class="column">';
-    				the_post_thumbnail( '', array('class' => 'th') );
+    				echo '<div class="small-12 medium-12 columns">';
+    				the_post_thumbnail('large-landscape');
     				echo '</div></div>';
 
     			

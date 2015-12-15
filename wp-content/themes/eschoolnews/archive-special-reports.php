@@ -57,7 +57,7 @@ if (false === ($local_box_cache) ){
 					<article class="row">
 							<?php if( has_post_thumbnail()){ ?>
 								<div class="medium-4 columns">
-								<?php the_post_thumbnail('medium'); ?>
+								<?php the_post_thumbnail('medium-portrait'); ?>
 							</div>
 						<div class="medium-8 columns">
 							<?php } else{ ?>
@@ -181,7 +181,7 @@ echo $local_box_cache;
 				<article class="row">
 							<?php if( has_post_thumbnail()){ ?>
 								<div class="medium-4 columns">
-								<?php the_post_thumbnail('medium'); ?>
+								<?php the_post_thumbnail('medium-portrait'); ?>
 							</div>
 						<div class="medium-8 columns">
 							<?php } else{ ?>

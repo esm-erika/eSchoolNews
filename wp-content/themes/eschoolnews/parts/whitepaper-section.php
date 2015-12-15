@@ -50,7 +50,7 @@ $whitepapersection = 0;
 
 
 <br/>
-		<ul class="small-block-grid-1 large-block-grid-2">
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
 
 			<?php while ( $whitepapers->have_posts() ) : $whitepapers -> the_post(); ?>
@@ -63,7 +63,7 @@ $whitepapersection = 0;
 						<div class="medium-4 columns">
 
 						<?php if(has_post_thumbnail()){
-							the_post_thumbnail('small');
+							the_post_thumbnail('small-portrait');
 						} ?>
 
 					</div>

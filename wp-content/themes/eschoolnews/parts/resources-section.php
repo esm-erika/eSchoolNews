@@ -49,7 +49,7 @@ $resources = new WP_Query( $args );
 		<div class="small-12 medium-4 columns">
 
 			<?php if( has_post_thumbnail()){
-				the_post_thumbnail('small');
+				the_post_thumbnail('medium-portrait');
 			} ?>
 
 		</div>

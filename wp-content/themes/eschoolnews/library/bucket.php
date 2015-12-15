@@ -12,6 +12,10 @@
 //}
 //add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+add_image_size( 'large', 200, 200, TRUE );
+
+
+
 function string_limit_words($string, $word_limit)
 {
   $words = explode(' ', $string, ($word_limit + 1));
@@ -26,7 +30,13 @@ function new_excerpt_more( $more ) {
 add_filter('excerpt_more', 'new_excerpt_more');  
 
 
-
+// Image Sizes
+add_image_size( 'small-landscape', 300, 200, true );
+add_image_size( 'medium-landscape', 600, 400, true );
+add_image_size( 'large-landscape', 800, 533, true );
+add_image_size( 'small-portrait', 200, 300, true );
+add_image_size( 'medium-portrait', 400, 600, true );
+add_image_size( 'large-portrait', 533, 800, true );
 
 /**
  * Add prev and next links to a numbered page link list
@@ -87,17 +97,14 @@ if(empty($idObj)){echo '<!--- No category found --->';}else{
 	$query_1 = new WP_Query( $query_1 );
  ?>
 <h4><?php  echo $catname; ?></h4>
-<ul class="small-block-grid-2 large-block-grid-3">
+<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
 	<?php // The Loop
 	while ( $query_1->have_posts() ) :
 		$query_1->the_post(); ?>
 	<li>
 		<?php 
-		    $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
-		    $largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+			the_post_thumbnail('medium-landscape');
 		?>
-
-		<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 
 		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		<div class="excerpt">

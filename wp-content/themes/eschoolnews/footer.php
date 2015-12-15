@@ -12,11 +12,11 @@
 ?>
 <div class="row">
 <?php if ($astused > 0){ ?>
-    <div class="ad-container">
+    <div class="medium-12 columns ad-container">
         <?php get_template_part( 'parts/ads/ercbottom' ); ?>
     </div>
 <?php } ?>
-	<div class="ad-container">
+	<div class="medium-12 columns ad-container">
 		<?php get_template_part( 'parts/ads/anchorboard' ); ?>
 	</div>
 </div>
@@ -56,6 +56,7 @@
 </footer>
 
 </div>
+</div>
 <a class="exit-off-canvas"></a>
 
 </div>
@@ -68,15 +69,6 @@
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 
-<!-- <script type="text/javascript" src="<?php //echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-  $('.featured-slick').slick({
-  	adaptiveHeight: true
-  });
-});
-</script> -->
 
 </body>
 </html>

@@ -37,6 +37,7 @@
 
 					$topstories = new WP_Query(array(
 					'cat' => $cat,
+					'offset' => '1',
 					'post_type' => 'post',
 					'posts_per_page' => 3
 					)); 

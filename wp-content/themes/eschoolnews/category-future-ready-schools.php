@@ -37,7 +37,16 @@ if (false === ($local_box_cache) ){
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
-	<?php while ( have_posts() ) : the_post(); 
+	<?php
+
+	$args = array(
+		'category_name' => 'leading-the-digital-leap',
+		'posts_per_page' => '1'
+	); 
+	// the query
+	$future = new WP_Query( $args ); ?>
+
+	<?php while ( $future->have_posts() ) : $future->the_post(); 
 
 	setPostViews(get_the_ID()); ?>
 
@@ -47,8 +56,8 @@ $oldtemplate = get_post_meta($id, '_wp_post_template', true);
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			
+				<h1 class="entry-title"><?php the_title(); ?></h1>		
+
 			<?php get_template_part('parts/social'); ?>
 			 </header>
 
@@ -84,7 +93,6 @@ custom_wp_link_pages();
             </div>
 
 			<?php get_template_part('parts/social'); ?>
-			
 
 				<?php if( ! has_tag()){
 				 echo '<hr/>';
