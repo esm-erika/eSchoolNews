@@ -20,7 +20,6 @@ if(is_post_type_archive('webinars' )) {
 	$args = array(
 		'post_type' => array('special-reports','ercs','whitepapers','webinars'),
 		'posts_per_page' => -1,
-		)
 	);
 } 
 	
@@ -29,7 +28,7 @@ $resources = new WP_Query( $args );
 ?>
 
 <?php while ( $resources->have_posts() ) : $resources->the_post(); ?>
-	
+
 		<li>
 <?php get_template_part('parts/flags'); ?> 
 
