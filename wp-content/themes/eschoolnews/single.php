@@ -170,7 +170,15 @@ custom_wp_link_pages();
 
 			<?php get_template_part('parts/social'); ?>
 
-			<?php get_template_part('parts/authors'); ?>
+			<?php if( get_field('remove_author') || if( ! get_field('contributor_bio'))) { 
+
+				echo '';
+
+			} else {
+
+			get_template_part('parts/authors'); 
+
+			} ?>
 			
 
 				
