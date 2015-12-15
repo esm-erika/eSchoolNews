@@ -23,7 +23,6 @@ $resourcessection = 0;
 	$args = array(
 		'post_type' => array('special-reports','ercs'),
 		'posts_per_page' => -1,
-		)
 	);
 
 $resources = new WP_Query( $args );
