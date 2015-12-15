@@ -659,6 +659,7 @@ if($skipto3 == 1){
 echo '658';
 
 $gform_pre_render_form2 = 'gform_pre_render_'. $$opt_form2 ;
+echo $gform_pre_render_form2;
 add_filter($gform_pre_render_form2, "populate_radio_buttons");
 
 function populate_radio_buttons($form){
