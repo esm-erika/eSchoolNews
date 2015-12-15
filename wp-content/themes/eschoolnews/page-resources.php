@@ -70,6 +70,9 @@ if (false === ($local_box_cache) ){
 $resources = new WP_Query( $args );
 
 ?>
+
+<?php while ( $resources->have_posts() ) : $resources->the_post(); ?>
+
 		<article class="row">
 
 			<div class="medium-4 columns">
@@ -91,7 +94,7 @@ $resources = new WP_Query( $args );
 			</header>
 		</article>
 		<br/>
-		<?php endforeach; 
+		<?php endwhile; 
 		wp_reset_postdata(); ?>
 
 	</div>

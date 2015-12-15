@@ -28,7 +28,8 @@ $resources = new WP_Query( $args );
 
 ?>
 
-
+<?php while ( $resources->have_posts() ) : $resources->the_post(); ?>
+	
 		<li>
 <?php get_template_part('parts/flags'); ?> 
 
