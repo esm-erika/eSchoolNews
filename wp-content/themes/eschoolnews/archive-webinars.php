@@ -66,7 +66,7 @@ $webinars = new WP_Query(array(
 							
 							<?php if( has_post_thumbnail()){ ?>
 							<div class="small-12 medium-4 columns">
-								<?php the_post_thumbnail('medium'); ?>
+								<?php the_post_thumbnail('medium-landscape'); ?>
 							</div>
 							<header class="small-12 medium-8 columns">
 							<?php } else { ?>

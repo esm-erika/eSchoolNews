@@ -35,7 +35,7 @@ get_header(); ?>
 
 				<?php if ( has_post_thumbnail() ) {
 					echo '<div class="small-12 medium-4 columns">';
-							the_post_thumbnail('full');
+							the_post_thumbnail('medium-portrait');
 					echo '</div>';
 					echo '<div class="small-12 medium-8 columns">';
 						

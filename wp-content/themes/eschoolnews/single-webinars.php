@@ -57,7 +57,7 @@ get_header(); ?>
 				if ( has_post_thumbnail() ) {
 
 					echo '<div class="medium-4 columns">';
-					the_post_thumbnail('full'); 
+					the_post_thumbnail('medium-landscape'); 
 					echo '</div>';
 
 					echo '<div class="medium-8 columns">';

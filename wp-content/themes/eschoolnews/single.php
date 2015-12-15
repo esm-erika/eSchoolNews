@@ -92,8 +92,8 @@ include('single-coa.php');
 			 elseif ( has_post_thumbnail()) :
 
     				echo '<div class="row">';
-    				echo '<div class="column">';
-    				the_post_thumbnail( '', array('class' => 'th') );
+    				echo '<div class="small-12 medium-12 columns">';
+    				the_post_thumbnail('large-landscape');
     				echo '</div></div>';
 
     			
