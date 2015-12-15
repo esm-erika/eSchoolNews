@@ -632,9 +632,9 @@ if (in_array($_GET[orgtype], array('School Building','School District','Federal/
 // not us, skip to step 3
 echo  $url;
   $xml = simplexml_load_file($url);
-
-echo $xml;
-
+echo '<pre>';
+print_r($xml);
+echo '</pre>';
 
 if($skipto3 == 1){
 	
