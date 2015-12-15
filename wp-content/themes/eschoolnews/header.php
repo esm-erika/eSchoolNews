@@ -110,7 +110,7 @@ get_template_part( 'library/logged-in-check' );
           <h3>Subscribe to Our Newsletters</h3>
 
 
-          <?php //get_template_part( 'parts/subscribe-form' ); ?>
+          <?php get_template_part( 'parts/subscribe-form' ); ?>
 
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 
