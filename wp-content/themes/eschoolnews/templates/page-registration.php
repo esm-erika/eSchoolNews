@@ -20,8 +20,8 @@ function validateint($inData) {
 	$opt_form2 = get_option( 'esm_agile_2_prereg_form' );
 	$opt_form3 = get_option( 'esm_gravity_sf_reg_form' );
 	
-	$gform_akismet_enabled = 'gform_akismet_enabled_'. $$opt_form3 ;
-	$gform_post_submission = 'gform_post_submission_'. $$opt_form3 ;
+	$gform_akismet_enabled = 'gform_akismet_enabled_'. $opt_form3 ;
+	$gform_post_submission = 'gform_post_submission_'. $opt_form3 ;
 
 add_filter($gform_akismet_enabled, "disable_akismet");
 add_action($gform_post_submission, "SF_Account_Upsert", 10, 2);
@@ -70,166 +70,6 @@ add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
 if($_GET["zipc"]){ $esnautofill = array(zip => $InstInZip->$_GET["zipc"]); }
 	 
  }
-
-function SF_Account_Upsert($entry, $form){
-
-//ob_start( );
-
-//print_r($form);
-
-//$local_box_cache = ob_get_clean( );
-//echo $local_box_cache;
-
-
-
-mail('vcarlson@eschoolnews.com','SF Function called',$local_box_cache);
-
-	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
-		
-	if($opt_val3 == $form){ 	
-	
-	mail('vcarlson@eschoolnews.com','SF Subscription request made','line 9');
-		global $wpdb;
-	
-		ini_set("soap.wsdl_cache_enabled", "0");
-		$USERNAME = "sfdcadmin1@eschoolnews.com"; //- variable that contains your Salesforce.com username (must be in the form of an email)
-		$PASSWORD = "eSNadm1n"; //- variable that contains your Salesforce.com password
-		$TOKEN = "qhO7UhNTUrYp8XU5eF1SRomDp"; //- variable that contains your Salesforce.com password
-		require_once ( ABSPATH . 'soapclient/SforceEnterpriseClient.php');
-		require_once ( ABSPATH . 'soapclient/SforceHeaderOptions.php');
-		// Salesforce Login information
-		$wsdl = ABSPATH . 'soapclient/eSNenterprise.wsdl.xml';
-		$mySforceConnectionu = new SforceEnterpriseClient();
-		$mySoapClient = $mySforceConnectionu->createConnection($wsdl);
-		$mylogin = $mySforceConnectionu->login($USERNAME, $PASSWORD.$TOKEN);
-		$loginname = $entry[30];
-		$thenewuser = get_user_by('login', $loginname);
-
-		if($thenewuser){
-		   $user_id = $thenewuser->ID;
-		} else {
-			sleep(1);
-			$thenewuser = get_user_by('login', $loginname);
-			$user_id = $thenewuser->ID;
-		}
-	
-		$newperson = array();
-			$newperson['WP_Unique_ID__c'] = $user_id;
-			$newperson['WP_ID__c'] = $user_id;
-			$newperson['Source__c'] = $_SERVER["SERVER_NAME"];	
-			$newperson['Site_Registered_On__c'] = $_SERVER["SERVER_NAME"];	
-			$wp_subreq_id = '21'.$entry[4]; //21 = digital ecn [4] is email
-			
-			
-		if (!empty ($entry[4])) {
-			$newperson['PersonEmail'] = $entry[4];
-			$newSubReq['Email__c'] = $entry[4];
-			$newperson['Email_as_ExternalID__c'] = $entry[4]; 	
-		}
-		
-		if (!empty ($entry[1]) ) { 
-			$newperson['FirstName'] = $entry[1];
-			$newSubReq['First_Name__c'] = $entry[1];
-		}
-		if (!empty ($entry[2]) ) {
-			$newperson['LastName'] = $entry[2];
-			$newSubReq['Last_Name__c'] = $entry[2];
-		}
-	
-		if (!empty ($entry[61]) ) {
-			$newperson['Unique_Title__c'] = $entry[61];
-			$newSubReq['Unique_Title__c'] = $entry[61];
-		}	
-		
-		if (!empty ($entry[5])){
-			$newperson['PersonTitle'] = $entry[5];
-			$newSubReq['Title__c'] = $entry[5];
-		}
-		$OptedOutflag = 0;
-
-
-		if (!empty ($entry['57.1'])){
-			$newperson['eSN_This_Week__c'] = $entry['57.1'];
-			if ($entry['57.1'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eSN_This_Week__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.2'])){
-			$newperson['eSN_Today__c'] = $entry['57.2'];
-			if ($entry['57.2'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eSN_Today__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.3'])){
-			$newperson['eSN_IT_School_Leadership__c'] = $entry['57.3'];
-			if ($entry['57.3'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eSN_IT_School_Leadership__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.4'])){ /* Check on this field */
-			$newperson['MyeCN_EdTech_Leadership__c'] = $entry['57.4'];
-			if ($entry['57.4'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['MyeCN_EdTech_Leadership__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.5'])){
-			$newperson['eCN_Today__c'] = $entry['57.5'];
-			if ($entry['57.5'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eCN_Today__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.6'])){
-			$newperson['eCN_This_Week__c'] = $entry['57.6'];
-			if ($entry['57.6'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eCN_This_Week__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.7'])){
-			$newperson['eCN_IT_School_Leadership__c'] = $entry['57.7'];
-			if ($entry['57.7'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eCN_IT_School_Leadership__c'] = "Not Subscribed";
-		}
-		if (!empty ($entry['57.8'])){
-			$newperson['eClassroom_News__c'] = $entry['57.8'];
-			if ($entry['57.8'] == 'Subscribed'){$OptedOutflag = 1;}
-		} else {
-			$newperson['eClassroom_News__c'] = "Not Subscribed";
-		}
-
-		$newperson['eSN_Offers__c'] = "Not Subscribed";
-		$newperson['Partner_Offers__c'] = "Not Subscribed";
-		$newperson['eCN_Offers__c'] = "Not Subscribed";
-		$newperson['eCN_Partners__c'] = "Not Subscribed";
-	
-		//special update unsub flag if they subscribe to anything...  else do not change it.
-		if ($OptedOutflag == 1){
-			$newperson['PersonHasOptedOutOfEmail'] = false; 
-		}	
-		
-		mail('vcarlson@eschoolnews.com','SF Subscription request newperson', $newperson );
-		
-		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
-		
-		echo '<pre>'. print_r($newperson).'</pre>';
-		
-		
-		if ($upsertResponse->success==1)
-		{
-			//Saved for later use							
-					mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 138');
-			
-		} else { 
-			$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
-			mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 142');
-		} 
-	
-	$formsuccess = validateint($_GET['success']);
-	
-	}
-// end funtion SF_Account_Upsert
-}
-
  
  /*
 function SF_Account_Upsert($entry, $form){
@@ -595,11 +435,10 @@ As a registered member you will have complete access to all our breaking news, e
 
 
 <?php 
-$opt_form1submit = 'is_submit_'.$$opt_form1;
-$opt_form2submit = 'is_submit_'.$$opt_form2;
+$opt_form1submit = 'is_submit_'.$opt_form1;
+$opt_form2submit = 'is_submit_'.$opt_form2;
 
 if ( ( !isset($_GET["zipc"]) && !isset($_GET["orgtype"]) ) and (empty($_POST) or (!empty($_POST) and ($_POST[$opt_form1submit] == 1)))){ 
-
 		 gravity_form($opt_form1, false, false, false); 
 
 //Begin Step 1 request zip if the form has not been submitted use gravity form in $opt_form1
@@ -607,7 +446,6 @@ if ( ( !isset($_GET["zipc"]) && !isset($_GET["orgtype"]) ) and (empty($_POST) or
  } else if ( ( isset($_GET["zipc"]) && isset($_GET["orgtype"]) && !isset($_GET["step3"] ) ) and (empty($_POST) or (!empty($_POST) and ($_POST[$opt_form2submit] == 1)))) { 
 
  // ^ in this if we check if they are on step 2
-echo 'HEY IM at 610';
 
  if (isset($_GET["country"]) && $_GET["country"] == 'United States'){
 // check if they are United States if not skip this
@@ -616,9 +454,6 @@ echo 'HEY IM at 610';
 	 
 	 if($zipcode == 0){ $skipto3 = 1; // checking the zip code if it fails skip to step 3
 	  }
-
-echo 'HEY IM at 620'; echo $_GET[orgtype];	  
-	  
 //below check if k-12 or HE then connect to agile and get XML from them.	 
 if (in_array($_GET[orgtype], array('School Building','School District','Federal/State Level Education','K-12 Education','Other'))) { 
   $url = 'https://lookupws.agile-ed.com/ServiceVer1.asmx/LookupZipK12?id=eSchoolMedia&accesscode=gk49S2uW3V&zip='.$zipcode;
@@ -626,15 +461,9 @@ if (in_array($_GET[orgtype], array('School Building','School District','Federal/
 
   $url = 'https://LookupWS.agile-ed.com/ServiceVer1.asmx/LookupZipHE?id=eSchoolMedia&accesscode=gk49S2uW3V&zip='.$zipcode;
 
-
-
 } else { $skipto3 = 1; }
 // not us, skip to step 3
-echo  $url;
   $xml = simplexml_load_file($url);
-echo '<pre>';
-print_r($xml);
-echo '</pre>';
 
 if($skipto3 == 1){
 	
@@ -655,11 +484,7 @@ if($skipto3 == 1){
 			} else {
 
 //Note when changing drop down values, we also need to use the gform_admin_pre_render so that the right values are displayed when editing the entry.
-
-echo '658';
-
 $gform_pre_render_form2 = 'gform_pre_render_'. $opt_form2 ;
-echo $gform_pre_render_form2;
 add_filter($gform_pre_render_form2, "populate_radio_buttons");
 
 function populate_radio_buttons($form){
