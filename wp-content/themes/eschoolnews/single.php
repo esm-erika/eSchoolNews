@@ -61,6 +61,10 @@ include('single-coa.php');
 
 						the_field('Alt Author Read More Name');
 
+					}elseif(get_field('Byline')){
+
+						the_field('Byline');
+
 					} else {
 
 						the_author();
