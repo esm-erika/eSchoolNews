@@ -23,18 +23,6 @@ $resourcessection = 0;
 	$args = array(
 		'post_type' => array('special-reports','ercs'),
 		'posts_per_page' => -1,
-		'tax_query' => array(
-		'relation' => 'OR',
-			array(
-				'taxonomy' => 'status',
-				'field' => 'slug',
-				'terms' => 'active-erc'
-			),
-			// array(
-			// 	'taxonomy' => 'eventtags',
-			// 	'field' => 'slug',
-			// 	'terms' => 'favourite'
-			// )
 		)
 	);
 

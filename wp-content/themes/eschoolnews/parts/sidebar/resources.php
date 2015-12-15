@@ -1,16 +1,4 @@
-<?php // The Query
 
-if(is_post_type_archive('webinars' )) {
-	$resources = new WP_Query(array(
-	'post_type' => array( 'whitepapers', 'ercs', 'specialreports'),
-	'posts_per_page' => '5'
-	)); 
-} else {
-	$resources = new WP_Query(array(
-	'post_type' => array( 'whitepapers', 'ercs', 'specialreports', 'webinars'),
-	'posts_per_page' => '5'
-	));
-} ?>
 
 <article>
 
@@ -21,7 +9,26 @@ if(is_post_type_archive('webinars' )) {
 	<?php } ?>
 	<ul>
 
-		<?php while ( $resources->have_posts() ) : $resources -> the_post(); ?>
+		<?php // The Query
+
+if(is_post_type_archive('webinars' )) {
+	$args = array(
+		'post_type' => array('special-reports','ercs','whitepapers'),
+		'posts_per_page' => -1,
+		)
+	);
+} else {
+	$args = array(
+		'post_type' => array('special-reports','ercs','whitepapers','webinars'),
+		'posts_per_page' => -1,
+		)
+	);
+} 
+	
+$resources = new WP_Query( $args );
+
+?>
+
 
 		<li>
 <?php get_template_part('parts/flags'); ?> 

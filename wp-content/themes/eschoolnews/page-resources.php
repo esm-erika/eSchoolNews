@@ -62,33 +62,20 @@ if (false === ($local_box_cache) ){
 
 		<?php // The Query
 
-		$ercs = get_posts(array(
-			'post_type' => 'ercs',
-			'status' => 'active-erc'
-	 		));
-		//second query
-		$specialreports = get_posts(array(
-				'post_type' => 'special-reports'
-		 		));
-		$whitepapers = get_posts(array(
-				'post_type' => 'whitepapers'
-		 		));
+		$args = array(
+		'post_type' => array('special-reports','ercs','whitepapers','webinars'),
+		'posts_per_page' => -1,
+		)
+	);
+	
+$resources = new WP_Query( $args );
 
-		$resources = array_merge( $ercs, $specialreports, $whitepapers ); //combine queries
-
-		foreach ( $resources as $post ) : setup_postdata( $post ); 
-
-		?>
-
+?>
 		<article class="row">
 
 			<div class="medium-4 columns">
 
-				<?php $smallsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-				$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?> 
-
-				<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
-
+			<?php the_post_thumbnail('medium-portrait'); ?>
 			</div>
 
 			<header class="medium-8 columns">
