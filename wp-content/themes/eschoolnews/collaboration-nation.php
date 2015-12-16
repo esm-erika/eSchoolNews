@@ -94,9 +94,10 @@
 
 			<?php 
 
+			$pageslug = the_slug();
+
 			$args = array(
-				'post_type' => 'page',
-				'posts_per_page' =>'1'
+				'pagename' => $pageslug
 			);
 
 			$the_query = new WP_Query( $args ); ?>
