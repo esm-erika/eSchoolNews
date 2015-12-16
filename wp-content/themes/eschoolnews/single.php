@@ -56,12 +56,19 @@ include('single-coa.php');
 			} else { ?>
 
 				<div class="small-caps">
-					By 
+					
 					<?php  if( get_field('Alt Author Read More Name')) {
+
+						echo 'By ';
 
 						the_field('Alt Author Read More Name');
 
+					}elseif(get_field('Byline')){
+
+						the_field('Byline');
+
 					} else {
+						echo 'By ';
 
 						the_author();
 
@@ -163,7 +170,11 @@ custom_wp_link_pages();
 
 			<?php get_template_part('parts/social'); ?>
 
-			<?php get_template_part('parts/authors'); ?>
+			<?php 
+
+			get_template_part('parts/authors'); 
+
+			?>
 			
 
 				
@@ -175,7 +186,7 @@ custom_wp_link_pages();
 
 				<?php if( has_tag()) { ?>
 				<br/>
-				<footer class="panel tags">
+				<footer class="panel related-tags">
 					<h6>Related Tags</h6>
 					<p><?php the_tags('','',''); ?></p>
 				</footer>

@@ -83,17 +83,7 @@
 
 <li>
 <?php get_template_part('parts/flags'); ?>
-  		
-
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		<div class="small-caps"> 
-  			<?php if( 'post' == get_post_type()){ 
-  				echo 'By ';
-  				the_author();	 	
-  			 } else {
-  			 	echo '';
-  			 } ?>
-  		</div>
+<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 </li>
 
 

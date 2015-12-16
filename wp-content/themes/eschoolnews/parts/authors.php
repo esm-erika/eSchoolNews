@@ -1,14 +1,18 @@
 <div class="author-bio row">
 
-					<div class="hide-for-small-only medium-2 columns author-avatar small-text-center">
-						<?php 
-							if(function_exists('get_avatar')) {
-								echo get_avatar($post->post_author, 50); 
-							}
-						?>
-					</div>
+						<?php if(function_exists('get_avatar')) { ?>
+							<div class="hide-for-small-only medium-2 columns author-avatar small-text-center">
 
-					<div class="small-12 medium-10 columns author-bio-text">
+								<?php echo get_avatar($post->post_author, 50); ?>
+							</div>
+							<div class="small-12 medium-10 columns author-bio-text">
+							<?php } else { ?>
+
+							<div class="small-12 medium-12 columns author-bio-text">
+
+							<?php } ?>
+					
+
 						
 							<strong>About the Author:</strong> <br>
 
@@ -70,12 +74,21 @@
 
 							<?php } ?>
 
-						<?php if ( get_field('contributor_bio') || get_field( 'contributor_name') || get_field('contributor_email') ) { ?>
-						
-						<?php the_field('contributor_bio'); ?>
+						<?php 
 
-						<?php } else { ?>
+						$contributor_bio = get_field('contributor_bio');
+
+						if ( get_field('contributor_bio')) { 
 						
+							the_field('contributor_bio'); 
+
+				
+							} elseif( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) { 
+
+								echo 'TEST';
+							
+							} else { ?>
+
 						<p><?php echo get_the_author_meta('description'); ?></p>
 
 						<?php } ?>
