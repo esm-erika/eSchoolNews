@@ -33,7 +33,7 @@ get_header(); ?>
 
 <div class="row">
 
-	<div class="small-12 large-8 columns">
+	<div class="small-12 medium-8 columns">
 
 		<?php get_template_part('parts/resources-section'); ?>		
 
