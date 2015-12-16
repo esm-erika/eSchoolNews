@@ -131,7 +131,6 @@ global $cat;
 
 		<a href="#" class="submit-button right">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
-			<span>ENTRY FORM</span>
 		</a>
 	</div>
 </div>
@@ -160,15 +159,12 @@ global $cat;
 			<?php endwhile; 
 			wp_reset_postdata(); ?>
 
-			<a href="#" class="button-entry">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter_green.png" alt="Enter Today!">
-			</a>
-
 		</div>
 	</div>
+</section>
 
-	<br><br>
 
+<section class="submission-twitter">
 	<div class="row">
 		<div class="small-12 medium-7 columns submission">
 			<h4>Submission Deadlines</h4>
@@ -191,8 +187,8 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 Facebook. Then the school or district with the most votes will win a $15,000 prize
 in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
 			
-			<a href="#" class="button-entry">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter.png" alt="Enter Today!">
+			<a href="#" class="button-faq">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter.png" alt="Enter">
 			</a>
 		</div>
 
@@ -209,8 +205,9 @@ in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
 
 		</div>
 	</div>
-	<br><br>
+</section>
 
+<section class="partners">
 	<div class="row">
 		<div class="medium-12 columns">
 			<h4>In Partnership With</h4>
@@ -253,4 +250,3 @@ in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
 
 </body>
 </html>
-

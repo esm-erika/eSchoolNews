@@ -1167,7 +1167,7 @@ body.category-collaboration {
 }
 
 section {
-	padding: 50px 0 0 0;
+	padding: 20px 0 0 0;
 	margin-top: 20px;
 
 }
@@ -1369,6 +1369,10 @@ header {
 					display: block;
 					text-align: center;
 				}
+
+				a {
+					display: block;
+				}
 			}
 
 			.home a {
@@ -1397,9 +1401,21 @@ header {
 		}
 
 		.submit-button {
-			width: 20%;
-    		text-align: right;
+			width: 15%;
+    		text-align: center;
     		margin-top: -30px;
+    		color: #4c4c4c;
+
+    		img {
+    			// width: 75%;
+    		}
+
+    		span {
+    			width: 100%;
+    			text-align: center;
+    			padding-top: 5px;
+    			display: block;
+    		}
 		}
 	}
 
