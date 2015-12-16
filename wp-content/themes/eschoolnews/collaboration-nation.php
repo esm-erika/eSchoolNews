@@ -66,50 +66,12 @@
 	<div class=" row buttons-container">
 		
 	<div class="medium-12 columns">
-		<ul class="button-menu left">
-			<li class="home">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home-button.png" alt="Home">
-					<span>HOME</span>
-				</a>
-			</li>
-
-			<li class="prizes">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Prizes">
-					<span>PRIZES</span>
-				</a>
-			</li>
-
-			<li class="judges">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/judges-button.png" alt="Judges">
-					<span>JUDGES</span>
-				</a>
-			</li>
-
-			<li class="rules">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/rules-button.png" alt="Rules">
-					<span>RULES</span>
-				</a>
-			</li>
-
-			<li class="faq">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/faq-button.png" alt="FAQs">	
-					<span>FAQs</span>
-				</a>
-			</li>
-
-			<li class="about">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about-button.png" alt="About">
-					<span>ABOUT</span>
-				</a>
-			</li>
-			
-		</ul>
+		<a href="#" class="menu-icon left">
+			<?php if (is_page()){ ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
+			<?php } ?>
+		</a>
+		
 
 		<a href="#" class="submit-button right">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
@@ -117,7 +79,7 @@
 	</div>
 </div>
 
-<section class="home">
+<section class="inside">
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered columns">
 
