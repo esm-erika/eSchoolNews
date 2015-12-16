@@ -211,7 +211,7 @@ in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
 	</div>
 	<br><br>
 
-	<div class="row">
+	<div class="row partnerships">
 		<div class="medium-12 columns">
 			<h4>In Partnership With</h4>
 			<hr>
