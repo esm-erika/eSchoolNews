@@ -52,7 +52,34 @@ global $page;
 				<header>
 				<?php //get_template_part('parts/flags'); ?>
 				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					<div class="small-caps">By <?php the_author(); ?></div>
+					<?php if( get_field('remove_author')) { 
+
+							echo '';
+
+						} else { ?>
+
+							<div class="small-caps">
+								
+								<?php  if( get_field('Alt Author Read More Name')) {
+
+									echo 'By ';
+
+									the_field('Alt Author Read More Name');
+
+								}elseif(get_field('Byline')){
+
+									the_field('Byline');
+
+								} else {
+									echo 'By ';
+
+									the_author();
+
+								} ?>
+
+							</div>
+
+						<?php } ?>
 					<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>	
 
 				
@@ -206,8 +233,35 @@ $featured = new WP_Query(array(
 			<header> 
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="small-caps">By <?php the_author(); ?></p>
 
+				<?php if( get_field('remove_author')) { 
+
+					echo '';
+
+				} else { ?>
+
+					<div class="small-caps">
+						
+						<?php  if( get_field('Alt Author Read More Name')) {
+
+							echo 'By ';
+
+							the_field('Alt Author Read More Name');
+
+						}elseif(get_field('Byline')){
+
+							the_field('Byline');
+
+						} else {
+							echo 'By ';
+
+							the_author();
+
+						} ?>
+
+					</div>
+
+				<?php } ?>
 				<div class="excerpt">
 					<?php 
 					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
