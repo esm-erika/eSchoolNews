@@ -93,7 +93,7 @@ global $cat;
 			</li>
 
 			<li class="prizes">
-				<a href="<?php site_url(); ?>/collaboration-nation-2016/prizes">
+				<a href="<?php site_url(); ?>/collaboration-nation-2016/winners">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Prizes">
 					<span>PRIZES</span>
 				</a>
