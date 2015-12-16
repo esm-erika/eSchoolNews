@@ -12,8 +12,35 @@ register_nav_menus(array(
 	'top-bar-l' => 'Left Top Bar', // Registers the menu in the WordPress admin menu editor.
 	'top-bar-r' => 'Right Top Bar',
     'top-bar-c' => 'Centered Top Bar',
+    'collaboration' => 'Collaboration Nation',
 	'mobile-off-canvas' => 'Mobile',
 ));
+
+
+/**
+ * Collaboration Nation Menu
+ * http://codex.wordpress.org/Function_Reference/wp_nav_menu
+ */
+
+if ( ! function_exists( 'collaboration_nation' ) ) {
+    function collaboration_nation() {
+
+        wp_nav_menu(array(
+            'container' => false,                           // Remove nav container
+            'container_class' => '',                        // Class of container
+            'menu' => '',                                   // Menu name
+            'menu_class' => 'collaboration-menu top-bar-menu',     // Adding custom nav class
+            'theme_location' => 'collaboration',                // Where it's located in the theme
+            'before' => '',                                 // Before each link <a>
+            'after' => '',                                  // After each link </a>
+            'link_before' => '<span>',                            // Before each link text
+            'link_after' => '</span>',                             // After each link text
+            'depth' => 5,                                   // Limit the depth of the nav
+            'fallback_cb' => false,                         // Fallback function (see below)
+            'walker' => new Foundationpress_Top_Bar_Walker(),
+        ));
+    }
+}
 
 /**
  * Centered top bar

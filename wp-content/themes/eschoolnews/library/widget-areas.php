@@ -49,6 +49,16 @@ function foundationpress_sidebar_widgets() {
 	  'after_title' => '</h5>',
 	));
 
+	register_sidebar(array(
+	  'id' => 'collaboration-widgets',
+	  'name' => __( 'Sites widgets', 'foundationpress' ),
+	  'description' => __( 'Drag widgets to sites container', 'foundationpress' ),
+	  'before_widget' => '<li>',
+	  'after_widget' => '</li>',
+	  'before_title' => '<h5 style="display: none;">',
+	  'after_title' => '</h5>',
+	));
+
 
 }
 
