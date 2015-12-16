@@ -89,7 +89,7 @@
 
 <section class="inside <?php the_slug(); ?>">
 	<div class="row">
-		<div class="small-12 medium-8 medium-centered columns">
+		<div class="small-12 medium-10 medium-centered columns">
 
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
