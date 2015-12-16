@@ -1225,7 +1225,7 @@ footer {
 		}
 
 		li.active:not(.has-form) a:not(.button) {
-			color: #4c4c4c !important;
+			color: #fff !important;
 		}
 
 		li:last-child {
@@ -1323,6 +1323,10 @@ background: rgba(255,255,255,0.8);
 				padding: 3px 0.9375rem;
 				border-right: 1px solid #4c4c4c;
 			}
+		}
+
+		li.active:not(.has-form) a:not(.button) {
+			color: #4c4c4c !important;
 		}
 
 		li:last-child {
