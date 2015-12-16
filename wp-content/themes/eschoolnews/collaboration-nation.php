@@ -94,14 +94,13 @@
 
 			<?php 
 
-			global $post;
+			// global $post;
 			// $slug = get_post( $post )->post_name;
-			$slug = $post->slug;
 
-			$args = array(
-				'pagename' => $slug,
-				'posts_per_page' => '1'
-			);
+			// $args = array(
+			// 	'pagename' => $slug,
+			// 	'posts_per_page' => '1'
+			// );
 
 			// echo '<pre>';
 			// var_dump($slug);
