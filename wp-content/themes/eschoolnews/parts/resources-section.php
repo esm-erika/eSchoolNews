@@ -49,9 +49,11 @@ $resources = new WP_Query( $args );
 				the_field('masthead_text');
 			 } ?>
 
-			 <?php if( 'special-reports' == get_post_type()){ 
-				the_content();
-			 } ?>
+			 <?php if( 'special-reports' == get_post_type()){ ?>
+				
+				<?php echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); ?> 
+							
+			<?php } ?>
 
 
 		</header>
