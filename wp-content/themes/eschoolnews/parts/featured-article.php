@@ -98,7 +98,35 @@
 			<header> 
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="small-caps">By <?php the_author(); ?></p>
+				<?php if( get_field('remove_author')) { 
+
+						echo '';
+
+					} else { ?>
+
+						<div class="small-caps">
+							
+							<?php  if( get_field('Alt Author Read More Name')) {
+
+								echo 'By ';
+
+								the_field('Alt Author Read More Name');
+
+							}elseif(get_field('Byline')){
+
+								the_field('Byline');
+
+							} else {
+								echo 'By ';
+
+								the_author();
+
+							} ?>
+
+						</div>
+
+					<?php } ?>
+
 
 				<div class="excerpt">
 					<?php 

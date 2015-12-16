@@ -104,19 +104,34 @@ if (false === ($local_box_cache) ){
 						<span class="flag content"><a href="<?php the_permalink(); ?>">News</a></span>
 
 						<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<div class="small-caps">
-							By 
-							<?php  if( get_field('Alt Author Read More Name')) {
+						<?php if( get_field('remove_author')) { 
 
-								the_field('Alt Author Read More Name');
+								echo '';
 
-							} else {
+							} else { ?>
 
-								the_author();
+								<div class="small-caps">
+									
+									<?php  if( get_field('Alt Author Read More Name')) {
 
-							} ?>
+										echo 'By ';
 
-						</div>
+										the_field('Alt Author Read More Name');
+
+									}elseif(get_field('Byline')){
+
+										the_field('Byline');
+
+									} else {
+										echo 'By ';
+
+										the_author();
+
+									} ?>
+
+								</div>
+
+							<?php } ?>
 						<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
 					</article>
 					<hr/>
