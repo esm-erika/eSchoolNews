@@ -87,7 +87,7 @@
 	</div>
 </div>
 
-<section class="inside">
+<section class="inside <?php the_slug(); ?>">
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered columns">
 
