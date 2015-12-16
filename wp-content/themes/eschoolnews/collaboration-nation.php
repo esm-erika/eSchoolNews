@@ -143,47 +143,6 @@
 	</div>
 
 	<div class="row">
-		<div class="small-12 medium-7 columns submission">
-			<h4>Submission Deadlines</h4>
-			<hr>
-			<ul>
-				<li style="background: #dfeed4;"><strong>Grand Prize:</strong> Entries accepted February 1 – April 30</li>
-				<li style="background: #d3e3f5;"><strong>February Monthly Prize:</strong><br/>
-Entries accepted from 2/1-2/29 and voting takes place from 3/1-3/15</li>
-				<li style="background: #fdddc7;"><strong>March Monthly Prize:</strong><br/>
-Entries accepted from 3/1-3/31 and voting takes place from 4/1-4/15</li>
-				<li style="background: #d3c9e2;"><strong>April Monthly Prize:</strong><br/>
-Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
-			</ul>
-
-			<br><br>
-
-			<h4>Submit Your Entry and Become Part of the Collaboration Nation Community on <span style="color: #1f58a0;">Facebook</span> <a href="#" class="facebook"><i class="fi-social-facebook"></i></a></h4>
-			<hr>
-			<p>Submit your entry form and a short video of your collaboration success on
-Facebook. Then the school or district with the most votes will win a $15,000 prize
-in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
-			
-			<a href="#" class="button-faq">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter.png" alt="Enter">
-			</a>
-		</div>
-
-		<div class="small-12 medium-4 columns twitter">
-			<h4>Twitter <a href="#" class="twitter"><i class="fi-social-twitter"></i></a></h4>
-			<hr>
-
-			<br><br>
-			<h4>Questions? Want to Learn More?</h4>
-			<hr>
-			<a href="#" class="button-faq">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-faq.png" alt="FAQs">
-			</a>
-
-		</div>
-	</div>
-
-	<div class="row">
 		<div class="medium-12 columns">
 			<h4>In Partnership With</h4>
 			<hr>
