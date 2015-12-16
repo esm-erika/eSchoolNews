@@ -1224,10 +1224,8 @@ footer {
 
 		}
 
-		li.active {
-			a {
-				color: #4c4c4c;
-			}
+		li.active:not(.has-form) a:not(.button) {
+			color: #4c4c4c !important;
 		}
 
 		li:last-child {

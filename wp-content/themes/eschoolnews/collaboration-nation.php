@@ -95,7 +95,8 @@
 			<?php 
 
 			global $post;
-			$slug = get_post( $post )->post_name;
+			// $slug = get_post( $post )->post_name;
+			$slug = $post->slug;
 
 			$args = array(
 				'pagename' => $slug,
