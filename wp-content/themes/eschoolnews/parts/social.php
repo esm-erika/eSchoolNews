@@ -19,5 +19,5 @@
 		}
      ?>
 
-     <a rel="nofollow" data-shared="" class="share-print sd-button share-icon no-text" href="<?php permalink(); ?>/?print" target="_blank" title="Click to print"><span></span><span class="sharing-screen-reader-text">Click to print (Opens in new window)</span></a>
+     <a rel="nofollow" data-shared="" class="share-print sd-button share-icon no-text" href="<?php the_permalink(); ?>/?print" target="_blank" title="Click to print"><span></span><span class="sharing-screen-reader-text">Click to print (Opens in new window)</span></a>
 </div>
