@@ -18,13 +18,20 @@
 
 							<h4 class="left small-text-center">
 
-							<?php if ( get_field('contributor_bio') || get_field( 'contributor_name') || get_field('contributor_email') ) { ?>
+							<?php if( get_field('contributor_bio')) { ?>
 							
 								<?php the_field('contributor_name'); ?>
 
-							<?php } else { ?>
+							<?php } elseif( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) { 
 
-							<?php //echo the_author_posts_link(); 
+								echo '';
+
+							?>
+
+							<?php } else {  
+
+						 		//echo the_author_posts_link(); 
+						
 								the_author();
 							?>
 
@@ -85,7 +92,7 @@
 				
 							} elseif( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) { 
 
-								echo 'TEST';
+								echo '';
 							
 							} else { ?>
 
