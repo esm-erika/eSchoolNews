@@ -1368,9 +1368,10 @@ header {
 .partnerships {
 	ul li {
 		text-align: center;
-		
+		width: 25%;
+
 		img {
-			width: 20px;
+			max-width: 100px;
 		}
 	}
 }
