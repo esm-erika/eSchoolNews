@@ -44,16 +44,14 @@ $resources = new WP_Query( $args );
 		<header class="small-12 medium-8 columns"> 
 			<?php get_template_part('parts/flags'); ?>
 			<h4> <a href="<?php the_permalink();?>"><?php the_title( ); ?></a></h4>
+			
+			<?php if( 'ercs' == get_post_type()){ 
+				the_field('masthead_text');
+			 } ?>
 
-			<?php if( 'webinars' == get_post_type()){ ?>
-			<h5><i class="fi-calendar"></i> <?php 
-			$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
-			if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
-			<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
-
-			<?php } ?>
-
-			<?php the_field('masthead_text') ?>
+			 <?php if( 'special-reports' == get_post_type()){ 
+				the_content();
+			 } ?>
 
 
 		</header>
