@@ -106,15 +106,15 @@
 			// var_dump($slug);
 			// echo '</pre>';
 
-			$the_query = new WP_Query( $args ); ?>
+			//$the_query = new WP_Query( $args ); ?>
 
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php //while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
 				<?php the_content(); ?>
 
-			<?php endwhile; 
-			wp_reset_postdata(); ?>
+			<?php //endwhile; 
+			//wp_reset_postdata(); ?>
 
 		</div>
 	</div>
