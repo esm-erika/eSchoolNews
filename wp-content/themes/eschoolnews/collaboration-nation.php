@@ -143,7 +143,8 @@ global $cat;
 			<?php 
 
 			$args = array(
-				'pagename' => 'collaboration-home'
+				'post_type' => 'post',
+				'posts_per_page' =>'1'
 			);
 
 			$the_query = new WP_Query( $args ); ?>
