@@ -225,7 +225,7 @@ in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
 
 <footer>
 	<div class="row">
-		<div class="medium-8 medium-centered columns">
+		<div class="medium-6 medium-centered columns">
 
 			<img class="star left" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/star.png" alt="Star" class="left">
 			<?php collaboration_nation(); ?>
