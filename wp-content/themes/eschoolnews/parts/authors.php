@@ -22,7 +22,11 @@
 							
 								<?php the_field('contributor_name'); ?>
 
-							<?php } elseif( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) { 
+							<?php 
+
+							$contributor_bio = get_field('contributor_bio');
+
+							} elseif( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) { 
 
 								echo '';
 
