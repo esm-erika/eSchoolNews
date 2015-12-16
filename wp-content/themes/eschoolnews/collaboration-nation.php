@@ -142,6 +142,8 @@
 		</div>
 	</div>
 
+	<br><br>
+
 	<div class="row">
 		<div class="medium-12 columns">
 			<h4>In Partnership With</h4>
