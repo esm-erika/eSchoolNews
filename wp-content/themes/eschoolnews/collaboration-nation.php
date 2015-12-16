@@ -93,7 +93,16 @@
 
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
-				<?php the_content(); ?>
+				<?php 
+				if ( have_posts() ) {
+					while ( have_posts() ) {
+						the_post(); 
+						//
+						the_content();
+						//
+					} // end while
+				} // end if
+				?>
 
 		</div>
 	</div>
@@ -114,7 +123,7 @@
 
 <footer>
 	<div class="row">
-		<div class="medium-8 medium-centered columns">
+		<div class="medium-10 medium-centered columns">
 
 			<img class="star left" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/star.png" alt="Star" class="left">
 			<?php collaboration_nation(); ?>
