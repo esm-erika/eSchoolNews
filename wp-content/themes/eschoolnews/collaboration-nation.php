@@ -97,7 +97,7 @@
 			$pageslug = the_slug();
 
 			$args = array(
-				'pagename' => $pageslug
+				'pagename' => $pageslug;
 			);
 
 			$the_query = new WP_Query( $args ); ?>
