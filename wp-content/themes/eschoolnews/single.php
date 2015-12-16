@@ -8,8 +8,6 @@
  */
 if ( in_category( 'Leading the Digital Leap' )) { // can be removed with 4.4 update -- thank you ahead of public release documentation.
 	include('single-post-leading-the-digital-leap.php');
-} elseif( in_category('collaboration')) {
-	include('collaboration-nation.php');
 } else {
 get_header();
  ?>

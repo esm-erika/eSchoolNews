@@ -1,22 +1,4 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
- */ 
-
-global $cat;
-
-?>
+<?php /* Template Name: Collaboration Nation Template */ ?>
 
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -143,7 +125,7 @@ global $cat;
 			<?php 
 
 			$args = array(
-				'post_type' => 'post',
+				'post_type' => 'page',
 				'posts_per_page' =>'1'
 			);
 
@@ -152,20 +134,14 @@ global $cat;
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
-				<div class="calendar">
-					<span>168<br/>Days</span>
-				</div>
-
 				<?php the_content(); ?>
+
 			<?php endwhile; 
 			wp_reset_postdata(); ?>
 
 		</div>
 	</div>
-</section>
 
-
-<section class="submission-twitter">
 	<div class="row">
 		<div class="small-12 medium-7 columns submission">
 			<h4>Submission Deadlines</h4>
@@ -206,9 +182,7 @@ in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
 
 		</div>
 	</div>
-</section>
 
-<section class="partners">
 	<div class="row">
 		<div class="medium-12 columns">
 			<h4>In Partnership With</h4>

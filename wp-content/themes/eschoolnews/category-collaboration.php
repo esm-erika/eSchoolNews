@@ -144,7 +144,7 @@ global $cat;
 			<?php 
 
 			$args = array(
-				'pagename' => 'collaboration-home'
+				'pagename' => 'collaboration-nation-2016'
 			);
 
 			$the_query = new WP_Query( $args ); ?>
