@@ -193,7 +193,7 @@ custom_wp_link_pages();
 
 				<?php } ?>
 			<?php do_action( 'foundationpress_post_before_comments' ); ?>
-			<?php //comments_template(); ?>
+			<?php comments_template(); ?>
 			<?php do_action( 'foundationpress_post_after_comments' ); ?>
 		</article>
 
