@@ -51,7 +51,7 @@ function foundationpress_sidebar_widgets() {
 
 	register_sidebar(array(
 	  'id' => 'collaboration-widgets',
-	  'name' => __( 'Sites widgets', 'foundationpress' ),
+	  'name' => __( 'Collaboration Nation', 'foundationpress' ),
 	  'description' => __( 'Drag widgets to sites container', 'foundationpress' ),
 	  'before_widget' => '<li>',
 	  'after_widget' => '</li>',
