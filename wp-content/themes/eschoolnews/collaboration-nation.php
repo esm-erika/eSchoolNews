@@ -98,8 +98,13 @@
 			$slug = get_post( $post )->post_name;
 
 			$args = array(
-				'pagename' => $slug
+				'pagename' => $slug,
+				'posts_per_page' => '1'
 			);
+
+			echo '<pre>';
+			var_dump($slug);
+			echo '</pre>';
 
 			$the_query = new WP_Query( $args ); ?>
 
