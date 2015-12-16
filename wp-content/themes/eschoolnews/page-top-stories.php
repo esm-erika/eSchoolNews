@@ -47,7 +47,7 @@ if (false === ($local_box_cache) ){
 <div class="row">
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 medium-8 columns" role="main">
 
 	<?php // The Query
 
@@ -86,16 +86,16 @@ if (false === ($local_box_cache) ){
 				$largesrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?>
 
 
-				<div class="small-12 large-4 columns" role="main">
+				<div class="small-12 medium-4 columns" role="main">
 
 					<img data-interchange="[<?php echo $largesrc[0]; ?>, (default)], [<?php echo $smallsrc[0]; ?>, (large)]" alt="<?php the_title(); ?>">
 				</div>
-				<header class="small-12 large-8 columns">
+				<header class="small-12 medium-8 columns">
 
 					<?php } ?>
 
 					<?php if ( ! has_post_thumbnail( )) { ?>
-					<header class="small-12 large-12 columns">
+					<header class="small-12 medium-12 columns">
 						<?php } ?>
 
 						
