@@ -774,11 +774,13 @@ article {
 	    -webkit-border-radius: 50%;
 	    border: 0;
 	    box-shadow: none;
-	    padding: 8px;	    
+	    // padding: 8px;	    
 	    color: #777;
-	    line-height: 0;
+	    line-height: 32px;
 	    display: inline-block;
 	    text-align: center;
+	    width: 32px;
+	    height: 32px;
 
 	    i {
 	    	font-size: 14px;
