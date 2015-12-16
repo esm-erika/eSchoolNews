@@ -1147,6 +1147,284 @@ footer {
 }
 
 
+// Collaboration Nation 
+
+body.category-collaboration {
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 700;
+		color: #e41c38;
+
+		span {
+			text-transform: capitalize;
+			border-bottom: none;
+		}
+	}
+
+#logo {
+	max-height: 50px;
+	margin-right: 0.9375rem;
+}
+
+section {
+	padding: 50px 0 0 0;
+	margin-top: 20px;
+
+}
+
+.calendar {
+	background-image: url(../images/calendar-icon.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 130px;
+	height: 140px;
+	margin: 20px auto 30px;
+	line-height: 200px;
+	
+	span {
+		text-align: center;
+	    font-size: 30px;
+	    font-weight: 600;
+	    line-height: 30px;
+	    display: inline-block;
+		width: 100%;
+		margin-top: 55px;
+	}
+
+}
+
+
+
+footer {
+	background: #231f20;
+	padding: 30px 0;
+
+	.star {
+		width: 50px;
+	}
+
+	.collaboration-menu {
+		margin: 0;
+		float: left;
+		height: 50px;
+    	line-height: 50px;
+    	margin-left: 10px;
+
+		li {
+			list-style: none;
+			display: inline-block;
+
+			a {
+				color: #fff;
+				font-size: 80%;
+				border-right: 1px solid #fff;
+				padding: 2px 5px 2px 0px;
+			}
+		}
+	}
+}
+
+section.home {
+
+	background-image: url(../images/star-bg.png);
+	background-size: 400px;
+	background-position: top center;
+	background-repeat: no-repeat;
+
+	.page-title {
+		text-align: center;
+		
+		font-weight: 700;
+	}
+}
+
+div.social {
+	margin-left: 0.9375rem;
+	line-height: 50px;
+
+	a {
+		color: #fff;
+		font-size: 24px;
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		display: inline-block;
+		border-radius: 2px;
+		text-align: center;
+
+	}
+
+	.twitter {
+		background: #00a9e0;
+	}
+
+	.facebook {
+		background: #1f58a0;
+	}
+}
+
+a.twitter {
+		color: #fff;
+		font-size: 24px;
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		display: inline-block;
+		border-radius: 2px;
+		text-align: center;
+		background: #00a9e0;
+	}
+
+nav.top-bar {
+position: relative;
+padding: 5px 0;
+// background: transparent;
+background: rgba(255,255,255,0.8);
+
+	.top-bar-section {
+
+		// ul>.divider, ul>[role="separator"] {
+		// 	border-right: solid 1px #4c4c4c;
+		// }
+
+		ul li {
+			background: transparent;
+		}
+
+		ul li>a {
+			font-weight: 400;
+			color: #4c4c4c;
+			font-family: inherit;
+		}
+
+		li:not(.has-form) a:not(.button) {
+			background: transparent;
+			padding: 0;
+
+			span {
+				padding: 3px 0.9375rem;
+				border-right: 1px solid #4c4c4c;
+			}
+		}
+
+		li:last-child {
+			span {
+				border-right: none !important;
+			}
+		}
+		
+
+		.sponsored-by {
+			position: absolute;
+			right: 10px;
+			top: -0.9375rem;
+			background-color: #ffffff;
+			padding: 20px;
+			max-width: 200px;
+		}
+	}
+
+}
+
+header {
+	background: #fff;
+	background-size: cover;
+	background-position: center center;
+	background-image: url(../images/collaboration-banner.jpg);
+	height: 620px;
+	position: relative;
+	margin-bottom: 50px;
+	
+	img.text {
+		position: absolute;
+		bottom: 10px;
+	}
+
+
+}
+
+.buttons-container {
+		// max-width: 1045px;
+		// width: 1000px;
+	    margin: -120px auto 0;
+	    z-index: 9999;
+	    position: relative;
+
+		ul.button-menu {
+			margin:0;
+			width: 80%;
+
+			li {
+				text-align: center;
+			    list-style: none;
+			    display: inline-block;
+			    width: 15%;
+
+				img {
+					position: relative;
+				}
+
+				span {
+					display: block;
+					text-align: center;
+				}
+			}
+
+			.home a {
+				color: #6cbd45;
+			}
+
+			.prizes a {
+				color: #4d9dd6;
+			}
+
+			.judges a {
+				color: #e74b4a;
+			}
+
+			.rules a {
+				color: #f47f40;
+			}
+
+			.faq a {
+				color: #75499b;
+			}
+
+			.about a {
+				color: #fab441;
+			}
+		}
+
+		.submit-button {
+			width: 20%;
+    		text-align: right;
+    		margin-top: -30px;
+		}
+	}
+
+	div.submission {
+		ul {
+			margin: 0;
+			li {
+				list-style: none;
+				padding-left: 5px;
+				margin-bottom: 5px;
+				font-size: 90%;
+			}
+		}
+	}
+
+	div.twitter {
+		h4 {
+			margin: 0;
+		}
+	}
+
+
+}
+
+
 // Gravity Forms
 
 div.registration-form {
@@ -1201,6 +1479,7 @@ div.registration-form {
 		float: none;
 		display: inline-block;
 	}
+
 }
 
 
@@ -1208,6 +1487,8 @@ div.registration-form {
 	nav.tab-bar {
 		display: block;
 	}
+
+	
 
 	
 
