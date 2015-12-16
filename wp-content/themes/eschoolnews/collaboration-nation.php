@@ -67,8 +67,16 @@
 		
 	<div class="medium-12 columns">
 		<a href="#" class="menu-icon left">
-			<?php if (is_page()){ ?>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
+			<?php if (is_page('winners')){ ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Videos &amp; Winners">
+			<?php } elseif( is_page('judges')){ ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/judges-button.png" alt="Judges">
+			<?php } elseif( is_page('rules')){ ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/rules-button.png" alt="Rules">
+			<?php } elseif( is_page('faqs')){ ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/faqs-button.png" alt="FAQs">
+			<?php } elseif( is_page('about-us')){ ?>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about-button.png" alt="About Us">
 			<?php } ?>
 		</a>
 		
