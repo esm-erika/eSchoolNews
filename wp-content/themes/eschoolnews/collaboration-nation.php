@@ -94,10 +94,11 @@
 
 			<?php 
 
-			$pageslug = the_slug();
+			global $post;
+			$slug = get_post( $post )->post_name;
 
 			$args = array(
-				'pagename' => $pageslug;
+				'pagename' => $slug
 			);
 
 			$the_query = new WP_Query( $args ); ?>
