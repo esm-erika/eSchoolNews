@@ -91,30 +91,9 @@
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered columns">
 
-
-			<?php 
-
-			// global $post;
-			// $slug = get_post( $post )->post_name;
-
-			// $args = array(
-			// 	'pagename' => $slug,
-			// 	'posts_per_page' => '1'
-			// );
-
-			// echo '<pre>';
-			// var_dump($slug);
-			// echo '</pre>';
-
-			//$the_query = new WP_Query( $args ); ?>
-
-			<?php //while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
 				<?php the_content(); ?>
-
-			<?php //endwhile; 
-			//wp_reset_postdata(); ?>
 
 		</div>
 	</div>
