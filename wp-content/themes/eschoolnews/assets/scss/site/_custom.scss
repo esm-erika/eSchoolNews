@@ -1224,6 +1224,12 @@ footer {
 
 		}
 
+		li.active {
+			a {
+				color: #4c4c4c;
+			}
+		}
+
 		li:last-child {
 			a {
 				border-right: none;
@@ -1243,6 +1249,12 @@ section.home {
 		text-align: center;
 		
 		font-weight: 700;
+	}
+}
+
+.winners {
+	.page-title {
+
 	}
 }
 
