@@ -774,9 +774,13 @@ article {
 	    -webkit-border-radius: 50%;
 	    border: 0;
 	    box-shadow: none;
-	    padding: 8px;
-	    font-size: 12px;
+	    padding: 8px;	    
 	    color: #777;
+	    line-height: 0;
+
+	    i {
+	    	font-size: 12px;
+	    }
 	}
 }
 
