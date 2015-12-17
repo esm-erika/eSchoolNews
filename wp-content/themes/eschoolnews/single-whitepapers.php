@@ -127,8 +127,15 @@ get_header(); ?>
 										esmpassvalue => $esmuser[esmpassvalue],	
 										astc => $astc			
 										); 
-
-
+echo '<hr>';
+echo '<pre>';
+print_r($esmuser);
+echo '</pre>';
+echo '<hr>';
+echo '<pre>';
+print_r($WPautofill);
+echo '</pre>';
+echo '<hr>';
 									gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
 								}else if ($WPURL != null) { 
