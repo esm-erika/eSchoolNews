@@ -50,10 +50,34 @@ get_header(); ?>
 
 
 		<?php 
+		
+									global $esmuser;
+
+									$WPautofill = array(
+										wpuidSP => $esmuser[wpuid],
+										sfuidSP => $esmuser[sfuidSP],
+										PersonContactIdPS => $esmuser[PersonContactIdPS],
+										wpuid => $esmuser[wpuid],
+										sfuid => $esmuser[sfuid],
+										PersonContactId => $esmuser[PersonContactId],	
+										esmpassvalue => $esmuser[esmpassvalue],	
+										astc => $astc			
+										); 
+echo '<hr>';
+echo '<pre>';
+print_r($esmuser);
+echo '</pre>';
+echo '<hr>';
+echo '<pre>';
+print_r($WPautofill);
+echo '</pre>';
+echo '<hr>';		
+		
+		
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post(); 
-				echo '???????????????????';				//
+								//
 				the_content();
 								//
 							} // end while
@@ -109,9 +133,9 @@ get_header(); ?>
 							} else {
 								?>
 
-!!!!!!!!!!!!!!!!!!!!!!!!!
+
 								<?php the_content(); ?>
-!!!!!!!!!!!!!!!!!!!!!!!!!
+
 								<?php
 								if ($WPForm != null) {
 
@@ -127,15 +151,8 @@ get_header(); ?>
 										esmpassvalue => $esmuser[esmpassvalue],	
 										astc => $astc			
 										); 
-echo '<hr>';
-echo '<pre>';
-print_r($esmuser);
-echo '</pre>';
-echo '<hr>';
-echo '<pre>';
-print_r($WPautofill);
-echo '</pre>';
-echo '<hr>';
+
+
 									gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
 								}else if ($WPURL != null) { 
