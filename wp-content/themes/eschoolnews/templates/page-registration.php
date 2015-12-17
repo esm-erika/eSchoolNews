@@ -23,8 +23,8 @@ function validateint($inData) {
 	$gform_akismet_enabled = 'gform_akismet_enabled_'. $opt_form3 ;
 	$gform_post_submission = 'gform_post_submission_'. $opt_form3 ;
 
-add_filter($gform_akismet_enabled, "disable_akismet");
-add_action($gform_post_submission, "SF_Account_Upsert", 10, 2);
+add_filter("gform_akismet_enabled_223", "disable_akismet");
+add_action("gform_post_submission_223", "SF_Account_Upsert223", 10, 2);
 add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
  if($_GET['ocs']){ //information passed between forms
  
@@ -71,8 +71,8 @@ if($_GET["zipc"]){ $esnautofill = array(zip => $InstInZip->$_GET["zipc"]); }
 	 
  }
  
- /*
-function SF_Account_Upsert($entry, $form){
+
+function SF_Account_Upsert223($entry, $form){
 
 //upload information to salesforce from the final form.
 
@@ -81,10 +81,10 @@ function SF_Account_Upsert($entry, $form){
 	$USERNAME = "sfdcadmin1@eschoolnews.com"; //- variable that contains your Salesforce.com username (must be in the form of an email)
 	$PASSWORD = "eSNadm1n"; //- variable that contains your Salesforce.com password
 	$TOKEN = "qhO7UhNTUrYp8XU5eF1SRomDp"; //- variable that contains your Salesforce.com password
-	require_once ( ABSPATH . 'soapclient/SforceEnterpriseClient.php');
-	require_once ( ABSPATH . 'soapclient/SforceHeaderOptions.php');
+	require_once ( ABSPATH . '/soapclient/SforceEnterpriseClient.php');
+	require_once ( ABSPATH . '/soapclient/SforceHeaderOptions.php');
 	// Salesforce Login information
-	$wsdl = ABSPATH . 'soapclient/eSNenterprise.wsdl.xml';
+	$wsdl = ABSPATH . '/soapclient/eSNenterprise.wsdl.xml';
 	$mySforceConnectionu = new SforceEnterpriseClient();
 	$mySoapClient = $mySforceConnectionu->createConnection($wsdl);
 	$mylogin = $mySforceConnectionu->login($USERNAME, $PASSWORD.$TOKEN);
@@ -394,7 +394,7 @@ $formsuccess = validateint($_GET['success']);
 
 }
 
-*/
+
 
 ?>
 
@@ -480,7 +480,7 @@ if($skipto3 == 1){
 
 			if($skipto3 == 1){
 			// display final form if called.
-				gravity_form($opt_form3, false, false, false, $esnautofill);
+				gravity_form(223, false, false, false, $esnautofill);
 			} else {
 
 //Note when changing drop down values, we also need to use the gform_admin_pre_render so that the right values are displayed when editing the entry.
@@ -525,16 +525,16 @@ gravity_form($opt_form2, false, false, false);
 		}
 	 
 	 } else {
-		gravity_form($opt_form3, false, false, false, $esnautofill);
+		gravity_form(223, false, false, false, $esnautofill);
 	 }
 		  
  
  
  }else if (isset($_GET["ocs"]) && isset($_GET["country"]) && isset($_GET["orgtype"]) ) {    
- 		gravity_form($opt_form3, false, false, false, $esnautofill); ?>
+ 		gravity_form(223, false, false, false, $esnautofill); ?>
         
 <?php } else { 
-gravity_form($opt_form3, false, false, false, $esnautofill);
+gravity_form(223, false, false, false, $esnautofill);
 }  ?>                                
 
 		<?php endwhile; else : endif; ?>

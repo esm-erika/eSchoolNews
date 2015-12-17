@@ -102,4 +102,7 @@ require_once('library/next-page.php');
 /** Pagination */
 require_once('library/custom-link-pages.php');
 
+/** SF Functions */
+require_once('library/salesforce.php');
+
 ?>

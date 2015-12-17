@@ -1,23 +1,18 @@
 <?php 
+add_filter("gform_akismet_enabled_226", "disable_akismet");
+function SF_Account_Upsert226($entry, $form){
 
-function SF_Account_Upsert($entry, $form){
 
-
-	$opt_val3 = get_option( 'esm_gravity_sf_subscribe' );				
-		
-	if($opt_val3 == $form){ 	
-	
-	mail('vcarlson@eschoolnews.com','SF Subscription request made','line 9');
 		global $wpdb;
 	
 		ini_set("soap.wsdl_cache_enabled", "0");
 		$USERNAME = "sfdcadmin1@eschoolnews.com"; //- variable that contains your Salesforce.com username (must be in the form of an email)
 		$PASSWORD = "eSNadm1n"; //- variable that contains your Salesforce.com password
 		$TOKEN = "qhO7UhNTUrYp8XU5eF1SRomDp"; //- variable that contains your Salesforce.com password
-		require_once ( ABSPATH . 'soapclient/SforceEnterpriseClient.php');
-		require_once ( ABSPATH . 'soapclient/SforceHeaderOptions.php');
+		require_once ( ABSPATH . '/soapclient/SforceEnterpriseClient.php');
+		require_once ( ABSPATH . '/soapclient/SforceHeaderOptions.php');
 		// Salesforce Login information
-		$wsdl = ABSPATH . 'soapclient/eSNenterprise.wsdl.xml';
+		$wsdl = ABSPATH . '/soapclient/eSNenterprise.wsdl.xml';
 		$mySforceConnectionu = new SforceEnterpriseClient();
 		$mySoapClient = $mySforceConnectionu->createConnection($wsdl);
 		$mylogin = $mySforceConnectionu->login($USERNAME, $PASSWORD.$TOKEN);
@@ -126,7 +121,7 @@ function SF_Account_Upsert($entry, $form){
 			$newperson['PersonHasOptedOutOfEmail'] = false; 
 		}	
 		
-		mail('vcarlson@eschoolnews.com','SF Subscription request newperson', $newperson );
+		
 		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
@@ -147,7 +142,7 @@ function SF_Account_Upsert($entry, $form){
 	
 	}
 // end funtion SF_Account_Upsert
-}
+
 
 
 
