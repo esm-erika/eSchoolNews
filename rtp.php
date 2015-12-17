@@ -199,7 +199,37 @@ setcookie("esmpass", $esmpassvalue, time()+315360000);  /* expire in 10 years */
 echo $esmpassvalue;
 }
 
-
+echo '$Area__c'.$Area__c.
+'$pagecat'.$pagecat.
+'$pageattachment_id'.$pageattachment_id.
+'$Company__c'.$Company__c.
+'$PersonContactId'.$PersonContactId.
+'$cassetid__c'.$cassetid__c.
+'$ccampainid__c'.$ccampainid__c.
+'$esmcampain__c'.$esmcampain__c.
+'$esmclient__c'.$esmclient__c.
+'$gs__c'.$gs__c.
+'$q1__c'.$q1__c.
+'$q2__c'.$q2__c.
+'$q3__c'.$q3__c.
+'$q4__c'.$q4__c.
+'$q5__c'.$q5__c.
+'$pagertl'.$pagertl.
+'$pagertp'.$pagertp.
+'$Session_Page_Visits__c'.$Session_Page_Visits__c.
+'$Site_Name__c'.$Site_Name__c.
+'$URL'.$URL.
+'$dtVisit'.$dtVisit.
+'$pageid'.$pageid.
+'$pagetitle'.$pagetitle.
+'$wpuid'.$wpuid.
+'$pageid'.$pageid.
+'$ercid'.$ercid.
+'$URL'.$URL.
+'$siteprefix'.$siteprefix.
+'$esmpassvalue'.$esmpassvalue.
+'$ip'.$ip.
+'$attachment_i'.$attachment_id;
 
 $wpdb->query( $wpdb->prepare("INSERT INTO esm_sfl_user (dtDate, dtVisit, sfuid, wpuid, pageid, ercid, email, URL, pagetitle, visits, siteprefix, PersonContactId, cookie) 
 
@@ -212,7 +242,8 @@ $wpdb->query( $wpdb->prepare("INSERT INTO esm_lead (Area__c ,astc__c , attachmen
 
 
 if($rurl){ $url = $rurl;	}
-if($redirectto == 1){ header( 'Location: '.$url ) ;	}
+if($redirectto == 1){ //header( 'Location: '.$url ) ;	
+}
 
 ?><?php get_header(); ?>
 
