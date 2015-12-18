@@ -277,7 +277,7 @@ if ( $querytoparray->have_posts() ) {
 		
         <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;">
         
-       <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="text-decoration: none; color:#0072BC;" target="_blank"><?php the_post_thumbnail('176 x 103', array( 'align' => 'left', 'style' => 'border:1px solid #ccc' )); ?></a>
+       <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="text-decoration: none; color:#0072BC;" target="_blank"><?php the_post_thumbnail('small-landscape', array( 'align' => 'left', 'style' => 'border:1px solid #ccc' )); ?></a>
 	    </td>        <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;">
 		 <?php } else { ?> <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;">
          <?php } ?>
