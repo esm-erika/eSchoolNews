@@ -277,7 +277,7 @@ if ( $querytoparray->have_posts() ) {
 		
         <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;">
         
-       <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="text-decoration: none; color:#0072BC;" target="_blank"><?php the_post_thumbnail('thumbnail', array( 'align' => 'left', 'style' => 'border:1px solid #ccc' )); ?></a>
+       <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="text-decoration: none; color:#0072BC;" target="_blank"><?php the_post_thumbnail('x-small-landscape', array( 'align' => 'left', 'style' => 'border:1px solid #ccc' )); ?></a>
 	    </td>        <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;">
 		 <?php } else { ?> <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;">
          <?php } ?>
@@ -366,7 +366,7 @@ Brought to you by</span></td>
   <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left;">      
       
  
-	   <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color:#0072BC;" target="_blank"><?php the_post_thumbnail('thumbnail', array( 'align' => 'left', 'style' => 'border:1px solid #ccc; height:100px; width:100px ' )); ?></a>
+	   <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color:#0072BC;" target="_blank"><?php the_post_thumbnail('x-small-landscape', array( 'align' => 'left', 'style' => 'border:1px solid #ccc; height:100px; width:100px ' )); ?></a>
  </td>
  <?php } ?>
  <td style="padding-top:5pt;padding-right:5px;padding-bottom:10px;padding-left:5px; text-align: left; margin-bottom:10px;" valign="top">
