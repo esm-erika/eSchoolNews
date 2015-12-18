@@ -47,11 +47,6 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php if(get_field('subheader')){
-					echo '<h3 class="subheader">';
-					the_field('subheader');
-					echo '</h3>';
-			} ?>
 			
 
 			<?php if( get_field('remove_author')) { 
@@ -93,8 +88,16 @@ include('single-coa.php');
 			 <hr/>
 
 
+
+
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content">
+
+				<?php if(get_field('subheader')){
+					echo '<h3 class="subheader">';
+					the_field('subheader');
+					echo '</h3>';
+			} ?>
 
 	
 			<?php if( get_field('remove_featured_image') or $post_id < '161335' ) :
