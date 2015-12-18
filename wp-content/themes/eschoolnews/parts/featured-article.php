@@ -97,7 +97,18 @@
 
 			<header> 
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h2>
+					<a href="<?php the_permalink(); ?>">
+					<?php the_title(); ?>
+				</a>
+			</h2>
+
+			<?php if(get_field('subheader')){
+					echo '<h4 class="subheader">';
+					the_field('subheader');
+					echo '</h4>';
+			} ?>
+
 				<?php if( get_field('remove_author')) { 
 
 						echo '';
