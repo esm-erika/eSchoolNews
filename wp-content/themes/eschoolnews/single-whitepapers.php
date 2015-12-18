@@ -101,7 +101,7 @@ get_header(); ?>
 				//	the_content(); no need it is above.
 
 
-							if ($WPForm != null) {
+							if (($WPForm != null) and ($WPForm > 0)) {
 
 								gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
@@ -128,7 +128,7 @@ get_header(); ?>
 								<?php the_content(); ?>
 
 								<?php
-								if ($WPForm != null) {
+								if (($WPForm != null) and ($WPForm > 0)) {
 
 									global $esmuser;
 
