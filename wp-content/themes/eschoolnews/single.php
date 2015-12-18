@@ -47,6 +47,11 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<?php if(get_field('subheader')){
+					echo '<h3 class="subheader">';
+					the_field('subheader');
+					echo '</h3>';
+			} ?>
 			
 
 			<?php if( get_field('remove_author')) { 
@@ -176,7 +181,7 @@ custom_wp_link_pages();
 
 			 if( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) {
 
-			get_template_part('parts/authors'); 
+				get_template_part('parts/authors'); 
 
 			}
 
