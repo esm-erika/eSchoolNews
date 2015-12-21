@@ -181,9 +181,9 @@ custom_wp_link_pages();
 
 			$contributor_bio = get_field('contributor_bio');
 
-			 if( get_field('contributor_name') || get_field('Byline') && !empty($contributor_bio)) {
+			 if( get_field('contributor_name') || get_field('Byline') && empty($contributor_bio)) {
 
-				echo '';
+				echo 'TEST';
 
 			} else {
 
