@@ -103,14 +103,14 @@ include('single-coa.php');
     
     			echo '';
 			 
-			 elseif ( has_post_thumbnail()) :
+			 } elseif ( has_post_thumbnail()) {
 
     				echo '<div class="row">';
     				echo '<div class="small-12 medium-12 columns">';
     				the_post_thumbnail('large-landscape');
     				echo '</div></div>';
     		} else {
-    			
+
     		} ?>
 
     			
