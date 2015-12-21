@@ -184,8 +184,11 @@ custom_wp_link_pages();
 
 			 if( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) {
 
-				get_template_part('parts/authors'); 
+				echo '';
 
+			} else {
+				
+				get_template_part('parts/authors'); 
 			}
 
 			?>
