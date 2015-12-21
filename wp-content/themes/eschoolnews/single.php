@@ -109,10 +109,12 @@ include('single-coa.php');
     				echo '<div class="small-12 medium-12 columns">';
     				the_post_thumbnail('large-landscape');
     				echo '</div></div>';
+    		} else {
+    			
     		} ?>
 
     			
-    		<?php endif;
+    		<?php 
 			
 			if (esm_is_user_logged_in()){
 				$showpagecontent = 1; 
