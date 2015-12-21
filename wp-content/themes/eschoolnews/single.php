@@ -99,7 +99,16 @@ include('single-coa.php');
 					echo '</h3>';
 			} ?>
 
-			<?php if( get_field('remove_featured_image') || $post_id < '161335' ) {
+
+
+			<?php 
+
+			//$post_id < '161335' <--- Vince's Code
+
+			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
+			$cutoff_date = strtotime( '2015-12-01' );
+
+			if( get_field('remove_featured_image') || $post_date > $cutoff_date ) {
     
     			echo '';
 			 
