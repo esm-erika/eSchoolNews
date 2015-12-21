@@ -99,8 +99,7 @@ include('single-coa.php');
 					echo '</h3>';
 			} ?>
 
-	
-			<?php if( get_field('remove_featured_image') or $post_id < '161335' ) :
+			<?php if( get_field('remove_featured_image') || $post_id < '161335' ) :
     
     			echo '';
 			 
@@ -182,12 +181,12 @@ custom_wp_link_pages();
 
 			$contributor_bio = get_field('contributor_bio');
 
-			 if( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) {
+			 if( get_field('contributor_name') || get_field('Byline') && !empty($contributor_bio)) {
 
 				echo '';
 
 			} else {
-				
+
 				get_template_part('parts/authors'); 
 			}
 
