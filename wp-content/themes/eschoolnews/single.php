@@ -35,7 +35,7 @@ $oldtemplate = get_post_meta($id, '_wp_post_template', true);
 
    ?>
 <?php 
-if(!$oldtemplate == 'default' and strlen($oldtemplate > 4)){ echo '<!-- '.$oldtemplate.' -->'; //using old template
+if(!$oldtemplate == 'default' and strlen($oldtemplate > 4)){ echo '<!-- old template'.$oldtemplate.' -->'; //using old template
 	
 //require_once( 'library/boxes.php' );	
 include('single-coa.php');
