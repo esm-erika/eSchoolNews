@@ -47,7 +47,7 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-			
+			<!-- single note -->
 
 			<?php if( get_field('remove_author')) { 
 
