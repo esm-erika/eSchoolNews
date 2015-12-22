@@ -128,11 +128,11 @@ include('single-coa.php');
 				
 				echo '<!-- astpagecontent='.$astpagecontent.' -->';
 				
-				if($astpagecontent === 0){
-					$showpagecontent = 0; 
-				} else if($reg_requirement == 1){
+				if($reg_requirement == 1){
 					$showpagecontent = 0;
-				} else {
+				} else if($astpagecontent === 0){
+					$showpagecontent = 0; 
+				} else  {
 					$showpagecontent = 1;
 				}
 			}
