@@ -1,6 +1,6 @@
 
 <?php
-get_template_part( 'parts/ads/embeddedbanner' );
+
 
  $astcset = $_GET['astc'];
 	if(!filter_var($astcset, FILTER_VALIDATE_INT))
@@ -31,5 +31,5 @@ get_template_part( 'parts/ads/embeddedbanner' );
 	</article> 
 <?php } 
 } 
-get_template_part( 'parts/ads/embeddedbanner-2' );
+
 ?>
