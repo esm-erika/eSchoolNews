@@ -296,7 +296,7 @@ $featured = new WP_Query(array(
 						<article class="small-12 medium-6 columns">		
 
 			<header> 
-					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
+					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span><?php  global $pagefeaturedid;  $pagefeaturedid = get_the_ID(); ?>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				
 				<?php if( get_field('remove_author')) { 
