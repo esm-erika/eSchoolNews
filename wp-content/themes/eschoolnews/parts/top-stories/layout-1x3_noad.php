@@ -48,7 +48,7 @@
 
 				<?php while ( $topstories->have_posts() ) : $topstories -> the_post(); ?>
 
-	<li><?php echo $pagefeaturedid; ?> 
+	<li><?php global $pagefeaturedid; echo $pagefeaturedid; ?> 
 
 		<article>
 
