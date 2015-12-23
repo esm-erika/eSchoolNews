@@ -99,13 +99,9 @@
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2>
 					<a href="<?php the_permalink(); ?>">
-					<?php the_title(); echo '<!-- '.$POST->ID.' -->';?>
+					<?php the_title(); echo '<!-- ' .get_the_ID(). ' -->';?>
 				</a>
 			</h2>
-<pre>
-<?php 
-print_r($the_post); ?>
-</pre>
 
 			<?php if(get_field('subheader')){
 					echo '<h4 class="subheader">';
