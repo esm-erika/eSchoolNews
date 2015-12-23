@@ -102,7 +102,7 @@
 					<?php the_title(); ?>
 				</a>
 			</h2>
-<?php  global $pagefeaturedid;  $pagefeaturedid = get_the_ID(); echo '<!-- ' . $pagefeaturedid . ' -->'; ?>
+<?php  global $pagefeaturedid;  $pagefeaturedid = get_the_ID(); ?>
 
 			<?php if(get_field('subheader')){
 					echo '<h4 class="subheader">';
