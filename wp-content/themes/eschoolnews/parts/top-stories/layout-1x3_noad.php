@@ -27,7 +27,7 @@
 
 			<?php // The Query
 			
-			    global $pagefeaturedid; echo $pagefeaturedid; 
+			    global $pagefeaturedid; 
 			
 				$topstories = new WP_Query(array(
 				'post_type' => 'post',
