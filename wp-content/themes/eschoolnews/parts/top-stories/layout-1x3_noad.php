@@ -32,7 +32,7 @@
 				$topstories = new WP_Query(array(
 				'post_type' => 'post',
 				'posts_per_page' => 3,
-				'p' => $pagefeaturedid
+				'p' => -$pagefeaturedid
 				)); 
 
 				if ( is_category() ) {
