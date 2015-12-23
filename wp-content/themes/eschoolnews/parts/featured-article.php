@@ -104,7 +104,7 @@
 			</h2>
 <pre>
 <?php 
-print_r($featured); ?>
+print_r($the_post); ?>
 </pre>
 
 			<?php if(get_field('subheader')){
