@@ -99,7 +99,7 @@
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2>
 					<a href="<?php the_permalink(); ?>">
-					<?php the_title(); echo '<!-- ' .get_the_ID().' ~ '. $posts->ID . ' -->';?>
+					<?php the_title(); $pagefeatarticle = get_the_ID(); '<!-- ' .$pagefeatarticle. ' -->';?>
                     
 				</a>
 			</h2>
