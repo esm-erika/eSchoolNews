@@ -99,15 +99,10 @@
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2>
 					<a href="<?php the_permalink(); ?>">
-					<?php the_title(); $pagefeatarticle = get_the_ID(); '<!-- ' .$pagefeatarticle. ' -->';?>
-                    
+					<?php the_title(); ?>
 				</a>
 			</h2>
-<pre>
-<?php print_r($featured); ?>
-</pre>            
-            
-
+<?php $id = get_the_ID(); echo $id; ?>
 			<?php if(get_field('subheader')){
 					echo '<h4 class="subheader">';
 					the_field('subheader');
