@@ -43,7 +43,8 @@
 					'cat' => $cat,
 					'offset' => '1',
 					'post_type' => 'post',
-					'posts_per_page' => 3
+					'posts_per_page' => 3,
+					'post__not_in' => array($pagefeaturedid)
 					)); 
 
 			 } ?>
