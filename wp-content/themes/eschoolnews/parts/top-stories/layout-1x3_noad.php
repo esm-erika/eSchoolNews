@@ -26,9 +26,13 @@
 		<div class="columns large-12">
 
 			<?php // The Query
+			
+			    global $pagefeaturedid; echo $pagefeaturedid; 
+			
 				$topstories = new WP_Query(array(
 				'post_type' => 'post',
-				'posts_per_page' => 3
+				'posts_per_page' => 3,
+				'p' => $pagefeaturedid
 				)); 
 
 				if ( is_category() ) {
@@ -48,7 +52,7 @@
 
 				<?php while ( $topstories->have_posts() ) : $topstories -> the_post(); ?>
 
-	<li><?php global $pagefeaturedid; echo $pagefeaturedid; ?> 
+	<li>
 
 		<article>
 
