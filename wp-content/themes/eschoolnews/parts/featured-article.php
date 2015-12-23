@@ -102,6 +102,10 @@
 					<?php the_title(); echo '<!-- ' .get_the_ID(). ' -->';?>
 				</a>
 			</h2>
+<pre>
+<?php print_r($featured); ?>
+</pre>            
+            
 
 			<?php if(get_field('subheader')){
 					echo '<h4 class="subheader">';
