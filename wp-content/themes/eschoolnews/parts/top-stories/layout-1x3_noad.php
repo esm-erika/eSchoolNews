@@ -26,9 +26,13 @@
 		<div class="columns large-12">
 
 			<?php // The Query
+			
+			    global $pagefeaturedid; 
+			
 				$topstories = new WP_Query(array(
 				'post_type' => 'post',
-				'posts_per_page' => 3
+				'posts_per_page' => 3,
+				'post__not_in' => array($pagefeaturedid)
 				)); 
 
 				if ( is_category() ) {
@@ -39,7 +43,8 @@
 					'cat' => $cat,
 					'offset' => '1',
 					'post_type' => 'post',
-					'posts_per_page' => 3
+					'posts_per_page' => 3,
+					'post__not_in' => array($pagefeaturedid)
 					)); 
 
 			 } ?>

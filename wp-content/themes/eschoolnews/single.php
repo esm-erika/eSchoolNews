@@ -47,7 +47,7 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-			
+			<!-- single note -->
 
 			<?php if( get_field('remove_author')) { 
 
@@ -126,10 +126,12 @@ include('single-coa.php');
     		<?php 
 			
 			if (esm_is_user_logged_in()){
+				echo '<!-- lgi -->';
 				$showpagecontent = 1; 
 			} else { 
+				echo '<!-- nli -->';
 				$reg_requirement=get_post_meta($post->ID, 'registration_requirement_for_content', $single = true); /*	0 : Default,  1 : Required,  2 : Not Required */
-				//echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
+				echo '<!-- reg_requirement = '.$reg_requirement. ' -->';
 				
 				$astcset = $_GET['astc'];
 				echo '<!-- astcset='.$astcset.' -->';
@@ -139,11 +141,11 @@ include('single-coa.php');
 				
 				echo '<!-- astpagecontent='.$astpagecontent.' -->';
 				
-				if($astpagecontent === 0){
-					$showpagecontent = 0; 
-				} else if($reg_requirement == 1){
+				if($reg_requirement == 1){
 					$showpagecontent = 0;
-				} else {
+				} else if($astpagecontent === 0){
+					$showpagecontent = 0; 
+				} else  {
 					$showpagecontent = 1;
 				}
 			}

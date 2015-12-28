@@ -1,4 +1,8 @@
-<?php $astcset = $_GET['astc'];
+
+<?php
+
+
+ $astcset = $_GET['astc'];
 	if(!filter_var($astcset, FILTER_VALIDATE_INT))
 	{//reserved for default ad set
 		$astc = 1;
@@ -26,4 +30,6 @@
 	</section>
 	</article> 
 <?php } 
-} ?>
+} 
+
+?>

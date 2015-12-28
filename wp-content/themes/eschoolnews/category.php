@@ -283,7 +283,7 @@ $featured = new WP_Query(array(
 	));
 
 	while ( $featured->have_posts() ) : $featured -> the_post(); ?>
-
+<?php  global $pagefeaturedid;  $pagefeaturedid = get_the_ID(); ?>
 		<div class="small-12 medium-6 columns" role="main">
 
 						<?php
