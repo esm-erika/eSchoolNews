@@ -175,22 +175,14 @@ if (false === ($local_box_cache) ){
 								echo '<div class="small-12 medium-12 columns">';
 
 							} ?>					        
-					        
-					            <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					            	<span class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
-										?>
-									</span>
-
-									
+					        		
 
 								<?php 
 								// link to White Papers
 
 								if(get_field('link_to_whitepaper')) { ?>
 
-										<br/><br/>
+									
 
 										<?php $whitepaper_link = get_field('link_to_whitepaper');
 
@@ -199,6 +191,15 @@ if (false === ($local_box_cache) ){
 										<?php foreach( $whitepaper_link as $post): // variable must be called $post (IMPORTANT) ?>
 
 										<?php setup_postdata($post); ?>
+
+										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+							            	<span class="excerpt">
+												<?php 
+												echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+												?>
+											</span>
+
+										<br/><br/>
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 													<i class="fi-page"></i> White Paper
@@ -210,8 +211,6 @@ if (false === ($local_box_cache) ){
 										<?php endif; ?>
 
 								<?php } elseif(get_field('link_to_ancillary')) { ?>
-
-										<br/><br/>
 										
 										<?php $ancillary_link = get_field('link_to_ancillary');
 
@@ -220,6 +219,16 @@ if (false === ($local_box_cache) ){
 										<?php foreach( $ancillary_link as $post): // variable must be called $post (IMPORTANT) ?>
 
 										<?php setup_postdata($post); ?>
+
+
+										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+						            	<span class="excerpt">
+											<?php 
+											echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+											?>
+										</span>
+
+										<br/><br/>
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 												<i class="fi-page"></i>
@@ -232,6 +241,13 @@ if (false === ($local_box_cache) ){
 
 
 							<?php } elseif( get_field('external_url')){ ?>
+
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<span class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</span>
 
 								<br/><br/>
 							
@@ -248,6 +264,13 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif(get_field('download_file')) { ?>
 
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<span class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</span>
+
 								<br/><br/>
 
 								<a class="button small radius" href="<?php the_permalink(); ?>">
@@ -255,6 +278,14 @@ if (false === ($local_box_cache) ){
 								</a>
 
 							<?php } else { ?>
+
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<span class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</span>
+
 								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
 							<?php } ?>
 
@@ -339,12 +370,7 @@ if (false === ($local_box_cache) ){
 
 							} ?>					        
 					        
-					            <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					            	<div class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
-										?>
-									</div>
+					            
 
 									
 
@@ -353,7 +379,7 @@ if (false === ($local_box_cache) ){
 
 								if(get_field('link_to_whitepaper')) { ?>
 
-										<br/><br/>
+
 
 										<?php $whitepaper_link = get_field('link_to_whitepaper');
 
@@ -362,6 +388,15 @@ if (false === ($local_box_cache) ){
 										<?php foreach( $whitepaper_link as $post): // variable must be called $post (IMPORTANT) ?>
 
 										<?php setup_postdata($post); ?>
+
+										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<div class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</div>
+
+										<br/><br/>
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 													<i class="fi-page"></i> White Paper
@@ -374,7 +409,7 @@ if (false === ($local_box_cache) ){
 
 								<?php } elseif(get_field('link_to_ancillary')) { ?>
 
-										<br/><br/>
+										
 										
 										<?php $ancillary_link = get_field('link_to_ancillary');
 
@@ -383,6 +418,15 @@ if (false === ($local_box_cache) ){
 										<?php foreach( $ancillary_link as $post): // variable must be called $post (IMPORTANT) ?>
 
 										<?php setup_postdata($post); ?>
+
+										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<div class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</div>
+
+										<br/><br/>
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 												<i class="fi-page"></i>
@@ -396,7 +440,14 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif( get_field('external_url')){ ?>
 
-								<br/><br/>
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<div class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</div>
+
+										<br/><br/>
 							
 								<a class="button small radius" href="<?php the_permalink(); ?>">
 									<?php 
@@ -411,13 +462,30 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif(get_field('download_file')) { ?>
 
-								<br/><br/>
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<div class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</div>
+
+										<br/><br/>
 
 								<a class="button small radius" href="<?php the_permalink(); ?>">
 									<i class="fi-arrow-down"></i> Download
 								</a>
 
 							<?php } else { ?>
+
+							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<span class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
+										?>
+									</span>
+
+										
+
 								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
 							<?php } ?>
 
