@@ -444,7 +444,7 @@ if (false === ($local_box_cache) ){
 							
 								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
 									<?php 
-										echo '<i class="fi-web"></i> ';
+										echo '<i class="fi-arrow-down"></i> ';
 
 										if(get_field('text_for_button')) {
 											the_field('text_for_button');
