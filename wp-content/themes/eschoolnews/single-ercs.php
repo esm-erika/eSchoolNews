@@ -140,7 +140,7 @@ if (false === ($local_box_cache) ){
 
 			        if(get_sub_field('section_title')){
 
-			        echo '<h4>';
+			        echo '<h4 style="color:' . get_field('base_color') . '">';
 
 			        the_sub_field('section_title'); 
 
@@ -339,7 +339,7 @@ if (false === ($local_box_cache) ){
 
 			        if(get_sub_field('section_title')){
 
-			        echo '<h4' . the_field("color") . '>';
+			        echo '<h4 style="color:' . get_field('base_color') . '">';
 
 			        the_sub_field('section_title'); 
 
