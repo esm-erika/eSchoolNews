@@ -127,6 +127,17 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
+			array (
+				'key' => 'field_5685a92244d45',
+				'label' => 'ERC Item HTML',
+				'name' => 'erc_item_html',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'html',
+			),
 			// array (
 			// 	'key' => 'field_56844dc3946e6',
 			// 	'label' => 'Choose Icon',

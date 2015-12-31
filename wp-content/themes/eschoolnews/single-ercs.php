@@ -274,6 +274,10 @@ if (false === ($local_box_cache) ){
 								</a>
 							<?php endif; ?>
 
+							<?php } elseif(get_field('erc_item_html')) { ?>
+
+								<?php the_field('erc_item_html') ?>
+
 							<?php } else { ?>
 
 								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
