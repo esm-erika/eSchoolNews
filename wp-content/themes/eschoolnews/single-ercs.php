@@ -312,7 +312,7 @@ if (false === ($local_box_cache) ){
 
 			?>
 
-			<?php get_template_part('parts/sponsor-images'); ?>
+			
 
 
 	 	</div>
@@ -504,6 +504,8 @@ if (false === ($local_box_cache) ){
 			endif;
 
 			?>
+
+			<?php get_template_part('parts/sponsor-images'); ?>
 
 	 	</div>
 	 </div>
