@@ -262,9 +262,13 @@ if (false === ($local_box_cache) ){
 										} ?>
 								</a>
 
-							<?php } elseif(get_field('download_file')) { ?>
+							<?php } elseif(get_field('download_file')) { 
 
-								<h5><a href="<?php the_field('download_file'); ?>"><?php the_title(); ?></a></h5>
+							$file = get_field('download_file');
+
+							if( $file ): ?>
+								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
+							<?php endif; ?>
 					            	<span class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -460,9 +464,13 @@ if (false === ($local_box_cache) ){
 										} ?>
 								</a>
 
-							<?php } elseif(get_field('download_file')) { ?>
+							<?php } elseif(get_field('download_file')) { 
 
-								<h5><a href="<?php the_field('download_file'); ?>"><?php the_title(); ?></a></h5>
+							$file = get_field('download_file');
+
+							if( $file ): ?>
+								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
+							<?php endif; ?>
 					            	<div class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
