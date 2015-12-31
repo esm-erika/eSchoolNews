@@ -1,12 +1,21 @@
 <?php
 
+if( !class_exists('Acf') )
+    include_once('external/acf/acf.php' );
+
+if( !class_exists('acf_repeater_plugin') )
+    include_once('external/acf-repeater/acf-repeater.php');
+
+if( !class_exists('acf_options_page_plugin') )
+    include_once('external/acf-options-page/acf-options-page.php');
+
 /*===================================================================================
  * ERC Custom Fields
  * =================================================================================*/
 
-if(function_exists("register_erc_field_group"))
+if(function_exists("register_field_group"))
 {
-	register_erc_field_group(array (
+	register_field_group(array (
 		'id' => 'acf_erc-html-field',
 		'title' => 'ERC HTML Field',
 		'fields' => array (
@@ -55,7 +64,7 @@ if(function_exists("register_erc_field_group"))
 		),
 		'menu_order' => 0,
 	));
-	register_erc_field_group(array (
+	register_field_group(array (
 		'id' => 'acf_erc-link-fields',
 		'title' => 'ERC Link Fields',
 		'fields' => array (
@@ -166,7 +175,7 @@ if(function_exists("register_erc_field_group"))
 		),
 		'menu_order' => 0,
 	));
-	register_erc_field_group(array (
+	register_field_group(array (
 		'id' => 'acf_erc-masthead-fields',
 		'title' => 'ERC Masthead Fields',
 		'fields' => array (
@@ -241,7 +250,7 @@ if(function_exists("register_erc_field_group"))
 		),
 		'menu_order' => 0,
 	));
-	register_erc_field_group(array (
+	register_field_group(array (
 		'id' => 'acf_erc-section-fields',
 		'title' => 'ERC Section Fields',
 		'fields' => array (
