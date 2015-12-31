@@ -80,15 +80,381 @@ if (false === ($local_box_cache) ){
 
 	?>
 
+</div>
+
 	<?php if(get_field('erc_html')) { 
-
-
 
 		the_field('erc_html');
 
-	 } ?>
+	 } else { ?>
 
-</div>
+	 <?php if(get_field('masthead_text')) { ?>
+
+	 <div class="row">
+
+	 	<?php if(get_field('masthead_sidebar')) { ?>
+
+			<div class="small-12 medium-8 columns">
+
+				<?php the_field('masthead_text') ?>
+
+			</div>
+
+			<div class="small-12 medium-4 columns">
+
+				<?php the_field('masthead_sidebar') ?>
+
+			<?php } else { ?>
+
+				<div class="small-12 medium-12 columns">
+
+					<?php the_field('masthead_text') ?>
+
+			<?php } ?>
+
+			</div>
+
+			<div class="small-12 columns">
+				<hr>
+			</div>
+	 </div>
+
+	  <?php } ?>
+	
+
+	 <div class="row">
+
+	 	<!-- Left Column -->
+	 	<div class="small-12 medium-6 columns">
+
+	 		<?php
+
+			// check if the repeater field has rows of data
+			if( have_rows('left_column') ):
+
+			 	// loop through the rows of data
+			    while ( have_rows('left_column') ) : the_row(); ?>
+
+			        <?php 
+			        // display section title
+
+			        if(get_sub_field('section_title')){
+
+			        echo '<h4>';
+
+			        the_sub_field('section_title'); 
+
+			        echo '</h4>';
+
+			    	} ?>
+
+			    	<div class="panel">
+
+
+			    	<?php 
+			    	// display ERC items
+
+					$left_posts = get_sub_field('erc_items_left');
+
+					if( $left_posts ) : ?>
+					  
+					    <?php foreach( $left_posts as $post): // variable must be called $post (IMPORTANT) ?>
+					        <?php setup_postdata($post); ?>
+
+					          <div class="row">					          	
+
+							<?php if(has_post_thumbnail()){
+								
+								echo '<div class="small-12 medium-5 columns">';
+								the_post_thumbnail('small-portrait');
+								echo '</div>';
+								echo '<div class="small-12 medium-7 columns">';
+
+							} else {
+
+								echo '<div class="small-12 medium-12 columns">';
+
+							} ?>					        
+					        
+					            <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<span class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+										?>
+									</span>
+
+									
+
+								<?php 
+								// link to White Papers
+
+								if(get_field('link_to_whitepaper')) { ?>
+
+										<br/><br/>
+
+										<?php $whitepaper_link = get_field('link_to_whitepaper');
+
+										if( $whitepaper_link ): ?>
+
+										<?php foreach( $whitepaper_link as $post): // variable must be called $post (IMPORTANT) ?>
+
+										<?php setup_postdata($post); ?>
+
+											<a class="button small radius" href="<?php the_permalink(); ?>">
+													<i class="fi-page"></i> White Paper
+											</a>
+
+										  <?php endforeach; ?>
+		    
+										    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+										<?php endif; ?>
+
+								<?php } elseif(get_field('link_to_ancillary')) { ?>
+
+										<br/><br/>
+										
+										<?php $ancillary_link = get_field('link_to_ancillary');
+
+										if( $ancillary_link ): ?>
+
+										<?php foreach( $ancillary_link as $post): // variable must be called $post (IMPORTANT) ?>
+
+										<?php setup_postdata($post); ?>
+
+											<a class="button small radius" href="<?php the_permalink(); ?>">
+												<i class="fi-page"></i>
+											</a>
+
+										  <?php endforeach; ?>
+		    
+										    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+										<?php endif; ?>
+
+
+							<?php } elseif( get_field('external_url')){ ?>
+
+								<br/><br/>
+							
+								<a class="button small radius" href="<?php the_permalink(); ?>">
+									<?php 
+										echo '<i class="fi-web"></i> ';
+
+										if(get_field('text_for_button')) {
+											the_field('text_for_button');
+										} else {
+											echo 'Web Link';
+										} ?>
+								</a>
+
+							<?php } elseif(get_field('download_file')) { ?>
+
+								<br/><br/>
+
+								<a class="button small radius" href="<?php the_permalink(); ?>">
+									<i class="fi-arrow-down"></i> Download
+								</a>
+
+							<?php } else { ?>
+								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
+							<?php } ?>
+
+					        	</div>
+					    </div>
+
+					    <?php if(get_sub_field('hr_left')){
+					   		echo '<hr/>';
+					   } else {
+					   		echo '<br/>';
+					   } ?>
+					    
+					    <?php endforeach; ?>
+					    
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
+
+					
+
+				</div>
+
+	  		<?php endwhile;
+
+			endif;
+
+			?>
+
+			<?php get_template_part('parts/sponsor-images'); ?>
+
+
+	 	</div>
+		
+		<!-- Right Column -->
+	 	<div class="small-12 medium-6 columns">
+
+	 		<?php
+
+			// check if the repeater field has rows of data
+			if( have_rows('right_column') ):
+
+			 	// loop through the rows of data
+			    while ( have_rows('right_column') ) : the_row(); ?>
+
+			        <?php 
+			        // display section title
+
+			        if(get_sub_field('section_title')){
+
+			        echo '<h4' . the_field("color") . '>';
+
+			        the_sub_field('section_title'); 
+
+			        echo '</h4>';
+
+			    	} ?>
+
+			    	<div class="panel">
+
+
+			    	<?php 
+			    	// display ERC items
+
+					$right_posts = get_sub_field('erc_items_right');
+
+					if( $right_posts ) : ?>
+					  
+					    <?php foreach( $right_posts as $post): // variable must be called $post (IMPORTANT) ?>
+					        <?php setup_postdata($post); ?>
+
+					          <div class="row">
+
+							<?php if(has_post_thumbnail()){
+								
+								echo '<div class="small-12 medium-5 columns">';
+								the_post_thumbnail('small-portrait');
+								echo '</div>';
+								echo '<div class="small-12 medium-7 columns">';
+
+							} else {
+
+								echo '<div class="small-12 medium-12 columns">';
+
+							} ?>					        
+					        
+					            <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					            	<div class="excerpt">
+										<?php 
+										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+										?>
+									</div>
+
+									
+
+								<?php 
+								// link to White Papers
+
+								if(get_field('link_to_whitepaper')) { ?>
+
+										<br/><br/>
+
+										<?php $whitepaper_link = get_field('link_to_whitepaper');
+
+										if( $whitepaper_link ): ?>
+
+										<?php foreach( $whitepaper_link as $post): // variable must be called $post (IMPORTANT) ?>
+
+										<?php setup_postdata($post); ?>
+
+											<a class="button small radius" href="<?php the_permalink(); ?>">
+													<i class="fi-page"></i> White Paper
+											</a>
+
+										  <?php endforeach; ?>
+		    
+										    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+										<?php endif; ?>
+
+								<?php } elseif(get_field('link_to_ancillary')) { ?>
+
+										<br/><br/>
+										
+										<?php $ancillary_link = get_field('link_to_ancillary');
+
+										if( $ancillary_link ): ?>
+
+										<?php foreach( $ancillary_link as $post): // variable must be called $post (IMPORTANT) ?>
+
+										<?php setup_postdata($post); ?>
+
+											<a class="button small radius" href="<?php the_permalink(); ?>">
+												<i class="fi-page"></i>
+											</a>
+
+										  <?php endforeach; ?>
+		    
+										    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+										<?php endif; ?>
+
+
+							<?php } elseif( get_field('external_url')){ ?>
+
+								<br/><br/>
+							
+								<a class="button small radius" href="<?php the_permalink(); ?>">
+									<?php 
+										echo '<i class="fi-web"></i> ';
+
+										if(get_field('text_for_button')) {
+											the_field('text_for_button');
+										} else {
+											echo 'Web Link';
+										} ?>
+								</a>
+
+							<?php } elseif(get_field('download_file')) { ?>
+
+								<br/><br/>
+
+								<a class="button small radius" href="<?php the_permalink(); ?>">
+									<i class="fi-arrow-down"></i> Download
+								</a>
+
+							<?php } else { ?>
+								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
+							<?php } ?>
+
+					        	</div>
+					    </div>
+
+					   <?php if(get_sub_field('hr_right')){
+					   		echo '<hr/>';
+					   } else {
+					   		echo '<br/>';
+					   } ?>
+					    
+					    <?php endforeach; ?>
+					    
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
+
+				</div>
+
+	  		<?php endwhile;
+
+			endif;
+
+			?>
+
+	 	</div>
+	 </div>
+
+
+
+
+
+
+
+	<?php } ?>
+
+
 
 
 <?php

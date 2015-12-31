@@ -105,4 +105,7 @@ require_once('library/custom-link-pages.php');
 /** SF Functions */
 require_once('library/salesforce.php');
 
+/** Custom Fields */
+require_once('library/custom-fields.php');
+
 ?>

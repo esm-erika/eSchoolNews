@@ -96,6 +96,23 @@ function erc_register() {
 } 
 
 
+add_action( 'init', 'ercs_items_register' );
+
+function ercs_items_register() {
+        register_post_type( 'ercitems', array(
+                'labels' => array(
+                        'name' => 'ERC Items',
+                        'singular_name' => 'ERC Item',
+                ),
+                'public' => true,
+                'show_ui' => true,
+                'show_in_menu' => 'edit.php?post_type=ercs',
+                'supports' => array( 'title' ,'thumbnail', 'editor' ),
+        ) );
+}
+
+
+
 /*===================================================================================
  * Webinars
  * =================================================================================*/
