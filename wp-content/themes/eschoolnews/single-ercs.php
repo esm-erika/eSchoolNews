@@ -268,7 +268,7 @@ if (false === ($local_box_cache) ){
 
 							if( $file ): ?>
 								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
-							<?php endif; ?>
+							
 					            	<span class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -277,9 +277,10 @@ if (false === ($local_box_cache) ){
 
 								<br/><br/>
 
-								<a class="button small radius" href="<?php the_field('download_file'); ?>">
+								<a class="button small radius" href="<?php echo $file['url']; ?>">
 									<i class="fi-arrow-down"></i> Download
 								</a>
+							<?php endif; ?>
 
 							<?php } else { ?>
 
@@ -470,7 +471,7 @@ if (false === ($local_box_cache) ){
 
 							if( $file ): ?>
 								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
-							<?php endif; ?>
+							
 					            	<div class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -479,9 +480,10 @@ if (false === ($local_box_cache) ){
 
 										<br/><br/>
 
-								<a class="button small radius" href="<?php the_field('download_file'); ?>">
+								<a class="button small radius" href="<?php echo $file['url']; ?>">
 									<i class="fi-arrow-down"></i> Download
 								</a>
+								<?php endif; ?>
 
 							<?php } else { ?>
 
