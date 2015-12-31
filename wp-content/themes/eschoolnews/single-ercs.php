@@ -194,9 +194,7 @@ if (false === ($local_box_cache) ){
 
 										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 							            	<span class="excerpt">
-												<?php 
-												echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-												?>
+												<?php the_content(); ?>
 											</span>
 
 										<br/><br/>
@@ -223,9 +221,7 @@ if (false === ($local_box_cache) ){
 
 										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 						            	<span class="excerpt">
-											<?php 
-											echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-											?>
+											<?php the_content(); ?>
 										</span>
 
 										<br/><br/>
@@ -244,9 +240,7 @@ if (false === ($local_box_cache) ){
 
 								<h5><a target="new" href="<?php the_field('external_url'); ?>"><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</span>
 
 								<br/><br/>
@@ -270,9 +264,7 @@ if (false === ($local_box_cache) ){
 								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
 							
 					            	<span class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</span>
 
 								<br/><br/>
@@ -286,9 +278,7 @@ if (false === ($local_box_cache) ){
 
 								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</span>
 
 								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
@@ -396,9 +386,7 @@ if (false === ($local_box_cache) ){
 
 										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</div>
 
 										<br/><br/>
@@ -426,9 +414,7 @@ if (false === ($local_box_cache) ){
 
 										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</div>
 
 										<br/><br/>
@@ -447,9 +433,7 @@ if (false === ($local_box_cache) ){
 
 								<h5><a target="new" href="<?php the_field('external_url'); ?>"><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</div>
 
 										<br/><br/>
@@ -473,9 +457,7 @@ if (false === ($local_box_cache) ){
 								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
 							
 					            	<div class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</div>
 
 										<br/><br/>
@@ -489,9 +471,7 @@ if (false === ($local_box_cache) ){
 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
-										<?php 
-										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
-										?>
+										<?php the_content(); ?>
 									</span>
 
 										
