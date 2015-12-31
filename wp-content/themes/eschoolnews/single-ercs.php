@@ -236,16 +236,16 @@ if (false === ($local_box_cache) ){
 										<?php endif; ?>
 
 
-							<?php } elseif( get_field('external_url')){ ?>
+							<?php } elseif( get_field('link_to_external_url')){ ?>
 
-								<h5><a target="new" href="<?php the_field('external_url'); ?>"><?php the_title(); ?></a></h5>
+								<h5><a target="new" href="<?php the_field('link_to_external_url'); ?>"><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
 										<?php the_content(); ?>
 									</span>
 
 								<br/><br/>
 							
-								<a target="new" class="button small radius" href="<?php the_field('external_url'); ?>">
+								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
 									<?php 
 										echo '<i class="fi-web"></i> ';
 
@@ -433,16 +433,16 @@ if (false === ($local_box_cache) ){
 										<?php endif; ?>
 
 
-							<?php } elseif( get_field('external_url')){ ?>
+							<?php } elseif( get_field('link_to_external_url')){ ?>
 
-								<h5><a target="new" href="<?php the_field('external_url'); ?>"><?php the_title(); ?></a></h5>
+								<h5><a target="new" href="<?php the_field('link_to_external_url'); ?>"><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 										<br/><br/>
 							
-								<a target="new" class="button small radius" href="<?php the_field('external_url'); ?>">
+								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
 									<?php 
 										echo '<i class="fi-web"></i> ';
 
