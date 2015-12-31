@@ -99,20 +99,31 @@ include('single-coa.php');
 					echo '</h3>';
 			} ?>
 
-	
-			<?php if( get_field('remove_featured_image') or $post_id < '161335' ) :
+
+
+			<?php 
+
+			//$post_id < '161335' <--- Vince's Code
+
+			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
+			$cutoff_date = strtotime( '2015-12-01' );
+
+			if( get_field('remove_featured_image') || $post_date > $cutoff_date ) {
     
     			echo '';
 			 
-			 elseif ( has_post_thumbnail()) :
+			 } elseif ( has_post_thumbnail()) {
 
     				echo '<div class="row">';
     				echo '<div class="small-12 medium-12 columns">';
     				the_post_thumbnail('large-landscape');
     				echo '</div></div>';
+    		} else {
+
+    		} ?>
 
     			
-    		endif;
+    		<?php 
 			
 			if (esm_is_user_logged_in()){
 				echo '<!-- lgi -->';
@@ -184,10 +195,13 @@ custom_wp_link_pages();
 
 			$contributor_bio = get_field('contributor_bio');
 
-			 if( get_field('contributor_name') || get_field('Byline') || !empty($contributor_bio)) {
+			 if( get_field('contributor_name') || get_field('Byline') && empty($contributor_bio)) {
+
+				echo 'TEST';
+
+			} else {
 
 				get_template_part('parts/authors'); 
-
 			}
 
 			?>

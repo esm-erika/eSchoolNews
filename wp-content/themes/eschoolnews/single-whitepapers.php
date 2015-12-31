@@ -16,22 +16,21 @@ get_header(); ?>
 
 		<div class="row">
 
-		
+			<header class="row">
 
 		<?php 
 
 		if ( has_post_thumbnail() ) { ?>
+		
 		<div class="medium-4 columns">
-
-
-		<?php the_post_thumbnail('medium-portrait'); ?>
+			<?php the_post_thumbnail('medium-portrait'); ?>
 		</div>
+		
 		<div class="medium-8 columns">
 
 		<?php } else { ?>
 
-			<div class="medium-12 columns">
-
+		<div class="medium-12 columns">
 
 		<?php } ?>
 
@@ -44,9 +43,11 @@ get_header(); ?>
 		
 		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
+		</div>
+
 		<hr/>
 
-		
+		<div class="medium-12 columns">
 
 
 		<?php 
