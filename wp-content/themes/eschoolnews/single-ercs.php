@@ -197,7 +197,7 @@ if (false === ($local_box_cache) ){
 												<?php the_content(); ?>
 											</span>
 
-										<br/><br/>
+										
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 													<i class="fi-page"></i> White Paper
@@ -224,7 +224,7 @@ if (false === ($local_box_cache) ){
 											<?php the_content(); ?>
 										</span>
 
-										<br/><br/>
+										
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 												<i class="fi-page"></i>
@@ -243,7 +243,7 @@ if (false === ($local_box_cache) ){
 										<?php the_content(); ?>
 									</span>
 
-								<br/><br/>
+								
 							
 								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
 									<?php 
@@ -267,7 +267,7 @@ if (false === ($local_box_cache) ){
 										<?php the_content(); ?>
 									</span>
 
-								<br/><br/>
+								
 
 								<a class="button small radius" href="<?php echo $file['url']; ?>">
 									<i class="fi-arrow-down"></i> Download
@@ -393,7 +393,7 @@ if (false === ($local_box_cache) ){
 										<?php the_content(); ?>
 									</div>
 
-										<br/><br/>
+										
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 													<i class="fi-page"></i> White Paper
@@ -421,7 +421,7 @@ if (false === ($local_box_cache) ){
 										<?php the_content(); ?>
 									</div>
 
-										<br/><br/>
+										
 
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 												<i class="fi-page"></i>
@@ -439,8 +439,6 @@ if (false === ($local_box_cache) ){
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
-
-										<br/><br/>
 							
 								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
 									<?php 
@@ -464,7 +462,7 @@ if (false === ($local_box_cache) ){
 										<?php the_content(); ?>
 									</div>
 
-										<br/><br/>
+										
 
 								<a class="button small radius" href="<?php echo $file['url']; ?>">
 									<i class="fi-arrow-down"></i> Download
