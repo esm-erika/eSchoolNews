@@ -242,7 +242,7 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif( get_field('external_url')){ ?>
 
-								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+								<h5><a target="new" href="<?php the_field('external_url'); ?>"><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -251,7 +251,7 @@ if (false === ($local_box_cache) ){
 
 								<br/><br/>
 							
-								<a class="button small radius" href="<?php the_permalink(); ?>">
+								<a target="new" class="button small radius" href="<?php the_field('external_url'); ?>">
 									<?php 
 										echo '<i class="fi-web"></i> ';
 
@@ -264,7 +264,7 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif(get_field('download_file')) { ?>
 
-								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+								<h5><a href="<?php the_field('download_file'); ?>"><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -273,7 +273,7 @@ if (false === ($local_box_cache) ){
 
 								<br/><br/>
 
-								<a class="button small radius" href="<?php the_permalink(); ?>">
+								<a class="button small radius" href="<?php the_field('download_file'); ?>">
 									<i class="fi-arrow-down"></i> Download
 								</a>
 
@@ -440,7 +440,7 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif( get_field('external_url')){ ?>
 
-								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+								<h5><a target="new" href="<?php the_field('external_url'); ?>"><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -449,7 +449,7 @@ if (false === ($local_box_cache) ){
 
 										<br/><br/>
 							
-								<a class="button small radius" href="<?php the_permalink(); ?>">
+								<a target="new" class="button small radius" href="<?php the_field('external_url'); ?>">
 									<?php 
 										echo '<i class="fi-web"></i> ';
 
@@ -462,7 +462,7 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif(get_field('download_file')) { ?>
 
-								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+								<h5><a href="<?php the_field('download_file'); ?>"><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
 										<?php 
 										echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '' ), true); 
@@ -471,7 +471,7 @@ if (false === ($local_box_cache) ){
 
 										<br/><br/>
 
-								<a class="button small radius" href="<?php the_permalink(); ?>">
+								<a class="button small radius" href="<?php the_field('download_file'); ?>">
 									<i class="fi-arrow-down"></i> Download
 								</a>
 
