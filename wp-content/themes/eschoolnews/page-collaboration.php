@@ -93,35 +93,35 @@ global $cat;
 			</li>
 
 			<li class="prizes">
-				<a href="<?php site_url(); ?>/collaboration-nation-2016/winners">
+				<a href="<?php site_url(); ?>/collaboration/winners">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Prizes">
 					<span>PRIZES</span>
 				</a>
 			</li>
 
 			<li class="judges">
-				<a href="<?php site_url(); ?>/collaboration-nation-2016/judges">
+				<a href="<?php site_url(); ?>/collaboration/judges">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/judges-button.png" alt="Judges">
 					<span>JUDGES</span>
 				</a>
 			</li>
 
 			<li class="rules">
-				<a href="<?php site_url(); ?>/collaboration-nation-2016/rules">
+				<a href="<?php site_url(); ?>/collaboration/rules">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/rules-button.png" alt="Rules">
 					<span>RULES</span>
 				</a>
 			</li>
 
 			<li class="faq">
-				<a href="<?php site_url(); ?>/collaboration-nation-2016/faqs">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/faq-button.png" alt="FAQs">	
+				<a href="<?php site_url(); ?>/collaboration/faqs">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/faqs-button.png" alt="FAQs">	
 					<span>FAQs</span>
 				</a>
 			</li>
 
 			<li class="about">
-				<a href="<?php site_url(); ?>/collaboration-nation-2016/about-us">
+				<a href="<?php site_url(); ?>/collaboration/about-us">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about-button.png" alt="About">
 					<span>ABOUT</span>
 				</a>
@@ -144,7 +144,7 @@ global $cat;
 			<?php 
 
 			$args = array(
-				'pagename' => 'collaboration-nation-2016'
+				'pagename' => 'collaboration'
 			);
 
 			$the_query = new WP_Query( $args ); ?>
