@@ -3,13 +3,9 @@
 
 <h4>2016 Collaboration Nation Award Program</h4>
 
-<?php 
-
-$file = get_field('rules_pdf');
-
-if( $file ): ?>
+<?php if(get_field('rules_pdf')) : ?>
 	
-	<a class="download-rules" href="<?php echo $file; ?>">Download Official Rules</a>
+	<a class="download-rules" href="<?php the_field('rules_pdf'); ?>">Download Official Rules</a>
 
 <?php endif; ?>
 
