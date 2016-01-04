@@ -9,7 +9,7 @@ $file = get_field('rules_pdf');
 
 if( $file ): ?>
 	
-	<a class="download-rules" href="<?php echo $file['url']; ?>">Download Official Rules</a>
+	<a class="download-rules" href="<?php echo $file; ?>">Download Official Rules</a>
 
 <?php endif; ?>
 
