@@ -9325,6 +9325,18 @@ body.page.collaboration .rules .content, body.page-template-collaboration-nation
   body.page.collaboration .rules .content h6, body.page-template-collaboration-nation .rules .content h6 {
     color: #000; }
 
+body.page.collaboration .faqs .page-title, body.page-template-collaboration-nation .faqs .page-title {
+  color: #75499b;
+  border-bottom: 5px solid #75499b;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem; }
+
+body.page.collaboration .about-us .page-title, body.page-template-collaboration-nation .about-us .page-title {
+  color: #fab441;
+  border-bottom: 5px solid #fab441;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem; }
+
 body.page.collaboration #recent-entries .slick-slide, body.page-template-collaboration-nation #recent-entries .slick-slide {
   padding: 0 5px; }
 
