@@ -1205,7 +1205,7 @@ footer {
 
 // Collaboration Nation 
 
-body.category-collaboration, body.page-template-collaboration-nation {
+body.page.collaboration, body.page-template-collaboration-nation {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
@@ -1224,8 +1224,11 @@ body.category-collaboration, body.page-template-collaboration-nation {
 
 section {
 	padding: 20px 0 0 0;
-	margin-top: 20px;
 
+}
+
+section.home {
+	margin-top: 20px;
 }
 
 .calendar {
@@ -1306,10 +1309,112 @@ section.home {
 	}
 }
 
+
+
 .winners {
 	.page-title {
+		color: #4d9dd6;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 5px solid #4d9dd6;
 
 	}
+
+	article {
+		padding: 1rem;
+		background-color: #d3e3f5;
+		margin-bottom: 1rem;
+		
+		h6 a {
+			color: #000;
+		}
+
+		iframe {
+			display: block;
+			margin: auto;
+			padding-top: 1rem;
+		}
+
+		.readmore {
+			font-weight: bold;
+		}
+	}
+}
+
+.judges {
+	.page-title {
+		color: #e41c38;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 5px solid #e41c38;
+	}
+
+	article {
+		background-color: #feebcf;
+		padding: 1rem;
+		margin-bottom: 1rem;
+
+		h5 {
+			color: #000;
+		}
+	}
+
+	article.odd {
+		background-color: #fdddc7;
+	}
+}
+
+.rules {
+	.page-title {
+		color: #f47f40;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 5px solid #f47f40;
+	}
+
+	#rules {
+		position: relative;
+	}
+
+	.download-rules {
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: #e41c38;
+		background-image: url(../images/pdf-icon.png);
+	}
+
+	.content {
+		h6 {
+			color: #000;
+		}
+
+		padding-top: 2rem;
+	}
+
+}
+
+#recent-entries {
+
+	.slick-slide {
+		padding: 0 5px;
+	}
+
+	.video {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+
+	 iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
 }
 
 div.social {
@@ -1535,8 +1640,9 @@ header {
 
 }
 
-body.page-template-collaboration-nation header {
+body.page.collaboration header {
 	height: 550px !important;
+
 }
 
 
