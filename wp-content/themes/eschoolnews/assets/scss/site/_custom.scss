@@ -1382,6 +1382,11 @@ section.home {
 		font-weight: bold;
 		color: #e41c38;
 		background-image: url(../images/PDF-icon.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 
 	.content {

@@ -9310,7 +9310,12 @@ body.page.collaboration .rules .download-rules, body.page-template-collaboration
   font-size: 1rem;
   font-weight: bold;
   color: #e41c38;
-  background-image: url(../images/PDF-icon.png); }
+  background-image: url(../images/PDF-icon.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 body.page.collaboration .rules .content, body.page-template-collaboration-nation .rules .content {
   padding-top: 2rem; }
