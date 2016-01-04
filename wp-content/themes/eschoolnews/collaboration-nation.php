@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css"/>
 
 	<!-- slick-theme.css default styling -->
-	<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/>
 
 	<?php wp_head(); ?>
 </head>
@@ -66,7 +66,7 @@
 	<div class=" row buttons-container">
 		
 	<div class="medium-12 columns">
-		<a href="#" class="menu-icon left">
+		<a href="<?php home_url(); ?>" class="menu-icon left">
 			<?php if (is_page('winners')){ ?>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Videos &amp; Winners">
 			<?php } elseif( is_page('judges')){ ?>
@@ -93,19 +93,35 @@
 
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
-				<?php 
-				if ( have_posts() ) {
-					while ( have_posts() ) {
-						the_post(); 
-						//
-						the_content();
-						//
-					} // end while
-				} // end if
-				?>
-
 		</div>
 	</div>
+
+
+				<?php 
+
+				if( is_page('winners')) { 
+
+					get_template_part( 'parts/collaboration/winners' );
+
+				} elseif ( is_page('judges')) {
+
+					get_template_part( 'parts/collaboration/judges' );
+
+				} elseif ( is_page('rules')) {
+
+					get_template_part( 'parts/collaboration/rules' );
+
+				} elseif ( is_page('faqs')) {
+
+					//get_template_part( 'parts/collaboration/faqs' );
+
+				} else {
+
+					the_content();
+
+				} ?>
+
+		
 
 	<br><br>
 
@@ -133,12 +149,6 @@
 </footer>
 
 
-
-
-
-
-
-
 		</div>
 		<a class="exit-off-canvas"></a>
 
@@ -148,6 +158,26 @@
 	<?php wp_footer(); ?>
 	<?php do_action( 'foundationpress_before_closing_body' ); ?>
 
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	  $('.entries').slick({
+	    infinite: true,
+		  slidesToShow: 3,
+		  slidesToScroll: 3
+	  });
+	});
+</script>
+
+<script>
+	$(document).ready(function(){
+	    $("#judges article:odd").addClass("odd");
+	    $("#judges article:even").addClass("even");  
+	});
+</script>
 
 </body>
 </html>
