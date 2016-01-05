@@ -37,8 +37,9 @@
 					<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?> &mdash; <?php the_field('award_name'); ?></a></h6>
 					<div class="content">
 						<?php 
-						echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 50, $more = '&hellip;' ), true); 
-						?> <a class="readmore" href="<?php the_permalink(); ?>">Read More</a>
+						// echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 50, $more = '&hellip;' ), true); 
+						the_content();
+						?> 
 					</div>
 
 					
