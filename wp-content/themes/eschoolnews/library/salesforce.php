@@ -1,6 +1,8 @@
 <?php 
 add_filter("gform_akismet_enabled_226", "disable_akismet");
 add_action("gform_post_submission_226", "SF_Account_Upsert226", 10, 2);
+add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
+
 function SF_Account_Upsert226($entry, $form){
 
 
