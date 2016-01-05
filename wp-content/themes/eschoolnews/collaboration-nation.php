@@ -113,16 +113,22 @@
 
 				} else { ?>
 
-				<?php 
-					if ( have_posts() ) {
-						while ( have_posts() ) {
-							the_post(); 
-							//
-							the_content();
-							//
-						} // end while
-					} // end if
-				?>
+				<div class="row">
+					<div class="small-12 medium-10 medium-centered columns">
+
+					<?php 
+						if ( have_posts() ) {
+							while ( have_posts() ) {
+								the_post(); 
+								//
+								the_content();
+								//
+							} // end while
+						} // end if
+					?>
+					
+					</div>
+				</div>
 
 				<?php } ?>
 
