@@ -1,13 +1,11 @@
 <?php 
 add_filter("gform_akismet_enabled_226", "disable_akismet");
 add_action("gform_post_submission_226", "SF_Account_Upsert226", 10, 2);
+add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
+
 function SF_Account_Upsert226($entry, $form){
 
-echo '<pre>';
-print_r($form);
-echo '=============================================';
-print_r($entry);
-echo '</pre>';
+
 		global $wpdb;
 	
 		ini_set("soap.wsdl_cache_enabled", "0");
@@ -125,28 +123,30 @@ echo '</pre>';
 		if ($OptedOutflag == 1){
 			$newperson['PersonHasOptedOutOfEmail'] = false; 
 		}	
-		
-		
+echo 		print_r($newperson);
+
 		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
-		
-		
-		
+echo 		print_r($upsertResponse);		
+	/*		
+	
+echo print_r($upsertResponse);
+					
 		if ($upsertResponse->success==1)
 		{
 			//Saved for later use							
-					mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 138');
-			
+					mail('vcarlson@eschoolnews.com','226 SF Subscription request success', 'line 138');
+
 		} else { 
 			$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
-			mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 142');
+			mail('vcarlson@eschoolnews.com','226 SF Subscription request failed', 'line 142');
 		} 
 	
 	$formsuccess = validateint($_GET['success']);
-	
+	*/
 	}
-// end funtion SF_Account_Upsert
+// end funtion SF_Account_Upsert 
 
 
 

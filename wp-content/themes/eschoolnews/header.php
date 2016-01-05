@@ -222,5 +222,11 @@ echo $local_box_cache;
 }
 ?>
 
-     <?php get_template_part( 'parts/ads/billboard' ); ?>      
+     <?php 
+	 if ( is_singular( 'post' )){
+		get_template_part( 'parts/ads/leaderboard-2' );		 
+		} else {
+		get_template_part( 'parts/ads/billboard' );
+	 }
+	 ?>      
 
