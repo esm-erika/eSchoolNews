@@ -128,7 +128,7 @@ function SF_Account_Upsert226($entry, $form){
 		
 		
 		
-print_r($upsertResponse);
+echo print_r($upsertResponse);
 					
 		if ($upsertResponse->success==1)
 		{
