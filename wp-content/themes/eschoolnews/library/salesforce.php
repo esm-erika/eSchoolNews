@@ -125,11 +125,11 @@ function SF_Account_Upsert226($entry, $form){
 		}	
 echo 		print_r($newperson);
 
-	/*			
+		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
-		
-	
+echo 		print_r($upsertResponse);		
+	/*		
 	
 echo print_r($upsertResponse);
 					
