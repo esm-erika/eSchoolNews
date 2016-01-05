@@ -111,11 +111,20 @@
 
 					get_template_part( 'parts/collaboration/rules' );
 
-				} else {
+				} else { ?>
 
-					the_content();
+				<?php 
+					if ( have_posts() ) {
+						while ( have_posts() ) {
+							the_post(); 
+							//
+							the_content();
+							//
+						} // end while
+					} // end if
+				?>
 
-				} ?>
+				<?php } ?>
 
 		
 
