@@ -111,10 +111,6 @@
 
 					get_template_part( 'parts/collaboration/rules' );
 
-				} elseif ( is_page('faqs')) {
-
-					//get_template_part( 'parts/collaboration/faqs' );
-
 				} else {
 
 					the_content();

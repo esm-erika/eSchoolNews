@@ -185,11 +185,9 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 
 			<br><br>
 
-			<h4>Submit Your Entry and Become Part of the Collaboration Nation Community on <span style="color: #1f58a0;">Facebook</span> <a href="#" class="facebook"><i class="fi-social-facebook"></i></a></h4>
+			<h4><span style="color: #1f58a0;">Facebook</span> <a href="#" class="facebook"><i class="fi-social-facebook"></i></a></h4>
 			<hr>
-			<p>Submit your entry form and a short video of your collaboration success on
-Facebook. Then the school or district with the most votes will win a $15,000 prize
-in products from Collaboration Nation partners HP, Lenovo, Cisco or Meraki.</p>
+			<p>Share your school or district's success story with the Collaboration Nation community with your friends, faculty, parents and family. The school or district with the most votes will win a $15,000 prize in products from Collaboration Nation partners HP, Lenovo, Cisco or Cisco Meraki.</p>
 			
 			<a href="#" class="button-entry">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter.png" alt="Enter Today!">

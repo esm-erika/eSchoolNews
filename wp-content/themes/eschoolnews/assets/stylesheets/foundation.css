@@ -9331,6 +9331,9 @@ body.page.collaboration .faqs .page-title, body.page-template-collaboration-nati
   padding-bottom: 1rem;
   margin-bottom: 1rem; }
 
+body.page.collaboration .faqs div.faq, body.page-template-collaboration-nation .faqs div.faq {
+  margin: 2rem 0; }
+
 body.page.collaboration .about-us .page-title, body.page-template-collaboration-nation .about-us .page-title {
   color: #fab441;
   border-bottom: 5px solid #fab441;
