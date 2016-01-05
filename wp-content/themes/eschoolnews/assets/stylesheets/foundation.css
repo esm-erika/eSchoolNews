@@ -9467,8 +9467,11 @@ body.page.collaboration .buttons-container, body.page-template-collaboration-nat
         width: 80%; }
     body.page.collaboration .buttons-container ul.button-menu .home a, body.page-template-collaboration-nation .buttons-container ul.button-menu .home a {
       color: #6cbd45; }
-    body.page.collaboration .buttons-container ul.button-menu .prizes a, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes a {
-      color: #4d9dd6; }
+    body.page.collaboration .buttons-container ul.button-menu .prizes, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes {
+      position: relative;
+      top: 25px; }
+      body.page.collaboration .buttons-container ul.button-menu .prizes a, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes a {
+        color: #4d9dd6; }
     body.page.collaboration .buttons-container ul.button-menu .judges a, body.page-template-collaboration-nation .buttons-container ul.button-menu .judges a {
       color: #e74b4a; }
     body.page.collaboration .buttons-container ul.button-menu .rules a, body.page-template-collaboration-nation .buttons-container ul.button-menu .rules a {
@@ -9504,6 +9507,56 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
 
 body.page.collaboration header {
   height: 550px !important; }
+
+#discovery-erc {
+  background-image: url(../images/bg_discovery-erc.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; }
+  #discovery-erc h1, #discovery-erc h2, #discovery-erc h3, #discovery-erc h4, #discovery-erc h5, #discovery-erc h6 {
+    font-weight: 700;
+    color: #0275bc; }
+  #discovery-erc a:link, #discovery-erc a:visited, #discovery-erc strong {
+    color: #0275bc;
+    font-weight: 700; }
+  #discovery-erc header {
+    margin-bottom: 1rem; }
+    #discovery-erc header img {
+      max-width: none;
+      width: 100%;
+      height: auto; }
+  #discovery-erc section.banner {
+    background-color: #0275bc;
+    margin-bottom: 1rem; }
+    #discovery-erc section.banner h2 {
+      color: #fff; }
+  #discovery-erc table {
+    border: 1px solid #999; }
+    #discovery-erc table tr {
+      border-bottom: 1px solid #999; }
+    #discovery-erc table td .button {
+      padding: 5px 10px;
+      margin: 5px 0 0 0;
+      font-weight: 500; }
+      #discovery-erc table td .button span {
+        margin-left: 10px;
+        font-weight: 700; }
+    #discovery-erc table td .hershey {
+      background-color: #54c2e3; }
+    #discovery-erc table td .nashville {
+      background-color: #f3af45; }
+    #discovery-erc table td .pasadena {
+      background-color: #53b958; }
+  #discovery-erc .name {
+    color: #666;
+    margin: 10px 0 0 0; }
+  #discovery-erc .school {
+    line-height: 1.2; }
+  #discovery-erc a.about {
+    margin-top: 10px;
+    display: block;
+    font-weight: 400;
+    line-height: 1.2; }
 
 div.registration-form div.gform_wrapper {
   max-width: 100%; }

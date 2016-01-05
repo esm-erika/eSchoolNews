@@ -188,4 +188,19 @@ function smartestb_pages_bodyclass($classes) {
     }
 }
 
+/**
+ * add single template for CPTs (ex.  single-[post-type]-[slug].php)
+ */
+
+add_filter( 'single_template', function( $template ) {
+    global $post;
+    if ( $post->post_type === 'ercs' ) {
+        $locate_template = locate_template( "single-ercs-{$post->post_name}.php" );
+        if ( ! empty( $locate_template ) ) {
+            $template = $locate_template;
+        }
+    }
+    return $template;
+} );
+
 ?>
