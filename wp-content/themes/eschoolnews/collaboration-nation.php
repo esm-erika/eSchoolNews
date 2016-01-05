@@ -55,10 +55,10 @@
 			</div>
 		</nav>
 	
+		<div class="text-container"></div>
 
 
-
-		<img class="text" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/collaboration-banner-text.png" alt="">
+		<!-- <img class="text" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/collaboration-banner-text.png" alt=""> -->
 
 
 	</header>

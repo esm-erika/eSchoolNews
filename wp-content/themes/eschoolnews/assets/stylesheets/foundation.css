@@ -9332,7 +9332,7 @@ body.page.collaboration .faqs .page-title, body.page-template-collaboration-nati
   margin-bottom: 1rem; }
 
 body.page.collaboration .faqs div.faq, body.page-template-collaboration-nation .faqs div.faq {
-  margin: 2rem 0; }
+  margin: 5rem 0; }
 
 body.page.collaboration .about-us .page-title, body.page-template-collaboration-nation .about-us .page-title {
   color: #fab441;
@@ -9387,6 +9387,7 @@ body.page.collaboration a.twitter, body.page-template-collaboration-nation a.twi
 body.page.collaboration nav.top-bar, body.page-template-collaboration-nation nav.top-bar {
   position: relative;
   padding: 5px 0;
+  z-index: 9999;
   background: rgba(255, 255, 255, 0.8); }
   body.page.collaboration nav.top-bar .top-bar-section ul li, body.page-template-collaboration-nation nav.top-bar .top-bar-section ul li {
     background: transparent; }
@@ -9423,6 +9424,16 @@ body.page.collaboration header, body.page-template-collaboration-nation header {
   body.page.collaboration header img.text, body.page-template-collaboration-nation header img.text {
     position: absolute;
     bottom: 10px; }
+  body.page.collaboration header .text-container, body.page-template-collaboration-nation header .text-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url(../images/collaboration-banner-text.png); }
 
 body.page.collaboration .partnerships ul li, body.page-template-collaboration-nation .partnerships ul li {
   text-align: center;
