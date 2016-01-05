@@ -1,8 +1,13 @@
 <?php 
 add_filter("gform_akismet_enabled_226", "disable_akismet");
+add_action("gform_post_submission_226", "SF_Account_Upsert226", 10, 2);
 function SF_Account_Upsert226($entry, $form){
 
-
+echo '<pre>';
+print_r($form);
+echo '=============================================';
+print_r($entry);
+echo '</pre>';
 		global $wpdb;
 	
 		ini_set("soap.wsdl_cache_enabled", "0");
