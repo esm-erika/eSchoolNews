@@ -95,7 +95,7 @@ global $cat;
 			<li class="prizes">
 				<a href="<?php site_url(); ?>/collaboration/winners">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Prizes">
-					<span>PRIZES</span>
+					<span>VIDEOS &amp; WINNERS</span>
 				</a>
 			</li>
 
