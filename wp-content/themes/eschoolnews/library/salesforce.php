@@ -128,15 +128,16 @@ function SF_Account_Upsert226($entry, $form){
 		
 		
 		
-		
+print_r($upsertResponse);
+					
 		if ($upsertResponse->success==1)
 		{
 			//Saved for later use							
-					mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 138');
-			
+					mail('vcarlson@eschoolnews.com','226 SF Subscription request success', 'line 138');
+
 		} else { 
 			$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
-			mail('vcarlson@eschoolnews.com','SF Subscription request success', 'line 142');
+			mail('vcarlson@eschoolnews.com','226 SF Subscription request failed', 'line 142');
 		} 
 	
 	$formsuccess = validateint($_GET['success']);
