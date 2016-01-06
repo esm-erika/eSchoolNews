@@ -34,7 +34,17 @@
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 				<article>
-					<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?> &mdash; <?php the_field('award_name'); ?></a></h6>
+					<h6>
+						<?php if(get_field('external_link')){ ?> 
+						
+						<a href="<?php the_field('external_link'); ?>"><?php the_title(); ?> &mdash; <?php the_field('award_name'); ?></a>
+
+						<?php } else { ?>
+
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?> &mdash; <?php the_field('award_name'); ?></a>
+
+						<?php } ?>
+					</h6>
 					<div class="content">
 						<?php 
 						// echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 50, $more = '&hellip;' ), true); 
