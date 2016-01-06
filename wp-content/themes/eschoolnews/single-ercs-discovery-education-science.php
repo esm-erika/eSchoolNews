@@ -36,16 +36,16 @@
 			<?php do_action( 'foundationpress_layout_start' ); ?>
 
 			<!-- Start Content -->
-		<section class="math">
+		<section class="science">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-math_discovery-erc.png" alt="Powerful Practices">
-				<nav class="math">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-science_discovery-erc.jpg" alt="Powerful Practices">
+				<nav class="science">
 
 					<div class="row">
 						<div class="small-12 columns">
-							<span class="math-menu"><strong>> RESOURCES:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a></span>
-							<span class="science-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a></span>
+							<span class="science-menu"><strong>> RESOURCES:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a></span>
+							<span class="math-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a></span>
 							<span class="studies-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-social-studies">SOCIAL STUDIES</a></span>
 							<span class="event-menu"><strong>> EVENTS:</strong> <a href="#">Powerful Practices: The Instructional Leadership Experience</a></span>
 						</div>
@@ -56,12 +56,9 @@
 
 			<div class="row">
 				<div class="small-12 medium-8 columns">
-					<h3>Learning Math Starts with a Connection.</h3>
+					<h3>Learning Science Starts with a Connection.</h3>
 
-					<p>Math Techbook is a breakthrough digital textbook that will change the way students and
-					teachers experience math. Using an inquiry-based approach, Math Techbook engages
-					students with real world problems worth solving while supporting any device, anywhere,
-					anytime in any secondary instructional setting.</p>
+					<p>Science Techbook helps teachers transform their instruction with a simple-to-use, highly interactive program that integrates multimedia resources including video, audio, text, and interactives. Hands-on activities, virtual labs, and technology-enhanced formative assessment provide a rich and engaging learning experience for students. Science Techbook works on any device and can be implemented in a variety of instructional settings.</p>
 
 					<p>
 						<a href="#">
@@ -69,35 +66,27 @@
 						</a>
 					</p>
 
-					<h5 style="color: #666;">What Educators Can Do with Math Techbook</h5>
+					<h5 style="color: #666;">What Educators Can Do with Science Techbook</h5>
 					<hr>
 
 					<h4>Teach using an inquiry-based approach</h4>
-					<p>Math Techbook uses a Discover, Practice, Apply cycle that balances conceptual learning,
-					procedural fluency, and application to real world problems so students gain lasting
-					proficiency.</p>
+					<p>Science Techbook uses a Discover, Practice, Apply cycle that balances conceptual learning, procedural fluency, and application to real world problems so students gain lasting proficiency.</p>
 
 
 					<h4>Engage Students First to Make Learning Last</h4>
-					<p>Students can access dynamic content, interactives, videos, digital tools, and game-like
-					activities that increase their motivation to learn math. Students learn content through
-					multiple pathways that match their learning style and can monitor their own progress in
-					real time with the Student Dashboard.</p>
+					<p>Students can access dynamic content, interactives, videos, digital tools, and game-like activities that increase their motivation to learn math. Students learn content through multiple pathways that match their learning style and can monitor their own progress in real time with the Student Dashboard.</p>
 
 					<h4>Differentiate Instruction for 21st Century Learners</h4>
-					<p>The newest generation of technology enhanced items and formative assessments are
-					woven throughout the entire instructional cycle. Teachers can collect evidence of
-					student progress instantly.</p>
+					<p>The newest generation of technology enhanced items and formative assessments are woven throughout the entire instructional cycle. Teachers can collect evidence of student progress instantly.</p>
 
 					<h4>Save Teachers Time in Planning and Preparation</h4>
-					<p>Comprehensive resources, student activities, and model lessons are at teachers'
-					fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on
-					the Teacher Dashboard make it easier to adjust instruction.</p>
+					<p>Comprehensive resources, student activities, and model lessons are at teachers' fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on the Teacher Dashboard make it easier to adjust instruction.</p>
 
+					<h6><a href="http://www.DiscoveryEducation.com/Science">Learn more or sign up for a free trial at DiscoveryEducation.com/Science.</a></h6>
+					<br>
 					<div class="video">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/hF5xONSlQ9Q" frameborder="0" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/L26oLp1eYqM" frameborder="0" allowfullscreen></iframe>					</div>
 					</div>
-				</div>
 
 				<div id="sidebar" class="small-12 medium-4 columns">
 					<h3>Resources</h3>
@@ -107,7 +96,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Infographic</h6>
 								<h5>Problems Worth Solving</h5>
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Math-Techbook-Infographic.pdf"></a>
+								<a href="#"></a>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
@@ -124,28 +113,12 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Math for a Digital Era</h5>	
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Discovery-Point-Of-View-Math-Techbook.pdf">
+								<a href="#">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-cover_discovery-erc.png" alt="">
-
-							</div>
-						</div>
-					</article>
-
-					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Ed-Tech Point of View</h6>
-								<h5>Mathematical Learning Through Rigorous Tasks</h5>	
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Mathematical-Learning-through-Rigorous-Tasks.pdf">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
-								</a>
-							</div>
-							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-learning_discovery-erc.png" alt="">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-cover_discovery-erc.png" alt="Infographic">
 
 							</div>
 						</div>
@@ -160,12 +133,12 @@
 								<h6 style="color: #666;">Whitepaper</h6>
 								<h5>From the Heart: Stories from Passionate Educators</h5>	
 								
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Pillsbury.pdf">
+								<a href="#">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/from-the-heart_discovery-erc.png" alt="">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/from-the-heart_discovery-erc.png" alt="Infographic">
 
 							</div>
 						</div>
@@ -177,12 +150,12 @@
 								<h6 style="color: #666;">Video</h6>
 								<h5>Problems Worth Solving</h5>	
 								
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/">
+								<a href="#">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-watch_discovery-erc.png" alt="Watch">
 								</a>
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bridge_discovery-erc.png" alt="">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bridge_discovery-erc.png" alt="Infographic">
 
 							</div>
 						</div>

@@ -1814,27 +1814,16 @@ body.page.collaboration header {
 
 	}
 
-
-	section.math {
-
-		h1,h2,h3,h4,h5,h6 {
-			color: #65308f;
-		}
-
-		a:link, a:visited, strong {
-			color: #65308f;
-		}
-
-		nav {
-			color: #fff; 
+	nav {
+			color: #fff !important; 
 			font-size: 85%;
 
 			a:link, a:visited {
-				color: #fff;
+				color: #fff !important;
 			}
 
 			strong {
-				color: #fff200;
+				color: #fff200 !important;
 				font-weight: 400;
 			}
 
@@ -1855,14 +1844,13 @@ body.page.collaboration header {
 			span.studies-menu {
 				background-color: #830c0e;
 			}
+
+			span.math-menu {
+				background-color: #65308f;
+			}
 		}
 
-		nav.math {
-			background-color: #65308f;
-		}
-
-		#sidebar {
-			background-color: #d3c9e2;
+	#sidebar {
 
 			article {
 				background-color: #fff;
@@ -1873,10 +1861,47 @@ body.page.collaboration header {
 			}
 		}
 
+
+	section.math {
+
+		h1,h2,h3,h4,h5,h6 {
+			color: #65308f;
+		}
+
+		a:link, a:visited, strong {
+			color: #65308f;
+		}
+
+		nav.math {
+			background-color: #65308f;
+		}
+
+		#sidebar {
+			background-color: #d3c9e2;
+		}
+
 	}
 
 
+	section.science {
 
+		h1,h2,h3,h4,h5,h6 {
+			color: #53b958;
+		}
+
+		a:link, a:visited, strong {
+			color: #53b958;
+		}
+
+		nav.science {
+			background-color: #53b958;
+		}
+
+		#sidebar {
+			background-color: #cceacd;
+		}
+
+	}
 	
 }
 
