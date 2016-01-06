@@ -128,14 +128,17 @@ function SF_Account_Upsert226($entry, $form){
 		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
+		echo ' ======== ' . print_r($upsertResponse) . ' ======== ';
 
 					
 		if ($upsertResponse->success==1)
 		{
+			echo '<h1>This was uploaded</h1>';
 			//Saved for later use							
 					mail('vcarlson@eschoolnews.com','226 SF Subscription request success', 'line 138');
 
 		} else { 
+			echo '<h1>This uploaded failed</h1>';
 			$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 			mail('vcarlson@eschoolnews.com','226 SF Subscription request failed', 'line 142');
 		} 
