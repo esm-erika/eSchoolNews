@@ -44,9 +44,9 @@
 
 					<div class="row">
 						<div class="small-12 columns">
-							<span class="math-menu"><strong>> RESOURCES:</strong> <a href="#">MATH</a></span>
-							<span class="science-menu"><a href="#">SCIENCE</a></span>
-							<span class="studies-menu"><a href="#">SOCIAL STUDIES</a></span>
+							<span class="math-menu"><strong>> RESOURCES:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a></span>
+							<span class="science-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a></span>
+							<span class="studies-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-social-studies">SOCIAL STUDIES</a></span>
 							<span class="event-menu"><strong>> EVENTS:</strong> <a href="#">Powerful Practices: The Instructional Leadership Experience</a></span>
 						</div>
 					</div>
@@ -107,7 +107,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Infographic</h6>
 								<h5>Problems Worth Solving</h5>
-								<a href="#"></a>
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Math-Techbook-Infographic.pdf"></a>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
@@ -124,12 +124,28 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Math for a Digital Era</h5>	
-								<a href="#">
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Discovery-Point-Of-View-Math-Techbook.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-cover_discovery-erc.png" alt="Infographic">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-cover_discovery-erc.png" alt="">
+
+							</div>
+						</div>
+					</article>
+
+					<article>
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								<h6 style="color: #666;">Ed-Tech Point of View</h6>
+								<h5>Mathematical Learning Through Rigorous Tasks</h5>	
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Mathematical-Learning-through-Rigorous-Tasks.pdf">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+								</a>
+							</div>
+							<div class="small-12 medium-6 columns">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-learning_discovery-erc.png" alt="">
 
 							</div>
 						</div>
@@ -144,12 +160,12 @@
 								<h6 style="color: #666;">Whitepaper</h6>
 								<h5>From the Heart: Stories from Passionate Educators</h5>	
 								
-								<a href="#">
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Pillsbury.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/from-the-heart_discovery-erc.png" alt="Infographic">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/from-the-heart_discovery-erc.png" alt="">
 
 							</div>
 						</div>
@@ -161,12 +177,12 @@
 								<h6 style="color: #666;">Video</h6>
 								<h5>Problems Worth Solving</h5>	
 								
-								<a href="#">
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-watch_discovery-erc.png" alt="Watch">
 								</a>
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bridge_discovery-erc.png" alt="Infographic">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bridge_discovery-erc.png" alt="">
 
 							</div>
 						</div>
