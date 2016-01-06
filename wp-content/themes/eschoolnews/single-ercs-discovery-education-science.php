@@ -94,9 +94,9 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Infographic</h6>
-								<h5>Problems Worth Solving</h5>
-								<a href="#"></a>
+								<h6 style="color: #666;">Whitepaper</h6>
+								<h5>Five Powerful Practices for Science Professional Development</h5>
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Five-Powerful-Practices-for-Science-Professional-Development.pdf"></a>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
@@ -108,58 +108,7 @@
 						</div>
 					</article>
 
-					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Ed-Tech Point of View</h6>
-								<h5>Transforming Math for a Digital Era</h5>	
-								<a href="#">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
-								</a>
-							</div>
-							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/math-cover_discovery-erc.png" alt="Infographic">
-
-							</div>
-						</div>
-					</article>
-
 					<img class="ad" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/300x250_discovery-erc.png" alt="">
-
-
-					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
-								<h5>From the Heart: Stories from Passionate Educators</h5>	
-								
-								<a href="#">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
-								</a>
-							</div>
-							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/from-the-heart_discovery-erc.png" alt="Infographic">
-
-							</div>
-						</div>
-					</article>
-
-					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Video</h6>
-								<h5>Problems Worth Solving</h5>	
-								
-								<a href="#">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-watch_discovery-erc.png" alt="Watch">
-								</a>
-							</div>
-							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bridge_discovery-erc.png" alt="Infographic">
-
-							</div>
-						</div>
-					</article>
 				</div>
 
 			</div>
