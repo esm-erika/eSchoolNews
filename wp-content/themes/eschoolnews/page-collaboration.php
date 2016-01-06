@@ -187,7 +187,7 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 
 			<h4>Vote for Your Favorite Collaboration Nation Monthly Project on <a href="http://www.facebook.com/cdwgcollaboration/" style="color: #1f58a0;">Facebook</a> <a href="#" class="facebook"><i class="fi-social-facebook"></i></a></h4>
 			<hr>
-			<p>Share your school or district's success story with the Collaboration Nation community with your friends, faculty, parents and family. The school or district with the most votes will win a $15,000 prize in products from Collaboration Nation partners HP, Lenovo, Cisco or Cisco Meraki.</p>
+			<p>Share your school or district's success story with the Collaboration Nation community and with your friends, faculty, parents and family. The school or district with the most votes between the first and the fifteenth of March, April and May will win a $15,000 prize in products from Collaboration Nation partners HP, Lenovo, Cisco or Cisco Meraki.</p>
 			
 			<a href="<?php home_url(); ?>/collaboration/submission-form" class="button-entry">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter.png" alt="Enter Today!">
@@ -197,10 +197,17 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 		<div class="small-12 medium-4 columns twitter">
 			<h4>Twitter <a href="#" class="twitter"><i class="fi-social-twitter"></i></a></h4>
 			<hr>
+			<p align="center">
+                      <a class="twitter-timeline" data-border-color="#cc0000" width="302" height="295"   href="https://twitter.com/search?q=%23k12techsuccess%20OR%20from%3A%40NoApp4Pedagogy%20OR%20from%3A%40CDWNews%20OR%20from%3A%40k12cto" data-widget-id="572504242909229056">Tweets about #k12techsuccess OR from:@NoApp4Pedagogy OR from:@CDWNews OR from:@k12cto</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+          
 
-			<br><br>
-			<h4>Questions? Want to Learn More?</h4>
+          </p> 
+
 			<hr>
+			<h4>Questions? Want to Learn More?</h4>
+			<br/>
 			<a href="<?php home_url(); ?>/collaboration/faqs" class="button-faq">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-faq.png" alt="FAQs">
 			</a>
