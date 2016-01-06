@@ -9578,40 +9578,56 @@ body.page.collaboration header {
     font-weight: 400;
     line-height: 1.2; }
 
+#discovery-erc nav {
+  color: #fff !important;
+  font-size: 85%; }
+  #discovery-erc nav a:link, #discovery-erc nav a:visited {
+    color: #fff !important; }
+  #discovery-erc nav strong {
+    color: #fff200 !important;
+    font-weight: 400; }
+  #discovery-erc nav span {
+    line-height: 1;
+    padding: 5px 10px;
+    float: left; }
+  #discovery-erc nav span.event-menu {
+    float: right; }
+  #discovery-erc nav span.science-menu {
+    background-color: #53b958; }
+  #discovery-erc nav span.studies-menu {
+    background-color: #830c0e; }
+  #discovery-erc nav span.math-menu {
+    background-color: #65308f; }
+
+#discovery-erc #sidebar article {
+  background-color: #fff; }
+
+#discovery-erc #sidebar .ad {
+  margin-bottom: 1rem; }
+
 #discovery-erc section.math h1, #discovery-erc section.math h2, #discovery-erc section.math h3, #discovery-erc section.math h4, #discovery-erc section.math h5, #discovery-erc section.math h6 {
   color: #65308f; }
 
 #discovery-erc section.math a:link, #discovery-erc section.math a:visited, #discovery-erc section.math strong {
   color: #65308f; }
 
-#discovery-erc section.math nav {
-  color: #fff;
-  font-size: 85%; }
-  #discovery-erc section.math nav a:link, #discovery-erc section.math nav a:visited {
-    color: #fff; }
-  #discovery-erc section.math nav strong {
-    color: #fff200;
-    font-weight: 400; }
-  #discovery-erc section.math nav span {
-    line-height: 1;
-    padding: 5px 10px;
-    float: left; }
-  #discovery-erc section.math nav span.event-menu {
-    float: right; }
-  #discovery-erc section.math nav span.science-menu {
-    background-color: #53b958; }
-  #discovery-erc section.math nav span.studies-menu {
-    background-color: #830c0e; }
-
 #discovery-erc section.math nav.math {
   background-color: #65308f; }
 
 #discovery-erc section.math #sidebar {
   background-color: #d3c9e2; }
-  #discovery-erc section.math #sidebar article {
-    background-color: #fff; }
-  #discovery-erc section.math #sidebar .ad {
-    margin-bottom: 1rem; }
+
+#discovery-erc section.science h1, #discovery-erc section.science h2, #discovery-erc section.science h3, #discovery-erc section.science h4, #discovery-erc section.science h5, #discovery-erc section.science h6 {
+  color: #53b958; }
+
+#discovery-erc section.science a:link, #discovery-erc section.science a:visited, #discovery-erc section.science strong {
+  color: #53b958; }
+
+#discovery-erc section.science nav.science {
+  background-color: #53b958; }
+
+#discovery-erc section.science #sidebar {
+  background-color: #cceacd; }
 
 div.registration-form div.gform_wrapper {
   max-width: 100%; }
