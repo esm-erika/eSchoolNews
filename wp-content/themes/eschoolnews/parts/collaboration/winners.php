@@ -72,9 +72,6 @@
 				<?php endif; ?>
 
 
-
-			<?php if( get_field('entry_video')){ ?>
-				
 				<section id="recent-entries">
 
 					<?php 
@@ -99,7 +96,7 @@
 
 					<h3 class="text-center">2016 Entries</h3>
 
-					<div class="entries">
+					<!-- <div class="entries">
 
 					<?php if ( $entries->have_posts() ) : ?>
 
@@ -107,7 +104,7 @@
 
 					  <div>
 
-					  	
+					  	<?php if( get_field('entry_video')){ ?>
 
 					  	<div class="video">
 					  		<iframe width="420" height="315" src="https://www.youtube.com/embed/<?php the_field('entry_video') ?>" frameborder="0" allowfullscreen></iframe>
@@ -115,7 +112,7 @@
 
 					  	<h6 class="text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 
-					  	
+					  	<?php } ?>
 					  	
 					  </div>
 
@@ -125,10 +122,8 @@
 				<?php endif; ?>
 
 
-					</div>
+					</div> -->
 				</section>
-				
-				<?php } ?>
 
 			</div>
 		</div>
