@@ -28,6 +28,15 @@
 </head>
 <body <?php body_class(); ?>>
 
+	<div id='woobox-root'></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//woobox.com/js/plugins/woo.js";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'woobox-sdk'));</script>
+
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<div class="off-canvas-wrap" data-offcanvas>
@@ -81,7 +90,7 @@
 		</a>
 		
 
-		<a href="#" class="submit-button right">
+		<a href="<?php home_url(); ?>/collaboration/submission-form" class="submit-button right">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
 		</a>
 	</div>
@@ -126,7 +135,7 @@
 							} // end while
 						} // end if
 					?>
-					
+
 					</div>
 				</div>
 
