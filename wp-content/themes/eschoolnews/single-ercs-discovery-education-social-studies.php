@@ -47,7 +47,7 @@
 							<span class="studies-menu"><strong>> RESOURCES:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education-social-studies">SOCIAL STUDIES</a></span>
 							<span class="math-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a></span>
 							<span class="science-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a></span>
-							<span class="event-menu"><strong>> EVENTS:</strong> <a href="#">Powerful Practices: The Instructional Leadership Experience</a></span>
+							<span class="event-menu"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span>
 						</div>
 					</div>
 
