@@ -185,7 +185,7 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 
 			<br><br>
 
-			<h4>Vote for Your Favorite Collaboration Nation Monthly Project on<a href="http://www.facebook.com/cdwgcollaboration/" style="color: #1f58a0;">Facebook</a> <a href="#" class="facebook"><i class="fi-social-facebook"></i></a></h4>
+			<h4>Vote for Your Favorite Collaboration Nation Monthly Project on <a href="http://www.facebook.com/cdwgcollaboration/" style="color: #1f58a0;">Facebook</a> <a href="#" class="facebook"><i class="fi-social-facebook"></i></a></h4>
 			<hr>
 			<p>Share your school or district's success story with the Collaboration Nation community with your friends, faculty, parents and family. The school or district with the most votes will win a $15,000 prize in products from Collaboration Nation partners HP, Lenovo, Cisco or Cisco Meraki.</p>
 			
