@@ -108,7 +108,7 @@ include('single-coa.php');
 			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
 			$cutoff_date = strtotime( '2015-12-01' );
 
-			if( get_field('remove_featured_image') || $post_date > $cutoff_date ) {
+			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
     
     			echo '';
 			 
