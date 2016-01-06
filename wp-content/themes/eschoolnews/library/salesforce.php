@@ -123,15 +123,12 @@ function SF_Account_Upsert226($entry, $form){
 		if ($OptedOutflag == 1){
 			$newperson['PersonHasOptedOutOfEmail'] = false; 
 		}	
-echo 		print_r($newperson);
+
 
 		
 		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
-echo 		print_r($upsertResponse);		
-	/*		
-	
-echo print_r($upsertResponse);
+
 					
 		if ($upsertResponse->success==1)
 		{
@@ -144,7 +141,7 @@ echo print_r($upsertResponse);
 		} 
 	
 	$formsuccess = validateint($_GET['success']);
-	*/
+	
 	}
 // end funtion SF_Account_Upsert 
 

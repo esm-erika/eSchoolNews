@@ -106,9 +106,9 @@ include('single-coa.php');
 			//$post_id < '161335' <--- Vince's Code
 
 			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
-			$cutoff_date = strtotime( '2015-12-01' );
+			$cutoff_date = strtotime( '2015-12-10' );
 
-			if( get_field('remove_featured_image') || $post_date > $cutoff_date ) {
+			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
     
     			echo '';
 			 
