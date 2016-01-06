@@ -9508,55 +9508,110 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
 body.page.collaboration header {
   height: 550px !important; }
 
-#discovery-erc {
+#discovery-erc h1, #discovery-erc h2, #discovery-erc h3, #discovery-erc h4, #discovery-erc h5, #discovery-erc h6 {
+  font-weight: 700;
+  color: #0275bc; }
+
+#discovery-erc a:link, #discovery-erc a:visited, #discovery-erc strong {
+  color: #0275bc;
+  font-weight: 700; }
+
+#discovery-erc header {
+  margin-bottom: 1rem; }
+  #discovery-erc header img {
+    max-width: none;
+    width: 100%;
+    height: auto; }
+
+#discovery-erc .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0; }
+  #discovery-erc .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+#discovery-erc section.home {
   background-image: url(../images/bg_discovery-erc.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover; }
-  #discovery-erc h1, #discovery-erc h2, #discovery-erc h3, #discovery-erc h4, #discovery-erc h5, #discovery-erc h6 {
-    font-weight: 700;
+  #discovery-erc section.home h1, #discovery-erc section.home h2, #discovery-erc section.home h3, #discovery-erc section.home h4, #discovery-erc section.home h5, #discovery-erc section.home h6 {
     color: #0275bc; }
-  #discovery-erc a:link, #discovery-erc a:visited, #discovery-erc strong {
-    color: #0275bc;
-    font-weight: 700; }
-  #discovery-erc header {
-    margin-bottom: 1rem; }
-    #discovery-erc header img {
-      max-width: none;
-      width: 100%;
-      height: auto; }
-  #discovery-erc section.banner {
+  #discovery-erc section.home a:link, #discovery-erc section.home a:visited, #discovery-erc section.home strong {
+    color: #0275bc; }
+  #discovery-erc section.home section.banner {
     background-color: #0275bc;
     margin-bottom: 1rem; }
-    #discovery-erc section.banner h2 {
+    #discovery-erc section.home section.banner h2 {
       color: #fff; }
-  #discovery-erc table {
+  #discovery-erc section.home table {
     border: 1px solid #999; }
-    #discovery-erc table tr {
+    #discovery-erc section.home table tr {
       border-bottom: 1px solid #999; }
-    #discovery-erc table td .button {
+    #discovery-erc section.home table td .button {
       padding: 5px 10px;
       margin: 5px 0 0 0;
       font-weight: 500; }
-      #discovery-erc table td .button span {
+      #discovery-erc section.home table td .button span {
         margin-left: 10px;
         font-weight: 700; }
-    #discovery-erc table td .hershey {
+    #discovery-erc section.home table td .hershey {
       background-color: #54c2e3; }
-    #discovery-erc table td .nashville {
+    #discovery-erc section.home table td .nashville {
       background-color: #f3af45; }
-    #discovery-erc table td .pasadena {
+    #discovery-erc section.home table td .pasadena {
       background-color: #53b958; }
-  #discovery-erc .name {
+  #discovery-erc section.home .name {
     color: #666;
     margin: 10px 0 0 0; }
-  #discovery-erc .school {
+  #discovery-erc section.home .school {
     line-height: 1.2; }
-  #discovery-erc a.about {
+  #discovery-erc section.home a.about {
     margin-top: 10px;
     display: block;
     font-weight: 400;
     line-height: 1.2; }
+
+#discovery-erc section.math h1, #discovery-erc section.math h2, #discovery-erc section.math h3, #discovery-erc section.math h4, #discovery-erc section.math h5, #discovery-erc section.math h6 {
+  color: #65308f; }
+
+#discovery-erc section.math a:link, #discovery-erc section.math a:visited, #discovery-erc section.math strong {
+  color: #65308f; }
+
+#discovery-erc section.math nav {
+  color: #fff;
+  font-size: 85%; }
+  #discovery-erc section.math nav a:link, #discovery-erc section.math nav a:visited {
+    color: #fff; }
+  #discovery-erc section.math nav strong {
+    color: #fff200;
+    font-weight: 400; }
+  #discovery-erc section.math nav span {
+    line-height: 1;
+    padding: 5px 10px;
+    float: left; }
+  #discovery-erc section.math nav span.event-menu {
+    float: right; }
+  #discovery-erc section.math nav span.science-menu {
+    background-color: #53b958; }
+  #discovery-erc section.math nav span.studies-menu {
+    background-color: #830c0e; }
+
+#discovery-erc section.math nav.math {
+  background-color: #65308f; }
+
+#discovery-erc section.math #sidebar {
+  background-color: #d3c9e2; }
+  #discovery-erc section.math #sidebar article {
+    background-color: #fff; }
+  #discovery-erc section.math #sidebar .ad {
+    margin-bottom: 1rem; }
 
 div.registration-form div.gform_wrapper {
   max-width: 100%; }
