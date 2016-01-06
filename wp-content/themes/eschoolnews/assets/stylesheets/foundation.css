@@ -9537,7 +9537,6 @@ body.page.collaboration header {
     height: 100%; }
 
 #discovery-erc section.home {
-  background-image: url(../images/bg_discovery-erc.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover; }
@@ -9628,6 +9627,18 @@ body.page.collaboration header {
 
 #discovery-erc section.science #sidebar {
   background-color: #cceacd; }
+
+#discovery-erc section.social-studies h1, #discovery-erc section.social-studies h2, #discovery-erc section.social-studies h3, #discovery-erc section.social-studies h4, #discovery-erc section.social-studies h5, #discovery-erc section.social-studies h6 {
+  color: #830c0e; }
+
+#discovery-erc section.social-studies a:link, #discovery-erc section.social-studies a:visited, #discovery-erc section.social-studies strong {
+  color: #830c0e; }
+
+#discovery-erc section.social-studies nav.social-studies {
+  background-color: #830c0e; }
+
+#discovery-erc section.social-studies #sidebar {
+  background-color: #dab7b7; }
 
 div.registration-form div.gform_wrapper {
   max-width: 100%; }

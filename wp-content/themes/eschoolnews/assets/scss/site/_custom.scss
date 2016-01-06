@@ -1740,7 +1740,7 @@ body.page.collaboration header {
 
 	section.home {
 
-		background-image: url(../images/bg_discovery-erc.png);
+		// background-image: url(../images/bg_discovery-erc.png);
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: cover;
@@ -1901,6 +1901,25 @@ body.page.collaboration header {
 			background-color: #cceacd;
 		}
 
+	}
+
+
+	section.social-studies {
+		h1,h2,h3,h4,h5,h6 {
+			color: #830c0e;
+		}
+
+		a:link, a:visited, strong {
+			color: #830c0e;
+		}
+
+		nav.social-studies {
+			background-color: #830c0e;
+		}
+
+		#sidebar {
+			background-color: #dab7b7;
+		}
 	}
 	
 }
