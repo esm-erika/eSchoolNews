@@ -9421,7 +9421,7 @@ body.page.collaboration header, body.page-template-collaboration-nation header {
   background-size: cover;
   background-position: center center;
   background-image: url(../images/collaboration-banner.jpg);
-  height: 620px;
+  height: 550px;
   position: relative;
   margin-bottom: 50px; }
   body.page.collaboration header img.text, body.page-template-collaboration-nation header img.text {
@@ -9506,7 +9506,7 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
   margin: 0; }
 
 body.page.collaboration header {
-  height: 550px !important; }
+  height: 620px !important; }
 
 #discovery-erc h1, #discovery-erc h2, #discovery-erc h3, #discovery-erc h4, #discovery-erc h5, #discovery-erc h6 {
   font-weight: 700;
