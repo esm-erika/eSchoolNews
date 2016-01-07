@@ -127,8 +127,21 @@
 							Maryland,
 							Baltimore County
 							</div>
-							<a class="about" href="#">About Dr. Freeman
+							<a class="about" href="#" data-reveal-id="Freeman">About Dr. Freeman
 							A. Hrabowski</a>
+
+							<div id="Freeman" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+							  	<div class="row">
+							  		<div class="small-12 medium-4 columns">
+							  			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/freeman_discovery-erc.png" alt="Dr. Freeman A. Hrabowski">
+							  		</div>
+							  		<div class="small-12 medium-8 columns">
+										<h2 id="modalTitle">Dr. Freeman A. Hrabowski</h2>
+										<p>Dr. Freeman A. Hrabowski, President of UMBC (University of Maryland, Baltimore County), is a national leader in science and math education and an expert on closing opportunity gaps. Hrabowski, author of “Empowering Youth from the Civil Rights Crusade to STEM Achievement,” has led UMBC to yield one of the highest rates of African-American post-graduate degrees in science and engineering fields throughout the country. He chairs the President’s Advisory Commission on Educational Excellence for African Americans and was named one of the 100 Most Influential People in the World by TIME.</p>
+									</div>
+								</div>
+									<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+							</div>
 						</li>
 						<li>
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/erin_discovery-erc.png" alt="Erin Gruwell">
@@ -139,7 +152,20 @@
 							Maryland,
 							Baltimore County
 						</div>
-							<a class="about" href="#">About Erin Gruwell</a>
+							<a class="about" href="#" data-reveal-id="Erin">About Erin Gruwell</a>
+
+							<div id="Erin" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+							  	<div class="row">
+							  		<div class="small-12 medium-4 columns">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/erin_discovery-erc.png" alt="Erin Gruwell">
+							  		</div>
+							  		<div class="small-12 medium-8 columns">
+										<h2 id="modalTitle">Erin Gruwell</h2>
+										<p>Erin Gruwell was a high school teacher to inner-city Los Angeles youth who helped 150 of her students to use the power of education to write a book, graduate from high school, and attend college. Her journey was chronicled in the New York Times bestseller, The Freedom Writers Diary and in a 2007 film with Hillary Swank. Erin challenged her students to overcome poverty, racism, and violence to become published writers and catalysts for change. Today, Erin has extended the reach of her powerful teaching methods by providing professional development to teachers nationwide through the Freedom Writers Foundation.</p>
+									</div>
+								</div>
+									<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+							</div>
 						</li>
 						<li>
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pedro_discovery-erc.png" alt="Dr. Pedro Noguera">
@@ -152,8 +178,20 @@
 							California,
 							Los Angeles
 							</div>
-							<a class="about" href="#">About Dr. Freeman
-							A. Hrabowski</a>
+							<a class="about" href="#" data-reveal-id="Pedro">About Dr. Pedro Noguera</a>
+
+							<div id="Pedro" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+							  	<div class="row">
+							  		<div class="small-12 medium-4 columns">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pedro_discovery-erc.png" alt="Dr. Pedro Noguera">
+							  		</div>
+							  		<div class="small-12 medium-8 columns">
+										<h2 id="modalTitle">Dr. Pedro Noguera</h2>
+										<p>Dr. Pedro Noguera is a Distinguished Professor of Education in the Graduate School of Education at UCLA and one of America’s most important voices for public education. He focuses on how socioeconomic conditions impact schools and how districts grapple with issues of equity and excellence. Noguera’s research is detailed in eleven books and over 20 articles and monographs. Previously, he served as professor at New York University, Harvard University, and the University of California, Berkeley, and as a Trustee for the State University of New York. Noguera appears regularly as an education commentator on CNN, MSNBC, and NPR.</p>
+									</div>
+								</div>
+									<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+							</div>
 						</li>
 
 					</ul>
