@@ -55,8 +55,12 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$bookmark = get_bookmark($rtpvalidated);
 	$url = $bookmark->link_url;
 	$pagetitle = $bookmark->link_name; 
-	if ( isset($_GET['lir']) && is_numeric($_GET['lir']) ) { $redirectto = 2; }
-	else {	$redirectto = 1; }
+	if ( isset($_GET['lir']) && is_numeric($_GET['lir']) ) {
+		if(esm_is_user_logged_in()){ 
+			$redirectto = 1; } 
+		else { 
+			$redirectto = 2; }
+	} else { $redirectto = 1; }
 
 } else {
 	$redirectto = 0;
