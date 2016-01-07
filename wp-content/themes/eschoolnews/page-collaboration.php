@@ -39,7 +39,6 @@ global $cat;
 	<!-- /* Slick Carousel */ -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css"/>
 
-
 	<!-- slick-theme.css default styling -->
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/> -->
 
@@ -153,25 +152,9 @@ global $cat;
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<h2 class="page-title"><?php the_title(); ?></h2>
 
-				<div id="clockdiv">
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
-  </div>
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext">Hours</div>
-  </div>
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
-  </div>
-</div>
-
+				<div class="calendar">
+					<span>168<br/>Days</span>
+				</div>
 
 				<?php the_content(); ?>
 			<?php endwhile; 
@@ -207,7 +190,7 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 			<p>Share your school or district's success story with the Collaboration Nation community and with your friends, faculty, parents and family. The school or district with the most votes between the first and the fifteenth of March, April and May will win a $15,000 prize in products from Collaboration Nation partners HP, Lenovo, Cisco or Cisco Meraki.</p>
 			
 			<a href="<?php home_url(); ?>/collaboration/submission-form" class="button-entry">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/voting-begins.png" alt="Voting Beings March 1!">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/voting-begins.png" alt="Voting Begins March 1!">
 			</a>
 		</div>
 
