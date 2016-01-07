@@ -66,7 +66,7 @@
 					anytime in any secondary instructional setting.</p>
 
 					<p>
-						<a href="#">
+						<a target="new" href="http://www.discoveryeducation.com/what-we-offer/techbook-digital-textbooks/math/index.cfm">
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -107,23 +107,6 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Infographic</h6>
-								<h5>Problems Worth Solving</h5>
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Math-Techbook-Infographic.pdf"></a>
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
-								</a>
-								
-							</div>
-							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/infographic_discovery-erc.png" alt="Infographic">
-
-							</div>
-						</div>
-					</article>
-
-					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Math for a Digital Era</h5>	
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Discovery-Point-Of-View-Math-Techbook.pdf">
@@ -140,7 +123,24 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Ed-Tech Point of View</h6>
+								<h6 style="color: #666;">Infographic</h6>
+								<h5>Problems Worth Solving</h5>
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Math-Techbook-Infographic.pdf">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+								</a>
+								
+							</div>
+							<div class="small-12 medium-6 columns">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/infographic_discovery-erc.png" alt="Infographic">
+
+							</div>
+						</div>
+					</article>
+
+					<article>
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Mathematical Learning Through Rigorous Tasks</h5>	
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Mathematical-Learning-through-Rigorous-Tasks.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
@@ -159,7 +159,7 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
+								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Stories from Passionate Educators</h5>	
 								
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Pillsbury.pdf">
@@ -173,22 +173,6 @@
 						</div>
 					</article>
 
-					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Video</h6>
-								<h5>Problems Worth Solving</h5>	
-								
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-watch_discovery-erc.png" alt="Watch">
-								</a>
-							</div>
-							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bridge_discovery-erc.png" alt="">
-
-							</div>
-						</div>
-					</article>
 				</div>
 
 			</div>
