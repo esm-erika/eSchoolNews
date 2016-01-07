@@ -5,8 +5,10 @@ define('WP_USE_THEMES', true);
 include_once ( 'wp-config.php');
 include_once ( 'wp-settings.php');
 $wp->init(); $wp->parse_request(); $wp->query_posts();
-$wp->register_globals(); $wp->send_headers();
+$wp->register_globals(); //$wp->send_headers();
+ob_start();
 include_once ( 'wp-load.php');
+global $post, $wpdb, $user, $esmuser; 
 
 
 //get the query vars and validate them
@@ -19,13 +21,10 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$redirectto = 1;
 	$pagetitle = get_the_title($rtpvalidated);
 } else if ( isset($_GET['rtl']) && is_numeric($_GET['rtl']) ) {
-		
+	
 	$rtpvalidated = $_GET['rtl'];
 	$rtl__c = $rtpvalidated;
 	$siteprefix = $wpdb->prefix;
-
-
-	
 	
 	if($rtpvalidated == 75 and $siteprefix == 'wp_3_'){
 	$rurl = 'http://www.eschoolnews.com'.$_SERVER["REQUEST_URI"];	
@@ -55,12 +54,7 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$bookmark = get_bookmark($rtpvalidated);
 	$url = $bookmark->link_url;
 	$pagetitle = $bookmark->link_name; 
-	if ( isset($_GET['lir']) && is_numeric($_GET['lir']) ) {
-		if(esm_is_user_logged_in()){ 
-			$redirectto = 1; } 
-		else { 
-			$redirectto = 2; }
-	} else { $redirectto = 1; }
+	$redirectto = 1;
 
 } else {
 	$redirectto = 0;
@@ -218,35 +212,7 @@ $wpdb->query( $wpdb->prepare("INSERT INTO esm_lead (Area__c ,astc__c , attachmen
 
 if($rurl){ $url = $rurl;	}
 if($redirectto == 1){ header( 'Location: '.$url ) ;	
-} else if($redirectto == 2){
- get_header(); 
-?>
-<div class="row top">
-	<div class="small-12 medium-12 large-12 columns" role="main">
-<div style="border:#CCCCCC solid 1px; padding:10px;">
-<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
-<p><strong>Free registration required to view this resource.</strong><br />
-<br />
-Register today and receive free access to all our news and resources and the ability to customize your news by topic with My eSchool News.<br /><br />
-<a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode($url); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
-<br />
-<br />
-Already a member? Log in
-<div>Username: <input type="text" name="log" id="log" value="" /></div>
-<div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
-<input type="submit" name="submit" value="Login" class="button">
-<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
-<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
-<br />
-<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
-
-</form>	
-</div>
-</div>
-</div>
-<?php
- get_footer(); 
-} else {
+}
 
 ?><?php get_header(); ?>
 
@@ -274,7 +240,4 @@ Already a member? Log in
 			<div class="clear"></div>
 	</div><!-- #Container -->
 
-<?php get_footer(); 
-
-}
-?>
+<?php get_footer(); ?>
