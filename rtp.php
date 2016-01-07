@@ -217,6 +217,8 @@ if($redirectto == 1){ header( 'Location: '.$url ) ;
 } else if($redirectto == 2){
  get_header(); 
 ?>
+<div class="row top">
+	<div class="small-12 medium-12 large-12 columns" role="main">
 <div style="border:#CCCCCC solid 1px; padding:10px;">
 <form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
 <p><strong>Free registration required to view this resource.</strong><br />
@@ -236,8 +238,8 @@ Already a member? Log in
 
 </form>	
 </div>
-
-
+</div>
+</div>
 <?php
  get_footer(); 
 } else {
