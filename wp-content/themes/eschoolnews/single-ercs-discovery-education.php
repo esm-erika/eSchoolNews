@@ -87,20 +87,20 @@
 						<tr>
 							<td>
 								<strong>January 28</strong> in Hershey, PA with keynote speaker, Dr. Freeman Hrabowski<br/>
-								<a href="#" class="hershey button small radius">Register- Hershey, PA <span>></span></a>
+								<a target="new" href="https://www.eventbrite.com/e/powerful-practices-pa-january-2016-tickets-19532153196" class="hershey button small radius">Register- Hershey, PA <span>></span></a>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<strong>February 24</strong> in Nashville, TN with keynote speaker, Erin Gruwell<br>
-								<a href="#" class="nashville button small radius">Register- Nashville, TN <span>></span></a>
+								<a target="new" href="https://www.eventbrite.com/e/powerful-practices-tn-february-2016-tickets-19587495727" class="nashville button small radius">Register- Nashville, TN <span>></span></a>
 
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<strong>March 15</strong> in Pasadena, CA with keynote speaker, Dr. Pedro Noguera<br>
-								<a href="#" class="pasadena button small radius">Register- Pasadena, CA <span>></span></a>
+								<a target="new" href="https://www.eventbrite.com/e/powerful-practices-ca-march-2016-tickets-19579146755" class="pasadena button small radius">Register- Pasadena, CA <span>></span></a>
 
 							</td>
 						</tr>

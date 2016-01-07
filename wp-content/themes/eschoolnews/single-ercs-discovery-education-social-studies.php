@@ -39,7 +39,7 @@
 		<section class="social-studies">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices">
+				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="social-studies">
 
 					<div class="row">
@@ -61,7 +61,7 @@
 					<p>Social Studies Techbook is a core digital textbook that makes teaching and learning an unforgettable experience. Using an inquiry-based approach that enhances literacy and critical thinking skills, Social Studies Techbook supports any device, anywhere, anytime in any instructional setting.</p>
 
 					<p>
-						<a href="#">
+						<a target="new" href="http://www.discoveryeducation.com/what-we-offer/techbook-digital-textbooks/middle-school-social-studies/index.cfm">
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -95,7 +95,24 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
+								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
+								<h5>Transforming Social Studies Education for a Digital Era</h5>	
+								
+								<a href="#">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+								</a>
+							</div>
+							<div class="small-12 medium-6 columns">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/transforming-social_discovery-erc.png" alt="">
+
+							</div>
+						</div>
+					</article>
+
+					<article>
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Five Strategies for Using Primary Source Documents</h5>	
 								
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/five-strategies-for-using-primary-source-documents-in-the-social-studies-classroom.pdf">
@@ -112,7 +129,7 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Ed-Tech Point of View</h6>
+								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Building Content Knowledge and Inquiry Skills</h5>	
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Building-Content-Knowledge-and-Inquiry-Skills-with-Discovery-Education-Social-Studies-Techbook.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
@@ -131,7 +148,7 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
+								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Chris Layton</h5>	
 								
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/From-the-Heart_Chris-Layton.pdf">
@@ -148,7 +165,7 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
+								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Queenie Hall</h5>	
 								
 								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Queenie.pdf">

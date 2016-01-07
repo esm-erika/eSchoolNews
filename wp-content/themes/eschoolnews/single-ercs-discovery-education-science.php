@@ -39,7 +39,7 @@
 		<section class="science">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-science_discovery-erc.jpg" alt="Powerful Practices">
+				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-science_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="science">
 
 					<div class="row">
