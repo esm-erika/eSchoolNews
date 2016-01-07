@@ -211,7 +211,7 @@ $wpdb->query( $wpdb->prepare("INSERT INTO esm_lead (Area__c ,astc__c , attachmen
 
 
 if($rurl){ $url = $rurl;	}
-if($redirectto == 1){ // header( 'Location: '.$url ) ;	
+if($redirectto == 1){ header( 'Location: '.$url ) ;	
 
 echo $dtDate, $dtVisit, $sfuid, $wpuid, $pageid, $ercid, $email, $URL, $pagetitle, $visits, $siteprefix, $PersonContactId, $esmpassvalue;
 
