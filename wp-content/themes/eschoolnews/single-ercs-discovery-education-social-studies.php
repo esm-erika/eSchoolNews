@@ -39,7 +39,7 @@
 		<section class="social-studies">
 			
 			<header>
-				<a href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
+				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="social-studies">
 
 					<div class="row">
@@ -61,7 +61,7 @@
 					<p>Social Studies Techbook is a core digital textbook that makes teaching and learning an unforgettable experience. Using an inquiry-based approach that enhances literacy and critical thinking skills, Social Studies Techbook supports any device, anywhere, anytime in any instructional setting.</p>
 
 					<p>
-						<a href="#">
+						<a target="new" href="http://www.discoveryeducation.com/what-we-offer/techbook-digital-textbooks/middle-school-social-studies/index.cfm">
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -91,6 +91,23 @@
 
 				<div id="sidebar" class="small-12 medium-4 columns">
 					<h3>Resources</h3>
+
+					<article>
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
+								<h5>Transforming Social Studies Education for a Digital Era</h5>	
+								
+								<a href="#">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+								</a>
+							</div>
+							<div class="small-12 medium-6 columns">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/transforming-social_discovery-erc.png" alt="">
+
+							</div>
+						</div>
+					</article>
 
 					<article>
 						<div class="row">
