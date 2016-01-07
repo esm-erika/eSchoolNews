@@ -96,7 +96,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Science Education for a Digital Era</h5>
-								<a href="#"></a>
+								<a target="new" href="#"></a>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
@@ -113,7 +113,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Whitepaper</h6>
 								<h5>Five Powerful Practices for Science Professional Development</h5>
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Five-Powerful-Practices-for-Science-Professional-Development.pdf">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Five-Powerful-Practices-for-Science-Professional-Development.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								

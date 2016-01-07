@@ -98,7 +98,7 @@
 								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
 								<h5>Transforming Social Studies Education for a Digital Era</h5>	
 								
-								<a href="#">
+								<a target="new" href="#">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -115,7 +115,7 @@
 								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Five Strategies for Using Primary Source Documents</h5>	
 								
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/five-strategies-for-using-primary-source-documents-in-the-social-studies-classroom.pdf">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/five-strategies-for-using-primary-source-documents-in-the-social-studies-classroom.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -131,7 +131,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Building Content Knowledge and Inquiry Skills</h5>	
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Building-Content-Knowledge-and-Inquiry-Skills-with-Discovery-Education-Social-Studies-Techbook.pdf">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Building-Content-Knowledge-and-Inquiry-Skills-with-Discovery-Education-Social-Studies-Techbook.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -151,7 +151,7 @@
 								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Chris Layton</h5>	
 								
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/From-the-Heart_Chris-Layton.pdf">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/From-the-Heart_Chris-Layton.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -168,7 +168,7 @@
 								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Queenie Hall</h5>	
 								
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Queenie.pdf">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Queenie.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
