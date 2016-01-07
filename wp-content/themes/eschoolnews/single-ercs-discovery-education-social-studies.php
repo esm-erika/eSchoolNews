@@ -39,7 +39,7 @@
 		<section class="social-studies">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices">
+				<a href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="social-studies">
 
 					<div class="row">

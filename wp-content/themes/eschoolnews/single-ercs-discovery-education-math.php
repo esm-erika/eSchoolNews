@@ -39,7 +39,9 @@
 		<section class="math">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-math_discovery-erc.png" alt="Powerful Practices">
+				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-math_discovery-erc.png" alt="Powerful Practices">
+				</a>
 				<nav class="math">
 
 					<div class="row">
