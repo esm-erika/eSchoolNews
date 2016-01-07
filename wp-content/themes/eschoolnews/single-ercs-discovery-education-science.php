@@ -61,7 +61,7 @@
 					<p>Science Techbook helps teachers transform their instruction with a simple-to-use, highly interactive program that integrates multimedia resources including video, audio, text, and interactives. Hands-on activities, virtual labs, and technology-enhanced formative assessment provide a rich and engaging learning experience for students. Science Techbook works on any device and can be implemented in a variety of instructional settings.</p>
 
 					<p>
-						<a href="#">
+						<a target="new" href="http://www.discoveryeducation.com/what-we-offer/techbook-digital-textbooks/science/index.cfm">
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -94,15 +94,32 @@
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
-								<h5>Five Powerful Practices for Science Professional Development</h5>
-								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Five-Powerful-Practices-for-Science-Professional-Development.pdf"></a>
+								<h6 style="color: #666;">Ed-Tech Point of View</h6>
+								<h5>Transforming Science Education for a Digital Era</h5>
+								<a href="#"></a>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/infographic_discovery-erc.png" alt="Infographic">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/transforming-science_discovery-erc.png" alt="">
+
+							</div>
+						</div>
+					</article>
+
+					<article>
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								<h6 style="color: #666;">Whitepaper</h6>
+								<h5>Five Powerful Practices for Science Professional Development</h5>
+								<a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Five-Powerful-Practices-for-Science-Professional-Development.pdf">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+								</a>
+								
+							</div>
+							<div class="small-12 medium-6 columns">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/five-powerful_discovery-erc.png" alt="Infographic">
 
 							</div>
 						</div>
