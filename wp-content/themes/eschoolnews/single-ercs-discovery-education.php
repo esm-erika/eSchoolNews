@@ -41,7 +41,9 @@
 		<section class="home">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner_discovery-erc.png" alt="Powerful Practices">
+				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner_discovery-erc.png" alt="Powerful Practices">
+				</a>
 			</header>
 
 			<div class="row">
