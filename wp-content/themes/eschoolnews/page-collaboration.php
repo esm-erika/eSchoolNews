@@ -169,7 +169,7 @@ global $cat;
 			wp_reset_postdata(); ?>
 
 			<a href="<?php home_url(); ?>/collaboration/submission-form" class="button-entry">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-enter_green.png" alt="Enter Today!">
+				<img width="150" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_submit-today.png" alt="Submit Today!">
 			</a>
 
 		</div>
@@ -217,7 +217,7 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 			<h4>Questions? Want to Learn More?</h4>
 			<br/>
 			<a href="<?php home_url(); ?>/collaboration/faqs" class="button-faq">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-faq.png" alt="FAQs">
+				<img width="150" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-faq.png" alt="FAQs">
 			</a>
 
 		</div>
