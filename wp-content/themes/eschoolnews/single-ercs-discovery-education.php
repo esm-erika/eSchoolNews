@@ -45,7 +45,7 @@
 			</header>
 
 			<div class="row">
-				<div class="small-12 medium-7 columns">
+				<div class="small-12 medium-6 columns">
 					<h3>About Discovery Education's Powerful Practices Series</h3>
 					<p>The Powerful Practices series is a new collection of exclusive
 					experiences and content designed specifically for superintendents
@@ -68,7 +68,7 @@
 					student engagement.</p>
 				</div>
 
-				<div id="zmag-script" class="small-12 medium-5 columns">
+				<div id="zmag-script" class="small-12 medium-6 columns">
 
 				</div>
 			</div>

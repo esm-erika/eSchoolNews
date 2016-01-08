@@ -9536,6 +9536,11 @@ body.page.collaboration header {
     width: 100%;
     height: 100%; }
 
+#discovery-erc #zmag-script {
+  max-width: 450px;
+  height: 450px;
+  margin: auto; }
+
 #discovery-erc section.home {
   background-repeat: no-repeat;
   background-position: top center;
