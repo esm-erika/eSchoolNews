@@ -9193,24 +9193,24 @@ footer {
     color: #fff;
     margin-bottom: 20px; }
 
-body.page.collaboration h1, body.page.collaboration h2, body.page.collaboration h3, body.page.collaboration h4, body.page.collaboration h5, body.page.collaboration h6, body.page-template-collaboration-nation h1, body.page-template-collaboration-nation h2, body.page-template-collaboration-nation h3, body.page-template-collaboration-nation h4, body.page-template-collaboration-nation h5, body.page-template-collaboration-nation h6 {
+body.page.collaboration-live h1, body.page.collaboration-live h2, body.page.collaboration-live h3, body.page.collaboration-live h4, body.page.collaboration-live h5, body.page.collaboration-live h6, body.page-template-collaboration-nation h1, body.page-template-collaboration-nation h2, body.page-template-collaboration-nation h3, body.page-template-collaboration-nation h4, body.page-template-collaboration-nation h5, body.page-template-collaboration-nation h6 {
   font-weight: 700;
   color: #e41c38; }
-  body.page.collaboration h1 span, body.page.collaboration h2 span, body.page.collaboration h3 span, body.page.collaboration h4 span, body.page.collaboration h5 span, body.page.collaboration h6 span, body.page-template-collaboration-nation h1 span, body.page-template-collaboration-nation h2 span, body.page-template-collaboration-nation h3 span, body.page-template-collaboration-nation h4 span, body.page-template-collaboration-nation h5 span, body.page-template-collaboration-nation h6 span {
+  body.page.collaboration-live h1 span, body.page.collaboration-live h2 span, body.page.collaboration-live h3 span, body.page.collaboration-live h4 span, body.page.collaboration-live h5 span, body.page.collaboration-live h6 span, body.page-template-collaboration-nation h1 span, body.page-template-collaboration-nation h2 span, body.page-template-collaboration-nation h3 span, body.page-template-collaboration-nation h4 span, body.page-template-collaboration-nation h5 span, body.page-template-collaboration-nation h6 span {
     text-transform: capitalize;
     border-bottom: none; }
 
-body.page.collaboration #logo, body.page-template-collaboration-nation #logo {
+body.page.collaboration-live #logo, body.page-template-collaboration-nation #logo {
   max-height: 50px;
   margin-right: 0.9375rem; }
 
-body.page.collaboration section, body.page-template-collaboration-nation section {
+body.page.collaboration-live section, body.page-template-collaboration-nation section {
   padding: 20px 0 0 0; }
 
-body.page.collaboration section.home, body.page-template-collaboration-nation section.home {
+body.page.collaboration-live section.home, body.page-template-collaboration-nation section.home {
   margin-top: 20px; }
 
-body.page.collaboration .calendar, body.page-template-collaboration-nation .calendar {
+body.page.collaboration-live .calendar, body.page-template-collaboration-nation .calendar {
   background-image: url(../images/calendar-icon.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -9219,7 +9219,7 @@ body.page.collaboration .calendar, body.page-template-collaboration-nation .cale
   height: 140px;
   margin: 20px auto 30px;
   line-height: 200px; }
-  body.page.collaboration .calendar span, body.page-template-collaboration-nation .calendar span {
+  body.page.collaboration-live .calendar span, body.page-template-collaboration-nation .calendar span {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
@@ -9228,84 +9228,84 @@ body.page.collaboration .calendar, body.page-template-collaboration-nation .cale
     width: 100%;
     margin-top: 55px; }
 
-body.page.collaboration footer, body.page-template-collaboration-nation footer {
+body.page.collaboration-live footer, body.page-template-collaboration-nation footer {
   background: #231f20;
   padding: 30px 0; }
-  body.page.collaboration footer .star, body.page-template-collaboration-nation footer .star {
+  body.page.collaboration-live footer .star, body.page-template-collaboration-nation footer .star {
     width: 50px; }
-  body.page.collaboration footer .collaboration-menu, body.page-template-collaboration-nation footer .collaboration-menu {
+  body.page.collaboration-live footer .collaboration-menu, body.page-template-collaboration-nation footer .collaboration-menu {
     margin: 0;
     float: left;
     height: 50px;
     line-height: 50px;
     margin-left: 10px; }
-    body.page.collaboration footer .collaboration-menu li, body.page-template-collaboration-nation footer .collaboration-menu li {
+    body.page.collaboration-live footer .collaboration-menu li, body.page-template-collaboration-nation footer .collaboration-menu li {
       list-style: none;
       display: inline-block; }
-      body.page.collaboration footer .collaboration-menu li a, body.page-template-collaboration-nation footer .collaboration-menu li a {
+      body.page.collaboration-live footer .collaboration-menu li a, body.page-template-collaboration-nation footer .collaboration-menu li a {
         color: #fff;
         font-size: 90%;
         border-right: 1px solid #fff;
         padding: 2px 5px 2px 0px; }
-    body.page.collaboration footer .collaboration-menu li.active:not(.has-form) a:not(.button), body.page-template-collaboration-nation footer .collaboration-menu li.active:not(.has-form) a:not(.button) {
+    body.page.collaboration-live footer .collaboration-menu li.active:not(.has-form) a:not(.button), body.page-template-collaboration-nation footer .collaboration-menu li.active:not(.has-form) a:not(.button) {
       color: #fff !important; }
-    body.page.collaboration footer .collaboration-menu li:last-child a, body.page-template-collaboration-nation footer .collaboration-menu li:last-child a {
+    body.page.collaboration-live footer .collaboration-menu li:last-child a, body.page-template-collaboration-nation footer .collaboration-menu li:last-child a {
       border-right: none; }
 
-body.page.collaboration section.home, body.page-template-collaboration-nation section.home {
+body.page.collaboration-live section.home, body.page-template-collaboration-nation section.home {
   background-image: url(../images/star-bg.png);
   background-size: 400px;
   background-position: top center;
   background-repeat: no-repeat; }
-  body.page.collaboration section.home .page-title, body.page-template-collaboration-nation section.home .page-title {
+  body.page.collaboration-live section.home .page-title, body.page-template-collaboration-nation section.home .page-title {
     text-align: center;
     font-weight: 700; }
 
-body.page.collaboration .winners .page-title, body.page-template-collaboration-nation .winners .page-title {
+body.page.collaboration-live .winners .page-title, body.page-template-collaboration-nation .winners .page-title {
   color: #4d9dd6;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 5px solid #4d9dd6; }
 
-body.page.collaboration .winners article, body.page-template-collaboration-nation .winners article {
+body.page.collaboration-live .winners article, body.page-template-collaboration-nation .winners article {
   padding: 1rem;
   background-color: #d3e3f5;
   margin-bottom: 1rem; }
-  body.page.collaboration .winners article h6 a, body.page-template-collaboration-nation .winners article h6 a {
+  body.page.collaboration-live .winners article h6 a, body.page-template-collaboration-nation .winners article h6 a {
     color: #000; }
-  body.page.collaboration .winners article iframe, body.page-template-collaboration-nation .winners article iframe {
+  body.page.collaboration-live .winners article iframe, body.page-template-collaboration-nation .winners article iframe {
     display: block;
     margin: auto;
     padding-top: 1rem; }
-  body.page.collaboration .winners article .readmore, body.page-template-collaboration-nation .winners article .readmore {
+  body.page.collaboration-live .winners article .readmore, body.page-template-collaboration-nation .winners article .readmore {
     font-weight: bold; }
 
-body.page.collaboration .judges .page-title, body.page-template-collaboration-nation .judges .page-title {
+body.page.collaboration-live .judges .page-title, body.page-template-collaboration-nation .judges .page-title {
   color: #e41c38;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 5px solid #e41c38; }
 
-body.page.collaboration .judges article, body.page-template-collaboration-nation .judges article {
+body.page.collaboration-live .judges article, body.page-template-collaboration-nation .judges article {
   background-color: #feebcf;
   padding: 1rem;
   margin-bottom: 1rem; }
-  body.page.collaboration .judges article h5, body.page-template-collaboration-nation .judges article h5 {
+  body.page.collaboration-live .judges article h5, body.page-template-collaboration-nation .judges article h5 {
     color: #000; }
 
-body.page.collaboration .judges article.odd, body.page-template-collaboration-nation .judges article.odd {
+body.page.collaboration-live .judges article.odd, body.page-template-collaboration-nation .judges article.odd {
   background-color: #fdddc7; }
 
-body.page.collaboration .rules .page-title, body.page-template-collaboration-nation .rules .page-title {
+body.page.collaboration-live .rules .page-title, body.page-template-collaboration-nation .rules .page-title {
   color: #f47f40;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 5px solid #f47f40; }
 
-body.page.collaboration .rules #rules, body.page-template-collaboration-nation .rules #rules {
+body.page.collaboration-live .rules #rules, body.page-template-collaboration-nation .rules #rules {
   position: relative; }
 
-body.page.collaboration .rules .download-rules, body.page-template-collaboration-nation .rules .download-rules {
+body.page.collaboration-live .rules .download-rules, body.page-template-collaboration-nation .rules .download-rules {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -9320,49 +9320,49 @@ body.page.collaboration .rules .download-rules, body.page-template-collaboration
   height: 75px;
   line-height: 75px; }
 
-body.page.collaboration .rules .content, body.page-template-collaboration-nation .rules .content {
+body.page.collaboration-live .rules .content, body.page-template-collaboration-nation .rules .content {
   padding-top: 2rem; }
-  body.page.collaboration .rules .content h6, body.page-template-collaboration-nation .rules .content h6 {
+  body.page.collaboration-live .rules .content h6, body.page-template-collaboration-nation .rules .content h6 {
     color: #000; }
 
-body.page.collaboration .faqs .page-title, body.page-template-collaboration-nation .faqs .page-title {
+body.page.collaboration-live .faqs .page-title, body.page-template-collaboration-nation .faqs .page-title {
   color: #75499b;
   border-bottom: 5px solid #75499b;
   padding-bottom: 1rem;
   margin-bottom: 1rem; }
 
-body.page.collaboration .faqs div.faq, body.page-template-collaboration-nation .faqs div.faq {
+body.page.collaboration-live .faqs div.faq, body.page-template-collaboration-nation .faqs div.faq {
   margin: 5rem 0; }
 
-body.page.collaboration .about-us .page-title, body.page-template-collaboration-nation .about-us .page-title {
+body.page.collaboration-live .about-us .page-title, body.page-template-collaboration-nation .about-us .page-title {
   color: #fab441;
   border-bottom: 5px solid #fab441;
   padding-bottom: 1rem;
   margin-bottom: 1rem; }
 
-body.page.collaboration #recent-entries .slick-slide, body.page-template-collaboration-nation #recent-entries .slick-slide {
+body.page.collaboration-live #recent-entries .slick-slide, body.page-template-collaboration-nation #recent-entries .slick-slide {
   padding: 0 5px; }
 
-body.page.collaboration #recent-entries .video, body.page-template-collaboration-nation #recent-entries .video {
+body.page.collaboration-live #recent-entries .video, body.page-template-collaboration-nation #recent-entries .video {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   padding-top: 25px;
   height: 0; }
-  body.page.collaboration #recent-entries .video iframe, body.page-template-collaboration-nation #recent-entries .video iframe {
+  body.page.collaboration-live #recent-entries .video iframe, body.page-template-collaboration-nation #recent-entries .video iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
 
-body.page.collaboration #recent-entries .slick-prev:before, body.page.collaboration #recent-entries .slick-next:before, body.page-template-collaboration-nation #recent-entries .slick-prev:before, body.page-template-collaboration-nation #recent-entries .slick-next:before {
+body.page.collaboration-live #recent-entries .slick-prev:before, body.page.collaboration-live #recent-entries .slick-next:before, body.page-template-collaboration-nation #recent-entries .slick-prev:before, body.page-template-collaboration-nation #recent-entries .slick-next:before {
   color: #336699; }
 
-body.page.collaboration div.social, body.page-template-collaboration-nation div.social {
+body.page.collaboration-live div.social, body.page-template-collaboration-nation div.social {
   margin-left: 0.9375rem;
   line-height: 50px; }
-  body.page.collaboration div.social a, body.page-template-collaboration-nation div.social a {
+  body.page.collaboration-live div.social a, body.page-template-collaboration-nation div.social a {
     color: #fff;
     font-size: 24px;
     width: 32px;
@@ -9371,12 +9371,12 @@ body.page.collaboration div.social, body.page-template-collaboration-nation div.
     display: inline-block;
     border-radius: 2px;
     text-align: center; }
-  body.page.collaboration div.social .twitter, body.page-template-collaboration-nation div.social .twitter {
+  body.page.collaboration-live div.social .twitter, body.page-template-collaboration-nation div.social .twitter {
     background: #00a9e0; }
-  body.page.collaboration div.social .facebook, body.page-template-collaboration-nation div.social .facebook {
+  body.page.collaboration-live div.social .facebook, body.page-template-collaboration-nation div.social .facebook {
     background: #1f58a0; }
 
-body.page.collaboration a.twitter, body.page-template-collaboration-nation a.twitter {
+body.page.collaboration-live a.twitter, body.page-template-collaboration-nation a.twitter {
   color: #fff;
   font-size: 24px;
   width: 32px;
@@ -9387,28 +9387,28 @@ body.page.collaboration a.twitter, body.page-template-collaboration-nation a.twi
   text-align: center;
   background: #00a9e0; }
 
-body.page.collaboration nav.top-bar, body.page-template-collaboration-nation nav.top-bar {
+body.page.collaboration-live nav.top-bar, body.page-template-collaboration-nation nav.top-bar {
   position: relative;
   padding: 5px 0;
   z-index: 9999;
   background: rgba(255, 255, 255, 0.8); }
-  body.page.collaboration nav.top-bar .top-bar-section ul li, body.page-template-collaboration-nation nav.top-bar .top-bar-section ul li {
+  body.page.collaboration-live nav.top-bar .top-bar-section ul li, body.page-template-collaboration-nation nav.top-bar .top-bar-section ul li {
     background: transparent; }
-  body.page.collaboration nav.top-bar .top-bar-section ul li > a, body.page-template-collaboration-nation nav.top-bar .top-bar-section ul li > a {
+  body.page.collaboration-live nav.top-bar .top-bar-section ul li > a, body.page-template-collaboration-nation nav.top-bar .top-bar-section ul li > a {
     font-weight: 400;
     color: #4c4c4c;
     font-family: inherit; }
-  body.page.collaboration nav.top-bar .top-bar-section li:not(.has-form) a:not(.button), body.page-template-collaboration-nation nav.top-bar .top-bar-section li:not(.has-form) a:not(.button) {
+  body.page.collaboration-live nav.top-bar .top-bar-section li:not(.has-form) a:not(.button), body.page-template-collaboration-nation nav.top-bar .top-bar-section li:not(.has-form) a:not(.button) {
     background: transparent;
     padding: 0; }
-    body.page.collaboration nav.top-bar .top-bar-section li:not(.has-form) a:not(.button) span, body.page-template-collaboration-nation nav.top-bar .top-bar-section li:not(.has-form) a:not(.button) span {
+    body.page.collaboration-live nav.top-bar .top-bar-section li:not(.has-form) a:not(.button) span, body.page-template-collaboration-nation nav.top-bar .top-bar-section li:not(.has-form) a:not(.button) span {
       padding: 3px 0.9375rem;
       border-right: 1px solid #4c4c4c; }
-  body.page.collaboration nav.top-bar .top-bar-section li.active:not(.has-form) a:not(.button), body.page-template-collaboration-nation nav.top-bar .top-bar-section li.active:not(.has-form) a:not(.button) {
+  body.page.collaboration-live nav.top-bar .top-bar-section li.active:not(.has-form) a:not(.button), body.page-template-collaboration-nation nav.top-bar .top-bar-section li.active:not(.has-form) a:not(.button) {
     color: #4c4c4c !important; }
-  body.page.collaboration nav.top-bar .top-bar-section li:last-child span, body.page-template-collaboration-nation nav.top-bar .top-bar-section li:last-child span {
+  body.page.collaboration-live nav.top-bar .top-bar-section li:last-child span, body.page-template-collaboration-nation nav.top-bar .top-bar-section li:last-child span {
     border-right: none !important; }
-  body.page.collaboration nav.top-bar .top-bar-section .sponsored-by, body.page-template-collaboration-nation nav.top-bar .top-bar-section .sponsored-by {
+  body.page.collaboration-live nav.top-bar .top-bar-section .sponsored-by, body.page-template-collaboration-nation nav.top-bar .top-bar-section .sponsored-by {
     position: absolute;
     right: 10px;
     top: -0.9375rem;
@@ -9416,18 +9416,18 @@ body.page.collaboration nav.top-bar, body.page-template-collaboration-nation nav
     padding: 20px;
     max-width: 200px; }
 
-body.page.collaboration header, body.page-template-collaboration-nation header {
+body.page.collaboration-live header, body.page-template-collaboration-nation header {
   background: #fff;
   background-size: cover;
   background-position: center center;
   background-image: url(../images/collaboration-banner.jpg);
-  height: 620px;
+  height: 550px;
   position: relative;
   margin-bottom: 50px; }
-  body.page.collaboration header img.text, body.page-template-collaboration-nation header img.text {
+  body.page.collaboration-live header img.text, body.page-template-collaboration-nation header img.text {
     position: absolute;
     bottom: 10px; }
-  body.page.collaboration header .text-container, body.page-template-collaboration-nation header .text-container {
+  body.page.collaboration-live header .text-container, body.page-template-collaboration-nation header .text-container {
     position: absolute;
     top: 0;
     right: 0;
@@ -9438,75 +9438,75 @@ body.page.collaboration header, body.page-template-collaboration-nation header {
     background-repeat: no-repeat;
     background-image: url(../images/collaboration-banner-text.png); }
 
-body.page.collaboration .partnerships ul li, body.page-template-collaboration-nation .partnerships ul li {
+body.page.collaboration-live .partnerships ul li, body.page-template-collaboration-nation .partnerships ul li {
   text-align: center;
   width: 25%; }
-  body.page.collaboration .partnerships ul li img, body.page-template-collaboration-nation .partnerships ul li img {
+  body.page.collaboration-live .partnerships ul li img, body.page-template-collaboration-nation .partnerships ul li img {
     max-height: 50px !important;
     width: auto; }
 
-body.page.collaboration .buttons-container, body.page-template-collaboration-nation .buttons-container {
+body.page.collaboration-live .buttons-container, body.page-template-collaboration-nation .buttons-container {
   margin: -120px auto 0;
   z-index: 9999;
   position: relative; }
-  body.page.collaboration .buttons-container ul.button-menu, body.page-template-collaboration-nation .buttons-container ul.button-menu {
+  body.page.collaboration-live .buttons-container ul.button-menu, body.page-template-collaboration-nation .buttons-container ul.button-menu {
     margin: 0;
     width: 80%; }
-    body.page.collaboration .buttons-container ul.button-menu li, body.page-template-collaboration-nation .buttons-container ul.button-menu li {
+    body.page.collaboration-live .buttons-container ul.button-menu li, body.page-template-collaboration-nation .buttons-container ul.button-menu li {
       text-align: center;
       list-style: none;
       display: inline-block;
       width: 15%; }
-      body.page.collaboration .buttons-container ul.button-menu li img, body.page-template-collaboration-nation .buttons-container ul.button-menu li img {
+      body.page.collaboration-live .buttons-container ul.button-menu li img, body.page-template-collaboration-nation .buttons-container ul.button-menu li img {
         position: relative; }
-      body.page.collaboration .buttons-container ul.button-menu li span, body.page-template-collaboration-nation .buttons-container ul.button-menu li span {
+      body.page.collaboration-live .buttons-container ul.button-menu li span, body.page-template-collaboration-nation .buttons-container ul.button-menu li span {
         display: block;
         text-align: center; }
-      body.page.collaboration .buttons-container ul.button-menu li a, body.page-template-collaboration-nation .buttons-container ul.button-menu li a {
+      body.page.collaboration-live .buttons-container ul.button-menu li a, body.page-template-collaboration-nation .buttons-container ul.button-menu li a {
         display: block;
         width: 80%; }
-    body.page.collaboration .buttons-container ul.button-menu .home a, body.page-template-collaboration-nation .buttons-container ul.button-menu .home a {
+    body.page.collaboration-live .buttons-container ul.button-menu .home a, body.page-template-collaboration-nation .buttons-container ul.button-menu .home a {
       color: #6cbd45; }
-    body.page.collaboration .buttons-container ul.button-menu .prizes, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes {
+    body.page.collaboration-live .buttons-container ul.button-menu .prizes, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes {
       position: relative;
       top: 25px; }
-      body.page.collaboration .buttons-container ul.button-menu .prizes a, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes a {
+      body.page.collaboration-live .buttons-container ul.button-menu .prizes a, body.page-template-collaboration-nation .buttons-container ul.button-menu .prizes a {
         color: #4d9dd6; }
-    body.page.collaboration .buttons-container ul.button-menu .judges a, body.page-template-collaboration-nation .buttons-container ul.button-menu .judges a {
+    body.page.collaboration-live .buttons-container ul.button-menu .judges a, body.page-template-collaboration-nation .buttons-container ul.button-menu .judges a {
       color: #e74b4a; }
-    body.page.collaboration .buttons-container ul.button-menu .rules a, body.page-template-collaboration-nation .buttons-container ul.button-menu .rules a {
+    body.page.collaboration-live .buttons-container ul.button-menu .rules a, body.page-template-collaboration-nation .buttons-container ul.button-menu .rules a {
       color: #f47f40; }
-    body.page.collaboration .buttons-container ul.button-menu .faq a, body.page-template-collaboration-nation .buttons-container ul.button-menu .faq a {
+    body.page.collaboration-live .buttons-container ul.button-menu .faq a, body.page-template-collaboration-nation .buttons-container ul.button-menu .faq a {
       color: #75499b; }
-    body.page.collaboration .buttons-container ul.button-menu .about a, body.page-template-collaboration-nation .buttons-container ul.button-menu .about a {
+    body.page.collaboration-live .buttons-container ul.button-menu .about a, body.page-template-collaboration-nation .buttons-container ul.button-menu .about a {
       color: #fab441; }
-  body.page.collaboration .buttons-container .submit-button, body.page-template-collaboration-nation .buttons-container .submit-button {
+  body.page.collaboration-live .buttons-container .submit-button, body.page-template-collaboration-nation .buttons-container .submit-button {
     width: 15%;
     text-align: center;
     margin-top: -30px;
     color: #4c4c4c; }
-    body.page.collaboration .buttons-container .submit-button span, body.page-template-collaboration-nation .buttons-container .submit-button span {
+    body.page.collaboration-live .buttons-container .submit-button span, body.page-template-collaboration-nation .buttons-container .submit-button span {
       width: 100%;
       text-align: center;
       padding-top: 5px;
       display: block; }
-  body.page.collaboration .buttons-container .menu-icon, body.page-template-collaboration-nation .buttons-container .menu-icon {
+  body.page.collaboration-live .buttons-container .menu-icon, body.page-template-collaboration-nation .buttons-container .menu-icon {
     width: 15%;
     text-align: center; }
 
-body.page.collaboration div.submission ul, body.page-template-collaboration-nation div.submission ul {
+body.page.collaboration-live div.submission ul, body.page-template-collaboration-nation div.submission ul {
   margin: 0; }
-  body.page.collaboration div.submission ul li, body.page-template-collaboration-nation div.submission ul li {
+  body.page.collaboration-live div.submission ul li, body.page-template-collaboration-nation div.submission ul li {
     list-style: none;
     padding-left: 5px;
     margin-bottom: 5px;
     font-size: 90%; }
 
-body.page.collaboration div.twitter h4, body.page-template-collaboration-nation div.twitter h4 {
+body.page.collaboration-live div.twitter h4, body.page-template-collaboration-nation div.twitter h4 {
   margin: 0; }
 
-body.page.collaboration header {
-  height: 550px !important; }
+body.page.collaboration-live header {
+  height: 620px !important; }
 
 #discovery-erc h1, #discovery-erc h2, #discovery-erc h3, #discovery-erc h4, #discovery-erc h5, #discovery-erc h6 {
   font-weight: 700;
