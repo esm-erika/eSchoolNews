@@ -192,14 +192,14 @@ if (false === ($local_box_cache) ){
 
 										<?php setup_postdata($post); ?>
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 							            	<span class="excerpt">
 												<?php the_content(); ?>
 											</span>
 
 										
 
-											<a class="button small radius" href="<?php the_permalink(); ?>">
+											<a class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 													<i class="fi-page"></i> White Paper
 											</a>
 
@@ -219,14 +219,14 @@ if (false === ($local_box_cache) ){
 										<?php setup_postdata($post); ?>
 
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 						            	<span class="excerpt">
 											<?php the_content(); ?>
 										</span>
 
 										
 
-											<a class="button small radius" href="<?php the_permalink(); ?>">
+											<a class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 												<i class="fi-page"></i>
 											</a>
 
@@ -280,12 +280,12 @@ if (false === ($local_box_cache) ){
 
 							<?php } else { ?>
 
-								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+								<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
 										<?php the_content(); ?>
 									</span>
 
-								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
+								<h6><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>Read More</a></h6>
 							<?php } ?>
 
 					        	</div>
@@ -388,14 +388,14 @@ if (false === ($local_box_cache) ){
 
 										<?php setup_postdata($post); ?>
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 										
 
-											<a class="button small radius" href="<?php the_permalink(); ?>">
+											<a class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 													<i class="fi-page"></i> White Paper
 											</a>
 
@@ -416,14 +416,14 @@ if (false === ($local_box_cache) ){
 
 										<?php setup_postdata($post); ?>
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 										
 
-											<a class="button small radius" href="<?php the_permalink(); ?>">
+											<a class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 												<i class="fi-page"></i>
 											</a>
 
@@ -471,14 +471,14 @@ if (false === ($local_box_cache) ){
 
 							<?php } else { ?>
 
-							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+							<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 					            	<span class="excerpt">
 										<?php the_content(); ?>
 									</span>
 
 										
 
-								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
+								<h6><a <?php if ( esm_is_user_logged_in()) { echo 'href="'; the_permalink(); echo '"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>Read More</a></h6>
 							<?php } ?>
 
 					        	</div>
