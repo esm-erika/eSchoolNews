@@ -19,7 +19,7 @@ if($template == 'single-olddata.php' or $isinactive == 1){
 include('single-olderc.php');
 
 }else{
-if ( esm_is_user_logged_in()) { echo 'LOGGED IN'; } else { echo 'LOGGED OUT'; }
+
 ?>
 <?php 
 //insert cache query
@@ -32,9 +32,13 @@ $cat_name = get_category(get_query_var('cat'))->term_id;
 $post_id = get_the_ID(); 
 //$cat_name = get_category(get_query_var('cat'))->term_id;
 global $astc, $astused;
-$box_qt = 'esm_c_sercbdy_a'.$ast."c".$astc.'c'.$cat_name.'p'.$post_id;
+if ( esm_is_user_logged_in()) { 
+$box_qt = 'esm_c_sercbdy_a'.$ast."c".$astc.'c'.$cat_name.'p'.$post_id.'li';
+ } else { 
+$box_qt = 'esm_c_sercbdy_a'.$ast."c".$astc.'c'.$cat_name.'p'.$post_id.'lo'; 
+}	
+
 $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
-	
 $local_box_cache = get_transient( $box_q );
 if (false === ($local_box_cache) ){
 
