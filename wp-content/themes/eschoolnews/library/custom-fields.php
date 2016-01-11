@@ -403,17 +403,14 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
-}
+
 
 
 /*===================================================================================
  * Collaboration Nation Custom Fields
  * =================================================================================*/
 
-
-if(function_exists("collaboration_group"))
-{
-	collaboration_group(array (
+	register_field_group(array (
 		'id' => 'acf_collaboration-judge-title',
 		'title' => 'Collaboration Judge Title',
 		'fields' => array (
@@ -449,7 +446,7 @@ if(function_exists("collaboration_group"))
 		),
 		'menu_order' => 0,
 	));
-	collaboration_group(array (
+	register_field_group(array (
 		'id' => 'acf_collaboration-nation-award-field',
 		'title' => 'Collaboration Nation Award Field',
 		'fields' => array (
@@ -486,7 +483,7 @@ if(function_exists("collaboration_group"))
 		),
 		'menu_order' => 0,
 	));
-	collaboration_group(array (
+	register_field_group(array (
 		'id' => 'acf_collaboration-nation-external-links',
 		'title' => 'Collaboration Nation External Links',
 		'fields' => array (
@@ -522,7 +519,7 @@ if(function_exists("collaboration_group"))
 		),
 		'menu_order' => 0,
 	));
-	collaboration_group(array (
+	register_field_group(array (
 		'id' => 'acf_collaboration-nation-pdfs',
 		'title' => 'Collaboration Nation PDFs',
 		'fields' => array (
@@ -555,7 +552,7 @@ if(function_exists("collaboration_group"))
 		),
 		'menu_order' => 0,
 	));
-	collaboration_group(array (
+	register_field_group(array (
 		'id' => 'acf_collaboration-nation-video',
 		'title' => 'Collaboration Nation Video',
 		'fields' => array (
@@ -594,7 +591,7 @@ if(function_exists("collaboration_group"))
 		),
 		'menu_order' => 0,
 	));
-	collaboration_group(array (
+	register_field_group(array (
 		'id' => 'acf_collaboration-nation-winner-field',
 		'title' => 'Collaboration Nation Winner Field',
 		'fields' => array (
