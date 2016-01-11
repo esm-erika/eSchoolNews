@@ -221,7 +221,7 @@ echo $local_box_cache;
 
 }
 
-if ( esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' );  }
+if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 ?>
 
