@@ -245,7 +245,7 @@ if (false === ($local_box_cache) ){
 
 								
 							
-								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
+								<a target="new" class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'.the_field('link_to_external_url').'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 									<?php 
 										echo '<i class="fi-arrow-down"></i> ';
 
@@ -261,7 +261,7 @@ if (false === ($local_box_cache) ){
 							$file = get_field('download_file');
 
 							if( $file ): ?>
-								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
+								<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'.$file['url'].'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 							
 					            	<span class="excerpt">
 										<?php the_content(); ?>
@@ -269,7 +269,7 @@ if (false === ($local_box_cache) ){
 
 								
 
-								<a class="button small radius" href="<?php echo $file['url']; ?>">
+								<a class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'.$file['url'].'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 									<i class="fi-arrow-down"></i> Download
 								</a>
 							<?php endif; ?>
@@ -435,12 +435,14 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif( get_field('link_to_external_url')){ ?>
 
-								<h5><a target="new" href="<?php the_field('link_to_external_url'); ?>"><?php the_title(); ?></a></h5>
+								<h5><a target="new" <?php if ( esm_is_user_logged_in()) { echo 'href="'.the_field('link_to_external_url').'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>
+><?php the_title(); ?></a></h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 							
-								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
+								<a target="new" class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'.the_field('link_to_external_url').'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>
+>
 									<?php 
 										echo '<i class="fi-arrow-down"></i> ';
 
@@ -456,7 +458,7 @@ if (false === ($local_box_cache) ){
 							$file = get_field('download_file');
 
 							if( $file ): ?>
-								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
+								<h5><a <?php if ( esm_is_user_logged_in()) { echo 'href="'.$file['url'].'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>><?php the_title(); ?></a></h5>
 							
 					            	<div class="excerpt">
 										<?php the_content(); ?>
@@ -464,7 +466,7 @@ if (false === ($local_box_cache) ){
 
 										
 
-								<a class="button small radius" href="<?php echo $file['url']; ?>">
+								<a class="button small radius" <?php if ( esm_is_user_logged_in()) { echo 'href="'.$file['url'].'"'; } else { echo 'href="#" data-reveal-id="login-popup"'; }?>>
 									<i class="fi-arrow-down"></i> Download
 								</a>
 								<?php endif; ?>
