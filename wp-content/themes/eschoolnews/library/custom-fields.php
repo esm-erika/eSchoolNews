@@ -403,5 +403,226 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
+
+
+/*===================================================================================
+ * Collaboration Nation Custom Fields
+ * =================================================================================*/
+
+	register_field_group(array (
+		'id' => 'acf_collaboration-judge-title',
+		'title' => 'Collaboration Judge Title',
+		'fields' => array (
+			array (
+				'key' => 'field_568abcd932773',
+				'label' => 'Title',
+				'name' => 'judge_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'judges',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-award-field',
+		'title' => 'Collaboration Nation Award Field',
+		'fields' => array (
+			array (
+				'key' => 'field_5682c5bb53ae8',
+				'label' => 'Award Name',
+				'name' => 'award_name',
+				'type' => 'text',
+				'instructions' => 'The name of the award.',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'collabnation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-external-links',
+		'title' => 'Collaboration Nation External Links',
+		'fields' => array (
+			array (
+				'key' => 'field_568c5d6f89371',
+				'label' => 'External Link',
+				'name' => 'external_link',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'collabnation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-pdfs',
+		'title' => 'Collaboration Nation PDFs',
+		'fields' => array (
+			array (
+				'key' => 'field_568aca9a46e1d',
+				'label' => 'Upload PDFs',
+				'name' => 'rules_pdf',
+				'type' => 'file',
+				'instructions' => 'Upload PDF containing Rules.',
+				'save_format' => 'url',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '177152',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-video',
+		'title' => 'Collaboration Nation Video',
+		'fields' => array (
+			array (
+				'key' => 'field_5682e56ab4f21',
+				'label' => 'Entry Video',
+				'name' => 'entry_video',
+				'type' => 'text',
+				'instructions' => 'Use the last digits off of the YouTube share link:
+	<br/>
+	https://youtu.be/<strong>8VYgRvwZZJM</strong>',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'collabnation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-winner-field',
+		'title' => 'Collaboration Nation Winner Field',
+		'fields' => array (
+			array (
+				'key' => 'field_5682c95afa7fc',
+				'label' => 'Is this entry a winner?',
+				'name' => 'entry_winner',
+				'type' => 'true_false',
+				'message' => 'Select if this entry is a winner.',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'collabnation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
+
 ?>

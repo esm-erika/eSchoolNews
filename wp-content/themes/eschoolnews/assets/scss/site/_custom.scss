@@ -1205,7 +1205,7 @@ footer {
 
 // Collaboration Nation 
 
-body.page.collaboration-live, body.page-template-collaboration-nation {
+body.page.collaboration, body.page-template-collaboration-nation {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
@@ -1694,7 +1694,7 @@ header {
 
 }
 
-body.page.collaboration-live header {
+body.page.collaboration header {
 	height: 620px !important;
 
 }
@@ -1736,6 +1736,12 @@ body.page.collaboration-live header {
 			width: 100%;
 			height: 100%;
 		}
+	}
+
+	#zmag-script {
+		max-width: 450px;
+		height: 450px;
+		margin: auto;
 	}
 
 	section.home {

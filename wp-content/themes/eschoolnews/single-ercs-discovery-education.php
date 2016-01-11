@@ -24,6 +24,8 @@
 	<!-- slick-theme.css default styling -->
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/> -->
 
+	<script type="text/javascript" data-channel="536a48f9e4b0134ba54f9117" src="//creator.zmags.com/channels.js"></script>
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="discovery-erc">
@@ -39,11 +41,13 @@
 		<section class="home">
 			
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner_discovery-erc.png" alt="Powerful Practices">
+				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner_discovery-erc.png" alt="Powerful Practices">
+				</a>
 			</header>
 
 			<div class="row">
-				<div class="small-12 medium-7 columns">
+				<div class="small-12 medium-6 columns">
 					<h3>About Discovery Education's Powerful Practices Series</h3>
 					<p>The Powerful Practices series is a new collection of exclusive
 					experiences and content designed specifically for superintendents
@@ -66,7 +70,7 @@
 					student engagement.</p>
 				</div>
 
-				<div id="zmag-script" class="small-12 medium-5 columns">
+				<div id="zmag-script" class="small-12 medium-6 columns">
 
 				</div>
 			</div>
