@@ -19,7 +19,7 @@ if($template == 'single-olddata.php' or $isinactive == 1){
 include('single-olderc.php');
 
 }else{
-
+if ( esm_is_user_logged_in()) { echo 'LOGGED IN'; } else { echo 'LOGGED OUT'; }
 ?>
 <?php 
 //insert cache query
