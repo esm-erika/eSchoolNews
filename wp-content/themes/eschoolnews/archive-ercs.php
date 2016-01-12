@@ -121,8 +121,8 @@ if (false === ($local_box_cache) ){
         ?>
 		
 		 <li>
-        	<a href="<?php site_url(); ?>/sponsor/cisco/">
-               	<img src="<?php site_url(); ?>/files/2016/01/Cisco-logo.png" alt="Cisco" scale="0">
+        	<a href="<?php site_url(); ?>/sponsor/jupiter-ed/">
+               	<img src="<?php site_url(); ?>/files/2015/12/Jupiter-Ed-black-on-transparent.png" alt="Jupiter Ed" scale="0">
 			 </a>
         </li>
         <li> 
