@@ -121,7 +121,7 @@ if (false === ($local_box_cache) ){
         ?>
 		
 		 <li>
-        	<a href="<?php site_url(); ?>/sponsor/pd-learning-network/">
+        	<a href="<?php site_url(); ?>/sponsor/cisco/">
                	<img src="<?php site_url(); ?>/files/2016/01/Cisco-logo.png" alt="Cisco" scale="0">
 			 </a>
         </li>
