@@ -203,4 +203,34 @@ add_filter( 'single_template', function( $template ) {
     return $template;
 } );
 
+// [linkli href="href-value" class="class-value" close="a"]
+function linkli_func( $atts ) {
+    global $post, $wpdb, $user, $esmuser; 
+	$linkli_atts = shortcode_atts( array(
+        'class' => '',
+        'href' => '',
+		'close' => 'no'
+    ), $atts );	
+	$output = '';
+	
+	if(!$linkli_func[ 'close' ] == 'no')
+    $output .= '</a>';	
+	if(esm_is_user_logged_in()){ 
+	    $output .= '<a href="';
+        $output .=  wp_kses_post( $linkli_atts[ 'href' ] ) ;
+	    $output .= '" class="';
+		$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
+    
+	 }else{
+		 
+	    $output .= '<a href="#" data-reveal-id="login-popup"';
+	    $output .= '" class="';
+		$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
+    
+	 }
+     return $output;
+	
+}
+add_shortcode( 'linkli', 'linkli_func' );
+
 ?>
