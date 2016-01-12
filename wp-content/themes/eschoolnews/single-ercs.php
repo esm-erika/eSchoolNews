@@ -193,9 +193,9 @@ if (false === ($local_box_cache) ){
 										<?php setup_postdata($post); ?>
 
 										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-							            	<span class="excerpt">
+							            	<div class="excerpt">
 												<?php the_content(); ?>
-											</span>
+											</div>
 
 										
 
@@ -220,9 +220,9 @@ if (false === ($local_box_cache) ){
 
 
 										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-						            	<span class="excerpt">
+						            	<div class="excerpt">
 											<?php the_content(); ?>
-										</span>
+										</div>
 
 										
 
@@ -239,9 +239,9 @@ if (false === ($local_box_cache) ){
 							<?php } elseif( get_field('link_to_external_url')){ ?>
 
 								<h5><a target="new" href="<?php the_field('link_to_external_url'); ?>"><?php the_title(); ?></a></h5>
-					            	<span class="excerpt">
+					            	<div class="excerpt">
 										<?php the_content(); ?>
-									</span>
+									</div>
 
 								
 							
@@ -263,9 +263,9 @@ if (false === ($local_box_cache) ){
 							if( $file ): ?>
 								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
 							
-					            	<span class="excerpt">
+					            	<div class="excerpt">
 										<?php the_content(); ?>
-									</span>
+									</div>
 
 								
 
@@ -281,9 +281,9 @@ if (false === ($local_box_cache) ){
 							<?php } else { ?>
 
 								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					            	<span class="excerpt">
+					            	<div class="excerpt">
 										<?php the_content(); ?>
-									</span>
+									</div>
 
 								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
 							<?php } ?>
@@ -472,9 +472,9 @@ if (false === ($local_box_cache) ){
 							<?php } else { ?>
 
 							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					            	<span class="excerpt">
+					            	<div class="excerpt">
 										<?php the_content(); ?>
-									</span>
+									</div>
 
 										
 
