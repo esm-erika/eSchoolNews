@@ -217,15 +217,15 @@ function linkli_func( $atts ) {
     $output .= '</a>';	
 	if(esm_is_user_logged_in()){ 
 	    $output .= '<a href="';
-        $output .=  wp_kses_post( $linkli_func[ 'href' ] ) ;
+        $output .=  wp_kses_post( $linkli_atts[ 'href' ] ) ;
 	    $output .= '" class="';
-		$output .= '' . wp_kses_post( $linkli_func[ 'class' ] ) . '">';
+		$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
     
 	 }else{
 		 
 	    $output .= '<a href="#" data-reveal-id="login-popup"';
 	    $output .= '" class="';
-		$output .= '' . wp_kses_post( $linkli_func[ 'class' ] ) . '">';
+		$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
     
 	 }
      return $output;
