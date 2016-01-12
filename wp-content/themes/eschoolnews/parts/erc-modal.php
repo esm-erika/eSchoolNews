@@ -171,7 +171,7 @@ Already a member? Log in
 <div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
 <input type="submit" name="submit" value="Login" class="button">
 <input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
-<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+<input type="hidden" name="redirect_to" value="<?php site_url(); ?><?php echo $_SERVER['REQUEST_URI']; ?>">
 <br />
 <a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
 
