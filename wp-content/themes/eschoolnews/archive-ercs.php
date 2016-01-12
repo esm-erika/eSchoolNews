@@ -119,9 +119,12 @@ if (false === ($local_box_cache) ){
         //         $image = get_field('sponsor_image', 'sponsor_'.$lc->term_id);
 
         ?>
-
-       
-
+		
+		 <li>
+        	<a href="<?php site_url(); ?>/sponsor/pd-learning-network/">
+               	<img src="<?php site_url(); ?>/files/2016/01/Cisco-logo.png" alt="Cisco" scale="0">
+			 </a>
+        </li>
         <li> 
            	<a class="" href="<?php site_url(); ?>/sponsor/middlebury-interactive/">
                	<img src="<?php site_url(); ?>/files/2015/12/Middlebury396.gif" alt="" scale="0">
@@ -138,9 +141,7 @@ if (false === ($local_box_cache) ){
                	<img src="<?php site_url(); ?>/files/2015/12/pd-learning.gif" alt="PD Learning Network" scale="0">
 			 </a>
         </li>
-
           
-
         <?php  ?>
 
 
