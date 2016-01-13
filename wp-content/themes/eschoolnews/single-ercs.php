@@ -197,18 +197,33 @@ if (false === ($local_box_cache) ){
 
 										<?php setup_postdata($post); ?>
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										
+                                        
+                                        <h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        	<a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+											<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        
+                                        <?php the_title(); ?></a></h5>
 							            	<div class="excerpt">
 												<?php the_content(); ?>
 											</div>
 
-										
-
-											<a class="button small radius" href="<?php the_permalink(); ?>">
-													<i class="fi-page"></i> White Paper
-											</a>
-
-										  <?php endforeach; ?>
+                                        <h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        <a class="button small radius" href="<?php the_permalink(); ?>">
+											<i class="fi-page"></i> White Paper
+										</a>
+										<?php } else { ?>
+										<a class="button small radius" href="#" data-reveal-id="login-popup">
+                                            <i class="fi-page"></i> White Paper
+										</a>
+										 <?php } ?>
+										</h5>
+                                        
+										<?php endforeach; ?>
 		    
 										    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 										<?php endif; ?>
@@ -224,16 +239,29 @@ if (false === ($local_box_cache) ){
 										<?php setup_postdata($post); ?>
 
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        	<a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+											<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        
+                                        <?php the_title(); ?></a></h5>
 						            	<div class="excerpt">
 											<?php the_content(); ?>
 										</div>
 
 										
-
-											<a class="button small radius" href="<?php the_permalink(); ?>">
+										<?php if ( esm_is_user_logged_in()) { ?>
+                                        	<a class="button small radius" href="<?php the_permalink(); ?>">
 												<i class="fi-page"></i>
 											</a>
+										<?php } else { ?>
+											<a class="button small radius" href="#" data-reveal-id="login-popup">
+                                            	<i class="fi-page"></i>
+                                            </a>
+										<?php } ?>
+											
 
 										  <?php endforeach; ?>
 		    
@@ -243,14 +271,36 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif( get_field('link_to_external_url')){ ?>
 
-								<h5><a target="new" href="<?php the_field('link_to_external_url'); ?>"><?php the_title(); ?></a></h5>
+								
+                                
+                                <h5>
+                                	<?php if ( esm_is_user_logged_in()) { ?>
+                             	       <a target="new" href="<?php the_field('link_to_external_url'); ?>">     	
+									<?php } else { ?>
+										<a href="#" data-reveal-id="login-popup">
+									<?php } ?>
+                                	<?php the_title(); ?></a>
+                                </h5>
+                                
+                                
+                                
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 								
 							
-								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
+								
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                         	<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
+										<?php } else { ?>
+											<a class="button small radius" href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        
+                                        <?php the_title(); ?></a>                                
+                                
+                                
+                                
 									<?php 
 										echo '<i class="fi-arrow-down"></i> ';
 
@@ -266,17 +316,31 @@ if (false === ($local_box_cache) ){
 							$file = get_field('download_file');
 
 							if( $file ): ?>
-								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
-							
+								
+                                		<h5>
+										<?php if ( esm_is_user_logged_in()) { ?>
+                                         	<a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a>
+										<?php } else { ?>
+											<a href="#" data-reveal-id="login-popup"><?php the_title(); ?></a>
+										<?php } ?>
+                                        </h5>
+                                
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
-								
+								<?php if ( esm_is_user_logged_in()) { ?>
+                                    <a class="button small radius" href="<?php echo $file['url']; ?>">
+                                        <i class="fi-arrow-down"></i> Download
+                                    </a>
+                                <?php } else { ?>
+											
+                                     <a class="button small radius" href="#" data-reveal-id="login-popup">
+                                        <i class="fi-arrow-down"></i> Download
+                                    </a>
+								<?php } ?>
 
-								<a class="button small radius" href="<?php echo $file['url']; ?>">
-									<i class="fi-arrow-down"></i> Download
-								</a>
+								
 							<?php endif; ?>
 
 							<?php } elseif(get_field('erc_item_html')) { ?>
@@ -285,12 +349,27 @@ if (false === ($local_box_cache) ){
 
 							<?php } else { ?>
 
-								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+									<h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        <a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+										<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        <?php the_title(); ?>
+                                        </a>
+                                    </h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
-								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
+									<h6>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        <a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+										<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        Read More</a>
+                                    </h6>
 							<?php } ?>
 
 					        	</div>
@@ -393,16 +472,28 @@ if (false === ($local_box_cache) ){
 
 										<?php setup_postdata($post); ?>
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+										<?php } else { ?>
+											<a href="#" data-reveal-id="login-popup"><?php the_title(); ?></a>
+										<?php } ?>
+                                        </h5>
+                                        
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 										
-
+										<?php if ( esm_is_user_logged_in()) { ?>
 											<a class="button small radius" href="<?php the_permalink(); ?>">
 													<i class="fi-page"></i> White Paper
 											</a>
+										<?php } else { ?>
+											<a class="button small radius" href="#" data-reveal-id="login-popup">
+													<i class="fi-page"></i> White Paper
+											</a>
+										<?php } ?>
 
 										  <?php endforeach; ?>
 		    
@@ -421,16 +512,29 @@ if (false === ($local_box_cache) ){
 
 										<?php setup_postdata($post); ?>
 
-										<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+										<h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        	<a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+											<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        <?php the_title(); ?></a>
+                                        </h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 										
 
-											<a class="button small radius" href="<?php the_permalink(); ?>">
+										<?php if ( esm_is_user_logged_in()) { ?>
+                                        	<a class="button small radius" href="<?php the_permalink(); ?>">
 												<i class="fi-page"></i>
 											</a>
+										<?php } else { ?>
+											<a class="button small radius" href="#" data-reveal-id="login-popup">
+                                            	<i class="fi-page"></i>
+                                            </a>
+										<?php } ?>
 
 										  <?php endforeach; ?>
 		    
@@ -440,12 +544,23 @@ if (false === ($local_box_cache) ){
 
 							<?php } elseif( get_field('link_to_external_url')){ ?>
 
-								<h5><a target="new" href="<?php the_field('link_to_external_url'); ?>"><?php the_title(); ?></a></h5>
+								<h5>
+                                	<?php if ( esm_is_user_logged_in()) { ?>
+                             	       <a target="new" href="<?php the_field('link_to_external_url'); ?>">     	
+									<?php } else { ?>
+										<a href="#" data-reveal-id="login-popup">
+									<?php } ?>
+                                	<?php the_title(); ?></a>
+                                </h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 							
-								<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
+									<?php if ( esm_is_user_logged_in()) { ?>
+                                       	<a target="new" class="button small radius" href="<?php the_field('link_to_external_url'); ?>">
+									<?php } else { ?>
+										<a class="button small radius" href="#" data-reveal-id="login-popup">
+									<?php } ?>
 									<?php 
 										echo '<i class="fi-arrow-down"></i> ';
 
@@ -461,7 +576,13 @@ if (false === ($local_box_cache) ){
 							$file = get_field('download_file');
 
 							if( $file ): ?>
-								<h5><a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a></h5>
+										<h5>
+										<?php if ( esm_is_user_logged_in()) { ?>
+                                         	<a href="<?php echo $file['url']; ?>"><?php the_title(); ?></a>
+										<?php } else { ?>
+											<a href="#" data-reveal-id="login-popup"><?php the_title(); ?></a>
+										<?php } ?>
+                                        </h5>
 							
 					            	<div class="excerpt">
 										<?php the_content(); ?>
@@ -469,21 +590,42 @@ if (false === ($local_box_cache) ){
 
 										
 
-								<a class="button small radius" href="<?php echo $file['url']; ?>">
-									<i class="fi-arrow-down"></i> Download
-								</a>
+								<?php if ( esm_is_user_logged_in()) { ?>
+                                    <a class="button small radius" href="<?php echo $file['url']; ?>">
+                                        <i class="fi-arrow-down"></i> Download
+                                    </a>
+                                <?php } else { ?>
+											
+                                     <a class="button small radius" href="#" data-reveal-id="login-popup">
+                                        <i class="fi-arrow-down"></i> Download
+                                    </a>
+								<?php } ?>
 								<?php endif; ?>
 
 							<?php } else { ?>
 
-							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+									<h5>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        <a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+										<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        <?php the_title(); ?></a>
+                                    </h5>
 					            	<div class="excerpt">
 										<?php the_content(); ?>
 									</div>
 
 										
 
-								<h6><a href="<?php the_permalink();?>">Read More</a></h6>
+									<h6>
+                                        <?php if ( esm_is_user_logged_in()) { ?>
+                                        <a href="<?php the_permalink(); ?>">
+										<?php } else { ?>
+										<a href="#" data-reveal-id="login-popup">
+										<?php } ?>
+                                        Read More</a>
+                                    </h6>
 							<?php } ?>
 
 					        	</div>
