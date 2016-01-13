@@ -296,16 +296,11 @@ if (false === ($local_box_cache) ){
 										<?php } else { ?>
 											<a class="button small radius" href="#" data-reveal-id="login-popup">
 										<?php } ?>
-                                        
-                                        <?php the_title(); ?></a>                                
-                                
-                                
-                                
-									<?php 
-										echo '<i class="fi-arrow-down"> </i> ';
+                                        <?php 
+										echo '<i class="fi-arrow-down"> </i> '; 
 
 										if(get_field('text_for_button')) {
-											the_field('text_for_button');
+											the_field('text_for_button'); 
 										} else {
 											echo 'Web Link';
 										} ?>
@@ -331,7 +326,7 @@ if (false === ($local_box_cache) ){
 
 								<?php if ( esm_is_user_logged_in()) { ?>
                                     <a class="button small radius" href="<?php echo $file['url']; ?>">
-                                        <i class="fi-arrow-down">  </i> Download
+                                        <i class="fi-arrow-down">  </i> Download 
                                     </a>
                                 <?php } else { ?>
 											
@@ -592,7 +587,7 @@ if (false === ($local_box_cache) ){
 
 								<?php if ( esm_is_user_logged_in()) { ?>
                                     <a class="button small radius" href="<?php echo $file['url']; ?>">
-                                        <i class="fi-arrow-down">    </i> Download
+                                        <i class="fi-arrow-down"></i> Download 
                                     </a>
                                 <?php } else { ?>
 											
