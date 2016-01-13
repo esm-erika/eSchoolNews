@@ -1227,6 +1227,16 @@ section {
 
 }
 
+#mobile-nav{
+	position: relative;
+	top: -60px;
+	margin-bottom: -80px;
+
+	select option {
+		font-size: 1.5rem;
+	}
+}
+
 section.home {
 	margin-top: 20px;
 }
@@ -1551,7 +1561,7 @@ header {
 	background-size: cover;
 	background-position: center center;
 	background-image: url(../images/collaboration-banner.jpg);
-	height: 550px;
+	height: 200px;
 	position: relative;
 	margin-bottom: 50px;
 	
@@ -1566,7 +1576,7 @@ header {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-size: 100%;
+		background-size: 230%;
 		background-position: center bottom;
 		background-repeat: no-repeat;
 		background-image: url(../images/collaboration-banner-text.png);
@@ -1597,12 +1607,15 @@ header {
 		ul.button-menu {
 			margin:0;
 			width: 80%;
+			//max-width: 800px ;
+			//min-width: 630px;
 
 			li {
 				text-align: center;
 			    list-style: none;
 			    display: inline-block;
 			    width: 15%;
+			    max-width: 120px;
 
 				img {
 					position: relative;
@@ -1625,7 +1638,7 @@ header {
 
 			.prizes {
 				position: relative;
-				top: 25px;
+				
 
 				a {
 					color: #4d9dd6;
@@ -1656,7 +1669,9 @@ header {
     		color: #4c4c4c;
 
     		img {
-    			// width: 75%;
+    			max-width: 150px;
+    			float: right;
+    			// margin: auto;
     		}
 
     		span {
@@ -1691,14 +1706,61 @@ header {
 		}
 	}
 
+@media only screen and (min-width: 40.0625em) {
+	header {
+		height: 550px;
+
+		.text-container {
+			background-size: 230%;
+		}
+	}
+
+	.buttons-container {
+		ul.button-menu {
+			margin-top: 30px;
+
+			li.prizes {
+				//top: 25px;
+			}
+		}
+	}
+
 
 }
 
-body.page.collaboration header {
+@media only screen and (min-width: 64.0625em) {
+
+	header {
+		.text-container {
+			background-size: auto;
+		}
+	}
+	.buttons-container {
+		ul.button-menu {
+			margin-top: 0px;
+
+			li.prizes {
+				top: 25px;
+			}
+		}
+	}
+
+}
+
+
+
+}
+
+body.page.collaboration {
+@media only screen and (min-width: 37.5em) {
+
+	header {
 	height: 620px !important;
 
 }
 
+}
+}
 
 // ERC
 
@@ -2735,6 +2797,7 @@ table.hr {
   max-width: 580px;
   min-width: 560px;
   width: 100%;
+  margin: 0;
 }
 
 table.hr td {

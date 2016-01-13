@@ -62,7 +62,7 @@ global $cat;
 
 					<div class="social left">
 						<a class="twitter" href="#"><i class="fi-social-twitter"></i></a>
-						<a class="facebook" href="#"><i class="fi-social-facebook"></i></a>
+						<a class="facebook" target="new" href="http://www.facebook.com/cdwgcollaboration/"><i class="fi-social-facebook"></i></a>
 					</div>
 
 					<div class="sponsored-by text-left right">
@@ -78,49 +78,49 @@ global $cat;
 
 	</header>
 
-	<div class=" row buttons-container">
+	<div class="row buttons-container show-for-medium-up">
 		
 	<div class="medium-12 columns">
-		<ul class="button-menu left">
+		<ul  class="button-menu left">
 			<li class="home">
 				<a href="<?php site_url(); ?>/collaboration/">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home-button.png" alt="Home">
-					<span>HOME</span>
+					<span class="hide-for-medium-only">HOME</span>
 				</a>
 			</li>
 
 			<li class="prizes">
 				<a href="<?php site_url(); ?>/collaboration/winners">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/prizes-button.png" alt="Prizes">
-					<span>VIDEOS &amp; WINNERS</span>
+					<span class="hide-for-medium-only">VIDEOS &amp; WINNERS</span>
 				</a>
 			</li>
 
 			<li class="judges">
 				<a href="<?php site_url(); ?>/collaboration/judges">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/judges-button.png" alt="Judges">
-					<span>JUDGES</span>
+					<span class="hide-for-medium-only">JUDGES</span>
 				</a>
 			</li>
 
 			<li class="rules">
 				<a href="<?php site_url(); ?>/collaboration/rules">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/rules-button.png" alt="Rules">
-					<span>RULES</span>
+					<span class="hide-for-medium-only">RULES</span>
 				</a>
 			</li>
 
 			<li class="faq">
 				<a href="<?php site_url(); ?>/collaboration/faqs">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/faqs-button.png" alt="FAQs">	
-					<span>FAQs</span>
+					<span class="hide-for-medium-only">FAQs</span>
 				</a>
 			</li>
 
 			<li class="about">
 				<a href="<?php site_url(); ?>/collaboration/about-us">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about-button.png" alt="About">
-					<span>ABOUT</span>
+					<span class="hide-for-medium-only">ABOUT</span>
 				</a>
 			</li>
 			
@@ -128,8 +128,24 @@ global $cat;
 
 		<a href="<?php home_url(); ?>/collaboration/submission-form/" class="submit-button right">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
-			<span>ENTRY FORM</span>
+			<span class="hide-for-medium-only">ENTRY FORM</span>
 		</a>
+	</div>
+</div>
+
+<div id="mobile-nav" class="row hide-for-medium-up">
+	<div class="small-12 columns">
+	<select> 
+	    <option value="" selected="selected">Navigation</option> 
+	    
+	    <option value="<?php site_url(); ?>/collaboration">Home</option> 
+	    <option value="<?php site_url(); ?>/collaboration/winners">Videos &amp; Winners</option> 
+	    <option value="<?php site_url(); ?>/collaboration/judges">Judges</option> 
+	    <option value="<?php site_url(); ?>/collaboration/rules">Rules</option> 
+	    <option value="<?php site_url(); ?>/collaboration/faqs">FAQs</option> 
+	    <option value="<?php site_url(); ?>/collaboration/about">About</option>
+	    <option value="<?php site_url(); ?>/collaboration/submit-form">Submit</option>  
+	  </select>
 	</div>
 </div>
 
