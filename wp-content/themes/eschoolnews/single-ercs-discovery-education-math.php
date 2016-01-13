@@ -109,7 +109,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Math for a Digital Era</h5>	
-								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Discovery-Point-Of-View-Math-Techbook.pdf">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/DiscoveryPOVMath0113.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>

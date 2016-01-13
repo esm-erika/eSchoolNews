@@ -98,7 +98,7 @@
 								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
 								<h5>Transforming Social Studies Education for a Digital Era</h5>	
 								
-								<a target="new" href="#">
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/DiscoveryPOVSS0113.pdf">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>

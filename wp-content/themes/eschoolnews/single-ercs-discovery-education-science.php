@@ -96,7 +96,7 @@
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Science Education for a Digital Era</h5>
-								<a target="new" href="#"></a>
+								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/DiscoveryPOVScience0113.pdf"></a>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
