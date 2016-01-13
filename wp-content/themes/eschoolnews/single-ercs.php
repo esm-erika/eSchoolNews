@@ -302,14 +302,14 @@ if (false === ($local_box_cache) ){
                                 
                                 
 									<?php 
-										echo '<i class="fi-arrow-down"></i> ';
+										echo '<i class="fi-arrow-down"> </i> ';
 
 										if(get_field('text_for_button')) {
 											the_field('text_for_button');
 										} else {
 											echo 'Web Link';
 										} ?>
-								</a>
+										</a>
 
 							<?php } elseif(get_field('download_file')) { 
 
@@ -331,7 +331,7 @@ if (false === ($local_box_cache) ){
 
 								<?php if ( esm_is_user_logged_in()) { ?>
                                     <a class="button small radius" href="<?php echo $file['url']; ?>">
-                                        <i class="fi-arrow-down"></i> Download
+                                        <i class="fi-arrow-down">  </i> Download
                                     </a>
                                 <?php } else { ?>
 											
@@ -562,7 +562,7 @@ if (false === ($local_box_cache) ){
 										<a class="button small radius" href="#" data-reveal-id="login-popup">
 									<?php } ?>
 									<?php 
-										echo '<i class="fi-arrow-down"></i> ';
+										echo '<i class="fi-arrow-down">   </i> ';
 
 										if(get_field('text_for_button')) {
 											the_field('text_for_button');
@@ -592,7 +592,7 @@ if (false === ($local_box_cache) ){
 
 								<?php if ( esm_is_user_logged_in()) { ?>
                                     <a class="button small radius" href="<?php echo $file['url']; ?>">
-                                        <i class="fi-arrow-down"></i> Download
+                                        <i class="fi-arrow-down">    </i> Download
                                     </a>
                                 <?php } else { ?>
 											
