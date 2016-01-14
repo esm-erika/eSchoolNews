@@ -233,4 +233,27 @@ function linkli_func( $atts ) {
 }
 add_shortcode( 'linkli', 'linkli_func' );
 
+
+
+if (!current_user_can('edit_posts')) {show_admin_bar(false);}
+
+add_action( 'after_setup_theme', 'esn_rss_template' );
+/**
+ * Register custom RSS template.
+ */
+function esn_rss_template() {
+	add_feed( 'esnsmartbrief', 'my_custom_rss_render' );
+	add_feed( 'educationdive', 'my_custom_rss_render2' );
+}
+	add_feed( 'educationdive', 'my_custom_rss_render2' );
+/**
+ * Custom RSS template callback.
+ */
+function my_custom_rss_render() {
+	get_template_part( 'feed', 'esnsmartbrief' );
+}
+function my_custom_rss_render2() {
+	get_template_part( 'feed', 'educationdive' );
+}
+
 ?>
