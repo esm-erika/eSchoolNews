@@ -218,11 +218,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 ?>
 
      <?php 
-	 if ( is_singular( 'post' )){
-		get_template_part( 'parts/ads/leaderboard-2' );		 
-		} else {
-		get_template_part( 'parts/ads/billboard' );
-	 }
+	 // if ( is_singular( 'post' )){
+		// get_template_part( 'parts/ads/leaderboard-2' );		 
+		// } else {
+		// get_template_part( 'parts/ads/billboard' );
+	 // }
 	 ?>  
 
 <div id="discovery-erc">
