@@ -301,7 +301,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</table>
 					
 				</div>
-				<div class="small-12 medium-4 columns">
+				<div id="sidebar" class="small-12 medium-4 columns">
 					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 				</div>
 			</div>
