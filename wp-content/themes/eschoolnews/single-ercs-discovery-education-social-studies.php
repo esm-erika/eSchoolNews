@@ -334,8 +334,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 						</div>
 					</article>
 
-					<img class="ad" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/300x250_discovery-erc.png" alt="">
-
+					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 
 					<article>
 						<div class="row">
@@ -377,7 +376,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 			<div class="row">
 				<div class="small-12 columns text-center">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/leaderboard_discovery-erc.png" alt="">
+					<?php get_template_part( 'parts/ads/ercbottom' ); ?>				
 				</div>
 			</div>
 
