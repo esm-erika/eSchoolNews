@@ -227,7 +227,8 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 <div id="discovery-erc">
 			<!-- Start Content -->
-		<section class="home">
+		<section class="row home">
+			<div class="small-12 columns">
 			
 			<header>
 				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm">
@@ -267,7 +268,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			<section class="banner">
 			<div class="row">
 				<div class="small-12 columns">
-					<h2>A Forum for Superintendents and Curriculum Leaders</h2>
+					<h2 class="text-center">A Forum for Superintendents and Curriculum Leaders</h2>
 				</div>
 			</div>
 			</section>
@@ -406,7 +407,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
 
-
+</div>
 </section>
 
 </div>

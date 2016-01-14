@@ -219,7 +219,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
      <?php 
 	 // if ( is_singular( 'post' )){
-		// get_template_part( 'parts/ads/leaderboard-2' );		 
+		//get_template_part( 'parts/ads/leaderboard-2' );		 
 		// } else {
 		// get_template_part( 'parts/ads/billboard' );
 	 // }
@@ -227,7 +227,8 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 <div id="discovery-erc">
 			<!-- Start Content -->
-		<section class="social-studies">
+		<section class="row social-studies">
+			<div class="small-12 columns">
 			
 			<header>
 				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
@@ -384,8 +385,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
 
-
-
+</div>
 </section>
 
 </div>

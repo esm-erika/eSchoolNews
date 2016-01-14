@@ -227,7 +227,8 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 <div id="discovery-erc">
 			<!-- Start Content -->
-		<section class="math">
+		<section class="row math">
+			<div class="small-12 columns">
 			
 			<header>
 				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm">
@@ -380,7 +381,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
 
-
+</div>
 </section>
 
 </div>

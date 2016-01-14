@@ -227,7 +227,8 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 <div id="discovery-erc">
 			<!-- Start Content -->
-		<section class="science">
+		<section class="row science">
+			<div class="small-12 columns">
 			
 			<header>
 				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-science_discovery-erc.jpg" alt="Powerful Practices"></a>
@@ -333,7 +334,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
 
-
+</div>
 </section>
 
 </div>
