@@ -17,7 +17,19 @@
     </div>
 <?php } ?>
 	<div class="medium-12 columns ad-container">
-		<?php get_template_part( 'parts/ads/anchorboard' ); ?>
+
+     <?php 
+	 if ( is_singular( array( 'post', 'ercs' ) )){
+		get_template_part( 'parts/ads/anchorboard' );
+	 } else if ( is_singular( array( 'webinars', 'whitepapers', 'special-reports' ) )){
+			//display none
+		} else {
+		 get_template_part( 'parts/ads/anchorboard' );
+	 }
+	 ?>   
+
+		
+
 	</div>
 </div>
 

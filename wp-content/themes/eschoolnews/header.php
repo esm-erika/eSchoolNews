@@ -226,8 +226,10 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 ?>
 
      <?php 
-	 if ( is_singular( 'post' )){
+	 if ( is_singular( array( 'post', 'ercs' ) )){
 		get_template_part( 'parts/ads/leaderboard-2' );		 
+	 } else if ( is_singular( array( 'webinars', 'whitepapers', 'special-reports' ) )){
+			//display none
 		} else {
 		get_template_part( 'parts/ads/billboard' );
 	 }
