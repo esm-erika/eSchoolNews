@@ -30,6 +30,8 @@ get_template_part( 'library/logged-in-check' );
 
   <!-- slick-theme.css default styling -->
   <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/> -->
+	
+	<script type="text/javascript" data-channel="536a48f9e4b0134ba54f9117" src="//creator.zmags.com/channels.js"></script>
 
   <?php wp_head(); ?>
 </head>
