@@ -14,7 +14,7 @@
 
 	<?php 
 
-	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
+	if ( is_singular(array( 'webinars', 'whitepapers', 'special-reports' )) || in_category('leading-the-digital-leap')) {
 
 		echo '';
 
@@ -95,7 +95,7 @@
 
 	<?php 
 
-	if ( is_singular('whitepapers') || in_category('leading-the-digital-leap')) {
+	if ( is_singular(array( 'webinars', 'whitepapers', 'special-reports' )) || in_category('leading-the-digital-leap')) {
 
 		echo '';
 
