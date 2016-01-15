@@ -116,7 +116,7 @@ get_template_part( 'library/logged-in-check' );
       </div>
 
       </div>
-
+<?php if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); } ?>
       <div class="small-12 medium-6 columns small-text-center medium-text-right">
 
         <div class="row">
@@ -231,7 +231,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			<div class="small-12 columns">
 			
 			<header>
-				<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=362&ast=154&astc=11650"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
+
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=362&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 					
+                
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="social-studies">
 
 					<div class="row">
@@ -253,7 +260,13 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<p>Social Studies Techbook is a core digital textbook that makes teaching and learning an unforgettable experience. Using an inquiry-based approach that enhances literacy and critical thinking skills, Social Studies Techbook supports any device, anywhere, anytime in any instructional setting.</p>
 
 					<p>
-						<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=363&ast=154&astc=11650">
+						
+<?php if ( esm_is_user_logged_in()) { ?>
+      <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=363&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	                        
+                       
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -290,7 +303,13 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
 								<h5>Transforming Social Studies Education for a Digital Era</h5>	
 								
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=364&ast=154&astc=11650">
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=364&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	                                
+                                
+								
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -306,8 +325,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Five Strategies for Using Primary Source Documents</h5>	
+
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=365&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 									
+                                
 								
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=365&ast=154&astc=11650">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -323,7 +348,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Building Content Knowledge and Inquiry Skills</h5>	
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=366&ast=154&astc=11650">
+								
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=366&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	                                
+                                
+                                
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -341,8 +373,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Chris Layton</h5>	
+
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=367&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	
 								
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=367&ast=154&astc=11650">
+								
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -358,8 +396,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Queenie Hall</h5>	
+
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=368&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	
 								
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=368&ast=154&astc=11650">
+								
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>

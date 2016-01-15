@@ -23,9 +23,10 @@
 
 		<div class="columns large-12">
 
-			<?php
+			<?php 
+			$exclude_val = get_option( 'esm_top_story_exclude' );
 			if ( is_front_page() ) {
-				query_posts( array ( 'post_type' => 'post', 'posts_per_page' => 4, 'cat' => -4 ));
+				query_posts( array ( 'post_type' => 'post', 'posts_per_page' => 4,'cat' => -$exclude_val	 ));
 			} elseif (is_category()) {
 				global $query_string;
 				query_posts( $query_string . '&posts_per_page=3&offset=1' );

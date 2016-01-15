@@ -118,7 +118,7 @@ get_template_part( 'library/logged-in-check' );
       </div>
 
       </div>
-
+<?php if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); } ?>
       <div class="small-12 medium-6 columns small-text-center medium-text-right">
 
         <div class="row">
@@ -233,9 +233,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			<div class="small-12 columns">
 			
 			<header>
-				<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=345&ast=154&astc=11650">
+
+<?php if ( esm_is_user_logged_in()) { ?>
+	 <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=345&ast=154&astc=11650"><?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner_discovery-erc.png" alt="Powerful Practices">
 				</a>
+                
 			</header>
 
 			<div class="row">
@@ -283,20 +288,45 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 						<tr>
 							<td>
 								<strong>January 28</strong> in Hershey, PA with keynote speaker, Dr. Freeman Hrabowski<br/>
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=346&ast=154&astc=11650" class="hershey button small radius">Register- Hershey, PA <span>></span></a>
+								
+                                
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=346&ast=154&astc=11650" class="hershey button small radius">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup" class="hershey button small radius">
+<?php } ?>                                
+                                
+                                
+                                Register- Hershey, PA <span>></span></a>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<strong>February 24</strong> in Nashville, TN with keynote speaker, Erin Gruwell<br>
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=347&ast=154&astc=11650" class="nashville button small radius">Register- Nashville, TN <span>></span></a>
+								
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=347&ast=154&astc=11650" class="nashville button small radius">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup" class="nashville button small radius">
+<?php } ?>                                  
+
+                                Register- Nashville, TN <span>></span></a>
 
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<strong>March 15</strong> in Pasadena, CA with keynote speaker, Dr. Pedro Noguera<br>
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=348&ast=154&astc=11650" class="pasadena button small radius">Register- Pasadena, CA <span>></span></a>
+								
+                                
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=348&ast=154&astc=11650" class="pasadena button small radius">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup" class="pasadena button small radius">
+<?php } ?>                                  
+                                
+                                
+                                Register- Pasadena, CA <span>></span></a>
 
 							</td>
 						</tr>
@@ -392,8 +422,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 					</ul>
 
-					<h6><strong style="color: #000;">Learn more and register at</strong> <a href="http://www.eschoolnews.com/rtp.php?rtl=349&ast=154&astc=11650">DiscoveryEducation.com/PowerfulPractices.</a></h6>
-					
+					<h6><strong style="color: #000;">Learn more and register at</strong> 
+
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a href="http://www.eschoolnews.com/rtp.php?rtl=349&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 
+                  DiscoveryEducation.com/PowerfulPractices.</a></h6>
 				</div>
 			</div>
 			<br>

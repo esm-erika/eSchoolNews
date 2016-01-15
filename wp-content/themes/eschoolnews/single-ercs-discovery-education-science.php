@@ -116,7 +116,7 @@ get_template_part( 'library/logged-in-check' );
       </div>
 
       </div>
-
+<?php if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); } ?>
       <div class="small-12 medium-6 columns small-text-center medium-text-right">
 
         <div class="row">
@@ -231,7 +231,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			<div class="small-12 columns">
 			
 			<header>
-				<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=357&ast=154&astc=11650"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-science_discovery-erc.jpg" alt="Powerful Practices"></a>
+				
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=357&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	                
+                
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-science_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="science">
 
 					<div class="row">
@@ -253,7 +260,13 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<p>Science Techbook helps teachers transform their instruction with a simple-to-use, highly interactive program that integrates multimedia resources including video, audio, text, and interactives. Hands-on activities, virtual labs, and technology-enhanced formative assessment provide a rich and engaging learning experience for students. Science Techbook works on any device and can be implemented in a variety of instructional settings.</p>
 
 					<p>
-						<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=358&ast=154&astc=11650">
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=358&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 							
+                        
+                        
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -288,7 +301,13 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Science Education for a Digital Era</h5>
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=359&ast=154&astc=11650">
+								
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=359&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	                                
+                                
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
@@ -305,7 +324,13 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Whitepaper</h6>
 								<h5>Five Powerful Practices for Science Professional Development</h5>
-								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=360&ast=154&astc=11650">
+								
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=360&ast=154&astc=11650">
+<?php } else { ?>
+	<a href="#" data-reveal-id="login-popup">
+<?php } ?> 	                                
+                                
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
