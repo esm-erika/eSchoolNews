@@ -231,7 +231,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			<div class="small-12 columns">
 			
 			<header>
-				<a target="new" href="http://www.discoveryeducation.com/Events/powerful-practices/index.cfm">
+				<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=350&ast=154&astc=11650">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-math_discovery-erc.png" alt="Powerful Practices">
 				</a>
 				<nav class="math">
@@ -258,7 +258,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					anytime in any secondary instructional setting.</p>
 
 					<p>
-						<a target="new" href="http://www.discoveryeducation.com/what-we-offer/techbook-digital-textbooks/math/index.cfm">
+						<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=351&ast=154&astc=11650">
 							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
@@ -301,7 +301,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Ed-Tech Point of View</h6>
 								<h5>Transforming Math for a Digital Era</h5>	
-								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/DiscoveryPOVMath0113.pdf">
+								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=352&ast=154&astc=11650">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -317,7 +317,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Infographic</h6>
 								<h5>Problems Worth Solving</h5>
-								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Math-Techbook-Infographic.pdf">
+								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=353&ast=154&astc=11650">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 								
@@ -334,7 +334,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<div class="small-12 medium-6 columns">
 								<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Mathematical Learning Through Rigorous Tasks</h5>	
-								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/Mathematical-Learning-through-Rigorous-Tasks.pdf">
+								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=354&ast=154&astc=11650">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
@@ -353,7 +353,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 								<h6 style="color: #666;">Case Study</h6>
 								<h5>From the Heart: Stories from Passionate Educators</h5>	
 								
-								<a target="new" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/pdf/FTH-Pillsbury.pdf">
+								<a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=355&ast=154&astc=11650">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
 								</a>
 							</div>
