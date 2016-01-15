@@ -52,8 +52,7 @@ $query2 = new WP_Query($args_for_query2);
 //create new empty query and populate it with the other two
 $resources = new WP_Query();
 $resources->posts = array_merge( $query1->posts, $query2->posts );
-asort($resources);
-print_r($resources);
+
 
 //populate post_count count for the loop to work correctly
 $resources->post_count = $query1->post_count + $query2->post_count;
