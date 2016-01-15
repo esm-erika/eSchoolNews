@@ -26,12 +26,12 @@ $resourcessection = 0;
 	);*/
 	
 //////////// exp method
-$args_for_query1 = array('post_type' => 'special-reports',
+$args_for_query2 = array('post_type' => 'special-reports',
 		'posts_per_page' => '6',
 		'orderby'        => 'date',
 	    'order'          => 'DESC',
 	);
-$args_for_query2 = array(
+$args_for_query1 = array(
 					'posts_per_page' => -1,
 				    'orderby'        => 'date',
 				    'order'          => 'DESC',
@@ -55,7 +55,7 @@ $resources->posts = array_merge( $query1->posts, $query2->posts );
 
 
 //populate post_count count for the loop to work correctly
-$resources->post_count = $query1->post_count + $query2->post_count;
+$resources->post_count = 6;
 
 ///////////end method	
 	
