@@ -50,18 +50,11 @@ $query1 = new WP_Query($args_for_query1);
 $query2 = new WP_Query($args_for_query2);
 
 //create new empty query and populate it with the other two
-
+$resources = new WP_Query();
 $resources->posts = array_merge( $query1->posts, $query2->posts );
-$resources->post_count = $query1->post_count + $query2->post_count;
-
-$resources = new WP_Query(
-   array( 'post_type' => 'any',
-    'post__in'  => $post_ids, 
-    'orderby'   => 'date', 
-    'order'     => 'DESC'));
 
 //populate post_count count for the loop to work correctly
-
+$resources->post_count = 6;
 
 ///////////end method	
 	
