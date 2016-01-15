@@ -28,11 +28,14 @@
 			<?php // The Query
 			
 			    global $pagefeaturedid; 
-			
+
+				$exclude_val = get_option( 'esm_top_story_exclude' );	
+				
 				$topstories = new WP_Query(array(
 				'post_type' => 'post',
 				'posts_per_page' => 3,
-				'post__not_in' => array($pagefeaturedid)
+				'post__not_in' => array($pagefeaturedid),
+				'cat' => -$exclude_val
 				)); 
 
 				if ( is_category() ) {
