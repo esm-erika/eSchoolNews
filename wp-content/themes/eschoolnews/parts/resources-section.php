@@ -20,12 +20,47 @@ $resourcessection = 0;
 
 <?php
 
-	$args = array(
+	/*$args = array(
 		'post_type' => array('special-reports','ercs'),
 		'posts_per_page' => '6',
+	);*/
+	
+//////////// exp method
+$args_for_query2 = array('post_type' => 'special-reports',
+		'posts_per_page' => '6',
+		'orderby'        => 'date',
+	    'order'          => 'DESC',
 	);
+$args_for_query1 = array(
+					'posts_per_page' => -1,
+				    'orderby'        => 'date',
+				    'order'          => 'DESC',
+					'tax_query' => array(
+						array(
 
-$resources = new WP_Query( $args );
+							'taxonomy' => 'status',
+							'field' => 'slug',
+							'terms' => 'active-erc',
+
+							),
+
+						));
+//setup your queries as you already do
+$query1 = new WP_Query($args_for_query1);
+$query2 = new WP_Query($args_for_query2);
+
+//create new empty query and populate it with the other two
+$resources = new WP_Query();
+$resources->posts = array_merge( $query1->posts, $query2->posts );
+
+
+//populate post_count count for the loop to work correctly
+$resources->post_count = 6;
+
+///////////end method	
+	
+
+//$resources = new WP_Query( $args );
 
 ?>
 <?php while ( $resources->have_posts() ) : $resources->the_post(); ?>
