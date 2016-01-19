@@ -69,13 +69,13 @@ $featured = new WP_Query(array(
 )); ?>
 
 <?php if ( $featured->have_posts() ) : ?>
-	<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
+	<?php while ( $featured->have_posts() ) : $featured -> the_post(); 
 
 		echo '<h2>';
 		the_title();
 		echo '</h2>'; 
 			
-	<?php endwhile;  
+	endwhile;  
 
 
 	 else:
