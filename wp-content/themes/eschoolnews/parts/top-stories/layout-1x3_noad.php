@@ -86,7 +86,19 @@
 
 <?php  
 global $cat;
-$current_category = get_category ($cat); 
+$current_category = get_category ($cat);
+
+$category_parent_id = $category[0]->category_parent;
+if ( $category_parent_id != 0 ) {
+    $category_parent = get_term( $category_parent_id, 'category' );
+    $css_slug = $category_parent->slug;
+} else {
+    $css_slug = $category[0]->slug;
+}
+
+echo $css_slug;
+
+ 
 $catplug = $current_category->slug;
 
 	if (is_category()) {
