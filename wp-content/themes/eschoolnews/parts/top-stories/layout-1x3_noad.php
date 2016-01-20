@@ -87,12 +87,19 @@
 <?php  
 global $cat;
 $current_category = get_category ($cat); 
+
 $catplug = $current_category->slug;
+
+$parentcat = $current_category->parent;
+$parent_category = get_category ($parentcat); 
+$parentcatplug = $parent_category->slug;
+
+
 
 	if (is_category()) {
 
 echo '<!-- '.$current_category->count.' -->';
-
+echo $parentcatplug = $parent_category->slug;
 ?>
 
 
