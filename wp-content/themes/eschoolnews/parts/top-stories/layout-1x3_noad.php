@@ -99,12 +99,12 @@ $parentcatplug = $parent_category->slug;
 	if (is_category()) {
 
 echo '<!-- '.$current_category->count.' -->';
-echo $parentcatplug;
+
 ?>
 
 
 <?php if($current_category->count > 3){ ?>
-    <a href="<?php site_url(); ?>/<?php echo $catplug; ?>/page/2/">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
+    <a href="<?php site_url(); ?><?php if($parentcatplug){ echo '/'.$parentcatplug;} ?>/<?php echo $catplug; ?>/page/2/">See All <?php single_cat_title(); ?> Top Stories &raquo;</a>
 <?php } ?>
 
 
