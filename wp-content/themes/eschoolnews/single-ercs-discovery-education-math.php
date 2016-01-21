@@ -233,7 +233,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			<header>
 
 <?php if ( esm_is_user_logged_in()) { ?>
-     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=350&ast=154&astc=11650">
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=351&ast=154&astc=11650">
      
 <?php } else { ?>
 	<a href="#" data-reveal-id="login-popup">
