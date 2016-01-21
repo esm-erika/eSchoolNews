@@ -36,7 +36,7 @@
 			<?php endif; ?>
 
 			
-			<h6><?php echo $firstname; ?> <?php echo $lastname; ?></h6>
+			<h6><?php echo $firstname; ?> <!-- ln --><?php echo $lastname; ?></h6>
 		
 
 		<?php if( $title ): ?>
