@@ -87,6 +87,7 @@ $dtDate = date('Ymd');
 $dtVisit = date('Y-m-d H:i:s');
 $siteprefix = $wpdb->prefix;
 $Site_Name__c = get_bloginfo('name');
+$ercid = intval($_GET['ast']);
 $visits = 1;
 $pageid = $rtpvalidated;
 $URL = $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
