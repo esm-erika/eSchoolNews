@@ -92,7 +92,7 @@ $pagecat = intval($_GET['astc']);
 $visits = 1;
 $pageid = $rtpvalidated;
 $URL = $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-$pagetitle = get_the_title($pageid);
+
 $pageattachment_id = intval($_GET['attachment_id']);
 $Area__c = 'Site Lead';
 $astcset = $_GET['astc'];
