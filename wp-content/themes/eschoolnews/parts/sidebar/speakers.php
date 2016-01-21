@@ -13,7 +13,7 @@
 				// vars
 			$photo = get_sub_field('speaker_photo');
 			$firstname = get_sub_field('first_name');
-			$lastname = get_sub_field('first_name');
+			$lastname = get_sub_field('last_name');
 			$title = get_sub_field('speaker_title');
 			$organization = get_sub_field('speaker_organization');
 			$bio = get_sub_field('speaker_bio');
