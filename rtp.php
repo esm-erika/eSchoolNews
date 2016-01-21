@@ -20,6 +20,8 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$url = site_url($redirectpage);
 	$redirectto = 1;
 	$pagetitle = get_the_title($rtpvalidated);
+	$ercid = intval($_GET['ast']);
+	$pagecat = intval($_GET['astc']);
 } else if ( isset($_GET['rtl']) && is_numeric($_GET['rtl']) ) {
 	
 	$rtpvalidated = $_GET['rtl'];
