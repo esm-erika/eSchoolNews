@@ -163,7 +163,7 @@ global $cat;
 			$the_query = new WP_Query( $args ); ?>
 
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				<h2 class="page-title"><?php the_title(); ?></h2>
+				<h2 class="page-title">Submission Deadline Ends in:</h2>
 
 				<div class="calendar">
 					<span class="days"><?php
