@@ -223,7 +223,7 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 			<a href="http://www.eschoolnews.com/webinars/transforming-learning-through-collaboration/" target="_blank">
 				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/01/CNWebinar.jpg" alt="WEBINAR: 2015 Collaboration Nation Contest Winner">
 			</a>
-			<hr>
+			<br><br>
 			<h4>Twitter <a href="#" class="twitter"><i class="fi-social-twitter"></i></a></h4>
 			<hr>
 			<p align="center">
