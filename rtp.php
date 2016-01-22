@@ -20,6 +20,8 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$url = site_url($redirectpage);
 	$redirectto = 1;
 	$pagetitle = get_the_title($rtpvalidated);
+	$ercid = intval($_GET['ast']);
+	$pagecat = intval($_GET['astc']);
 } else if ( isset($_GET['rtl']) && is_numeric($_GET['rtl']) ) {
 	
 	$rtpvalidated = $_GET['rtl'];
@@ -87,10 +89,12 @@ $dtDate = date('Ymd');
 $dtVisit = date('Y-m-d H:i:s');
 $siteprefix = $wpdb->prefix;
 $Site_Name__c = get_bloginfo('name');
+$ercid = intval($_GET['ast']);
+$pagecat = intval($_GET['astc']);
 $visits = 1;
 $pageid = $rtpvalidated;
 $URL = $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-$pagetitle = get_the_title($pageid);
+
 $pageattachment_id = intval($_GET['attachment_id']);
 $Area__c = 'Site Lead';
 $astcset = $_GET['astc'];

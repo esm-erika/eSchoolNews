@@ -16,8 +16,159 @@
 
 get_header(); ?>
 
+<?php 
 
-<?php // get_template_part( 'parts/ads/leaderboard' ); ?>
+
+global $cat;
+
+if ( is_paged() ){
+global $page;
+?>
+
+<div class="row">
+
+	<br/>
+
+	<h1 class="section-title"><span><?php single_cat_title(); ?> Top Stories</span></h1>
+
+	<div class="small-12 large-8 columns" role="main">
+
+		<?php
+  
+					
+		$pageoffset = $paged - 1;
+		$query_args = array(
+			'post_type' => 'post',
+			'cat' => $cat,
+			'posts_per_page' => 10,
+			'paged' => $pageoffset
+			);
+		$the_query = new WP_Query( $query_args );
+
+
+		if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
+		
+			<article>
+				<header>
+				<?php //get_template_part('parts/flags'); ?>
+				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<?php if( get_field('remove_author')) { 
+
+							echo '';
+
+						} else { ?>
+
+							<div class="small-caps">
+								
+								<?php  if( get_field('Alt Author Read More Name')) {
+
+									echo 'By ';
+
+									the_field('Alt Author Read More Name');
+
+								}elseif(get_field('Byline')){
+
+									the_field('Byline');
+
+								} else {
+									echo 'By ';
+
+									the_author();
+
+								} ?>
+
+							</div>
+
+						<?php } ?>
+					<div class="posted-on"><?php the_time('F jS, Y') ?></div>	
+
+				
+
+				</header>
+			</article>
+
+			<hr/>
+        
+	<?php endwhile; ?>
+
+	<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+	<nav class="prev-next-posts">
+		<div class="prev-posts-link">
+			
+			<?php 
+			echo '';
+			echo get_next_posts_link( '<button class="button">Older Entries</button>', $the_query->max_num_pages ); // display older posts link 
+			echo '';
+
+			echo get_previous_posts_link( '<button class="button right">Newer Entries</button>' ); // display newer posts link 
+			echo '';
+			$wp_query = NULL;
+			$wp_query = $temp_query;
+
+			?></button>
+		</div>
+	</nav>
+	<?php } ?>
+
+<?php else: ?>
+	<article>
+		<h1>Sorry...</h1>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	</article>
+<?php endif; ?>
+
+
+
+
+</div>
+<?php 
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
+global $astc, $astused;
+
+$cat_name = $cat;
+// $queried_object = get_queried_object();
+// var_dump( $queried_object );
+//$tag_id = get_query_var('term_taxonomy_id');
+//$post_id = get_the_ID(); 
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+
+$box_qt = 'esm_c_catva_a'.$ast."c".$astc.'c'.$cat_name;
+
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	/// start code to cache
+		ob_start( );
+		echo '<!-- c -->';
+			get_sidebar('viewall');
+		echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+	$local_box_cache = ob_get_clean( );
+	// end the code to cache
+	echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		///you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
+
+echo $local_box_cache;
+
+}
+?>
+	</div>
+	<?php get_footer(); 
+
+
+	
+} else { 
+
+// get_template_part( 'parts/ads/leaderboard' ); ?>
 
 
 <?php 
@@ -277,4 +428,7 @@ echo $local_box_cache;
 </div>
 
 
-<?php get_footer(); ?>
+<?php get_footer(); 
+
+}
+?>
