@@ -122,6 +122,16 @@ if (false === ($local_box_cache) ){
 			<div class="small-12 columns">
 				<hr>
 			</div>
+
+			<?php if (get_field('highlight')){ ?>
+
+				<div class="small-12 columns">
+					<div class="panel">
+						<?php the_field('hightlight') ?>
+					</div>
+				</div>
+
+			<?php } ?>
 	 </div>
 
 	  <?php } ?>
