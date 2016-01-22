@@ -127,7 +127,7 @@ if (false === ($local_box_cache) ){
 
 				<div class="small-12 columns">
 					<div class="panel">
-						<?php the_field('hightlight') ?>
+						<?php the_field('highlight') ?>
 					</div>
 				</div>
 
