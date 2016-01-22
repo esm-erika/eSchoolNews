@@ -125,8 +125,8 @@ if (false === ($local_box_cache) ){
 
 			<?php if (get_field('highlight')){ ?>
 
-				<div class="small-12 columns">
-					<div class="panel">
+				<div class="small-12 columns highlight">
+					<div class="panel" style="background-color: <?php get_field('base_color'); ?>;">
 						<?php the_field('highlight') ?>
 					</div>
 				</div>
