@@ -151,7 +151,7 @@ global $cat;
 
 <section class="home">
 	<div class="row">
-		<div class="small-12 medium-8 medium-centered columns">
+		<div class="small-12 medium-10 medium-centered columns">
 
 
 			<?php 
@@ -194,7 +194,7 @@ global $cat;
 	<br><br>
 
 	<div class="row">
-		<div class="small-12 medium-10 columns submission">
+		<div class="small-12 medium-7 columns submission">
 			<h4>Submission Deadlines</h4>
 			<hr>
 			<ul>
