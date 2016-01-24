@@ -31,7 +31,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 // Image Sizes
-add_image_size( 'x-small-landscape', 180, 120, true ); //intended for newletter use
+add_image_size( 'newsletter-thumb', 180, 180, true ); //intended for newletter use
 add_image_size( 'small-landscape', 300, 200, true );
 add_image_size( 'medium-landscape', 600, 400, true );
 add_image_size( 'large-landscape', 800, 533, true );

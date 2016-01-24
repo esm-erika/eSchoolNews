@@ -1,13 +1,13 @@
 <?php
 
-if( !class_exists('Acf') )
-    include_once('external/acf/acf.php' );
+// if( !class_exists('Acf') )
+    // include_once('external/acf/acf.php' );
 
-if( !class_exists('acf_repeater_plugin') )
-    include_once('external/acf-repeater/acf-repeater.php');
+// if( !class_exists('acf_repeater_plugin') )
+    // include_once('external/acf-repeater/acf-repeater.php');
 
-if( !class_exists('acf_options_page_plugin') )
-    include_once('external/acf-options-page/acf-options-page.php');
+// if( !class_exists('acf_options_page_plugin') )
+    // include_once('external/acf-options-page/acf-options-page.php');
 
 /*===================================================================================
  * ERC Custom Fields
@@ -397,6 +397,39 @@ if(function_exists("register_field_group"))
 		),
 		'options' => array (
 			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+	register_field_group(array (
+		'id' => 'acf_erc-status',
+		'title' => 'ERC Status',
+		'fields' => array (
+			array (
+				'key' => 'field_569e72147ba13',
+				'label' => 'Active ERC',
+				'name' => 'erc_status',
+				'type' => 'true_false',
+				'message' => 'Is this an active ERC?',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'ercs',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
 			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
