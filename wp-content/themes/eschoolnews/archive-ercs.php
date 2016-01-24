@@ -32,43 +32,36 @@ if (false === ($local_box_cache) ){
 <?php get_template_part( 'parts/section-titles' ); ?>
 
 
-	
-
-
-
-
-
-
 	<div class="row">
 		<div class="small-12 medium-8 columns">
 
-					
-			<!-- <h4>Active ERCs</h4> -->
+		<!-- <h4>Active ERCs</h4> -->
+
+		<?php 
+		
+		// the query
+			$the_query = new WP_Query(array(
+				'post_type' => 'ercs',
+				'meta_query' => array(
+					array(
+						'key' => 'erc_status',
+						'value' => '1',
+						'compare' => '=='
+						)
+					),
+				'posts_per_page' => -1
+				));	
 
 
-				<?php
+		
+		 ?>
 
-				// The Query
-				$args = array(
-					'posts_per_page' => -1,
-					'tax_query' => array(
-						array(
+		<?php if ( $the_query->have_posts() ) : ?>
 
-							'taxonomy' => 'status',
-							'field' => 'slug',
-							'terms' => 'active-erc',
+			<!-- pagination here -->
 
-							),
-
-						));
-
-				$query2 = new WP_Query( $args ); ?>
-
-				<?php // The Loop
-				while ( $query2->have_posts() ) :
-					$query2->the_post(); ?>
-
-				
+			<!-- the loop -->
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<article class="row">
 						<div class="small-12 medium-4 columns">
 							<?php if( has_post_thumbnail()){
@@ -94,7 +87,19 @@ if (false === ($local_box_cache) ){
 				<br/>
 
 			<?php endwhile; ?>
+			<!-- end of the loop -->
+
+			<!-- pagination here -->
+
 			<?php wp_reset_postdata(); ?>
+
+		<?php else : ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>	
+				
+				
+
+			
 		
 
 		<hr/>
@@ -102,56 +107,60 @@ if (false === ($local_box_cache) ){
 		<div class="erc-sponsors">
 
 	<h4>Sponsors</h4>
- <ul class="medium-block-grid-3">
+	
+	<ul class="small-block-grid-2 medium-block-grid-3" data-equalizer>
 
-<?php
+	<?php
 
-        // $libargs=array(  
-        //     'hide_empty'        => 0,  
-        //     'parent'        => 0,  
-        //     'taxonomy'      => 'sponsor');  
+	$taxonomy = 'sponsor';
+	$taxonomy_terms = get_terms( $taxonomy, array(
+	    'hide_empty' => 0,
+	    'fields' => 'ids'
+	) );
 
-        //     $libcats=get_categories($libargs);  
+	$sponsors = new WP_Query(array(
+		'post_type' => 'ercs',
+		'posts_per_page' => -1,
+		'meta_query' => array(
+					array(
+						'key' => 'erc_status',
+						'value' => '1',
+						'compare' => '=='
+						)
+					),
+    ));   
 
-        //     foreach($libcats as $lc){ 
-        //         $termlink = get_term_link( $lc->slug, 'sponsor' ); 
+	?>
 
-        //         $image = get_field('sponsor_image', 'sponsor_'.$lc->term_id);
+		<?php if ( $sponsors->have_posts() ) : ?>
 
-        ?>
+			<!-- the loop -->
+			<?php while ( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
+
+			<?php //the_title(); ?>
+
+		<?php 		
+			$terms = get_the_terms( $post->ID , 'sponsor' );
 		
-		 <li>
-        	<a href="<?php site_url(); ?>/sponsor/jupiter-ed/">
-               	<img src="<?php site_url(); ?>/files/2015/12/Jupiter-Ed-black-on-transparent.png" alt="Jupiter Ed" scale="0">
-			 </a>
-        </li>
-        <li> 
-           	<a class="" href="<?php site_url(); ?>/sponsor/middlebury-interactive/">
-               	<img src="<?php site_url(); ?>/files/2015/12/Middlebury396.gif" alt="" scale="0">
-			</a>
-        </li>
+			foreach($terms as $term){ 
+			$termlink = get_term_link( $term->slug, 'sponsor' );
+		
+			$image = get_field('sponsor_image', 'sponsor_'.$term->term_id);
+		?>
+				
+	        <li data-equalizer-watch>
+	          	<a class="single-library-cat" href="<?php echo $termlink; ?>">
+	                <img src="<?php echo $image['url']; ?>" /> 
+	           	</a>
+	       	</li>
 
-        <li>
-			<a href="<?php site_url(); ?>/sponsor/pcm-g/">
-               	<img src="<?php site_url(); ?>/files/2015/12/PCMGLogo239.gif" alt="PCM-G" scale="0">
-			</a>
-        </li>
-        <li>
-        	<a href="<?php site_url(); ?>/sponsor/pd-learning-network/">
-               	<img src="<?php site_url(); ?>/files/2015/12/pd-learning.gif" alt="PD Learning Network" scale="0">
-			 </a>
-        </li>
-          
-        <?php  ?>
+        <?php } ?>
 
-
-			 </ul>
+		<?php endwhile; wp_reset_postdata(); ?>
+	<?php endif; ?>
 
 	</div>
 			
-	
-			
-
 </div>
 		<?php
 		echo '<!-- c '.date(DATE_RFC2822).' -->' ;
