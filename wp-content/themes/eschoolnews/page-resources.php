@@ -62,12 +62,42 @@ if (false === ($local_box_cache) ){
 
 		<?php // The Query
 
-		$args = array(
-		'post_type' => array('special-reports','ercs','whitepapers'),
+		$args_for_query3 = array('post_type' => 'whitepapers',
 		'posts_per_page' => '6',
-	);
-	
-$resources = new WP_Query( $args );
+		'orderby'        => 'date',
+	    'order'          => 'DESC',
+		);
+
+		$args_for_query2 = array('post_type' => 'special-reports',
+		'posts_per_page' => '6',
+		'orderby'        => 'date',
+	    'order'          => 'DESC',
+		);
+
+		$args_for_query1 = array('post_type' => 'ercs',
+		'posts_per_page' => -1,
+	    'orderby'        => 'date',
+	    'order'          => 'DESC',
+		'meta_query' => array(
+			array(
+				'key' => 'erc_status',
+				'value' => '1',
+				'compare' => '=='
+			),
+
+			));
+//setup your queries as you already do
+$query1 = new WP_Query($args_for_query1);
+$query2 = new WP_Query($args_for_query2);
+$query3 = new WP_Query($args_for_query3);
+
+//create new empty query and populate it with the other two
+$resources = new WP_Query();
+$resources->posts = array_merge( $query1->posts, $query2->posts, $query3->posts );
+
+
+//populate post_count count for the loop to work correctly
+$resources->post_count = 6;
 
 ?>
 
