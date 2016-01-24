@@ -35,14 +35,12 @@ $args_for_query1 = array(
 					'posts_per_page' => -1,
 				    'orderby'        => 'date',
 				    'order'          => 'DESC',
-					'tax_query' => array(
+					'meta_query' => array(
 						array(
-
-							'taxonomy' => 'status',
-							'field' => 'slug',
-							'terms' => 'active-erc',
-
-							),
+							'key' => 'erc_status',
+							'value' => '1',
+							'compare' => '=='
+						),
 
 						));
 //setup your queries as you already do
