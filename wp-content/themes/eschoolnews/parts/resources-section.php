@@ -32,6 +32,7 @@ $args_for_query2 = array('post_type' => 'special-reports',
 	    'order'          => 'DESC',
 	);
 $args_for_query1 = array(
+					'post_type' => 'ercs',
 					'posts_per_page' => -1,
 				    'orderby'        => 'date',
 				    'order'          => 'DESC',
