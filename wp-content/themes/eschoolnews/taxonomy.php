@@ -111,31 +111,7 @@ if ( have_posts() ) {
 
 		<?php  } elseif( is_tax('sponsor') ) { ?>
 
-		<?php 
-		
-		// the query
-			$the_query = new WP_Query(array(
-				//'post_type' => 'ercs',
-				'meta_query' => array(
-					array(
-						'key' => 'erc_status',
-						'value' => '1',
-						'compare' => '=='
-						)
-					),
-				'posts_per_page' => -1
-				));	
-
-
-		
-		 ?>
-
-		<?php if ( $the_query->have_posts() ) : ?>
-
-			<!-- pagination here -->
-
-			<!-- the loop -->
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<article class="row">
 						<div class="small-12 medium-4 columns">
@@ -163,14 +139,6 @@ if ( have_posts() ) {
 				<hr/>
 
 				<?php endwhile; ?>
-			<!-- end of the loop -->
-
-			<!-- pagination here -->
-
-			<?php wp_reset_postdata(); ?>
-
-		<?php else : ?>
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>	
 
 	
