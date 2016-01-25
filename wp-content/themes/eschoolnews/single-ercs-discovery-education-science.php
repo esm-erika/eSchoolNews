@@ -342,6 +342,8 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 						</div>
 					</article>
 
+          <?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
+
           <article>
             <div class="row">
               <div class="small-12 medium-6 columns">
@@ -414,7 +416,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
 
-					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
+					
 				</div>
 
 			</div>
