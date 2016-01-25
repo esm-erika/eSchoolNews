@@ -115,7 +115,7 @@ if ( have_posts() ) {
 		
 		// the query
 			$the_query = new WP_Query(array(
-				'post_type' => 'ercs',
+				//'post_type' => 'ercs',
 				'meta_query' => array(
 					array(
 						'key' => 'erc_status',
