@@ -161,7 +161,7 @@ if (false === ($local_box_cache) ){
 	$shownlist[] = $termlink;
 
     }
-		print_r($shownlist);
+		
    } ?>   
 
 
