@@ -213,28 +213,24 @@ function linkli_func( $atts ) {
     ), $atts );	
 	$output = '';
 	
-	if(!$linkli_func[ 'close' ] == 'no'){
-		    $output .= '</a>';	echo '11111111111111111';} 
-			
-	else {
+	if(!$linkli_func[ 'close' ] === 'no'){
+	    $output .= '</a>';
+	} else {
 	
-			if(esm_is_user_logged_in()){ 
-				$output .= '<a href="';
-				$output .=  wp_kses_post( $linkli_atts[ 'href' ] ) ;
-				$output .= '" class="';
-				$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
-			echo '2222222222222222222222';
-			 }else{
-				 
-				$output .= '<a href="#" data-reveal-id="login-popup"';
-				$output .= '" class="';
-				$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
-			echo '333333333333333333333';			
-			 }
-	echo '444444444444';			
-	 
+		if(esm_is_user_logged_in()){ 
+			$output .= '<a href="';
+			$output .=  wp_kses_post( $linkli_atts[ 'href' ] ) ;
+			$output .= '" class="';
+			$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
+		
+		 } else {
+			 
+			$output .= '<a href="#" data-reveal-id="login-popup"';
+			$output .= '" class="';
+			$output .= '' . wp_kses_post( $linkli_atts[ 'class' ] ) . '">';
+		
+		 }
 	}
-	 
      return $output;
 	
 }
