@@ -214,7 +214,7 @@ function linkli_func( $atts ) {
 	$output = '';
 	
 	if(!$linkli_func[ 'close' ] === 'no'){
-	    $output .= '</a>';
+	    $output .= '</a><!-- here  -->';
 	} else {
 	
 		if(esm_is_user_logged_in()){ 
