@@ -386,8 +386,8 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Case Study</h6>
-								<h5>From the Heart: Stories from Passionate Educators</h5>	
+								<h6 style="color: #666;">Story</h6>
+								<h5>From the Heart: Why this Career Corrections Officer Went Back to Middle School</h5>	
 
 <?php if ( esm_is_user_logged_in()) { ?>
      <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=355&ast=154&astc=11650">
