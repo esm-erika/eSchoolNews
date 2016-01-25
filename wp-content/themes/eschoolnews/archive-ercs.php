@@ -122,12 +122,12 @@ if (false === ($local_box_cache) ){
 		'post_type' => 'ercs',
 		'posts_per_page' => -1,
 		'meta_query' => array(
-					array(
-						'key' => 'erc_status',
-						'value' => '1',
-						'compare' => '=='
-						)
-					),
+			array(
+				'key' => 'erc_status',
+				'value' => '1',
+				'compare' => '=='
+				)
+			),
     ));   
 
 	?>
@@ -139,22 +139,29 @@ if (false === ($local_box_cache) ){
 
 			<?php //the_title(); ?>
 
-		<?php 		
-			$terms = get_the_terms( $post->ID , 'sponsor' );
-		
-			foreach($terms as $term){ 
-			$termlink = get_term_link( $term->slug, 'sponsor' );
-		
-			$image = get_field('sponsor_image', 'sponsor_'.$term->term_id);
-		?>
-				
-	        <li data-equalizer-watch>
-	          	<a class="single-library-cat" href="<?php echo $termlink; ?>">
-	                <img src="<?php echo $image['url']; ?>" /> 
-	           	</a>
-	       	</li>
+		 <?php   
+   $terms = get_the_terms( $post->ID , 'sponsor' );
+   ksort($terms);
+   $shownlist = array();
+   foreach($terms as $term){ 
 
-        <?php } ?>
+   $termlink = get_term_link( $term->slug, 'sponsor' );
+   $image = get_field('sponsor_image', 'sponsor_'.$term->term_id);
+   
+    if (!in_array($termlink, $shownlist)) { ?>
+       
+    <li data-equalizer-watch>
+     <a class="single-library-cat" href="<?php echo $termlink; ?>">
+      <img src="<?php echo $image['url']; ?>" /> 
+     </a>
+    </li>
+    
+    <?php 
+    array_push($shownlist, $termlink);
+    }
+      
+   } ?>   
+
 
 		<?php endwhile; wp_reset_postdata(); ?>
 	<?php endif; ?>
