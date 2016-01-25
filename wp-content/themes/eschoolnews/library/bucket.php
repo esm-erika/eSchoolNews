@@ -215,7 +215,8 @@ function linkli_func( $atts ) {
 	
 	if(!$linkli_func[ 'close' ] == 'no')
     $output .= '</a>';	
-	else if(esm_is_user_logged_in()){ 
+	
+	if(esm_is_user_logged_in()){ 
 	    $output .= '<a href="';
         $output .=  wp_kses_post( $linkli_atts[ 'href' ] ) ;
 	    $output .= '" class="';
