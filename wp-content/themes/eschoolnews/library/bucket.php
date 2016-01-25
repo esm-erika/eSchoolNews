@@ -213,8 +213,8 @@ function linkli_func( $atts ) {
     ), $atts );	
 	$output = '';
 	
-	if(!$linkli_func[ 'close' ] === 'no'){
-	    $output .= '</a><!-- here  -->';
+	if(!$linkli_atts[ 'close' ] === 'no'){
+	    $output .= '</a>';
 	} else {
 	
 		if(esm_is_user_logged_in()){ 
