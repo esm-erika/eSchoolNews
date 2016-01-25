@@ -213,7 +213,7 @@ function linkli_func( $atts ) {
     ), $atts );	
 	$output = '';
 	
-	if(!$linkli_atts[ 'close' ] === 'no'){
+	if(!$linkli_atts[ 'close' ] == 'no'){
 	    $output .= '</a>';
 	} else {
 	
