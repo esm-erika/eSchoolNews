@@ -135,14 +135,16 @@ if (false === ($local_box_cache) ){
 		<?php if ( $sponsors->have_posts() ) : ?>
 
 			<!-- the loop -->
-			<?php while ( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
+			<?php 
+			$shownlist = array();
+			while ( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
 
 			<?php //the_title(); ?>
 
 		 <?php   
    $terms = get_the_terms( $post->ID , 'sponsor' );
    ksort($terms);
-   $shownlist = array();
+   
    foreach($terms as $term){ 
 
    $termlink = get_term_link( $term->slug, 'sponsor' );
@@ -157,9 +159,11 @@ if (false === ($local_box_cache) ){
     </li>
     
     <?php 
-    array_push($shownlist, $termlink);
+    
+	$shownlist[] = $termlink;
+
     }
-      
+		
    } ?>   
 
 

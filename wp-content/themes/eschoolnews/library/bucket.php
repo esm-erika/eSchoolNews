@@ -203,7 +203,7 @@ add_filter( 'single_template', function( $template ) {
     return $template;
 } );
 
-// [linkli href="href-value" class="class-value" close="a"]
+/* [linkli href="href-value" class="class-value" close="a"]
 function linkli_func( $atts ) {
     global $post, $wpdb, $user, $esmuser; 
 	$linkli_atts = shortcode_atts( array(
@@ -213,9 +213,9 @@ function linkli_func( $atts ) {
     ), $atts );	
 	$output = '';
 	
-	if(!$linkli_func[ 'close' ] == 'no')
-    $output .= '</a>';	
-	if(esm_is_user_logged_in()){ 
+	if(!$linkli_atts[ 'close' ] == 'no'){
+    $output .= '</a>';	}
+	else if(esm_is_user_logged_in()){ 
 	    $output .= '<a href="';
         $output .=  wp_kses_post( $linkli_atts[ 'href' ] ) ;
 	    $output .= '" class="';
@@ -233,7 +233,7 @@ function linkli_func( $atts ) {
 }
 add_shortcode( 'linkli', 'linkli_func' );
 
-
+*/
 
 if (!current_user_can('edit_posts')) {show_admin_bar(false);}
 
