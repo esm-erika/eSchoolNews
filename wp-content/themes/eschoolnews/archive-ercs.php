@@ -157,7 +157,8 @@ if (false === ($local_box_cache) ){
     </li>
     
     <?php 
-    array_push($shownlist, $termlink);
+    
+	$shownlist[] = $termlink;
 
     }
 		print_r($shownlist);
