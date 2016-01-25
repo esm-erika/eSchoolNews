@@ -158,8 +158,9 @@ if (false === ($local_box_cache) ){
     
     <?php 
     array_push($shownlist, $termlink);
+
     }
-      
+		print_r($shownlist);
    } ?>   
 
 
