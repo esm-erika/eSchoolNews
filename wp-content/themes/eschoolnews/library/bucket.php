@@ -37,7 +37,7 @@ add_image_size( 'medium-landscape', 600, 400, true );
 add_image_size( 'large-landscape', 800, 533, true );
 add_image_size( 'x-small-portrait', 120, 180, true ); //intended for newletter use
 add_image_size( 'small-portrait', 200, 300 );
-add_image_size( 'medium-portrait', 400, 600 );
+add_image_size( 'medium-portrait', 464, 600, true );
 add_image_size( 'large-portrait', 533, 800 );
 
 /**
