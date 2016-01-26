@@ -5,52 +5,6 @@
  */
 
 /*===================================================================================
- * White Papers
- * =================================================================================*/
-
-add_action('init', 'whitepaper_register');
- 
-function whitepaper_register() {
- 
-	$labels = array(
-		'name' => _x('White Papers', 'post type general name'),
-		'singular_name' => _x('White Paper', 'post type singular name'),
-		'add_new' => _x('Add New', 'whitepaper item'),
-		'add_new_item' => __('Add New White Paper'),
-		'edit_item' => __('Edit White Paper'),
-		'new_item' => __('New White Paper'),
-		'view_item' => __('View White Paper'),
-		'search_items' => __('Search White Papers'),
-		'not_found' =>  __('Nothing found'),
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
- 
-	$args = array(
-		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'menu_icon' => 'dashicons-media-default',
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'has_archive' => true,
-		'taxonomies' => array('post_tag'),
-		'supports' => array('title','editor','thumbnail')
-	  ); 
- 
-	register_post_type( 'whitepapers' , $args );
-
-	register_taxonomy("company_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Companies", "singular_label" => "Company", "rewrite" => true));
-	register_taxonomy("subject_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true));
-
-} 
-
-
-/*===================================================================================
  * Education Resource Center
  * =================================================================================*/
 
@@ -111,7 +65,50 @@ function ercs_items_register() {
         ) );
 }
 
+/*===================================================================================
+ * White Papers
+ * =================================================================================*/
 
+add_action('init', 'whitepaper_register');
+ 
+function whitepaper_register() {
+ 
+	$labels = array(
+		'name' => _x('White Papers', 'post type general name'),
+		'singular_name' => _x('White Paper', 'post type singular name'),
+		'add_new' => _x('Add New', 'whitepaper item'),
+		'add_new_item' => __('Add New White Paper'),
+		'edit_item' => __('Edit White Paper'),
+		'new_item' => __('New White Paper'),
+		'view_item' => __('View White Paper'),
+		'search_items' => __('Search White Papers'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-media-default',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => true,
+		'taxonomies' => array('post_tag', 'sponsor'),
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'whitepapers' , $args );
+
+	//register_taxonomy("company_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Companies", "singular_label" => "Company", "rewrite" => true));
+	register_taxonomy("subject_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true));
+
+} 
 
 /*===================================================================================
  * Webinars
