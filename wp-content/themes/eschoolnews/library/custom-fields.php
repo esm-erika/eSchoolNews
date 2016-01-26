@@ -437,6 +437,40 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 
+	register_field_group(array (
+		'id' => 'acf_erc-highlight',
+		'title' => 'ERC Highlight',
+		'fields' => array (
+			array (
+				'key' => 'field_56a282ef0747d',
+				'label' => 'Highlight',
+				'name' => 'highlight',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'no',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'ercs',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
 
 
 /*===================================================================================
