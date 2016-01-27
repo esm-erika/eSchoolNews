@@ -267,7 +267,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 <?php } ?> 							
                         
                         
-							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
+							<img class="more-button" width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
 
