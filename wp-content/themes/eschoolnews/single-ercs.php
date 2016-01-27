@@ -93,7 +93,7 @@ if (false === ($local_box_cache) ){
 
 	 } else { ?>
 
-	 <?php if(get_field('masthead_text')) { ?>
+	 <?php if(get_field('masthead_image')) { ?>
 
 	 <div class="row">
 
@@ -427,7 +427,7 @@ if (false === ($local_box_cache) ){
 					
 
 				<?php endif; ?>
-			
+
 			<?php } ?>
 
 	 	</div>
