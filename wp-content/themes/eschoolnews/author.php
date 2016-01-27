@@ -134,7 +134,7 @@ echo $local_box_cache;
 		</nav>
 	<?php } ?>
 
-	</div>	</div>
+	</div>	
 
 
 <?php 
@@ -157,7 +157,9 @@ if (false === ($local_box_cache) ){
 	// start code to cache
 		ob_start( );
 			echo '<!-- c -->';
+
 			get_sidebar();
+
 			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
 		$local_box_cache = ob_get_clean( );
 	// end the code to cache
@@ -179,7 +181,6 @@ echo $local_box_cache;
 </div>
 
 
-<?php get_sidebar(); ?>
 
 
 <?php get_footer(); ?>
