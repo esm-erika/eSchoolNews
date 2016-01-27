@@ -93,9 +93,11 @@ if (false === ($local_box_cache) ){
 
 	 } else { ?>
 
-	 <?php if(get_field('masthead_image')) { ?>
+	 
 
 	 <div class="row">
+
+	 <?php if(get_field('masthead_text')) { ?>
 
 	 	<?php if(get_field('masthead_sidebar')) { ?>
 
@@ -109,19 +111,21 @@ if (false === ($local_box_cache) ){
 
 				<?php the_field('masthead_sidebar') ?>
 
-			<?php } else { ?>
+		<?php } else { ?>
 
 				<div class="small-12 medium-12 columns">
 
 					<?php the_field('masthead_text') ?>
 
-			<?php } ?>
+		<?php } ?>
 
 			</div>
 
 			<div class="small-12 columns">
 				<hr>
 			</div>
+
+		<?php } ?>
 
 			<?php if (get_field('highlight')){ ?>
 
@@ -132,9 +136,10 @@ if (false === ($local_box_cache) ){
 				</div>
 
 			<?php } ?>
+
 	 </div>
 
-	  <?php } ?>
+	  
 	
 
 	 <div class="row">
