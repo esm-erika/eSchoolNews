@@ -267,14 +267,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 <?php } ?> 							
                         
                         
-							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
+							<img class="more-button" width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
 
 					<h5 style="color: #666;">What Educators Can Do with Science Techbook</h5>
 					<hr>
 
-					<h4>Teach using an inquiry-based approach</h4>
+					<h4>Teach Using an Inquiry-Based Approach</h4>
 					<p>Science Techbook uses a Discover, Practice, Apply cycle that balances conceptual learning, procedural fluency, and application to real world problems so students gain lasting proficiency.</p>
 
 
@@ -322,11 +322,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Whitepaper</h6>
+								<h6 style="color: #666;">Article</h6>
 								<h5>Five Powerful Practices for Science Professional Development</h5>
 								
 <?php if ( esm_is_user_logged_in()) { ?>
-     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=360&ast=154&astc=11650">
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=402&ast=154&astc=11650">
 <?php } else { ?>
 	<a href="#" data-reveal-id="login-popup">
 <?php } ?> 	                                
@@ -336,13 +336,87 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 								
 							</div>
 							<div class="small-12 medium-6 columns">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/five-powerful_discovery-erc.png" alt="Infographic">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/five-powerful_discovery-erc.png" alt="">
 
 							</div>
 						</div>
 					</article>
 
-					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
+          <?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
+
+          <article>
+            <div class="row">
+              <div class="small-12 medium-6 columns">
+                <h6 style="color: #666;">Article</h6>
+                <h5>Keys to Leading a Successful Digital Transition</h5>
+                
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=396&ast=154&astc=11650">
+<?php } else { ?>
+  <a href="#" data-reveal-id="login-popup">
+<?php } ?>                                  
+                                
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+                </a>
+                
+              </div>
+              <div class="small-12 medium-6 columns">
+                <img src="http://www.eschoolnews.com/files/2016/01/19537552129_a2c1562be7_k-770x400-e1453735372270.jpg" alt="">
+
+              </div>
+            </div>
+          </article>
+
+
+          <article>
+            <div class="row">
+              <div class="small-12 medium-6 columns">
+                <h6 style="color: #666;">Article</h6>
+                <h5>Three Things Science Coordinators Need to Know About NGSS</h5>
+                
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=397&ast=154&astc=11650">
+<?php } else { ?>
+  <a href="#" data-reveal-id="login-popup">
+<?php } ?>                                  
+                                
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+                </a>
+                
+              </div>
+              <div class="small-12 medium-6 columns">
+                <img src="http://www.eschoolnews.com/files/2016/01/Screen-Shot-2016-01-25-at-10.26.10-AM-e1453735723491.png" alt="">
+
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="row">
+              <div class="small-12 medium-6 columns">
+                <h6 style="color: #666;">Article</h6>
+                <h5>Defining Differentiation in Today’s Classroom</h5>
+                
+<?php if ( esm_is_user_logged_in()) { ?>
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=398&ast=154&astc=11650">
+<?php } else { ?>
+  <a href="#" data-reveal-id="login-popup">
+<?php } ?>                                  
+                                
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
+                </a>
+                
+              </div>
+              <div class="small-12 medium-6 columns">
+                <img src="http://www.eschoolnews.com/files/2016/01/teacher-students-6-770x400-e1453735901428.jpg" alt="">
+
+              </div>
+            </div>
+          </article>
+
+
+
+					
 				</div>
 
 			</div>

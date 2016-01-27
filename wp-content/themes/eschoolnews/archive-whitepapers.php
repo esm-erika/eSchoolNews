@@ -173,8 +173,34 @@ $(document).ready(function(){
                     	
 						<header>
                     		<h3><?php the_title(); ?></h3>
-                    		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
+                    		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
+
+                    		<?php 
+
+								$taxonomy = 'sponsor';
+								$terms = get_the_terms( $post->ID, $taxonomy);
+								$term_id = $terms[0]->term_id;
+
+								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+								
+								if( !empty($image) ): ?>
+
+									
+										<div class="row sponsored">
+											<div class="small-12 medium-6 columns">
+
+											<small>Provided By:</small><br>
+
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+											</div>
+										</div>
+									<br/>
+									
+
+								<?php endif; ?>
+                    		
                     	</header>
 
                     	<p class="excerpt">
@@ -189,13 +215,13 @@ $(document).ready(function(){
 						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
 						
 						<div class="text-center">
-							<a class="button small radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download White Paper</a>
+							<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
 						</div>
 
 						<?php } else { // not logged in ?>
 						
 						<div class="text-center">
-                        	<a href="#" class="button small radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download White Paper</a>
+                        	<a href="#" class="button medium radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
                     	</div>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
                         

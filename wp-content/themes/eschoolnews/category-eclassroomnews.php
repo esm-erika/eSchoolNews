@@ -52,34 +52,36 @@ global $page;
 				<header>
 				<?php //get_template_part('parts/flags'); ?>
 				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					
 					<?php if( get_field('remove_author')) { 
 
-							echo '';
+						echo '';
 
-						} else { ?>
+					} else { ?>
 
-							<div class="small-caps">
-								
-								<?php  if( get_field('Alt Author Read More Name')) {
+						<div class="small-caps">
+							
+							<?php  if( get_field('Alt Author Read More Name')) {
 
-									echo 'By ';
+								echo 'By ';
 
-									the_field('Alt Author Read More Name');
+								the_field('Alt Author Read More Name');
 
-								}elseif(get_field('Byline')){
+							}elseif(get_field('Byline')){
 
-									the_field('Byline');
+								the_field('Byline');
 
-								} else {
-									echo 'By ';
+							} else {
+								echo 'By ';
 
-									the_author();
+								the_author();
 
-								} ?>
+							} ?>
 
-							</div>
+						</div>
 
-						<?php } ?>
+					<?php } ?>
+
 					<div class="posted-on"><?php the_time('F jS, Y') ?></div>	
 
 				
@@ -239,7 +241,34 @@ $featured = new WP_Query(array(
 			<header> 
 					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="small-caps">By <?php the_author(); ?></p>
+				<?php if( get_field('remove_author')) { 
+
+						echo '';
+
+					} else { ?>
+
+						<div class="small-caps">
+							
+							<?php  if( get_field('Alt Author Read More Name')) {
+
+								echo 'By ';
+
+								the_field('Alt Author Read More Name');
+
+							}elseif(get_field('Byline')){
+
+								the_field('Byline');
+
+							} else {
+								echo 'By ';
+
+								the_author();
+
+							} ?>
+
+						</div>
+
+					<?php } ?>
 
 				<div class="excerpt">
 					<?php 

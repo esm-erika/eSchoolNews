@@ -1227,6 +1227,17 @@ body.page.collaboration, body.page-template-collaboration-nation {
 		}
 	}
 
+	img {
+		width: auto;
+	}
+
+	.button-entry, .button-faq {
+
+		img {
+			max-width: 150px;
+		}
+	}
+
 #logo {
 	max-height: 50px;
 	margin-right: 0.9375rem;
@@ -1773,6 +1784,16 @@ body.page.collaboration {
 }
 
 // ERC
+.erc-sponsors {
+	
+	ul {
+		li {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
 
 .single-ercs {
 
@@ -1809,6 +1830,10 @@ body.page.collaboration {
 			width: 100%;
 			height: auto;
 		}
+	}
+
+	.more-button {
+		max-width: 120px;
 	}
 
 	.video {

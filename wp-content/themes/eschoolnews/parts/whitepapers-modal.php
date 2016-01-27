@@ -49,9 +49,40 @@ global $esmuser;
 						    <div class="medium-12 columns">
 
 						    <?php } ?>
-  
-  <h2 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h2>
 
+						    <header>
+                    		 <h2 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h2>
+                    		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
+                    		<hr/>
+
+                    		<?php 
+
+								$taxonomy = 'sponsor';
+								$terms = get_the_terms( $post->ID, $taxonomy);
+								$term_id = $terms[0]->term_id;
+
+								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+								
+								if( !empty($image) ): ?>
+
+									
+										<div class="row sponsored">
+											<div class="small-12 medium-6 columns">
+
+											<small>Provided By:</small><br>
+
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+											</div>
+										</div>
+									<br/>
+									
+
+								<?php endif; ?>
+                    		
+                    	</header>
+  
+ 
  
   <?php the_content(); ?>
   
@@ -93,7 +124,7 @@ echo '<p>';
 
 		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 		} else{
-		echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';
+		echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
 	 }
 echo '</p>'; 
 
@@ -131,7 +162,7 @@ echo '<p>';
  if ($WPcbt != null) { 
 		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 		} else{
-		echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';	 
+		echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';	 
 	 
 	 }
 echo '</p>'; 

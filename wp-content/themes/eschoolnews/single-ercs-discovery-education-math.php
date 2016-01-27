@@ -274,7 +274,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 <?php } ?> 							
                         
                         
-							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
+							<img class="more-button" width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
 
@@ -386,11 +386,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Case Study</h6>
-								<h5>From the Heart: Stories from Passionate Educators</h5>	
+								<h6 style="color: #666;">Story</h6>
+								<h5>From the Heart: Why this Career Corrections Officer Went Back to Middle School</h5>	
 
 <?php if ( esm_is_user_logged_in()) { ?>
-     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=355&ast=154&astc=11650">
+     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=400&ast=154&astc=11650">
 <?php } else { ?>
 	<a href="#" data-reveal-id="login-popup">
 <?php } ?> 	

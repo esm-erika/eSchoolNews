@@ -93,9 +93,11 @@ if (false === ($local_box_cache) ){
 
 	 } else { ?>
 
-	 <?php if(get_field('masthead_text')) { ?>
+	 
 
 	 <div class="row">
+
+	 <?php if(get_field('masthead_text')) { ?>
 
 	 	<?php if(get_field('masthead_sidebar')) { ?>
 
@@ -109,13 +111,13 @@ if (false === ($local_box_cache) ){
 
 				<?php the_field('masthead_sidebar') ?>
 
-			<?php } else { ?>
+		<?php } else { ?>
 
 				<div class="small-12 medium-12 columns">
 
 					<?php the_field('masthead_text') ?>
 
-			<?php } ?>
+		<?php } ?>
 
 			</div>
 
@@ -123,18 +125,21 @@ if (false === ($local_box_cache) ){
 				<hr>
 			</div>
 
+		<?php } ?>
+
 			<?php if (get_field('highlight')){ ?>
 
 				<div class="small-12 columns highlight">
-					<div class="panel" style="background-color: <?php the_field('base_color'); ?> !important; border-color: <?php the_field('base_color'); ?> !important;">
+					<div class="panel">
 						<?php the_field('highlight') ?>
 					</div>
 				</div>
 
 			<?php } ?>
+
 	 </div>
 
-	  <?php } ?>
+	  
 	
 
 	 <div class="row">
@@ -401,8 +406,34 @@ if (false === ($local_box_cache) ){
 
 			?>
 
-			
+			<?php 
 
+			if (get_field('sponsor_placement') == 'left') { ?>
+
+				<?php 
+
+				$taxonomy = 'sponsor';
+				$terms = get_the_terms( $post->ID, $taxonomy);
+				$term_id = $terms[0]->term_id;
+
+				$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+				
+				if( !empty($image) ): ?>
+
+					
+						<div class="sponsored">
+
+							<small>Sponsored By:</small><br>
+
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+						</div>
+
+					
+
+				<?php endif; ?>
+
+			<?php } ?>
 
 	 	</div>
 		
@@ -655,7 +686,34 @@ if (false === ($local_box_cache) ){
 
 			?>
 
-			<?php get_template_part('parts/sponsor-images'); ?>
+			<?php 
+
+			if (get_field('sponsor_placement') == 'right') { ?>
+
+					<?php 
+
+					$taxonomy = 'sponsor';
+					$terms = get_the_terms( $post->ID, $taxonomy);
+					$term_id = $terms[0]->term_id;
+
+					$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+					
+					if( !empty($image) ): ?>
+
+						
+							<div class="sponsored right">
+
+								<small>Sponsored By:</small><br>
+
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+							</div>
+
+						
+
+					<?php endif; ?>
+
+			<?php } ?>
 
 	 	</div>
 	 </div>

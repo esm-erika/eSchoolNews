@@ -267,7 +267,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 	<a href="#" data-reveal-id="login-popup">
 <?php } ?> 	                        
                        
-							<img width="120" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
+							<img width="120" class="more-button" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_learn-more.png" alt="Learn More">
 						</a>
 					</p>
 
@@ -303,11 +303,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
 								<h5>Transforming Social Studies Education for a Digital Era</h5>	
 								
-<?php if ( esm_is_user_logged_in()) { ?>
-     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=364&ast=154&astc=11650">
-<?php } else { ?>
-	<a href="#" data-reveal-id="login-popup">
-<?php } ?> 	                                
+								<?php if ( esm_is_user_logged_in()) { ?>
+								     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=364&ast=154&astc=11650">
+								<?php } else { ?>
+									<a href="#" data-reveal-id="login-popup">
+								<?php } ?> 	                                
                                 
 								
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-download_discovery-erc.png" alt="Download">
@@ -371,7 +371,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Case Study</h6>
+								<h6 style="color: #666;">Story</h6>
 								<h5>From the Heart: Chris Layton</h5>	
 
 <?php if ( esm_is_user_logged_in()) { ?>
@@ -394,7 +394,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<article>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Case Study</h6>
+								<h6 style="color: #666;">Story</h6>
 								<h5>From the Heart: Queenie Hall</h5>	
 
 <?php if ( esm_is_user_logged_in()) { ?>

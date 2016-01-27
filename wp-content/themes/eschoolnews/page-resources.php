@@ -117,6 +117,9 @@ $resources->post_count = 6;
 				<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 				<div class="excerpt">
+					<?php if(get_field('masthead_text')){
+						the_field('masthead_text');
+					} ?>
 					<?php 
 				//echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '' ), true); 
 					?>

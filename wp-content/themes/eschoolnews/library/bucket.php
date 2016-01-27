@@ -36,9 +36,9 @@ add_image_size( 'small-landscape', 300, 200, true );
 add_image_size( 'medium-landscape', 600, 400, true );
 add_image_size( 'large-landscape', 800, 533, true );
 add_image_size( 'x-small-portrait', 120, 180, true ); //intended for newletter use
-add_image_size( 'small-portrait', 200, 300, true );
-add_image_size( 'medium-portrait', 400, 600, true );
-add_image_size( 'large-portrait', 533, 800, true );
+add_image_size( 'small-portrait', 232, 300, true );
+add_image_size( 'medium-portrait', 464, 600, true );
+add_image_size( 'large-portrait', 618, 800, true );
 
 /**
  * Add prev and next links to a numbered page link list
