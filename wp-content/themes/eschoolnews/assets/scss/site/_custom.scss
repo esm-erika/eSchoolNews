@@ -1227,6 +1227,17 @@ body.page.collaboration, body.page-template-collaboration-nation {
 		}
 	}
 
+	img {
+		width: auto;
+	}
+
+	.button-entry, .button-faq {
+
+		img {
+			max-width: 150px;
+		}
+	}
+
 #logo {
 	max-height: 50px;
 	margin-right: 0.9375rem;
