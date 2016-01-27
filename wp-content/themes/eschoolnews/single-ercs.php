@@ -701,7 +701,7 @@ if (false === ($local_box_cache) ){
 					if( !empty($image) ): ?>
 
 						
-							<div class="sponsored right">
+							<div class="sponsored">
 
 								<small>Sponsored By:</small><br>
 
