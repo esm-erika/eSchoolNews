@@ -471,6 +471,45 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 
+	register_field_group(array (
+		'id' => 'acf_erc-sponsor-placement',
+		'title' => 'ERC Sponsor Placement',
+		'fields' => array (
+			array (
+				'key' => 'field_56a8eb9b7a084',
+				'label' => 'Sponsor Placement',
+				'name' => 'sponsor_placement',
+				'type' => 'radio',
+				'choices' => array (
+					'left' => 'Left',
+					'right' => 'Right',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'vertical',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'ercs',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
 
 
 /*===================================================================================
