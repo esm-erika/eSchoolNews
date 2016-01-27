@@ -638,6 +638,10 @@ if (false === ($local_box_cache) ){
 								<?php } ?>
 								<?php endif; ?>
 
+							<?php } elseif(get_field('erc_item_html')) { ?>
+
+								<?php the_field('erc_item_html') ?>
+
 							<?php } else { ?>
 
 									<h5>
