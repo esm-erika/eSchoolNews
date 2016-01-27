@@ -69,7 +69,10 @@ get_template_part( 'library/logged-in-check' );
         <a href="#" data-dropdown="login-drop" aria-controls="login-drop" aria-expanded="false" class="login">Login</a>
 
         <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-autoclose="false" aria-hidden="true" tabindex="-1">
-          <?php wp_login_form(); ?>
+          <?php 
+		  $args = array(
+	'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+		  wp_login_form($args); ?>
         </div>
 
         <?php }?>
