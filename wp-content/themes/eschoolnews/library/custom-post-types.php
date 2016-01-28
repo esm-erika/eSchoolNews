@@ -280,7 +280,7 @@ function newsletter_register() {
  
 	register_post_type( 'newsletter' , $args );
 
-	register_taxonomy("publication", array("newsletter"), array("hierarchical" => true, "label" => "Publications", "singular_label" => "Publication", "rewrite" => true));
+	register_taxonomy("publications", array("newsletter"), array("hierarchical" => true, "label" => "Publications", "singular_label" => "Publication", "rewrite" => true));
 
 }
 

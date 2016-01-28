@@ -933,6 +933,40 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 
+register_field_group(array (
+		'id' => 'acf_publication-logo',
+		'title' => 'Publication Logo',
+		'fields' => array (
+			array (
+				'key' => 'field_56a94ae6789d3',
+				'label' => 'Publication Logo',
+				'name' => 'publication_logo',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'ef_taxonomy',
+					'operator' => '==',
+					'value' => 'publication',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
 }
 
 ?>

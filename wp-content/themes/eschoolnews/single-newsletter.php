@@ -1015,13 +1015,23 @@ table.columns .right-text-pad {
 
                             <?php 
 
-                            $taxonomy = 'publication';
+                            $taxonomy = 'publications';
                             $terms = get_the_terms( $post->ID, $taxonomy);
                             $term_id = $terms[0]->term_id;
+                            $term_slug = $terms[0]->slug;
 
                             $image = get_field('publication_logo', $taxonomy . '_' . $term_id);
 
+
+                            // echo '<pre>';
+                            // var_dump($term_slug);
+                            // echo '</pre>';
+
+
+
                             if( !empty($image) ): ?>
+
+                            <a href="<?php site_url(); ?>/publications/<?php echo $term_slug; ?>"></a>
 
                               <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 

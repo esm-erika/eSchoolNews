@@ -149,8 +149,45 @@ if ( have_posts() ) {
 				<?php endwhile; ?>
 		<?php endif; ?>	
 
-	
+		<?php  } elseif( is_tax('publication') ) { ?>
 
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+				<article class="row">
+					<?php if( has_post_thumbnail()){ ?>
+						<div class="small-12 medium-4 columns">
+							
+								<?php the_post_thumbnail('medium'); ?>
+							
+
+						</div>
+						<div class="small-12 medium-8 columns">
+					<?php } else { ?>
+						<div class="small-12 medium-12 columns">
+					<?php } ?>
+
+					<?php //get_template_part('parts/flags'); ?>
+
+						<h4>
+							<a href="<?php the_permalink(); ?>">
+							<?php the_title();?>
+							</a>
+						</h4>
+
+						<?php if(get_field('masthead_text')){
+
+							echo the_field('masthead_text');
+
+						} else {
+							the_excerpt();
+						} ?>
+					</div>
+				</article>
+
+				<hr/>
+
+				<?php endwhile; ?>
+		<?php endif; ?>	
 
 	<?php } else {
 
