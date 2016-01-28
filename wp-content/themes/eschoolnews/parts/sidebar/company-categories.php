@@ -19,6 +19,8 @@
   $sponsors = new WP_Query(array(
     'post_type' => 'whitepapers',
     'posts_per_page' => -1,
+    'orderby' => 'name',
+    'order' => 'ASC',
     // 'meta_query' => array(
     //   array(
     //     'key' => 'erc_status',
