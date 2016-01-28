@@ -952,7 +952,7 @@ register_field_group(array (
 				array (
 					'param' => 'ef_taxonomy',
 					'operator' => '==',
-					'value' => 'publication',
+					'value' => 'publications',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

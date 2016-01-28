@@ -87,10 +87,10 @@ table {
 }
 
 td { 
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  word-break: keep-all;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   border-collapse: collapse !important; 
 }
 
@@ -634,6 +634,11 @@ body.outlook p {
 
 @media only screen and (max-width: 600px) {
 
+  table[class="body"] tbody, table[class="body"] tbody tr {
+    display: table !important;
+    width: 100%;
+  }
+
   table[class="body"] img {
     width: auto !important;
     height: auto !important;
@@ -674,33 +679,34 @@ body.outlook p {
 
   table[class="body"] table.columns td,
   table[class="body"] table.column td {
-    width: 100% !important;
+    /*width: 100% !important;*/
+    /*display: block !important;*/
   }
 
   table[class="body"] .columns td.one,
-  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .column td.one { width: 8.333333%; }
   table[class="body"] .columns td.two,
-  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .column td.two { width: 16.666666%; }
   table[class="body"] .columns td.three,
-  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .column td.three { width: 25%; }
   table[class="body"] .columns td.four,
-  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .column td.four { width: 33.333333%; }
   table[class="body"] .columns td.five,
-  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .column td.five { width: 41.666666%; }
   table[class="body"] .columns td.six,
-  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .column td.six { width: 50%; }
   table[class="body"] .columns td.seven,
-  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .column td.seven { width: 58.333333%; }
   table[class="body"] .columns td.eight,
-  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .column td.eight { width: 66.666666%; }
   table[class="body"] .columns td.nine,
-  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .column td.nine { width: 75%; }
   table[class="body"] .columns td.ten,
-  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .column td.ten { width: 83.333333%; }
   table[class="body"] .columns td.eleven,
-  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .column td.eleven { width: 91.666666%; }
   table[class="body"] .columns td.twelve,
-  table[class="body"] .column td.twelve { width: 100% !important; }
+  table[class="body"] .column td.twelve { width: 100%; }
 
   table[class="body"] td.offset-by-one,
   table[class="body"] td.offset-by-two,
@@ -772,8 +778,8 @@ table.google-plus:hover td {
 }
 
 table.hr {
-  max-width: 580px;
-  min-width: 560px;
+  /*max-width: 580px;*/
+  /*min-width: 560px;*/
   width: 100%;
 }
 
@@ -893,125 +899,100 @@ table.columns .right-text-pad {
 
   <!-- Begin BODY of Email Template -->
 
-  <table class="body">
-    <tr>
-      <td class="center" align="center" valign="top">
-        <center>
+  <table class="body" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; background: #666666; margin: 0; padding: 0;" bgcolor="#666666">
+    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+      <td class="center" align="center" valign="top" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;">
+    <center style="width: 100%;">
 
-          <!-- Begin Container for Email Content -->
+      <!-- Begin Container for Email Content -->
 
-          <table class="container" width="580">
-            <tr>
-              <td>
+      <table class="container" width="580" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 580px; background: #ffffff; margin: 0 auto; padding: 0;" bgcolor="#ffffff">
+        <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+          <td style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top">
 
-                <!-- Begin View In Browser Links and Social Media Links -->
+        <!-- Begin View In Browser Links and Social Media Links -->
 
-                <table class="row viewinbrowser">
-                  <tr>
-                    <td class="wrapper">
+        <table class="row viewinbrowser" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
+          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+            <td class="wrapper" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
 
-                      <table class="six columns">
-                        <tr>
-                          <td class="text-pad">
+          <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
+            <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+              <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                            <p><small><a href="http://www.eschoolnews.com/eNews/InnovationWeekly072715.html" target="_blank">View in a web browser</a></small> | <small><a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest Education Technology News http://www.eschoolnews.com/eNews/InnovationWeekly072715.html">Forward to a friend</a></small></p>
+            <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left"><small style="font-size: 10px;">
+              <a href="<?php the_permalink(); ?>" target="_blank" style="color: #2ba6cb; text-decoration: none;">View in a web browser</a></small> | <small style="font-size: 10px;"><a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest Education Technology News <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">Forward to a friend</a>
+            </small></p>
 
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+          </td>
+          <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+        </tr>
+      </table>
 
-                    </td>
-                    <td class="wrapper last">
+    </td>
+    <td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
 
-                      <table class="six columns social">
-                        <tr>
-                          <td class="text-pad">
+      <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
+        <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+          <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                            <img src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right">
+        <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;" /><img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block; padding-left: 10px; padding-right: 10px;" /><img border="0" align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;" /></td>
+        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+      </tr>
+    </table>
 
+  </td>
+</tr>
+</table>
 
-
-                            <img align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad">
-
-
-
-                            <img align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32">
-
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
-
-                    </td>
-                  </tr>
-                </table>
-
-                <!-- End -->
+<!-- End -->
 
 
-                <!-- Begin eSchool News Logo and Date -->
+<!-- Begin eSchool News Logo and Date -->
 
-                <table class="row">
-                  <tr>
-                    <td class="wrapper">
-
-                      <table class="six columns">
-                        <tr>
-                          <td class="text-pad"><img border="0" src="http://www.eschoolnews.com/e/i/erc_esnlogo.gif" alt="" title="" name="Image_fb" height="27" width="167" align="left"></td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
-
-                    </td>
-
-                    <td class="wrapper last">
-
-                      <table class="six columns date">
-                        <tr>
-                          <td align="right" class="right text-pad">
-                      
-                            <h6 class="right"><?php the_field('newsletter_date'); ?></h6>
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-
-                <!-- End -->
+<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="wrapper" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
 
 
-                <!-- Begin Full Width Newsletter Logo -->
+  <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
+    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top"><img border="0" src="http://www.eschoolnews.com/e/i/erc_esnlogo.gif" alt="" title="" name="Image_fb" height="27" width="167" align="left" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;"></td>
+    <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+  </tr>
+</table>
 
-                <table class="row">
-                  <tr>
-                    <td class="wrapper last">
-                      <table class="twelve columns">
-                        <tr>
-                          <td class="text-pad">
+</td>
 
-                            <!-- Content here! -->
+<td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
 
-                            <?php //if(has_term( 'innovation-weekly', 'publication' )) {
-                                
-                            //   echo '<img border="0" width="580" src="http://www.eschoolnews.com/e/i/innovation-weekly-logo.png" alt="Innovation Weekly" title="Innovation Weekly" style="display: block;">';
+  <table class="six columns date" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
+    <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+      <td align="right" class="right text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" valign="top">
 
-                            // } if(has_term( 'it-school-leadership', 'publication' )) {
+        <h6 class="right" style="text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1.3; word-break: normal; font-size: 20px; margin: 0; padding: 0;" align="right"><?php the_field('newsletter_date'); ?></h6>
+      </td>
+      <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+    </tr>
+  </table>
+</td>
+</tr>
+</table>
 
-                            //   echo 'IT School Leadership';
+<!-- End -->
 
-                            // } if(has_term( 'eschool-news-today', 'publication' )) {
 
-                            //   echo 'eSchool News Today';
+<!-- Begin Full Width Newsletter Logo -->
 
-                            // } if(has_term( 'digial-leadership', 'publication' )) {
+<table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+    <td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
+      <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+        <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+          <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                            //   echo 'Digital Leadership';
-
-                            //} ?>
-
+            <!-- Content here! -->
 
                             <?php 
 
@@ -1031,357 +1012,359 @@ table.columns .right-text-pad {
 
                             if( !empty($image) ): ?>
 
-                            <a href="<?php site_url(); ?>/publications/<?php echo $term_slug; ?>"></a>
+                            <a href="<?php site_url(); ?>/publications/<?php echo $term_slug; ?>" style="color: #2ba6cb; text-decoration: none;">
 
-                              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <img border="0" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%;" />
 
-                            <?php endif; ?>
+                            </a>
+                          <?php endif; ?>
 
-                          </td>
+                        </td>
 
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
+                        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
 
-                <!-- End Masthead -->
-
-
-
+              <!-- End Masthead -->
 
 
-                <!-- Begin TOP HEADLINES Section -->
 
-                  <!-- Begin Featured TOP HEADLINES -->
 
-                  
 
-                      <?php
+              <!-- Begin TOP HEADLINES Section -->
+
+              <!-- Begin Featured TOP HEADLINES -->
+
+
+
+              <?php
 
                       // check if the repeater field has rows of data
-                      if( have_rows('newsletter_section') ):
+              if( have_rows('newsletter_section') ):
 
                         // loop through the rows of data
-                          while ( have_rows('newsletter_section') ) : the_row(); ?>
+                while ( have_rows('newsletter_section') ) : the_row(); ?>
 
-                        <table class="row">
-                        <tr>
-                          <td class="wrapper last">
+              <table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
 
-                        <?php if(get_sub_field('newsletter_section_title')) { ?>
-                        <table class="twelve columns">
-                        <tr>
-                          <td class="text-pad">
+                    <?php if(get_sub_field('newsletter_section_title')) { ?>
+                    <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                            <h5>
-                              <span><?php the_sub_field('newsletter_section_title'); ?></span></h5>
+                          <h5 style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 24px; margin: 0; padding: 0;" align="left"><span style="display: block;">
+                            <?php the_sub_field('newsletter_section_title'); ?></span>
+                          </h5>
 
-                              <center>
+                            <center style="width: 100%;">
 
-                                <table class="hr">
-                                  <tr>
-                                    <td height="1" bgcolor="#cccccc">&nbsp;</td>
-                                  </tr>
-                                </table>
+                              <table class="hr" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
+                                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                                  <td height="1" bgcolor="#cccccc" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1px; font-size: 1px; height: 1px; width: 100%; background: #cccccc; margin: 0; padding: 0px;" align="left" valign="top">&nbsp;</td>
+                                </tr>
+                              </table>
 
-                              </center>
+                            </center>
 
-                            </td>
-                          </tr>
-                        </table>
-                        <?php } ?>
-
-                        <?php 
-
-                        $image = get_sub_field('sponsored_section');
-
-                        if( !empty($image) ): ?>
-           
-                          <table class="twelve columns">
-                            <tr>
-                              <td class="text-pad">
-
-                                Brought to you by: <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" align="right" />
-
-                              </td>
-                              <td class="expander"></td>
-                            </tr>
-                          </table>
-
-                        <?php endif; ?>
-
-
-                        <?php 
-
-                        $posts = get_sub_field('article_newsletter');
-
-                        if( $posts ): ?>
-                            
-                            <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-                                <?php setup_postdata($post); ?>
-
-
-                                <?php if( get_sub_field('remove_thumbnail') ) { ?>
-                                    <table class="twelve columns">
-                                      <tr>
-                                        <td class="text-pad">
-
-                                          <?php if(get_sub_field('add_panel')) {?>
-                                              <table width="100%">
-                                                <tr>
-                                                  <td class="panel">
-                                          <?php } ?>
-
-                                            <h6>
-
-                                              <?php if(get_sub_field('custom_link_newsletter')) { ?>
-                                                <a href="<?php the_sub_field('custom_link_newsletter'); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!">
-                                              <?php } else { ?>
-                                                <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!">
-                                              <?php } ?>  
-                                                  <?php the_title(); ?>
-                                                </a>
-
-                                            </h6>
-
-                                          <?php if(get_sub_field('exclude_excerpt')) { 
-
-                                              echo '';
-
-                                            } else { ?>
-
-                                              <p>
-                                                <?php 
-                                                  echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
-                                                ?>
-                                              </p>
-
-                                            <?php } ?>
-
-                                          <?php if(get_sub_field('add_panel')) {?>
-                                           </td>
-                                          </tr>
-                                        </table>
-                                     <?php } ?>
-
-                                           
-
-                                        </td>
-                                      </tr>
-                                    </table>
-
-                                    
-
-                                  <?php } else { ?>
-
-                                  
-
-                                      <table class="twelve columns">
-                                        <tr>
-                                          <td class="text-pad">
-
-                                            <h6>
-
-                                              <?php if(get_sub_field('custom_link_newsletter')) { ?>
-                                                <a href="<?php the_sub_field('custom_link_newsletter'); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!">
-                                              <?php } else { ?>
-                                                <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!">
-                                              <?php } ?>  
-                                                  <?php the_title(); ?>
-                                                </a>
-
-                                            </h6>
-
-                                            <?php if(get_sub_field('hr_newsletter')) { ?>
-                                            <center>
-                                              <table class="hr">
-                                                <tr>
-                                                  <td height="1" bgcolor="#cccccc">&nbsp;</td>
-                                                </tr>
-                                              </table>
-                                            </center>
-                                            <?php } ?>
-
-                                          </td>
-                                        </tr>
-                                      </table>
-  
-                                      <table class="twelve columns">
-                                        <tr>
-                                          <td class="four sub-columns left-text-pad">
-
-                                                <?php 
-
-                                                the_post_thumbnail('newsletter-thumb'); 
-
-                                                 ?>
-                                                
-                                          </td>
-                                          
-                                          <td class="eight sub-columns right-text-pad">
-                                            <?php if(get_sub_field('exclude_excerpt')) { 
-
-                                              echo '';
-
-                                            } else { ?>
-
-                                              <p>
-                                                <?php 
-                                                  echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
-                                                ?>
-                                              </p>
-                                                
-
-                                            <?php } ?>
-
-                                             
-
-                                          </td>
-                                          <td class="expander"></td>
-                                        </tr>
-                                      </table>
-                                     
-                                  <?php } ?>
-
- 
-                                <?php if(get_sub_field('ad_newsletter')) { ?>
-                                
-                                      <br>
-                                        <table class="twelve columns">
-                                          <tr>
-                                            <td class="text-pad center">
-                                              <center>
-                                                <?php the_sub_field('ad_newsletter'); ?>
-                                              </center>
-                                            </td>
-                                            <td class="expander"></td>
-                                          </tr>
-                                        </table>
-                                      <br>
-
-                                     
-                                <?php } ?>
-
-
-                            <?php endforeach; ?>
-                            
-                            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                        <?php endif; ?>
-
-                      </td>
-                    </tr>
-                  </table>
-
-                            
+                          </td>
+                        </tr>
+                      </table>
+                      <?php } ?>
 
                       <?php 
 
-                      endwhile;
+                      $image = get_sub_field('sponsored_section');
 
-                      else :
+                      if( !empty($image) ): ?>
+
+                      <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                        <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                          <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
+
+                            Brought to you by: <img border="0" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;" />
+
+                          </td>
+                          <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                        </tr>
+                      </table>
+
+                    <?php endif; ?>
+
+
+                    <?php 
+
+                    $posts = get_sub_field('article_newsletter');
+
+                    if( $posts ): ?>
+
+                    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                    <?php setup_postdata($post); ?>
+
+
+                    <?php if( get_sub_field('remove_thumbnail') ) { ?>
+                    <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
+
+                          <?php if(get_sub_field('add_panel')) {?>
+                          <table width="100%">
+                            <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                              <td class="panel" style="background: #f2f2f2; border: 1px solid #d9d9d9; padding: 10px !important;">
+                                <?php } ?>
+
+                                <h6 style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 20px; margin: 0; padding: 0;" align="left">
+
+                                  <?php if(get_sub_field('custom_link_newsletter')) { ?>
+                                  <a href="<?php the_sub_field('custom_link_newsletter'); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
+                                    <?php } else { ?>
+                                    <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
+                                      <?php } ?>  
+                                      <?php the_title(); ?>
+                                    </a>
+
+                                  </h6>
+
+                                  <?php if(get_sub_field('exclude_excerpt')) { 
+
+                                    echo '';
+
+                                  } else { ?>
+
+                                  <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left">
+                                    <?php 
+                                    echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+                                    ?>
+                                  </p>
+
+                                  <?php } ?>
+
+                                  <?php if(get_sub_field('add_panel')) {?>
+                                </td>
+                              </tr>
+                            </table>
+                            <?php } ?>
+
+
+
+                          </td>
+                        </tr>
+                      </table>
+
+
+
+                      <?php } else { ?>
+
+
+
+                      <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                        <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                          <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
+
+                            <h6 style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 20px; margin: 0; padding: 0;" align="left">
+
+                              <?php if(get_sub_field('custom_link_newsletter')) { ?>
+                              <a href="<?php the_sub_field('custom_link_newsletter'); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
+                                <?php } else { ?>
+                                <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
+                                  <?php } ?>  
+                                  <?php the_title(); ?>
+                                </a>
+
+                              </h6>
+
+                              <?php if(get_sub_field('hr_newsletter')) { ?>
+                              <center style="width: 100%;">
+                                <table class="hr" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
+                                  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                                    <td height="1" bgcolor="#cccccc" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1px; font-size: 1px; height: 1px; width: 100%; background: #999999; margin: 0; padding: 0px;" align="left" valign="top">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </center>
+                              <?php } ?>
+
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                            <td class="four sub-columns left-text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; min-width: 0px; width: 33.333333%; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
+
+                              <?php 
+
+                              the_post_thumbnail('newsletter-thumb'); 
+
+                              ?>
+
+                            </td>
+
+                            <td class="eight sub-columns right-text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; min-width: 0px; width: 66.666666%; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px 0px;" align="left" valign="top">
+                              <?php if(get_sub_field('exclude_excerpt')) { 
+
+                                echo '';
+
+                              } else { ?>
+
+                              <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left">
+                                <?php 
+                                echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+                                ?>
+                              </p>
+
+
+                              <?php } ?>
+
+
+
+                            </td>
+                            <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                          </tr>
+                        </table>
+
+                        <?php } ?>
+
+
+                        <?php if(get_sub_field('ad_newsletter')) { ?>
+
+                        <br>
+                        <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                          <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                            <td class="text-pad center" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="center" valign="top">
+                              <center style="width: 100%;">
+                                <?php the_sub_field('ad_newsletter'); ?>
+                              </center>
+                            </td>
+                            <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                          </tr>
+                        </table>
+                        <br>
+
+
+                        <?php } ?>
+
+
+                      <?php endforeach; ?>
+
+                      <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                    <?php endif; ?>
+
+                  </td>
+                </tr>
+              </table>
+
+
+
+              <?php 
+
+              endwhile;
+
+              else :
 
                           // no rows found
 
-                      endif;
+                endif;
 
-                      ?>
+              ?>
 
-                   <!--  </td></tr></table> -->
+              <!--  </td></tr></table> -->
 
-                  <!-- Begin FOOTER Section -->
+              <!-- Begin FOOTER Section -->
 
-                  <table class="row footer">
-                    <tr>
-                      <td class="wrapper">
+              <table class="row footer" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; background: #ebebeb; padding: 0px;" bgcolor="#ebebeb">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 20px 0px 0px;" align="left" valign="top">
 
-                        <table class="six columns">
-                          <tr>
-                            <td class="text-pad">
+                    <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                              <h6>Connect With Us:</h6>
+                          <h6 style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 20px; margin: 0; padding: 0;" align="left">Connect With Us:</h6>
 
-                              <p>eSchool News, 7920 Norfolk Ave Suite 900, Bethesda, MD 20814<br>
-                                Phone: 301-913-0115 <br>
-                                <a href="http://www.eschoolnews.com">www.eschoolnews.com</a> <br>
-                                <a href="mailto:custserv@eschoolnews.com">custserv@eschoolnews.com</a>
-                              </p>
+                          <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left">eSchool News, 7920 Norfolk Ave Suite 900, Bethesda, MD 20814<br>
+                            Phone: 301-913-0115 <br>
+                            <a href="http://www.eschoolnews.com" style="color: #2ba6cb; text-decoration: none;">www.eschoolnews.com</a> <br>
+                            <a href="mailto:custserv@eschoolnews.com" style="color: #2ba6cb; text-decoration: none;">custserv@eschoolnews.com</a>
+                          </p>
 
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
+                        </td>
+                        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                      </tr>
+                    </table>
 
-                      </td>
-                      <td class="wrapper last">
+                  </td>
+                  <td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
 
-                        <table class="six columns social">
-                          <tr>
-                            <td class="text-pad">
+                    <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                            <img src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right">
-
-
-
-                            <img align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad">
+                          <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
 
 
 
-                            <img align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32">
-
-                          </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-
-                      </td>
-                    </tr>
-                  </table>
-
-                  <!-- End FOOTER Section -->
+                          <img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
 
 
-                  <!-- Begin COPYRIGHT Section -->
 
-                  <table class="row">
-                    <tr>
-                      <td class="wrapper last">
+                          <img border="0" align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
 
-                        <table class="twelve columns">
-                          <tr>
-                            <td align="center">
-                              <center>
-                                <p style="text-align:center;"><small>Contents ©2015 eSchool Media. All rights reserved.</small></p>
-                                <p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=100" target="_blank">Unsubscribe</a></p>
-                              </center>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
+                        </td>
+                        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                      </tr>
+                    </table>
 
-                      </td>
-                    </tr>
-                  </table>
+                  </td>
+                </tr>
+              </table>
 
-                  <!--  End COPYRIGHT -->
+              <!-- End FOOTER Section -->
 
 
-                </td>
-              </tr>
-            </table>
+              <!-- Begin COPYRIGHT Section -->
 
-            <!-- End CONTAINER -->
+              <table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
+
+                    <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td align="center">
+                          <center style="width: 100%;">
+                            <p style="text-align:center;"><small>Contents ©2015 eSchool Media. All rights reserved.</small></p>
+                            <p style="text-align:center;"><a href="#" style="color: #2ba6cb; text-decoration: none;">Terms</a> | <a href="#" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | <a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=100" target="_blank" style="color: #2ba6cb; text-decoration: none;">Unsubscribe</a></p>
+                          </center>
+                        </td>
+                        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+
+              <!--  End COPYRIGHT -->
 
 
-          </center>
-        </td>
-      </tr>
-    </table>
+            </td>
+          </tr>
+        </table>
 
-    <!-- End BODY -->
+        <!-- End CONTAINER -->
 
-    <?php wp_footer(); ?>
 
-  </body>
-  </html>
+      </center>
+    </td>
+  </tr>
+</table>
+
+<!-- End BODY -->
+
+<?php //wp_footer(); ?>
+
+</body>
+</html>
