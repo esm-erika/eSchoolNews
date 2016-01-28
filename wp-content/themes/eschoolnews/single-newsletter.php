@@ -1020,10 +1020,10 @@ table.columns .right-text-pad {
                             $term_id = $terms[0]->term_id;
 
                             $image = get_field('publication_logo', $taxonomy . '_' . $term_id);
-                            
+
                             if( !empty($image) ): ?>
 
-                                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                             <?php endif; ?>
 

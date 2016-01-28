@@ -729,6 +729,202 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
+
+/*===================================================================================
+ * Newsletter Custom Fields
+ * =================================================================================*/
+
+	register_field_group(array (
+		'id' => 'acf_newsletter-date',
+		'title' => 'Newsletter Date',
+		'fields' => array (
+			array (
+				'key' => 'field_569520912a8b5',
+				'label' => 'Date',
+				'name' => 'newsletter_date',
+				'type' => 'date_picker',
+				'required' => 1,
+				'date_format' => 'MM dd, yy',
+				'display_format' => 'MM dd, yy',
+				'first_day' => 1,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'newsletter',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'the_content',
+				2 => 'excerpt',
+				3 => 'custom_fields',
+				4 => 'discussion',
+				5 => 'comments',
+				6 => 'revisions',
+				7 => 'author',
+				8 => 'format',
+				9 => 'categories',
+				10 => 'tags',
+				11 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_newsletter-sections',
+		'title' => 'Newsletter Sections',
+		'fields' => array (
+			array (
+				'key' => 'field_5695432954dd3',
+				'label' => 'Newsletter Section',
+				'name' => 'newsletter_section',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_56954a7991310',
+						'label' => 'Section Title',
+						'name' => 'newsletter_section_title',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5696a69e5f1e9',
+						'label' => 'Sponsored Section',
+						'name' => 'sponsored_section',
+						'type' => 'image',
+						'instructions' => 'Upload sponsored image here, if there is one. ',
+						'column_width' => '',
+						'save_format' => 'object',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_5695436754dd4',
+						'label' => 'Article',
+						'name' => 'article_newsletter',
+						'type' => 'relationship',
+						'column_width' => '',
+						'return_format' => 'object',
+						'post_type' => array (
+							0 => 'post',
+							1 => 'ercs',
+							2 => 'whitepapers',
+							3 => 'special-reports',
+							4 => 'events',
+							5 => 'newsletteritems',
+						),
+						'taxonomy' => array (
+							0 => 'all',
+						),
+						'filters' => array (
+							0 => 'search',
+							1 => 'post_type',
+						),
+						'result_elements' => array (
+							0 => 'featured_image',
+							1 => 'post_type',
+							2 => 'post_title',
+						),
+						'max' => 1,
+					),
+					array (
+						'key' => 'field_56a96b29ec859',
+						'label' => 'Custom Link',
+						'name' => 'custom_link_newsletter',
+						'type' => 'text',
+						'instructions' => 'Include \'http://\' for custom link.',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5696aacd56c4e',
+						'label' => 'Horizontal Rule',
+						'name' => 'hr_newsletter',
+						'type' => 'true_false',
+						'column_width' => '',
+						'message' => 'Include Horizontal Rule',
+						'default_value' => 0,
+					),
+					array (
+						'key' => 'field_5696ad9653363',
+						'label' => 'Exclude Excerpt',
+						'name' => 'exclude_excerpt',
+						'type' => 'true_false',
+						'column_width' => '',
+						'message' => 'Exclude Excerpt',
+						'default_value' => 0,
+					),
+					array (
+						'key' => 'field_56994daceeedf',
+						'label' => 'Remove Thumbnail',
+						'name' => 'remove_thumbnail',
+						'type' => 'true_false',
+						'column_width' => '',
+						'message' => 'Remove Thumbnail',
+						'default_value' => 0,
+					),
+					array (
+						'key' => 'field_5699247fc9304',
+						'label' => 'Ad',
+						'name' => 'ad_newsletter',
+						'type' => 'textarea',
+						'instructions' => 'Insert ad code here. The add will appear just BELOW this section.',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'html',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'row',
+				'button_label' => 'Add Section',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'newsletter',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
 }
 
 ?>
