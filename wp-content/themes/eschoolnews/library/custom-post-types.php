@@ -250,7 +250,7 @@ add_action('init', 'newsletter_register');
 function newsletter_register() {
  
 	$labels = array(
-		'name' => _x('Newsletter Issues', 'post type general name'),
+		'name' => _x('Newsletters', 'post type general name'),
 		'singular_name' => _x('Issue', 'post type singular name'),
 		'add_new' => _x('Add New', 'newsletter issue'),
 		'add_new_item' => __('Add New Issue'),
@@ -279,6 +279,24 @@ function newsletter_register() {
 	  ); 
  
 	register_post_type( 'newsletter' , $args );
+
+	register_taxonomy("publication", array("newsletter"), array("hierarchical" => true, "label" => "Publications", "singular_label" => "Publication", "rewrite" => true));
+
+}
+
+add_action( 'init', 'newsletter_items_register' );
+
+function newsletter_items_register() {
+        register_post_type( 'newsletteritems', array(
+                'labels' => array(
+                        'name' => 'Custom Items',
+                        'singular_name' => 'Custom Item',
+                ),
+                'public' => true,
+                'show_ui' => true,
+                'show_in_menu' => 'edit.php?post_type=newsletter',
+                'supports' => array( 'title' ,'thumbnail', 'editor' ),
+        ) );
 }
 
 
