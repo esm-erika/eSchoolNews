@@ -49,11 +49,92 @@ echo $local_box_cache;
 	
 
 	<div class="row">
-		<div class="small-12 large-12 columns right-column top-stories">
+<div class="small-12 large-8 columns" role="main">
 
+	<?php if ( have_posts() ) : ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-	</div>
-	</div>
+			<article>
+				<header>
+				<?php //get_template_part('parts/flags'); ?>
+				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<?php if( get_field('remove_author')) { 
+
+							echo '';
+
+						} else { ?>
+
+							<div class="small-caps">
+								
+								<?php  if( get_field('Alt Author Read More Name')) {
+
+									echo 'By ';
+
+									the_field('Alt Author Read More Name');
+
+								}elseif(get_field('Byline')){
+
+									the_field('Byline');
+
+								} else {
+									echo 'By ';
+
+									the_author();
+
+								} ?>
+
+							</div>
+
+						<?php } ?>
+					<div class="posted-on"><?php the_time('F jS, Y') ?></div>	
+
+				
+
+				</header>
+			</article>
+
+			<hr/>
+        
+	<?php endwhile; ?>
+
+	<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+	<nav class="prev-next-posts">
+		<div class="prev-posts-link">
+			
+			<?php 
+			echo '';
+			echo get_next_posts_link( '<button class="button">Older Entries</button>', $the_query->max_num_pages ); // display older posts link 
+			echo '';
+
+			echo get_previous_posts_link( '<button class="button right">Newer Entries</button>' ); // display newer posts link 
+			echo '';
+			$wp_query = NULL;
+			$wp_query = $temp_query;
+
+			?></button>
+		</div>
+	</nav>
+	<?php } ?>
+
+<?php else: ?>
+	<article>
+		<h1>Sorry...</h1>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	</article>
+	<?php endif; // End have_posts() check. ?>
+
+	
+	
+	
+	<?php /* Display navigation to next/previous pages when applicable */ ?>
+	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+		</nav>
+	<?php } ?>
+
+	</div>	
 
 
 <?php 
@@ -76,7 +157,9 @@ if (false === ($local_box_cache) ){
 	// start code to cache
 		ob_start( );
 			echo '<!-- c -->';
+
 			get_sidebar();
+
 			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
 		$local_box_cache = ob_get_clean( );
 	// end the code to cache
@@ -98,7 +181,6 @@ echo $local_box_cache;
 </div>
 
 
-<?php get_sidebar(); ?>
 
 
 <?php get_footer(); ?>
