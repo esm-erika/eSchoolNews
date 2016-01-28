@@ -209,6 +209,14 @@ if(function_exists("register_field_group"))
 				'media_upload' => 'no',
 			),
 			array (
+				'key' => 'field_56aa47cc91c7d',
+				'label' => 'Hide Masthead Text',
+				'name' => 'hide_masthead_text',
+				'type' => 'true_false',
+				'message' => 'Hide Masthead Text',
+				'default_value' => 0,
+			),
+			array (
 				'key' => 'field_56856a8710349',
 				'label' => 'Masthead Sidebar Item',
 				'name' => 'masthead_sidebar',

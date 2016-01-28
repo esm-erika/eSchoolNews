@@ -97,7 +97,11 @@ if (false === ($local_box_cache) ){
 
 	 <div class="row">
 
-	 <?php if(get_field('masthead_text')) { ?>
+	 <?php if(get_field('hide_masthead_text')) { 
+
+	 	echo '';
+
+	 } else { ?>
 
 	 	<?php if(get_field('masthead_sidebar')) { ?>
 
