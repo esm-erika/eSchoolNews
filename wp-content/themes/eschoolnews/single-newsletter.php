@@ -1129,6 +1129,16 @@ table.columns .right-text-pad {
 
                                   </h6>
 
+                                  <?php if(get_sub_field('hr_newsletter')) { ?>
+                                  <center style="width: 100%;">
+                                    <table class="hr" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
+                                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                                        <td height="1" bgcolor="#cccccc" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1px; font-size: 1px; height: 1px; width: 100%; background: #999999; margin: 0; padding: 0px;" align="left" valign="top">&nbsp;</td>
+                                      </tr>
+                                    </table>
+                                  </center>
+                                  <?php } ?>
+
                                   <?php if(get_sub_field('exclude_excerpt')) { 
 
                                     echo '';
@@ -1166,7 +1176,6 @@ table.columns .right-text-pad {
                           <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
                             <h6 style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 20px; margin: 0; padding: 0;" align="left">
-
                               <?php if(get_sub_field('custom_link_newsletter')) { ?>
                               <a href="<?php the_sub_field('custom_link_newsletter'); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
                                 <?php } else { ?>
@@ -1174,7 +1183,6 @@ table.columns .right-text-pad {
                                   <?php } ?>  
                                   <?php the_title(); ?>
                                 </a>
-
                               </h6>
 
                               <?php if(get_sub_field('hr_newsletter')) { ?>
