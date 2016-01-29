@@ -921,6 +921,7 @@ table.columns .right-text-pad {
               <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
             
             <?php 
+              $taxonomy = 'publications';
               $terms = get_the_terms( $post->ID, $taxonomy);
               $term_id = $terms[0]->term_id;
               $term_slug = $terms[0]->slug;
