@@ -166,7 +166,7 @@
 
 <?php }?>
 
-<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
+<?php //get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
 
 	<?php endif;?>
