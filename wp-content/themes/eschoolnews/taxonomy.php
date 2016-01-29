@@ -149,7 +149,7 @@ if ( have_posts() ) {
 				<?php endwhile; ?>
 		<?php endif; ?>	
 
-		<?php  } elseif( is_tax('publication') ) { ?>
+		<?php  } elseif( is_tax('publications') ) { ?>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
