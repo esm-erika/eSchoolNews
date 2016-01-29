@@ -66,7 +66,7 @@ get_header(); ?>
 							<?php } ?>
 
 
-				<div class="posted-on">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>		
+				<div class="posted-on"><?php the_time('F jS, Y') ?></div>		
 
 			</header>
 		</article>

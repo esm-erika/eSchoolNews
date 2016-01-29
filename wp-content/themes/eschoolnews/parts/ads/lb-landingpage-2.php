@@ -24,8 +24,8 @@
 			$astused = 1;
 		}
 	}
-    echo '    <!-- leaderboard-2 '.$astused.' --> '; 
-	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,32);}
+	 echo '    <!-- leaderboard banner '.$astused.' --> '; 
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,34);}
 		
 	?>
         
