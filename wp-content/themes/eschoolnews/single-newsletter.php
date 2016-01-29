@@ -942,12 +942,29 @@ table.columns .right-text-pad {
       <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
         <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
           <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
+            <a href="http://www.twitter.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
+            <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
+            </a>
 
-        <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;" /><img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block; padding-left: 10px; padding-right: 10px;" /><img border="0" align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;" /></td>
-        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
-        <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
-      </tr>
-    </table>
+            <a href="http://www.facebook.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
+            <img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
+            </a>
+
+            <?php 
+              $taxonomy = 'publications';
+              $terms = get_the_terms( $post->ID, $taxonomy);
+              $term_id = $terms[0]->term_id;
+              $term_slug = $terms[0]->slug;
+              $term_name = $terms[0]->name;
+            ?>
+
+            <a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest <?php echo $term_name; ?> <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">
+            <img border="0" align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
+            </a>
+          </td>
+          <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+        </tr>
+      </table>
 
   </td>
 </tr>
@@ -1332,17 +1349,25 @@ table.columns .right-text-pad {
                     <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
-
+                          <a href="http://www.twitter.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
                           <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
+                          </a>
 
-
-
+                          <a href="http://www.facebook.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
                           <img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
+                          </a>
 
+                          <?php 
+                            $taxonomy = 'publications';
+                            $terms = get_the_terms( $post->ID, $taxonomy);
+                            $term_id = $terms[0]->term_id;
+                            $term_slug = $terms[0]->slug;
+                            $term_name = $terms[0]->name;
+                          ?>
 
-
+                          <a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest <?php echo $term_name; ?> <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">
                           <img border="0" align="right" src="http://www.eschoolnews.com/e/i/32x32-Circle-57-EM.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
-
+                          </a>
                         </td>
                         <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
                       </tr>
