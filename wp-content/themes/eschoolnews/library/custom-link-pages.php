@@ -33,7 +33,7 @@ function custom_wp_link_pages( $args = '' ) {
 		'text_before' => '<span class="numbers">',
 		'text_after' => '</span>',
 		'next_or_number' => 'number', 
-		'nextpagelink' => __( '<span class="button small radius next">Next Page &raquo;</span>' ),
+		'nextpagelink' => __( '<span class="button small radius next">Read More &raquo;</span>' ),
 		'previouspagelink' => __( '<span class="button small radius prev">&laquo; Previous Page</span>' ),
 		'pagelink' => '%',
 		'echo' => 1

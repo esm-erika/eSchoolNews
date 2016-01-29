@@ -9,7 +9,7 @@
 
 ?>
 
-	<div class="ad-container">
+	<div class="ad-container" style="margin-top: 0px;">
 	<?php // echo adrotate_group('1'); 
 		
 	if ($astused > 0){

@@ -63,6 +63,8 @@ $topbar-link-bg-color-hover: $jet;
 $topbar-link-bg-active: $jet;
 $topbar-link-bg-active-hover: scale-color($jet, $lightness: -14%);
 
+$large-range: (64.063em, 90em);
+
 // Media query breakpoints
 $small-breakpoint:  em-calc(640);
 $medium-breakpoint: em-calc(1024);

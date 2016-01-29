@@ -33,6 +33,8 @@ get_header(); ?>
 
 <div class="row">
 
+	<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
+
 	<div class="small-12 medium-8 columns">
 
 		<?php get_template_part('parts/resources-section'); ?>		
