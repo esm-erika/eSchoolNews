@@ -919,9 +919,15 @@ table.columns .right-text-pad {
           <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
             <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
               <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
-
+            
+            <?php 
+              $terms = get_the_terms( $post->ID, $taxonomy);
+              $term_id = $terms[0]->term_id;
+              $term_slug = $terms[0]->slug;
+              $term_name = $terms[0]->name;
+            ?>
             <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left"><small style="font-size: 10px;">
-              <a href="<?php the_permalink(); ?>" target="_blank" style="color: #2ba6cb; text-decoration: none;">View in a web browser</a></small> | <small style="font-size: 10px;"><a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest Education Technology News <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">Forward to a friend</a>
+              <a href="<?php the_permalink(); ?>" target="_blank" style="color: #2ba6cb; text-decoration: none;">View in a web browser</a></small> | <small style="font-size: 10px;"><a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest <?php echo $term_name; ?> <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">Forward to a friend</a>
             </small></p>
 
           </td>
