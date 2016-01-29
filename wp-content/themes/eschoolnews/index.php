@@ -21,7 +21,7 @@ get_header(); ?>
 
 <?php get_template_part( 'parts/featured-article' ); ?>
 
-
+<?php get_template_part( 'parts/ads/leaderboard' ); ?>
 
 <div class="row">
 
@@ -29,11 +29,10 @@ get_header(); ?>
 </div>
 
 
+<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
 
 <div class="row">
-
-	<?php get_template_part( 'parts/ads/leaderboard-2' ); ?>
 
 	<div class="small-12 medium-8 columns">
 
