@@ -175,9 +175,22 @@ Already a member? Log in
 
 <?php } else { ?>
 
-<?php the_content(); ?>
+<?php // the_content(); 
 
-<?php
+$content = apply_filters( 'the_content', get_the_content() );
+$content = explode("</p>", $content);
+$count = count($content);
+$placement = round($count/2);
+$paragraphAfter[$placement] = ''; // Can insert text if wanted.
+
+for ($i = 0; $i < $count; $i++ ) {
+    if ( array_key_exists($i, $paragraphAfter) ) {
+        echo $paragraphAfter[$i];
+		get_template_part( 'parts/ads/lb-article-1' );		
+    }
+    echo $content[$i] . "</p>";
+}
+
 
 custom_wp_link_pages();
 
