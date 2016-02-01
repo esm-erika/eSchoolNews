@@ -43,7 +43,7 @@ $ucwebinars = new WP_Query(array(
 		),
 
 		));  ?> 
-
+<?php if ($ucwebinars->have_posts()) { ?>
 		<div class="row">
 			<?php get_template_part( 'parts/section-titles' ); ?>
 
@@ -91,7 +91,7 @@ $ucwebinars = new WP_Query(array(
 				</div>
 			</div>
 
-
+<?php } ?>
 
 <?php
 $webinars = new WP_Query(array(
