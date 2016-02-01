@@ -241,12 +241,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner-socialstudies_discovery-erc.jpg" alt="Powerful Practices"></a>
 				<nav class="social-studies">
 
-					<div class="row">
+					<div class="row collapse">
 						<div class="small-12 columns">
-							<span class="studies-menu"><strong>> RESOURCES:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education-social-studies">SOCIAL STUDIES</a></span>
-							<span class="math-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a></span>
-							<span class="science-menu"><a href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a></span>
-							<span class="event-menu"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span>
+              <span class="micro-menu">
+							<span class="active"><strong>> RESOURCES:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education-social-studies">SOCIAL STUDIES</a></span>
+							<a class="math-menu" href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a>
+							<a class="science-menu" href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a>
+            </span>
+							<span class="right"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span>
 						</div>
 					</div>
 
@@ -303,10 +305,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h3>Resources</h3>
 
 					<article>
+						<h6 style="color: #666;">Ed-Tech Pont of View</h6>
+								<h5>Transforming Social Studies Education for a Digital Era</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Ed-Tech Pont of View</h6>
-								<h5>Transforming Social Studies Education for a Digital Era</h5>	
+									
 								
 								<?php if ( esm_is_user_logged_in()) { ?>
 								     <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=364&ast=154&astc=11650">
@@ -326,11 +329,12 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-						<div class="row">
-							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Powerful Practices</h6>
+						<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Five Strategies for Using Primary Source Documents</h5>	
 
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								
 <?php if ( esm_is_user_logged_in()) { ?>
      <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=365&ast=154&astc=11650">
 <?php } else { ?>
@@ -349,10 +353,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
+						<h6 style="color: #666;">Powerful Practices</h6>
+								<h5>Building Content Knowledge and Inquiry Skills</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Powerful Practices</h6>
-								<h5>Building Content Knowledge and Inquiry Skills</h5>	
+									
 								
 <?php if ( esm_is_user_logged_in()) { ?>
      <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=366&ast=154&astc=11650">
@@ -374,10 +379,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 
 					<article>
+						<h6 style="color: #666;">Story</h6>
+								<h5>From the Heart: Chris Layton</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Story</h6>
-								<h5>From the Heart: Chris Layton</h5>	
+									
 
 <?php if ( esm_is_user_logged_in()) { ?>
      <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=367&ast=154&astc=11650">
@@ -397,10 +403,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
+						<h6 style="color: #666;">Story</h6>
+								<h5>From the Heart: Queenie Hall</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
-								<h6 style="color: #666;">Story</h6>
-								<h5>From the Heart: Queenie Hall</h5>	
+									
 
 <?php if ( esm_is_user_logged_in()) { ?>
      <a target="new" href="http://www.eschoolnews.com/rtp.php?rtl=368&ast=154&astc=11650">
