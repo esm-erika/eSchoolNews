@@ -280,21 +280,44 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<br>
 
 					<h3 style="color: #666;">What Educators Can Do with Social Studies Techbook</h3>
-					<hr>
+					
 
+					<div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
 					<h4>Maximize their time to plan, prepare, and deliver high quality instruction</h4>
 					<p>Teachers can access model lessons, primary and secondary source documents, interactive tools and activities, document-based investigations, and assessments all in one place at their fingertips.</p>
+						</div></div>
 
-
+					<div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
 					<h4>Engage students with multimedia content that is current and relevant</h4>
 					<p>The combination of videos, photographs, audio recordings, interactive maps, and variety of activities makes Social Studies more interesting and exciting to students. Social Studies Techbook is updated regularly and the Global Wrap feature includes weekly current events videos provided by MacNeil/Lehrer productions.</p>
+			</div></div>
 
+			<div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
 					<h4>Strengthens literacy, critical thinking, and citizenship skills for all students</h4>
 					<p>The inquiry-based format and interactive investigations emphasize informational text literacy, analytical writing, and problem solving skills that students will apply in academics and as citizens.</p>
+				</div></div>
 
+				<div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">	
 					<h4>Differentiate instruction for 21st century learners</h4>
 					<p>Students can use digital resources to help them process information from multiple sources. A variety of reading tools, including two different text levels, text-to-speech, and Spanish translations help students make meaning from the text. Formative and summative assessments are already built and ready for teachers and students to use.</p>
-
+				</div></div>
+			
 					<h6><a style="background-color: #830c0e;" href="http://www.DiscoveryEducation.com/Math" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
 					
 					

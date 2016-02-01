@@ -280,20 +280,44 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
           <br>
 
 					<h3 style="color: #666;">What Educators Can Do with Science Techbook</h3>
-					<hr>
-
+					
+          <div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
 					<h4>Teach Using an Inquiry-Based Approach</h4>
 					<p>Science Techbook uses a Discover, Practice, Apply cycle that balances conceptual learning, procedural fluency, and application to real world problems so students gain lasting proficiency.</p>
+          </div>
+        </div>
 
+        <div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
 
 					<h4>Engage Students First to Make Learning Last</h4>
 					<p>Students can access dynamic content, interactives, videos, digital tools, and game-like activities that increase their motivation to learn math. Students learn content through multiple pathways that match their learning style and can monitor their own progress in real time with the Student Dashboard.</p>
-
-					<h4>Differentiate Instruction for 21st Century Learners</h4>
+          </div></div>
+					
+          <div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
+          <h4>Differentiate Instruction for 21st Century Learners</h4>
 					<p>The newest generation of technology enhanced items and formative assessments are woven throughout the entire instructional cycle. Teachers can collect evidence of student progress instantly.</p>
+          </div></div>
 
+          <div class="row collapse">
+            <div class="small-1 columns">
+              <img style="max-width: 40px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery-bullets.png" alt="">
+            </div>
+            <div class="small-11 columns">
 					<h4>Save Teachers Time in Planning and Preparation</h4>
 					<p>Comprehensive resources, student activities, and model lessons are at teachers' fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on the Teacher Dashboard make it easier to adjust instruction.</p>
+          </div></div>
 
 					<h6><a style="background-color: ##53b958;" href="http://www.DiscoveryEducation.com/Science" class="button medium radius">Learn more or sign up for a free trial at: DiscoveryEducation.com/Science.</a></h6>
 					
