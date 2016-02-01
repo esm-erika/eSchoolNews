@@ -1857,14 +1857,9 @@ body.page.collaboration {
 	}
 
 	#zmag-script {
-		//max-width: 450px;
+		max-width: 450px;
 		height: 450px;
 		margin: auto;
-
-		iframe {
-			top: 0;
-			right: 0 !important; 
-		}
 	}
 
 	section.home {

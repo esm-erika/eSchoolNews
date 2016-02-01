@@ -267,7 +267,9 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					student engagement.</p>
 				</div>
 
-				<div id="zmag-script" class="small-12 medium-6 columns">
+				<div class="small-12 medium-6 columns">
+
+					<div id="zmag-script"></div>
 
 				</div>
 			</div>
