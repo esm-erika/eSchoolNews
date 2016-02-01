@@ -27,8 +27,71 @@ if (false === ($local_box_cache) ){
 	// start code to cache
 		ob_start( );
 		echo '<!-- c -->'; 
-		?>
-		
+	
+
+$ucwebinars = new WP_Query(array(
+	'post_type' => 'webinars',
+	'tax_query' => array(
+		array(
+
+			'taxonomy' => 'status-webinars',
+			'field' => 'slug',
+			'terms' => 'upcoming-webinars',
+
+			),
+
+		),
+
+		));  ?> 
+<?php if ($ucwebinars->have_posts()) { ?>
+		<div class="row">
+			<?php get_template_part( 'parts/section-titles' ); ?>
+
+			<!-- Row for main content area -->
+			<div class="small-12 medium-12 columns" role="main">
+
+				<h4>Upcoming Webinars</h4>
+
+				<br/>
+
+				<ul class="medium-block-grid-2">
+
+					<?php while ( $ucwebinars->have_posts() ) : $ucwebinars -> the_post(); ?>
+
+					<li>
+						<article class="row">
+							
+							<?php if( has_post_thumbnail()){ ?>
+							<div class="small-12 medium-4 columns">
+								<?php the_post_thumbnail('medium-landscape'); ?>
+							</div>
+							<header class="small-12 medium-8 columns">
+							<?php } else { ?>
+							
+							<header class="small-12 medium-12 columns">
+
+							<?php } ?>
+
+								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+																<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
+
+								
+								</header>
+
+
+							</article>
+
+
+						</li>
+
+						<?php endwhile; 
+						wp_reset_postdata(); ?>
+					</ul>
+				</div>
+			</div>
+
+<?php } ?>
 
 <?php
 $webinars = new WP_Query(array(
