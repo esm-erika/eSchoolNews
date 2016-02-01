@@ -299,6 +299,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 				</div>
 
 				<div id="sidebar" class="small-12 medium-4 columns">
+					<div class="sidebar-bg">
 					<h3>Resources</h3>
 
 					<article>
@@ -432,6 +433,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
 
+</div>
 </div>
 </section>
 

@@ -2001,7 +2001,9 @@ body.page.collaboration {
 		}
 
 		#sidebar {
-			background-color: #d3c9e2;
+			div.sidebar-bg {
+				background-color: #d3c9e2;
+			}
 		}
 
 	}
@@ -2022,7 +2024,9 @@ body.page.collaboration {
 		}
 
 		#sidebar {
-			background-color: #cceacd;
+			div.sidebar-bg {
+				background-color: #cceacd;
+			}
 		}
 
 	}
@@ -2042,7 +2046,9 @@ body.page.collaboration {
 		}
 
 		#sidebar {
-			background-color: #dab7b7;
+			div.sidebar-bg {
+				background-color: #dab7b7;
+			}
 		}
 	}
 	
