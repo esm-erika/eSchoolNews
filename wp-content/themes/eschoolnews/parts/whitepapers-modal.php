@@ -69,7 +69,7 @@ global $esmuser;
 										<div class="row sponsored">
 											<div class="small-12 medium-6 columns">
 
-											<small>Provided By:</small><br>
+											<small>Sponsored by:</small><br>
 
 											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
