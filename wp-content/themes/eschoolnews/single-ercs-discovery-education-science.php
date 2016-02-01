@@ -271,6 +271,10 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 						</a>
 					</p>
 
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L26oLp1eYqM" frameborder="0" allowfullscreen></iframe>          
+          </div>
+
 					<h5 style="color: #666;">What Educators Can Do with Science Techbook</h5>
 					<hr>
 
@@ -287,10 +291,9 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h4>Save Teachers Time in Planning and Preparation</h4>
 					<p>Comprehensive resources, student activities, and model lessons are at teachers' fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on the Teacher Dashboard make it easier to adjust instruction.</p>
 
-					<h6><a href="http://www.DiscoveryEducation.com/Science">Learn more or sign up for a free trial at DiscoveryEducation.com/Science.</a></h6>
-					<br>
-					<div class="video">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/L26oLp1eYqM" frameborder="0" allowfullscreen></iframe>					</div>
+					<h6><a href="http://www.DiscoveryEducation.com/Science" class="button large radius">Learn more or sign up for a free trial at DiscoveryEducation.com/Science.</a></h6>
+					
+
 					</div>
 
 				<div id="sidebar" class="small-12 medium-4 columns">

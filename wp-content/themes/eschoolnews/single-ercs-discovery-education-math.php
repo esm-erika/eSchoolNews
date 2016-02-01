@@ -278,6 +278,10 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 						</a>
 					</p>
 
+					<div class="video">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/hF5xONSlQ9Q" frameborder="0" allowfullscreen></iframe>
+					</div>
+
 					<h5 style="color: #666;">What Educators Can Do with Math Techbook</h5>
 					<hr>
 
@@ -303,9 +307,9 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on
 					the Teacher Dashboard make it easier to adjust instruction.</p>
 
-					<div class="video">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/hF5xONSlQ9Q" frameborder="0" allowfullscreen></iframe>
-					</div>
+					<h6><a href="http://www.DiscoveryEducation.com/SocialStudies" class="button large radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
+
+					
 				</div>
 
 				<div id="sidebar" class="small-12 medium-4 columns">

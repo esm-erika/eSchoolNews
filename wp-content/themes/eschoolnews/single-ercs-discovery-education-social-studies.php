@@ -271,6 +271,10 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 						</a>
 					</p>
 
+					<div class="video">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/o7U8Sdfzy7E" frameborder="0" allowfullscreen></iframe>
+					</div>
+
 					<h5 style="color: #666;">What Educators Can Do with Social Studies Techbook</h5>
 					<hr>
 
@@ -287,11 +291,9 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h4>Differentiate instruction for 21st century learners</h4>
 					<p>Students can use digital resources to help them process information from multiple sources. A variety of reading tools, including two different text levels, text-to-speech, and Spanish translations help students make meaning from the text. Formative and summative assessments are already built and ready for teachers and students to use.</p>
 
-					<h6><a href="http://www.DiscoveryEducation.com/SocialStudies">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
-					<br>
-					<div class="video">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/o7U8Sdfzy7E" frameborder="0" allowfullscreen></iframe>
-					</div>
+					<h6><a href="http://www.DiscoveryEducation.com/SocialStudies" class="button large radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
+					
+					
 				</div>
 
 				<div id="sidebar" class="small-12 medium-4 columns">
