@@ -424,14 +424,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 					</ul>
 
-					<h6><strong style="color: #000;">Learn more and register at</strong> 
+					<h6>
 
 <?php if ( esm_is_user_logged_in()) { ?>
      <a style="background-color: #0275bc;" class="button medium radius" href="http://www.eschoolnews.com/rtp.php?rtl=349&ast=154&astc=11650">
 <?php } else { ?>
 	<a style="background-color: #0275bc;" class="button medium radius" href="#" data-reveal-id="login-popup">
 <?php } ?> 
-                  DiscoveryEducation.com/PowerfulPractices.</a></h6>
+                  Learn more and register at: DiscoveryEducation.com/PowerfulPractices.</a></h6>
 				</div>
 			</div>
 			<br>
