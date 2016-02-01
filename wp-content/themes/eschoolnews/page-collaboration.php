@@ -169,7 +169,7 @@ global $cat;
 					<span class="days"><?php
 
 						$date1 = new DateTime(date('Y-m-d'));  //current date or any date
-						$date2 = new DateTime("2016-05-15");   //Future date
+						$date2 = new DateTime("2016-04-30");   //Future date
 						$diff = $date2->diff($date1)->format("%a");  //find difference
 						$days = intval($diff);   //rounding days
 						echo $days;
