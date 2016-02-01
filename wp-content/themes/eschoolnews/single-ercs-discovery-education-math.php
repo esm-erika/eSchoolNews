@@ -257,7 +257,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			</header>
 
 			<div class="row">
-				<div class="small-12 medium-8 columns">
+				<div class="small-12 medium-7 columns">
 					<h3>Learning Math Starts with a Connection.</h3>
 
 					<p>Math Techbook is a breakthrough digital textbook that will change the way students and
@@ -314,7 +314,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					
 				</div>
 
-				<div id="sidebar" class="small-12 medium-4 columns">
+				<div id="sidebar" class="small-12 medium-5 columns">
 					<div class="sidebar-bg">
 					<h3>Resources</h3>
 

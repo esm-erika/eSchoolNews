@@ -254,7 +254,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			</header>
 
 			<div class="row">
-				<div class="small-12 medium-8 columns">
+				<div class="small-12 medium-7 columns">
 					<h3>Discovery Education Social Studies Techbook&trade;</h3>
 
 					<p>Social Studies Techbook is a core digital textbook that makes teaching and learning an unforgettable experience. Using an inquiry-based approach that enhances literacy and critical thinking skills, Social Studies Techbook supports any device, anywhere, anytime in any instructional setting.</p>
@@ -298,7 +298,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					
 				</div>
 
-				<div id="sidebar" class="small-12 medium-4 columns">
+				<div id="sidebar" class="small-12 medium-5 columns">
 					<div class="sidebar-bg">
 					<h3>Resources</h3>
 

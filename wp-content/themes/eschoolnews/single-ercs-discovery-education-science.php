@@ -254,7 +254,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 			</header>
 
 			<div class="row">
-				<div class="small-12 medium-8 columns">
+				<div class="small-12 medium-7 columns">
 					<h3>Learning Science Starts with a Connection.</h3>
 
 					<p>Science Techbook helps teachers transform their instruction with a simple-to-use, highly interactive program that integrates multimedia resources including video, audio, text, and interactives. Hands-on activities, virtual labs, and technology-enhanced formative assessment provide a rich and engaging learning experience for students. Science Techbook works on any device and can be implemented in a variety of instructional settings.</p>
@@ -298,7 +298,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 					</div>
 
-				<div id="sidebar" class="small-12 medium-4 columns">
+				<div id="sidebar" class="small-12 medium-5 columns">
           <div class="sidebar-bg">
 					<h3>Resources</h3>
 
