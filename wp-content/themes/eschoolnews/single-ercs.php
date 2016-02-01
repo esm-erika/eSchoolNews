@@ -56,15 +56,15 @@ if (false === ($local_box_cache) ){
 
 	if( !empty($image) ) {
 
-		echo '<div class="small-12 medium-12 columns">'; ?>
+		echo '<div class="small-12 medium-12 columns text-center">'; ?>
 
 	<?php	if (get_field('masthead_url')) {
 		echo '<a href="' . get_field('masthead_url') . '">'; 
-		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</a>';
 		echo '</div>';
 		} else {
-		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</div>';
 	} ?>
 
@@ -120,13 +120,17 @@ if (false === ($local_box_cache) ){
 				<div class="small-12 medium-12 columns">
 
 					<?php the_field('masthead_text') ?>
+				</div>
 
 		<?php } ?>
 
 			</div>
 
+			<div class="row">
+
 			<div class="small-12 columns">
 				<hr>
+			</div>
 			</div>
 
 		<?php } ?>
