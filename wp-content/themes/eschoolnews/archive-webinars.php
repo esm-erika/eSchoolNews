@@ -75,7 +75,7 @@ $ucwebinars = new WP_Query(array(
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 <p class="excerpt">
                                 <?php 
-							echo balanceTags(wp_trim_words( get_the_field('event_information'), $num_words = 30, $more = '&hellip;' ), true); 
+							echo balanceTags(wp_trim_words( get_field('event_information'), $num_words = 30, $more = '&hellip;' ), true); 
 							?>
                                 </p>
 
