@@ -349,7 +349,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 				<div id="sidebar" class="small-12 medium-5 columns">
 					<div class="sidebar-bg">
-					<h3>Resources</h3>
+					<h3>Insights &amp; Resources</h3>
 
 					<article>
 						<h5>Ed-Tech Point of View: Transforming Math for a Digital Era</h5>
