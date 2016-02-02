@@ -995,7 +995,7 @@ table.columns .right-text-pad {
     <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
       <td align="right" class="right text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" valign="top">
 
-        <h6 class="right" style="text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1.3; word-break: normal; font-size: 18px; margin: 0; padding: 0;" align="right"><?php the_field('newsletter_date'); ?></h6>
+        <span class="right" style="text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: bold; line-height: 1.3; word-break: normal; font-size: 14px; margin: 0; padding: 0;" align="right"><?php the_field('newsletter_date'); ?></span>
       </td>
       <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
     </tr>
@@ -1081,7 +1081,7 @@ table.columns .right-text-pad {
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                          <span style="display: block; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 14px; margin: 0; padding: 0;" align="left">
+                          <span style="display: block; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: bold; text-align: left; line-height: 1.3; word-break: normal; font-size: 14px; margin: 0; padding: 0;" align="left">
                             <?php the_sub_field('newsletter_section_title'); ?>
                           </span>
                           
