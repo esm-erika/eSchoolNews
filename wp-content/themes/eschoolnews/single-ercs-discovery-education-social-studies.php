@@ -328,8 +328,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h3>Resources</h3>
 
 					<article>
-						<h6 style="color: #666;">Ed-Tech Pont of View</h6>
-								<h5>Transforming Social Studies Education for a Digital Era</h5>
+								<h5>Ed-Tech Pont of View: Transforming Social Studies Education for a Digital Era</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 									
@@ -352,7 +351,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-						<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Five Strategies for Using Primary Source Documents</h5>	
 
 						<div class="row">
@@ -376,7 +374,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-						<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Building Content Knowledge and Inquiry Skills</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
@@ -402,7 +399,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 
 					<article>
-						<h6 style="color: #666;">Story</h6>
 								<h5>From the Heart: Chris Layton</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
@@ -426,8 +422,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-						<h6 style="color: #666;">Story</h6>
-								<h5>From the Heart: Queenie Hall</h5>
+						<h5>From the Heart: Queenie Hall</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 									

@@ -329,8 +329,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h3>Resources</h3>
 
 					<article>
-              <h6 style="color: #666;">Ed-Tech Point of View</h6>
-                <h5>Transforming Science Education for a Digital Era</h5>
+                <h5>Ed-Tech Point of View: Transforming Science Education for a Digital Era</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 							
@@ -353,7 +352,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-            <h6 style="color: #666;">Article</h6>
                 <h5>Five Powerful Practices for Science Professional Development</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
@@ -379,7 +377,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
           <?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 
           <article>
-             <h6 style="color: #666;">Article</h6>
                 <h5>Keys to Leading a Successful Digital Transition</h5>
             <div class="row">
               <div class="small-12 medium-6 columns">
@@ -404,7 +401,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 
           <article>
-            <h6 style="color: #666;">Article</h6>
                 <h5>Three Things Science Coordinators Need to Know About NGSS</h5>
             <div class="row">
               <div class="small-12 medium-6 columns">
@@ -428,7 +424,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
           </article>
 
           <article>
-             <h6 style="color: #666;">Article</h6>
                 <h5>Defining Differentiation in Today’s Classroom</h5>
             <div class="row">
               <div class="small-12 medium-6 columns">

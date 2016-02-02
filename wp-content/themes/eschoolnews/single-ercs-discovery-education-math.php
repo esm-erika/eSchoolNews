@@ -346,8 +346,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h3>Resources</h3>
 
 					<article>
-						<h6 style="color: #666;">Ed-Tech Point of View</h6>
-								<h5>Transforming Math for a Digital Era</h5>
+						<h5>Ed-Tech Point of View: Transforming Math for a Digital Era</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 									
@@ -370,8 +369,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-						<h6 style="color: #666;">Infographic</h6>
-								<h5>Problems Worth Solving</h5>
+								<h5>Infographic: Problems Worth Solving</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 								
@@ -395,7 +393,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-						<h6 style="color: #666;">Powerful Practices</h6>
 								<h5>Mathematical Learning Through Rigorous Tasks</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
@@ -421,7 +418,6 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 
 					<article>
-						<h6 style="color: #666;">Story</h6>
 								<h5>From the Heart: Why this Career Corrections Officer Went Back to Middle School</h5>	
 
 						<div class="row">
