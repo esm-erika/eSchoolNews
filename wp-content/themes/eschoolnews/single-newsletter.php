@@ -993,7 +993,7 @@ table.columns .right-text-pad {
 
   <table class="six columns date" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
     <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-      <td align="right" class="right text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" valign="top">
+      <td align="right" class="right text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: bottom; text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" valign="top">
 
         <span class="right" style="text-align: right; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: bold; line-height: 1.3; word-break: normal; font-size: 14px; margin: 0; padding: 0;" align="right"><?php the_field('newsletter_date'); ?></span>
       </td>
