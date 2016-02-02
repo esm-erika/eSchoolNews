@@ -79,7 +79,7 @@ $ucwebinars = new WP_Query(array(
 							?>
                                 </p>
 
-																<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
+																<a class="button radius small" href="<?php the_permalink(); ?>">Register Now</a>
 
 								
 								</header>
