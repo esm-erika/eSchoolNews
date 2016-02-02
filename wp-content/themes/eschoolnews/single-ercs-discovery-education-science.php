@@ -319,9 +319,14 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<p>Comprehensive resources, student activities, and model lessons are at teachers' fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on the Teacher Dashboard make it easier to adjust instruction.</p>
           </div></div>
 
-					<h6><a style="background-color: ##53b958;" href="http://www.DiscoveryEducation.com/Science" class="button medium radius">Learn more or sign up for a free trial at: DiscoveryEducation.com/Science.</a></h6>
+					<h6><a style="background-color: #53b958;" href="http://www.DiscoveryEducation.com/Science" class="button medium radius">Learn more or sign up for a free trial at: DiscoveryEducation.com/Science.</a></h6>
 					
-
+          <div class="row">
+            <div class="small-12 medium-6 columns">
+              <small>Sponsored by:</small>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery_science.png" alt="Discovery Education: Science Techbook">
+            </div>
+          </div>
 					</div>
 
 				<div id="sidebar" class="small-12 medium-5 columns">

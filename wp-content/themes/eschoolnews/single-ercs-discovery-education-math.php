@@ -337,7 +337,13 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 				</div></div>
 
 					<h6><a style="background-color: #65308f;" href="http://www.DiscoveryEducation.com/SocialStudies" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
-
+					
+					<div class="row">
+						<div class="small-12 medium-6 columns">
+							<small>Sponsored by:</small>
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery_math.png" alt="Discovery Education: Math Techbook">
+						</div>
+					</div>
 					
 				</div>
 
