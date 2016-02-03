@@ -339,7 +339,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h6><a style="background-color: #65308f;" href="http://www.DiscoveryEducation.com/SocialStudies" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
 					
 					<div class="row">
-						<div class="small-12 medium-6 columns">
+						<div class="small-12 medium-8 columns">
 							<small>Sponsored by:</small>
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery_math.png" alt="Discovery Education: Math Techbook">
 						</div>
@@ -349,10 +349,10 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 				<div id="sidebar" class="small-12 medium-5 columns">
 					<div class="sidebar-bg">
-					<h3>Insights &amp; Resources</h3>
+					<h3><img class="left" style="max-width: 30px; margin-right: 5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lightbulb.png"> Insights &amp; Resources</h3>
 
 					<article>
-						<h5>Ed-Tech Point of View: Transforming Math for a Digital Era</h5>
+						<h5>Ed-Tech Point of View: <br>Transforming Math for a Digital Era</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 									
@@ -375,7 +375,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					</article>
 
 					<article>
-								<h5>Infographic: Problems Worth Solving</h5>
+								<h5>Infographic: <br>Problems Worth Solving</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 								
