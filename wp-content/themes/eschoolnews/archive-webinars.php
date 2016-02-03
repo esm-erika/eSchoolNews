@@ -73,8 +73,13 @@ $ucwebinars = new WP_Query(array(
 							<?php } ?>
 
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                <p class="excerpt">
+                                <?php 
+							echo balanceTags(wp_trim_words( get_field('event_information'), $num_words = 30, $more = '&hellip;' ), true); 
+							?>
+                                </p>
 
-																<a class="button radius small" href="<?php the_permalink(); ?>">View Now</a>
+																<a class="button radius small" href="<?php the_permalink(); ?>">Register Now</a>
 
 								
 								</header>
@@ -111,7 +116,7 @@ $webinars = new WP_Query(array(
 		));  ?> 
 
 		<div class="row">
-			<?php get_template_part( 'parts/section-titles' ); ?>
+			<?php // get_template_part( 'parts/section-titles' ); ?>
 
 			<!-- Row for main content area -->
 			<div class="small-12 medium-12 columns" role="main">
