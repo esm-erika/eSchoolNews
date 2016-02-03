@@ -856,7 +856,7 @@ table.columns .right-text-pad {
 @media only screen and (max-width: 600px) {
 
   h5 {font-size: 36px !important;}
-  h6 {font-size: 30px !important;}
+  h6 {font-size: 24px !important; line-height: 24px !important;}
   body, table.body, p, td {font-size: 21px;line-height:28px;}
 
   table[class="body"] .right-text-pad {
@@ -1136,10 +1136,12 @@ table.columns .right-text-pad {
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                          <?php if(get_sub_field('add_panel')) {?>
+                          <?php if(get_sub_field('bullets')) {?>
                           <table width="100%">
                             <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-                              <td class="panel" style="background: #f2f2f2; border: 1px solid #d9d9d9; padding: 10px !important;">
+                              <td width="15" style="width: 15px; vertical-align: top;"><img border="0" width="7" height="15" src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/02/bullet.png" alt="bullet" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;" /></td>
+                              <td>
+
                                 <?php } ?>
 
                                 <h6 style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 1.3; word-break: normal; font-size: 20px; margin: 0; padding: 0;" align="left">
@@ -1178,7 +1180,7 @@ table.columns .right-text-pad {
 
                                   <?php } ?>
 
-                                  <?php if(get_sub_field('add_panel')) {?>
+                                  <?php if(get_sub_field('bullets')) {?>
                                 </td>
                               </tr>
                             </table>
