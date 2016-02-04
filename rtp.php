@@ -61,7 +61,11 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 } else {
 	$redirectto = 0;
 }
-if ( isset($_GET['ps']) ) {
+
+
+if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
+		if ( isset($_GET['ps'])){ $esmpassvals = explode ( "-" , $_GET['ps']); } else {$esmpassvals = explode ( "-" , $_GET['amp;ps']); }
+
 	$esmpassvals = explode ( "-" , $_GET['ps']);
 	$loggedin = 0;
 	if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){
@@ -163,8 +167,17 @@ if (is_user_logged_in()) {
 		$user_info = get_userdata($wpuid );
 		$email = $user_info->user_email;
 	} else {
-		if ( isset($_GET['ps']) ) {
-			$esmpassvals = explode ( "-" , $_GET['ps']);
+
+
+
+
+
+
+// if ( isset($_GET['amp;ps']) ) { $esmpassvals = explode ( "-" , $_GET['amp;ps']);
+
+	if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
+		if ( isset($_GET['ps'])){ $esmpassvals = explode ( "-" , $_GET['ps']); } else {$esmpassvals = explode ( "-" , $_GET['amp;ps']); }
+			
 			
 	if (isset($esmpassvals[1]) && is_numeric($esmpassvals[1])){
 		$wpuid=$esmpassvals[1];
@@ -214,12 +227,12 @@ $wpdb->query( $wpdb->prepare("INSERT INTO esm_lead (Area__c ,astc__c , attachmen
 
 
 
-if($rurl){ $url = $rurl;	}
+  if($rurl){ $url = $rurl;	}
 if($redirectto == 1){ header( 'Location: '.$url ) ;	
 
 
 
-}
+} 
 
 ?><?php get_header(); ?>
 
