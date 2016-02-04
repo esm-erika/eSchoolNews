@@ -894,6 +894,15 @@ if(function_exists("register_field_group"))
 						'default_value' => 0,
 					),
 					array (
+						'key' => 'field_56b273b4cb1a5',
+						'label' => 'Bullets',
+						'name' => 'bullets',
+						'type' => 'true_false',
+						'column_width' => '',
+						'message' => 'Add bullets?',
+						'default_value' => 0,
+					),
+					array (
 						'key' => 'field_5699247fc9304',
 						'label' => 'Ad',
 						'name' => 'ad_newsletter',
@@ -906,6 +915,7 @@ if(function_exists("register_field_group"))
 						'rows' => '',
 						'formatting' => 'html',
 					),
+
 				),
 				'row_min' => '',
 				'row_limit' => '',

@@ -321,7 +321,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<h6><a style="background-color: #830c0e;" href="http://www.DiscoveryEducation.com/Math" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
 					
 					<div class="row">
-						<div class="small-12 medium-6 columns">
+						<div class="small-12 medium-8 columns">
 							<small>Sponsored by:</small>
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/discovery_social-studies.png" alt="Discovery Education: Social Studies Techbook">
 						</div>
@@ -331,10 +331,10 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 				<div id="sidebar" class="small-12 medium-5 columns">
 					<div class="sidebar-bg">
-					<h3>Insights &amp; Resources</h3>
+					<h3><img class="left" style="max-width: 30px; margin-right: 5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lightbulb.png"> Insights &amp; Resources</h3>
 
 					<article>
-								<h5>Ed-Tech Pont of View: Transforming Social Studies Education for a Digital Era</h5>
+								<h5>Ed-Tech Point of View: <br>Transforming Social Studies Education for a Digital Era</h5>
 						<div class="row">
 							<div class="small-12 medium-6 columns">
 									
