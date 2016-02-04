@@ -349,7 +349,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 				<div id="sidebar" class="small-12 medium-5 columns">
 					<div class="sidebar-bg">
-					<h3><img class="left" style="max-width: 30px; margin-right: 5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lightbulb.png"> Insights &amp; Resources</h3>
+					<h3><img class="left" style="max-width: 30px; margin-right: 5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/lightbulb-math.png"> Insights &amp; Resources</h3>
 
 					<article>
 						<h5>Ed-Tech Point of View: <br>Transforming Math for a Digital Era</h5>
