@@ -1032,7 +1032,7 @@ table.columns .right-text-pad {
 
                             if( !empty($image) ): ?>
 
-                            <a href="<?php site_url(); ?>/publications/<?php echo $term_slug; ?>" style="color: #2ba6cb; text-decoration: none;">
+                            <a href="<?php echo site_url(); ?>/publications/<?php echo $term_slug; ?>" style="color: #2ba6cb; text-decoration: none;">
 
                             <img border="0" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%;" />
 
