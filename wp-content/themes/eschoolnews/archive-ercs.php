@@ -77,14 +77,14 @@ if (false === ($local_box_cache) ){
 							</a>
 						</h4>
 
-						<?php if(get_field('masthead_text')){
+						<?php if(get_field('alt_text')){
+
+							echo the_field('alt_text');
+
+						} elseif(get_field('masthead_text')) {
 
 							echo the_field('masthead_text');
 
-						} elseif(get_field('alt_text')) {
-
-							echo the_field('alt_text');
-							
 						} else {
 
 						} ?>
