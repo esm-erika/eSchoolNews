@@ -217,6 +217,18 @@ if(function_exists("register_field_group"))
 				'default_value' => 0,
 			),
 			array (
+				'key' => 'field_56ba71782d518',
+				'label' => 'ERC Alt Text',
+				'name' => 'alt_text',
+				'type' => 'textarea',
+				'instructions' => 'Alternate text to appear on ERC Main page.',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'html',
+			),
+			array (
 				'key' => 'field_56856a8710349',
 				'label' => 'Masthead Sidebar Item',
 				'name' => 'masthead_sidebar',

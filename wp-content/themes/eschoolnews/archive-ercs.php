@@ -81,6 +81,12 @@ if (false === ($local_box_cache) ){
 
 							echo the_field('masthead_text');
 
+						} elseif(get_field('alt_text')) {
+
+							echo the_field('alt_text');
+							
+						} else {
+
 						} ?>
 					</div>
 				</article>
