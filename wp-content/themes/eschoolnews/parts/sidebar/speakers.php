@@ -10,7 +10,7 @@
 
 			<?php while( have_rows('speakers') ): the_row(); 
 
-				// vars
+			// vars
 			$photo = get_sub_field('speaker_photo');
 			$firstname = get_sub_field('first_name');
 			$lastname = get_sub_field('last_name');
@@ -46,9 +46,9 @@
 	<div><em><?php echo $organization; ?></em></div>
 <?php endif; ?>
 <?php if( $bio): ?>
-	<a href="#" style="margin-top: .5rem;" class="button radius tiny" data-reveal-id="<?php echo $firstname; ?>-<?php echo $lastname; ?>">Speaker Bio</a>
+	<a href="#" style="margin-top: .5rem;" class="button radius tiny" data-reveal-id="speaker-<?php echo $lastname; ?>">Speaker Bio</a>
 
-	<div id="<?php echo $firstname; ?>-<?php echo $lastname; ?>" class="reveal-modal" data-reveal aria-labelledby="<?php echo $name; ?>" aria-hidden="true" role="dialog">
+	<div id="speaker-<?php echo $lastname; ?>" class="reveal-modal" data-reveal aria-labelledby="<?php echo $name; ?>" aria-hidden="true" role="dialog">
 		<div class="row">
 			<div class="small-12 medium-4 columns">
 				<?php if( $photo ): ?>	
