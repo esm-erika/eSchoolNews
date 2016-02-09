@@ -435,7 +435,7 @@ if (false === ($local_box_cache) ){
 
 							<?php if(get_field('sponsor_url')) { ?>
 
-							<a target="_blank" href="<?php the_field('sponsor_url') ?>">
+							<a target="_blank" href="<?php the_field('sponsor_url'); ?>">
 
 							<?php } ?>
 
