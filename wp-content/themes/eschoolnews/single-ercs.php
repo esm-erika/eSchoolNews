@@ -425,6 +425,7 @@ if (false === ($local_box_cache) ){
 				$term_id = $terms[0]->term_id;
 
 				$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+				$url = get_field('sponsor_url', $taxonomy . '_' . $term_id);
 				
 				if( !empty($image) ): ?>
 
@@ -433,15 +434,15 @@ if (false === ($local_box_cache) ){
 
 							<small>Sponsored By:</small><br>
 
-							<?php if(get_field('sponsor_url')) { ?>
+							<?php if( !empty($url)){ ?>
 
-							<a target="_blank" href="<?php the_field('sponsor_url'); ?>">
+							<a target="_blank" href="<?php echo $url; ?>">
 
 							<?php } ?>
 
 								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 							
-							<?php if(get_field('sponsor_url')) { 
+							<?php if( !empty($url)) { 
 								
 								echo '</a>';
 
