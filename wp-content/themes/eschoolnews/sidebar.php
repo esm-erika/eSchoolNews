@@ -65,8 +65,6 @@
 
 	<?php if(is_singular( array('webinars', 'events') )) {
 		get_template_part( 'parts/sidebar/speakers' );
-
-		echo 'TEST';
 	}
 
 	?>

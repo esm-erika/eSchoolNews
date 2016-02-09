@@ -892,10 +892,6 @@ table.columns .right-text-pad {
 
   <!-- This will appear as the preview text on email clients. -->
 
-  <span style="display: none !important;">
-    This is my preview text!
-  </span>
-
 
   <!-- Begin BODY of Email Template -->
 
@@ -1412,7 +1408,7 @@ table.columns .right-text-pad {
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td align="center">
                           <center style="width: 100%;">
-                            <p style="text-align:center;"><small>Contents ©2015 eSchool Media. All rights reserved.</small></p>
+                            <p style="text-align:center;"><small>Contents ©2016 eSchool Media. All rights reserved.</small></p>
                             <p style="text-align:center;"><a href="#" style="color: #2ba6cb; text-decoration: none;">Terms</a> | <a href="#" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | <a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=100" target="_blank" style="color: #2ba6cb; text-decoration: none;">Unsubscribe</a></p>
                           </center>
                         </td>
