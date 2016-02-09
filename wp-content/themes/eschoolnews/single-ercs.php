@@ -433,7 +433,20 @@ if (false === ($local_box_cache) ){
 
 							<small>Sponsored By:</small><br>
 
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<?php if(get_field('sponsor_url')) { ?>
+
+							<a target="_blank" href="<?php the_field('sponsor_url') ?>">
+
+							<?php } ?>
+
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							
+							<?php if(get_field('sponsor_url')) { 
+								
+								echo '</a>';
+
+							} ?>
+							
 
 						</div>
 
