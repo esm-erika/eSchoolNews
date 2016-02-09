@@ -23,7 +23,7 @@
      	<i class="fi-mail"></i>
      </a>
 
-     <!-- <a rel="nofollow" data-shared="" class="share-print" href="<?php the_permalink(); ?>?print" target="_blank" title="Click to print">
+     <a rel="nofollow" data-shared="" class="share-print" href="<?php the_permalink(); ?>?print" target="_blank" title="Click to print">
      	<i class="fi-print"></i>
-     </a> -->
+     </a> 
 </div>
