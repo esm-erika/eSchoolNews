@@ -1409,7 +1409,35 @@ table.columns .right-text-pad {
                         <td align="center">
                           <center style="width: 100%;">
                             <p style="text-align:center;"><small>Contents ©2016 eSchool Media. All rights reserved.</small></p>
-                            <p style="text-align:center;"><a href="#" style="color: #2ba6cb; text-decoration: none;">Terms</a> | <a href="#" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | <a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=100" target="_blank" style="color: #2ba6cb; text-decoration: none;">Unsubscribe</a></p>
+                            <p style="text-align:center;">
+                              <a href="#" style="color: #2ba6cb; text-decoration: none;">Terms</a> | 
+                              <a href="#" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | 
+                            
+                            <?php if( has_term('innovation-weekly', 'publications')) {
+
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=100" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+                            } elseif( has_term('eschool-news-today', 'publications')) {
+
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=101" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+
+                           } elseif( has_term('it-school-leadership', 'publications')) {
+
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=108" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+                          
+                           
+                           } elseif( has_term('digital-leap', 'publications')) {
+
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=107" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+                          } else {
+
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+                           ?>
+                              Unsubscribe</a>
+                            </p>
                           </center>
                         </td>
                         <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
