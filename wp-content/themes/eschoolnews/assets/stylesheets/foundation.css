@@ -9679,13 +9679,14 @@ body.page.collaboration .buttons-container, body.page-template-collaboration-nat
     margin-top: -30px;
     color: #4c4c4c; }
     body.page.collaboration .buttons-container .submit-button img, body.page-template-collaboration-nation .buttons-container .submit-button img {
-      max-width: 150px;
-      float: right; }
+      max-width: 150px; }
     body.page.collaboration .buttons-container .submit-button span, body.page-template-collaboration-nation .buttons-container .submit-button span {
       width: 100%;
       text-align: center;
       padding-top: 5px;
       display: block; }
+  body.page.collaboration .buttons-container .inside.submit-button, body.page-template-collaboration-nation .buttons-container .inside.submit-button {
+    width: 23%; }
   body.page.collaboration .buttons-container .menu-icon, body.page-template-collaboration-nation .buttons-container .menu-icon {
     width: 15%;
     text-align: center; }

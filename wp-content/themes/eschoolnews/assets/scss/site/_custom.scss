@@ -1696,7 +1696,7 @@ header {
 
     		img {
     			max-width: 150px;
-    			float: right;
+    			//float: right;
     			// margin: auto;
     		}
 
@@ -1706,6 +1706,11 @@ header {
     			padding-top: 5px;
     			display: block;
     		}
+		}
+
+		.inside.submit-button {
+			width: 23%;
+    		
 		}
 
 		.menu-icon {
