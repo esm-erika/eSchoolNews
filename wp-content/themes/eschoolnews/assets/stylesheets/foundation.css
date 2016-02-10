@@ -9569,16 +9569,15 @@ body.page.collaboration #recent-entries .video, body.page-template-collaboration
 body.page.collaboration #recent-entries .slick-prev:before, body.page.collaboration #recent-entries .slick-next:before, body.page-template-collaboration-nation #recent-entries .slick-prev:before, body.page-template-collaboration-nation #recent-entries .slick-next:before {
   color: #336699; }
 body.page.collaboration div.social, body.page-template-collaboration-nation div.social {
-  margin-left: 0.9375rem;
   line-height: 50px; }
   body.page.collaboration div.social a, body.page-template-collaboration-nation div.social a {
     color: #fff;
     font-size: 30px;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     display: inline-block;
-    border-radius: 2px;
+    border-radius: 50%;
     text-align: center; }
   body.page.collaboration div.social .twitter, body.page-template-collaboration-nation div.social .twitter {
     background: #00a9e0; }
