@@ -90,7 +90,7 @@
 		</a>
 		
 
-		<a href="<?php home_url(); ?>/collaboration/submission-form" class="submit-button right">
+		<a href="<?php home_url(); ?>/collaboration/submission-form" class="submit-button left">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
 		</a>
 	</div>
