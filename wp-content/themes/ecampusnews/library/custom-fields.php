@@ -977,6 +977,533 @@ register_field_group(array (
 		'menu_order' => 0,
 	));
 
+
+
+/*===================================================================================
+ * Contributor Fields
+ * =================================================================================*/
+
+register_field_group(array (
+		'id' => 'acf_contributor-fields',
+		'title' => 'Contributor Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_564baf3c67dd3',
+				'label' => 'Contributor Email',
+				'name' => 'Author Email',
+				'type' => 'email',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array (
+				'key' => 'field_564baf4f67dd4',
+				'label' => 'Contributor Bio',
+				'name' => 'contributor_bio',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_564cf8a667385',
+				'label' => 'Read More',
+				'name' => 'read_more',
+				'type' => 'text',
+				'instructions' => 'Link to EXTERNAL site where you can read more from this author.',
+				'default_value' => '',
+				'placeholder' => 'http://',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_567073b255c2f',
+				'label' => 'About Contributor Name Fields',
+				'name' => '',
+				'type' => 'message',
+				'message' => '<h2>About Contributor Name Fields</h2>
+	<p>There are 2 fields for contributor names below. BOTH fields work similarly. </p>
+	
+	<p>On the old eSN website, there were 2 fields for contributor names. In order to make sure names were being pulled in appropriately for older posts, we had to put both in here.</p>
+	
+	<strong>PLEASE NOTE: You do not have to put \'By\' in the field labeled \'Contributor Name\' you DO have to put it for the field labeled \'Byline\'. It is a carry over from the old website.</strong>',
+			),
+			array (
+				'key' => 'field_564baf2967dd2',
+				'label' => 'Contributor Name',
+				'name' => 'Alt Author Read More Name',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_567072a88c4b8',
+				'label' => 'Byline',
+				'name' => 'Byline',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+
+/*===================================================================================
+ * Events Custom Fields
+ * =================================================================================*/
+
+register_field_group(array (
+		'id' => 'acf_event-details',
+		'title' => 'Event Details',
+		'fields' => array (
+			array (
+				'key' => 'field_5609b4b842ef1',
+				'label' => 'Event Date',
+				'name' => 'event_date',
+				'type' => 'date_picker',
+				'date_format' => 'yymmdd',
+				'display_format' => 'MM d, yy',
+				'first_day' => 1,
+			),
+			array (
+				'key' => 'field_5609b5d742ef2',
+				'label' => 'Event Time',
+				'name' => 'event_time',
+				'type' => 'text',
+				'instructions' => 'Place the time in the format hour:min pm EST / hour:min am PST',
+				'default_value' => '',
+				'placeholder' => '1:00 pm EST / 10:00 am PST',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5609b65b42ef3',
+				'label' => 'Registration Link',
+				'name' => 'registration_link',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'webinars',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'events',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_event-information',
+		'title' => 'Event Information',
+		'fields' => array (
+			array (
+				'key' => 'field_561d1b528c5af',
+				'label' => 'About the Event',
+				'name' => 'event_information',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'basic',
+				'media_upload' => 'no',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'webinars',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'events',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+
+/*===================================================================================
+ * Post Options Custom Fields
+ * =================================================================================*/
+
+	register_field_group(array (
+		'id' => 'acf_post-options',
+		'title' => 'Post Options',
+		'fields' => array (
+			array (
+				'key' => 'field_562e9ebfd0bb9',
+				'label' => 'Featured in Category?',
+				'name' => 'featured',
+				'type' => 'true_false',
+				'message' => 'Is this a featured story?',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_563111d897942',
+				'label' => 'Remove Featured Image?',
+				'name' => 'remove_featured_image',
+				'type' => 'true_false',
+				'message' => 'Yes, remove the featured image.',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_56420de718113',
+				'label' => 'Display on Front Page?',
+				'name' => 'front_page',
+				'type' => 'true_false',
+				'message' => 'Yes, display on the front page.',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_566f5782b7526',
+				'label' => 'Remove Author?',
+				'name' => 'remove_author',
+				'type' => 'true_false',
+				'message' => 'Remove the Author information from the article.',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+
+/*===================================================================================
+ * Webinar Custom Fields
+ * =================================================================================*/
+
+
+register_field_group(array (
+		'id' => 'acf_webinar-sponsor',
+		'title' => 'Webinar Sponsor',
+		'fields' => array (
+			array (
+				'key' => 'field_561d1de171998',
+				'label' => 'Sponsored By',
+				'name' => 'sponsored_by',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'webinars',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_youtube-embed',
+		'title' => 'YouTube Embed',
+		'fields' => array (
+			array (
+				'key' => 'field_562ea5eb109bc',
+				'label' => 'YouTube Embed Instructions',
+				'name' => '',
+				'type' => 'message',
+				'message' => 'Copy and paste the end of the YouTube Share link to embed:
+	<br/>
+	Ex: https://youtu.be/<strong>a-uNcLJ7PgI</strong>
+	<br/>
+	Only need: <strong>a-uNcLJ7PgI</strong>',
+			),
+			array (
+				'key' => 'field_562e6c857412a',
+				'label' => 'YouTube Embed',
+				'name' => 'youtube_embed',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'webinars',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+
+/*===================================================================================
+ * Misc Custom Fields
+ * =================================================================================*/
+
+register_field_group(array (
+		'id' => 'acf_sponsor-image',
+		'title' => 'Sponsor Image',
+		'fields' => array (
+			array (
+				'key' => 'field_5627bf113e202',
+				'label' => 'Sponsor Image',
+				'name' => 'sponsor_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'ef_taxonomy',
+					'operator' => '==',
+					'value' => 'sponsor',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_top-stories-layout',
+		'title' => 'Top Stories Layout',
+		'fields' => array (
+			array (
+				'key' => 'field_5613da8b36533',
+				'label' => 'Layout Select',
+				'name' => 'layout_select',
+				'type' => 'image_select',
+				'choices' => array (
+					'layout-2x2_halfpage' => '2x2 Articles, Halfpage Ad',
+					'layout-2x2_box_ecn' => '2x2 Articles, Box Ad, eCN Article',
+					'layout-1x3_noad' => '1x3 Articles, No Ad',
+				),
+				'default_value' => '',
+				'multiple' => 0,
+				'image_path' => 'http://localhost:8888/eschoolnews/wp-content/themes/eschoolnews/assets/images/',
+				'image_extension' => 'png',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'the_content',
+				2 => 'excerpt',
+				3 => 'custom_fields',
+				4 => 'discussion',
+				5 => 'comments',
+				6 => 'revisions',
+				7 => 'slug',
+				8 => 'author',
+				9 => 'format',
+				10 => 'featured_image',
+				11 => 'categories',
+				12 => 'tags',
+				13 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_upload-file',
+		'title' => 'Upload File',
+		'fields' => array (
+			array (
+				'key' => 'field_5621461e0a54a',
+				'label' => 'Upload File',
+				'name' => 'download_file',
+				'type' => 'file',
+				'instructions' => 'Upload PDF here.',
+				'save_format' => 'object',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_56689ae3f89d5',
+				'label' => 'Link to 3rd Party File',
+				'name' => 'WP URL',
+				'type' => 'text',
+				'instructions' => 'Link to file hosted on another server. You must include \'http://\'.',
+				'default_value' => '',
+				'placeholder' => 'http://',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_56746d0cca33a',
+				'label' => 'Gravity Form used to Download (Number)',
+				'name' => 'WP Form Number',
+				'type' => 'number',
+				'instructions' => 'A value greater than 0 in this field will prevent a person from directly access the Whitepaper.',
+				'default_value' => 0,
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'special-reports',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'whitepapers',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+
 }
 
 ?>
