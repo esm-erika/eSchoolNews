@@ -9584,16 +9584,6 @@ body.page.collaboration div.social, body.page-template-collaboration-nation div.
     background: #00a9e0; }
   body.page.collaboration div.social .facebook, body.page-template-collaboration-nation div.social .facebook {
     background: #1f58a0; }
-body.page.collaboration a.twitter, body.page-template-collaboration-nation a.twitter {
-  color: #fff;
-  font-size: 24px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  display: inline-block;
-  border-radius: 2px;
-  text-align: center;
-  background: #00a9e0; }
 body.page.collaboration nav.top-bar, body.page-template-collaboration-nation nav.top-bar {
   position: relative;
   padding: 5px 0;
