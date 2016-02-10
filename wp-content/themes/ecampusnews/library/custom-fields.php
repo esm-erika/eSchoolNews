@@ -1396,7 +1396,7 @@ register_field_group(array (
 				),
 				'default_value' => '',
 				'multiple' => 0,
-				'image_path' => 'http://localhost:8888/eschoolnews/wp-content/themes/eschoolnews/assets/images/',
+				'image_path' => 'http://www.ecampusnews.com/wp-content/themes/ecampusnews/assets/images/',
 				'image_extension' => 'png',
 			),
 		),
