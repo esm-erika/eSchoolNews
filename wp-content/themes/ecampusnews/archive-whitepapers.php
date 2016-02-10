@@ -31,67 +31,67 @@ get_header();
 <script type="text/javascript">
 jQuery.noConflict()(function ($) { // this was missing for me
 $(document).ready(function(){
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
+		$("h4#EngagementTitle").hide();
+		$("h4#DataTitle").hide();
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
         $("div.row.all").show();
 		$("h4#AllTitle").show();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
+		$("h4#EngagementTitle").hide();
+		$("h4#DataTitle").hide();
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();		
 		
     });
 
-	$("#curriculum").click(function(){
-		$("div.row.digital-whitepapers").hide();
+	$("#engagement").click(function(){
+		$("div.row.data-analytics-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-        $("div.row.curriculum-whitepapers").show();
+		$("div.row.online-mobile-whitepapers").hide();
+        $("div.row.engagement-retention-whitepapers").show();
 		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").show();
-		$("h4#DigitalTitle").hide();
+		$("h4#EngagementTitle").show();
+		$("h4#DataTitle").hide();
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();		
 
     });
 
-	$("#digital").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
+	$("#data").click(function(){
+        $("div.row.engagement-retention-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.digital-whitepapers").show();
+		$("div.row.online-mobile-whitepapers").hide();
+		$("div.row.data-analytics-whitepapers").show();
 		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").show();
+		$("h4#EngagementTitle").hide();
+		$("h4#DataTitle").show();
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();		
 
     });
 
 	$("#mobile").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
+        $("div.row.engagement-retention-whitepapers").hide();
+		$("div.row.data-analytics-whitepapers").hide();
 		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").show();
+		$("div.row.online-mobile-whitepapers").show();
 		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
+		$("h4#EngagementTitle").hide();
+		$("h4#DataTitle").hide();
 		$("h4#MobileTitle").show();
 		$("h4#TechnologiesTitle").hide();		
 
     });	
     
 	$("#technologies").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
+        $("div.row.engagement-retention-whitepapers").hide();
+		$("div.row.data-analytics-whitepapers").hide();
+		$("div.row.online-mobile-whitepapers").hide();
 		$("div.row.technologies-whitepapers").show();
 		$("h4#AllTitle").hide();
-		$("h4#CurriculumTitle").hide();
-		$("h4#DigitalTitle").hide();
+		$("h4#EngagementTitle").hide();
+		$("h4#DataTitle").hide();
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").show();		
 
@@ -104,9 +104,9 @@ $(document).ready(function(){
 		
 		<ul class="stack-for-small button-group radius">
 			<li><a href="#menu" class="button" id="all">All White Papers</a></li>
-			<li><a href="#menu" class="button" id="curriculum">Curriculum</a></li>
-			<li><a href="#menu" class="button" id="digital">Digital</a></li>
-			<li><a href="#menu" class="button" id="mobile">Mobile &amp; Online Learning</a></li>
+			<li><a href="#menu" class="button" id="data">Data &amp; Analytics</a></li>
+			<li><a href="#menu" class="button" id="engagement">Engagement &amp; Retention</a></li>
+			<li><a href="#menu" class="button" id="mobile">Online &amp; Mobile Learning</a></li>
 			<li><a href="#menu" class="button" id="technologies">Technologies</a></li>
 		</ul>
 
@@ -126,9 +126,9 @@ $(document).ready(function(){
 <section <?PHP // role="tabpanel" aria-hidden="false" class="content active" id="panel1" ?>>
 		 
 		    <h4 id="AllTitle">All White Papers</h4>
-		    <h4 id="CurriculumTitle" style="display:none;">Curriculum</h4>
-		    <h4 id="DigitalTitle" style="display:none;">Digital</h4>
-		    <h4 id="MobileTitle" style="display:none;">Mobile &amp; Online Learning</h4>
+		    <h4 id="DataTitle" style="display:none;">Data &amp; Analytics</h4>
+		    <h4 id="EngagementTitle" style="display:none;">Engagement &amp; Retention</h4>
+            <h4 id="MobileTitle" style="display:none;">Online &amp; Mobile Learning</h4>
             <h4 id="TechnologiesTitle" style="display:none;">Technologies</h4>
 
 		    <br/>
