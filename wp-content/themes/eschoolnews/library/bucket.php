@@ -256,4 +256,15 @@ function my_custom_rss_render2() {
 	get_template_part( 'feed', 'educationdive' );
 }
 
+// display featured post thumbnails in RSS feeds
+function WPGood_rss_thumbs( $content ) {
+    global $post;
+    if( has_post_thumbnail( $post->ID ) ) {
+        $content = '<figure>' . get_the_post_thumbnail( $post->ID, 'large' ) . '</figure>' . $content;
+    }
+    return $content;
+}
+add_filter( 'the_excerpt_rss', 'WPGood_rss_thumbs' );
+add_filter( 'the_content_feed', 'WPGood_rss_thumbs' );
+
 ?>
