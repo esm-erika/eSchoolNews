@@ -61,8 +61,8 @@ global $cat;
 					<?php collaboration_nation(); ?>
 
 					<div class="social left">
-						<a class="twitter" href="#"><i class="fi-social-twitter"></i></a>
-						<a class="facebook" target="new" href="http://www.facebook.com/cdwgcollaboration/"><i class="fi-social-facebook"></i></a>
+						<a class="twitter" target="_blank" href="https://twitter.com/search?q=%23k12techsuccess"><i class="fi-social-twitter"></i></a>
+						<a class="facebook" target="_blank" href="http://www.facebook.com/cdwgcollaboration/"><i class="fi-social-facebook"></i></a>
 					</div>
 
 					<div class="sponsored-by text-left right">
@@ -126,7 +126,7 @@ global $cat;
 			
 		</ul>
 
-		<a href="<?php home_url(); ?>/collaboration/submission-form/" class="submit-button right">
+		<a href="<?php home_url(); ?>/collaboration/submission-form/" class="submit-button left">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
 			<span class="hide-for-medium-only">ENTRY FORM</span>
 		</a>
@@ -219,7 +219,7 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 		</div>
 
 		<div class="small-12 medium-4 columns twitter">
-			<h4>Twitter <a href="#" class="twitter"><i class="fi-social-twitter"></i></a></h4>
+			<h4>Twitter <a target="_blank" href="https://twitter.com/search?q=%23k12techsuccess" class="twitter"><i class="fi-social-twitter"></i></a></h4>
 			<hr>
 			<p align="center">
                       <a class="twitter-timeline" data-border-color="#cc0000" width="302" height="295"   href="https://twitter.com/search?q=%23k12techsuccess%20OR%20from%3A%40NoApp4Pedagogy%20OR%20from%3A%40CDWNews%20OR%20from%3A%40k12cto" data-widget-id="572504242909229056">Tweets about #k12techsuccess OR from:@NoApp4Pedagogy OR from:@CDWNews OR from:@k12cto</a>

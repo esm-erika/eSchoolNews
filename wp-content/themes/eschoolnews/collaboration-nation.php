@@ -52,8 +52,8 @@
 					<?php collaboration_nation(); ?>
 
 					<div class="social left">
-						<a class="twitter" href="#"><i class="fi-social-twitter"></i></a>
-						<a class="facebook" href="#"><i class="fi-social-facebook"></i></a>
+						<a class="twitter" target="_blank" href="https://twitter.com/search?q=%23k12techsuccess"><i class="fi-social-twitter"></i></a>
+						<a class="facebook" target="_blank" href="http://www.facebook.com/cdwgcollaboration/"><i class="fi-social-facebook"></i></a>
 					</div>
 
 					<div class="sponsored-by text-left right">
