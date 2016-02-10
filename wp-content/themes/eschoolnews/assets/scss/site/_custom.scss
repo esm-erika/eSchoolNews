@@ -1491,23 +1491,23 @@ section.home {
 }
 
 div.social {
-	margin-left: 0.9375rem;
+	//margin-left: 0.9375rem;
 	line-height: 50px;
 
 	a {
 		color: #fff;
 		font-size: 30px;
-		width: 36px;
-		height: 36px;
-		line-height: 36px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
 		display: inline-block;
-		border-radius: 2px;
+		border-radius: 50%;
 		text-align: center;
 
 	}
 
 	.twitter {
-		background: #00a9e0;
+		background: #00a9e0; 
 	}
 
 	.facebook {
@@ -1696,7 +1696,7 @@ header {
 
     		img {
     			max-width: 150px;
-    			float: right;
+    			//float: right;
     			// margin: auto;
     		}
 
@@ -1706,6 +1706,11 @@ header {
     			padding-top: 5px;
     			display: block;
     		}
+		}
+
+		.inside.submit-button {
+			width: 23%;
+    		
 		}
 
 		.menu-icon {
