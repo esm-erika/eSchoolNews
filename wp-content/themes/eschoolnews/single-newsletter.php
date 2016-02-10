@@ -1435,8 +1435,10 @@ table.columns .right-text-pad {
 
                               echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
 
-                           ?>
+                          } ?>
                               Unsubscribe</a>
+
+
                             </p>
                           </center>
                         </td>
