@@ -35,7 +35,7 @@ if (false === ($local_box_cache) ){
 
 
 <!-- Row for main content area -->
-	<div class="small-12 medium-8 columns" role="main">
+	<div class="small-12 medium-12 columns" role="main">
 
 		   
 
