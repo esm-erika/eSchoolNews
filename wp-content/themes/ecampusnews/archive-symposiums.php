@@ -82,10 +82,13 @@ if (false === ($local_box_cache) ){
 
 				
 							<div class="small-12 medium-6 columns">
+								<div class="panel">
 
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
 								<?php the_excerpt(); ?>
+
+								</div>
 
 								
 							</div>
