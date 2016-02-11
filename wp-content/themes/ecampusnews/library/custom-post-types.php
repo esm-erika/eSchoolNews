@@ -337,9 +337,9 @@ function symposium_register() {
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'symposium' , $args );
+	register_post_type( 'symposiums' , $args );
 
-	register_taxonomy("subjects", array("symposium"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true, 'show_in_menu' => false));
+	register_taxonomy("subjects", array("symposiums"), array("hierarchical" => true, "label" => "Symposium Subjects", "singular_label" => "Symposium Subject", "rewrite" => true, 'show_in_menu' => false));
 
 }
 
