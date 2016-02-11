@@ -66,7 +66,7 @@ if ( have_posts() ) {
                     	
 						<header>
                     		<h3><?php the_title(); ?></h3>
-                    		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
+                    		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
                     	</header>
 
@@ -173,6 +173,8 @@ if ( have_posts() ) {
 							<?php the_title();?>
 							</a>
 						</h4>
+						<div class="posted-on"><?php the_time('F j, Y'); ?></div>
+
 
 						<?php if(get_field('masthead_text')){
 
