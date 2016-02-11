@@ -84,7 +84,10 @@ if (false === ($local_box_cache) ){
 							<div class="small-12 medium-6 columns">
 								<div class="panel">
 
-								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<?php if(get_field('symposium_subhead')){ ?>
+									<h5><?php the_field('symposium_subhead'); ?></h5>
+								<?php } ?>
 
 								<?php the_excerpt(); ?>
 
