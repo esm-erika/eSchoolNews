@@ -52,11 +52,9 @@ if (false === ($local_box_cache) ){
 				if( !empty($image) ): ?>
 
 
-				<div class="row">
-					<div class="small-12 columns">
+			
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					</div>
-				</div>
+					<br/>
 
 				<?php endif; ?>
 
