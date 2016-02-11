@@ -301,15 +301,15 @@ function newsletter_items_register() {
 
 
 /*===================================================================================
- * Collaboration Nation
+ * Symposium 
  * =================================================================================*/
 
-add_action('init', 'collaboration_register');
+add_action('init', 'symposium_register');
  
-function collaboration_register() {
+function symposium_register() {
  
 	$labels = array(
-		'name' => _x('Collaboration Nation', 'post type general name'),
+		'name' => _x('Symposium', 'post type general name'),
 		'singular_name' => _x('Entry', 'post type singular name'),
 		'add_new' => _x('Add New', 'newsletter issue'),
 		'add_new_item' => __('Add New Entry'),
@@ -328,7 +328,7 @@ function collaboration_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => 'dashicons-awards',
+		'menu_icon' => 'dashicons-networking',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
@@ -337,26 +337,10 @@ function collaboration_register() {
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
-	register_post_type( 'collabnation' , $args );
+	register_post_type( 'symposium' , $args );
 
-	register_taxonomy("years", array("collabnation"), array("hierarchical" => true, "label" => "Years", "singular_label" => "Year", "rewrite" => true, 'show_in_menu' => false));
+	register_taxonomy("subjects", array("symposium"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true, 'show_in_menu' => false));
 
-}
-
-add_action( 'init', 'judges_register' );
-
-function judges_register() {
-        register_post_type( 'judges', array(
-                'labels' => array(
-                        'name' => 'Judges',
-                        'singular_name' => 'Judge',
-                ),
-                'public' => true,
-                'show_ui' => true,
-                'show_in_menu' => 'edit.php?post_type=collabnation',
-                'supports' => array( 'title' ,'thumbnail', 'editor' ),
-                'taxonomies' => array('years'),
-        ) );
 }
 
 ?>
