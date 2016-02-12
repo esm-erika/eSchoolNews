@@ -128,8 +128,8 @@ if (false === ($local_box_cache) ){
 
 			
 
-		<?php endif; endwhile; ?>
-				<?php wp_reset_postdata(); ?>
+		<?php endwhile; ?>
+				<?php wp_reset_postdata(); endif; ?>
 
 
 		</div>
