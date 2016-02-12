@@ -10,6 +10,9 @@
 
 <?php
 
+$displayarray = array();
+
+
   $taxonomy = 'sponsor';
   $taxonomy_terms = get_terms( $taxonomy, array(
       'hide_empty' => 0,
@@ -45,7 +48,6 @@
 
      <?php   
    $terms = get_the_terms( $post->ID , 'sponsor' );
-   ksort($terms);
    
    foreach($terms as $term){ 
 
@@ -53,24 +55,24 @@
    $image = get_field('sponsor_image', 'sponsor_'.$term->term_id);
    
     if (!in_array($termlink, $shownlist)) { ?>
-       
-    <li data-equalizer-watch>
-     <a class="single-library-cat" href="<?php echo $termlink; ?>">
-      <!-- <img src="<?php echo $image['url']; ?>" />  -->
-      <?php echo $term->name; ?>
-     </a>
-    </li>
-    
-    <?php 
-    
-  $shownlist[] = $termlink;
 
+<?php 
+
+ $companydata = '<!-- '.$term->name.' --><li data-equalizer-watch><a class="single-library-cat" href="'.$termlink.'">'.$term->name.'</a></li>';
+
+ array_push($displayarray, $companydata);     
+ $shownlist[] = $termlink;
     }
-    
    } ?>   
 
 
-    <?php endwhile; wp_reset_postdata(); ?>
+    <?php endwhile; wp_reset_postdata(); 
+	asort($displayarray);	
+foreach ($displayarray as $key) {
+    echo $key;
+}	
+	
+	?>
     </ul>
   <?php endif; ?>
 
