@@ -173,7 +173,7 @@ echo $local_box_cache;
 				$subjects = new WP_Query(array(
 					'post_type' => 'symposiums',
 					'posts_per_page' => 10,
-					'offset' => '1'
+					'offset' => 1
 					));   
 
 					?>
