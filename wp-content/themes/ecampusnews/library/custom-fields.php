@@ -102,7 +102,7 @@ if(function_exists("register_field_group"))
 					0 => 'post',
 				),
 				'taxonomy' => array (
-					0 => 'category:84',
+					0 => 'category:7899',
 				),
 				'filters' => array (
 					0 => 'search',
