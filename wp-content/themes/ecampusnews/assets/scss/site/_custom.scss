@@ -5,7 +5,7 @@
 
 // Text Styles
 a:link, a:visited {
-	color: #336699;
+	color: #00703c;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -287,7 +287,7 @@ nav.tab-bar .tab-bar-section.middle {
 	}
 
 	.center-menu li:not(.has-form) a:not(.button):hover {
-		color: #336699;
+		color: #00703c;
 	}
 
 	.center-menu li.active:not(.has-form) a:hover:not(.button) {
@@ -469,7 +469,7 @@ a.search {
 // Buttons
 
 button, .button {
-	background-color: #336699;
+	background-color: #00703c;
 	color: #fff !important;
 	outline: 0;
 }
@@ -491,7 +491,7 @@ a.button.readmore {
 	// border-radius: 100%;
 	// padding: 0.875rem 0.9375rem;
  //    font-size: 0.8125rem;
- //    background-color: #336699;
+ //    background-color: #00703c;
  //    color: #fff !important;
  //    outline: 0;
  //    display: inline-block;
@@ -1102,7 +1102,7 @@ footer.container > div {
 		padding: 20px 0 0 0;
 
 		h5 {
-			color: #336699;
+			color: #00703c;
 		}
 	}
 
@@ -1143,7 +1143,7 @@ footer.panel {
 
 footer {
 
-	background-color: #336699;
+	background-color: #00703c;
 	color: #fff;
 	font-size: 90%;
 
@@ -1485,8 +1485,9 @@ section.home {
 }
 
 	.slick-prev:before, .slick-next:before {
-		color: #336699;
+		color: #00703c;
 	}
+	
 
 }
 
