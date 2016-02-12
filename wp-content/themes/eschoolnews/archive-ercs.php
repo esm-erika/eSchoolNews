@@ -142,6 +142,7 @@ if (false === ($local_box_cache) ){
 
 			<!-- the loop -->
 			<?php 
+			
 			$shownlist = array();
 			while ( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
 

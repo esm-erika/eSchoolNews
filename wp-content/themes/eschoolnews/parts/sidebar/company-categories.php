@@ -19,7 +19,7 @@
   $sponsors = new WP_Query(array(
     'post_type' => 'whitepapers',
     'posts_per_page' => -1,
-    'orderby' => 'name',
+    'orderby' => 'title',
     'order' => 'ASC',
     // 'meta_query' => array(
     //   array(
@@ -45,7 +45,7 @@
 
      <?php   
    $terms = get_the_terms( $post->ID , 'sponsor' );
-   ksort($terms);
+   //ksort($terms);
    
    foreach($terms as $term){ 
 
