@@ -100,6 +100,37 @@ if (false === ($local_box_cache) ){
 
 									</article>
 
+			
+			<?php
+
+				$taxonomy = 'subjects';
+ 				$terms = get_the_terms( $post->ID, $taxonomy);
+   				$term_name = $terms[0]->name;
+
+				$subjects = new WP_Query(array(
+					'post_type' => 'symposiums',
+					'posts_per_page' => -1,
+					'offset' => 1
+					));   
+
+					?>
+
+					<h4>Commentary on <?php echo $term_name; ?></h4>
+
+					<?php if ( $subjects->have_posts() ) : ?>
+
+					<?php // The Loop
+				 while ( $subjects->have_posts() ) :
+					$subjects->the_post(); ?>
+
+						
+						<h3><?php the_title(); ?></h3>
+
+			
+
+		<?php endif; endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
 
 		</div>
 
@@ -129,8 +160,6 @@ echo $local_box_cache;
 
 			<h4>View Our Past Symposiums</h4>
 
-			<br/>
-
 			<ul class="small-block-grid-1 medium-block-grid-2">
 
 				<?php
@@ -144,6 +173,7 @@ echo $local_box_cache;
 				$subjects = new WP_Query(array(
 					'post_type' => 'symposiums',
 					'posts_per_page' => -1,
+					'offset' => 1
 					));   
 
 					?>
