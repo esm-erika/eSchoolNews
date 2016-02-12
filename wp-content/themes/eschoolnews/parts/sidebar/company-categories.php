@@ -14,7 +14,7 @@
   $taxonomy_terms = get_terms( $taxonomy, array(
       'hide_empty' => 0,
       'fields' => 'ids',
-      'orderby' => 'name'
+      //'orderby' => 'name'
   ) );
 
   $sponsors = new WP_Query(array(
@@ -35,11 +35,13 @@
       $shownlist = array();
       while ( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
 
-      <?php //the_title(); ?>
-
      <?php   
    $terms = get_the_terms( $post->ID , 'sponsor' );
    //ksort($terms);
+
+  echo '<pre>';
+  print_r($terms);
+  echo '</pre>'; 
    
    foreach($terms as $term){ 
 
@@ -51,7 +53,12 @@
     <li data-equalizer-watch>
      <a class="single-library-cat" href="<?php echo $termlink; ?>">
       <!-- <img src="<?php echo $image['url']; ?>" />  -->
-      <?php echo $term->name; ?>
+      <?php 
+
+        echo $term->name; 
+
+
+      ?>
      </a>
     </li>
     
