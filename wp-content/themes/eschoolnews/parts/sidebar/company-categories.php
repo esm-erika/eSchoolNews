@@ -1,12 +1,12 @@
 <?php if ( is_tax('company_categories') ) {
-	echo '<div class="text-center">';
-	echo '<a class="button" href="' . site_url('/') . 'whitepapers">&laquo; Back to All White Papers</a>';
-	echo '</div>';
+  echo '<div class="text-center">';
+  echo '<a class="button" href="' . site_url('/') . 'whitepapers">&laquo; Back to All White Papers</a>';
+  echo '</div>';
 }?>
 
 <article class="company-categories">
 
-	<h4>White Papers By Company</h4>
+  <h4>White Papers By Company</h4>
 
 <?php
 
@@ -44,8 +44,6 @@ $displayarray = array();
       $shownlist = array();
       while ( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
 
-      <?php //the_title(); ?>
-
      <?php   
    $terms = get_the_terms( $post->ID , 'sponsor' );
    
@@ -67,12 +65,12 @@ $displayarray = array();
 
 
     <?php endwhile; wp_reset_postdata(); 
-	asort($displayarray);	
+  asort($displayarray); 
 foreach ($displayarray as $key) {
     echo $key;
-}	
-	
-	?>
+} 
+  
+  ?>
     </ul>
   <?php endif; ?>
 
