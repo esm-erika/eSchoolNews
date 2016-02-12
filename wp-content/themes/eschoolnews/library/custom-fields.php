@@ -914,6 +914,7 @@ if(function_exists("register_field_group"))
 						'message' => 'Add bullets?',
 						'default_value' => 0,
 					),
+					
 					array (
 						'key' => 'field_5699247fc9304',
 						'label' => 'Ad',
@@ -975,6 +976,39 @@ register_field_group(array (
 					'param' => 'ef_taxonomy',
 					'operator' => '==',
 					'value' => 'publications',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+register_field_group(array (
+		'id' => 'acf_current-issue-banner',
+		'title' => 'Current Issue Banner',
+		'fields' => array (
+			array (
+				'key' => 'field_56be19bd0b34d',
+				'label' => 'Current Issue',
+				'name' => 'current_issue',
+				'type' => 'true_false',
+				'message' => 'Include current issue banner?',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'newsletter',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
