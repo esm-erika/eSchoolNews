@@ -915,6 +915,14 @@ if(function_exists("register_field_group"))
 						'default_value' => 0,
 					),
 					array (
+						'key' => 'field_56be156740343',
+						'label' => 'Current Issue ',
+						'name' => 'current_issue',
+						'type' => 'true_false',
+						'message' => 'Include current issue banner?',
+						'default_value' => 0,
+					),
+					array (
 						'key' => 'field_5699247fc9304',
 						'label' => 'Ad',
 						'name' => 'ad_newsletter',
