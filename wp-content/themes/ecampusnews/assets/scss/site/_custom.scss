@@ -131,7 +131,7 @@ span.flag a {
 	border-style: solid;
 	background-color: #f2f2f2;
 	border-color: #ccc;
-	color: #369;
+	color: #00703c;
 }
 
 span.tag a, .related-tags a {
@@ -144,8 +144,8 @@ span.tag a, .related-tags a {
 	line-height: 1;
 		border-width: 1px;
 		border-style: solid;
-		background-color: #369;
-	border-color: #369;
+		background-color: #00703c;
+	border-color: #00703c;
 	margin-right: 1px;
 	margin-bottom: 1px;
 	color: #fff;
@@ -195,8 +195,8 @@ span.tag a, .related-tags a {
 			line-height: 1;
 				border-width: 1px;
 				border-style: solid;
-				background-color: #369;
-			border-color: #369;
+				background-color: #00703c;
+			border-color: #00703c;
 			color: #fff;
 				}
 	}
@@ -309,7 +309,7 @@ nav.tab-bar .tab-bar-section.middle {
 
 		li:not(.has-form):not(.active)>a:not(.button):hover {
 			color: #fff;
-			background-color: #369;
+			background-color: #00703c;
 		}
 
 		li.active:not(.has-form) a:not(.button) {
@@ -484,7 +484,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 a.button.readmore {
 	background: transparent;
-	color: #369 !important;
+	color: #00703c !important;
 }
 
 #post-pagination a span.numbers {
@@ -580,7 +580,7 @@ p.login-submit, p.login-remember {
 }
 
 .tabs dd>a:hover, .tabs .tab-title>a:hover {
-	background-color: #369;
+	background-color: #00703c;
 	color: #fff;
 }
 
@@ -711,7 +711,7 @@ article {
 		border-style: solid;
 		background-color: #f2f2f2;
 		border-color: #ccc;
-		color: #369;
+		color: #00703c;
 		float: left;
 	}
 
@@ -1487,7 +1487,7 @@ section.home {
 	.slick-prev:before, .slick-next:before {
 		color: #00703c;
 	}
-	
+
 
 }
 

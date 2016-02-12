@@ -8810,7 +8810,7 @@ span.flag a {
   border-style: solid;
   background-color: #f2f2f2;
   border-color: #ccc;
-  color: #369; }
+  color: #00703c; }
 
 span.tag a, .related-tags a {
   padding: 4px 5px;
@@ -8822,8 +8822,8 @@ span.tag a, .related-tags a {
   line-height: 1;
   border-width: 1px;
   border-style: solid;
-  background-color: #369;
-  border-color: #369;
+  background-color: #00703c;
+  border-color: #00703c;
   margin-right: 1px;
   margin-bottom: 1px;
   color: #fff; }
@@ -8851,8 +8851,8 @@ span.tag a, .related-tags a {
   line-height: 1;
   border-width: 1px;
   border-style: solid;
-  background-color: #369;
-  border-color: #369;
+  background-color: #00703c;
+  border-color: #00703c;
   color: #fff; }
 
 nav.tab-bar .tab-bar-section.middle .title {
@@ -8912,7 +8912,7 @@ nav.tab-bar .tab-bar-section.middle .title {
     border-bottom: 1px solid #fff; }
   .top-bar-section .center-menu .dropdown li:not(.has-form):not(.active) > a:not(.button):hover {
     color: #fff;
-    background-color: #369; }
+    background-color: #00703c; }
   .top-bar-section .center-menu .dropdown li.active:not(.has-form) a:not(.button) {
     text-transform: none;
     color: #fff;
@@ -9023,7 +9023,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 a.button.readmore {
   background: transparent;
-  color: #369 !important; }
+  color: #00703c !important; }
 
 img.thumb {
   margin: 0 0 0.25rem 0; }
@@ -9081,7 +9081,7 @@ p.login-submit, p.login-remember {
   color: #fff; }
 
 .tabs dd > a:hover, .tabs .tab-title > a:hover {
-  background-color: #369;
+  background-color: #00703c;
   color: #fff; }
 
 .tabs dd > a, .tabs .tab-title > a {
@@ -9155,7 +9155,7 @@ article .date {
   border-style: solid;
   background-color: #f2f2f2;
   border-color: #ccc;
-  color: #369;
+  color: #00703c;
   float: left; }
 article .small-caps {
   text-transform: uppercase;
