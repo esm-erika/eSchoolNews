@@ -13,21 +13,15 @@
   $taxonomy = 'sponsor';
   $taxonomy_terms = get_terms( $taxonomy, array(
       'hide_empty' => 0,
-      'fields' => 'ids'
+      'fields' => 'ids',
+      'orderby' => 'name'
   ) );
 
   $sponsors = new WP_Query(array(
     'post_type' => 'whitepapers',
     'posts_per_page' => -1,
-    'orderby' => 'title',
-    'order' => 'ASC',
-    // 'meta_query' => array(
-    //   array(
-    //     'key' => 'erc_status',
-    //     'value' => '1',
-    //     'compare' => '=='
-    //     )
-    //   ),
+    //'orderby' => 'title',
+    //'order' => 'ASC',
     ));   
 
   ?>
