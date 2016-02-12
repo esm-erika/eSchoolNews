@@ -54,7 +54,7 @@ if (false === ($local_box_cache) ){
 
 			
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					<br/>
+					<br><br>
 
 				<?php endif; ?>
 
@@ -130,6 +130,64 @@ echo $local_box_cache;
 			<h4>View Our Past Symposiums</h4>
 
 			<br/>
+
+			<ul class="small-block-grid-1 medium-block-grid-2">
+
+				<?php
+
+				$taxonomy = 'subjects';
+				$taxonomy_terms = get_terms( $taxonomy, array(
+					'hide_empty' => 0,
+					'fields' => 'ids'
+					) );
+
+				$subjects = new WP_Query(array(
+					'post_type' => 'symposiums',
+					'posts_per_page' => -1,
+					));   
+
+					?>
+
+					<?php if ( $subjects->have_posts() ) : ?>
+
+					<!-- the loop -->
+					<?php 
+
+					$shownlist = array();
+					while ( $subjects->have_posts() ) : $subjects->the_post(); ?>
+
+					<?php //the_title(); ?>
+
+					<?php   
+					$terms = get_the_terms( $post->ID , 'subjects' );
+					ksort($terms);
+
+					foreach($terms as $term){ 
+
+						$termlink = get_term_link( $term->slug, 'subjects' );
+						$image = get_field('subjects_image', 'subjects_'.$term->term_id);
+
+						if (!in_array($termlink, $shownlist)) { ?>
+
+						<li data-equalizer-watch>
+							<a class="single-library-cat" href="<?php echo $termlink; ?>">
+								<img src="<?php echo $image['url']; ?>" /> 
+							</a>
+						</li>
+
+						<?php 
+
+						$shownlist[] = $termlink;
+
+					}
+
+				} ?>   
+
+
+			<?php endwhile; wp_reset_postdata(); ?>
+		<?php endif; ?>
+				
+			</ul>
 
 
 		
