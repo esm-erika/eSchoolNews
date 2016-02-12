@@ -23,7 +23,9 @@
     //'orderby' => 'title',
     //'order' => 'ASC',
     ));   
-
+  echo '<pre>';
+  print_r($sponsors);
+  echo '</pre>'; 
   ?>
 
     <?php if ( $sponsors->have_posts() ) : ?>
