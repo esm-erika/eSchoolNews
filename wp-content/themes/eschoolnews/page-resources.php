@@ -119,6 +119,8 @@ $resources->post_count = 6;
 				<div class="excerpt">
 					<?php if(get_field('alt_text')){
 						the_field('alt_text');
+					} else {
+						the_field('masthead_text');
 					} ?>
 					<?php 
 				//echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '' ), true); 
