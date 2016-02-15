@@ -53,8 +53,9 @@ if (false === ($local_box_cache) ){
 		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 		<?php the_post_thumbnail(); ?>
-		<br><br>
+		
 		<?php if(get_field('symposium_intro')) {
+			echo '<br><br>';
 			the_field('symposium_intro');
 		} ?>
 
