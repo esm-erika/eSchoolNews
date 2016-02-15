@@ -41,7 +41,7 @@ if (false === ($local_box_cache) ){
 		<?php
 
 		$args = array(
-		'post_type' => 'symposiums',
+		//'post_type' => 'symposiums',
 		'posts_per_page' => 1
 		
 		);
@@ -95,7 +95,7 @@ echo $local_box_cache;
 	<?php
 
 		$args = array(
-		'post_type' => 'symposiums',
+		//'post_type' => 'symposiums',
 		'posts_per_page' => 10,
 		'offset' => 1
 		
