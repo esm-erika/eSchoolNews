@@ -56,7 +56,35 @@ if (false === ($local_box_cache) ){
 
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				<h2><?php the_title(); ?></h2>
+				
+				<?php 
+
+				$posts = get_field('symposium_entries');
+
+				if( $posts ): ?>
+				    <ul class="small-block-grid-1 medium-block-grid-2">
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				        <li>
+				        	<div class="panel">
+				        		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				        		<?php if(get_field('symposium_subhead')){
+				        			echo '<h4>';
+				        			the_field('symposium_subhead');
+				        			echo '</h4>';
+				        		} ?>
+									<?php the_excerpt(); ?>
+
+									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
+				        	</div>
+				            
+				        </li>
+				    <?php endforeach; ?>
+				    </ul>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+
+
 			<?php endwhile; ?>
 			<!-- end of the loop -->
 
