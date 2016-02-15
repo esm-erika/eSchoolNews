@@ -38,37 +38,8 @@ if (false === ($local_box_cache) ){
 	<div class="small-12 medium-12 columns" role="main">
 
 
-		<?php
-
-		$args = array(
-		'post_type' => 'symposiums',
-		'posts_per_page' => '1',
+		Test
 		
-		);
-		
-		$symposiums = new WP_Query( $args );  
-
-		?>
-
-		<?php if ( $symposiums->have_posts() ) : ?>
-
-		<?php while ( $symposiums->have_posts() ) : $symposiums->the_post(); ?>
-
-		<?php the_post_thumbnail(); ?>
-		<br><br>
-		
-		<?php if(get_field('symposium_intro')) {
-			echo '<br><br>';
-			the_field('symposium_intro');
-		} ?>
-
-
-		<?php comments_template(); ?>
-
-		<?php endwhile; wp_reset_postdata(); ?>
-
-		<?php endif; ?>
-
 		</div>
 
 
