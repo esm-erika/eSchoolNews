@@ -42,7 +42,7 @@ if (false === ($local_box_cache) ){
 
 		$args = array(
 		'post_type' => 'symposiums',
-		'post_per_page' => 1
+		'posts_per_page' => '1'
 		
 		);
 		
