@@ -348,8 +348,8 @@ add_action( 'init', 'symposium_entry_register' );
 function symposium_entry_register() {
         register_post_type( 'symposium_entry', array(
                 'labels' => array(
-                        'name' => 'Symposium Entries',
-                        'singular_name' => 'Symposium Entry',
+                        'name' => 'Entries',
+                        'singular_name' => 'Entry',
                 ),
                 'public' => true,
                 'show_ui' => true,
