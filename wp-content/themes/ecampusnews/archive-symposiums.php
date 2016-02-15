@@ -39,6 +39,13 @@ if (false === ($local_box_cache) ){
 
 
 		<?php 
+
+		$args = array(
+			'post_type' => 'symposiums'
+
+
+			);
+
 		// the query
 		$the_query = new WP_Query( $args ); ?>
 
@@ -59,7 +66,7 @@ if (false === ($local_box_cache) ){
 		<?php else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
-		
+
 		</div>
 
 
