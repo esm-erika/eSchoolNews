@@ -50,6 +50,8 @@ if (false === ($local_box_cache) ){
 
 		?>
 
+		<?php if ( $query->have_posts() ) : ?>
+
 		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 		<?php the_post_thumbnail(); ?>
@@ -65,7 +67,7 @@ if (false === ($local_box_cache) ){
 
 		<?php endwhile; wp_reset_postdata(); ?>
 
-		
+		<?php endif; ?>
 
 		</div>
 
