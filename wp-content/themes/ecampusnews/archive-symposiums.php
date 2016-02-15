@@ -37,99 +37,50 @@ if (false === ($local_box_cache) ){
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
+
+		<?php
+
+		$args = array(
+		'post_type' => 'symposiums',
+		'post_per_page' => 1
+		
+		);
+		
+		$query = new WP_Query( $args );  
+
+		?>
+
+		<?php if ( $query->have_posts() ) : ?>
+
+						<article class="row">
+
+
+			
+
+
+				<?php endwhile; ?> 
+
+					</article>
+
+				<?php wp_reset_postdata(); endif; ?>
+
 		   
 
 
-				<?php 
-
-				$taxonomy = 'subjects';
-				$terms = get_the_terms( $post->ID, $taxonomy);
-				$term_id = $terms[0]->term_id;
-
-				$image = get_field('subjects_image', $taxonomy . '_' . $term_id);
-				//$url = get_field('sponsor_url', $taxonomy . '_' . $term_id);
 				
-				if( !empty($image) ): ?>
-
-
-			
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					<br><br>
-
-				<?php endif; ?>
-
-
-				 <?php
-
-				// The Query
-				$args = array(
-					'post_type' => 'symposiums',
-					'posts_per_page' => '2',
-					'orderby' => 'date'
-					);
-
-				$query = new WP_Query( $args ); ?>
-
-				<article class="row">
 
 
 
-				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
 
 				
-							<div class="small-12 medium-6 columns">
-								<div class="panel">
-
-								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<?php if(get_field('symposium_subhead')){ ?>
-									<h5><?php the_field('symposium_subhead'); ?></h5>
-								<?php } ?>
-
-								<?php the_excerpt(); ?>
-
-								</div>
-
-								
-							</div>
 						
 					
-					<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
+					
 
-									</article>
-
-			
-			<?php
-
-				$taxonomy = 'subjects';
- 				$terms = get_the_terms( $post->ID, $taxonomy);
-   				$term_name = $terms[0]->name;
-
-				$subjects = new WP_Query(array(
-					'post_type' => 'symposiums',
-					'posts_per_page' => -1,
-					'offset' => 1
-					));   
-
-					?>
-
-					<h4>Commentary on <?php echo $term_name; ?></h4>
-
-					<?php if ( $subjects->have_posts() ) : ?>
-
-					<?php // The Loop
-				 while ( $subjects->have_posts() ) :
-					$subjects->the_post(); ?>
-
-						
-						<h3><?php the_title(); ?></h3>
+									
 
 			
-
-		<?php endwhile; ?>
-				<?php wp_reset_postdata(); endif; ?>
+			
 
 
 		</div>

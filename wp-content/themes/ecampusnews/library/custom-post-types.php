@@ -310,13 +310,13 @@ function symposium_register() {
  
 	$labels = array(
 		'name' => _x('Symposium', 'post type general name'),
-		'singular_name' => _x('Entry', 'post type singular name'),
+		'singular_name' => _x('Topic', 'post type singular name'),
 		'add_new' => _x('Add New', 'newsletter issue'),
-		'add_new_item' => __('Add New Entry'),
-		'edit_item' => __('Edit Entry'),
-		'new_item' => __('New Entry'),
-		'view_item' => __('View Entry'),
-		'search_items' => __('Search Entries'),
+		'add_new_item' => __('Add New Topic'),
+		'edit_item' => __('Edit Topic'),
+		'new_item' => __('New Topic'),
+		'view_item' => __('View Topic'),
+		'search_items' => __('Search Topics'),
 		'not_found' =>  __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
@@ -339,8 +339,23 @@ function symposium_register() {
  
 	register_post_type( 'symposiums' , $args );
 
-	register_taxonomy("subjects", array("symposiums"), array("hierarchical" => true, "label" => "Symposium Subjects", "singular_label" => "Symposium Subject", "rewrite" => true, 'show_in_menu' => true));
+	//register_taxonomy("subjects", array("symposiums"), array("hierarchical" => true, "label" => "Symposium Subjects", "singular_label" => "Symposium Subject", "rewrite" => true, 'show_in_menu' => true));
 
+}
+
+add_action( 'init', 'symposium_entry_register' );
+
+function symposium_entry_register() {
+        register_post_type( 'symposium_entry', array(
+                'labels' => array(
+                        'name' => 'Symposium Entries',
+                        'singular_name' => 'Symposium Entry',
+                ),
+                'public' => true,
+                'show_ui' => true,
+                'show_in_menu' => 'edit.php?post_type=symposium',
+                'supports' => array( 'title' ,'thumbnail', 'editor' ),
+        ) );
 }
 
 ?>
