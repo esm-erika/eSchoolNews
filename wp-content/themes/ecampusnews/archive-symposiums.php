@@ -50,19 +50,25 @@ if (false === ($local_box_cache) ){
 
 		?>
 
-		<?php if ( $query->have_posts() ) : ?>
+		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-						<article class="row">
+		<?php 
 
+		$posts = get_field('symposium_entries');
 
-			
+		if( $posts ): ?>
+		    <ul class="small-block-grid-1 medium-block-grid-2">
+		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		        <?php setup_postdata($post); ?>
+		        <li>
+		            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		        </li>
+		    <?php endforeach; ?>
+		    </ul>
+		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
 
-
-				<?php endwhile; ?> 
-
-					</article>
-
-				<?php wp_reset_postdata(); endif; ?>
+		<?php endwhile; wp_reset_postdata(); ?>
 
 		   
 
