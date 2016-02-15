@@ -53,6 +53,7 @@ if (false === ($local_box_cache) ){
 		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 		<?php the_post_thumbnail(); ?>
+		<br><br>
 		
 		<?php if(get_field('symposium_intro')) {
 			echo '<br><br>';
@@ -70,6 +71,11 @@ if (false === ($local_box_cache) ){
 		        <li>
 		        	<div class="panel">
 		        		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		        		<?php if(get_field('symposium_subhead')){
+		        			echo '<h4>';
+		        			the_field('symposium_subhead');
+		        			echo '</h4>';
+		        		} ?>
 							<?php the_excerpt(); ?>
 		        	</div>
 		            
