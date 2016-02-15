@@ -56,6 +56,8 @@ if (false === ($local_box_cache) ){
 
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+			<?php the_post_thumbnail(); ?>
 				
 				<?php 
 
