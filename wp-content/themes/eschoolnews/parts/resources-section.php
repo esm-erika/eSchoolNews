@@ -80,7 +80,7 @@ $resources->post_count = 6;
 			<h4> <a href="<?php the_permalink();?>"><?php the_title( ); ?></a></h4>
 			
 			<?php if( 'ercs' == get_post_type()){ 
-				the_field('masthead_text');
+				the_field('alt_text');
 			 } ?>
 
 			 <?php if( 'special-reports' == get_post_type()){ ?>

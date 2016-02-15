@@ -52,14 +52,12 @@ if (false === ($local_box_cache) ){
 
 		<?php if ( $the_query->have_posts() ) : ?>
 
-			<!-- pagination here -->
-
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 			<?php the_post_thumbnail(); ?>
-				
-				<?php 
+
+			<?php 
 
 				$posts = get_field('symposium_entries');
 
@@ -85,12 +83,9 @@ if (false === ($local_box_cache) ){
 				    </ul>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
-
-
+				
 			<?php endwhile; ?>
 			<!-- end of the loop -->
-
-			<!-- pagination here -->
 
 			<?php wp_reset_postdata(); ?>
 
