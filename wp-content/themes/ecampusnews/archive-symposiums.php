@@ -61,7 +61,28 @@ if (false === ($local_box_cache) ){
 		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 		        <?php setup_postdata($post); ?>
 		        <li>
-		            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		        	<div class="panel">
+		        		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<?php the_excerpt(); ?>
+		        	</div>
+		            
+		        </li>
+		    <?php endforeach; ?>
+		    </ul>
+		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
+
+
+		<?php 
+
+		$posts = get_field('symposium_entries');
+
+		if( $posts ): ?>
+		    <ul>
+		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		        <?php setup_postdata($post); ?>
+		        <li>
+		            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 		        </li>
 		    <?php endforeach; ?>
 		    </ul>
@@ -69,6 +90,8 @@ if (false === ($local_box_cache) ){
 		<?php endif; ?>
 
 		<?php endwhile; wp_reset_postdata(); ?>
+
+		<?php comments_template(); ?>
 
 		   
 
