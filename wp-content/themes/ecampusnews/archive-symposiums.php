@@ -77,6 +77,8 @@ if (false === ($local_box_cache) ){
 		        			echo '</h4>';
 		        		} ?>
 							<?php the_excerpt(); ?>
+
+							<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
 		        	</div>
 		            
 		        </li>
