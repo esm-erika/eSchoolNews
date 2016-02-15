@@ -87,45 +87,9 @@ if (false === ($local_box_cache) ){
 		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 		<?php endif; ?>
 
-
-		<?php 
-
-		$posts = get_field('symposium_entries');
-
-		if( $posts ): ?>
-		    <ul>
-		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-		        <?php setup_postdata($post); ?>
-		        <li>
-		            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-		        </li>
-		    <?php endforeach; ?>
-		    </ul>
-		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-		<?php endif; ?>
-
 		<?php endwhile; wp_reset_postdata(); ?>
 
 		<?php comments_template(); ?>
-
-		   
-
-
-				
-
-
-
-
-				
-						
-					
-					
-
-									
-
-			
-			
-
 
 		</div>
 
