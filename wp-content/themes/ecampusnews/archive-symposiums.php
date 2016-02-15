@@ -46,13 +46,13 @@ if (false === ($local_box_cache) ){
 		
 		);
 		
-		$query = new WP_Query( $args );  
+		$symposiums = new WP_Query( $args );  
 
 		?>
 
-		<?php if ( $query->have_posts() ) : ?>
+		<?php if ( $symposiums->have_posts() ) : ?>
 
-		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+		<?php while ( $symposiums->have_posts() ) : $symposiums->the_post(); ?>
 
 		<?php the_post_thumbnail(); ?>
 		<br><br>
@@ -92,37 +92,7 @@ echo $local_box_cache;
 }
 ?>        
 
-	<?php
-
-		$args = array(
-		'post_type' => 'symposiums',
-		'posts_per_page' => '10',
-		'offset' => '1',
-		
-		);
-		
-		$archived = new WP_Query( $args );  
-
-		?>
-        
-        <?php if ( $archived->have_posts() ) : ?>
 	
-			<hr class="thick"/>
-
-			<h4>View Our Past Symposiums</h4>
-
-			<ul class="small-block-grid-1 medium-block-grid-2">	
-
-			<?php while ( $archived->have_posts() ) : $archived->the_post(); ?>
-
-				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></li>
-
-			<?php endwhile; wp_reset_postdata(); ?>
-				
-			</ul>
-
-		<?php endif; ?>
-
 
 		
 	</div>
