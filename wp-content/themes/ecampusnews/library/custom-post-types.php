@@ -353,7 +353,7 @@ function symposium_entry_register() {
                 ),
                 'public' => true,
                 'show_ui' => true,
-                'show_in_menu' => 'edit.php?post_type=symposium',
+                'show_in_menu' => 'edit.php?post_type=symposiums',
                 'supports' => array( 'title' ,'thumbnail', 'editor' ),
         ) );
 }
