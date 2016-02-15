@@ -310,13 +310,13 @@ function symposium_register() {
  
 	$labels = array(
 		'name' => _x('Symposium', 'post type general name'),
-		'singular_name' => _x('Topic', 'post type singular name'),
+		'singular_name' => _x('Symposium', 'post type singular name'),
 		'add_new' => _x('Add New', 'newsletter issue'),
-		'add_new_item' => __('Add New Topic'),
-		'edit_item' => __('Edit Topic'),
-		'new_item' => __('New Topic'),
-		'view_item' => __('View Topic'),
-		'search_items' => __('Search Topics'),
+		'add_new_item' => __('Add New Symposium'),
+		'edit_item' => __('Edit Symposium'),
+		'new_item' => __('New Symposium'),
+		'view_item' => __('View Symposium'),
+		'search_items' => __('Search Symposiums'),
 		'not_found' =>  __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
@@ -346,13 +346,14 @@ function symposium_register() {
 add_action( 'init', 'symposium_entry_register' );
 
 function symposium_entry_register() {
-        register_post_type( 'symposium_entry', array(
+        register_post_type( 'entry', array(
                 'labels' => array(
                         'name' => 'Entries',
                         'singular_name' => 'Entry',
                 ),
                 'public' => true,
                 'show_ui' => true,
+                'rewrite'      => array('slug' => 'syposiums/entry', 'with_front' => false),
                 'show_in_menu' => 'edit.php?post_type=symposiums',
                 'supports' => array( 'title' ,'thumbnail', 'editor' ),
         ) );
