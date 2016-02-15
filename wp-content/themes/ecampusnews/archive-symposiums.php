@@ -118,7 +118,7 @@ echo $local_box_cache;
 
 		$args = array(
 		'post_type' => 'symposiums',
-		'post_per_page' => 10,
+		'posts_per_page' => 10,
 		'offset' => 1
 		
 		);
