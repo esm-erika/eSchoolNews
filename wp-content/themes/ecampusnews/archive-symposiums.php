@@ -134,70 +134,37 @@ echo $local_box_cache;
 
 }
 ?>        
+
+	<?php
+
+		$args = array(
+		'post_type' => 'symposiums',
+		'post_per_page' => 10,
+		'offset' => 1
+		
+		);
+		
+		$archived = new WP_Query( $args );  
+
+		?>
         
+        <?php if ( $archived->have_posts() ) : ?>
 	
 			<hr class="thick"/>
 
 			<h4>View Our Past Symposiums</h4>
 
-			<ul class="small-block-grid-1 medium-block-grid-2">
+			<ul class="small-block-grid-1 medium-block-grid-2">	
 
-				<?php
+			<?php while ( $archived->have_posts() ) : $archived->the_post(); ?>
 
-				$taxonomy = 'subjects';
-				$taxonomy_terms = get_terms( $taxonomy, array(
-					'hide_empty' => 0,
-					'fields' => 'ids'
-					) );
-
-				$subjects = new WP_Query(array(
-					'post_type' => 'symposiums',
-					'posts_per_page' => 10,
-					'offset' => 1
-					));   
-
-					?>
-
-					<?php if ( $subjects->have_posts() ) : ?>
-
-					<!-- the loop -->
-					<?php 
-
-					$shownlist = array();
-					while ( $subjects->have_posts() ) : $subjects->the_post(); ?>
-
-					<?php //the_title(); ?>
-
-					<?php   
-					$terms = get_the_terms( $post->ID , 'subjects' );
-					ksort($terms);
-
-					foreach($terms as $term){ 
-
-						$termlink = get_term_link( $term->slug, 'subjects' );
-						$image = get_field('subjects_image', 'subjects_'.$term->term_id);
-
-						if (!in_array($termlink, $shownlist)) { ?>
-
-						<li data-equalizer-watch>
-							<a class="single-library-cat" href="<?php echo $termlink; ?>">
-								<img src="<?php echo $image['url']; ?>" /> 
-							</a>
-						</li>
-
-						<?php 
-
-						$shownlist[] = $termlink;
-
-					}
-
-				} ?>   
-
+				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></li>
 
 			<?php endwhile; wp_reset_postdata(); ?>
-		<?php endif; ?>
 				
 			</ul>
+
+		<?php endif; ?>
 
 
 		
