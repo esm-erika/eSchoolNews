@@ -87,9 +87,11 @@ if (false === ($local_box_cache) ){
 		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 		<?php endif; ?>
 
+		<?php comments_template(); ?>
+
 		<?php endwhile; wp_reset_postdata(); ?>
 
-		<?php comments_template(); ?>
+		
 
 		</div>
 
