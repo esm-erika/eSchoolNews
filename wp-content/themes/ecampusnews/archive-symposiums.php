@@ -57,7 +57,12 @@ if (false === ($local_box_cache) ){
 
 			<?php if(has_post_thumbnail()) {
 
+				echo '<a href="' . get_permalink() . '">';
+
 				the_post_thumbnail();
+
+				echo '</a>';
+
 
 				echo '<br><br>';
 			}?>
