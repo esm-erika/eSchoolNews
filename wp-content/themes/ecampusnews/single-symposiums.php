@@ -31,36 +31,15 @@ if (false === ($local_box_cache) ){
 
 <div class="row">
 
-		<?php get_template_part( 'parts/section-titles' ); ?>
-
-
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
-
-
-		<?php 
-
-		$args = array(
-			'post_type' => 'symposiums',
-			'posts_per_page' => '1',
-			'order' => 'DESC'
-
-			);
-
-		// the query
-		$the_query = new WP_Query( $args ); ?>
-
-		<?php if ( $the_query->have_posts() ) : ?>
-
-			<!-- the loop -->
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 			<?php if(has_post_thumbnail()) {
 
 				the_post_thumbnail();
 
 				echo '<br><br>';
-			}?>
+			} ?>
 
 			<?php if(get_field('symposium_intro')) {
 
@@ -125,23 +104,9 @@ if (false === ($local_box_cache) ){
 					comments_template( '', true ); 
 				?>
 
-			<?php endwhile; ?>
-			<!-- end of the loop -->
-
-			<?php wp_reset_postdata(); ?>
-
 		<?php else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-		<?php endif; ?>
-
-
-
-
-
-
-
-
-		
+		<?php endif; ?>	
 
 		<?php 
 
@@ -174,8 +139,6 @@ if (false === ($local_box_cache) ){
 		<?php else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
-
-
 
 		</div>
 
