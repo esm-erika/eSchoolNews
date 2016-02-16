@@ -2,7 +2,7 @@
 Template Name: Higher Ed Jobs
 */
 get_header(); ?>
-
+<div class="row">
 
 <div class="small-12 large-12 columns right-column top-stories">
 	
@@ -89,6 +89,7 @@ CONTENT
 
 </div>
 
-</div> <!-- end row -->
-</div> <!-- end top stories -->
+</div>
+</div>
+</div>
 <?php get_footer(); ?>
