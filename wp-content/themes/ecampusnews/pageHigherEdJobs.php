@@ -23,7 +23,7 @@ get_header(); ?>
 		<div class="columns large-4 small-12" data-equalizer-watch>
 			<div class="panel">
 
-<h3 class="section-title"><span><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=1" target="_blank">Administrative Listings</a></span></h3>
+<h3 class="section-title"><span>Administrative Listings</span></h3>
 
 
 
@@ -53,7 +53,7 @@ get_header(); ?>
 
 		<div class="columns large-4 small-12" data-equalizer-watch>
 			<div class="panel">
-<h3 class="section-title"><span><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=2" target="_blank">Executive Listings</a></span></h3>
+<h3 class="section-title"><span>Executive Listings</span></h3>
     
     
     <?php if(function_exists('fetch_feed')) {
@@ -78,7 +78,7 @@ get_header(); ?>
 </div>
 		<div class="columns large-4 small-12" data-equalizer-watch>
 			<div class="panel">
-<h3 class="section-title"><span><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=3" target="_blank">Faculty Listings</a></span></h3>
+<h3 class="section-title"><span>Faculty Listings</span></h3>
     
     
     <?php if(function_exists('fetch_feed')) {
