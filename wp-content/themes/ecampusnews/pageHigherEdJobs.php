@@ -5,7 +5,12 @@ get_header(); ?>
 <div class="row">
 
 	<div class="small-12 large-12 columns right-column top-stories">
-		CONTENT
+		<?php
+        	if (have_posts()) : while (have_posts()) : the_post();
+			// Display content
+			the_content();
+		endwhile; else : endif;
+		?>
 	</div>
 </div>
 
