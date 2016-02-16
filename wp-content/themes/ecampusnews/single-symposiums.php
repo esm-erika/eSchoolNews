@@ -100,7 +100,7 @@ if (false === ($local_box_cache) ){
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<?php comments_template(); ?>
+				<?php comments_template( '', true ); ?>
 
 			<?php endwhile; ?>
 
