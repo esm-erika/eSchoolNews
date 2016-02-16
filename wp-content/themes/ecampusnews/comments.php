@@ -9,6 +9,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
+echo ' This is the comments tempate';
 
 if ( have_comments() ) :
 	if ( (is_page() || is_singular()) && ( ! is_home() && ! is_front_page()) ) :
