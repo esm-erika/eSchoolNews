@@ -94,13 +94,13 @@ if (false === ($local_box_cache) ){
 
 				        		<hr>
 				        						            
-				        <?php comments_template('/comments.php'); ?>
+				        
 				    <?php endforeach; ?>
 				   <br>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<?php // comments_template('/comments.php'); ?>
+				<?php comments_template( '', true ); ?>
 
 			<?php endwhile; ?>
 
