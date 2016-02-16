@@ -67,7 +67,7 @@ endif;
 
 <?php
 if ( comments_open() ) :
-	if ( (is_page() || is_single()) && ( ! is_home() && ! is_front_page()) ) :
+	if ( (is_page() || is_single() || is_singular()) && ( ! is_home() && ! is_front_page()) ) :
 ?>
 <section id="respond">
 	<h3><?php comment_form_title( __( 'Leave a Reply', 'foundationpress' ), __( 'Leave a Reply to %s', 'foundationpress' ) ); ?></h3>
