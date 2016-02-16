@@ -47,7 +47,7 @@ if (false === ($local_box_cache) ){
 
 				the_field('symposium_intro');
 
-			} ?><?php comments_template('/comments.php'); ?>
+			} ?>
 
 			<?php 
 
