@@ -152,7 +152,7 @@ class Foundationpress_Comments extends Walker_Comment{
 
 		</header>
 
-                <section id="comment-content-<?php comment_ID(); ?>" class="comment">
+                <section id="comment-content-<?php comment_ID(); ?>" class="comment-body">
                     <?php if ( ! $comment->comment_approved ) : ?>
                     		<div class="notice">
 					<p class="bottom"><?php $args['moderation']; ?></p>
