@@ -349,14 +349,17 @@ function symposium_entry_register() {
         register_post_type( 'entry', array(
                 'labels' => array(
                         'name' => 'Entries',
-                        'singular_name' => 'Entry',
+                        'singular_name' => 'Symposium Entry',
                 ),
                 'public' => true,
                 'show_ui' => true,
-                'rewrite'      => array('slug' => 'symposiums/entry', 'with_front' => false),
+                'hierarchical' => true,
+                'rewrite' => array('slug' => 'entry', 'with_front' => true),
                 'show_in_menu' => 'edit.php?post_type=symposiums',
-                'supports' => array( 'title' ,'thumbnail', 'editor' ),
+                'supports' => array( 'title' ,'thumbnail', 'editor', 'page-attributes' ),
         ) );
+
+        flush_rewrite_rules();
 }
 
 ?>

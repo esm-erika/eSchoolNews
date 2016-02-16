@@ -42,8 +42,8 @@ if (false === ($local_box_cache) ){
 
 		$args = array(
 			'post_type' => 'symposiums',
-			'posts_per_page' => '1'
-
+			'posts_per_page' => '1',
+			'order' => 'DESC'
 
 			);
 
@@ -55,13 +55,25 @@ if (false === ($local_box_cache) ){
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-			<?php the_post_thumbnail(); ?>
+			<?php if(has_post_thumbnail()) {
+
+				the_post_thumbnail();
+
+				echo '<br><br>';
+			}?>
+
+			<?php if(get_field('symposium_intro')) {
+
+				the_field('symposium_intro');
+
+			} ?>
 
 			<?php 
 
 				$posts = get_field('symposium_entries');
 
 				if( $posts ): ?>
+
 				    <ul class="small-block-grid-1 medium-block-grid-2">
 				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post); ?>
@@ -83,7 +95,33 @@ if (false === ($local_box_cache) ){
 				    </ul>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
-				
+
+
+				<?php 
+
+				$more = get_field('additional_entries');
+
+				if( $more ): ?>
+
+				<h4>Additional Commentary <?php the_title(); ?></h4>
+
+				   
+				    <?php foreach( $more as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				       
+				        		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+
+				        		<hr>
+				        						            
+				        
+				    <?php endforeach; ?>
+				   <br>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+
+				<?php global $withcomments; $withcomments = true;
+				comments_template( '', true ); ?>
+
 			<?php endwhile; ?>
 			<!-- end of the loop -->
 
@@ -92,6 +130,49 @@ if (false === ($local_box_cache) ){
 		<?php else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
+
+
+
+
+
+
+
+
+		
+
+		<?php 
+
+		$args = array(
+			'post_type' => 'symposiums',
+			'posts_per_page' => '10',
+			'offset' => '1',
+			'order' => 'DESC'
+			);
+
+		// the query
+		$archived = new WP_Query( $args ); ?>
+
+		<?php if ( $archived->have_posts() ) : ?>
+
+		<h4>View Past Symposiums</h4>
+
+			<ul class="small-block-grid-1 medium-block-grid-2">
+
+			<!-- the loop -->
+			<?php while ( $archived->have_posts() ) : $archived->the_post(); ?>
+				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></li>
+			<?php endwhile; ?>
+			<!-- end of the loop -->
+
+			</ul>
+
+			<?php wp_reset_postdata(); ?>
+
+		<?php else : ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>
+
+
 
 		</div>
 
