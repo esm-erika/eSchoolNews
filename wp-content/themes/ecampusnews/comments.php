@@ -11,7 +11,7 @@
  */
 
 if ( have_comments() ) :
-	if ( (is_page() || is_single()) && ( ! is_home() && ! is_front_page()) ) :
+	if ( (is_page() || is_singular()) && ( ! is_home() && ! is_front_page()) ) :
 ?>
 	<section id="comments"><?php
 

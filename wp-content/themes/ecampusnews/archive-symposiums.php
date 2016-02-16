@@ -162,6 +162,8 @@ if (false === ($local_box_cache) ){
 
 		<?php if ( $archived->have_posts() ) : ?>
 
+		<hr class="thick">
+
 		<h4>View Past Symposiums</h4>
 
 			<ul class="small-block-grid-1 medium-block-grid-2">
