@@ -4,9 +4,14 @@ Template Name: Higher Ed Jobs
 get_header(); ?>
 <div class="row">
 
+	<div class="small-12 large-12 columns right-column top-stories">
+		CONTENT
+	</div>
+</div>
+
+<div class="row">
+
 <div class="small-12 large-12 columns right-column top-stories">
-	
-CONTENT
 
 	<div class="row">
 
