@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="row" data-equalizer>
 
 		<div class="columns large-4 small-12 panel" data-equalizer-watch>
-
+			<div class="panel">
 
 <h4><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=1" target="_blank">Administrative Listings</a> </h4>
 
@@ -44,13 +44,15 @@ get_header(); ?>
     <p><a href="<?php echo $item->get_permalink(); ?>" alt="<?php echo $item->get_title(); ?>"><strong><?php echo $item->get_title(); ?></strong></a><br />
     <span style="color:#666666; font-size:9px;"><?php echo $item->get_date('j F Y @ g:i a'); ?></span><br />
     <?php echo substr($item->get_description(), 0, 200); ?> ...</p>
-    
+    <hr />    
     <?php endforeach; ?>
     <a href="http://www.higheredjobs.com/admin/" target="_blank">View all listings</a>
-
+    
+	</div>
 </div>
 
-<div class="columns large-4 small-12 panel" data-equalizer-watch>
+		<div class="columns large-4 small-12 panel" data-equalizer-watch>
+			<div class="panel">
 <h4><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=2" target="_blank">Executive Listings</a></h4>
     
     
@@ -69,12 +71,13 @@ get_header(); ?>
     <p><a href="<?php echo $item->get_permalink(); ?>" alt="<?php echo $item->get_title(); ?>"><strong><?php echo $item->get_title(); ?></strong></a><br />
     <span style="color:#666666; font-size:9px;"><?php echo $item->get_date('j F Y @ g:i a'); ?></span><br />
     <?php echo substr($item->get_description(), 0, 200); ?> ...</p>
-    
+    <hr />    
     <?php endforeach; ?>
         <a href="http://www.higheredjobs.com/executive/" target="_blank">View all listings</a>
-
 </div>
-<div class="columns large-4 small-12 panel" data-equalizer-watch>
+</div>
+		<div class="columns large-4 small-12 panel" data-equalizer-watch>
+			<div class="panel">
 <h4><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=3" target="_blank">Faculty Listings</a> </h4>
     
     
@@ -93,10 +96,10 @@ get_header(); ?>
     <p><a href="<?php echo $item->get_permalink(); ?>" alt="<?php echo $item->get_title(); ?>"><strong><?php echo $item->get_title(); ?></strong></a><br />
     <span style="color:#666666; font-size:9px;"><?php echo $item->get_date('j F Y @ g:i a'); ?></span><br />
     <?php echo substr($item->get_description(), 0, 200); ?> ...</p>
-    
+    <hr />
     <?php endforeach; ?>
         <a href="http://www.higheredjobs.com/faculty/" target="_blank">View all listings</a>
-
+</div>
 </div>
 
 </div>
