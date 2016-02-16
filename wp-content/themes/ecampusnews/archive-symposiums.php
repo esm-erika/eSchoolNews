@@ -126,7 +126,6 @@ if (false === ($local_box_cache) ){
 
 				<div class="panel">
 
-					<ol class="commentlist">
 						<?php
 
 							$post_id = $post->ID;
@@ -143,7 +142,6 @@ if (false === ($local_box_cache) ){
 								'reverse_top_level' => false //Show the latest comments at the top of the list
 							), $comments);
 						?>
-					</ol>
 				
 				</div>
 
