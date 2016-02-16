@@ -132,19 +132,21 @@ class Foundationpress_Comments extends Walker_Comment{
 		$GLOBALS['comment'] = $comment;
 		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
 
-        <li <?php comment_class( $parent_class ); ?> id="comment-<?php comment_ID() ?>">
-            <article id="comment-body-<?php comment_ID() ?>" class="comment-body">
+       
+            <article id="comment-<?php comment_ID() ?>" class="comment">
 
 
 
-		<header class="comment-author">
+		<header class="comment-author row">
 
-			<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
+			<div class="small-6 medium-4 columns">
+				<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
+			</div>
 
-			<div class="author-meta vcard author">
+			<div class="small-6 medium-8 columns author">
 
-			<?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?>
-			<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
+			<h6 class="left"><?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?></h6>
+			<time class="right" datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
 
 			</div><!-- /.comment-author -->
 
@@ -177,7 +179,8 @@ class Foundationpress_Comments extends Walker_Comment{
 
 	function end_el(& $output, $comment, $depth = 0, $args = array() ) { ?>
 
-        </li><!-- /#comment-' . get_comment_ID() . ' -->
+        <!-- </li> -->
+        <!-- /#comment-' . get_comment_ID() . ' -->
 
     <?php }
 
