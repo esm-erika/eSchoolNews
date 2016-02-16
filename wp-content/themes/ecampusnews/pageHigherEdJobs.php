@@ -18,12 +18,12 @@ get_header(); ?>
 
 <div class="small-12 large-12 columns right-column top-stories">
 
-	<div class="row">
+	<div class="row" data-equalizer>
 
-		<div class="columns large-4 small-12">
+		<div class="columns large-4 small-12 panel" data-equalizer-watch>
 
 
-<a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=1" target="_blank">Administrative Listings</a> 
+<h4><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=1" target="_blank">Administrative Listings</a> </h4>
 
 
 
@@ -50,8 +50,8 @@ get_header(); ?>
 
 </div>
 
-<div class="columns large-4 small-12">
-<a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=2" target="_blank">Executive Listings</a>
+<div class="columns large-4 small-12 panel" data-equalizer-watch>
+<h4><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=2" target="_blank">Executive Listings</a></h4>
     
     
     <?php if(function_exists('fetch_feed')) {
@@ -74,8 +74,8 @@ get_header(); ?>
         <a href="http://www.higheredjobs.com/executive/" target="_blank">View all listings</a>
 
 </div>
-<div class="columns large-4 small-12">
-<a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=3" target="_blank">Faculty Listings</a> 
+<div class="columns large-4 small-12 panel" data-equalizer-watch>
+<h4><a href="http://www.higheredjobs.com/rss/selectiveFeed.cfm?TypeID=3" target="_blank">Faculty Listings</a> </h4>
     
     
     <?php if(function_exists('fetch_feed')) {
