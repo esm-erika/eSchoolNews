@@ -334,7 +334,7 @@ function symposium_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
-		'supports' => array('title','editor','thumbnail', 'comments')
+		'supports' => array('title','editor','thumbnail', 'comments','revisions')
 	  ); 
  
 	register_post_type( 'symposiums' , $args );
@@ -355,7 +355,7 @@ function symposium_entry_register() {
                 'show_ui' => true,
                 'rewrite' => array('slug' => 'entry', 'with_front' => true),
                 'show_in_menu' => 'edit.php?post_type=symposiums',
-                'supports' => array( 'title' ,'thumbnail', 'editor' ),
+                'supports' => array( 'title' ,'thumbnail', 'editor', 'comments' ),
         ) );
 
         flush_rewrite_rules();
