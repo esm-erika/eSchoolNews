@@ -35,7 +35,7 @@ if (false === ($local_box_cache) ){
 	<div class="small-12 medium-12 columns" role="main">
 
 		 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php comments_template( '', true ); ?>
+
 			<?php if(has_post_thumbnail()) {
 
 				the_post_thumbnail();
@@ -53,7 +53,7 @@ if (false === ($local_box_cache) ){
 
 				$posts = get_field('symposium_entries');
 
-				if( $posts ): ?><?php comments_template( '', true ); ?>
+				if( $posts ): ?>
 
 				    <ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
 				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
@@ -71,13 +71,13 @@ if (false === ($local_box_cache) ){
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
 				        	</div>
 				            
-				        </li><?php comments_template( '', true ); ?>
+				        </li>
 				    <?php endforeach; ?>
 				    </ul>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?><?php comments_template( '', true ); ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-<?php comments_template( '', true ); ?>
+
 				<?php 
 
 				$more = get_field('additional_entries');
@@ -97,10 +97,10 @@ if (false === ($local_box_cache) ){
 				        
 				    <?php endforeach; ?>
 				   <br>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?><?php comments_template( '', true ); ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<?php comments_template( '', true ); ?>
+				<?php comments_template(); ?>
 
 			<?php endwhile; ?>
 
