@@ -334,7 +334,7 @@ function symposium_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
-		'supports' => array('title','editor','thumbnail', 'comments','revisions')
+		'supports' => array('title','editor','thumbnail', 'comments','revisions', 'trackbacks')
 	  ); 
  
 	register_post_type( 'symposiums' , $args );

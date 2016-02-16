@@ -34,7 +34,6 @@ if (false === ($local_box_cache) ){
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
-		 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<?php if(has_post_thumbnail()) {
 
@@ -96,7 +95,9 @@ if (false === ($local_box_cache) ){
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<?php $withcomments = "1"; comments_template( '', true ); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+				<?php comments_template( '', true ); ?>
 
 			<?php endwhile; ?>
 

@@ -124,11 +124,28 @@ if (false === ($local_box_cache) ){
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<?php 
-				global $withcomments; 
-				$withcomments = 1;
-					comments_template( '', true ); 
-				?>
+				<div class="panel">
+
+					<ol class="commentlist">
+						<?php
+
+							$post_id = $post->ID;
+
+							//Gather comments for a specific page/post 
+							$comments = get_comments(array(
+								'post_id' => $post_id,
+								'status' => 'approve' //Change this to the type of comments to be displayed
+							));
+
+							//Display the list of comments
+							wp_list_comments(array(
+								'per_page' => 10, //Allow comment pagination
+								'reverse_top_level' => false //Show the latest comments at the top of the list
+							), $comments);
+						?>
+					</ol>
+				
+				</div>
 
 			<?php endwhile; ?>
 			<!-- end of the loop -->
@@ -138,15 +155,6 @@ if (false === ($local_box_cache) ){
 		<?php else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
-
-
-
-
-
-
-
-
-		
 
 		<?php 
 
