@@ -355,7 +355,7 @@ function symposium_entry_register() {
                 'show_ui' => true,
                 'rewrite' => array('slug' => 'entry', 'with_front' => true),
                 'show_in_menu' => 'edit.php?post_type=symposiums',
-                'supports' => array( 'title' ,'thumbnail', 'editor', 'comments' ),
+                'supports' => array( 'title' ,'thumbnail', 'editor','comments','revisions'),
         ) );
 
         flush_rewrite_rules();

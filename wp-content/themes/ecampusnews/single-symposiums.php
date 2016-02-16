@@ -47,7 +47,7 @@ if (false === ($local_box_cache) ){
 
 				the_field('symposium_intro');
 
-			} ?>
+			} ?><?php comments_template('/comments.php'); ?>
 
 			<?php 
 
@@ -70,14 +70,14 @@ if (false === ($local_box_cache) ){
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
 				        	</div>
-				            
+				            <?php comments_template('/comments.php'); ?>
 				        </li>
 				    <?php endforeach; ?>
 				    </ul>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-
+<?php comments_template('/comments.php'); ?>
 				<?php 
 
 				$more = get_field('additional_entries');
@@ -93,14 +93,14 @@ if (false === ($local_box_cache) ){
 				        		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
 				        		<hr>
-				        						            
+				        			<?php comments_template('/comments.php'); ?>			            
 				        
 				    <?php endforeach; ?>
 				   <br>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<?php comments_template( '', true ); ?>
+				<?php comments_template('/comments.php'); ?>
 
 			<?php endwhile; ?>
 
