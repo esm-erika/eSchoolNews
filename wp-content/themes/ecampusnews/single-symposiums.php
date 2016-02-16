@@ -77,7 +77,6 @@ if (false === ($local_box_cache) ){
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-<?php comments_template('/comments.php'); ?>
 				<?php 
 
 				$more = get_field('additional_entries');
@@ -91,9 +90,6 @@ if (false === ($local_box_cache) ){
 				        <?php setup_postdata($post); ?>
 				       
 				        		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-
-				        		<hr>
-				        			<?php comments_template('/comments.php'); ?>			            
 				        
 				    <?php endforeach; ?>
 				   <br>
@@ -101,8 +97,6 @@ if (false === ($local_box_cache) ){
 				<?php endif; ?>
 
 				<?php $withcomments = "1"; comments_template( '', true ); ?>
-
-				<?php  ?>
 
 			<?php endwhile; ?>
 
