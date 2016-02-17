@@ -135,9 +135,9 @@ if (false === ($local_box_cache) ){
 
 						<?php 
 
-						if ( have_comments() ) {
+						$post_id = $post->ID;
 
-							$post_id = $post->ID;
+						if (get_comment_count($post_id) > 0) {
 
 							//Gather comments for a specific page/post 
 							$comments = get_comments(array(
@@ -154,7 +154,8 @@ if (false === ($local_box_cache) ){
 							), $comments);
 
 							echo '</div>';
-						 } ?>
+
+						   } ?>
 				
 				
 
