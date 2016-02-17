@@ -71,7 +71,7 @@ if (false === ($local_box_cache) ){
 
 				echo '</div></div>';
 
-				echo '<br><br>';
+				echo '<br>';
 			}?>
 
 			<?php if(get_field('symposium_intro')) {
@@ -131,7 +131,7 @@ if (false === ($local_box_cache) ){
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				<div class="panel">
+				
 
 						<?php
 
@@ -143,22 +143,24 @@ if (false === ($local_box_cache) ){
 								'status' => 'approve' //Change this to the type of comments to be displayed
 							));
 
+							echo '<div class="panel">';
+
 							//Display the list of comments
 							wp_list_comments(array(
 								'per_page' => 10, //Allow comment pagination
 								'reverse_top_level' => false //Show the latest comments at the top of the list
 							), $comments);
+
+							echo '</div>';
 						?>
 				
-				</div>
+				
 
 			<?php endwhile; ?>
 			<!-- end of the loop -->
 
 			<?php wp_reset_postdata(); ?>
 
-		<?php else : ?>
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
 
 		<?php 
