@@ -150,7 +150,7 @@ get_template_part( 'library/logged-in-check' );
             <div class="show-for-small-only" style="height: 20px;"></div>
             <a href="http://www.twitter.com/eschoolnews" target="new"><i class="fi-social-twitter medium"></i></a>
             <a href="http://www.facebook.com/eschoolnews/" target="new"><i class="fi-social-facebook medium"></i></a>
-            <a href="http://www.linkedin.com/company/eschool-news" target="new"><i class="fi-social-linkedin medium"></i></a>
+            <a href="http://www.linkedin.com/company/eschool-news" target="_blank"><i class="fi-social-linkedin medium"></i></a>
             <a href="<?php site_url(); ?>/contact"><i class="fi-mail medium"></i></a>
           </div>
 
