@@ -265,13 +265,13 @@ function custom_comments($comment, $args, $depth) {
 		$tag = 'div';
 		$add_below = 'comment';
 	} else {
-		$tag = 'li';
+		$tag = 'div';
 		$add_below = 'div-comment';
 	}
 ?>
 	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+	<div id="div-comment-<?php comment_ID() ?>" class="comment-body panel">
 	<?php endif; ?>
 	<div class="comment-author vcard">
 	<?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
