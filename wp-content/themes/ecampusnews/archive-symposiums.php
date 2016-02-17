@@ -133,7 +133,9 @@ if (false === ($local_box_cache) ){
 
 				
 
-						<?php
+						<?php 
+
+						if ( have_comments() ) {
 
 							$post_id = $post->ID;
 
@@ -152,7 +154,7 @@ if (false === ($local_box_cache) ){
 							), $comments);
 
 							echo '</div>';
-						?>
+						 } ?>
 				
 				
 
