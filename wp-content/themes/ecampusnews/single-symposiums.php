@@ -38,10 +38,18 @@ if (false === ($local_box_cache) ){
 
 			<?php if(has_post_thumbnail()) {
 
+				echo '<div class="row"><div class="small-12 medium-12 columns text-center">';
+
+				//echo '<a href="' . get_permalink() . '">';
+
 				the_post_thumbnail();
 
-				echo '<br><br>';
-			} ?>
+				//echo '</a>';
+
+				echo '</div></div>';
+
+				echo '<br>';
+			}?>
 
 			<?php if(get_field('symposium_intro')) {
 
