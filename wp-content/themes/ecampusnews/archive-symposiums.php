@@ -37,6 +37,10 @@ if (false === ($local_box_cache) ){
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
 
+		
+				
+			
+
 
 		<?php 
 
@@ -57,12 +61,15 @@ if (false === ($local_box_cache) ){
 
 			<?php if(has_post_thumbnail()) {
 
+				echo '<div class="row"><div class="small-12 medium-12 columns text-center">';
+
 				echo '<a href="' . get_permalink() . '">';
 
 				the_post_thumbnail();
 
 				echo '</a>';
 
+				echo '</div></div>';
 
 				echo '<br><br>';
 			}?>

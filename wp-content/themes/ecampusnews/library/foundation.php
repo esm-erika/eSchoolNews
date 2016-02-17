@@ -104,7 +104,7 @@ class Foundationpress_Comments extends Walker_Comment{
 	function __construct() { ?>
 
         <h3><?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
-        <ol class="comment-list">
+        <!-- <ol class="comment-list"> -->
 
     <?php }
 
@@ -187,7 +187,7 @@ class Foundationpress_Comments extends Walker_Comment{
 	/** DESTRUCTOR */
 	function __destruct() { ?>
 
-    </ol><!-- /#comment-list -->
+    <!-- </ol> /#comment-list -->
 
     <?php }
 }
