@@ -114,10 +114,10 @@ function hana_check_mobile_device(){ if(navigator.userAgent.match(/iPhone/i) || 
 <body>
  
 <b>Projects:</b>
-<ol id="new-projects"></ol>
+<span id="footnote"></span>
  
 <script async>
- $('#new-projects').delay(2500).queue(function( nxt ) {
+ $('#footnote').delay(2500).queue(function( nxt ) {
     $(this).load( "rtp4.php?trk=72929&ast=1&astc=1&ps=a@a.com-123456789012345-123456789012345" );
 	nxt();
 });
