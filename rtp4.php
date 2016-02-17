@@ -59,6 +59,7 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$redirectto = 1;
 
 } else if ( isset($_GET['trk']) && is_numeric($_GET['trk']) ) {
+	echo 'ONLY TRACKING';
 		$onlytrack = 1;
 		$rtpvalidated = $_GET['trk'];
 		$redirectto = 0;
