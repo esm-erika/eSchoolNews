@@ -78,7 +78,6 @@ if (false === ($local_box_cache) ){
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
 				        	</div>
-				            <?php comments_template('/comments.php'); ?>
 				        </li>
 				    <?php endforeach; ?>
 				    </ul>
