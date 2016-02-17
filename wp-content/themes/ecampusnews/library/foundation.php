@@ -141,10 +141,11 @@ class Foundationpress_Comments extends Walker_Comment{
 
 			<div class="small-12 medium-12 columns">
 				<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
-
-			<h5 class="left"><?php printf( __( '%s', 'foundationpress' ), get_comment_author() ) ?></h5>
-			<time class="left" datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
-
+			
+			<div class="left">
+				<h5><?php printf( __( '%s', 'foundationpress' ), get_comment_author() ) ?></h5>
+				<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
+			</div>
 			</div><!-- /.comment-author -->
 
 		</header>
