@@ -137,14 +137,16 @@ class Foundationpress_Comments extends Walker_Comment{
 
 
 
-		<header class="comment-author row">
+		<header class="comment-author row collapse">
 
 			<div class="small-12 medium-12 columns">
-				<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
+		<div class="left">
+			<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
+		</div>
 			
 			<div class="left">
-				<h5><?php printf( __( '%s', 'foundationpress' ), get_comment_author() ) ?></h5>
-				<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
+				<h5 style="margin: 0;"><?php printf( __( '%s', 'foundationpress' ), get_comment_author() ) ?></h5>
+				<small datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></small>
 			</div>
 			</div><!-- /.comment-author -->
 
