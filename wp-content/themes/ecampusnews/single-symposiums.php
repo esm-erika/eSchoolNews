@@ -78,7 +78,6 @@ if (false === ($local_box_cache) ){
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
 				        	</div>
-				            <?php comments_template('/comments.php'); ?>
 				        </li>
 				    <?php endforeach; ?>
 				    </ul>
@@ -108,8 +107,7 @@ if (false === ($local_box_cache) ){
 
 			<?php endwhile; ?>
 
-		<?php else : ?>
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		
 		<?php endif; ?>	
 
 		<?php 
@@ -142,8 +140,7 @@ if (false === ($local_box_cache) ){
 
 			<?php wp_reset_postdata(); ?>
 
-		<?php else : ?>
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		
 		<?php endif; ?>
 
 		</div>

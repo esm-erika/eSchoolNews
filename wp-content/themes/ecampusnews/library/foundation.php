@@ -133,20 +133,17 @@ class Foundationpress_Comments extends Walker_Comment{
 		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
 
        
-            <article id="comment-<?php comment_ID() ?>" class="comment">
+            <article id="comment-<?php comment_ID() ?>" class="panel radius comment">
 
 
 
 		<header class="comment-author row">
 
-			<div class="small-6 medium-4 columns">
+			<div class="small-12 medium-12 columns">
 				<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
-			</div>
 
-			<div class="small-6 medium-8 columns author">
-
-			<h6 class="left"><?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?></h6>
-			<time class="right" datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
+			<h5 class="left"><?php printf( __( '%s', 'foundationpress' ), get_comment_author() ) ?></h5>
+			<time class="left" datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
 
 			</div><!-- /.comment-author -->
 
