@@ -133,7 +133,7 @@ class Foundationpress_Comments extends Walker_Comment{
 		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
 
        
-            <article id="comment-<?php comment_ID() ?>" class="comment">
+            <article id="comment-<?php comment_ID() ?>" class="panel radius comment">
 
 
 
@@ -150,14 +150,12 @@ class Foundationpress_Comments extends Walker_Comment{
 		</header>
 
                 <section id="comment-content-<?php comment_ID(); ?>" class="comment-body">
-                	<div class="panel">
                     <?php if ( ! $comment->comment_approved ) : ?>
                     		<div class="notice">
 					<p class="bottom"><?php $args['moderation']; ?></p>
 				</div>
                     <?php else : comment_text(); ?>
                     <?php endif; ?>
-                    </div>
                 </section><!-- /.comment-content -->
 
                 <div class="comment-meta comment-meta-data hide">
