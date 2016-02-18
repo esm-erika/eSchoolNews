@@ -152,7 +152,7 @@ if (false === ($local_box_cache) ){
 
 							//Display the list of comments
 							wp_list_comments(array(
-								'per_page' => 10, //Allow comment pagination
+								'per_page' => 5, //Allow comment pagination
 								'reverse_top_level' => false, //Show the latest comments at the top of the list
 								'callback' => 'custom_comments' 
 							), $comments);
@@ -160,6 +160,8 @@ if (false === ($local_box_cache) ){
 							
 
 						   } ?>
+
+						   <a class="button small radius" href="<?php the_permalink(); ?>/#comments">Comment Now</a>
 				
 				
 
