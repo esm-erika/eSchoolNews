@@ -231,7 +231,8 @@ echo '~212~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~
 				$sfuid='y'.$esmpassvals[1];
 			} else { $setnewcookie=0; }
 			if (isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 15 || isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 18 ){
-				$PersonContactId='z'.$esmpassvals[2];
+				echo 'IS THIS THE ISSUE esmpassvals[2]'.$esmpassvals[2];
+				$PersonContactId='c'.$esmpassvals[2];
 				
 			} else { $setnewcookie=0; }
 		}
