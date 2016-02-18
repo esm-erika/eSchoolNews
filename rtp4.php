@@ -236,7 +236,7 @@ $sfuid=$sfuid[0];
 if(is_array($PersonContactId)){
 $PersonContactId=$PersonContactId[0];	
 }
-
+echo '~~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~~';
 $esmpassvalue = $loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId;
 
 //echo 'dtDate="'.$dtDate .'" dtVisit="'. $dtVisit.'" sfuid="'. $sfuid.'" wpuid="'.$wpuid.'" pageid="'.$pageid.'" ercid="'.$ercid.'" email="'. $email.'" URL="'.$URL.'" pagetitle="'. $dtDate.'" visits="'. $visits.'" siteprefix="'.$siteprefix.'" PersonContactId="'. $PersonContactId.'" esmpassvalue="'. $esmpassvalue.'"';
