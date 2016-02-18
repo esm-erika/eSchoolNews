@@ -62,7 +62,7 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	echo '<!-- no comments -->';
 		$onlytrack = 1;
 		$rtpvalidated = $_GET['trk'];
-		$rtl__c = $rtpvalidated;
+		$pagertl = $rtpvalidated;
 		$redirectto = 0;
 		$pagetitle = 'DL '.get_the_title($rtpvalidated);
 		$ercid = intval($_GET['ast']);
