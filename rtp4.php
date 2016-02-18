@@ -80,10 +80,10 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 				$email = $esmpassvals[0];
 		}
 		if (isset($esmpassvals[1]) ){
-			$sfuid=$esmpassvals[1];
+			$sfuid='o'.$esmpassvals[1];
 		}
 		if (isset($esmpassvals[2])){
-			$PersonContactId=$esmpassvals[2];
+			$PersonContactId='i'.$esmpassvals[2];
 		}
 	}	
 
@@ -100,7 +100,7 @@ if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
 	$esmpassvals = explode ( "-" , $_GET['ps']);
 	$loggedin = 0;
 	if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){
-		$wpuid=$esmpassvals[0];
+		$wpuid='u'.$esmpassvals[0];
 		get_userdata( $userid );
 		$email = $user_info->user_email;
 	}elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { 
@@ -168,10 +168,10 @@ if (isset($_COOKIE['esmpass'])) {
 	} else { $setnewcookie=1; }
 
 	if (isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 15 || isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 18 ){
-		$sfuid=$esmpassvals[2];
+		$sfuid='t'.$esmpassvals[2];
 	} else { $setnewcookie=1; }
 	if (isset($esmpassvals[3]) && strlen($esmpassvals[3]) == 15 || isset($esmpassvals[3]) && strlen($esmpassvals[3]) == 18 ){
-		$PersonContactId=$esmpassvals[3];
+		$PersonContactId='r'.$esmpassvals[3];
 	} else { $setnewcookie=1; }
 
 } else {
@@ -192,9 +192,9 @@ if (is_user_logged_in()) {
 } else {
 	$loggedin = 0;
 	if($setnewcookie==0){
-		$wpuid = $esmpasscookvals[1]; 
-		$sfuid = $esmpasscookvals[2];
-		$PersonContactId = $esmpasscookvals[3];
+		$wpuid = 'q'.$esmpasscookvals[1]; 
+		$sfuid = 'w'.$esmpasscookvals[2];
+		$PersonContactId = 'e'.$esmpasscookvals[3];
 		$user_info = get_userdata($wpuid );
 		$email = $user_info->user_email;
 	} else {
@@ -211,7 +211,7 @@ if (is_user_logged_in()) {
 			
 			
 	if (isset($esmpassvals[1]) && is_numeric($esmpassvals[1])){
-		$wpuid=$esmpassvals[1];
+		$wpuid='x'.$esmpassvals[1];
 		get_userdata( $userid );
 		$email = $user_info->user_email;
 	}elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { 
@@ -219,10 +219,10 @@ if (is_user_logged_in()) {
 			$email = $esmpassvals[0];
 	}
 			if (isset($esmpassvals[1]) && strlen($esmpassvals[1]) == 15 || isset($esmpassvals[1]) && strlen($esmpassvals[1]) == 18 ){
-				$sfuid=$esmpassvals[1];
+				$sfuid='y'.$esmpassvals[1];
 			} else { $setnewcookie=0; }
 			if (isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 15 || isset($esmpassvals[2]) && strlen($esmpassvals[2]) == 18 ){
-				$PersonContactId=$esmpassvals[2];
+				$PersonContactId='z'.$esmpassvals[2];
 				
 			} else { $setnewcookie=0; }
 		}
