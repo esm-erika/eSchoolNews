@@ -16,8 +16,6 @@ get_header(); ?>
 
 		<div class="row">
 
-			<header class="row">
-
 		<?php 
 
 		if ( has_post_thumbnail() ) { ?>
