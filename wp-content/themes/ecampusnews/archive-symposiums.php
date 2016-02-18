@@ -121,9 +121,11 @@ if (false === ($local_box_cache) ){
 				    <?php foreach( $more as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post); ?>
 				       
+				        		<hr>
+
 				        		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-				        		<hr>
+				        		
 				        						            
 				        
 				    <?php endforeach; ?>
@@ -196,7 +198,7 @@ if (false === ($local_box_cache) ){
 
 			<!-- the loop -->
 			<?php while ( $archived->have_posts() ) : $archived->the_post(); ?>
-				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></li>
+				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></li>
 			<?php endwhile; ?>
 			<!-- end of the loop -->
 
