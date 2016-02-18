@@ -58,6 +58,37 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 	$pagetitle = $bookmark->link_name; 
 	$redirectto = 1;
 
+} else if ( isset($_GET['trk']) && is_numeric($_GET['trk']) ) {
+	echo '<!-- no comments -->';
+		$onlytrack = 1;
+		$rtpvalidated = $_GET['trk'];
+		$redirectto = 0;
+		$pagetitle = 'DL '.get_the_title($rtpvalidated);
+		$ercid = intval($_GET['ast']);
+		$pagecat = intval($_GET['astc']);
+		if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
+			if ( isset($_GET['ps'])){ $esmpassvals = explode ( "-" , $_GET['ps']); } else {$esmpassvals = explode ( "-" , $_GET['amp;ps']); }
+	
+		$esmpassvals = explode ( "-" , $_GET['ps']);
+		$loggedin = 0;
+		if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){
+			$wpuid=$esmpassvals[0];
+			get_userdata( $userid );
+			$email = $user_info->user_email;
+		}elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { 
+				$wpuid = '999999999';
+				$email = $esmpassvals[0];
+		}
+		if (isset($esmpassvals[1]) ){
+			$sfuid=$esmpassvals[1];
+		}
+		if (isset($esmpassvals[2])){
+			$PersonContactId=$esmpassvals[2];
+		}
+	}	
+
+
+	
 } else {
 	$redirectto = 0;
 }
@@ -233,8 +264,9 @@ if($redirectto == 1){ header( 'Location: '.$url ) ;
 
 
 } 
+if (!$onlytrack = 1){
 
-?><?php get_header(); ?>
+ get_header(); ?>
 
 	<div id="container">
 
@@ -260,4 +292,4 @@ if($redirectto == 1){ header( 'Location: '.$url ) ;
 			<div class="clear"></div>
 	</div><!-- #Container -->
 
-<?php get_footer(); ?>
+<?php get_footer(); } ?>
