@@ -65,7 +65,7 @@ if (false === ($local_box_cache) ){
 
 				echo '<a href="' . get_permalink() . '">';
 
-				the_post_thumbnail();
+				the_post_thumbnail('full');
 
 				echo '</a>';
 
