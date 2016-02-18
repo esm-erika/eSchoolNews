@@ -208,8 +208,9 @@ if (is_user_logged_in()) {
 
 	if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
 		if ( isset($_GET['ps'])){ $esmpassvals = explode ( "-" , $_GET['ps']); } else {$esmpassvals = explode ( "-" , $_GET['amp;ps']); }
-			
-			
+	echo '<pre>';		
+	echo print_r($esmpassvals);
+	echo '<pre>';		
 	if (isset($esmpassvals[1]) && is_numeric($esmpassvals[1])){
 		$wpuid='x'.$esmpassvals[1];
 		get_userdata( $userid );
