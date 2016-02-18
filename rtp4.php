@@ -92,11 +92,13 @@ if ( isset($_GET['rtp']) && is_numeric($_GET['rtp']) ) {
 } else {
 	$redirectto = 0;
 }
-
+echo '~95~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~~';
 
 if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
 		if ( isset($_GET['ps'])){ $esmpassvals = explode ( "-" , $_GET['ps']); } else {$esmpassvals = explode ( "-" , $_GET['amp;ps']); }
-
+	echo '<pre>99';		
+	echo print_r($esmpassvals);
+	echo '<pre>';	
 	$esmpassvals = explode ( "-" , $_GET['ps']);
 	$loggedin = 0;
 	if (isset($esmpassvals[0]) && is_numeric($esmpassvals[0])){
@@ -142,12 +144,18 @@ if(!filter_var($astcset, FILTER_VALIDATE_INT))
 }
 
 
-
+echo '~147~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~~';
 
 
 
 
 if (isset($_COOKIE['esmpass'])) {
+	echo '<pre>151';		
+	echo print_r($esmpassvals);
+	echo '<pre>';		
+	
+	
+	
 	$esmpassvalue = $_COOKIE['esmpass'];
 	$esmpasscookvals = explode ( "-" , $esmpassvalue);
 	
@@ -176,7 +184,7 @@ if (isset($_COOKIE['esmpass'])) {
 
 } else {
 	$setnewcookie=1;	
-}
+}echo '~187~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~~';
 //echo '0'.$esmpassvals[0].'<br>';
 //echo '1'.$esmpassvals[1].'<br>';
 //echo '2'.$esmpassvals[2].'<br>';
@@ -201,14 +209,14 @@ if (is_user_logged_in()) {
 
 
 
-
+echo '~212~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~~';
 
 
 // if ( isset($_GET['amp;ps']) ) { $esmpassvals = explode ( "-" , $_GET['amp;ps']);
 
 	if ( isset($_GET['ps']) or isset($_GET['amp;ps']) ) {
 		if ( isset($_GET['ps'])){ $esmpassvals = explode ( "-" , $_GET['ps']); } else {$esmpassvals = explode ( "-" , $_GET['amp;ps']); }
-	echo '<pre>';		
+	echo '<pre>211';		
 	echo print_r($esmpassvals);
 	echo '<pre>';		
 	if (isset($esmpassvals[1]) && is_numeric($esmpassvals[1])){
@@ -236,6 +244,7 @@ $sfuid=$sfuid[0];
 if(is_array($PersonContactId)){
 $PersonContactId=$PersonContactId[0];	
 }
+
 echo '~~'.$loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId.'~~';
 $esmpassvalue = $loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId;
 
