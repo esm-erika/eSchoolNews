@@ -139,7 +139,9 @@ if ( have_posts() ) {
 							echo the_field('masthead_text');
 
 						} else {
-							the_excerpt();
+							
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							
 						} ?>
 					</div>
 				</article>
