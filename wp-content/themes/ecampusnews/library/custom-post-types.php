@@ -329,7 +329,7 @@ function symposium_register() {
 		'show_ui' => true,
 		'query_var' => true,
 		'menu_icon' => 'dashicons-networking',
-		'rewrite' => true,
+		'rewrite' => array( 'slug' => 'symposium' ),
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
