@@ -276,7 +276,7 @@ function custom_comments($comment, $args, $depth) {
 	<div class="comment-author vcard">
 	<div class="left"><?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?></div>
 	<div class="left">
-		<?php printf( __( '%s' ), get_comment_author() ); ?>
+		<h5 style="margin: 0;"><?php printf( __( '%s' ), get_comment_author() ); ?></h5>
 		<small>
 			<?php
 				/* translators: 1: date, 2: time */
