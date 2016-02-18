@@ -167,7 +167,7 @@ class Foundationpress_Comments extends Walker_Comment{
                     <a href="<?php echo htmlspecialchars( get_comment_link( get_comment_ID() ) ) ?>"><?php comment_date(); ?> at <?php comment_time(); ?></a> <?php edit_comment_link( '(Edit)' ); ?>
                 </div><!-- /.comment-meta -->
 
-                <div class="reply">
+                <div class="button tiny radius reply">
                     <?php $reply_args = array(
 						'depth' => $depth,
 						'max_depth' => $args['max_depth'],

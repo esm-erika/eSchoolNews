@@ -273,7 +273,7 @@ function custom_comments($comment, $args, $depth) {
 	<?php if ( 'div' != $args['style'] ) : ?>
 	<div id="div-comment-<?php comment_ID() ?>" class="comment-body panel">
 	<?php endif; ?>
-	<div class="comment-author vcard">
+	<div class="comment-author" style="overflow: hidden;">
 	<div class="left"><?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?></div>
 	<div class="left">
 		<h5 style="margin: 0;"><?php printf( __( '%s' ), get_comment_author() ); ?></h5>
@@ -294,7 +294,7 @@ function custom_comments($comment, $args, $depth) {
 
 	<?php comment_text(); ?>
 
-	<div class="reply">
+	<div class="button tiny radius reply">
 	<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 	</div>
 	<?php if ( 'div' != $args['style'] ) : ?>
