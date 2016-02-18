@@ -140,7 +140,7 @@ if (false === ($local_box_cache) ){
 						if (get_comment_count($post_id) > 0) {
 
 							echo '<hr class="thick">';
-							echo '<h4>Current Views and Opinions</h4>';
+							echo '<h4>Current Views and Opinions on' . the_title() .'</h4>';
 
 							//Gather comments for a specific page/post 
 							$comments = get_comments(array(
