@@ -140,7 +140,7 @@ if (false === ($local_box_cache) ){
 						if (get_comment_count($post_id) > 0) {
 
 							echo '<hr class="thick">';
-							echo '<h4>Current Views and Opinions on'; 
+							echo '<h4>Current Views and Opinions on '; 
 							the_title();
 							echo '</h4>';
 

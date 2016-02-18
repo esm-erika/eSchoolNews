@@ -9022,7 +9022,7 @@ button a, .button a {
   color: #fff; }
 
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #003366; }
+  background-color: #00301a; }
 
 a.button.readmore {
   background: transparent;
@@ -9383,7 +9383,7 @@ footer {
       color: #fff;
       display: block; }
     footer .textwidget a:hover {
-      color: #003366; }
+      color: #00301a; }
   footer ul.footer-nav {
     overflow: hidden;
     margin: 20px 0 0 0; }
