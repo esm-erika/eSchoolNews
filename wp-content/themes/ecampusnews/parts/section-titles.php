@@ -48,6 +48,10 @@ if ( is_page()) {
 	echo '<div class="icon whitepapers"></div>';
 	echo 'White Papers';
 
+} elseif ( is_post_type_archive('symposiums')) {
+
+	echo 'Symposia';
+
 } elseif ( is_archive()) {
 
 	echo get_queried_object()->name;
