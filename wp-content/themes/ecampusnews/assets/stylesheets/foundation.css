@@ -9202,6 +9202,7 @@ article footer {
     float: left; }
   .article-social a.share-email {
     background: #e9e9e9;
+    margin-right: 0px;
     text-indent: 0;
     border-radius: 50%;
     -webkit-border-radius: 50%;

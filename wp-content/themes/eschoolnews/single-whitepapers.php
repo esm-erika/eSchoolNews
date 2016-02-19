@@ -149,7 +149,7 @@ get_header(); ?>
 									echo '<p>';
 									if ($WPcbt != null) { 
 										echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-									} else{
+									} else {
 										echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';	 
 
 									}
