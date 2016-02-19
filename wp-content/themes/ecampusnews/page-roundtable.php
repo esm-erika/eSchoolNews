@@ -25,6 +25,15 @@ get_header(); ?>
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
+	<?php 
+	$args = array(
+		
+		'category_name' => 'cc-blog',
+		'posts_per_page' => '1'
+	);
+
+	$the_query = new WP_Query( $args ); ?>
+
 	<?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -107,6 +116,8 @@ echo $local_box_cache;
 
 
 	<?php endwhile;?>
+
+	<?php wp_reset_postdata(); ?>
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
