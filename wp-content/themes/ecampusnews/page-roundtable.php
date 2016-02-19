@@ -16,7 +16,10 @@ get_header(); ?>
 
 
 <div class="row">
+	<div class="text-center">
 	  <?php the_post_thumbnail('full'); ?>
+	  <br><br>
+	</div>
 
 	<div class="small-12 large-8 columns" role="main">
 
