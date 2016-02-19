@@ -14,7 +14,7 @@ $roundtable = new WP_Query( $args ); ?>
 
 	<!-- the loop -->
 	<?php while ( $roundtable->have_posts() ) : $roundtable->the_post(); ?>
-		<h5><?php the_title(); ?></h5>
+		<h5><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h5>
 		<div class="posted-on"><strong><?php the_time('F jS, Y') ?></strong></div>
 		
 			<?php 
@@ -35,7 +35,7 @@ $roundtable = new WP_Query( $args ); ?>
 <?php else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-<br/>
+
 <h6><a href="<?php echo site_url(); ?>/cc-blog">View all Roundtable Posts</a></h6>
 
 </article>
