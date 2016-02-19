@@ -104,23 +104,25 @@ get_header(); ?>
 
 				//	the_content(); no need it is above.
 
+							if($file) { ?>
+									
+									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
 
-							if (($WPForm != null) and ($WPForm > 0)) {
+
+							<?php } elseif (($WPForm != null) and ($WPForm > 0)) {
 
 								gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
 
-							} else if ($WPURL != null) { 
+							} elseif ($WPURL != null) { 
 								echo '<p>';
+								
 								if ($WPcbt != null) { 
 
 									echo'<a href="'.$WPURL.'" target="_blank">Submit and Download</a>';
+						
+							} else {
 
-								} elseif($file) { ?>
-									
-									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
-								
-							<?php	} else {
 									echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';
 								}
 								echo '</p>'; 
@@ -137,7 +139,12 @@ get_header(); ?>
 								<?php the_content(); ?>
 
 								<?php
-								if (($WPForm != null) and ($WPForm > 0)) {
+
+								if($file) { ?>
+
+									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
+
+								<?php } elseif (($WPForm != null) and ($WPForm > 0)) {
 
 									global $esmuser;
 
@@ -155,17 +162,14 @@ get_header(); ?>
 
 									gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
-								}else if ($WPURL != null) { 
+								} elseif ($WPURL != null) { 
+
 									echo '<p>';
+
 									if ($WPcbt != null) { 
 										echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 									
-									} elseif($file) { ?>
-
-									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
-
-
-									<?php } else {
+								 } else {
 										echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';	 
 
 									}
