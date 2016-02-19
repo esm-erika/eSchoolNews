@@ -19,7 +19,7 @@
 		}
      ?>
 
-     <a rel="nofollow" data-shared="" class="share-print" href="<?php the_permalink(); ?>?email" target="_blank" title="Click to email">
+     <a rel="nofollow" data-shared="" class="share-email" href="<?php the_permalink(); ?>?email" target="_blank" title="Click to email">
         <i class="fi-mail"></i>
      </a>
 
