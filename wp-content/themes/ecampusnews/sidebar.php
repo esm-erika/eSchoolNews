@@ -36,7 +36,7 @@
 		get_template_part( 'parts/sidebar/most-popular' );
 	} ?>
 
-	<?php if(is_page('Roundtable') {
+	<?php if(is_page('Roundtable')) {
 		get_template_part( 'parts/sidebar/roundtable' );
 	} ?>
 

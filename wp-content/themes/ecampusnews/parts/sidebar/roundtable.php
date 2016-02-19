@@ -1,7 +1,7 @@
 <?php 
 $args = array(
-	'cateory_name' => 'cc-blog';
-	'posts_per_page' => '3';
+	'category_name' => 'cc-blog',
+	'posts_per_page' => '3'
 
 	);
 $roundtable = new WP_Query( $args ); ?>
