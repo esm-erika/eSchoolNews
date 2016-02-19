@@ -36,6 +36,10 @@
 		get_template_part( 'parts/sidebar/most-popular' );
 	} ?>
 
+	<?php if(is_page('Roundtable') {
+		get_template_part( 'parts/sidebar/roundtable' );
+	} ?>
+
 	<?php if(is_post_type_archive('events')){
 		get_template_part( 'parts/sidebar/conferences' );
 	} ?>
