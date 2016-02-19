@@ -116,7 +116,7 @@ get_header(); ?>
 
 									echo'<a href="'.$WPURL.'" target="_blank">Submit and Download</a>';
 
-								elseif($file) { ?>
+								} elseif($file) { ?>
 									
 									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
 								
@@ -160,7 +160,7 @@ get_header(); ?>
 									if ($WPcbt != null) { 
 										echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 									
-									elseif($file) { ?>
+									} elseif($file) { ?>
 
 									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
 
