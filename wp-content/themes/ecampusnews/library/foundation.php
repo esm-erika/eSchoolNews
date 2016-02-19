@@ -152,7 +152,7 @@ class Foundationpress_Comments extends Walker_Comment{
 
 		</header>
 
-		<hr class="thick">
+		<hr>
 
                 <section id="comment-content-<?php comment_ID(); ?>" class="comment-body">
                     <?php if ( ! $comment->comment_approved ) : ?>

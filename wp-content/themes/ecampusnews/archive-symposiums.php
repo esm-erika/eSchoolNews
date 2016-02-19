@@ -65,7 +65,7 @@ if (false === ($local_box_cache) ){
 
 				echo '<a href="' . get_permalink() . '">';
 
-				the_post_thumbnail();
+				the_post_thumbnail('full');
 
 				echo '</a>';
 
@@ -121,9 +121,11 @@ if (false === ($local_box_cache) ){
 				    <?php foreach( $more as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post); ?>
 				       
+				        		<hr>
+
 				        		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-				        		<hr>
+				        		
 				        						            
 				        
 				    <?php endforeach; ?>
@@ -139,7 +141,7 @@ if (false === ($local_box_cache) ){
 
 						if (get_comment_count($post_id) > 0) {
 
-							echo '<hr class="thick">';
+							//echo '<hr class="thick">';
 							echo '<h4>Current Views and Opinions on '; 
 							the_title();
 							echo '</h4>';
@@ -196,7 +198,7 @@ if (false === ($local_box_cache) ){
 
 			<!-- the loop -->
 			<?php while ( $archived->have_posts() ) : $archived->the_post(); ?>
-				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></li>
+				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></li>
 			<?php endwhile; ?>
 			<!-- end of the loop -->
 
