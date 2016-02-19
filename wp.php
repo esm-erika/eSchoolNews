@@ -31,7 +31,7 @@ if ( isset($_GET['wp']) && is_numeric($_GET['wp']) ) {
 	$WPURL=get_post_meta($wpvalidated, 'WP URL', $single = true);
 	
 	$urlnogo = site_url($redirectpage);
-	if ($WPForm != null) { $urlgo = site_url($redirectpage); } else { $urlgo=$WPURL;}
+	if ($WPForm != null and $WPForm > 0) { $urlgo = site_url($redirectpage); } else { $urlgo=$WPURL;}
 	
 } else {
 	$redirectto = 0;
