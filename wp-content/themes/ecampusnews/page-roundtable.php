@@ -34,7 +34,7 @@ get_header(); ?>
 
 	$the_query = new WP_Query( $args ); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 
 <?php  $astused = get_post_meta($id, '_wp_esmad_template', true);
