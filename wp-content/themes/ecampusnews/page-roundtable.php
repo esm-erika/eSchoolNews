@@ -114,6 +114,9 @@ if (false === ($local_box_cache) ){
 			
 			<?php get_template_part('parts/social'); ?>
 			</header>
+
+			<hr/>
+			
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 			<div class="entry-content">
 				<?php the_content(); ?>
