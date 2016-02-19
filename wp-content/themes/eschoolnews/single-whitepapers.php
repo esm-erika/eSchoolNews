@@ -89,6 +89,11 @@ get_header(); ?>
 						$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
 						$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 						$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+
+						$file = get_field('download_file');
+					
+
+							
 						?>
 
 
@@ -105,12 +110,17 @@ get_header(); ?>
 								gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 
 
-							}else if ($WPURL != null) { 
+							} else if ($WPURL != null) { 
 								echo '<p>';
 								if ($WPcbt != null) { 
 
 									echo'<a href="'.$WPURL.'" target="_blank">Submit and Download</a>';
-								} else{
+
+								elseif ($file ) { ?>
+									
+									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
+								
+							<?php	} else {
 									echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';
 								}
 								echo '</p>'; 
@@ -149,7 +159,13 @@ get_header(); ?>
 									echo '<p>';
 									if ($WPcbt != null) { 
 										echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-									} else {
+									
+									elseif($file) { ?>
+
+									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
+
+
+									<?php } else {
 										echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';	 
 
 									}
