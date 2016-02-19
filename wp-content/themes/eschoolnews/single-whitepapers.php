@@ -116,7 +116,7 @@ get_header(); ?>
 
 									echo'<a href="'.$WPURL.'" target="_blank">Submit and Download</a>';
 
-								elseif ($file ) { ?>
+								elseif($file) { ?>
 									
 									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
 								
