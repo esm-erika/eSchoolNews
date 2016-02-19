@@ -117,6 +117,7 @@ get_header(); ?>
 
 							} else if ($WPURL != null) { 
 								echo '<p>';
+
 								if ($WPcbt != null) { 
 
 									echo'<a href="'.$WPURL.'" target="_blank">Submit and Download</a>';
