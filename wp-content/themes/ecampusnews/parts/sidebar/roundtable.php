@@ -20,8 +20,11 @@ $roundtable = new WP_Query( $args ); ?>
 			<?php 
 		echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
 		?>
+		<br/>
 		
 		<a href="<?php the_permalink(); ?>">Read more</a>
+
+		<br><br>
 	<?php endwhile; ?>
 	<!-- end of the loop -->
 
