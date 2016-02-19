@@ -27,7 +27,7 @@ get_header(); ?>
 
 	<?php 
 	$args = array(
-		
+
 		'category_name' => 'cc-blog',
 		'posts_per_page' => '1'
 	);
@@ -78,6 +78,41 @@ if (false === ($local_box_cache) ){
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+
+				<?php if( get_field('remove_author')) { 
+
+				echo '';
+
+			} else { ?>
+
+				<div class="small-caps">
+					
+					<?php  if( get_field('Alt Author Read More Name')) {
+
+						echo 'By ';
+
+						the_field('Alt Author Read More Name');
+
+					}elseif(get_field('Byline')){
+
+						the_field('Byline');
+
+					} else {
+						echo 'By ';
+
+						the_author();
+
+					} ?>
+
+				</div>
+
+			<?php } ?>
+
+
+							<div class="posted-on"><?php the_time('F jS, Y') ?></div>		
+
+			
+			<?php get_template_part('parts/social'); ?>
 			</header>
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 			<div class="entry-content">
