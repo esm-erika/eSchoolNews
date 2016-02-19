@@ -21,6 +21,9 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
+
+  <?php the_post_thumbnail('full'); ?>
+
 <?php  $astused = get_post_meta($id, '_wp_esmad_template', true);
 $oldtemplate = get_post_meta($id, '_wp_post_template', true);
 ?>
