@@ -116,7 +116,7 @@ $wp_subreq_id = '21'.$entry[4]; //21 = digital ecn [4] is email
 		$newSubReq['Request_Date__c'] = date("Y-m-d");
 		$newSubReq['Request_URL__c'] = $_SERVER["SERVER_NAME"];	
 		
-		$newSubReq["Name"] = 'eSchoolNews Digital Subscription';
+		$newSubReq["Name"] = 'eCampus News Digital Subscription';
 		
 	if (!empty ($entry[30])) {
 			$newperson['WP_Login__c'] = strtolower($entry[30]);
@@ -201,42 +201,37 @@ $wp_subreq_id = '21'.$entry[4]; //21 = digital ecn [4] is email
 	$OptedOutflag = 0;
 
 	if (!empty ($entry['57.1'])){
-		$newperson['eSN_This_Week__c'] = $entry['57.1'];
+		$newperson['ecn_today__c'] = $entry['57.1'];
 		if ($entry['57.1'] == 'Subscribed'){$OptedOutflag = 1;}
 	} else {
-		$newperson['eSN_This_Week__c'] = "Not Subscribed";
+		$newperson['ecn_today__c'] = "Not Subscribed";
 	}
 	if (!empty ($entry['57.2'])){
-		$newperson['eSN_Today__c'] = $entry['57.2'];
+		$newperson['eCN_This_Week__c'] = $entry['57.2'];
 		if ($entry['57.2'] == 'Subscribed'){$OptedOutflag = 1;}
 	} else {
-		$newperson['eSN_Today__c'] = "Not Subscribed";
+		$newperson['eCN_This_Week__c'] = "Not Subscribed";
 	}
 	if (!empty ($entry['57.3'])){
-		$newperson['eSN_Tools_For_Schools__c'] = $entry['57.3'];
+		$newperson['eCN_Offers__c'] = $entry['57.3'];
 		if ($entry['57.3'] == 'Subscribed'){$OptedOutflag = 1;}
 	} else {
-		$newperson['eSN_Tools_For_Schools__c'] = "Not Subscribed";
-	}		
+		$newperson['eCN_Offers__c'] = "Not Subscribed";
+	}
 	if (!empty ($entry['57.4'])){
-		$newperson['eSN_Offers__c'] = $entry['57.4'];
+		$newperson['eCN_Partners__c'] = $entry['57.4'];
 		if ($entry['57.4'] == 'Subscribed'){$OptedOutflag = 1;}
 	} else {
-		$newperson['eSN_Offers__c'] = "Not Subscribed";
-	}
-	if (!empty ($entry['57.5'])){
-		$newperson['Partner_Offers__c'] = $entry['57.5'];
-		if ($entry['57.5'] == 'Subscribed'){$OptedOutflag = 1;}
-	} else {
-		$newperson['Partner_Offers__c'] = "Not Subscribed";
+		$newperson['eCN_Partners__c'] = "Not Subscribed";
 	}
 
+	$newperson['eSN_Today__c'] = "Not Subscribed";
+	$newperson['eSN_Tools_For_Schools__c'] = "Not Subscribed";
 	$newperson['Ed_Resource_Alert__c'] = "Not Subscribed";
 	$newperson['eClassroom_News__c'] = "Not Subscribed";
-	$newperson['eCN_This_Week__c'] = "Not Subscribed";
-	$newperson['eCN_Today__c'] = "Not Subscribed";
-	$newperson['eCN_Offers__c'] = "Not Subscribed";
-	$newperson['eCN_Partners__c'] = "Not Subscribed";
+	$newperson['eSN_This_Week__c'] = "Not Subscribed";
+	$newperson['eSN_Offers__c'] = "Not Subscribed";
+	$newperson['Partner_Offers__c'] = "Not Subscribed";
 
 	//special update unsub flag if they subscribe to anything...  else do not change it.
 	if ($OptedOutflag == 1){
