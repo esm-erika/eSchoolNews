@@ -1250,7 +1250,7 @@ register_field_group(array (
 					'operator' => '==',
 					'value' => 'special-reports',
 					'order_no' => 0,
-					'group_no' => 0,
+					'group_no' => 1,
 				),
 			),
 		),
