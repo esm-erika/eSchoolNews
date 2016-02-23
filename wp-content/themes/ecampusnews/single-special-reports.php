@@ -40,7 +40,7 @@ get_header(); ?>
     			echo '';
 
 
-				elseif ( has_post_thumbnail() ) {
+				} elseif ( has_post_thumbnail() ) {
 					echo '<div class="small-12 medium-4 columns">';
 							the_post_thumbnail('medium-portrait');
 					echo '</div>';
