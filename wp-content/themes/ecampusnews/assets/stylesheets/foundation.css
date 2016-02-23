@@ -9286,6 +9286,10 @@ span.embed-youtube iframe {
   margin: 20px 0;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
+  .ad-container .gwd-page-container {
+    width: 728px !important;
+    height: 90px !important;
+    margin: auto !important; }
 
 .container > div {
   margin-bottom: 20px; }
