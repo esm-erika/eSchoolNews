@@ -1244,6 +1244,14 @@ register_field_group(array (
 					'order_no' => 0,
 					'group_no' => 0,
 				),
+
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'special-reports',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
 			),
 		),
 		'options' => array (

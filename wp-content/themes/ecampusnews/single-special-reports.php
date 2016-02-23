@@ -33,7 +33,14 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content row">
 
-				<?php if ( has_post_thumbnail() ) {
+				<?php 
+
+				if( get_field('remove_featured_image')) {
+    
+    			echo '';
+
+
+				elseif ( has_post_thumbnail() ) {
 					echo '<div class="small-12 medium-4 columns">';
 							the_post_thumbnail('medium-portrait');
 					echo '</div>';
