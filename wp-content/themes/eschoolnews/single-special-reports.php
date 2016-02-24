@@ -33,9 +33,17 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content row">
 
-				<?php if ( has_post_thumbnail() ) {
+				<?php 
+				$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
+				$cutoff_date = strtotime( '2015-12-10' );
+
+			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
+    
+    			echo '';
+
+			} elseif ( has_post_thumbnail() ) {
 					echo '<div class="small-12 medium-4 columns">';
-							the_post_thumbnail('medium-portrait');
+					the_post_thumbnail('medium-portrait');
 					echo '</div>';
 					echo '<div class="small-12 medium-8 columns">';
 						
