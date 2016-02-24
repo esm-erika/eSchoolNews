@@ -70,13 +70,16 @@ if (false === ($local_box_cache) ){
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						<!-- <p class="small-caps"><?php //the_time('F j, Y'); ?></p> -->
 
-							<?php 
+						  	<?php echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); ?> 
+
+						<?php 
 
 							$file = get_field('download_files');
 
 							if( $file ): ?>
 						  <a href="<?php echo $file['url']; ?>" class="button radius tiny">Download Report</a>
 						  <?php endif; ?>
+						  
 
 						  <a href="<?php the_permalink(); ?>">Read More</a>
 						

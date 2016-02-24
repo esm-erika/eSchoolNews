@@ -60,10 +60,6 @@ get_header(); ?>
 					
 					$file = get_field('download_file');
 
-			
-
-						
-
 							if( $file ){ ?>
 							
 								<a class="button radius small" href="<?php echo $file['url']; ?>">Download Report</a>
