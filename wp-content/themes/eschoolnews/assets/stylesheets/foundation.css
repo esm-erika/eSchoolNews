@@ -9197,6 +9197,24 @@ article footer {
       color: #222; }
   .article-social div.sharedaddy {
     float: left; }
+  .article-social a.share-email {
+    background: #e9e9e9;
+    margin-right: 0px;
+    text-indent: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 0;
+    box-shadow: none;
+    color: #777;
+    line-height: 32px;
+    display: inline-block;
+    text-align: center;
+    width: 32px;
+    height: 32px; }
+    .article-social a.share-email i {
+      font-size: 14px;
+      float: none;
+      margin-right: 0; }
   .article-social a.share-print {
     background: #e9e9e9;
     text-indent: 0;
