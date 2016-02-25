@@ -1,6 +1,6 @@
 <?php 
-add_filter("gform_akismet_enabled_226", "disable_akismet");
-add_action("gform_post_submission_226", "SF_Account_Upsert226", 10, 2);
+//add_filter("gform_akismet_enabled_226", "disable_akismet");
+//add_action("gform_post_submission_226", "SF_Account_Upsert226", 10, 2);
 add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
 
 function SF_Account_Upsert226($entry, $form){
@@ -114,20 +114,19 @@ function SF_Account_Upsert226($entry, $form){
 			$newperson['eClassroom_News__c'] = "Not Subscribed";
 		}
 
-		//$newperson['eSN_Offers__c'] = "Not Subscribed";
-		//$newperson['Partner_Offers__c'] = "Not Subscribed";
-		//$newperson['eCN_Offers__c'] = "Not Subscribed";
-		//$newperson['eCN_Partners__c'] = "Not Subscribed";
+		$newperson['eSN_Offers__c'] = "Not Subscribed";
+		$newperson['Partner_Offers__c'] = "Not Subscribed";
+		$newperson['eCN_Offers__c'] = "Not Subscribed";
+		$newperson['eCN_Partners__c'] = "Not Subscribed";
 	
 		//special update unsub flag if they subscribe to anything...  else do not change it.
 		if ($OptedOutflag == 1){
 			$newperson['PersonHasOptedOutOfEmail'] = false; 
 		}	
-echo '<pre>';
-print_r($newperson);
-		echo '</pre>';
+
+
 		
-		//$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
+		$upsertResponse = $mySforceConnectionu->upsert('Email_as_ExternalID__c', array($newperson), 'Account'); 
 		
 		
 
