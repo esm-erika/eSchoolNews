@@ -70,6 +70,7 @@ get_template_part( 'library/logged-in-check' );
 
         <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-autoclose="false" aria-hidden="true" tabindex="-1">
           <?php wp_login_form(); ?>
+          <?php wp_register(); ?> 
         </div>
 
         <?php }?>
