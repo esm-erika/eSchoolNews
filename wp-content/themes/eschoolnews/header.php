@@ -70,7 +70,7 @@ get_template_part( 'library/logged-in-check' );
 
         <div id="login-drop" data-dropdown-content class="f-dropdown content small text-left" aria-autoclose="false" aria-hidden="true" tabindex="-1">
           <?php wp_login_form(); ?>
-          Not a member? <?php wp_register('', ''); ?> | <a href="<?php echo wp_lostpassword_url( get_permalink() ); ?>" title="Lost Password">Lost Password</a>
+          Not a member?<br /> <?php wp_register('', ''); ?> | <a href="<?php echo wp_lostpassword_url( get_permalink() ); ?>" title="Lost Password">Lost Password</a>
         </div>
 
         <?php }?>
