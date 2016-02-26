@@ -39,6 +39,24 @@
 					 	// loop through the rows of data
 					    while ( have_rows('video_section') ) : the_row(); ?>
 
+					<div class="entries">
+						<div>
+					  		<div class="video">
+
+					  			<?php 
+
+								$image = get_sub_field('entry_video');
+
+								if( !empty($image) ): ?>
+
+									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+								<?php endif; ?>
+					  			
+					  		</div>
+					  	</div>
+					</div>
+
 
 					<?php the_sub_field('video_title') ?>
 
