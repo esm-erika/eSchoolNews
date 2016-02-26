@@ -58,7 +58,9 @@ if (false === ($local_box_cache) ){
 
 		echo '<div class="small-12 medium-12 columns text-center">'; ?>
 
-	<?php	if (get_field('masthead_url')) {
+	<?php	
+
+	if (get_field('masthead_url')) {
 		echo '<a href="' . get_field('masthead_url') . '">'; 
 		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</a>';
@@ -81,9 +83,8 @@ if (false === ($local_box_cache) ){
 				}
 			}
 			if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);
-			}
-
-	} elseif {
+	
+	} else {
 
 		echo '<h1>' . the_title() . '</h1>';
 
