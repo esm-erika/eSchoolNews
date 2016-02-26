@@ -114,7 +114,7 @@
 						<?php if( get_sub_field('video_title')){ ?>
 					  			
 					  		<h6>
-					  			<a href="#">
+					  			<a target="_blank" href="<?php the_sub_field('external_link'); ?>">
 					  				<?php the_sub_field('video_title'); ?> 
 
 					  				<?php if(get_sub_field('award_name')){ ?>
