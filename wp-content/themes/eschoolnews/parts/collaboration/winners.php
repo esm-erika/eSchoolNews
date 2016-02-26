@@ -5,18 +5,15 @@
 
 					<section id="recent-entries">
 
-					
-
-
 					<h2 class="text-center">2016 Entries</h2>
 
 					<?php
 
 					// check if the repeater field has rows of data
-					if( have_rows('entry_section') ):
+					if( have_rows('video_section') ):
 
 					 	// loop through the rows of data
-					    while ( have_rows('entry_section') ) : the_row(); ?>
+					    while ( have_rows('video_section') ) : the_row(); ?>
 					
 					<h4><?php the_title(); ?></h4>
 
