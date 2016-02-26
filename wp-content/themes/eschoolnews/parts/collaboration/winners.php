@@ -124,6 +124,7 @@
 					  				<?php } ?>
 					  			</a>
 					  		</h6>
+					  	<?php } ?>
 
 					  		<div class="content">
 								<?php 
