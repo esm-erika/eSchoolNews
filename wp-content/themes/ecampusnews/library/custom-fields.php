@@ -216,6 +216,20 @@ if(function_exists("register_field_group"))
 				'message' => 'Hide Masthead Text',
 				'default_value' => 0,
 			),
+
+			array (
+				'key' => 'field_56d0adc624ebb',
+				'label' => 'ERC Alt Text',
+				'name' => 'alt_text',
+				'type' => 'textarea',
+				'instructions' => 'Alternate text to appear on ERC Main page.',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'html',
+			),
+
 			array (
 				'key' => 'field_56856a8710349',
 				'label' => 'Masthead Sidebar Item',

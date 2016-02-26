@@ -79,9 +79,19 @@ $resources->post_count = 6;
 			<?php get_template_part('parts/flags'); ?>
 			<h4> <a href="<?php the_permalink();?>"><?php the_title( ); ?></a></h4>
 			
-			<?php if( 'ercs' == get_post_type()){ 
+			<?php if( 'ercs' == get_post_type()){ ?>
+				
+				<?php if(get_field('alt_text')) { 
+				
+				the_field('alt_text');
+
+				} else {
+
 				the_field('masthead_text');
-			 } ?>
+
+				} ?>
+
+			<?php } ?>
 
 			 <?php if( 'special-reports' == get_post_type()){ ?>
 				
