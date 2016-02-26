@@ -54,26 +54,30 @@ if (false === ($local_box_cache) ){
 <?php
 	$image = get_field('masthead_image');
 
-	if( !empty($image) ) {
+	if( !empty($image) ) { 
 
-		echo '<div class="small-12 medium-12 columns text-center">'; ?>
-
-	<?php	if (get_field('masthead_url')) {
-		echo '<a href="' . get_field('masthead_url') . '">'; 
-		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
-		echo '</a>';
-		echo '</div>';
-		} else {
-		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
-		echo '</div>';
-	
-	} else {
-
-		echo '<h1>' . the_title() . '</h1>';
-
-	}
+		echo '<div class="small-12 medium-12 columns text-center">'; 
 
 	?>
+
+		<?php	
+
+		if (get_field('masthead_url')) {
+			echo '<a href="' . get_field('masthead_url') . '">'; 
+			echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+			echo '</a>';
+			echo '</div>';
+		} else {
+			echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+			echo '</div>';
+		
+		} ?>
+
+<?php } else {
+
+	echo '<h1>' . the_title() . '</h1>';
+
+} ?>
 
 </div>
 
