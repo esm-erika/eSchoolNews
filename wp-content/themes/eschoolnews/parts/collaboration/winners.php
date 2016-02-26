@@ -56,13 +56,14 @@
 
 								<?php endif; ?>
 
-								<h6 class="text-center"><?php the_sub_field('video_title') ?></h6>
-
-
 					  		</div>
+
+					  		<h6 class="text-center"><?php the_sub_field('video_title') ?></h6>
+
 
 
 					  	</div>
+
 					</div>
 
 
