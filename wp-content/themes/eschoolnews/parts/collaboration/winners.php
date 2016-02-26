@@ -49,16 +49,21 @@
 
 								if( !empty($image) ): ?>
 
+									
+								<a href="<?php the_sub_field('woobox_url')?>">
 									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+								</a>
 
 								<?php endif; ?>
+
+								<h6 class="text-center"><?php the_sub_field('video_title') ?></h6>
 					  			
 					  		</div>
 					  	</div>
 					</div>
 
 
-					<?php the_sub_field('video_title') ?>
+					
 
 
 
