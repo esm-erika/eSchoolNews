@@ -117,7 +117,7 @@
 					  			<a href="#">
 					  				<?php the_sub_field('video_title'); ?> 
 
-					  				<?php if(get_the_field('award_name')){ ?>
+					  				<?php if(get_sub_field('award_name')){ ?>
 
 					  				&emdash; <?php the_sub_field('award_name'); ?>
 
