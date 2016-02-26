@@ -119,7 +119,7 @@
 
 					  				<?php if(get_sub_field('award_name')){ ?>
 
-					  				&emdash; <?php the_sub_field('award_name'); ?>
+					  				&mdash; <?php the_sub_field('award_name'); ?>
 
 					  				<?php } ?>
 					  			</a>
