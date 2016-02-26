@@ -1238,8 +1238,12 @@ footer {
 	}
 
 	.copyright {
-		font-size: 80%;
+		
 		padding: 20px 0;
+
+		p {
+			font-size: 80%;
+		}
 	}
 }
 

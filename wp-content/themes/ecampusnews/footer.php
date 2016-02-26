@@ -59,10 +59,10 @@
 	</div>
 	<div class="row copyright">
 		<div class="small-12 large-6 columns small-text-center large-text-left">
-			&copy; Copyright <?php echo date("Y") ?> eSchoolMedia &amp; eSchool News. All Rights Reserved.
+			<p>&copy; Copyright <?php echo date("Y") ?> eSchoolMedia &amp; eCampus News. All Rights Reserved.</p>
 		</div>
 		<div class="small-12 large-6 columns text-right small-text-center large-text-right">
-			7920 Norfolk Ave, Suite 900, Bethesda, MD 20814 | 1-800-394-0115
+			<p>7920 Norfolk Ave, Suite 900, Bethesda, MD 20814 | 1-800-394-0115</p>
 		</div>
 	</div>
 </footer>

@@ -9427,8 +9427,9 @@ footer {
   footer .social {
     margin-left: 0px; }
   footer .copyright {
-    font-size: 80%;
     padding: 20px 0; }
+    footer .copyright p {
+      font-size: 80%; }
 
 #sites {
   padding: 20px 0;
