@@ -23,8 +23,8 @@ function validateint($inData) {
 	$gform_akismet_enabled = 'gform_akismet_enabled_'. $opt_form3 ;
 	$gform_post_submission = 'gform_post_submission_'. $opt_form3 ;
 
-add_filter("gform_akismet_enabled_157", "disable_akismet");
-add_action("gform_post_submission_157", "SF_Account_Upsert157", 10, 2);
+add_filter("gform_akismet_enabled_166", "disable_akismet");
+add_action("gform_post_submission_166", "SF_Account_Upsert166", 10, 2);
 add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
  if($_GET['ocs']){ //information passed between forms
  
@@ -72,7 +72,7 @@ if($_GET["zipc"]){ $esnautofill = array(zip => $InstInZip->$_GET["zipc"]); }
  }
  
 
-function SF_Account_Upsert157($entry, $form){
+function SF_Account_Upsert166($entry, $form){
 
 //upload information to salesforce from the final form.
 
@@ -475,7 +475,7 @@ if($skipto3 == 1){
 
 			if($skipto3 == 1){
 			// display final form if called.
-				gravity_form(157, false, false, false, $esnautofill);
+				gravity_form(166, false, false, false, $esnautofill);
 			} else {
 
 //Note when changing drop down values, we also need to use the gform_admin_pre_render so that the right values are displayed when editing the entry.
@@ -520,16 +520,16 @@ gravity_form($opt_form2, false, false, false);
 		}
 	 
 	 } else {
-		gravity_form(157, false, false, false, $esnautofill);
+		gravity_form(166, false, false, false, $esnautofill);
 	 }
 		  
  
  
  }else if (isset($_GET["ocs"]) && isset($_GET["country"]) && isset($_GET["orgtype"]) ) {    
- 		gravity_form(157, false, false, false, $esnautofill); ?>
+ 		gravity_form(166, false, false, false, $esnautofill); ?>
         
 <?php } else { 
-gravity_form(157, false, false, false, $esnautofill);
+gravity_form(166, false, false, false, $esnautofill);
 }  ?>                                
 
 		<?php endwhile; else : endif; ?>
