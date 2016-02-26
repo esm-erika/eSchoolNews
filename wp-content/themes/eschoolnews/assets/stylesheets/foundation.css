@@ -1,16 +1,16 @@
 /*
 Error: Invalid CSS after "}": expected "}", was ""
-        on line 3129 of scss/site/_custom.scss
+        on line 3130 of scss/site/_custom.scss
         from line 66 of scss/foundation.scss
 
-3124:   	display: none !important;
-3125:   }
-3126: 
+3125:   	display: none !important;
+3126:   }
 3127: 
-3128: }
+3128: 
+3129: }
 
 Backtrace:
-scss/site/_custom.scss:3129
+scss/site/_custom.scss:3130
 scss/foundation.scss:66
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
@@ -66,4 +66,4 @@ scss/foundation.scss:66
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 3129 of scss/site/_custom.scss\A         from line 66 of scss/foundation.scss\A \A 3124:   	display: none !important;\A 3125:   }\A 3126: \A 3127: \A 3128: }"; }
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 3130 of scss/site/_custom.scss\A         from line 66 of scss/foundation.scss\A \A 3125:   	display: none !important;\A 3126:   }\A 3127: \A 3128: \A 3129: }"; }
