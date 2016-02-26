@@ -19,7 +19,7 @@
 get_header(); ?>
 <?php 
 //insert cache query
-global $page;
+global $page, $withcomments;
 $box_qt = 'esm_c_arcSR_menu_pg'.$page;
 $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 $local_box_cache = get_transient( $box_q );
