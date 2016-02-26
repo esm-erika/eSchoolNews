@@ -5,24 +5,7 @@
 
 					<section id="recent-entries">
 
-					<?php 
-
-					$args2 = array(
-						'post_type' => 'collabnation',
-						'order' => 'ASC',
-						'tax_query' => array(
-							array(
-							'taxonomy' => 'years',
-							'field' => 'slug',
-							'terms' => '2016',
-
-								),
-
-							),
-
-					); 
-
-					$entries = new WP_Query($args2); ?>
+					
 
 
 					<h2 class="text-center">2016 Entries</h2>
@@ -42,6 +25,25 @@
 						echo '</h4>';
 
 					} ?>
+
+					<?php 
+
+					$args2 = array(
+						'post_type' => 'collabnation',
+						'order' => 'ASC',
+						'tax_query' => array(
+							array(
+							'taxonomy' => 'years',
+							'field' => 'slug',
+							'terms' => '2016',
+
+								),
+
+							),
+
+					); 
+
+					$entries = new WP_Query($args2); ?>
 
 					<div class="entries">
 
