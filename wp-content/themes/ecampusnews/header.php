@@ -149,8 +149,8 @@ get_template_part( 'library/logged-in-check' );
 
           <div class="small-11 medium-uncentered medium-4 small-only-text-center columns social">
             <div class="show-for-small-only" style="height: 20px;"></div>
-            <a href="http://www.twitter.com/eschoolnews" target="new"><i class="fi-social-twitter medium"></i></a>
-            <a href="http://www.facebook.com/eschoolnews/" target="new"><i class="fi-social-facebook medium"></i></a>
+            <a href="http://www.twitter.com/ecampusnews" target="new"><i class="fi-social-twitter medium"></i></a>
+            <a href="http://www.facebook.com/eCampusNews/" target="new"><i class="fi-social-facebook medium"></i></a>
             <a href="<?php site_url(); ?>/contact"><i class="fi-mail medium"></i></a>
           </div>
 
@@ -164,7 +164,7 @@ get_template_part( 'library/logged-in-check' );
       <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
         <?php //bloginfo( 'name' ); ?>
         <a href="<?php echo home_url(); ?>">
-          <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="eSchool News" />
+          <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="eCampus News" />
         </a>
       </h1>
     </nav>

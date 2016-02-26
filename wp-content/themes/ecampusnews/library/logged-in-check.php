@@ -131,17 +131,4 @@ global $esmuser;
 }
 
 
-
-
-$user_id = get_current_user_id();
-if ($user_id == 17) {
-
-echo '<pre>';
-print_r($WPautofill);
-echo '';
-echo 'showpagecontent = ' . $showpagecontent . '<br>';
-echo 'esmpass = ' . $_COOKIE['esmpass'] . '<br>';
-echo '</pre>';
-
-}
 ?>
