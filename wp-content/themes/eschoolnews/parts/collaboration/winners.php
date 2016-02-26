@@ -1,28 +1,4 @@
-				<?php 
-
-					$args = array(
-						'post_type' => 'collabnation',
-						'order' => 'ASC',
-						'meta_query' => array(
-							array(
-								'key' => 'entry_winner',
-								'value' => '1',
-								'compare' => '=='
-								)
-							),
-						'tax_query' => array(
-							array(
-							'taxonomy' => 'years',
-							'field' => 'slug',
-							'terms' => '2015',
-
-								),
-
-							),
-
-					); 
-
-					$the_query = new WP_Query($args); ?>
+				
 				
 				<div class="row">
 				<div class="small-12 medium-10 medium-centered columns">
@@ -113,6 +89,32 @@
 
 					?>
 				</section>
+
+				<?php 
+
+					$args = array(
+						'post_type' => 'collabnation',
+						'order' => 'ASC',
+						'meta_query' => array(
+							array(
+								'key' => 'entry_winner',
+								'value' => '1',
+								'compare' => '=='
+								)
+							),
+						'tax_query' => array(
+							array(
+							'taxonomy' => 'years',
+							'field' => 'slug',
+							'terms' => '2015',
+
+								),
+
+							),
+
+					); 
+
+					$the_query = new WP_Query($args); ?>
 
 				<h4>Congratulations to Our 2015 Winners</h4>
 
