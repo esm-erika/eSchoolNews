@@ -7,7 +7,12 @@
 			<h2 class="text-center">2016 Entries</h2>
 
 			<?php 
-// the query
+
+			$args = array(
+				'post_type' => 'collabnation',
+				
+				);
+			// the query
 			$the_query = new WP_Query( $args ); ?>
 
 			<?php if ( $the_query->have_posts() ) : ?>
@@ -25,11 +30,11 @@
 				while ( have_rows('video_section') ) : the_row(); ?>
 
 
-			
+
 			<h2><?php the_title(); ?></h2>
 
 
-			
+
 			<?php 
 
 			$image = get_sub_field('entry_video');
@@ -51,15 +56,15 @@
 			endif;
 
 		?>
-		
+
 		<?php endwhile;
 		wp_reset_postdata(); ?>
 
 	<?php endif; ?>
 
-	
 
-	
+
+
 </section>
 
 </div>
