@@ -113,7 +113,7 @@
 
 						<?php if( get_sub_field('video_title')){ ?>
 					  			
-					  		<h6 class="text-center">
+					  		<h6>
 					  			<a href="#">
 					  				<?php the_sub_field('video_title'); ?> 
 
@@ -132,8 +132,9 @@
 								?> 
 							</div>
 
-
+							<div class="video">
 					  			<?php the_sub_field('entry_video'); ?>
+					  		</div>
 
 					  		
 
