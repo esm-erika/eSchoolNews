@@ -49,7 +49,23 @@
 					$entries = new WP_Query($args2); ?>
 
 
-					<h3 class="text-center">2016 Entries</h3>
+					<h2 class="text-center">2016 Entries</h2>
+
+
+					<?php
+
+					// check if the repeater field has rows of data
+					if( have_rows('entry_section') ):
+
+					 	// loop through the rows of data
+					    while ( have_rows('entry_section') ) : the_row(); ?>
+					
+					<?php if(get_sub_field('entry_title')) {
+						echo '<h4>';
+						the_title();
+						echo '</h4>';
+
+					} ?>
 
 					<div class="entries">
 
@@ -59,15 +75,23 @@
 
 					  <div>
 
-					  	<?php if( get_field('entry_video')){ ?>
-
 					  	<div class="video">
-					  		<iframe width="420" height="315" src="https://www.youtube.com/embed/<?php the_field('entry_video') ?>" frameborder="0" allowfullscreen></iframe>
+
+					  		<?php 
+
+							$image = get_sub_field('entry_video');
+
+							if( !empty($image) ): ?>
+
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+							<?php endif; ?>
+					  		
 					  	</div>
 
-					  	<h6 class="text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+					  	<h6 class="text-center"><a href="<?php the_permalink(); ?>"><?php the_sub_field('entry_title'); ?></a></h6>
 
-					  	<?php } ?>
+					  	
 					  	
 					  </div>
 
@@ -78,6 +102,16 @@
 
 
 					</div> 
+
+					<?php
+
+					endwhile;
+
+					else :
+
+					endif;
+
+					?>
 				</section>
 
 				<h4>Congratulations to Our 2015 Winners</h4>
