@@ -47,10 +47,11 @@
 
 					  		</div>
 
-					  		<h6 class="text-center"><?php the_sub_field('video_title') ?></h6>
+					  		<?php if( get_sub_field('video_title')){ ?>
+					  			
+					  			<h6 class="text-center"><?php the_sub_field('video_title') ?></h6>
 
-
-
+					  		<?php } ?>
 					  	</div>
 
 					</div>
@@ -74,6 +75,77 @@
 </section>
 
 <section id="past-winners">
+
+	<h4 class="text-center">Congratulations to Our 2015 Winners</h4>
+
+			<?php 
+
+			$args = array(
+				'post_type' => 'collabnation',
+				'tax_query' => array(
+					array(
+					'taxonomy' => 'years',
+					'field' => 'slug',
+					'terms' => '2015',
+
+						),
+
+					),
+
+				);
+			// the query
+			$the_query = new WP_Query( $args ); ?>
+
+			<?php if ( $the_query->have_posts() ) : ?>
+
+			<!-- the loop -->
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+				<?php
+
+					// check if the repeater field has rows of data
+					if( have_rows('video_section') ):
+
+					 	// loop through the rows of data
+					    while ( have_rows('video_section') ) : the_row(); ?>
+
+					<article>
+
+						<?php if( get_sub_field('video_title')){ ?>
+					  			
+					  		<h6 class="text-center">
+					  			<a href="<?php the_sub_field('external_link') ?>">
+					  				<?php the_title(); ?> <?php the_sub_field('video_title') ?>
+					  			</a>
+					  		</h6>
+
+					  		<div class="content">
+								<?php 
+								the_sub_field('video_text');
+								?> 
+							</div>
+
+					  	<?php } ?>
+
+					  			<?php the_sub_field('entry_video'); ?>
+
+					  		
+
+					  		
+					  </article>
+
+
+					
+
+
+
+				<?php endwhile; 
+				endif; ?>
+
+		<?php endwhile;
+		wp_reset_postdata(); ?>
+
+	<?php endif; ?>
 
 
 </section>
