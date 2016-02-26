@@ -75,9 +75,13 @@ if (false === ($local_box_cache) ){
 
 <?php } else {
 
+	echo '<div class="small-12 columns">';
+
 	echo '<h1 class="entry-title">';
 	the_title(); 
 	echo '</h1>';
+
+	echo '</div>';
 
 } ?>
 
