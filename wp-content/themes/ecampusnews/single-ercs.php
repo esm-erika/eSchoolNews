@@ -67,7 +67,7 @@ if (false === ($local_box_cache) ){
 		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</div>';
 	
-	} elseif {
+	} else {
 
 		echo '<h1>' . the_title() . '</h1>';
 
