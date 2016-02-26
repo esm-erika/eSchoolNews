@@ -1512,6 +1512,25 @@ section.home {
 
 }
 
+
+#past-winners {
+
+	.video {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		// margin-bottom: 30px;
+		height: 0;
+
+	 iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
 div.social {
 	//margin-left: 0.9375rem;
 	line-height: 50px;
