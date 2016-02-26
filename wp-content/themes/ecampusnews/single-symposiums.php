@@ -131,7 +131,7 @@ $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 
 		<hr class="thick">
 
-		<h4>View Past Symposiums</h4>
+		<h4>View Past Symposia</h4>
 
 			<ul class="small-block-grid-1 medium-block-grid-2">
 
