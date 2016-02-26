@@ -1,4 +1,4 @@
-<article>
+<?php /* <article>
     <h4>Sponsored Links</h4>
 <?php 
 
@@ -27,4 +27,4 @@
     <?php wp_list_bookmarks( $args ); ?> 
 </ul>
 
-</article>
+</article> */ ?>
