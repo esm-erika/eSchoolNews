@@ -76,7 +76,7 @@
 
 <section id="past-winners">
 
-	<h4 class="text-center">Congratulations to Our 2015 Winners</h4>
+	<h4>Congratulations to Our 2015 Winners</h4>
 
 			<?php 
 
@@ -115,7 +115,13 @@
 					  			
 					  		<h6 class="text-center">
 					  			<a href="<?php the_sub_field('external_link') ?>">
-					  				<?php the_title(); ?> <?php the_sub_field('video_title') ?>
+					  				<?php the_sub_field('video_title') ?> 
+
+					  				<?php if(get_the_field('award_name')){ ?>
+
+					  				&emdash; <?php the_sub_field('award_name'); ?>
+
+					  				<?php } ?>
 					  			</a>
 					  		</h6>
 
