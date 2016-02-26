@@ -76,7 +76,7 @@
 
 <section id="past-winners">
 
-	<h4>Congratulations to Our 2015 Winners</h4>
+	
 
 			<?php 
 
@@ -100,6 +100,8 @@
 
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+			<h4><?php the_title(); ?></h4>
 
 				<?php
 
