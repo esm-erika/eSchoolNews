@@ -43,18 +43,7 @@
 						<div>
 					  		<div class="video">
 
-					  			<?php 
-
-								$image = get_sub_field('entry_video');
-
-								if( !empty($image) ): ?>
-
-									
-								<a href="<?php the_sub_field('woobox_url')?>">
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-								</a>
-
-								<?php endif; ?>
+					  			<?php the_sub_field('entry_video'); ?>
 
 					  		</div>
 
@@ -80,6 +69,11 @@
 	<?php endif; ?>
 
 
+
+
+</section>
+
+<section id="past-winners">
 
 
 </section>
