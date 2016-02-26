@@ -83,9 +83,7 @@ if (false === ($local_box_cache) ){
 			if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);
 			}
 
-	?>
-
-	<?php } else {
+	} else {
 
 		echo '<h1>' . the_title() . '</h1>';
 
