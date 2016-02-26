@@ -75,7 +75,9 @@ if (false === ($local_box_cache) ){
 
 <?php } else {
 
-	echo '<h1 class="entry-title">' . get_title() . '</h1>';
+	echo '<h1 class="entry-title">';
+	the_title(); 
+	echo '</h1>';
 
 } ?>
 
