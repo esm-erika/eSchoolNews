@@ -31,6 +31,22 @@
 
 			<h2><?php the_title(); ?></h2>
 
+				<?php
+
+					// check if the repeater field has rows of data
+					if( have_rows('video_section') ):
+
+					 	// loop through the rows of data
+					    while ( have_rows('video_section') ) : the_row(); ?>
+
+
+					<?php the_sub_field('video_title') ?>
+
+
+
+				<?php endwhile; 
+				endif; ?>
+
 		<?php endwhile;
 		wp_reset_postdata(); ?>
 
