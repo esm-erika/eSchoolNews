@@ -58,9 +58,7 @@ if (false === ($local_box_cache) ){
 
 		echo '<div class="small-12 medium-12 columns text-center">'; ?>
 
-	<?php	
-
-	if (get_field('masthead_url')) {
+	<?php	if (get_field('masthead_url')) {
 		echo '<a href="' . get_field('masthead_url') . '">'; 
 		echo '<img style="max-width: none; width: 100%;" src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
 		echo '</a>';
@@ -72,23 +70,21 @@ if (false === ($local_box_cache) ){
 
 	<?php } elseif ($astused > 0){
 		// ast used defined   How to do this in the new?
-			} else {
-					$pageadset = $_GET['ast'];
-				if(filter_var($pageadset, FILTER_VALIDATE_INT))
-				{//reserved for default ad set
-					$astused = $pageadset;	
-				} else {
-					// Retrieve adset info from URL query vars
-					$astused = 1;
-				}
-			}
-			if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);
-	
 	} else {
+			$pageadset = $_GET['ast'];
+		if(filter_var($pageadset, FILTER_VALIDATE_INT))
+		{//reserved for default ad set
+			$astused = $pageadset;	
+		} else {
+			// Retrieve adset info from URL query vars
+			$astused = 1;
+		}
+	}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,11);
+	}
 
-		echo '<h1>' . the_title() . '</h1>';
+	?>
 
-	} ?>
 </div>
 
 	<?php if(get_field('erc_html')) { 
