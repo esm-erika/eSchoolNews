@@ -10,6 +10,15 @@
 
 			$args = array(
 				'post_type' => 'collabnation',
+				'tax_query' => array(
+					array(
+					'taxonomy' => 'years',
+					'field' => 'slug',
+					'terms' => '2016',
+
+						),
+
+					),
 
 				);
 			// the query
