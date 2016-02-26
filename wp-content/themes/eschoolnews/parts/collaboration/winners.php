@@ -10,7 +10,6 @@
 
 					<h2 class="text-center">2016 Entries</h2>
 
-
 					<?php
 
 					// check if the repeater field has rows of data
@@ -19,12 +18,7 @@
 					 	// loop through the rows of data
 					    while ( have_rows('entry_section') ) : the_row(); ?>
 					
-					<?php if(get_sub_field('entry_title')) {
-						echo '<h4>';
-						the_title();
-						echo '</h4>';
-
-					} ?>
+					<h4><?php the_title(); ?></h4>
 
 					<?php 
 
