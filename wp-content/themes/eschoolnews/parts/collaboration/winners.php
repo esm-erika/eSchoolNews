@@ -132,7 +132,6 @@
 								?> 
 							</div>
 
-					  	<?php } ?>
 
 					  			<?php the_sub_field('entry_video'); ?>
 
