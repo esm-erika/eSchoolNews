@@ -536,7 +536,172 @@ if(function_exists("register_field_group"))
  * Collaboration Nation Custom Fields
  * =================================================================================*/
 
-	
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-pdfs',
+		'title' => 'Collaboration Nation PDFs',
+		'fields' => array (
+			array (
+				'key' => 'field_568aca9a46e1d',
+				'label' => 'Upload PDFs',
+				'name' => 'rules_pdf',
+				'type' => 'file',
+				'instructions' => 'Upload PDF containing Rules.',
+				'save_format' => 'url',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '177152',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-video',
+		'title' => 'Collaboration Nation Video',
+		'fields' => array (
+			array (
+				'key' => 'field_56d0bbf4085fb',
+				'label' => 'Entry Section',
+				'name' => 'video_section',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_56d0beb282838',
+						'label' => 'School Name',
+						'name' => 'video_title',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_56d0bc1a085fc',
+						'label' => 'Entry Video',
+						'name' => 'entry_video',
+						'type' => 'textarea',
+						'instructions' => 'Video Embed Script',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'html',
+					),
+					array (
+						'key' => 'field_56d0c656eefe3',
+						'label' => 'Award Name',
+						'name' => 'award_name',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_56d0dc6c00782',
+						'label' => 'video_text',
+						'name' => 'video_text',
+						'type' => 'textarea',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'html',
+					),
+					array (
+						'key' => 'field_56d0e37f178b1',
+						'label' => 'External Link',
+						'name' => 'external_link',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'row',
+				'button_label' => 'Add Entry Section',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'collabnation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_collaboration-nation-winner-field',
+		'title' => 'Collaboration Nation Winner Field',
+		'fields' => array (
+			array (
+				'key' => 'field_5682c95afa7fc',
+				'label' => 'Is this entry a winner?',
+				'name' => 'entry_winner',
+				'type' => 'true_false',
+				'message' => 'Select if this entry is a winner.',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'collabnation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 
 
 /*===================================================================================
