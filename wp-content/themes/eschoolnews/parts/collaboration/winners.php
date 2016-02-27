@@ -30,6 +30,8 @@
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 			<h4><?php the_title(); ?></h4>
+								<div class="entries">
+
 
 				<?php
 
@@ -39,7 +41,6 @@
 					 	// loop through the rows of data
 					    while ( have_rows('video_section') ) : the_row(); ?>
 
-					<div class="entries">
 						<div>
 					  		<div class="video">
 
@@ -54,7 +55,7 @@
 					  		<?php } ?>
 					  	</div>
 
-					</div>
+					
 
 
 					
@@ -63,6 +64,8 @@
 
 				<?php endwhile; 
 				endif; ?>
+
+				</div>
 
 		<?php endwhile;
 		wp_reset_postdata(); ?>
