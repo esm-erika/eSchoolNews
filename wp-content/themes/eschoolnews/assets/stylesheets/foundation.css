@@ -9580,6 +9580,8 @@ body.page.collaboration #recent-entries .video, body.page-template-collaboration
     left: 0;
     width: 100%;
     height: 100%; }
+body.page.collaboration #recent-entries .slick-track h6, body.page-template-collaboration-nation #recent-entries .slick-track h6 {
+  color: #000; }
 body.page.collaboration #recent-entries .slick-prev:before, body.page.collaboration #recent-entries .slick-next:before, body.page-template-collaboration-nation #recent-entries .slick-prev:before, body.page-template-collaboration-nation #recent-entries .slick-next:before {
   color: #336699; }
 body.page.collaboration #past-winners .video, body.page-template-collaboration-nation #past-winners .video {
