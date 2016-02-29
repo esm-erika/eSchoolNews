@@ -10,7 +10,7 @@
 
 			$args = array(
 				'post_type' => 'collabnation',
-				'order' => 'DESC',
+				'order' => 'ASC',
 				'tax_query' => array(
 					array(
 					'taxonomy' => 'years',
