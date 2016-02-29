@@ -664,9 +664,9 @@ if(function_exists("register_field_group"))
 		'options' => array (
 			'position' => 'normal',
 			'layout' => 'default',
-			'hide_on_screen' => array (
-				0 => 'the_content',
-			),
+			// 'hide_on_screen' => array (
+			// 	0 => 'the_content',
+			// ),
 		),
 		'menu_order' => 0,
 	));
