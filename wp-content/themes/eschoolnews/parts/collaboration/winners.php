@@ -10,6 +10,7 @@
 
 			$args = array(
 				'post_type' => 'collabnation',
+				'order' => 'DESC',
 				'tax_query' => array(
 					array(
 					'taxonomy' => 'years',
@@ -32,7 +33,7 @@
 			<h4><?php the_title(); ?></h4>
 
 			<?php 
-			
+
 			$content = get_the_content();
 
 			if($content !='') { 
