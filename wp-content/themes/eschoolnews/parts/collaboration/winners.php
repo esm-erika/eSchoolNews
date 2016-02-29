@@ -30,7 +30,22 @@
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 			<h4><?php the_title(); ?></h4>
-								<div class="entries">
+
+			<?php 
+			
+			$content = get_the_content();
+
+			if($content !='') { 
+
+				the_content();
+
+			} else {
+				
+				//Nothing
+
+			} ?>
+			
+		<div class="entries">
 
 
 				<?php
