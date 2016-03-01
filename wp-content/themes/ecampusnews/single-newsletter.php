@@ -1066,19 +1066,6 @@ table.columns .right-text-pad {
 
                           <?php the_field('newsletter_introduction'); ?>
 
-                          <br><br>
-
-                        
-
-                    <center style="width: 100%;">
-
-                    <table class="hr" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
-                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-                        <td height="1" bgcolor="#999999" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1px; font-size: 1px; height: 1px; width: 100%; background: #999999; margin: 0; padding: 0px;" align="left" valign="top">&nbsp;</td>
-                      </tr>
-                    </table>
-
-                  </center>
 
                   </td>
                 </tr>
@@ -1087,6 +1074,9 @@ table.columns .right-text-pad {
               </td>
                       </tr>
                   </table>
+
+                                            <br><br>
+
 
 
               <?php } ?>
