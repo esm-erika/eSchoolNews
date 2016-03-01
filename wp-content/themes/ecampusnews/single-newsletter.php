@@ -1066,11 +1066,7 @@ table.columns .right-text-pad {
 
                           <?php the_field('newsletter_introduction'); ?>
 
-                        </td>
-                      </tr>
-                  </table>
-
-                  <br />
+                        
 
                     <center style="width: 100%;">
 
@@ -1085,6 +1081,11 @@ table.columns .right-text-pad {
                   </td>
                 </tr>
               </table>
+
+              </td>
+                      </tr>
+                  </table>
+
 
               <?php } ?>
 
