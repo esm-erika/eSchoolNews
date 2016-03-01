@@ -1054,7 +1054,11 @@ table.columns .right-text-pad {
 
               <!-- End Masthead -->
 
-              <?php if(get_field('newsletter_introduction')) { ?>
+              <?php 
+
+              $content = get_the_content();
+
+              if($content != '') { ?>
 
               <table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
                 <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
@@ -1064,7 +1068,7 @@ table.columns .right-text-pad {
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
 
-                          <?php the_field('newsletter_introduction'); ?>
+                          <?php the_content(); ?>
 
                         </td>
                       </tr>
