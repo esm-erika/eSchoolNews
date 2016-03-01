@@ -1066,7 +1066,7 @@ table.columns .right-text-pad {
 
                           <?php the_field('newsletter_introduction'); ?>
 
-                          <br />
+                          <br><br>
 
                         
 
