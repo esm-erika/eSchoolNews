@@ -1066,6 +1066,8 @@ table.columns .right-text-pad {
 
                           <?php the_field('newsletter_introduction'); ?>
 
+                          <br />
+
                         
 
                     <center style="width: 100%;">
