@@ -942,11 +942,11 @@ table.columns .right-text-pad {
       <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
         <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
           <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
-            <a href="http://www.twitter.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
+            <a href="http://www.twitter.com/ecampusnews" style="color: #2ba6cb; text-decoration: none;">
             <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
             </a>
 
-            <a href="http://www.facebook.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
+            <a href="http://www.facebook.com/ecampusnews" style="color: #2ba6cb; text-decoration: none;">
             <img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
             </a>
 
@@ -982,7 +982,7 @@ table.columns .right-text-pad {
 
   <table class="six columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
     <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
-    <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top"><img border="0" src="http://www.eschoolnews.com/e/i/erc_esnlogo.gif" alt="" title="" name="Image_fb" height="27" width="167" align="left" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;"></td>
+    <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top"><img border="0" src="http://www.eschoolnews.com/e/i/eCNlogo-small.gif" alt="" title="eCampus News" name="Image_fb" height="27" width="167" align="left" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;"></td>
     <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
   </tr>
 </table>
@@ -1053,6 +1053,40 @@ table.columns .right-text-pad {
               </table>
 
               <!-- End Masthead -->
+
+              <?php if(get_field('newsletter_introduction')) { ?>
+
+              <table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
+                <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                  <td class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 10px 0px 0px;" align="left" valign="top">
+                
+                  <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
+
+                          <?php the_field('newsletter_introduction'); ?>
+
+                        </td>
+                      </tr>
+                  </table>
+
+                  <br />
+
+                    <center style="width: 100%;">
+
+                    <table class="hr" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
+                      <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <td height="1" bgcolor="#999999" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 1px; font-size: 1px; height: 1px; width: 100%; background: #999999; margin: 0; padding: 0px;" align="left" valign="top">&nbsp;</td>
+                      </tr>
+                    </table>
+
+                  </center>
+
+                  </td>
+                </tr>
+              </table>
+
+              <?php } ?>
 
 
 
