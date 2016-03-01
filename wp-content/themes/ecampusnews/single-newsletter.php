@@ -1056,9 +1056,9 @@ table.columns .right-text-pad {
 
               <?php 
 
-              $content = get_the_content();
+              $intro = get_the_content();
 
-              if($content != '') { ?>
+              if($intro != '') { ?>
 
               <table class="row" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; display: block; padding: 0px;">
                 <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
