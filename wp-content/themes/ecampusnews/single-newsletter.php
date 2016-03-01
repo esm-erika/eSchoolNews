@@ -1394,8 +1394,8 @@ table.columns .right-text-pad {
 
                           <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left">eSchool News, 7920 Norfolk Ave Suite 900, Bethesda, MD 20814<br>
                             Phone: 301-913-0115 <br>
-                            <a href="http://www.eschoolnews.com" style="color: #2ba6cb; text-decoration: none;">www.eschoolnews.com</a> <br>
-                            <a href="mailto:custserv@eschoolnews.com" style="color: #2ba6cb; text-decoration: none;">custserv@eschoolnews.com</a>
+                            <a href="http://www.ecampusnews.com" style="color: #2ba6cb; text-decoration: none;">www.ecampusnews.com</a> <br>
+                            <a href="mailto:custserv@ecampusnews.com" style="color: #2ba6cb; text-decoration: none;">custserv@ecampusnews.com</a>
                           </p>
 
                         </td>
@@ -1409,11 +1409,11 @@ table.columns .right-text-pad {
                     <table class="six columns social" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 280px; margin: 0 auto; padding: 0;">
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
-                          <a href="http://www.twitter.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
+                          <a href="http://www.twitter.com/ecampusnews" style="color: #2ba6cb; text-decoration: none;">
                           <img border="0" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-TW.png" alt="" name="Twitter" id="Twitter" title="" border="0" height="32" width="32" align="right" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
                           </a>
 
-                          <a href="http://www.facebook.com/eschoolnews" style="color: #2ba6cb; text-decoration: none;">
+                          <a href="http://www.facebook.com/ecampusnews" style="color: #2ba6cb; text-decoration: none;">
                           <img border="0" align="right" src="http://www.ecampusnews.com/e/i/32x32-Circle-57-FB.png" alt="" name="FB" id="FB" title="" border="0" height="32" width="32" class="text-pad" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;">
                           </a>
 
@@ -1451,7 +1451,29 @@ table.columns .right-text-pad {
                         <td align="center">
                           <center style="width: 100%;">
                             <p style="text-align:center;"><small>Contents ©2015 eSchool Media. All rights reserved.</small></p>
-                            <p style="text-align:center;"><a href="#" style="color: #2ba6cb; text-decoration: none;">Terms</a> | <a href="#" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | <a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=100" target="_blank" style="color: #2ba6cb; text-decoration: none;">Unsubscribe</a></p>
+                            <p style="text-align:center;"><a href="http://www.ecampusnews.com/privacy-policy/" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | 
+
+                            <?php if( has_term('it-campus-leadership', 'publications')) {
+
+                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=205" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+                            } elseif( has_term('ecampus-news-today', 'publications')) {
+
+                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+
+                           } elseif( has_term('reinventing-higher-education', 'publications')) {
+
+                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=200" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+                          
+                          } else {
+
+                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+
+                          } ?>
+
+                              Unsubscribe</a></p>
+
                           </center>
                         </td>
                         <td class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>

@@ -788,7 +788,7 @@ if(function_exists("register_field_group"))
 			'layout' => 'default',
 			'hide_on_screen' => array (
 				0 => 'permalink',
-				//1 => 'the_content',
+				1 => 'the_content',
 				2 => 'excerpt',
 				3 => 'custom_fields',
 				4 => 'discussion',
