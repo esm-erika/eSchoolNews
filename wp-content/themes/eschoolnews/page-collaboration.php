@@ -213,9 +213,11 @@ Entries accepted from 4/1-4/30 and voting takes place from 5/1-5/15</li>
 			<hr>
 			<p>Share your school or district's success story with the Collaboration Nation community and with your friends, faculty, parents and family. The school or district with the most votes between the first and the fifteenth of March, April and May will win a $15,000 prize in products from Collaboration Nation partners HP, Lenovo, Cisco or Cisco Meraki.</p>
 			
-			<a href="<?php home_url(); ?>/collaboration/submission-form" class="button-submit">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/voting-begins.png" alt="Voting Begins March 1!">
-			</a>
+			<h2 class="text-center">
+				<a target="_blank" href="https://www.facebook.com/CDWGCollaboration/app/403834839671843/">
+					Vote Now!
+				</a>
+			</h2>
 		</div>
 
 		<div class="small-12 medium-4 columns twitter">
