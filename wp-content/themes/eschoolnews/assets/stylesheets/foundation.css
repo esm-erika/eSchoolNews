@@ -8723,6 +8723,11 @@ th.hide-for-touch {
 .row {
   max-width: 68.75em !important; }
 
+body.home {
+  background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
+  background-repeat: none;
+  background-position: center center; }
+
 a:link, a:visited {
   color: #336699; }
 
