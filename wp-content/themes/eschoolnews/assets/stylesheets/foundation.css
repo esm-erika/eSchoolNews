@@ -8874,6 +8874,9 @@ nav.tab-bar .tab-bar-section.middle .title {
   .sticky.fixed ul.top-bar-menu {
     border-bottom: 0; }
 
+.contain-to-grid, .top-bar {
+  background-color: transparent; }
+
 .top-bar-container {
   margin-bottom: 10px !important; }
 
