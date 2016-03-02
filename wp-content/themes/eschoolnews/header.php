@@ -49,6 +49,8 @@ get_template_part( 'library/logged-in-check' );
   <div class="off-canvas-wrap" data-offcanvas>
    <div class="inner-wrap">
 
+    <div class="container-content">
+
      <?php do_action( 'foundationpress_layout_start' ); ?>
 
      <nav class="tab-bar show-for-small-up hide-for-medium-up">
@@ -202,6 +204,8 @@ if (false === ($local_box_cache) ){
     <?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
     <?php get_template_part( 'parts/top-bar' ); ?>
+
+  </div>
 
     <section class="container" role="document">
      
