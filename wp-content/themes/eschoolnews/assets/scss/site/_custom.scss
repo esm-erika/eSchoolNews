@@ -10,9 +10,15 @@ body.home {
 }
 
 section.container, .container-content {
+	background-color: #fff;
+
 	.row {
 		background-color: #fff;
 	}
+}
+
+.container-content {
+	margin: auto;
 }
 
 
