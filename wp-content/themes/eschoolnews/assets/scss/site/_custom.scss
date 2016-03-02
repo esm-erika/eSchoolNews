@@ -409,11 +409,15 @@ nav.middle {
 nav.small-nav {
 	margin-top: 10px;
 	padding: 0 0px 20px 0;
-	background-color: #ffffff;
 
 	button, .button {
 		margin: 0;
 	}
+}
+
+section.small-nav {
+	background-color: #ffffff;
+
 }
 
 .title-area {
