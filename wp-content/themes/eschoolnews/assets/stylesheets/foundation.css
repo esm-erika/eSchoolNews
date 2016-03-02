@@ -8969,7 +8969,8 @@ nav.small-nav {
     margin: 0; }
 
 .title-area {
-  margin-bottom: 10px; }
+  padding-bottom: 10px;
+  background-color: #fff; }
   .title-area .name h1 a {
     background-color: #ffffff;
     text-align: center; }
