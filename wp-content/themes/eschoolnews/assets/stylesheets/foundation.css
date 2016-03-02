@@ -8968,11 +8968,10 @@ nav.middle .title {
 
 nav.small-nav {
   margin-top: 10px;
-  padding: 0 0px 20px 0; }
+  padding: 0 0px 20px 0;
+  background-color: #fff; }
   nav.small-nav button, nav.small-nav .button {
     margin: 0; }
-  nav.small-nav .row {
-    background-color: #fff; }
 
 .title-area {
   padding-bottom: 10px;

@@ -11,7 +11,7 @@
 
 ?>
 
-</div>
+
 
 <div class="row">
 <?php if ($astused > 0){ ?>
@@ -36,6 +36,7 @@
 	</div>
 </div>
 
+</div>
 
 <section id="publications">
 
