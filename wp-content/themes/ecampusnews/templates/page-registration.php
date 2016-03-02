@@ -212,15 +212,25 @@ $wp_subreq_id = '21'.$entry[4]; //21 = digital ecn [4] is email
 	} else {
 		$newperson['eCN_This_Week__c'] = "Not Subscribed";
 	}
+	
+//	<span style="cursor:Pointer;" title="Weekly on Wednesday"> eCampus IT Leadership<img src="/wp-content/themes/advanced-newspaper/images/info14.gif" /></span>|Subscribed
 	if (!empty ($entry['57.3'])){
-		$newperson['eCN_Offers__c'] = $entry['57.3'];
+		$newperson['eCN_IT_School_Leadership__c'] = $entry['57.3'];
 		if ($entry['57.3'] == 'Subscribed'){$OptedOutflag = 1;}
+	} else {
+		$newperson['eCN_IT_School_Leadership__c'] = "Not Subscribed";
+	}
+
+	
+	if (!empty ($entry['57.4'])){
+		$newperson['eCN_Offers__c'] = $entry['57.4'];
+		if ($entry['57.4'] == 'Subscribed'){$OptedOutflag = 1;}
 	} else {
 		$newperson['eCN_Offers__c'] = "Not Subscribed";
 	}
-	if (!empty ($entry['57.4'])){
-		$newperson['eCN_Partners__c'] = $entry['57.4'];
-		if ($entry['57.4'] == 'Subscribed'){$OptedOutflag = 1;}
+	if (!empty ($entry['57.5'])){
+		$newperson['eCN_Partners__c'] = $entry['57.5'];
+		if ($entry['57.5'] == 'Subscribed'){$OptedOutflag = 1;}
 	} else {
 		$newperson['eCN_Partners__c'] = "Not Subscribed";
 	}
