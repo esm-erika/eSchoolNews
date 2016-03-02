@@ -205,12 +205,10 @@ if (false === ($local_box_cache) ){
 
     <?php get_template_part( 'parts/top-bar' ); ?>
 
-  </div>
+
 
     <section class="container" role="document">
      
-  <div class="container-content">
-
     <?php do_action( 'foundationpress_after_header' ); ?>
 
 <?php
