@@ -8967,7 +8967,7 @@ nav.small-nav {
   padding: 0 0px 20px 0; }
   nav.small-nav button, nav.small-nav .button {
     margin: 0; }
-  nav.small-nav div {
+  nav.small-nav .row {
     background-color: #fff; }
 
 .title-area {

@@ -59,7 +59,7 @@ get_template_part( 'library/logged-in-check' );
      
      <section class="small-nav row">
 
-  <div class="show-for-medium-up" style="height: 20px;"></div>
+  <div class="show-for-medium-up" style="background-color: #fff; height: 20px;"></div>
 
 
       <div class="small-12 medium-6 small-offset-1 medium-offset-0 search columns small-only-text-center medium-text-left">
