@@ -9294,12 +9294,11 @@ span.embed-youtube iframe {
 
 .ad-container {
   text-align: center;
-  margin: 20px 0;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
 
 .container > div {
-  margin-bottom: 20px; }
+  padding-bottom: 20px; }
 
 footer.container > div {
   border-top: none;
