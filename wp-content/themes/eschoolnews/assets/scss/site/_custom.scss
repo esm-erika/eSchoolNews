@@ -1,4 +1,4 @@
-.row, .container-content {
+.row, .container-content, .ad-container {
 	max-width: 68.75em !important; 
 }
 
@@ -17,7 +17,7 @@ section.container, .container-content {
 	}
 }
 
-.container-content {
+.container-content, .ad-container {
 	margin: auto;
 	background-color: #fff;
 }
