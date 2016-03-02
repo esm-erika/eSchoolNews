@@ -10,6 +10,9 @@
  */
 
 ?>
+
+</div>
+
 <div class="row">
 <?php if ($astused > 0){ ?>
     <div class="medium-12 columns ad-container">

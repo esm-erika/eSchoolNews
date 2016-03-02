@@ -205,7 +205,8 @@ if (false === ($local_box_cache) ){
 
     <section class="container" role="document">
      
-
+  <div class="container-content">
+  
     <?php do_action( 'foundationpress_after_header' ); ?>
 
 <?php
