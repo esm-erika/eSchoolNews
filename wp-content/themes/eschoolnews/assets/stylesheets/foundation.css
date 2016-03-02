@@ -8729,13 +8729,12 @@ body.home {
   background-position: center center;
   background-attachment: fixed; }
 
-section.container, .container-content {
+section.container .row, .container-content .row {
   background-color: #fff; }
-  section.container .row, .container-content .row {
-    background-color: #fff; }
 
 .container-content {
-  margin: auto; }
+  margin: auto;
+  background-color: #fff; }
 
 a:link, a:visited {
   color: #336699; }
