@@ -86,5 +86,5 @@ echo $local_box_cache;
 
 
 </div>
-</div>
+
 <?php get_footer(); ?>
