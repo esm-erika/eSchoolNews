@@ -8726,7 +8726,8 @@ th.hide-for-touch {
 body.home {
   background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+  background-attachment: fixed; }
 
 section.container .row {
   background-color: #fff; }
