@@ -8720,7 +8720,7 @@ th.hide-for-touch {
   My custom styles:
   Add your scss files below to structure your project styles
 */
-.row {
+.row, .container-content {
   max-width: 68.75em !important; }
 
 body.home {
@@ -8729,7 +8729,7 @@ body.home {
   background-position: center center;
   background-attachment: fixed; }
 
-section.container .row {
+section.container .row, .container-content .row {
   background-color: #fff; }
 
 a:link, a:visited {

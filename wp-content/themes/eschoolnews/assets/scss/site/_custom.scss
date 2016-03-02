@@ -1,4 +1,4 @@
-.row {
+.row, .container-content {
 	max-width: 68.75em !important; 
 }
 
@@ -9,7 +9,7 @@ body.home {
 	background-attachment: fixed;
 }
 
-section.container {
+section.container, .container-content {
 	.row {
 		background-color: #fff;
 	}
