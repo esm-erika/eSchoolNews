@@ -8,6 +8,12 @@ body.home {
 	background-position: center center;
 }
 
+section.container {
+	.row {
+		background-color: #fff;
+	}
+}
+
 
 
 // Text Styles
@@ -240,7 +246,7 @@ nav.tab-bar .tab-bar-section.middle {
 
 
 .contain-to-grid, .top-bar {
-	background-color: #ffffff;
+	//background-color: #ffffff;
 }
 
 .top-bar-container {

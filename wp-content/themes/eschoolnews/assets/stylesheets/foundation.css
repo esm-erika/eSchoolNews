@@ -8728,6 +8728,9 @@ body.home {
   background-repeat: none;
   background-position: center center; }
 
+section.container .row {
+  background-color: #fff; }
+
 a:link, a:visited {
   color: #336699; }
 
@@ -8870,9 +8873,6 @@ nav.tab-bar .tab-bar-section.middle .title {
   background-color: #fff; }
   .sticky.fixed ul.top-bar-menu {
     border-bottom: 0; }
-
-.contain-to-grid, .top-bar {
-  background-color: #ffffff; }
 
 .top-bar-container {
   margin-bottom: 10px !important; }
