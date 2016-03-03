@@ -8727,8 +8727,7 @@ body.home {
   background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
   background-repeat: repeat-y;
   background-position: top center;
-  background-attachment: fixed;
-  background-size: cover; }
+  background-attachment: fixed; }
 
 section.container .row, .container-content .row {
   background-color: #fff; }
