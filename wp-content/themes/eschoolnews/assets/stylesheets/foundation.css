@@ -8723,12 +8723,6 @@ th.hide-for-touch {
 .row, .container-content, .ad-container {
   max-width: 68.75em !important; }
 
-body.home {
-  background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
-  background-repeat: repeat-y;
-  background-position: top center;
-  background-attachment: fixed; }
-
 section.container .row, .container-content .row {
   background-color: #fff; }
 
