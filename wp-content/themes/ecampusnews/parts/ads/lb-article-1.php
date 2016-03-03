@@ -25,7 +25,7 @@
 		}
 	}
 	 echo '    <!-- leaderboard banner '.$astused.' --> '; 
-	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,5);}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,33);}
 		
 	?>
         
