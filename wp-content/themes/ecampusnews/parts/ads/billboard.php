@@ -25,7 +25,7 @@
 		}
 	}
 	 echo '    <!-- billboard banner '.$astused.' --> '; 
-	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,23);}
+	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,17);}
 		
 	?>
         
