@@ -991,7 +991,38 @@ register_field_group(array (
 		'menu_order' => 0,
 	));
 
-	
+	register_field_group(array (
+		'id' => 'acf_current-issue-banner',
+		'title' => 'Current Issue Banner',
+		'fields' => array (
+			array (
+				'key' => 'field_56d86a37a578f',
+				'label' => 'Current Issue',
+				'name' => 'current_issue',
+				'type' => 'true_false',
+				'message' => 'Include current issue banner?',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'newsletter',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 
 
 
