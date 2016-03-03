@@ -101,8 +101,13 @@ if (false === ($local_box_cache) ){
 						
 
 
-						<span class="flag content"><a href="<?php the_permalink(); ?>">News</a></span>
-
+				<span class="flag">
+					<?php if(get_field('sponsored_article')) { ?>
+					<a href="<?php the_permalink(); ?>">Sponsored</a>
+					<?php } else { ?>
+					<a href="<?php the_permalink(); ?>">News</a>
+					<?php } ?>
+				</span>
 						<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						<?php if( get_field('remove_author')) { 
 

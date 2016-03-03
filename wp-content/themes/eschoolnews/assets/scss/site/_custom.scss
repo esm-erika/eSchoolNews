@@ -1,12 +1,13 @@
-.row, .container-content {
+.row, .container-content, .ad-container {
 	max-width: 68.75em !important; 
 }
 
 body.home {
-	background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
+	//background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
+	//background-repeat: repeat-y;
+	//background-position: top center;
+	//background-attachment: fixed;
+	//background-size: cover;
 }
 
 section.container, .container-content {
@@ -17,7 +18,7 @@ section.container, .container-content {
 	}
 }
 
-.container-content {
+.container-content, .ad-container {
 	margin: auto;
 	background-color: #fff;
 }
@@ -960,9 +961,7 @@ span.embed-youtube iframe {
 
 .ad-container {
 	text-align: center;
-	margin: 20px 0;
-	padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+	padding: 20px 0;
 }
 
 
@@ -971,7 +970,7 @@ span.embed-youtube iframe {
 .container > div {
 	//border-top: 5px solid #333;
 	//padding-top: 20px;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 
 footer.container > div {
@@ -1145,7 +1144,7 @@ footer.container > div {
 
 #publications {
 	background-color: #ccc;
-	margin-top: 30px;
+	//margin-top: 30px;
 
 	.row {
 		padding: 20px 0 0 0;

@@ -13,13 +13,12 @@
 
 
 
-<div class="row">
+
 <?php if ($astused > 0){ ?>
-    <div class="medium-12 columns ad-container">
+    
         <?php get_template_part( 'parts/ads/ercbottom' ); ?>
-    </div>
+  
 <?php } ?>
-	<div class="medium-12 columns ad-container">
 
      <?php 
 	 if ( is_singular( array( 'post', 'ercs' ) )){

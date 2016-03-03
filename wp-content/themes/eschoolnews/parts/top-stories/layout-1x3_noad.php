@@ -61,7 +61,13 @@
 		<article>
 
 			<header> 
-				<span class="flag"><a href="<?php site_url(); ?>/top-stories">News</a></span>
+				<span class="flag">
+					<?php if(get_field('sponsored_article')) { ?>
+					<a href="<?php the_permalink(); ?>">Sponsored</a>
+					<?php } else { ?>
+					<a href="<?php echo site_url(); ?>/top-stories">News</a>
+					<?php } ?>
+				</span>
 				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<div class="excerpt">
 						<?php 

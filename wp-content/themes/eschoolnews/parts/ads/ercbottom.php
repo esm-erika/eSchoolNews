@@ -9,6 +9,10 @@
 
 ?>
 
+<div class="ad-container">
+		<div class="row">
+			<div class="small-12 columns">
+
 			<?php // echo adrotate_group('1'); 
 		
 	if ($astused > 0){
@@ -27,3 +31,7 @@
 	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,12);}
 		
 	?>
+
+		</div>
+	</div>
+</div>
