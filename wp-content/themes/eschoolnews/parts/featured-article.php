@@ -96,7 +96,15 @@
 						<article class="small-12 medium-6 columns">		
 
 			<header> 
-					<span class="flag"><a href="<?php the_permalink(); ?>">Featured</a></span>
+
+				<span class="flag">
+					<?php if(get_field('sponsored_article')) { ?>
+					<a href="<?php the_permalink(); ?>">Sponsored</a>
+					<?php } else { ?>
+					<a href="<?php the_permalink(); ?>">Featured</a>
+					<?php } ?>
+				</span>
+
 				<h2>
 					<a href="<?php the_permalink(); ?>">
 					<?php the_title(); ?>
