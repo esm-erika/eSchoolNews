@@ -2,11 +2,17 @@
 
 	$post_type = get_post_type( $post->ID ); 
 
-	if ($post_type == 'post') {
+	if (get_field('sponsored_article')) {
+		echo '<span class="flag content">';
+		echo '<a href="' . get_the_permalink() . '">';
+		echo 'Sponsored';
+		echo '</a></span>';
+
+	} elseif ($post_type == 'post') {
 
 		echo '<span class="flag content">';
 		echo '<a href="' . get_the_permalink() . '">';
-		echo 'News'; 
+		echo '<a href="' . get_the_permalink() . '">'; 
 		echo '</a></span>';
 	
 	} else {
