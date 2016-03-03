@@ -12,7 +12,7 @@
 
 		echo '<span class="flag content">';
 		echo '<a href="' . get_the_permalink() . '">';
-		echo '<a href="' . get_the_permalink() . '">'; 
+		echo 'News'; 
 		echo '</a></span>';
 	
 	} else {
