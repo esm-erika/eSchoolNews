@@ -892,10 +892,6 @@ table.columns .right-text-pad {
 
   <!-- This will appear as the preview text on email clients. -->
 
-  <span style="display: none !important;">
-    This is my preview text!
-  </span>
-
 
   <!-- Begin BODY of Email Template -->
 
