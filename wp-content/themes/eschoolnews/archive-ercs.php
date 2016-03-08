@@ -42,6 +42,9 @@ if (false === ($local_box_cache) ){
 		// the query
 			$the_query = new WP_Query(array(
 				'post_type' => 'ercs',
+				
+				'orderby' => 'rand',
+				
 				'meta_query' => array(
 					array(
 						'key' => 'erc_status',
@@ -50,6 +53,7 @@ if (false === ($local_box_cache) ){
 						)
 					),
 				'posts_per_page' => -1
+				
 				));	
 
 
