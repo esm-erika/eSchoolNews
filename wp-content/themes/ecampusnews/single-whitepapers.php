@@ -22,15 +22,15 @@ get_header(); ?>
 
 		if ( has_post_thumbnail() ) { ?>
 		
-		<div class="medium-4 columns">
+		<div class="small-12 medium-4 columns">
 			<?php the_post_thumbnail('medium-portrait'); ?>
 		</div>
 		
-		<div class="medium-8 columns">
+		<div class="small-12 medium-8 columns">
 
 		<?php } else { ?>
 
-		<div class="medium-12 columns">
+		<div class="small-12 medium-12 columns">
 
 		<?php } ?>
 
