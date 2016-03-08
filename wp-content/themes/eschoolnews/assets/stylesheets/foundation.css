@@ -8727,6 +8727,10 @@ body.home {
   background-repeat: repeat-y;
   background-position: top center; }
 
+img.tracking {
+  width: 1px !important;
+  height: 1px !important; }
+
 section.container .row, .container-content .row {
   background-color: #fff; }
 
