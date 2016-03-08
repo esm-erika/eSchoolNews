@@ -55,7 +55,7 @@ get_header(); ?>
 
 			
 				<div class="row sponsored">
-					<div class="small-12 columns">
+					<div class="small-12 medium-6 columns">
 
 					<small>Sponsored by:</small><br>
 
