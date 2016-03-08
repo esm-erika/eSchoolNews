@@ -336,7 +336,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					the Teacher Dashboard make it easier to adjust instruction.</p>
 				</div></div>
 
-					<h6><a target="_blank" style="background-color: #65308f;" href="http://www.eschoolnews.com/rtp.php?rtl=351&ast=154&astc=11650" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
+					<h6><a target="_blank" style="background-color: #65308f;" href="http://www.eschoolnews.com/rtp.php?rtl=351&ast=154&astc=11650" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/Math.</a></h6>
 					
 					<div class="row">
 						<div class="small-12 medium-8 columns">
