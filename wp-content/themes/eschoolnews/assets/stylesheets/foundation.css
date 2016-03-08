@@ -8723,6 +8723,10 @@ th.hide-for-touch {
 .row, .container-content, .ad-container {
   max-width: 68.75em !important; }
 
+body.home {
+  background-repeat: repeat-y;
+  background-position: top center; }
+
 section.container .row, .container-content .row {
   background-color: #fff; }
 
