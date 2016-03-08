@@ -41,35 +41,37 @@ get_header(); ?>
 		
 		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
+		<?php 
+
+		$taxonomy = 'sponsor';
+		$terms = get_the_terms( $post->ID, $taxonomy);
+		$term_id = $terms[0]->term_id;
+
+		$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+		
+		if( !empty($image) ): ?>
+
+			
+				<div class="row sponsored">
+					<div class="small-12 columns">
+
+					<small>Sponsored by:</small><br>
+
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+					</div>
+				</div>
+			<br/>
+			
+
+		<?php endif; ?>
+
 		</div>
 	</div>
 
 		<hr/>
 
-		<?php 
-
-								$taxonomy = 'sponsor';
-								$terms = get_the_terms( $post->ID, $taxonomy);
-								$term_id = $terms[0]->term_id;
-
-								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-								
-								if( !empty($image) ): ?>
-
-									
-										<div class="row sponsored">
-											<div class="small-12 columns">
-
-											<small>Sponsored by:</small><br>
-
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-											</div>
-										</div>
-									<br/>
-									
-
-								<?php endif; ?>
+		
 
 		<div class="row">
 

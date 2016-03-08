@@ -43,11 +43,6 @@ get_header(); ?>
 		
 		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
-		</div>
-	</div>
-
-		<hr/>
-
 		<?php 
 
 								$taxonomy = 'sponsor';
@@ -72,6 +67,11 @@ get_header(); ?>
 									
 
 								<?php endif; ?>
+
+		</div>
+	</div>
+
+		<hr/>
 
 		<div class="row">
 
