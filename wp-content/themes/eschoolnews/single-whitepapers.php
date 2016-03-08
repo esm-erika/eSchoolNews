@@ -42,6 +42,7 @@ get_header(); ?>
 		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
 		</div>
+	</div>
 
 		<hr/>
 
@@ -57,7 +58,7 @@ get_header(); ?>
 
 									
 										<div class="row sponsored">
-											<div class="small-12 medium-6 columns">
+											<div class="small-12 columns">
 
 											<small>Sponsored by:</small><br>
 
@@ -69,6 +70,8 @@ get_header(); ?>
 									
 
 								<?php endif; ?>
+
+		<div class="row">
 
 		<div class="medium-12 columns">
 
