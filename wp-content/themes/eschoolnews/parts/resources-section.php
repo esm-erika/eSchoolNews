@@ -34,7 +34,7 @@ $args_for_query2 = array('post_type' => 'special-reports',
 $args_for_query1 = array(
 					'post_type' => 'ercs',
 					'posts_per_page' => -1,
-				    'orderby'        => 'date',
+				    'orderby'        => 'rand',
 				    'order'          => 'DESC',
 					'meta_query' => array(
 						array(
