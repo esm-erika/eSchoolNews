@@ -2028,6 +2028,10 @@ body.page.collaboration {
 			//font-size: 85%;
 			padding: 0px 15px;
 
+			.row {
+				background-color: transparent !important;
+			}
+
 			a:link, a:visited {
 				color: #fff !important;
 				padding: 15px 10px 10px 10px;

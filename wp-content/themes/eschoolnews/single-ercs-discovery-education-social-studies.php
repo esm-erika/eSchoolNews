@@ -318,7 +318,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<p>Students can use digital resources to help them process information from multiple sources. A variety of reading tools, including two different text levels, text-to-speech, and Spanish translations help students make meaning from the text. Formative and summative assessments are already built and ready for teachers and students to use.</p>
 				</div></div>
 			
-					<h6><a style="background-color: #830c0e;" href="http://www.DiscoveryEducation.com/Math" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
+					<h6><a target="_blank" style="background-color: #830c0e;" href="http://www.eschoolnews.com/rtp.php?rtl=363&ast=154&astc=11650" class="button medium radius">Find out more or sign up for a free trial at:  DiscoveryEducation.com/SocialStudies.</a></h6>
 					
 					<div class="row">
 						<div class="small-12 medium-8 columns">
