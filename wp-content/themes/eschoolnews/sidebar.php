@@ -111,7 +111,7 @@
 	} ?>
 
 	<?php if( is_page('about')) {
-		get_template_part('parts/sidebar/staff' );
+		//get_template_part('parts/sidebar/staff' );
 	} ?>
 	
 
