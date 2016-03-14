@@ -401,5 +401,6 @@ function staff_register() {
 
 	register_taxonomy("department", array("staff"), array("hierarchical" => true, "label" => "Department", "singular_label" => "Department", "rewrite" => true, 'show_in_menu' => false));
 
+}
 
 ?>
