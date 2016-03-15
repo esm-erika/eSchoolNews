@@ -8735,8 +8735,7 @@ section.container .row, .container-content .row {
   background-color: #fff; }
 
 .container-content, .ad-container {
-  margin: auto;
-  background-color: #fff; }
+  margin: auto; }
 
 a:link, a:visited {
   color: #336699; }
