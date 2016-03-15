@@ -9843,7 +9843,7 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
   padding: 0px 15px;
   background-color: #222; }
   #discovery-erc nav .row {
-    background-color: transparent !important; }
+    background: transparent !important; }
   #discovery-erc nav a:link, #discovery-erc nav a:visited {
     color: #fff !important;
     padding: 15px 10px 10px 10px;
