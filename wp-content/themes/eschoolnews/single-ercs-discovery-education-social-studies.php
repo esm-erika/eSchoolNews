@@ -248,7 +248,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<a class="math-menu" href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a>
 							<a class="science-menu" href="<?php home_url(); ?>/ercs/discovery-education-science">SCIENCE</a>
             </span>
-							<span class="right events-menu"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span>
+							<!-- <span class="right events-menu"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span> -->
 						</div>
 					</div>
 
