@@ -42,7 +42,12 @@ if ($tax_terms) {
       echo "<h2 class=\"tax_term-heading\" id=\"".$tax_term->slug."\"> $tax_term->name </h2>";
       echo '<ul class="small-block-grid-1 medium-block-grid-2">';
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
-        <li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+        <li>
+        	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+        	<?php the_post_thumbnail('small-portrait'); ?>
+        	<?php the_title(); ?>
+        	</a>
+        </li>
         <?php
       endwhile;
       echo '</ul>';
