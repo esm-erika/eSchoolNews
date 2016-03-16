@@ -39,7 +39,7 @@ if ($tax_terms) {
     if( $my_query->have_posts() ) { ?>
 
     <?php 
-      echo "<h2 class=\"tax_term-heading\" id=\"".$tax_term->slug."\"> $tax_term->name </h2>";
+      echo "<h3 class=\"tax_term-heading\" id=\"".$tax_term->slug."\"> $tax_term->name </h3>";
       echo '<ul class="small-block-grid-1 medium-block-grid-2">';
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <li>
