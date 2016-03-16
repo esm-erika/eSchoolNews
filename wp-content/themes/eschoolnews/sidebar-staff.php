@@ -9,18 +9,18 @@ $tax = 'departments';
 $tax_terms = get_terms($tax,'hide_empty=0');
 
 //list the taxonomy
-$i=0; // counter for printing separator bars
-foreach ($tax_terms as $tax_term) {
-$wpq = array ('taxonomy'=>$tax,'term'=>$tax_term->slug);
-$query = new WP_Query ($wpq);
-$article_count = $query->post_count;
-echo "<a href=\"#".$tax_term->slug."\">".$tax_term->name."</a>";
-// output separator bar if not last item in list
-if ( $i < count($tax_terms)-1 ) {
-echo " | " ;
-}
-$i++;
-}
+// $i=0; // counter for printing separator bars
+// foreach ($tax_terms as $tax_term) {
+// $wpq = array ('taxonomy'=>$tax,'term'=>$tax_term->slug);
+// $query = new WP_Query ($wpq);
+// $article_count = $query->post_count;
+// echo "<a href=\"#".$tax_term->slug."\">".$tax_term->name."</a>";
+// // output separator bar if not last item in list
+// if ( $i < count($tax_terms)-1 ) {
+// echo " | " ;
+// }
+// $i++;
+// }
 
 //list everything
 if ($tax_terms) {
