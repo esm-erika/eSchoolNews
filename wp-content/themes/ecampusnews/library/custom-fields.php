@@ -1329,6 +1329,125 @@ register_field_group(array (
 		'menu_order' => 0,
 	));
 
+register_field_group(array (
+		'id' => 'acf_speakers',
+		'title' => 'Speakers',
+		'fields' => array (
+			array (
+				'key' => 'field_561d1bc3d1a18',
+				'label' => 'Meet Your Speakers',
+				'name' => 'speakers',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_561d1be6d1a19',
+						'label' => 'Speaker Photo',
+						'name' => 'speaker_photo',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'object',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_561d1bf8d1a1a',
+						'label' => 'First Name',
+						'name' => 'first_name',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_56313782b6fed',
+						'label' => 'Last Name',
+						'name' => 'last_name',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_561d1c04d1a1b',
+						'label' => 'Speaker Title',
+						'name' => 'speaker_title',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_561d1c10d1a1c',
+						'label' => 'Speaker Organization',
+						'name' => 'speaker_organization',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_562131aead992',
+						'label' => 'Speaker Bio',
+						'name' => 'speaker_bio',
+						'type' => 'wysiwyg',
+						'column_width' => '',
+						'default_value' => '',
+						'toolbar' => 'basic',
+						'media_upload' => 'no',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'row',
+				'button_label' => 'Add Speaker',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'webinars',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'events',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+
 
 /*===================================================================================
  * Misc Custom Fields
