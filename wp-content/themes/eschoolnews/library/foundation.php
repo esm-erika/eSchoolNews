@@ -104,7 +104,7 @@ class Foundationpress_Comments extends Walker_Comment{
 	function __construct() { ?>
 
         <h3><?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
-        <ol class="comment-list">
+        <!-- <ol class="comment-list"> -->
 
     <?php }
 
@@ -132,25 +132,29 @@ class Foundationpress_Comments extends Walker_Comment{
 		$GLOBALS['comment'] = $comment;
 		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
 
-        <li <?php comment_class( $parent_class ); ?> id="comment-<?php comment_ID() ?>">
-            <article id="comment-body-<?php comment_ID() ?>" class="comment-body">
+       
+            <article id="comment-<?php comment_ID() ?>" class="panel radius comment">
 
 
 
-		<header class="comment-author">
+		<header class="comment-author row collapse">
 
+			<div class="small-12 medium-12 columns">
+		<div class="left">
 			<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
-
-			<div class="author-meta vcard author">
-
-			<?php printf( __( '<cite class="fn">%s</cite>', 'foundationpress' ), get_comment_author_link() ) ?>
-			<time datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></time>
-
+		</div>
+			
+			<div class="left">
+				<h5 style="margin: 0;"><?php printf( __( '%s', 'foundationpress' ), get_comment_author() ) ?></h5>
+				<small datetime="<?php echo comment_date( 'c' ) ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s', 'foundationpress' ), get_comment_date(),  get_comment_time() ) ?></a></small>
+			</div>
 			</div><!-- /.comment-author -->
 
 		</header>
 
-                <section id="comment-content-<?php comment_ID(); ?>" class="comment">
+		<hr>
+
+                <section id="comment-content-<?php comment_ID(); ?>" class="comment-body">
                     <?php if ( ! $comment->comment_approved ) : ?>
                     		<div class="notice">
 					<p class="bottom"><?php $args['moderation']; ?></p>
@@ -163,7 +167,7 @@ class Foundationpress_Comments extends Walker_Comment{
                     <a href="<?php echo htmlspecialchars( get_comment_link( get_comment_ID() ) ) ?>"><?php comment_date(); ?> at <?php comment_time(); ?></a> <?php edit_comment_link( '(Edit)' ); ?>
                 </div><!-- /.comment-meta -->
 
-                <div class="reply">
+                <div class="button tiny radius reply">
                     <?php $reply_args = array(
 						'depth' => $depth,
 						'max_depth' => $args['max_depth'],
@@ -177,14 +181,15 @@ class Foundationpress_Comments extends Walker_Comment{
 
 	function end_el(& $output, $comment, $depth = 0, $args = array() ) { ?>
 
-        </li><!-- /#comment-' . get_comment_ID() . ' -->
+        <!-- </li> -->
+        <!-- /#comment-' . get_comment_ID() . ' -->
 
     <?php }
 
 	/** DESTRUCTOR */
 	function __destruct() { ?>
 
-    </ol><!-- /#comment-list -->
+    <!-- </ol> /#comment-list -->
 
     <?php }
 }

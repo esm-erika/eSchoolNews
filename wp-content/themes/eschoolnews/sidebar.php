@@ -109,6 +109,10 @@
 		get_template_part( 'parts/sidebar/links' );
 
 	} ?>
+
+	<?php if( is_page('about')) {
+		//get_template_part('parts/sidebar/staff' );
+	} ?>
 	
 
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>

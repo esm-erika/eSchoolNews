@@ -3,7 +3,7 @@
 }
 
 body.home {
-	//background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper.jpg);
+	background-image: url(http://eschoolnews.esminc.staging.wpengine.com/files/2016/03/CNwallpaper2.jpg);
 	background-repeat: repeat-y;
 	background-position: top center;
 	//background-attachment: fixed;
@@ -2223,6 +2223,17 @@ div.registration-form {
 
 				}
 			}
+		}
+	}
+}
+
+
+//Comments
+
+.comment {
+	.comment-author {
+		img {
+			margin-right: .9375rem;
 		}
 	}
 }
