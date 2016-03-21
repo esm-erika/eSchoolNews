@@ -1441,7 +1441,7 @@ table.columns .right-text-pad {
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td align="center">
                           <center style="width: 100%;">
-                            <p style="text-align:center;"><small>Contents ©2015 eSchool Media. All rights reserved.</small></p>
+                            <p style="text-align:center;"><small>Contents ©2016 eSchool Media. All rights reserved.</small></p>
                             <p style="text-align:center;"><a href="http://www.ecampusnews.com/privacy-policy/" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | 
 
                             <?php if( has_term('it-campus-leadership', 'publications')) {
