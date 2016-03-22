@@ -93,9 +93,9 @@ if (false === ($local_box_cache) ){
 				        	<article class="panel" data-equalizer-watch>
 				        		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				        		<?php if(get_field('symposium_subhead')){
-				        			echo '<h4>';
+				        			echo '<h3>';
 				        			the_field('symposium_subhead');
-				        			echo '</h4>';
+				        			echo '</h3>';
 				        		} ?>
 
 				        		<?php if(get_field('symposium_author')){

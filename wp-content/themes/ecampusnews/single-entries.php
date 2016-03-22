@@ -49,9 +49,9 @@ include('single-coa.php');
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
 				<?php if(get_field('symposium_subhead')){
-        			echo '<h4>';
+        			echo '<h3>';
         			the_field('symposium_subhead');
-        			echo '</h4>'; 
+        			echo '</h3>'; 
         		} ?>
 			<!-- single note -->
 
