@@ -8,6 +8,13 @@
 		echo '<a href="' . get_the_permalink() . '">';
 		echo 'News'; 
 		echo '</a></span>';
+
+	} elseif($post_type == 'entry') {
+
+		echo '<span class="flag content">';
+		echo '<a href="' . get_site_url() .'/symposium' ">';
+		echo 'Symposium'; 
+		echo '</a></span>'; 
 	
 	} else {
 
