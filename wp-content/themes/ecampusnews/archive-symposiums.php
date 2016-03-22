@@ -90,7 +90,7 @@ if (false === ($local_box_cache) ){
 				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post); ?>
 				        <li>
-				        	<div class="panel" data-equalizer-watch>
+				        	<article class="panel" data-equalizer-watch>
 				        		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				        		<?php if(get_field('symposium_subhead')){
 				        			echo '<h4>';
@@ -110,7 +110,7 @@ if (false === ($local_box_cache) ){
 									<?php the_excerpt(); ?>
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
-				        	</div>
+				        	</article>
 				            
 				        </li>
 				    <?php endforeach; ?>
