@@ -48,12 +48,7 @@ include('single-coa.php');
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<?php if(get_field('symposium_subhead')){
-        			echo '<h3>';
-        			the_field('symposium_subhead');
-        			echo '</h3>'; 
-        		} ?>
-			<!-- single note -->
+			
 
 			<?php if( get_field('remove_author')) { 
 
@@ -98,6 +93,13 @@ include('single-coa.php');
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content">
+
+			<?php if(get_field('symposium_subhead')){
+        			echo '<h3>';
+        			the_field('symposium_subhead');
+        			echo '</h3>'; 
+        	} ?>
+			<!-- single note -->
 
 			<?php 
 
