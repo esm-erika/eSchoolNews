@@ -97,6 +97,16 @@ if (false === ($local_box_cache) ){
 				        			the_field('symposium_subhead');
 				        			echo '</h4>';
 				        		} ?>
+
+				        		<?php if(get_field('symposium_author')){
+
+				        			echo '<p class="small-caps">By ';
+				        			the_field('symposium_author');
+				        			echo '<br>';
+				        			the_field('symposium_author_title');
+				        			echo '</p>';
+
+				        		} ?>
 									<?php the_excerpt(); ?>
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
