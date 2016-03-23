@@ -56,26 +56,15 @@ include('single-coa.php');
 
 			} else { ?>
 
-				<div class="small-caps">
-					
-					<?php  if( get_field('Alt Author Read More Name')) {
+				<?php if(get_field('symposium_author')){
 
-						echo 'By ';
+        			echo '<p class="small-caps">By ';
+        			the_field('symposium_author');
+        			echo '<br>';
+        			the_field('symposium_author_title');
+        			echo '</p>';
 
-						the_field('Alt Author Read More Name');
-
-					}elseif(get_field('Byline')){
-
-						the_field('Byline');
-
-					} else {
-						echo 'By ';
-
-						the_author();
-
-					} ?>
-
-				</div>
+        		} ?>
 
 			<?php } ?>
 
