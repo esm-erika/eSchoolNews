@@ -8735,7 +8735,7 @@ body.home {
 section.container .row, .container-content .row {
   background-color: #fff; }
 
-.container-content, .ad-container {
+.container-content {
   margin: auto;
   background-color: #fff; }
 
