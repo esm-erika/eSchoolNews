@@ -8735,7 +8735,7 @@ body.home {
 section.container .row, .container-content .row {
   background-color: #fff; }
 
-.container-content {
+.container-content, .ad-container {
   margin: auto;
   background-color: #fff; }
 
@@ -9297,7 +9297,8 @@ span.embed-youtube iframe {
 
 .ad-container {
   text-align: center;
-  padding: 20px 0; }
+  padding: 20px 0;
+  margin: auto; }
 
 .container > div {
   padding-bottom: 20px; }
@@ -9316,7 +9317,8 @@ footer.container > div {
 #sidebar .ad-container {
   margin-top: 0px;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  background-color: transparent !important; }
   #sidebar .ad-container img {
     width: 100% !important;
     max-width: 100% !important;

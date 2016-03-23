@@ -23,7 +23,7 @@ section.container, .container-content {
 	}
 }
 
-.container-content {
+.container-content, .ad-container {
 	margin: auto;
 	background-color: #fff;
 }
@@ -967,6 +967,7 @@ span.embed-youtube iframe {
 .ad-container {
 	text-align: center;
 	padding: 20px 0;
+	margin: auto;
 }
 
 
@@ -1015,6 +1016,7 @@ footer.container > div {
 		margin-top: 0px;
 		padding-left: 0;
 		padding-right: 0;
+		background-color: transparent !important;
 
 		img {
 			width: 100% !important;
