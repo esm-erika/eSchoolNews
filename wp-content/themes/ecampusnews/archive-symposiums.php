@@ -82,11 +82,6 @@ get_header(); ?>
 				        			echo '<h3>';
 				        			the_field('symposium_subhead');
 				        			echo '</h3>';
-				        		} ?>
-
-				        		<?php 
-
-				        		if ($post->post_type == 'entry') {
 
 				        			echo '<p class="small-caps">By ';
 				        			the_field('symposium_author');
