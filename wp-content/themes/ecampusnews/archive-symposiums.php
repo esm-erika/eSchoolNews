@@ -93,6 +93,7 @@ get_header(); ?>
 				        			echo '</p>';
 
 				        		} ?>
+				        		
 									<?php the_excerpt(); ?>
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
