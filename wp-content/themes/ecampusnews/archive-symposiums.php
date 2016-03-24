@@ -87,7 +87,6 @@ get_header(); ?>
 				        		<?php 
 
 				        		if ($post->post_type == 'entry') {
-				        			echo 'TEST';
 
 				        			echo '<p class="small-caps">By ';
 				        			the_field('symposium_author');
