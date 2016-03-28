@@ -53,6 +53,7 @@ include('single-coa.php');
 			<?php if( get_field('remove_author')) { 
 
 				echo '';
+				
 
 			} else { ?>
 
