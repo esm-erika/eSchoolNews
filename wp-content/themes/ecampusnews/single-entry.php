@@ -50,7 +50,7 @@ include('single-coa.php');
 
 			
 
-			<?php if( get_field('remove_author')) { 
+			<?php if( get_field('remove_entry_author')) { 
 
 				echo '';
 
