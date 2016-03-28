@@ -1,4 +1,8 @@
-<?php if(the_field('remove_entry_author')) { ?>
+<?php if(the_field('remove_entry_author')) { 
+
+echo '';
+
+} else { ?>
 
 <div class="author-bio row">
 
