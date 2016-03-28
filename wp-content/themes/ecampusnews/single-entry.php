@@ -47,15 +47,7 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-
 			
-
-			<?php if( get_field('remove_author')) { 
-
-				echo '';
-				
-
-			} else { ?>
 
 				<?php if(get_field('symposium_author')){
 
@@ -67,7 +59,6 @@ include('single-coa.php');
 
         		} ?>
 
-			<?php } ?>
 
 
 							<div class="posted-on"><?php the_time('F jS, Y') ?></div>		
