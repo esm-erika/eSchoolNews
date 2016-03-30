@@ -82,9 +82,6 @@ get_header(); ?>
 				        			echo '<h3>';
 				        			the_field('symposium_subhead');
 				        			echo '</h3>';
-				        		} ?>
-
-				        		<?php if(get_field('symposium_author')){
 
 				        			echo '<p class="small-caps">By ';
 				        			the_field('symposium_author');
@@ -93,7 +90,7 @@ get_header(); ?>
 				        			echo '</p>';
 
 				        		} ?>
-				        		
+
 									<?php the_excerpt(); ?>
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>

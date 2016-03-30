@@ -47,14 +47,7 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-
 			
-
-			<?php if( get_field('remove_author')) { 
-
-				echo '';
-
-			} else { ?>
 
 				<?php if(get_field('symposium_author')){
 
@@ -66,7 +59,6 @@ include('single-coa.php');
 
         		} ?>
 
-			<?php } ?>
 
 
 							<div class="posted-on"><?php the_time('F jS, Y') ?></div>		
@@ -195,15 +187,15 @@ custom_wp_link_pages();
 
 			<?php 
 
-			$contributor_bio = get_field('contributor_bio');
+			//$contributor_bio = get_field('contributor_bio');
 
-			 if( get_field('contributor_name') || get_field('Byline') && empty($contributor_bio)) {
+			// if( get_field('contributor_name') || get_field('Byline') && empty($contributor_bio)) {
 
 
-			} else {
+			//} else {
 
-				get_template_part('parts/authors'); 
-			}
+			//	get_template_part('parts/authors'); 
+			//}
 
 			?>
 			
