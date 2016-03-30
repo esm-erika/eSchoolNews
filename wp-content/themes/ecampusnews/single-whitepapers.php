@@ -44,31 +44,54 @@ get_header(); ?>
 		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
 		<hr/>
+<div class="row sponsored">
+								<div class="small-12 columns">
 
-		<?php 
+									<small>Sponsored by:</small><br>
 
-								$taxonomy = 'sponsor';
-								$terms = get_the_terms( $post->ID, $taxonomy);
-								$term_id = $terms[0]->term_id;
 
-								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-								
-								if( !empty($image) ): ?>
+								 <?php 
 
-									
-										<div class="row sponsored">
-											<div class="small-12 medium-6 columns">
+									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
 
-											<small>Sponsored by:</small><br>
+										if ( ! empty( $product_terms ) ) {
+											if ( ! is_wp_error( $product_terms ) ) {
+												echo '<ul class="small-block-grid-1 medium-block-grid-3">';
+													foreach( $product_terms as $term ) { ?>
 
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+
+													<?php 
+													$taxonomy = 'sponsor';
+													$term_id = $term->term_id; 
+													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+
+													?>
+
+													<li>
+
+														<div class="responsive-container">
+    														<div class="dummy"></div>
+																<div class="img-container">
+																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																</div>
+														</div>
+													</li>
+
+														
+
+													<?php }
+												echo '</ul>';
+
+											}
+										} ?>
 
 											</div>
 										</div>
 									<br/>
 									
 
-								<?php endif; ?>
+								<?php //endif; ?>
 
 		</div>
 	</div>
