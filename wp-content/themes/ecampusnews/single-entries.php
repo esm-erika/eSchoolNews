@@ -47,6 +47,12 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+
+				<?php if(get_field('symposium_subhead')){
+        			echo '<h3>';
+        			the_field('symposium_subhead');
+        			echo '</h3>'; 
+        		} ?>
 			<!-- single note -->
 
 			<?php if( get_field('remove_author')) { 
@@ -106,7 +112,7 @@ include('single-coa.php');
 			//$post_id < '161335' <--- Vince's Code
 
 			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
-			$cutoff_date = strtotime( '2015-12-10' );
+			$cutoff_date = strtotime( '2016-02-24' );
 
 			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
     
@@ -235,7 +241,7 @@ custom_wp_link_pages();
 
 				<?php } ?>
 			<?php do_action( 'foundationpress_post_before_comments' ); ?>
-			<?php comments_template(); ?>
+			<?php //comments_template(); ?>
 			<?php do_action( 'foundationpress_post_after_comments' ); ?>
 		</article>
 

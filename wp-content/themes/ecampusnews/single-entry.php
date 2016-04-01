@@ -47,36 +47,18 @@ include('single-coa.php');
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-			<!-- single note -->
+			
 
-			<?php if( get_field('remove_author')) { 
+				<?php if(get_field('symposium_author')){
 
-				echo '';
+        			echo '<p class="small-caps">By ';
+        			the_field('symposium_author');
+        			echo '<br>';
+        			the_field('symposium_author_title');
+        			echo '</p>';
 
-			} else { ?>
+        		} ?>
 
-				<div class="small-caps">
-					
-					<?php  if( get_field('Alt Author Read More Name')) {
-
-						echo 'By ';
-
-						the_field('Alt Author Read More Name');
-
-					}elseif(get_field('Byline')){
-
-						the_field('Byline');
-
-					} else {
-						echo 'By ';
-
-						the_author();
-
-					} ?>
-
-				</div>
-
-			<?php } ?>
 
 
 							<div class="posted-on"><?php the_time('F jS, Y') ?></div>		
@@ -93,20 +75,19 @@ include('single-coa.php');
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content">
 
-				<?php if(get_field('subheader')){
-					echo '<h3 class="subheader">';
-					the_field('subheader');
-					echo '</h3>';
-			} ?>
-
-
+			<?php if(get_field('symposium_subhead')){
+        			echo '<h3>';
+        			the_field('symposium_subhead');
+        			echo '</h3>'; 
+        	} ?>
+			<!-- single note -->
 
 			<?php 
 
 			//$post_id < '161335' <--- Vince's Code
 
 			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
-			$cutoff_date = strtotime( '2015-12-10' );
+			$cutoff_date = strtotime( '2016-02-24' );
 
 			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
     
@@ -206,15 +187,15 @@ custom_wp_link_pages();
 
 			<?php 
 
-			$contributor_bio = get_field('contributor_bio');
+			//$contributor_bio = get_field('contributor_bio');
 
-			 if( get_field('contributor_name') || get_field('Byline') && empty($contributor_bio)) {
+			// if( get_field('contributor_name') || get_field('Byline') && empty($contributor_bio)) {
 
 
-			} else {
+			//} else {
 
-				get_template_part('parts/authors'); 
-			}
+			//	get_template_part('parts/authors'); 
+			//}
 
 			?>
 			
@@ -235,7 +216,7 @@ custom_wp_link_pages();
 
 				<?php } ?>
 			<?php do_action( 'foundationpress_post_before_comments' ); ?>
-			<?php comments_template(); ?>
+			<?php //comments_template(); ?>
 			<?php do_action( 'foundationpress_post_after_comments' ); ?>
 		</article>
 

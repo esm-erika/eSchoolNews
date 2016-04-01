@@ -22,15 +22,15 @@ get_header(); ?>
 
 		if ( has_post_thumbnail() ) { ?>
 		
-		<div class="medium-4 columns">
+		<div class="small-12 medium-4 columns">
 			<?php the_post_thumbnail('medium-portrait'); ?>
 		</div>
 		
-		<div class="medium-8 columns">
+		<div class="small-12 medium-8 columns">
 
 		<?php } else { ?>
 
-		<div class="medium-12 columns">
+		<div class="small-12 medium-12 columns">
 
 		<?php } ?>
 
@@ -43,9 +43,62 @@ get_header(); ?>
 		
 		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
 
-		</div>
-
 		<hr/>
+<div class="row sponsored">
+								<div class="small-12 columns">
+
+									<small>Sponsored by:</small><br>
+
+
+								 <?php 
+
+									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
+
+										if ( ! empty( $product_terms ) ) {
+											if ( ! is_wp_error( $product_terms ) ) {
+												echo '<ul class="small-block-grid-1 medium-block-grid-3">';
+													foreach( $product_terms as $term ) { ?>
+
+
+
+													<?php 
+													$taxonomy = 'sponsor';
+													$term_id = $term->term_id; 
+													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+
+													?>
+
+													<li>
+
+														<div class="responsive-container">
+    														<div class="dummy"></div>
+																<div class="img-container">
+																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																</div>
+														</div>
+													</li>
+
+														
+
+													<?php }
+												echo '</ul>';
+
+											}
+										} ?>
+
+											</div>
+										</div>
+									<br/>
+									
+
+								<?php //endif; ?>
+
+		</div>
+	</div>
+
+		
+
+		<div class="row">
 
 		<div class="medium-12 columns">
 

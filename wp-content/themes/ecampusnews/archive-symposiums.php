@@ -17,17 +17,7 @@
  */
 
 get_header(); ?>
-<?php 
-//insert cache query
-global $page;
-$box_qt = 'esm_c_arcSR_menu_pg'.$page;
-$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
-$local_box_cache = get_transient( $box_q );
-if (false === ($local_box_cache) ){
-	// start code to cache
-		ob_start( );
-		echo '<!-- c -->'; 
-		?>
+
 
 <div class="row">
 
@@ -36,10 +26,6 @@ if (false === ($local_box_cache) ){
 
 <!-- Row for main content area -->
 	<div class="small-12 medium-12 columns" role="main">
-
-		
-				
-			
 
 
 		<?php 
@@ -90,17 +76,25 @@ if (false === ($local_box_cache) ){
 				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post); ?>
 				        <li>
-				        	<div class="panel" data-equalizer-watch>
+				        	<article class="panel" data-equalizer-watch>
 				        		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				        		<?php if(get_field('symposium_subhead')){
-				        			echo '<h4>';
+				        			echo '<h3>';
 				        			the_field('symposium_subhead');
-				        			echo '</h4>';
+				        			echo '</h3>';
+
+				        			echo '<p class="small-caps">By ';
+				        			the_field('symposium_author');
+				        			echo '<br>';
+				        			the_field('symposium_author_title');
+				        			echo '</p>';
+
 				        		} ?>
+
 									<?php the_excerpt(); ?>
 
 									<h6><a href="<?php the_permalink(); ?>">Read more</a></h6>
-				        	</div>
+				        	</article>
 				            
 				        </li>
 				    <?php endforeach; ?>
@@ -213,24 +207,6 @@ if (false === ($local_box_cache) ){
 
 
 		
-		<?php
-		echo '<!-- c '.date(DATE_RFC2822).' -->' ;
-		$local_box_cache = ob_get_clean( );
-	// end the code to cache
-		echo $local_box_cache;
-	//end cache query 
-	
-	if( current_user_can( 'edit_post' ) ) {
-		//you cannot cache it
-	} else {
-		set_transient($box_q ,$local_box_cache, 60 * 10);
-	}
-} else { 
-
-echo $local_box_cache;
-
-}
-?>        
 
 	
 

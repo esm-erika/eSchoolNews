@@ -248,7 +248,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 							<a class="math-menu" href="<?php home_url(); ?>/ercs/discovery-education-math">MATH</a>
 							<a class="studies-menu" href="<?php home_url(); ?>/ercs/discovery-education-social-studies">SOCIAL STUDIES</a>
             </span>
-							<span class="events-menu right"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span>
+							<!-- <span class="events-menu right"><strong>> EVENTS:</strong> <a href="<?php home_url(); ?>/ercs/discovery-education">Powerful Practices: The Instructional Leadership Experience</a></span> -->
 						</div>
 					</div>
 
@@ -319,7 +319,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 					<p>Comprehensive resources, student activities, and model lessons are at teachers' fingertips in one, easy-to-navigate site. Real-time feedback and easy-to-read data on the Teacher Dashboard make it easier to adjust instruction.</p>
           </div></div>
 
-					<h6><a style="background-color: #53b958;" href="http://www.DiscoveryEducation.com/Science" class="button medium radius">Learn more or sign up for a free trial at: DiscoveryEducation.com/Science.</a></h6>
+					<h6><a target="_blank" style="background-color: #53b958;" href="http://www.eschoolnews.com/rtp.php?rtl=357&ast=154&astc=11650" class="button medium radius">Learn more or sign up for a free trial at: DiscoveryEducation.com/Science.</a></h6>
 					
           <div class="row">
             <div class="small-12 medium-8 columns">

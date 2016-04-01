@@ -256,4 +256,51 @@ function my_custom_rss_render2() {
 	get_template_part( 'feed', 'educationdive' );
 }
 
+
+function custom_comments($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment;
+	extract($args, EXTR_SKIP);
+
+	if ( 'div' == $args['style'] ) {
+		$tag = 'div';
+		$add_below = 'comment';
+	} else {
+		$tag = 'div';
+		$add_below = 'div-comment';
+	}
+?>
+	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+	<?php if ( 'div' != $args['style'] ) : ?>
+	<div id="div-comment-<?php comment_ID() ?>" class="comment-body panel radius">
+	<?php endif; ?>
+	<div class="comment-author" style="overflow: hidden;">
+	<div class="left"><?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?></div>
+	<div class="left">
+		<h5 style="margin: 0;"><?php printf( __( '%s' ), get_comment_author() ); ?></h5>
+		<small>
+			<?php
+				/* translators: 1: date, 2: time */
+				printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+			?>
+		</small>
+	</div>
+	</div>
+	<?php if ( $comment->comment_approved == '0' ) : ?>
+		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+		<br />
+	<?php endif; ?>
+
+	<hr>
+
+	<?php comment_text(); ?>
+
+	<div class="button tiny radius reply">
+	<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+	</div>
+	<?php if ( 'div' != $args['style'] ) : ?>
+	</div>
+	<?php endif; ?>
+<?php
+}
+
 ?>
