@@ -1355,7 +1355,7 @@ table.columns .right-text-pad {
                     <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad center" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="center" valign="top">
-                          <a href="http://www.eschoolnews.com/current-issue/">
+                          <a href="http://www.ecampusnews.com/current-issue/">
                             <img border="0" src="http://www.ecampusnews.com/files/2016/04/DigitalIssue550-eCN.jpg" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;"/>
                           </a>
                         </td>
