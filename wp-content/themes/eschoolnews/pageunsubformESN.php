@@ -449,13 +449,15 @@ if(validate_email2($unsubemail)){
                      <?php if($urldatacheck == 1){ ?>
                        <h5 style="margin:10px;"> Please confirm the email address that you wish to unsubscribe from our lists.</h5>
                     <p style="margin:10px;"><label style="font-weight:bold;" for="emailtounsub">Email: </label><input name="emailtounsub" maxlength="250" size="50" type="text" <?php if($urldatacheck == 1){echo 'value="'.$unsubemail.'"';}?> >
-                    </p>
+                      <br />
+                    Please check the box in front of the email that you do not wish to recieve.</p>
                      
                      <?php } else { ?>
                      
                         <h5> Please enter the email address that you wish to unsubscribe from our lists.</h5>
                     <p style="margin:10px;"><label style="font-weight:bold;" for="emailtounsub">Email: </label><input name="emailtounsub" maxlength="250" size="50" type="text" value="" /> 
-                        </p>
+                        <br />
+                    Please check the box in front of the email that you do not wish to recieve.</p>
                         
                      <?php } ?>                        
 <div class="row">
@@ -559,43 +561,43 @@ if(validate_email2($unsubemail)){
 
 <?php if(!$eschool_news_this_week == 1){ ?>    	                
                         <div><input name="eschool_news_this_week" value="eschool_news_this_week" type="checkbox"> <label style="font-weight:bold;" for="eschool_news_this_week">Innovation Weekly</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div>
+        	            <?php //<div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div> ?>
                     	</div> 
 <?php } ?>
 <?php if(!$eschool_news_today == 1){ ?>
 	                    <div><input name="eschool_news_today" value="eschool_news_today" type="checkbox"> <label style="font-weight:bold;" for="eschool_news_this_week">eSchool News Today</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Daily breaking news headlines</div>
+        	             <?php //<div style="padding:0px 0px 10px 20px; font-size:9px;">Daily breaking news headlines</div> ?>
                     
                     	</div>                        
 <?php } ?>
 <?php if(!$eschool_news_tools_for_schools == 1){ ?>
 	                    <div><input name="eschool_news_tools_for_schools" value="eschool_news_tools_for_schools" type="checkbox"> <label style="font-weight:bold;" for="eschool_news_tools_for_schools">eSchool News Tools for Schools</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning.<br /><em>Weekly on Wednesday</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Find out the latest technology tips, tools and the innovative best practices schools are using everyday to improve learning.<br /><em>Weekly on Wednesday</em></div> ?>
                     	</div>
 <?php } ?>
 <?php if(!$ed_resource_alert == 1){ ?>                                                
 	                    <div><input name="ed_resource_alert" value="ed_resource_alert" type="checkbox" > <label style="font-weight:bold;" for="ed_resource_alert">Ed Resource Alert</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more.<br /><em>Schedule varies</em></div>
+        	             <?php //<div style="padding:0px 0px 10px 20px; font-size:9px;">Get email alerts notifying you of the latest resources available on eSchool News including Special Reports, Webinars, Resource Centers, Whitepapers and more.<br /><em>Schedule varies</em></div> ?>
                     	</div>
 <?php } ?>
 <?php if(!$Digital_Leap == 1){ ?>                                                
 	                    <div><input name="Digital_Leap" value="Digital_Leap" type="checkbox" > <label style="font-weight:bold;" for="Digital_Leap">Digital Leap</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">A Newsletter from AASA, CoSN, and NSBA, powered by eSchool News<br /><em>Monthly</em></div>
+        	            <?php //  <div style="padding:0px 0px 10px 20px; font-size:9px;">A Newsletter from AASA, CoSN, and NSBA, powered by eSchool News<br /><em>Monthly</em></div> ?>
                     	</div>
 <?php } ?>
 <?php if(!$eSN_IT_School_Leadership == 1){ ?>                                                
 	                    <div><input name="eSN_IT_School_Leadership" value="eSN_IT_School_Leadership" type="checkbox" > <label style="font-weight:bold;" for="eSN_IT_School_Leadership">eSchool News IT School Leadership</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">IT News of the week<br /><em>Weekly on Wednesday</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">IT News of the week<br /><em>Weekly on Wednesday</em></div> ?>
                     	</div>                        
 <?php } ?>
 <?php if(!$special_offers_from_eschool_news == 1){ ?>                                                
 	                    <div><input name="special_offers_from_eschool_news" value="special_offers_from_eschool_news" type="checkbox"> <label style="font-weight:bold;" for="special_offers_from_eschool_news">Special Offers from eSchool News</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers and discounts on publications, conferences and professional development breakthroughs<br /><em>Schedule varies</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers and discounts on publications, conferences and professional development breakthroughs<br /><em>Schedule varies</em></div> ?>
                     	</div>                        
 <?php } ?>
 <?php if(!$special_offers_from_school_technology_vendors == 1){ ?>                                                
 	                    <div><input name="special_offers_from_school_technology_vendors" value="special_offers_from_school_technology_vendors" type="checkbox"> <label style="font-weight:bold;" for="special_offers_from_school_technology_vendors">Special Offers from School Technology Vendors</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers from eSchool News technology vendors <br /><em>Schedule varies</em></div>
+        	            <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers from eSchool News technology vendors <br /><em>Schedule varies</em></div> ?>
        	    </div> 
 
  <?php } ?>
@@ -606,43 +608,43 @@ if(validate_email2($unsubemail)){
 
 <?php if(!$ecampus_news_this_week == 1){ ?>                                                
 	                    <div><input name="ecampus_news_this_week" value="ecampus_news_this_week" type="checkbox"> <label style="font-weight:bold;" for="ecampus_news_this_week">Reinventing Higher Education</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Get the week's top education technology news, learn about the latest grants and find out how schools are solving technology problems to improve learning.<br /><em>Weekly on Monday</em></div> ?>
                     	</div>                        
 <?php } ?>
 <?php if(!$ecampus_news_today == 1){ ?>                                                
 	                    <div><input name="ecampus_news_today" value="ecampus_news_today" type="checkbox"> <label style="font-weight:bold;" for="ecampus_news_this_week">eCampus News Today</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Daily breaking news headlines</div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Daily breaking news headlines</div> ?>
                     
                     	</div> 
 <?php } ?>
 <?php if(!$MOOC_Update == 1){ ?>
                         
                         <div><input name="MOOC_Update" value="MOOC_Update" type="checkbox"> <label style="font-weight:bold;" for="MOOC_Update">eCampus News MOOC Update</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;"><em>Weekly on Friday</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;"><em>Weekly on Friday</em></div> ?>
                     	</div>                        
                                                
 <?php } ?>
 
 <?php if(!$eSN_IT_School_Leadership == 1){ ?>                                                
 	                    <div><input name="eCN_IT_School_Leadership" value="eCN_IT_School_Leadership" type="checkbox"> <label style="font-weight:bold;" for="eCN_IT_School_Leadership">eCampus News IT Campus Leadership</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">IT News of the week<br /><em>Weekly on Wednesday</em></div>
+        	             <?php //<div style="padding:0px 0px 10px 20px; font-size:9px;">IT News of the week<br /><em>Weekly on Wednesday</em></div> ?>
                     	</div>                        
 <?php } ?>
 
 <?php if(!$special_offers_from_ecampus_news_online == 1){ ?>                                                
 	                    <div><input name="special_offers_from_ecampus_news_online" value="special_offers_from_ecampus_news_online" type="checkbox"> <label style="font-weight:bold;" for="special_offers_from_ecampus_news_online">Special Offers from eCampus News</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers and discounts on publications, conferences and professional development breakthroughs<br /><em>Schedule varies</em></div>
+        	             <?php //<div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers and discounts on publications, conferences and professional development breakthroughs<br /><em>Schedule varies</em></div> ?>
                     	</div>                        
 <?php } ?>
 <?php if(!$special_offers_from_campus_technology_vendors == 1){ ?>                                                
 	                    <div><input name="special_offers_from_campus_technology_vendors" value="special_offers_from_campus_technology_vendors" type="checkbox"> <label style="font-weight:bold;" for="special_offers_from_campus_technology_vendors">Special Offers from Campus Technology Vendors</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers from eSchool News technology vendors <br /><em>Schedule varies</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Get valuable offers from eSchool News technology vendors <br /><em>Schedule varies</em></div> ?>
                     	</div>                        
 <?php } ?>
 <?php if(!$eclassroom_news == 1){ ?>                       
                         
                         <div><input name="eclassroom_news" value="eclassroom_news" type="checkbox"> <label style="font-weight:bold;" for="eclassroom_news">eClassroom News</label>
-        	            <div style="padding:0px 0px 10px 20px; font-size:9px;">Technology news and resources for teachers.<br /><em>Weekly on Friday</em></div>
+        	             <?php // <div style="padding:0px 0px 10px 20px; font-size:9px;">Technology news and resources for teachers.<br /><em>Weekly on Friday</em></div> ?> 
                     	</div>                        
 <?php } ?>	    	                
                         
