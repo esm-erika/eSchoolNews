@@ -31,7 +31,14 @@ if ($tax_terms) {
       "$tax" => $tax_term->slug,
       'post_status' => 'publish',
       'posts_per_page' => -1,
-      'caller_get_posts'=> 1
+      'caller_get_posts'=> 1,
+      'meta_query' => array(
+        array(
+          'key' => 'sidebar_true',
+          'value' => '1',
+          'compare' => '=='
+        )
+      )
     );
 
     $my_query = null;
@@ -39,14 +46,16 @@ if ($tax_terms) {
     if( $my_query->have_posts() ) { ?>
 
     <?php 
-      echo "<h3 class=\"tax_term-heading\" id=\"".$tax_term->slug."\"> $tax_term->name </h3>";
+      echo "<h5 class=\"tax_term-heading\" id=\"".$tax_term->slug."\"> $tax_term->name </h5>";
       echo '<ul class="small-block-grid-1 medium-block-grid-2">';
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <li>
-        	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
         	<?php the_post_thumbnail('small-portrait'); ?>
-        	<?php the_title(); ?>
-        	</a>
+          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+        	 <?php the_title(); ?>
+          </a>
+          <div class="small-caps"><?php the_field('staff_title'); ?></div>
+        	
         </li>
         <?php
       endwhile;
@@ -59,6 +68,9 @@ if ($tax_terms) {
 }
 ?>
 
+<div class="text-center">
+  <a class="button radius" href="<?php echo site_url(); ?>/staff">View All Staff</a>
+</div>
 
 	</article>
 
