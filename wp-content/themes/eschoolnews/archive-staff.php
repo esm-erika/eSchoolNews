@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php get_template_part( 'parts/section-titles' ); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 large-12 columns" role="main">
 			<?php
 
 $post_type = 'staff';
@@ -50,11 +50,12 @@ if ($tax_terms) {
       echo '<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">';
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <li class="staff-member">
-        	<?php the_post_thumbnail('small-portrait'); ?>
-        	<span>
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+
+          <a href="#" rel="bookmark" data-reveal-id="<?php the_slug(); ?>" title="<?php the_title_attribute(); ?>">
+        	 <?php the_post_thumbnail('small-portrait'); ?>
         	 <?php the_title(); ?>
           </a>
+
 	          <?php if(get_field('staff_title')) {
 
 	            echo '<div class="small-caps">';
@@ -64,7 +65,46 @@ if ($tax_terms) {
 	            echo '</div>';
 
 	          } ?>
-	      </span>
+
+
+            <div id="<?php the_slug(); ?>" class="reveal-modal" data-reveal aria-labelledby="<?php the_title(); ?>" aria-hidden="true" role="dialog">
+             
+            <div class="row">
+              <div class="small-12 medium-3 columns">
+                <?php the_post_thumbnail('small-portrait'); ?>
+              </div>
+              <div class="small-12 medium-9 columns">
+
+             
+
+              <h1 class="entry-title"><?php the_title(); ?></h1>
+              <h4><?php the_field('staff_title'); ?></h4>
+              
+              <?php  
+
+                $taxonomy = 'staff';
+                $terms = get_the_terms( $post->ID , 'departments' );
+                $terms_name = $terms[0]->name;
+
+                echo '<div class="small-caps">';
+                echo $terms_name;
+                echo '</div>';
+
+              ?>
+              <hr>
+
+              <?php the_content(); ?>
+
+              <hr>
+            
+            <?php get_template_part('parts/social'); ?> 
+
+             </div>
+            </div>             
+
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+            </div>
+	     
         	
         </li>
         <?php

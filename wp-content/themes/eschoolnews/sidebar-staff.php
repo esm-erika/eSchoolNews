@@ -54,7 +54,7 @@ if ($tax_terms) {
           <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
         	 <?php the_title(); ?>
           </a>
-          <div class="small-caps"><?php the_field('staff_title'); ?></div>
+          <div class="small-caps"><?php //the_field('staff_title'); ?></div>
         </li>
         <?php
       endwhile;
