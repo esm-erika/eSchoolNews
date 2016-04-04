@@ -95,6 +95,7 @@ get_header(); ?>
 
 <section id="profiles">
 	<div class="row">
+		<div class="small-12 columns">
 		<h4>Speaker Profiles</h4>
 		
 		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-5">
@@ -209,7 +210,8 @@ get_header(); ?>
 			</li>
 
 		</ul>
-
+		
+		</div>
 	</div>
 </section>
 
