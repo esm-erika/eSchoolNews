@@ -33,6 +33,10 @@
         echo '<a target="_blank" href="' . get_field('website_link') . '" class="left"><i class="fi-web large"></i></a>';
     } ?>
 
+    <?php if(get_field('email_address')) {
+        echo '<a target="_blank" href="' . get_field('email_address') . '" class="left"><i class="fi-mail large"></i></a>';
+    } ?>
+
 <? } else { ?>
 
     <?php 
