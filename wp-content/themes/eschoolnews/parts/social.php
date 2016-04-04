@@ -13,7 +13,7 @@
     <a href="#" class="left"><i class="fi-social-twitter medium"></i> <small>25 Tweets</small></a>
     <a href="#" class="left"><i class="fi-mail medium"></i> <small>54 Emailed</small></a> -->
 
-<?php if (is_post_type_archive('staff')) { ?>
+<?php if (is_page('staff')) { ?>
 
     <?php if(get_field('facebook_link')) {
         echo '<a target="_blank" href="' . get_field('facebook_link') . '" class="left"><i class="fi-social-facebook large"></i></a>';
