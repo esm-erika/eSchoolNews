@@ -34,7 +34,7 @@
     } ?>
 
     <?php if(get_field('email_address')) {
-        echo '<a target="_blank" href="' . get_field('email_address') . '" class="left"><i class="fi-mail large"></i></a>';
+        echo '<a target="_blank" href="mailto:' . get_field('email_address') . '" class="left"><i class="fi-mail large"></i></a>';
     } ?>
 
 <? } else { ?>
