@@ -8886,6 +8886,11 @@ body.asu-gsv section#player {
   body.asu-gsv section#player section {
     padding-top: 1.25rem;
     background: rgba(225, 225, 225, 0.5); }
+body.asu-gsv button, body.asu-gsv a.button {
+  background-color: #2c87ff !important; }
+
+body.about #sidebar ul li {
+  margin-bottom: 0; }
 
 #sidebar .textwidget .row {
   margin-bottom: 20px; }

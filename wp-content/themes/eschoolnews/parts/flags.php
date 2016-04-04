@@ -14,6 +14,13 @@
 		echo '<a href="' . get_the_permalink() . '">';
 		echo 'News'; 
 		echo '</a></span>';
+
+	} elseif ($post_type == 'staff') {
+
+		echo '<span class="flag content">';
+		echo '<a href="' . get_site_url() .'/staff'. '">';
+		echo 'Staff'; 
+		echo '</a></span>';
 	
 	} else {
 
