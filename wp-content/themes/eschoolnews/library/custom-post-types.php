@@ -393,7 +393,7 @@ function staff_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'has_archive' => true,
+		'has_archive' => false,
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
