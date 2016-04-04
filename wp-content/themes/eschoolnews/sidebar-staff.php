@@ -55,7 +55,6 @@ if ($tax_terms) {
         	 <?php the_title(); ?>
           </a>
           <div class="small-caps"><?php the_field('staff_title'); ?></div>
-        	
         </li>
         <?php
       endwhile;
