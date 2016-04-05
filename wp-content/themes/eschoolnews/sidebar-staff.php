@@ -51,9 +51,7 @@ if ($tax_terms) {
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <li>
         	<?php the_post_thumbnail('small-portrait'); ?>
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
         	 <?php the_title(); ?>
-          </a>
           <div class="small-caps"><?php //the_field('staff_title'); ?></div>
         </li>
         <?php

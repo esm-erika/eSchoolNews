@@ -63,8 +63,6 @@ get_header(); ?>
 					              </div>
 					              <div class="small-12 medium-9 columns">
 
-					             
-
 					              <h1 class="entry-title"><?php the_title(); ?></h1>
 					              <h4><?php the_field('staff_title'); ?></h4>
 					              
