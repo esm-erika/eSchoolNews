@@ -280,6 +280,15 @@ body.asu-gsv {
 
 	}
 
+	.video-player {
+		display: table;
+	}
+
+	.coming-soon {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
 	button, a.button {
 			background-color: #2c87ff !important;
 		}
