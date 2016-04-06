@@ -8831,6 +8831,25 @@ span.tag a, .related-tags a {
 .flag.ecn a {
   color: #060; }
 
+body.asu-gsv section#player {
+  background-image: url(../images/wave-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  body.asu-gsv section#player h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px #000000; }
+  body.asu-gsv section#player section {
+    padding-top: 1.25rem;
+    background: rgba(225, 225, 225, 0.5); }
+body.asu-gsv .video-player {
+  display: table; }
+body.asu-gsv .coming-soon {
+  display: table-cell;
+  vertical-align: middle; }
+body.asu-gsv button, body.asu-gsv a.button {
+  background-color: #2c87ff !important; }
+
 .sponsored ul li .img-container {
   text-align: center; }
 .sponsored ul li .img-container img {
