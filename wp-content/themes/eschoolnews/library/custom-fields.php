@@ -976,6 +976,277 @@ register_field_group(array (
 		'menu_order' => 0,
 	));
 
+
+
+
+
+/*===================================================================================
+ * Press Release Custom Fields
+ * =================================================================================*/
+
+register_field_group(array (
+		'id' => 'acf_about-company',
+		'title' => 'About Company',
+		'fields' => array (
+			array (
+				'key' => 'field_57056e88dec79',
+				'label' => 'Company Name',
+				'name' => 'company_name',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_570532a31a933',
+				'label' => 'Company Information',
+				'name' => 'about_company',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'press-releases',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_press-company-information',
+		'title' => 'Press Company Information',
+		'fields' => array (
+			array (
+				'key' => 'field_57053ae7a93cb',
+				'label' => 'Press Address 1',
+				'name' => 'press_address_1',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57053af9a93cc',
+				'label' => 'Press Address 2',
+				'name' => 'press_address_2',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57053b04a93cd',
+				'label' => 'Press City, State & Zip',
+				'name' => 'press_city_state_zip',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57053b306bb73',
+				'label' => 'Press Website',
+				'name' => 'press_website',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'press-releases',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_press-contact-information',
+		'title' => 'Press Contact Information',
+		'fields' => array (
+			array (
+				'key' => 'field_57052d1cc2bb8',
+				'label' => 'Press Contact Name',
+				'name' => 'press_contact_name',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57052d2ec2bb9',
+				'label' => 'Press Contact Email',
+				'name' => 'press_contact_email',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57052d3dc2bba',
+				'label' => 'Press Contact Number',
+				'name' => 'press_contact_number',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'press-releases',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_press-release-date',
+		'title' => 'Press Release Date',
+		'fields' => array (
+			array (
+				'key' => 'field_57054e039f06e',
+				'label' => 'Press Release Date',
+				'name' => 'press_release_date',
+				'type' => 'date_picker',
+				'required' => 1,
+				'date_format' => 'yymmdd',
+				'display_format' => 'dd/mm/yy',
+				'first_day' => 1,
+			),
+			array (
+				'key' => 'field_57056d0fed112',
+				'label' => 'Press Release City',
+				'name' => 'press_release_city',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'press-releases',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_subheadline',
+		'title' => 'Subheadline',
+		'fields' => array (
+			array (
+				'key' => 'field_57042a10e20de',
+				'label' => 'Subheadline',
+				'name' => 'subheadline',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'press-releases',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
 }
 
 ?>

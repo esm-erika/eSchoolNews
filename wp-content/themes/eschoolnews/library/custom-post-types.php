@@ -183,7 +183,7 @@ function specialreports_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => 'dashicons-megaphone',
+		'menu_icon' => 'dashicons-star-empty',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
@@ -400,6 +400,49 @@ function staff_register() {
 	register_post_type( 'staff' , $args );
 
 	register_taxonomy("departments", array("staff"), array("hierarchical" => true, "label" => "Department", "singular_label" => "Department", "rewrite" => true, 'show_in_menu' => true));
+
+}
+
+
+/*===================================================================================
+ * Press Releases
+ * =================================================================================*/
+
+add_action('init', 'pressreleases_register');
+ 
+function pressreleases_register() {
+ 
+	$labels = array(
+		'name' => _x('Press Releases', 'post type general name'),
+		'singular_name' => _x('Press Release', 'post type singular name'),
+		'add_new' => _x('Add Press Release', 'newsletter issue'),
+		'add_new_item' => __('Add New Press Release'),
+		'edit_item' => __('Edit Press Release'),
+		'new_item' => __('New Press Release'),
+		'view_item' => __('View Press Release'),
+		'search_items' => __('Search Press Releases'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-megaphone',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => true,
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'press-releases' , $args );
+
 
 }
 
