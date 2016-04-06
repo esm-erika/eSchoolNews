@@ -15,6 +15,13 @@
 		echo 'News'; 
 		echo '</a></span>';
 
+	} elseif ($post_type == 'press-releases') {
+
+		echo '<span class="flag content">';
+		echo '<a href="' . get_the_permalink() . '">';
+		echo 'Press Release'; 
+		echo '</a></span>';
+
 	} elseif ($post_type == 'staff') {
 
 		echo '<span class="flag content">';
