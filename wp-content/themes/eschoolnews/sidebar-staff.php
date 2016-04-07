@@ -50,9 +50,48 @@ if ($tax_terms) {
       echo '<ul class="small-block-grid-1 medium-block-grid-2">';
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <li>
+          <a href="#" rel="bookmark" data-reveal-id="<?php the_slug(); ?>" title="<?php the_title_attribute(); ?>">
         	<?php the_post_thumbnail('small-portrait'); ?>
         	 <?php the_title(); ?>
-          <div class="small-caps"><?php //the_field('staff_title'); ?></div>
+          </a>
+          
+          <div id="<?php the_slug(); ?>" class="reveal-modal" data-reveal aria-labelledby="<?php the_title(); ?>" aria-hidden="true" role="dialog">
+             
+                      <div class="row">
+                        <div class="small-12 medium-3 columns">
+                          <?php the_post_thumbnail('small-portrait'); ?>
+                        </div>
+                        <div class="small-12 medium-9 columns">
+
+                        <h1 class="entry-title"><?php the_title(); ?></h1>
+                        <h4><?php the_field('staff_title'); ?></h4>
+                        
+                        <?php  
+
+                          $taxonomy = 'staff';
+                          $terms = get_the_terms( $post->ID , 'departments' );
+                          $terms_name = $terms[0]->name;
+
+                          echo '<div class="small-caps">';
+                          echo $terms_name;
+                          echo '</div>';
+
+                        ?>
+                        <hr>
+
+                        <?php the_content(); ?>
+
+                        <hr>
+                      
+                      <?php get_template_part('parts/social'); ?> 
+
+                       </div>
+                      </div>             
+
+                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                      </div>
+
+
         </li>
         <?php
       endwhile;
