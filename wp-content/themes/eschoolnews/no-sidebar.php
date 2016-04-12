@@ -124,7 +124,7 @@ if (false === ($local_box_cache) ){
 	// start code to cache
 		ob_start( );
 			echo '<!-- c -->';
-			get_sidebar();
+			//get_sidebar();
 			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
 		$local_box_cache = ob_get_clean( );
 	// end the code to cache
