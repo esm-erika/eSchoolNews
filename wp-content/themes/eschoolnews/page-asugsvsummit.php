@@ -40,9 +40,12 @@ get_header(); ?>
 		</div> -->
 
 
-		<div class="coming-soon">
-			<h1 class="text-center">Coming Soon</h1>
-			<div style="margin: auto;" id="shindig_rsvp_series_widget_250"></div>
+		<div class="coming-soon text-center">
+			<h1 class="text-center">Live Conference Coverage</h1>
+			<!-- <div style="margin: auto;" id="shindig_rsvp_series_widget_250"></div> -->
+
+			<iframe id="frame" src="http://shindig.com/event/asugsvsummit" width="80%" height="750px" border="0" frameborder="0"></iframe>
+
 		</div>
 
 		<!-- <section class="text-center">
