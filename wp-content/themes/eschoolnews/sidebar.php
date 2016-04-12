@@ -105,10 +105,19 @@
 
 	} ?>
 
-	<?php if ( is_home() || is_front_page() ) {
-		get_template_part( 'parts/sidebar/links' );
+	<?php if ( is_home() || is_front_page() ) { ?>
 
-	} ?>
+		<script type="application/javascript" src="http://shindig.com/event/data/demo_series?series=65&joinbefore=60"></script>
+		<script src="http://shindig.com/js/widgets/RSVPSeriesWidget.js"></script>
+		<script>var series_base_url='http://shindig.com';</script>
+
+		<div style="margin: auto; " id="shindig_rsvp_series_widget_300"></div>
+
+		<br>
+
+		<?php get_template_part( 'parts/sidebar/links' ); ?>
+
+	<?php } ?>
 
 	<?php if( is_page('about')) {
 		//get_template_part('parts/sidebar/staff' );
