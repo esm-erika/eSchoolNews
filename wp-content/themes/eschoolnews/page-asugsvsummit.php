@@ -12,6 +12,12 @@
  */
 
 get_header(); ?>
+
+
+		<script type="application/javascript" src="http://shindig.com/event/data/demo_series?series=65&joinbefore=60"></script>
+		<script src="http://shindig.com/js/widgets/RSVPSeriesWidget.js"></script>
+		<script>var series_base_url='http://shindig.com';</script>
+
 </div>
 
 <section id="player">
@@ -36,6 +42,7 @@ get_header(); ?>
 
 		<div class="coming-soon">
 			<h1 class="text-center">Coming Soon</h1>
+			<div style="margin: auto;" id="shindig_rsvp_series_widget_250"></div>
 		</div>
 
 		<!-- <section class="text-center">
