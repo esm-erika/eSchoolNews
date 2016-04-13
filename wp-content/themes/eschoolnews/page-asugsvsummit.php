@@ -14,66 +14,139 @@
 get_header(); ?>
 
 
-		<script type="application/javascript" src="http://shindig.com/event/data/demo_series?series=65&joinbefore=60"></script>
-		<script src="http://shindig.com/js/widgets/RSVPSeriesWidget.js"></script>
-		<script>var series_base_url='http://shindig.com';</script>
 
-</div>
+<div class="row">
+	<div class="small-12 large-12 columns" role="main">
 
-<section id="player">
-<div class="row full-width collapse" data-equalizer>
-	<div class="small-12 medium-12 large-3 columns" style="background-color: #2acf23;" data-equalizer-watch>
-		<div class="row collapse">
-			<div class="small-6 medium-6 large-12 columns">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/asu-gsv_logo.png" alt="2016 ASU GSV Summit">
-		</div>
-		<div class="small-6 medium-6 large-12 columns">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/asu-gsv_date.png" alt="">
-		</div>
-		</div>
-	</div>
-	<div class="small-12 medium-12 large-9 columns video-player" data-equalizer-watch>
-		<!-- <div class="row">
-			<div class="small-12 large-centered columns">
-				<h1 class="text-center">Live Conference Coverage</h1>
+	<?php do_action( 'foundationpress_before_content' ); ?>
+
+	<?php while ( have_posts() ) : the_post(); ?>
+<?php  $astused = get_post_meta($id, '_wp_esmad_template', true);
+$oldtemplate = get_post_meta($id, '_wp_post_template', true);
+
+
+
+   ?>
+<?php if($oldtemplate){ echo '<!-- '.$oldtemplate.' -->'; //using old template
+	
+//require_once( 'library/boxes.php' );	
+include('single-coa.php');
+	
+	
+	
+	   } else { //not using old template ?>    
+    
+
+
+
+<?php 
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+
+// $queried_object = get_queried_object();
+// var_dump( $queried_object );
+//$tag_id = get_query_var('term_taxonomy_id');
+$post_id = get_the_ID(); 
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+global $astc, $astused;
+$box_qt = 'esm_c_pagebdy_a'.$ast."c".$astc.'p'.$post_id;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	// start code to cache
+		ob_start( );
+			echo '<!-- c -->';
+?>
+
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<header>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+			</header>
+			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+			<div class="entry-content">
+				<?php the_content(); ?>
 			</div>
-		</div> -->
+			<footer>
+				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
+				<p><?php the_tags(); ?></p>
+			</footer>
+			<?php do_action( 'foundationpress_page_before_comments' ); ?>
+			<?php //comments_template(); ?>
+			<?php do_action( 'foundationpress_page_after_comments' ); ?>
+		</article>
+
+<?php		echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
+
+echo $local_box_cache;
+
+}
+?>
+
+<?php } //end old template check ?>
 
 
-		<div class="coming-soon text-center">
-			<h1 class="text-center">Live Conference Coverage</h1>
-			<!-- <div style="margin: auto;" id="shindig_rsvp_series_widget_250"></div> -->
 
-			<iframe id="frame" src="http://shindig.com/event/asugsvsummit" width="80%" height="750px" border="0" frameborder="0"></iframe>
 
-		</div>
+	<?php endwhile;?>
 
-		<!-- <section class="text-center">
-				
+	<?php do_action( 'foundationpress_after_content' ); ?>
 
-				<article class="row">
-					<div class="small-12 medium-9 medium-centered large-9 large-centered columns text-left">
-						<h4>Description of Video</h4>
-
-						<img class="center" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/shindig-video.png" alt="Video Player">
-
-						<hr class="thick">
-						<strong>April 12, 2016</strong>
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin tempus dapibus pulvinar. Mauris iaculis dignissim dolor, sed consequat tortor tristique ut.</p>
-					</div>
-				</article>
-				</section> -->
+	
 	</div>
+	
+<?php 
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+
+// $queried_object = get_queried_object();
+// var_dump( $queried_object );
+//$tag_id = get_query_var('term_taxonomy_id');
+$post_id = get_the_ID(); 
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+global $astc, $astused;
+$box_qt = 'esm_c_page_a'.$ast."c".$astc.'p'.$post_id;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	// start code to cache
+		ob_start( );
+			echo '<!-- c -->';
+			//get_sidebar();
+			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
+
+echo $local_box_cache;
+
+}
+?>
 </div>
-</section>
-
-<br>
-
-
-
-
-
-<div class="container-content">
 
 <!-- <section id="sponsors">
 	<div class="row">
@@ -93,20 +166,6 @@ get_header(); ?>
 
 	</div>
 </section> -->
-
-
-<!-- <hr class="thick"> -->
-
-	<div class="row">
-		
-		<div class="small-12 columns text-center">
-			
-			<a target="_blank" href="http://asugsvsummit.com/2016-agenda/" class="button radius custom-button">View 2016 Agenda</a>
-
-
-		</div>
-	</div>
-</div>
 
 <!-- <section id="profiles">
 	<div class="row">
@@ -250,9 +309,6 @@ get_header(); ?>
 	</div>
 </section>
  -->
-
-
-
 
 
 <?php get_footer(); ?>
