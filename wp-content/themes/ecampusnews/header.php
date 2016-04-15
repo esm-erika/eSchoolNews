@@ -159,7 +159,7 @@ get_template_part( 'library/logged-in-check' );
         </section>
     
 
-    <nav class="row middle show-for-small-up hide-for-large-up">
+    <!-- <nav class="row middle show-for-small-up hide-for-large-up">
       <div class="show-for-small-up hide-for-large-up" style="height: 20px;"></div>
       <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
         <?php //bloginfo( 'name' ); ?>
@@ -167,6 +167,32 @@ get_template_part( 'library/logged-in-check' );
           <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="eCampus News" />
         </a>
       </h1>
+    </nav> -->
+
+    <nav class="row middle show-for-small-up hide-for-large-up">
+      <div class="show-for-small-up hide-for-large-up" style="height: 20px;"></div>
+      <h1 class="small-12 medium-6 large-uncentered columns title">
+
+        <div class="row">
+          <div class="small-12 medium-10 columns text-center">
+            <a href="<?php echo home_url(); ?>">
+              <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="eSchool News" />
+            </a>
+          </div>
+        </div>
+        
+      </h1>
+
+      <div class="small-12 medium-6 columns">
+        <div class="row">
+          <div class="small-12 columns text-center">
+            <a href="<?php echo site_url(); ?>/asugsvsummit">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/asugsv-banner.png" alt="RSVP Now!">
+            </a>
+            <div class="show-for-small-only" style="height: 20px;"></div>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div class="row mobile-search show-for-small-only">
