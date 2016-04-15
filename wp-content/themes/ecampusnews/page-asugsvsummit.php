@@ -98,9 +98,6 @@ echo $local_box_cache;
 
 <?php } //end old template check ?>
 
-
-
-
 	<?php endwhile;?>
 
 	<?php do_action( 'foundationpress_after_content' ); ?>
@@ -170,9 +167,26 @@ echo $local_box_cache;
 <!-- <section id="profiles">
 	<div class="row">
 		<div class="small-12 columns">
+<<<<<<< Updated upstream
 		<h4>Speaker Profiles</h4>
 		
 		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-5">
+=======
+		
+
+
+		<?php
+
+		// check if the repeater field has rows of data
+		if( have_rows('speaker_profiles') ) { ?> 
+
+		<h4>Speaker Profiles</h4>
+
+				<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+
+		    <?php while ( have_rows('speaker_profiles') ) : the_row(); ?>
+
+>>>>>>> Stashed changes
 			<li class="text-center">
 				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
 				<h4>Speaker Name</h4>
@@ -239,6 +253,7 @@ echo $local_box_cache;
 				</div>
 			</li>
 
+<<<<<<< Updated upstream
 			<li class="text-center">
 				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
 				<h4>Speaker Name</h4>
@@ -282,6 +297,11 @@ echo $local_box_cache;
 				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 				</div>
 			</li>
+=======
+		
+
+		} ?>
+>>>>>>> Stashed changes
 
 		</ul>
 		
