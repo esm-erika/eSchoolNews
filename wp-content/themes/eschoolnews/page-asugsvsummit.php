@@ -191,19 +191,15 @@ echo $local_box_cache;
 				<div id="<?php the_sub_field('speaker_slug'); ?>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 					<div class="row">
 						<div class="small-12 medium-3 columns">
-							<?php 
+							
+						<img src="<?php the_sub_field('speaker_image'); ?>" alt="<?php the_sub_field('speaker_name'); ?>" />
 
-							$image = get_sub_field('speaker_image');
-
-							if( !empty($image) ): ?>
-
-								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-							<?php endif; ?>
 						</div>
 						<div class="small-12 medium-9 columns">
 							<h2><?php the_sub_field('speaker_name'); ?></h2>
+							<?php if(get_sub_field('twitter_handle')) { ?>
 				  <p class="small-caps"><a target="_blank" href="http://twitter.com/<?php the_sub_field('twitter_handle'); ?>">@<?php the_sub_field('twitter_handle'); ?></a></p>
+				  <?php } ?>
 				  <div><?php the_sub_field('speaker_bio'); ?></div>
 					</div>
 				  
