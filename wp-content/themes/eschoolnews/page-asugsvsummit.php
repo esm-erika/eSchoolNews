@@ -170,18 +170,17 @@ echo $local_box_cache;
 <section id="profiles">
 	<div class="row">
 		<div class="small-12 columns">
-		<h4>Speaker Profiles</h4>
-
-				<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
-
 
 		<?php
 
 		// check if the repeater field has rows of data
-		if( have_rows('speaker_profiles') ):
+		if( have_rows('speaker_profiles') ) { ?> 
 
-		 	// loop through the rows of data
-		    while ( have_rows('speaker_profiles') ) : the_row(); ?>
+		<h4>Speaker Profiles</h4>
+
+				<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+
+		    <?php while ( have_rows('speaker_profiles') ) : the_row(); ?>
 
 			<li class="text-center">
 				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
@@ -211,13 +210,9 @@ echo $local_box_cache;
 
 		    <?php endwhile;
 
-		else :
+		
 
-		    // no rows found
-
-		endif;
-
-		?>
+		} ?>
 
 		</ul>
 		
