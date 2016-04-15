@@ -167,127 +167,67 @@ echo $local_box_cache;
 	</div>
 </section> -->
 
-<!-- <section id="profiles">
+<section id="profiles">
 	<div class="row">
 		<div class="small-12 columns">
 		<h4>Speaker Profiles</h4>
-		
-		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-5">
+
+				<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+
+
+		<?php
+
+		// check if the repeater field has rows of data
+		if( have_rows('speaker_profiles') ):
+
+		 	// loop through the rows of data
+		    while ( have_rows('speaker_profiles') ) : the_row(); ?>
+
 			<li class="text-center">
 				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
+				<h4><?php the_sub_field('speaker_name'); ?></h4>
+				<a class="button radius small" href="#" data-reveal-id="<?php the_sub_field('speaker_slug'); ?>">Speaker Info</a>
 
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+				<div id="<?php the_sub_field('speaker_slug'); ?>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 					<div class="row">
 						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
+							<?php 
+
+							$image = get_sub_field('speaker_image');
+
+							if( !empty($image) ): ?>
+
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+							<?php endif; ?>
 						</div>
 						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
+							<h2><?php the_sub_field('speaker_name'); ?></h2>
+				  <p class="small-caps"><a target="_blank" href="http://twitter.com/<?php the_sub_field('twitter_handle'); ?>">@<?php the_sub_field('twitter_handle'); ?></a></p>
+				  <div><?php the_sub_field('speaker_bio'); ?></div>
 					</div>
 				  
 				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 				</div>
 			</li>
 
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
+		        
 
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
+		    <?php endwhile;
 
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
+		else :
 
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
+		    // no rows found
 
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
+		endif;
 
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
-
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
-
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
+		?>
 
 		</ul>
 		
 		</div>
 	</div>
-</section> -->
+</section>
 
 <!-- <section id="archive">
 	<div class="row">
