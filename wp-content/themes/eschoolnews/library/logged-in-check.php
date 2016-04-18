@@ -115,19 +115,20 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';
 
-echo '<!-- Trialfire Start -->';
-echo '<script src="//cdn.trialfire.com/tf.js"></script>';
-echo "<script>Trialfire.init('e6e60f03-6991-49aa-80cd-336f992f2b8d');</script>";
-echo "<script>Trialfire.identify (".$sfuid.");</script>";
-echo '<!-- Trialfire End -->';
-
 } else {
 $showpagecontent = 0;	
-echo '<!-- Trialfire Start -->';
-echo '<script src="//cdn.trialfire.com/tf.js"></script>';
-echo "<script>Trialfire.init('e6e60f03-6991-49aa-80cd-336f992f2b8d');</script>";
-echo '<!-- Trialfire End -->';
 //echo '114 showpagecontent = ' . $showpagecontent . '<br>';	
+}
+
+
+function insert_trialfire_identify() {
+  global $esmuser;
+	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."');</script>";
+	echo $Trialfireidentify; 
+}
+
+if($showpagecontent == 1) {
+  add_action('wp_head', 'insert_trialfire_identify');
 }
 
 
