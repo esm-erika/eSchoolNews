@@ -12,58 +12,141 @@
  */
 
 get_header(); ?>
-</div>
 
-<section id="player">
-<div class="row full-width collapse" data-equalizer>
-	<div class="small-12 medium-12 large-3 columns" style="background-color: #2acf23;" data-equalizer-watch>
-		<div class="row collapse">
-			<div class="small-6 medium-6 large-12 columns">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/asu-gsv_logo.png" alt="2016 ASU GSV Summit">
-		</div>
-		<div class="small-6 medium-6 large-12 columns">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/asu-gsv_date.png" alt="">
-		</div>
-		</div>
-	</div>
-	<div class="small-12 medium-12 large-9 columns video-player" data-equalizer-watch>
-		<!-- <div class="row">
-			<div class="small-12 large-centered columns">
-				<h1 class="text-center">Live Conference Coverage</h1>
+
+
+<div class="row">
+	<div class="small-12 large-12 columns" role="main">
+
+	<?php do_action( 'foundationpress_before_content' ); ?>
+
+	<?php while ( have_posts() ) : the_post(); ?>
+<?php  $astused = get_post_meta($id, '_wp_esmad_template', true);
+$oldtemplate = get_post_meta($id, '_wp_post_template', true);
+
+
+
+   ?>
+<?php if($oldtemplate){ echo '<!-- '.$oldtemplate.' -->'; //using old template
+	
+//require_once( 'library/boxes.php' );	
+include('single-coa.php');
+	
+	
+	
+	   } else { //not using old template ?>    
+    
+
+
+
+<?php 
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+
+// $queried_object = get_queried_object();
+// var_dump( $queried_object );
+//$tag_id = get_query_var('term_taxonomy_id');
+$post_id = get_the_ID(); 
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+global $astc, $astused;
+$box_qt = 'esm_c_pagebdy_a'.$ast."c".$astc.'p'.$post_id;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	// start code to cache
+		ob_start( );
+			echo '<!-- c -->';
+?>
+
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<header>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+			</header>
+			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+			<div class="entry-content">
+				<?php the_content(); ?>
 			</div>
-		</div> -->
+			<footer>
+				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
+				<p><?php the_tags(); ?></p>
+			</footer>
+			<?php do_action( 'foundationpress_page_before_comments' ); ?>
+			<?php //comments_template(); ?>
+			<?php do_action( 'foundationpress_page_after_comments' ); ?>
+		</article>
+
+<?php		echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
+
+echo $local_box_cache;
+
+}
+?>
+
+<?php } //end old template check ?>
 
 
-		<div class="coming-soon">
-			<h1 class="text-center">Coming Soon</h1>
-		</div>
 
-		<!-- <section class="text-center">
-				
 
-				<article class="row">
-					<div class="small-12 medium-9 medium-centered large-9 large-centered columns text-left">
-						<h4>Description of Video</h4>
+	<?php endwhile;?>
 
-						<img class="center" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/shindig-video.png" alt="Video Player">
+	<?php do_action( 'foundationpress_after_content' ); ?>
 
-						<hr class="thick">
-						<strong>April 12, 2016</strong>
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin tempus dapibus pulvinar. Mauris iaculis dignissim dolor, sed consequat tortor tristique ut.</p>
-					</div>
-				</article>
-				</section> -->
+	
 	</div>
+	
+<?php 
+//insert cache query
+//name format esm_c_[template name in 5 char]_a[ast]c[astc][c ...category][p  ...post id(if sidebar needs to be unique][t ...(tagid)if a tag page][a ... Author ID (if an author page)]
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+
+// $queried_object = get_queried_object();
+// var_dump( $queried_object );
+//$tag_id = get_query_var('term_taxonomy_id');
+$post_id = get_the_ID(); 
+//$cat_name = get_category(get_query_var('cat'))->term_id;
+global $astc, $astused;
+$box_qt = 'esm_c_page_a'.$ast."c".$astc.'p'.$post_id;
+$box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
+	
+$local_box_cache = get_transient( $box_q );
+if (false === ($local_box_cache) ){
+
+	// start code to cache
+		ob_start( );
+			echo '<!-- c -->';
+			//get_sidebar();
+			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+		$local_box_cache = ob_get_clean( );
+	// end the code to cache
+		echo $local_box_cache;
+	//end cache query 
+	
+	if( current_user_can( 'edit_post' ) ) {
+		//you cannot cache it
+	} else {
+		set_transient($box_q ,$local_box_cache, 60 * 10);
+	}
+} else { 
+
+echo $local_box_cache;
+
+}
+?>
 </div>
-</section>
-
-<br>
-
-
-
-
-
-<div class="container-content">
 
 <!-- <section id="sponsors">
 	<div class="row">
@@ -84,141 +167,58 @@ get_header(); ?>
 	</div>
 </section> -->
 
-
-<!-- <hr class="thick"> -->
-
-	<div class="row">
-		
-		<div class="small-12 columns text-center">
-			
-			<a target="_blank" href="http://asugsvsummit.com/2016-agenda/" class="button radius custom-button">View 2016 Agenda</a>
-
-
-		</div>
-	</div>
-</div>
-
-<!-- <section id="profiles">
+<section id="profiles">
 	<div class="row">
 		<div class="small-12 columns">
+
+		<?php
+
+		// check if the repeater field has rows of data
+		if( have_rows('speaker_profiles') ) { ?> 
+
 		<h4>Speaker Profiles</h4>
+
+				<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+
+		    <?php while ( have_rows('speaker_profiles') ) : the_row(); ?>
+
+			<li class="text-center">
+				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
+				<h4><?php the_sub_field('speaker_name'); ?></h4>
+				<a class="button radius small" href="#" data-reveal-id="<?php the_sub_field('speaker_slug'); ?>">Speaker Info</a>
+
+				<div id="<?php the_sub_field('speaker_slug'); ?>" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					<div class="row">
+						<div class="small-12 medium-3 columns">
+							
+						<img src="<?php the_sub_field('speaker_image'); ?>" alt="<?php the_sub_field('speaker_name'); ?>" />
+
+						</div>
+						<div class="small-12 medium-9 columns">
+							<h2><?php the_sub_field('speaker_name'); ?></h2>
+							<?php if(get_sub_field('twitter_handle')) { ?>
+				  <p class="small-caps"><a target="_blank" href="http://twitter.com/<?php the_sub_field('twitter_handle'); ?>">@<?php the_sub_field('twitter_handle'); ?></a></p>
+				  <?php } ?>
+				  <div><?php the_sub_field('speaker_bio'); ?></div>
+					</div>
+				  
+				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+				</div>
+			</li>
+
+		        
+
+		    <?php endwhile;
+
 		
-		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-5">
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
 
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
-
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
-
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
-
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
-
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
-
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
-
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
-
-			<li class="text-center">
-				<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-				<h4>Speaker Name</h4>
-				<a class="button radius small" href="#" data-reveal-id="myModal">Speaker Info</a>
-
-				<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-					<div class="row">
-						<div class="small-12 medium-3 columns">
-							<img src="http://eschoolnews.esminc.staging.wpengine.com/files/2016/04/person.png">
-						</div>
-						<div class="small-12 medium-9 columns">
-							<h2 id="modalTitle">Speaker Name</h2>
-				  <p class="small-caps">@twitterhandle</p>
-				  <div>Fusce ut arcu id nisi lobortis mollis sit amet quis magna. Nullam justo elit, luctus id congue nec, molestie a augue. Vivamus commodo posuere nunc eu euismod. Vestibulum sodales ut nisl mollis scelerisque. Nunc et metus vel turpis efficitur faucibus vitae a tortor. Nullam aliquam, urna vitae auctor bibendum, leo mi scelerisque arcu, vel egestas erat orci in mauris. Curabitur consequat viverra lectus a sodales. Aliquam eu vulputate erat, id rhoncus ante. Aliquam eu arcu enim. Morbi bibendum ultrices orci vel efficitur. Duis tortor justo, tristique sit amet pharetra sit amet, ullamcorper eu sapien. Praesent non lacus laoreet, porttitor nunc at, molestie magna.</div>
-							
-						</div>
-					</div>
-				  
-				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-				</div>
-			</li>
+		} ?>
 
 		</ul>
 		
 		</div>
 	</div>
-</section> -->
+</section>
 
 <!-- <section id="archive">
 	<div class="row">
@@ -240,9 +240,6 @@ get_header(); ?>
 	</div>
 </section>
  -->
-
-
-
 
 
 <?php get_footer(); ?>
