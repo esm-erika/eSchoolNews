@@ -114,17 +114,18 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	showpagecontent => $showpagecontent			
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';
+
 echo '<!-- Trialfire Start -->';
 echo '<script src="//cdn.trialfire.com/tf.js"></script>';
-echo "<script>Trialfire.init('a2816ba0-352b-47c9-8af7-b00bfa690f90')"."Trialfire.identify (‘###".$sfuid."###’)"."</script>";
+echo "<script>Trialfire.init('e6e60f03-6991-49aa-80cd-336f992f2b8d');</script>";
+echo "<script>Trialfire.identify (".$sfuid.");</script>";
 echo '<!-- Trialfire End -->';
 
-	
 } else {
 $showpagecontent = 0;	
 echo '<!-- Trialfire Start -->';
 echo '<script src="//cdn.trialfire.com/tf.js"></script>';
-echo "<script>Trialfire.init('a2816ba0-352b-47c9-8af7-b00bfa690f90');</script>";
+echo "<script>Trialfire.init('e6e60f03-6991-49aa-80cd-336f992f2b8d');</script>";
 echo '<!-- Trialfire End -->';
 //echo '114 showpagecontent = ' . $showpagecontent . '<br>';	
 }
