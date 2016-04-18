@@ -123,7 +123,7 @@ $showpagecontent = 0;
 
 function insert_trialfire_identify() {
   global $esmuser;
-	$Trialfireidentify = "<script>Trialfire.identify (".$esmuser[sfuid].");</script>";
+	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."');</script>";
 	echo $Trialfireidentify; 
 }
 
