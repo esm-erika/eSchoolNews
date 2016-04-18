@@ -115,14 +115,20 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';
 
-$Trialfireidentify = "<script>Trialfire.identify (".$sfuid.");</script>";
-if (!is_admin()) {
-  add_action('wp_head', $Trialfireidentify);
-}
-
 } else {
 $showpagecontent = 0;	
 //echo '114 showpagecontent = ' . $showpagecontent . '<br>';	
+}
+
+
+function insert_trialfire_identify() {
+  global $esmuser;
+	$Trialfireidentify = "<script>Trialfire.identify (".$esmuser[sfuid].");</script>";
+	echo $Trialfireidentify; 
+}
+
+if($showpagecontent == 1) {
+  add_action('wp_head', 'insert_trialfire_identify');
 }
 
 
