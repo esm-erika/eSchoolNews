@@ -146,9 +146,6 @@ if($showpagecontent == 1) {
 }
 
 
-
-
-
 function esm_is_user_logged_in(){
 global $esmuser;	
   if($esmuser['showpagecontent'] == 1){
