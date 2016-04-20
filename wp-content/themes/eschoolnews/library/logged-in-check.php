@@ -73,6 +73,7 @@ if (is_user_logged_in()) {
 				$wpuid=$esmpassvals[0];
 				$wpuidSP = $wpuid;	
 		} elseif (isset($esmpassvals[0]) && filter_var($esmpassvals[0], FILTER_VALIDATE_EMAIL)) { 
+					$psemail = $esmpassvals[0];
 					$wpuid = '999999999'; 
 					$wpuidSP = $wpuid;
 		} else {$pscheck=0;}
@@ -111,7 +112,8 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	sfuid => $sfuid,
 	PersonContactId => $PersonContactId,	
 	esmpassvalue => $esmpass_COOKIE,	
-	showpagecontent => $showpagecontent			
+	showpagecontent => $showpagecontent,
+	psemail =>$psemail				
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';
 
@@ -123,7 +125,17 @@ $showpagecontent = 0;
 
 function insert_trialfire_identify() {
   global $esmuser;
+
+$findme   = '@';
+$pos = strpos($esmuser[psemail], $findme);  
+if ($pos === false) {
 	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."');</script>";
+} else {
+
+	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."',{ 'email' : '".$esmuser[psemail]."'} );</script>";
+
+}
+  
 	echo $Trialfireidentify; 
 }
 
@@ -141,6 +153,5 @@ global $esmuser;
 	 } 
 
 }
-
 
 ?>
