@@ -12,7 +12,7 @@
 <div class="top-bar-container contain-to-grid show-for-medium-up">
 
         <div class="title-area row show-for-large-up">
-            <div class="name large-6 columns">
+            <div class="name large-6 large-centered columns">
                 <div class="row show-for-large-up" style="height: 20px;"></div>
                 <h1 class="large-10 large-centered columns">
                     <a href="<?php echo home_url(); ?>">
@@ -21,15 +21,6 @@
                 </h1>
             </div>
 
-            <div class="large-6 columns">
-                <div class="row">
-                    <div class="large-12 large-centered columns">
-                        <a href="<?php echo site_url(); ?>/asugsvsummit">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/asugsv-banner.png" alt="RSVP Now!">
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
 
     <div class="sticky">
