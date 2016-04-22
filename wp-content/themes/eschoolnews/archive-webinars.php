@@ -121,7 +121,7 @@ $webinars = new WP_Query(array(
 			<!-- Row for main content area -->
 			<div class="small-12 medium-12 columns" role="main">
 
-				<h4>Recently Recorded Webinars</h4>
+				<h4>On-Demand Webinars</h4>
 
 				<br/>
 
@@ -188,7 +188,7 @@ $webinars = new WP_Query(array(
 							<hr class="thick">
 
 
-							<h4>Additional Recorded Webinars</h4>
+							<h4>Additional On-Demand Webinars</h4>
 							<br/>
 
 							<?php while ( $morewebinars->have_posts() ) : $morewebinars -> the_post(); ?>
