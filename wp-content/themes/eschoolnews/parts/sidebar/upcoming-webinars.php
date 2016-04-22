@@ -1,5 +1,5 @@
 <article>
-<h4>Recorded Webinars</h4>
+<h4>On-Demand Webinars</h4>
 
 <?php // The Query
 $upcoming = array(
