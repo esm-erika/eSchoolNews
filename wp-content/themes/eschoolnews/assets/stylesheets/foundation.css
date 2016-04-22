@@ -8727,19 +8727,6 @@ body.home {
   background-repeat: repeat-y;
   background-position: top center; }
 
-.video {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0; }
-  .video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important; }
-
 #sidebar .ad-container img.tracking {
   width: 1px !important;
   height: 1px !important; }
@@ -8899,6 +8886,18 @@ body.asugsvsummit section#player {
   body.asugsvsummit section#player section {
     padding-top: 1.25rem;
     background: rgba(225, 225, 225, 0.5); }
+body.asugsvsummit .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0; }
+  body.asugsvsummit .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important; }
 body.asugsvsummit .video-player {
   display: table; }
 body.asugsvsummit .coming-soon {
