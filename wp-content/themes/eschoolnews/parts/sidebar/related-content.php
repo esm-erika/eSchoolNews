@@ -106,4 +106,5 @@
 //	}
     $post = $orig_post;
     wp_reset_query();
+    
 ?>
