@@ -1,9 +1,8 @@
 <article>
 <section>
-<h4>Related Posts</h4>	
+<h4>Related Content</h4>
 
 <?php 
-
 //$args = array( 'category__in => 6870, 'tag__in' => array( 'tag1', 'tag2' ), 'showposts' => 2 );
 
     $orig_post = $post;
@@ -15,8 +14,6 @@
 	$cats = wp_get_post_categories($post->ID);
     $cat_ids = array();
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
-	
-
 
 	if(empty($tag_ids) || empty($cat_ids)){
 		if(empty($tag_ids)){ 
@@ -24,26 +21,23 @@
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
-			'ignore_sticky_posts'=>1,
+			//'ignore_sticky_posts'=>1,
 			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
 			'category__in ' => $cat_ids,
 			'cat' =>  '-11583'
 			);
-
-
 		 }
 		if(empty($cat_ids)){ 
 		
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
-			'ignore_sticky_posts'=>1,
+			//'ignore_sticky_posts'=>1,
 			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
 			'tag__in' => $tag_ids,
 			'cat' => '-11583'
 			);
-		
-		
+
 		 }	
 	
 	} else {
@@ -51,7 +45,7 @@
 		$args=array(
 		'post__not_in' => array($post->ID),
 		'posts_per_page'=>5, // Number of related posts to display.
-		'ignore_sticky_posts'=>1,
+		//'ignore_sticky_posts'=>1,
 		'cat' => '-11583',
 		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events', 'post' ),  
 		'tax_query' => array(
