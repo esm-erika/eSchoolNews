@@ -55,12 +55,12 @@ echo ' -->';
 		'cat' => '-11583',
 		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events', 'post' ),  
 		'tax_query' => array(
-			'relation' => 'and',
+			'relation' => 'OR',
 			array(
 				'category__in ' => $cat_ids,'cat' => '-11583'
 			),
 			array(
-				'tag__in' => $tag_ids
+				'tag__in' => 0//$tag_ids
 			)
 		)
 		 
