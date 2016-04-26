@@ -15,7 +15,8 @@
     $cat_ids = array();
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
 
-	if(!empty($tag_ids) || !empty($cat_ids)){
+
+	if(empty($tag_ids) || empty($cat_ids)){
 		if(empty($tag_ids)){ 
 echo '<!-- '; 
 print_r($cat_ids);
@@ -67,7 +68,7 @@ echo ' -->';
 		
 	}	
 
-echo '<!-- ';
+echo '<!-- arg ';
 print_r($args);
 echo ' --> ';
 
