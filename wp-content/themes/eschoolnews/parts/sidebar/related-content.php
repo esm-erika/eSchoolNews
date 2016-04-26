@@ -23,7 +23,7 @@ print_r($cat_ids);
 echo ' -->'; 
 			$args=array(
 			'post__not_in' => array($post->ID),
-			'posts_per_page'=>5, // Number of related posts to display.
+			'posts_per_page'=>6, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
 			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
 			'category__in ' => $cat_ids,
@@ -37,7 +37,7 @@ echo ' -->';
 		
 			$args=array(
 			'post__not_in' => array($post->ID),
-			'posts_per_page'=>5, // Number of related posts to display.
+			'posts_per_page'=>7, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
 			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
 			'tag__in' => $tag_ids,
@@ -50,7 +50,7 @@ echo ' -->';
 
 		$args=array(
 		'post__not_in' => array($post->ID),
-		'posts_per_page'=>5, // Number of related posts to display.
+		'posts_per_page'=>8, // Number of related posts to display.
 		'ignore_sticky_posts'=>1,
 		'cat' => '-11583',
 		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events', 'post' ),  
