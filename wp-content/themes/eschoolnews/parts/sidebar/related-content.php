@@ -16,7 +16,7 @@
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
 
 
-	if(empty($tag_ids) || empty($cat_ids)){
+ if(!empty($tag_ids) || !empty($cat_ids)){
 		if(empty($tag_ids)){ 
 			$args=array(
 			'post__not_in' => array($post->ID),
@@ -27,6 +27,7 @@
 			'cat' =>  '-11583'
 			);
 		 }
+		 
 		if(empty($cat_ids)){ 
 	
 			$args=array(
