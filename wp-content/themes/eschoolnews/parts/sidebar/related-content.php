@@ -17,7 +17,9 @@
 
 	if(!empty($tag_ids) || !empty($cat_ids)){
 		if(empty($tag_ids)){ 
-
+echo '<!-- '; 
+print_r($cat_ids);
+echo ' -->'; 
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
@@ -28,6 +30,9 @@
 			);
 		 }
 		if(empty($cat_ids)){ 
+echo '<!-- '; 
+print_r($tag_ids);
+echo ' -->'; 
 		
 			$args=array(
 			'post__not_in' => array($post->ID),
@@ -62,8 +67,9 @@
 		
 	}	
 
-
-
+echo '<!-- ';
+print_r($args);
+echo ' --> ';
 
     $my_query = new wp_query( $args );
 //if ( have_posts() ) {	
