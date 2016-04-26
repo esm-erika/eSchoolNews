@@ -26,7 +26,8 @@
 			'posts_per_page'=>5, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
 			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
-			'category__in ' => $cat_ids
+			'category__in ' => $cat_ids,
+			'cat' => array( '-11583')
 			);
 
 
@@ -38,7 +39,8 @@
 			'posts_per_page'=>5, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
 			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
-			'tag__in' => $tag_ids
+			'tag__in' => $tag_ids,
+			'cat' => array( '-11583')
 			);
 		
 		
@@ -50,6 +52,7 @@
 		'post__not_in' => array($post->ID),
 		'posts_per_page'=>5, // Number of related posts to display.
 		'ignore_sticky_posts'=>1,
+		'cat' => array( '-11583'),
 		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events', 'post' ),  
 		'tax_query' => array(
 			'relation' => 'OR',
