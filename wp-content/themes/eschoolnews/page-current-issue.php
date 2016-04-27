@@ -29,15 +29,15 @@ get_header(); ?>
 			'post_type'	=> 'digital-issues',
 			//'meta_key'	=> 'digital_issue_date',
 			//'orderby'	=> 'meta_value_num',
-			'order'		=> 'ASC'
+			'order'		=> 'DESC'
 
 			);
 		// the query
-		$the_query = new WP_Query( $args ); 
+		$current_issue = new WP_Query( $args ); 
 
-		if ( $the_query->have_posts() ) : ?>
+		if ( $current_issue->have_posts() ) : ?>
 
-	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	<?php while ( $current_issue->have_posts() ) : $current_issue->the_post(); ?>
 
 
 		<h4><?php the_title(); ?></h4>
