@@ -45,20 +45,33 @@ get_header(); ?>
 
 		<?php 
 
-		$file = get_field('download_file');
-		$pdfurl = $file['url'];
+		$posts = get_field('pdf_select');
 
-		$content = '[pdf-embedder url="' . $pdfurl . '"]';
+		if( $posts ): ?>
+		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		        <?php setup_postdata($post); ?>
+		            
+					<?php 
 
-		//var_dump( $content);
+					$file = get_field('download_file', $post);
+					$pdfurl = $file['url'];
+
+					$content = '[pdf-embedder url="' . $pdfurl . '"]';
+
+					//var_dump( $content);
 
 
-		if( $file ) { 
+					if( $file ) { 
 
-		echo do_shortcode( $content );
+					echo do_shortcode( $content );
 
 
-		 } ?>
+					 } ?>
+
+		    <?php endforeach; ?>
+		   
+		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
 
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 
