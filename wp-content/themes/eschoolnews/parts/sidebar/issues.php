@@ -15,6 +15,7 @@
 			//'orderby'	=> 'meta_value_num',
 			'order'		=> 'ASC',
 			'offset' => '1',
+			'post__not_in' => array($this_post),
 
 			);
 
