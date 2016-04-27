@@ -23,8 +23,8 @@
 		$args = array(
 			'posts_per_page' => '5',
 			'post_type'	=> 'digital-issues',
-			'meta_key'	=> 'digital_issue_date',
-			'orderby'	=> 'meta_value_num',
+			//'meta_key'	=> 'digital_issue_date',
+			//'orderby'	=> 'meta_value_num',
 			'order'		=> 'ASC',
 			'post__not_in' => array($this_post),
 
