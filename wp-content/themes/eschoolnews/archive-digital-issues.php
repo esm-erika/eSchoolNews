@@ -29,19 +29,11 @@ get_header(); ?>
 
 	<?php 
 
-	$taxonomy = 'years';
-	$terms = get_the_terms( $post->ID, $taxonomy);
-	$term_name = $terms[0]->name;
-
-	?>
-
-	<?php 
-
 		$args = array(
-			'posts_per_page' => '1',
+			//'posts_per_page' => '1',
 			'post_type'	=> 'digital-issues',
-			'meta_key'	=> 'digital_issue_date',
-			'orderby'	=> 'meta_value_num',
+			//'meta_key'	=> 'digital_issue_date',
+			//'orderby'	=> 'meta_value_num',
 			'order'		=> 'ASC'
 
 			);
@@ -52,7 +44,7 @@ get_header(); ?>
 
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			
-			<li><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?> <?php echo $term_name; ?></a></h4></li>
+			<li><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></li>
 			
 	
 	<?php endwhile; wp_reset_postdata(); endif; ?>

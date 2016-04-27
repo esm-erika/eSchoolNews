@@ -481,7 +481,7 @@ function digitalissue_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
-		'taxonomies' => array('post_tag', 'years'),
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
@@ -523,7 +523,7 @@ function pdfassets_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'has_archive' => true,
-		// 'taxonomies' => array('post_tag', 'years'),
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
  
