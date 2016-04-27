@@ -17,7 +17,8 @@
 
 
  if(!empty($tag_ids) || !empty($cat_ids)){
-		if(empty($tag_ids)){ 
+
+		if(!empty($cat_ids)){ 
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
@@ -26,9 +27,7 @@
 			'category__in ' => $cat_ids,
 			'cat' =>  '-11583'
 			);
-		 }
-		 
-		if(empty($cat_ids)){ 
+		 } else if(!empty($tag_ids)){ 
 	
 			$args=array(
 			'post__not_in' => array($post->ID),
@@ -40,6 +39,7 @@
 			);
 
 		 }	
+
 	
 	} else {
 
