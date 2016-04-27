@@ -339,7 +339,7 @@ function collaboration_register() {
  
 	register_post_type( 'collabnation' , $args );
 
-	register_taxonomy("years", array("collabnation", "digital-issues"), array("hierarchical" => true, "label" => "Years", "singular_label" => "Year", "rewrite" => true, 'show_in_menu' => true));
+	register_taxonomy("years", array("collabnation"), array("hierarchical" => true, "label" => "Years", "singular_label" => "Year", "rewrite" => true, 'show_in_menu' => true));
 
 }
 
