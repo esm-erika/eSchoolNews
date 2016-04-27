@@ -18,15 +18,7 @@ get_header(); ?>
 <div class="row">
 	<div class="small-12 medium-8 columns" role="main">
 
-		<?php 
-
-		$taxonomy = 'years';
-		$terms = get_the_terms( $post->ID, $taxonomy);
-		$term_name = $terms[0]->name;
-
-		?>
-
-		<h4><?php the_title(); ?> <?php echo $term_name; ?></h4>
+		<h4><?php the_title(); ?></h4>
 
 
 		<?php 
