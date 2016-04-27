@@ -12,6 +12,10 @@
 
 <aside id="sidebar" class="small-12 medium-4 columns">
 
+	<?php if( is_page('current-issue') || is_singular('digital-issues')) {
+		get_template_part('parts/sidebar/issues' );
+	} ?>
+
 	<?php 
 
 	if ( is_singular(array( 'webinars', 'whitepapers', 'special-reports' )) || in_category('leading-the-digital-leap')) {
@@ -27,6 +31,8 @@
 	get_template_part( 'parts/ads/currentissue' );
 	
 	 ?>
+
+
 
 	<?php
 	get_template_part( 'parts/sidebar/astc' );
@@ -93,6 +99,8 @@
 	}
 	?>
 
+
+
 	<?php 
 
 	if ( is_singular(array( 'webinars', 'whitepapers', 'special-reports' )) || in_category('leading-the-digital-leap')) {
@@ -119,9 +127,7 @@
 
 	<?php } ?>
 
-	<?php if( is_page('about')) {
-		//get_template_part('parts/sidebar/staff' );
-	} ?>
+	
 	
 
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
