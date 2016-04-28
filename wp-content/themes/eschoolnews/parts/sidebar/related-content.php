@@ -1,9 +1,8 @@
 <article>
 <section>
-<h4>Related Posts</h4>	
+<h4>Related Content</h4>
 
 <?php 
-
 //$args = array( 'category__in => 6870, 'tag__in' => array( 'tag1', 'tag2' ), 'showposts' => 2 );
 
     $orig_post = $post;
@@ -15,12 +14,11 @@
 	$cats = wp_get_post_categories($post->ID);
     $cat_ids = array();
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
-	
 
 
-	if(empty($tag_ids) || empty($cat_ids)){
-		if(empty($tag_ids)){ 
+ if(!empty($tag_ids) || !empty($cat_ids)){
 
+		if(!empty($cat_ids)){ 
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
@@ -29,11 +27,8 @@
 			'category__in ' => $cat_ids,
 			'cat' =>  '-11583'
 			);
-
-
-		 }
-		if(empty($cat_ids)){ 
-		
+		 } else if(!empty($tag_ids)){ 
+	
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
@@ -42,8 +37,7 @@
 			'tag__in' => $tag_ids,
 			'cat' => '-11583'
 			);
-		
-		
+
 		 }	
 	
 	} else {
@@ -67,9 +61,6 @@
 		);
 		
 	}	
-
-
-
 
     $my_query = new wp_query( $args );
 //if ( have_posts() ) {	
