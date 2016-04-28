@@ -29,15 +29,15 @@ get_header(); ?>
 			'post_type'	=> 'digital-issues',
 			//'meta_key'	=> 'digital_issue_date',
 			//'orderby'	=> 'meta_value_num',
-			'order'		=> 'ASC'
+			'order'		=> 'DESC'
 
 			);
 		// the query
-		$the_query = new WP_Query( $args ); 
+		$current_issue = new WP_Query( $args ); 
 
-		if ( $the_query->have_posts() ) : ?>
+		if ( $current_issue->have_posts() ) : ?>
 
-	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	<?php while ( $current_issue->have_posts() ) : $current_issue->the_post(); ?>
 
 
 		<h4><?php the_title(); ?></h4>
@@ -45,20 +45,33 @@ get_header(); ?>
 
 		<?php 
 
-		$file = get_field('download_file');
-		$pdfurl = $file['url'];
+		$posts = get_field('pdf_select');
 
-		$content = '[pdf-embedder url="' . $pdfurl . '"]';
+		if( $posts ): ?>
+		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		        <?php setup_postdata($post); ?>
+		            
+					<?php 
 
-		//var_dump( $content);
+					$file = get_field('download_file', $post);
+					$pdfurl = $file['url'];
+
+					$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
+
+					//var_dump( $content);
 
 
-		if( $file ) { 
+					if( $file ) { 
 
-		echo do_shortcode( $content );
+					echo do_shortcode( $content );
 
 
-		 } ?>
+					 } ?>
+
+		    <?php endforeach; ?>
+		   
+		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
 
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 

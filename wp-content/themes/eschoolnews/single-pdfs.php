@@ -37,7 +37,7 @@ get_header(); ?>
 		$file = get_field('download_file');
 		$pdfurl = $file['url'];
 
-		$content = '[pdf-embedder url="' . $pdfurl . '"]';
+		$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
 
 		//var_dump( $content);
 
