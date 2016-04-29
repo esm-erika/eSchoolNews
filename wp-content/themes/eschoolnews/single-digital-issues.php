@@ -18,6 +18,8 @@ get_header(); ?>
 <div class="row">
 	<div class="small-12 columns" role="main">
 
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 		<?php 
 
 		$posts = get_field('pdf_select');
@@ -56,6 +58,8 @@ get_header(); ?>
 		   
 		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 		<?php endif; ?>
+
+	<?php endwhile; endif; ?>
 
 
 	</div>
