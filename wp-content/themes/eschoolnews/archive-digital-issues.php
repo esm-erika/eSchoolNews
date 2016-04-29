@@ -25,7 +25,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 
-		<ul class="small-block-grid-1 medium-block-grid-2">
+		<ul class="small-block-grid-1 medium-block-grid-4">
 
 	<?php 
 
@@ -44,7 +44,10 @@ get_header(); ?>
 
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			
-			<li><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></li>
+			<li>
+				<?php the_post_thumbnail('medium-portrait'); ?>
+				<div><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+			</li>
 			
 	
 	<?php endwhile; wp_reset_postdata(); endif; ?>
@@ -72,7 +75,7 @@ if (false === ($local_box_cache) ){
 	// start code to cache
 		ob_start( );
 			echo '<!-- c -->';
-			get_sidebar();
+			//get_sidebar();
 			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
 		$local_box_cache = ob_get_clean( );
 	// end the code to cache
