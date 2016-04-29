@@ -46,8 +46,10 @@ get_header(); ?>
 			
 			<li>
 				<?php if (has_post_thumbnail()) { ?>
-				<a href="<?php the_permalink(); ?>" style="border: 1px solid #000;">
-					<?php the_post_thumbnail('medium-portrait'); ?>
+				<a href="<?php the_permalink(); ?>">
+					<span style="border: 1px solid #000;">
+						<?php the_post_thumbnail('medium-portrait'); ?>
+					</span>
 				<?php } else { ?>
 				<a href="<?php the_permalink(); ?>">
 				<?php } ?>
