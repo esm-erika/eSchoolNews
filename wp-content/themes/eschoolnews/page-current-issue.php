@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 <div class="row">
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 columns" role="main">
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -40,7 +40,7 @@ get_header(); ?>
 	<?php while ( $current_issue->have_posts() ) : $current_issue->the_post(); ?>
 
 
-		<h4><?php the_title(); ?></h4>
+		<h4 class="left"><?php the_title(); ?></h4>
 
 
 		<?php 
@@ -50,6 +50,8 @@ get_header(); ?>
 		if( $posts ): ?>
 		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 		        <?php setup_postdata($post); ?>
+
+
 		            
 					<?php 
 
@@ -58,13 +60,21 @@ get_header(); ?>
 
 					$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
 
-					//var_dump( $content);
+					?>
+
+					<ul class="button-group right">
+
+					<li><a class="button radius small" target="_blank" href="<?php echo $pdfurl; ?>">Download PDF</a></li>
+					<li><a class="button radius small" href="<?php echo site_url();?>/digital-issues">View Archive</a></li>
+
+					</ul>
+
+					<hr>
 
 
-					if( $file ) { 
+					<?php if( $file ) { 
 
 					echo do_shortcode( $content );
-
 
 					 } ?>
 
@@ -82,7 +92,5 @@ get_header(); ?>
 	
 	</div>
 	
-		<?php get_sidebar(); ?>
-
 </div>
 <?php get_footer(); ?>

@@ -522,7 +522,7 @@ function pdfassets_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'has_archive' => true,
+		'has_archive' => false,
 		'taxonomies' => array('post_tag'),
 		'supports' => array('title','editor','thumbnail')
 	  ); 
@@ -530,5 +530,6 @@ function pdfassets_register() {
 	register_post_type( 'pdfs' , $args );
 
 }
+
 
 ?>

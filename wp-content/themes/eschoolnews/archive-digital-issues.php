@@ -23,9 +23,9 @@ get_header(); ?>
 			<?php get_template_part( 'parts/section-titles' ); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 columns" role="main">
 
-		<ul class="small-block-grid-1 medium-block-grid-2">
+		<ul class="small-block-grid-1 medium-block-grid-4">
 
 	<?php 
 
@@ -44,7 +44,17 @@ get_header(); ?>
 
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			
-			<li><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></li>
+			<li>
+				<?php if (has_post_thumbnail()) { ?>
+				<a href="<?php the_permalink(); ?>">
+					<div style="border: 1px solid #ccc;">
+						<?php the_post_thumbnail('medium-portrait'); ?>
+					</div>
+				<?php } else { ?>
+				<a href="<?php the_permalink(); ?>">
+				<?php } ?>
+				<div><?php the_title(); ?></div></a>
+			</li>
 			
 	
 	<?php endwhile; wp_reset_postdata(); endif; ?>
@@ -72,7 +82,7 @@ if (false === ($local_box_cache) ){
 	// start code to cache
 		ob_start( );
 			echo '<!-- c -->';
-			get_sidebar();
+			//get_sidebar();
 			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
 		$local_box_cache = ob_get_clean( );
 	// end the code to cache
@@ -90,5 +100,6 @@ echo $local_box_cache;
 
 }
 ?>
+
 </div>
 <?php get_footer(); ?>
