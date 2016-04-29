@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 <div class="row">
-	<div class="small-12 medium-8 columns" role="main">
+	<div class="small-12 columns" role="main">
 
 		<h4 class="left"><?php the_title(); ?></h4>
 
@@ -64,7 +64,7 @@ get_header(); ?>
 	
 
 
-		<?php get_sidebar(); ?>
+		<?php //get_sidebar(); ?>
 
 </div>
 <?php get_footer(); ?>
