@@ -40,7 +40,7 @@ get_header(); ?>
 
 					<ul class="button-group right">
 
-					<li><a class="button radius small" href="<?php echo $pdfurl; ?>">Download PDF</a></li>
+					<li><a class="button radius small" target="_blank" href="<?php echo $pdfurl; ?>">Download PDF</a></li>
 					<li><a class="button radius small" href="<?php echo site_url();?>/digital-issues">View Archive</a></li>
 
 					</ul>
