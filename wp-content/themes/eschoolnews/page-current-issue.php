@@ -40,28 +40,39 @@ get_header(); ?>
 	<?php while ( $current_issue->have_posts() ) : $current_issue->the_post(); ?>
 
 
-		<h4><?php the_title(); ?></h4>
+		<h4 class="left"><?php the_title(); ?></h4>
 
 
 		<?php 
 
 		$posts = get_field('pdf_select');
 
-		$file = get_field('download_file', $post);
-		$pdfurl = $file['url'];
-
-		$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
-
 		if( $posts ): ?>
-
 		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 		        <?php setup_postdata($post); ?>
 
-		        <a href="<?php echo $pdfurl; ?>">download</a>
+
 		            
 					<?php 
-					
-					if( $file ) { 
+
+					$file = get_field('download_file', $post);
+					$pdfurl = $file['url'];
+
+					$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
+
+					?>
+
+					<ul class="button-group right">
+
+					<li><a class="button radius small" href="<?php echo $pdfurl; ?>">Download PDF</a></li>
+					<li><a class="button radius small" href="<?php echo site_url();?>/digital-issues">View Archive</a></li>
+
+					</ul>
+
+					<hr>
+
+
+					<?php if( $file ) { 
 
 					echo do_shortcode( $content );
 

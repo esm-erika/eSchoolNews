@@ -18,7 +18,7 @@ get_header(); ?>
 <div class="row">
 	<div class="small-12 medium-8 columns" role="main">
 
-		<h4><?php the_title(); ?></h4>
+		<h4 class="left"><?php the_title(); ?></h4>
 
 
 		<?php 
@@ -36,10 +36,19 @@ get_header(); ?>
 
 					$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
 
-					//var_dump( $content);
+					?>
+
+					<ul class="button-group right">
+
+					<li><a class="button radius small" href="<?php echo $pdfurl; ?>">Download PDF</a></li>
+					<li><a class="button radius small" href="<?php echo site_url();?>/digital-issues">View Archive</a></li>
+
+					</ul>
+
+					<hr>
 
 
-					if( $file ) { 
+					<?php if( $file ) { 
 
 					echo do_shortcode( $content );
 
