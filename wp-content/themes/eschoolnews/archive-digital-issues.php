@@ -45,8 +45,13 @@ get_header(); ?>
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			
 			<li>
-				<?php the_post_thumbnail('medium-portrait'); ?>
-				<div><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+				<?php if (has_post_thumbnail()) { ?>
+				<a href="<?php the_permalink(); ?>" style="border: 1px solid #000;">
+					<?php the_post_thumbnail('medium-portrait'); ?>
+				<?php } else { ?>
+				<a href="<?php the_permalink(); ?>">
+				<?php } ?>
+				<div><?php the_title(); ?></div></a>
 			</li>
 			
 	
