@@ -40,7 +40,7 @@ get_header(); ?>
 	<?php while ( $current_issue->have_posts() ) : $current_issue->the_post(); ?>
 
 
-		
+		<h4><?php the_title(); ?></h4>
 
 
 		<?php 
@@ -54,20 +54,10 @@ get_header(); ?>
 
 		if( $posts ): ?>
 
-		<div>
-
-		<h4 class="left"><?php the_title(); ?></h4>
-
 		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 		        <?php setup_postdata($post); ?>
 
-		        <ul class="button-group right">
-
-		        <li><a class="button radius small" href="<?php echo $pdfurl; ?>">Download PDF</a></li> 
-		        <li><a class="button radius small" href="<?php echo site_url(); ?>/digital-issues">View Archive</a></li>
-				
-				</ul>
-		    </div>
+		        <a href="<?php echo $pdfurl; ?>">download</a>
 		            
 					<?php 
 					
