@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php get_template_part( 'parts/section-titles' ); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 columns" role="main">
 
 		<ul class="small-block-grid-1 medium-block-grid-4">
 
