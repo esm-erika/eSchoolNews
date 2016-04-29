@@ -29,11 +29,13 @@ get_header(); ?>
 
 		$content = '[pdf-embedder toolbar="top" toolbarfixed="on" url="' . $pdfurl . '"]';
 
-		if( $posts ): ?>
+		?>
 
 		<div>
 
 		<h4 class="left"><?php the_title(); ?></h4>
+
+		<?php if( $posts ): ?>
 
 		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 		        <?php setup_postdata($post); ?>
