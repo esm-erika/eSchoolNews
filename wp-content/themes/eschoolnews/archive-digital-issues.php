@@ -34,7 +34,7 @@ get_header(); ?>
 			'post_type'	=> 'digital-issues',
 			//'meta_key'	=> 'digital_issue_date',
 			//'orderby'	=> 'meta_value_num',
-			'order'		=> 'ASC'
+			'order'		=> 'DESC'
 
 			);
 		// the query
