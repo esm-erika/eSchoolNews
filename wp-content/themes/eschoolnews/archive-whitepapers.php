@@ -269,13 +269,7 @@ $(document).ready(function(){
 							?>
 						</p>
 
-						<?php 
-
-						$posts = get_field('pdf_select');
-
-						if( $posts ): ?>
-						    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-						        <?php setup_postdata($post); ?>
+						
 						
 						<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
@@ -284,18 +278,33 @@ $(document).ready(function(){
 
 							<?php 
 
-							$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
-							$cutoff_date = strtotime( '2016-04-27' ); 
+							// $post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
+							// $cutoff_date = strtotime( '2016-04-27' ); 
 
-							if( $post_date > $cutoff_date ) {
+							// if( $post_date < $cutoff_date ) {
 
 							?>
+
+								<?php 
+
+								$posts = get_field('pdf_select');
+
+								if( $posts ) { ?>
+
+								    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+								        <?php setup_postdata($post); ?>
 					
 						        <div class="text-center">
 									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
 								</div>
 
-							<? } else { ?>
+									<?php endforeach; ?>
+								   
+								    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+								
+								<?php } else { ?>
+
+							
 
 								<div class="text-center">
 									<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
@@ -314,10 +323,7 @@ $(document).ready(function(){
                         
                         <?php } ?>
 
-                        <?php endforeach; ?>
-						   
-						    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-						<?php endif; ?>
+                        
 					</div>
                     </div>
 
