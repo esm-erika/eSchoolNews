@@ -373,7 +373,6 @@ echo $local_box_cache;
 }
 ?>
 
-
 </div>
 
 <?php get_footer(); ?>
