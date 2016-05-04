@@ -287,7 +287,7 @@ $(document).ready(function(){
 							$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
 							$cutoff_date = strtotime( '2016-04-27' ); 
 
-							if( $post_date < $cutoff_date ) {
+							if( $post_date > $cutoff_date ) {
 
 							?>
 					
