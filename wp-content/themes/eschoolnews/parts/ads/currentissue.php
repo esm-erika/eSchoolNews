@@ -9,5 +9,5 @@
 
 ?>
 <div class="ad-container">
-<a href="/current-issue/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/DigitalIssue.jpg" alt="Current Issue"></a>
+<a href="<?php echo site_url(); ?>/current-issue/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/DigitalIssue.jpg" alt="Current Issue"></a>
 </div>

@@ -105,7 +105,7 @@ function whitepaper_register() {
  
 	register_post_type( 'whitepapers' , $args );
 
-	//register_taxonomy("company_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Companies", "singular_label" => "Company", "rewrite" => true));
+	//register_taxonomy("flag", array("whitepapers"), array("hierarchical" => true, "label" => "Flags", "singular_label" => "flag", "rewrite" => true));
 	register_taxonomy("subject_categories", array("whitepapers"), array("hierarchical" => true, "label" => "Subjects", "singular_label" => "Subject", "rewrite" => true));
 
 } 
@@ -339,7 +339,7 @@ function collaboration_register() {
  
 	register_post_type( 'collabnation' , $args );
 
-	register_taxonomy("years", array("collabnation"), array("hierarchical" => true, "label" => "Years", "singular_label" => "Year", "rewrite" => true, 'show_in_menu' => false));
+	register_taxonomy("years", array("collabnation"), array("hierarchical" => true, "label" => "Years", "singular_label" => "Year", "rewrite" => true, 'show_in_menu' => true));
 
 }
 
@@ -445,5 +445,91 @@ function pressreleases_register() {
 
 
 }
+
+
+/*===================================================================================
+ * Digital Issues
+ * =================================================================================*/
+
+add_action('init', 'digitalissue_register');
+ 
+function digitalissue_register() {
+ 
+	$labels = array(
+		'name' => _x('Digital Issues', 'post type general name'),
+		'singular_name' => _x('Digital Issue', 'post type singular name'),
+		'add_new' => _x('Add Digital Issue', 'newsletter issue'),
+		'add_new_item' => __('Add New Digital Issue'),
+		'edit_item' => __('Edit Digital Issue'),
+		'new_item' => __('New Digital Issue'),
+		'view_item' => __('View Digital Issue'),
+		'search_items' => __('Search Digital Issues'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-media-document',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => true,
+		'taxonomies' => array('post_tag'),
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'digital-issues' , $args );
+
+}
+
+/*===================================================================================
+ * PDF Asset
+ * =================================================================================*/
+
+add_action('init', 'pdfassets_register');
+ 
+function pdfassets_register() {
+ 
+	$labels = array(
+		'name' => _x('PDF Asset', 'post type general name'),
+		'singular_name' => _x('PDF Asset', 'post type singular name'),
+		'add_new' => _x('Add PDF Asset', 'newsletter Asset'),
+		'add_new_item' => __('Add New PDF Asset'),
+		'edit_item' => __('Edit PDF Asset'),
+		'new_item' => __('New PDF Asset'),
+		'view_item' => __('View PDF Asset'),
+		'search_items' => __('Search PDF Assets'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-media-text',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'has_archive' => false,
+		'taxonomies' => array('post_tag'),
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'pdfs' , $args );
+
+}
+
 
 ?>

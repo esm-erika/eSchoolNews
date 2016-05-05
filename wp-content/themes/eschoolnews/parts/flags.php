@@ -28,8 +28,15 @@
 		echo '<a href="' . get_site_url() .'/staff'. '">';
 		echo 'Staff'; 
 		echo '</a></span>';
+
+	} elseif (is_page('current-issue')) {
+
+		echo '<span class="flag content">';
+		echo '<a href="' . get_site_url() .'/digital-issues'. '">';
+		echo 'Current Issue'; 
+		echo '</a></span>';
 	
-	} else {
+ 	} else {
 
 		$post_type = get_post_type_object( get_post_type($post) );
 
