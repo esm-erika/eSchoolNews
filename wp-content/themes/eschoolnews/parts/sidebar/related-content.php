@@ -16,16 +16,16 @@
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
 
 
- if(!empty($tag_ids) || !empty($cat_ids)){
-
+				 
 		if(!empty($cat_ids)){ 
+	
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
-			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
-			'category__in ' => $cat_ids,
-			'cat' =>  '-11583'
+			'post_type' => array('post' ),  // 'whitepapers' ,'ercs' ,'webinars' ,'special-reports',
+			'category__in' => $cat_ids,
+			'cat' => '-11583,-11,-133'
 			);
 		 } else if(!empty($tag_ids)){ 
 	
@@ -33,11 +33,10 @@
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
-			'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports','post' ),  
-			'tag__in' => $tag_ids,
-			'cat' => '-11583'
+			'post_type' => array('post' ),  // 'whitepapers' ,'ercs' ,'webinars' ,'special-reports',
+			'tag__in ' => $tag_ids,
+			'cat' =>  '-11583'
 			);
-
 		 }	
 	
 	} else {
@@ -47,7 +46,7 @@
 		'posts_per_page'=>5, // Number of related posts to display.
 		'ignore_sticky_posts'=>1,
 		'cat' => '-11583',
-		'post_type' => array( 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events', 'post' ),  
+		'post_type' => array( 'post' ),  // 'whitepapers' ,'ercs' ,'webinars' ,'special-reports', 'events',
 		'tax_query' => array(
 			'relation' => 'OR',
 			array(
