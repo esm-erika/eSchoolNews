@@ -126,10 +126,10 @@ global $cat;
 			
 		</ul>
 
-		<a href="<?php home_url(); ?>/collaboration/submission-form/" class="submit-button left">
+		<!-- <a href="<?php home_url(); ?>/collaboration/submission-form/" class="submit-button left">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/submit-button.png" alt="Submit">
 			<span class="hide-for-medium-only">ENTRY FORM</span>
-		</a>
+		</a> -->
 	</div>
 </div>
 
@@ -163,7 +163,7 @@ global $cat;
 			$the_query = new WP_Query( $args ); ?>
 
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				<h2 class="page-title">Submission Deadline Ends In:</h2>
+				<!-- <h2 class="page-title">Submission Deadline Ends In:</h2>
 
 				<div class="calendar">
 					<span class="days"><?php
@@ -178,15 +178,15 @@ global $cat;
 					Days
 				</span>
 
-				</div>
+				</div> -->
 
 				<?php the_content(); ?>
 			<?php endwhile; 
 			wp_reset_postdata(); ?>
 
-			<a href="<?php home_url(); ?>/collaboration/submission-form" class="button-entry">
+			<!-- <a href="<?php home_url(); ?>/collaboration/submission-form" class="button-entry">
 				<img width="150" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button_submit-today.png" alt="Submit Today!">
-			</a>
+			</a> -->
 
 		</div>
 	</div>
