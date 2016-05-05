@@ -24,9 +24,6 @@ get_header();
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
-
-
-
 </div>
 <script type="text/javascript">
 jQuery.noConflict()(function ($) { // this was missing for me
@@ -148,9 +145,11 @@ $(document).ready(function(){
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-					<div style="margin-bottom:8px;" class="panel row all<?php 
+				<div class="panel all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
+
+					<header style="margin-bottom:8px;" class="row collapse">
 
 
 						
@@ -158,20 +157,36 @@ $(document).ready(function(){
 
 							if (has_post_thumbnail()) { ?>
 
-							<div class="medium-4 columns">
+							<div class="medium-3 columns">
 
 							<?php the_post_thumbnail('medium-portrait'); ?>
 							
 							</div>
-                    	<div class="medium-8 columns">
+                    		
+                    		<div class="medium-9 columns">
+                    			<div class="row">
+                    				<div class="small-12 columns">
+                    					
+                    				
 
 						    <?php }else{ ?>
 
 						    <div class="medium-12 columns">
+						    	<div class="row collapse">
+                    				<div class="small-12 columns">
 
 						    <?php } ?>
                     	
-						<header>
+						
+							<?php 
+
+							// $taxonomy = 'flag';
+							// $terms = get_the_terms( $post->ID, $taxonomy);
+							// $term_name = $terms[0]->name;
+
+							// echo $term_name;
+
+							 ?>
                     		<h3><?php the_title(); ?></h3>
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
@@ -218,29 +233,82 @@ $(document).ready(function(){
 											}
 										} ?>
 
+
+
+									
+										</div>
+                    				</div>
+
+
+
+
+	
+
 											</div>
 										</div>
 									<br/>
 									
 
 								<?php //endif; ?>
+
+
+
                     		
                     	</header>
 
+                    	<div class="row">
+                    		<div class="small-12 columns">
+
                     	<p class="excerpt">
 							<?php 
-							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							//echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							the_content();
 							?>
 						</p>
+
+						
 						
 						<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
 						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
-						
-						<div class="text-center">
-							<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
-						</div>
+
+							<?php 
+
+							// $post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
+							// $cutoff_date = strtotime( '2016-04-27' ); 
+
+							// if( $post_date < $cutoff_date ) {
+
+							?>
+
+								<?php 
+
+								$posts = get_field('pdf_select');
+
+								if( $posts ) { ?>
+
+								    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+								        <?php setup_postdata($post); ?>
+					
+						        <div class="text-center">
+									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+								</div>
+
+									<?php endforeach; ?>
+								   
+								    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+								
+								<?php } else { ?>
+
+							
+
+								<div class="text-center">
+									<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
+								</div>
+
+							<?php } ?>
+						    
 
 						<?php } else { // not logged in ?>
 						
@@ -251,15 +319,21 @@ $(document).ready(function(){
                         
                         
                         <?php } ?>
+
+                        
 					</div>
                     </div>
 
-                   
+
+
+                   </div>
 
 					
 					
 					<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
+
+				
 				
 		  </section>
 		</div>
@@ -300,9 +374,7 @@ if (false === ($local_box_cache) ){
 echo $local_box_cache;
 
 }
-
 ?>
-
 
 </div>
 
