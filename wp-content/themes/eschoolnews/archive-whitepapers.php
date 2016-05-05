@@ -43,10 +43,10 @@ $(document).ready(function(){
     });
 
 	$("#curriculum").click(function(){
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-        $("div.row.curriculum-whitepapers").show();
+		$("div.panel.digital-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").hide();
+        $("div.panel.curriculum-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").show();
 		$("h4#DigitalTitle").hide();
@@ -56,10 +56,10 @@ $(document).ready(function(){
     });
 
 	$("#digital").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.digital-whitepapers").show();
+        $("div.panel.curriculum-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").hide();
+		$("div.panel.digital-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").show();
@@ -69,10 +69,10 @@ $(document).ready(function(){
     });
 
 	$("#mobile").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").show();
+        $("div.panel.curriculum-whitepapers").hide();
+		$("div.panel.digital-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -82,10 +82,10 @@ $(document).ready(function(){
     });	
     
 	$("#technologies").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.technologies-whitepapers").show();
+        $("div.panel.curriculum-whitepapers").hide();
+		$("div.panel.digital-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
