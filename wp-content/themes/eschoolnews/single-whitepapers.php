@@ -109,7 +109,7 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 	        <?php setup_postdata($post); ?>
 
     <div class="text-center">
-		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
 	</div>
 
 		<?php endforeach; ?>
@@ -123,7 +123,7 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 			
 					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
 					} else{
-					echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
+					echo'<a class="button radius small" href="'.$WPURL.'">View Now</a>';
 			 }
 			echo '</p>'; 
 	}
