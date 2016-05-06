@@ -70,7 +70,19 @@ $WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
   
  
  
-  <?php the_content(); ?>
+  <?php
+  
+  if ( have_posts() ) {
+			while ( have_posts() ) {
+				//the_post(); 
+								//
+				the_content();
+								//
+							} // end while
+						} // end if
+
+  
+   ?>
   
 
 		
