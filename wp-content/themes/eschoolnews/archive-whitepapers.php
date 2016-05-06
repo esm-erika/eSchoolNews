@@ -187,7 +187,7 @@ $(document).ready(function(){
 							// echo $term_name;
 
 							 ?>
-                    		<h3><?php the_title(); ?></h3>
+                    		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
 
@@ -261,8 +261,12 @@ $(document).ready(function(){
 
                     	<p class="excerpt">
 							<?php 
-							//echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
-							the_content();
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							//the_content();
+
+							echo ' <a href="' .get_permalink(). '">';
+							echo 'Read More';
+							echo '</a>';
 							?>
 						</p>
 
@@ -292,7 +296,7 @@ $(document).ready(function(){
 								        <?php setup_postdata($post); ?>
 					
 						        <div class="text-center">
-									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
 								</div>
 
 									<?php endforeach; ?>
@@ -304,7 +308,7 @@ $(document).ready(function(){
 							
 
 								<div class="text-center">
-									<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
+									<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">View Now</a>
 								</div>
 
 							<?php } ?>
@@ -313,7 +317,7 @@ $(document).ready(function(){
 						<?php } else { // not logged in ?>
 						
 						<div class="text-center">
-                        	<a href="#" class="button medium radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
+                        	<a href="#" class="button medium radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">View Now</a>
                     	</div>
 						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
                         
