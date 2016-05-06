@@ -9,29 +9,23 @@
 
 ?>
 <?php
-
-
-//why this here no need?? wh check later?? // $_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
-
-/* //why call this if they may not be logged in  // 
-global $esmuser;
-
-	$WPautofill = array(
-	wpuidSP => $esmuser[wpuid],
-	sfuidSP => $esmuser[sfuidSP],
-	PersonContactIdPS => $esmuser[PersonContactIdPS],
-	wpuid => $esmuser[wpuid],
-	sfuid => $esmuser[sfuid],
-	PersonContactId => $esmuser[PersonContactId],	
-	esmpassvalue => $esmuser[esmpassvalue],	
-	astc => $astc			
-	); */
-
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+		// get rid of unneeded call for more information. THis will speed it up a bunch.
+		//$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+ 		//$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
+		//$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
+		//$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
+		//$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
+		//$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
+		//$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
+		//$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
+		//$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
+		//$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
+		//$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
 ?>
+
 
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
   <div class="row">
@@ -89,23 +83,6 @@ global $esmuser;
  
   <?php the_content(); ?>
   
-
-
-
-
-<?php 
-
-		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-		$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-		$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-		$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-		$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
-?>
 
 		
 <?php global $page; ?>
