@@ -74,7 +74,7 @@ $WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
   
   if ( have_posts() ) {
 			while ( have_posts() ) {
-				//the_post(); 
+				the_post(); 
 								//
 				the_content();
 								//
