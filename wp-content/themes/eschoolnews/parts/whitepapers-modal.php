@@ -12,18 +12,6 @@
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		// get rid of unneeded call for more information. THis will speed it up a bunch.
-		//$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
- 		//$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-		//$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-		//$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-		//$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-		//$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-		//$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-		//$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-		//$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-		//$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		//$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
 ?>
 
 
@@ -109,10 +97,12 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 
 	gravity_form( $WPForm , false, false, false, $WPautofill, true);
 
-
+	
+} else {
+	
 	$posts = get_field('pdf_select');
 
-	elseif( $posts ) { ?>
+	if( $posts ) { ?>
 
 	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 	        <?php setup_postdata($post); ?>
@@ -135,56 +125,9 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 					echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
 			 }
 			echo '</p>'; 
-} /* else {  // no form
-?>
-
-
-	<?php the_content(); ?>
-
-<?php
-if (($WPForm != null) and ($WPForm > 0)) {
-
-//we have this already
-global $esmuser;
-
-	$WPautofill = array(
-	wpuidSP => $esmuser[wpuid],
-	sfuidSP => $esmuser[sfuidSP],
-	PersonContactIdPS => $esmuser[PersonContactIdPS],
-	wpuid => $esmuser[wpuid],
-	sfuid => $esmuser[sfuid],
-	PersonContactId => $esmuser[PersonContactId],	
-	esmpassvalue => $esmuser[esmpassvalue],	
-	astc => $astc			
-	); 
-
-gravity_form( $WPForm , false, false, false, $WPautofill, true);  
-
-}else if ($WPURL != null) { 
-echo '<p>';
- if ($WPcbt != null) { 
-		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-		} else{
-		echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';	 
-	 
-	 }
-echo '</p>'; 
+	}
 }
-
 ?>
-
-
-
-
-<?php }
-*/
-
-
-// if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';} // logo that is not needed it has been moved
-
-// if ($WPfooter != null) { echo $WPfooter;} // THis is not needed as it can only break the modal.
-
-						?>
 
 
 
