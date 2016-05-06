@@ -107,40 +107,33 @@
 
 if (($WPForm != null) and ($WPForm > 0)) { // has form??
 
-	gravity_form( $WPForm , false, false, false, $WPautofill, true);  
-	
+	gravity_form( $WPForm , false, false, false, $WPautofill, true);
 
-	} else if ($WPURL != null) { 
-			echo '<p>';
-			 if ($WPcbt != null) { ?>
 
-			 		<?php 
+	$posts = get_field('pdf_select');
 
-								$posts = get_field('pdf_select');
+	elseif( $posts ) { ?>
 
-								if( $posts ) { ?>
+	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+	        <?php setup_postdata($post); ?>
 
-								    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-								        <?php setup_postdata($post); ?>
+    <div class="text-center">
+		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+	</div>
+
+		<?php endforeach; ?>
+	   
+	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 					
-						        <div class="text-center">
-									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
-								</div>
 
-									<?php endforeach; ?>
-								   
-								    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-								
-								<?php } elseif { 
+	<? } else if ($WPURL != null) { 
+			echo '<p>';
+			 if ($WPcbt != null) { 
 			
-								echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-								
-								} else {
-
-								echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
-
-								?>
-			<?php }
+					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
+					} else{
+					echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
+			 }
 			echo '</p>'; 
 } /* else {  // no form
 ?>
