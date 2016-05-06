@@ -10,7 +10,10 @@
 ?>
 <?php
 
-if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
+
+//why this here no need?? wh check later?? // $_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
+
+/* //why call this if they may not be logged in  // 
 global $esmuser;
 
 	$WPautofill = array(
@@ -22,7 +25,7 @@ global $esmuser;
 	PersonContactId => $esmuser[PersonContactId],	
 	esmpassvalue => $esmuser[esmpassvalue],	
 	astc => $astc			
-	); 
+	); */
 
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
@@ -108,32 +111,38 @@ global $esmuser;
 <?php global $page; ?>
 
 <?php if(esm_is_user_logged_in()){ 	
-			
+	//if they are logged in then grab use information
+	global $esmuser;
+
+	$WPautofill = array(
+	wpuidSP => $esmuser[wpuid],
+	sfuidSP => $esmuser[sfuidSP],
+	PersonContactIdPS => $esmuser[PersonContactIdPS],
+	wpuid => $esmuser[wpuid],
+	sfuid => $esmuser[sfuid],
+	PersonContactId => $esmuser[PersonContactId],	
+	esmpassvalue => $esmuser[esmpassvalue],	
+	astc => $astc			
+	); 			
 
 				//	the_content(); no need it is above.
 
 
-if (($WPForm != null) and ($WPForm > 0)) {
+if (($WPForm != null) and ($WPForm > 0)) { // has form??
 
-gravity_form( $WPForm , false, false, false, $WPautofill, true);  
+	gravity_form( $WPForm , false, false, false, $WPautofill, true);  
 	
 
-}else if ($WPURL != null) { 
-echo '<p>';
- if ($WPcbt != null) { 
-
-		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-		} else{
-		echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
-	 }
-echo '</p>'; 
-
-
-?>
-
-
-<?php 
-} else {
+	}else if ($WPURL != null) { 
+			echo '<p>';
+			 if ($WPcbt != null) { 
+			
+					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
+					} else{
+					echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
+			 }
+			echo '</p>'; 
+} /* else {  // no form
 ?>
 
 
@@ -142,6 +151,7 @@ echo '</p>';
 <?php
 if (($WPForm != null) and ($WPForm > 0)) {
 
+//we have this already
 global $esmuser;
 
 	$WPautofill = array(
@@ -174,12 +184,12 @@ echo '</p>';
 
 
 <?php }
+*/
 
 
+// if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';} // logo that is not needed it has been moved
 
-if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';}
-
-if ($WPfooter != null) { echo $WPfooter;} 
+// if ($WPfooter != null) { echo $WPfooter;} // THis is not needed as it can only break the modal.
 
 						?>
 
