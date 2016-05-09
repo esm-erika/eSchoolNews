@@ -9,26 +9,11 @@
 
 ?>
 <?php
-
-if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER_SANITIZE_STRING);} else {filter_var($_GET['ps'], FILTER_SANITIZE_STRING); }
-global $esmuser;
-
-	$WPautofill = array(
-	wpuidSP => $esmuser[wpuid],
-	sfuidSP => $esmuser[sfuidSP],
-	PersonContactIdPS => $esmuser[PersonContactIdPS],
-	wpuid => $esmuser[wpuid],
-	sfuid => $esmuser[sfuid],
-	PersonContactId => $esmuser[PersonContactId],	
-	esmpassvalue => $esmuser[esmpassvalue],	
-	astc => $astc			
-	); 
-
 		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
 		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
 ?>
+
 
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
   <div class="row">
@@ -87,62 +72,12 @@ global $esmuser;
   <?php the_content(); ?>
   
 
-
-
-
-<?php 
-
-		$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-		$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-		$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-		$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-		$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-		$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-		$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-		$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-		$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-		$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
-?>
-
 		
 <?php global $page; ?>
 
 <?php if(esm_is_user_logged_in()){ 	
-			
-
-				//	the_content(); no need it is above.
-
-
-if (($WPForm != null) and ($WPForm > 0)) {
-
-gravity_form( $WPForm , false, false, false, $WPautofill, true);  
-	
-
-}else if ($WPURL != null) { 
-echo '<p>';
- if ($WPcbt != null) { 
-
-		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-		} else{
-		echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';
-	 }
-echo '</p>'; 
-
-
-?>
-
-
-<?php 
-} else {
-?>
-
-
-	<?php the_content(); ?>
-
-<?php
-if (($WPForm != null) and ($WPForm > 0)) {
-
-global $esmuser;
+	//if they are logged in then grab use information
+	global $esmuser;
 
 	$WPautofill = array(
 	wpuidSP => $esmuser[wpuid],
@@ -153,35 +88,46 @@ global $esmuser;
 	PersonContactId => $esmuser[PersonContactId],	
 	esmpassvalue => $esmuser[esmpassvalue],	
 	astc => $astc			
-	); 
+	); 			
 
-gravity_form( $WPForm , false, false, false, $WPautofill, true);  
+				//	the_content(); no need it is above.
 
-}else if ($WPURL != null) { 
-echo '<p>';
- if ($WPcbt != null) { 
-		echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-		} else{
-		echo'<a class="button radius small" href="'.$WPURL.'">Download</a>';	 
-	 
-	 }
-echo '</p>'; 
+
+if (($WPForm != null) and ($WPForm > 0)) { // has form??
+
+	gravity_form( $WPForm , false, false, false, $WPautofill, true);
+
+	
+} else {
+	
+	$posts = get_field('pdf_select');
+
+	if( $posts ) { ?>
+
+	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+	        <?php setup_postdata($post); ?>
+
+    <div class="text-center">
+		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+	</div>
+
+		<?php endforeach; ?>
+	   
+	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					
+
+	<? } else if ($WPURL != null) { 
+			echo '<p>';
+			 if ($WPcbt != null) { 
+			
+					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
+					} else{
+					echo'<a class="button radius small" href="'.$WPURL.'">View Now</a>';
+			 }
+			echo '</p>'; 
+	}
 }
-
 ?>
-
-
-
-
-<?php }
-
-
-
-if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';}
-
-if ($WPfooter != null) { echo $WPfooter;} 
-
-						?>
 
 
 
