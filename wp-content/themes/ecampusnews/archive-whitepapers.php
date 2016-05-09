@@ -33,7 +33,7 @@ $(document).ready(function(){
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
-        $("div.row.all").show();
+        $("div.panel.all").show();
 		$("h4#AllTitle").show();
 		$("h4#EngagementTitle").hide();
 		$("h4#DataTitle").hide();
