@@ -77,21 +77,12 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 
 		 } ?>
 
+		 <?php } ?>
+
 	</div>
 
 
-		<? } else if ($WPURL != null) { 
-			echo '<p>';
-			 if ($WPcbt != null) { 
-			
-					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-					} else{
-					echo'<a class="button radius small" href="'.$WPURL.'">View Now</a>';
-			 }
-			echo '</p>'; 
-	}
-}
-?>
+		
 
 
 
