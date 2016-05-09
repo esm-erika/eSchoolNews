@@ -46,6 +46,7 @@ $(document).ready(function(){
 		$("div.panel.data-analytics-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
 		$("div.panel.online-mobile-whitepapers").hide();
+		$("div.panel.all").hide();
         $("div.panel.engagement-retention-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#EngagementTitle").show();
@@ -59,6 +60,7 @@ $(document).ready(function(){
         $("div.panel.engagement-retention-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
 		$("div.panel.online-mobile-whitepapers").hide();
+		$("div.panel.all").hide();
 		$("div.panel.data-analytics-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#EngagementTitle").hide();
@@ -72,6 +74,7 @@ $(document).ready(function(){
         $("div.panel.engagement-retention-whitepapers").hide();
 		$("div.panel.data-analytics-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.all").hide();
 		$("div.panel.online-mobile-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#EngagementTitle").hide();
@@ -85,6 +88,7 @@ $(document).ready(function(){
         $("div.panel.engagement-retention-whitepapers").hide();
 		$("div.panel.data-analytics-whitepapers").hide();
 		$("div.panel.online-mobile-whitepapers").hide();
+		$("div.panel.all").hide();
 		$("div.panel.technologies-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#EngagementTitle").hide();
