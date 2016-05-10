@@ -100,7 +100,7 @@ if(!empty($tag_slugs)){
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>3, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
-			'post_type' => array('whitepapers' ,'ercs' ,'webinars' ,'special-reports' ),  // ,'post'
+			'post_type' => array('post','whitepapers' ,'ercs' ,'webinars' ,'special-reports' ),  // ,
 			'tag_slug__and' => $tag_slugs,
 			);
 			
