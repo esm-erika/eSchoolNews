@@ -93,7 +93,9 @@
 	 
 ?>	
 <?php 
-
+echo '<!-- ';
+print_r(tag_slugs);
+echo ' -->';
 if(!empty($tag_slugs)){
 				 
 			$tagargs=array(
