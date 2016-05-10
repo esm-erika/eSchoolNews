@@ -18,9 +18,9 @@ get_header(); ?>
 <div class="row">
 	<div class="small-12 large-12 columns" role="main">
 
-	<script>
+<script>
   (function() {
-    var cx = '007256987256189418192:esavkywrdf8';
+    var cx = '007256987256189418192:idr6xhbbura';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
@@ -29,7 +29,7 @@ get_header(); ?>
     s.parentNode.insertBefore(gcse, s);
   })();
 </script>
-<gcse:searchresults-only></gcse:searchresults-only>	
+<gcse:search></gcse:search>
 	
 	</div>
 	
