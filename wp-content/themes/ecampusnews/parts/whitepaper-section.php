@@ -73,7 +73,7 @@ $args = array(
 
 											<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 											<div class="posted-on"><?php the_time('F j, Y'); ?></div>
-											<hr/>
+											
 
 
 
@@ -113,7 +113,7 @@ $args = array(
 										<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 										<?php setup_postdata($post); ?>
 
-										<div class="text-center">
+										<div>
 											<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
 										</div>
 
@@ -125,7 +125,7 @@ $args = array(
 
 
 
-									<div class="text-center">
+									<div>
 										<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">View Now</a>
 									</div>
 
@@ -134,7 +134,7 @@ $args = array(
 
 									<?php } else { // not logged in ?>
 
-									<div class="text-center">
+									<div>
 										<a href="#" class="button medium radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">View Now</a>
 									</div>
 									<?php get_template_part( 'parts/whitepapers-modal' ); ?>
