@@ -148,7 +148,7 @@ $args = array(
 
 								
 
-										<div class="row sponsored">
+										<!-- <div class="row sponsored">
 											<div class="small-12 columns">
 
 												<small><strong>Sponsored by:</strong></small><br>
@@ -194,7 +194,7 @@ $args = array(
 
 
 											</div>
-										</div>
+										</div> -->
 
 
 
