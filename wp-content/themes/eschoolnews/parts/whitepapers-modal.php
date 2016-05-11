@@ -75,7 +75,7 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 	<?php setup_postdata($post); ?>
 
 	<div class="text-center">
-		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
 	</div>
 
 <?php endforeach; ?>
