@@ -56,22 +56,22 @@ $args = array(
 					</div>
 
 					<div class="small-12 medium-9 columns">
-						<div class="row">
-							<div class="small-12 columns">
+						
 
 
 
 								<?php }else{ ?>
 
 								<div class="small-12 columns">
-									<div class="row collapse">
-										<div class="small-12 columns">
+									
 
 											<?php } ?>
 
 
 											<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 											<div class="posted-on"><?php the_time('F j, Y'); ?></div>
+
+											<br>
 											
 
 
@@ -82,8 +82,8 @@ $args = array(
 
 
 											
-										</div>
-										<br/>
+										
+										
 
 
 										<?php //endif; ?>
@@ -142,12 +142,11 @@ $args = array(
 									<?php } ?>
 
 
-
+								</div>
 
 								</header>
 
-								<div class="row">
-									<div class="small-12 columns">
+								
 
 										<div class="row sponsored">
 											<div class="small-12 columns">
@@ -201,8 +200,6 @@ $args = array(
 
 
 
-									</div>
-								</div>
 
 
 
