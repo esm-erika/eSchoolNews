@@ -15,6 +15,7 @@ $WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 ?>
 
 
+
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
 	<div class="row">
 
