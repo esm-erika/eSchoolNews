@@ -70,8 +70,8 @@ $whitepapersection = 0;
 						
 
 						<header class="medium-8 columns"> 
-							<h5><?php the_title(); ?></h5>
-							<a href="#" class="button tiny radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">View Now</a>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<a href="#" class="button radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">View Now</a>
 							<?php get_template_part( 'parts/whitepapers-modal' ); ?>
 						</header>
 
