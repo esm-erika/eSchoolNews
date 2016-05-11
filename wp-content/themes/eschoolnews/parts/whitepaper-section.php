@@ -33,7 +33,7 @@ $args = array(
 					
 				
 
-				<li data-equalizer><div class="panel" data-equalizer-watch>
+				<li>
 
 				<header style="margin-bottom:8px;" class="row collapse">
 
@@ -202,7 +202,7 @@ $args = array(
 
 
 
-							</div> </li>
+							</li>
 
 							
 
