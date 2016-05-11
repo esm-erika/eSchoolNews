@@ -172,14 +172,9 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 	} ?>
 
 
+
+
+</div>
+</div>
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-
 </div>
