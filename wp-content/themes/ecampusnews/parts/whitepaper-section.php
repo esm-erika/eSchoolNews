@@ -10,6 +10,11 @@ $whitepapersection = 0;
 
 ?>
 
+<div class="row">
+	<div class="small-12 columns">
+		
+
+
 <h1 class="section-title"><span><div class="icon whitepapers"></div> White Papers</span></h1>
 
 <?php
@@ -212,3 +217,6 @@ $args = array(
 						<?php wp_reset_postdata(); ?>
 
 						</ul>
+
+							</div>
+</div>
