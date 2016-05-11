@@ -15,93 +15,64 @@ $WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 
 <div class="row">
 	<div class="small-12 medium-8 columns" role="main">
-		<?php do_action( 'foundationpress_before_content' ); ?>
 
-<div class="row">
 
-  	<?php 
+		<?php if ( have_posts() ) : ?>
+	<?php while ( have_posts() ) : the_post(); ?>    
+	<!-- do stuff ... -->
+	
 
-							if (has_post_thumbnail()) { ?>
 
-							<div class="medium-4 columns">
+		<header class="row collapse">
 
-							<?php the_post_thumbnail('medium-portrait'); ?> 
-							
-							</div>
-                    		<div class="medium-8 columns">
+			<?php 
 
-						    <?php }else{ ?>
+			if (has_post_thumbnail()) { ?>
 
-						    <div class="medium-12 columns">
+			<div class="small-12 medium-3 columns">
 
-						    <?php } ?>
+				<div class="hide-for-small-only">
+					<?php the_post_thumbnail('medium-portrait'); ?>
+				</div>
 
-						    <header>
-                    		 <h2 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h2>
-                    		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
-                    		<hr/>
+			</div>
 
-                    		<?php 
+			<div class="small-12 medium-9 columns">
+				<div class="row">
+					<div class="small-12 columns">
 
-								$taxonomy = 'sponsor';
-								$terms = get_the_terms( $post->ID, $taxonomy);
-								$term_id = $terms[0]->term_id;
 
-								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-								
-								if( !empty($image) ): ?>
 
-									
-										<div class="row sponsored">
-											<div class="small-12 medium-6 columns">
+						<?php }else{ ?>
 
-											<small>Sponsored by:</small><br>
+						<div class="small-12 columns">
+							<div class="row collapse">
+								<div class="small-12 columns">
 
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+									<?php } ?>
 
-											</div>
-										</div>
-									<br/>
-									
 
-								<?php endif; ?>
-                    		
-                    	</header>
-  
- 
- 
-  <?php
-  
-  if ( have_posts() ) {
-			while ( have_posts() ) {
-				the_post(); 
-								//
-				the_content();
-								//
-							} // end while
-						} // end if
+									<h2><?php the_title(); ?></h2>
+									<div class="posted-on"><?php the_time('F j, Y'); ?></div>
+									<hr/>
 
-  
-   ?>
-  
 
-		
-<?php global $page; ?>
+									<?php global $page; ?>
 
-<?php if(esm_is_user_logged_in()){ 	
+									<?php if(esm_is_user_logged_in()){ 	
 	//if they are logged in then grab use information
-	global $esmuser;
+										global $esmuser;
 
-	$WPautofill = array(
-	wpuidSP => $esmuser[wpuid],
-	sfuidSP => $esmuser[sfuidSP],
-	PersonContactIdPS => $esmuser[PersonContactIdPS],
-	wpuid => $esmuser[wpuid],
-	sfuid => $esmuser[sfuid],
-	PersonContactId => $esmuser[PersonContactId],	
-	esmpassvalue => $esmuser[esmpassvalue],	
-	astc => $astc			
-	); 			
+										$WPautofill = array(
+											wpuidSP => $esmuser[wpuid],
+											sfuidSP => $esmuser[sfuidSP],
+											PersonContactIdPS => $esmuser[PersonContactIdPS],
+											wpuid => $esmuser[wpuid],
+											sfuid => $esmuser[sfuid],
+											PersonContactId => $esmuser[PersonContactId],	
+											esmpassvalue => $esmuser[esmpassvalue],	
+											astc => $astc			
+											); 			
 
 				//	the_content(); no need it is above.
 
@@ -117,28 +88,28 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 
 	if( $posts ) { ?>
 
-	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-	        <?php setup_postdata($post); ?>
+	<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+	<?php setup_postdata($post); ?>
 
-    <div class="text-center">
-		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
+	<div class="text-center">
+		<a class="button radius medium" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
 	</div>
 
-		<?php endforeach; ?>
-	   
-	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-					
+<?php endforeach; ?>
 
-	<? } else if ($WPURL != null) { 
-			echo '<p>';
-			 if ($WPcbt != null) { 
-			
-					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-					} else{
-					echo'<a class="button radius small" href="'.$WPURL.'">View Now</a>';
-			 }
-			echo '</p>'; 
+<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+
+<? } else if ($WPURL != null) { 
+	echo '<div class="text-center">';
+	if ($WPcbt != null) { 
+
+		echo'<a class="button radius medium" href="'.$WPURL.'" target="_blank">Submit and Download</a>';
+	} else{
+		echo'<a class="button radius medium" href="'.$WPURL.'">View Now</a>';
 	}
+	echo '</div>'; 
+}
 }
 ?>
 
@@ -149,325 +120,94 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 
 
 <div style="border:#CCCCCC solid 1px; padding:10px;">
-<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
-<p><strong>Free registration required to view this resource.</strong><br />
-<br />
-Register today and receive free access to all our news and resources and the ability to customize your news by topic with My eSchool News.<br /><br />
-<a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode(get_permalink()); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
-<br />
-<br />
-Already a member? Log in
-<div>Username: <input type="text" name="log" id="log" value="" /></div>
-<div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
-<input type="submit" name="submit" value="Login" class="button">
-<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
-<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
-<br />
-<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
+	<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
+		<p><strong>Free registration required to view this resource.</strong><br />
+			<br />
+			Register today and receive free access to all our news and resources and the ability to customize your news by topic with My eSchool News.<br /><br />
+			<a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode(get_permalink()); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
+			<br />
+			<br />
+			Already a member? Log in
+			<div>Username: <input type="text" name="log" id="log" value="" /></div>
+			<div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
+			<input type="submit" name="submit" value="Login" class="button">
+			<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
+			<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+			<br />
+			<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
 
 
-</form>	
-</div>
-                                    
-
-
-<?php			}//end showpagecontent check
-?>
-
-
-
-						<?php // endwhile; else : endif; ?>
-				
-  </div>
-  
-
-  
-
-
-		<?php /*<div class="row">
-
-		<?php 
-
-		if ( has_post_thumbnail() ) { ?>
-		
-		<div class="small-12 medium-4 columns">
-			<?php the_post_thumbnail('medium-portrait'); ?>
-		</div>
-		
-		<div class="small-12 medium-8 columns">
-
-		<?php } else { ?>
-
-		<div class="small-12 medium-12 columns">
-
-		<?php } ?>
-
-	
-
-
-		<?php get_template_part('parts/flags'); ?>
-
-		<h1 id="whitepaper-<?php the_ID(); ?>"><?php the_title(); ?></h1>
-		
-		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
-
-		<hr/>
-
-		<div class="row sponsored">
-								<div class="small-12 columns">
-
-									<small>Sponsored by:</small><br>
-
-
-								 <?php 
-
-									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
-
-										if ( ! empty( $product_terms ) ) {
-											if ( ! is_wp_error( $product_terms ) ) {
-												echo '<ul class="small-block-grid-1 medium-block-grid-3">';
-													foreach( $product_terms as $term ) { ?>
-
-
-
-													<?php 
-													$taxonomy = 'sponsor';
-													$term_id = $term->term_id; 
-													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-
-													?>
-
-													<li>
-
-														<div class="responsive-container">
-    														<div class="dummy"></div>
-																<div class="img-container">
-																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-																</div>
-														</div>
-													</li>
-
-														
-
-													<?php }
-												echo '</ul>';
-
-											}
-										} ?>
-
-											</div>
-										</div>
-									<br/>
-			
-
-		<?php //endif; ?>
-
-		</div>
+		</form>	
 	</div>
 
+
+
+	<?php } //end showpagecontent check?>
+
+
+
+</div>
+</header>
+
+
+<div class="row">
+	<div class="small-12 columns">
 		
+<?php the_content(); ?>
 
-		
+<div class="row sponsored">
+	<div class="small-12 columns">
 
-		<div class="row">
-
-		<div class="medium-12 columns">
+		<small><strong>Sponsored by:</strong></small><br>
 
 
 		<?php 
-		
-									global $esmuser;
 
-									$WPautofill = array(
-										wpuidSP => $esmuser[wpuid],
-										sfuidSP => $esmuser[sfuidSP],
-										PersonContactIdPS => $esmuser[PersonContactIdPS],
-										wpuid => $esmuser[wpuid],
-										sfuid => $esmuser[sfuid],
-										PersonContactId => $esmuser[PersonContactId],	
-										esmpassvalue => $esmuser[esmpassvalue],	
-										astc => $astc			
-										); 
-		
-		
-		if ( have_posts() ) {
-			while ( have_posts() ) {
-				the_post(); 
-								//
-				the_content();
-								//
-							} // end while
-						} // end if
-						?>			    
+		$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
 
+		if ( ! empty( $product_terms ) ) {
+			if ( ! is_wp_error( $product_terms ) ) {
+				echo '<ul class="small-block-grid-2 medium-block-grid-4">';
+				foreach( $product_terms as $term ) { ?>
 
 
 
-						<?php 
+				<?php 
+				$taxonomy = 'sponsor';
+				$term_id = $term->term_id; 
+				$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
 
-						$WPLength=get_post_meta($post->ID, 'WP Length', $single = true);
-						$WPType=get_post_meta($post->ID, 'WP Type', $single = true);
-						$WPSize=get_post_meta($post->ID, 'WP Size', $single = true);
-						$WPURL=get_post_meta($post->ID, 'WP URL', $single = true).'?'.$_SERVER['QUERY_STRING'];
-						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-						$WPLogo=get_post_meta($post->ID, 'WP Logo', $single = true);
-						$WPcpl=get_post_meta($post->ID, 'WP Custom Page Layout', $single = true);
-						$WPctl=get_post_meta($post->ID, 'WP Custom Title Layout', $single = true);
-						$WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
-						$WPfooter=get_post_meta($post->ID, 'WP Footer', $single = true);
+				?>
 
-						$file = get_field('download_file');
-					
+				<li>
 
-							
-						?>
+					<div class="responsive-container">
+						<div class="dummy"></div>
+						<div class="img-container">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+					</div>
+				</li>
 
 
-						<?php global $page; ?>
 
-						<?php if(esm_is_user_logged_in()){ 	
+				<?php }
+				echo '</ul>';
 
+			}
+		} ?>
 
-				//	the_content(); no need it is above.
 
-
-							if (($WPForm != null) and ($WPForm > 0)) {
-
-								gravity_form( $WPForm , false, false, false, $WPautofill, true);  
-							}else if($file) { ?>
-									
-									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
-
-
-							<?php 
-
-							} else if ($WPURL != null) { 
-								echo '<p>';
-
-								if ($WPcbt != null) { 
-
-									echo'<a href="'.$WPURL.'" target="_blank">Submit and Download</a>';
-
-								} elseif($file) { ?>
-									
-									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
-								
-							<?php	} else {
-									echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';
-								}
-								echo '</p>'; 
-
-
-								?>
-
-
-								<?php 
-							} else {
-								?>
-
-
-								<?php the_content(); ?>
-
-								<?php
-								if (($WPForm != null) and ($WPForm > 0)) {
-
-									global $esmuser;
-
-									$WPautofill = array(
-										wpuidSP => $esmuser[wpuid],
-										sfuidSP => $esmuser[sfuidSP],
-										PersonContactIdPS => $esmuser[PersonContactIdPS],
-										wpuid => $esmuser[wpuid],
-										sfuid => $esmuser[sfuid],
-										PersonContactId => $esmuser[PersonContactId],	
-										esmpassvalue => $esmuser[esmpassvalue],	
-										astc => $astc			
-										); 
-
-
-									gravity_form( $WPForm , false, false, false, $WPautofill, true);  
-
-								}else if($file) { ?>
-									
-									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
-
-
-							<?php 
-
-							}else if ($WPURL != null) { 
-									echo '<p>';
-									if ($WPcbt != null) { 
-										echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
-									
-									} elseif($file) { ?>
-
-									<a class="button radius small" href="<?php echo $file['url']; ?>">Download White Paper</a>
-
-
-									<?php } else {
-										echo'<a class="button radius small" href="'.$WPURL.'">Download White Paper</a>';	 
-
-									}
-									echo '</p>'; 
-								}
-
-								?>
-
-
-
-
-								<?php }
-
-
-
-								if ($WPLogo != null) { echo '<img src="'.$WPLogo.'" border="0" style="border:none" />';}
-
-								if ($WPfooter != null) { echo $WPfooter;} 
-
-								?>
-
-
-
-								<?php } else { ?>
-
-
-
-								<div style="border:#CCCCCC solid 1px; padding:10px;">
-									<form action="<?php echo get_option('home'); ?>/wp-login.php?wpe-login=esminc" method="post">
-										<p><strong>Free registration required to view this resource.</strong><br />
-											<br />
-											Register today and receive free access to all our news and resources and the ability to customize your news by topic with My eSchool News.<br /><br />
-											<a href="<?php echo get_option('home'); ?>/registration/?action=register&redirect_to=<?php echo urlencode(get_permalink()); ?><?php if ( defined($_GET['astc'])){ echo '&astc='.$_GET['astc']; }?><?php if ( defined($_GET['ast'])){ echo '&ast='.$_GET['ast']; }?>" style="text-decoration:underline;"><strong>Register now.</strong></a>
-											<br />
-											<br />
-											Already a member? Log in
-											<div>Username: <input type="text" name="log" id="log" value="" /></div>
-											<div>Password:&nbsp <input name="pwd" id="pwd" type="password" value="" /></div>
-											<input type="submit" name="submit" value="Login" class="button">
-											<input name="rememberme" id="rememberme" type="hidden" checked="checked" value="forever">
-											<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
-											<br />
-											<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword&redirect_to=<?php echo urlencode(get_permalink()); ?>">Lost Password?</a>
-
-										</form>	
-
-
-
-
-<?php			}//end showpagecontent check
-?>
-
-
-
-<?php // endwhile; else : endif; ?>
-
-	<?php do_action( 'foundationpress_after_content' ); ?>
+	</div>
+</div>
 
 </div>
-*/ ?>
-
-<?php do_action( 'foundationpress_after_content' ); ?>
 </div>
+
+<?php endwhile; ?>
+<?php endif; ?>
+
+
 </div>
 
 <?php 
@@ -483,18 +223,18 @@ $post_id = get_the_ID();
 global $astc, $astused;
 $box_qt = 'esm_c_swp_a'.$ast."c".$astc.'p'.$post_id;
 $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
-	
+
 $local_box_cache = get_transient( $box_q );
 if (false === ($local_box_cache) ){
 
 	// start code to cache
-		ob_start( );
-			echo '<!-- c -->';
-			get_sidebar();
-			echo '<!-- c '.date(DATE_RFC2822).' -->' ;
-		$local_box_cache = ob_get_clean( );
+	ob_start( );
+	echo '<!-- c -->';
+	get_sidebar();
+	echo '<!-- c '.date(DATE_RFC2822).' -->' ;
+	$local_box_cache = ob_get_clean( );
 	// end the code to cache
-		echo $local_box_cache;
+	echo $local_box_cache;
 	//end cache query 
 	
 	if( current_user_can( 'edit_post' ) ) {
@@ -504,9 +244,11 @@ if (false === ($local_box_cache) ){
 	}
 } else { 
 
-echo $local_box_cache;
+	echo $local_box_cache;
 
 }
 ?>
+
 </div>
+
 <?php get_footer(); ?>
