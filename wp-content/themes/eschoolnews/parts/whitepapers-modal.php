@@ -96,14 +96,14 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 					
 
 	<? } else if ($WPURL != null) { 
-			echo '<p>';
+			echo '<div class="text-center">';
 			 if ($WPcbt != null) { 
 			
-					echo'<a href="'.$WPURL.'" target="_blank"><img class="alignright" src="'.$WPcbt.'" alt="Next" border="0" /></a>';
+					echo'<a class="button radius medium" href="'.$WPURL.'" target="_blank">Submit and Download</a>';
 					} else{
-					echo'<a class="button radius small" href="'.$WPURL.'">View Now</a>';
+					echo'<a class="button radius medium" href="'.$WPURL.'">View Now</a>';
 			 }
-			echo '</p>'; 
+			echo '</div>'; 
 	}
 }
 ?>
