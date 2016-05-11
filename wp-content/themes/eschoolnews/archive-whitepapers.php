@@ -33,7 +33,7 @@ $(document).ready(function(){
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
-        $("div.row.all").show();
+        $("div.panel.all").show();
 		$("h4#AllTitle").show();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -46,7 +46,7 @@ $(document).ready(function(){
 		$("div.panel.digital-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
 		$("div.panel.mobile-online-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
         $("div.panel.curriculum-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").show();
@@ -60,7 +60,7 @@ $(document).ready(function(){
         $("div.panel.curriculum-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
 		$("div.panel.mobile-online-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
 		$("div.panel.digital-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
@@ -74,7 +74,7 @@ $(document).ready(function(){
         $("div.panel.curriculum-whitepapers").hide();
 		$("div.panel.digital-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
 		$("div.panel.mobile-online-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
@@ -88,7 +88,7 @@ $(document).ready(function(){
         $("div.panel.curriculum-whitepapers").hide();
 		$("div.panel.digital-whitepapers").hide();
 		$("div.panel.mobile-online-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
 		$("div.panel.technologies-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
@@ -161,13 +161,15 @@ $(document).ready(function(){
 
 							if (has_post_thumbnail()) { ?>
 
-							<div class="medium-3 columns">
+							<div class="small-12 medium-3 columns">
 
-							<?php the_post_thumbnail('medium-portrait'); ?>
+							<div class="hide-for-small-only">
+								<?php the_post_thumbnail('medium-portrait'); ?>
+							</div>
 							
 							</div>
                     		
-                    		<div class="medium-9 columns">
+                    		<div class="small-12 medium-9 columns">
                     			<div class="row">
                     				<div class="small-12 columns">
                     					
@@ -175,80 +177,25 @@ $(document).ready(function(){
 
 						    <?php }else{ ?>
 
-						    <div class="medium-12 columns">
+						    <div class="small-12 columns">
 						    	<div class="row collapse">
                     				<div class="small-12 columns">
 
 						    <?php } ?>
                     	
 						
-							<?php 
-
-							// $taxonomy = 'flag';
-							// $terms = get_the_terms( $post->ID, $taxonomy);
-							// $term_name = $terms[0]->name;
-
-							// echo $term_name;
-
-							 ?>
                     		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
 
-                    		<div class="row sponsored">
-								<div class="small-12 columns">
-
-									<small>Sponsored by:</small><br>
-
-
-								 <?php 
-
-									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
-
-										if ( ! empty( $product_terms ) ) {
-											if ( ! is_wp_error( $product_terms ) ) {
-												echo '<ul class="small-block-grid-1 medium-block-grid-3">';
-													foreach( $product_terms as $term ) { ?>
-
-
-
-													<?php 
-													$taxonomy = 'sponsor';
-													$term_id = $term->term_id; 
-													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-
-													?>
-
-													<li>
-
-														<div class="responsive-container">
-    														<div class="dummy"></div>
-																<div class="img-container">
-																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-																</div>
-														</div>
-													</li>
-
-														
-
-													<?php }
-												echo '</ul>';
-
-											}
-										} ?>
-
-
-
-									
-										</div>
-                    				</div>
+                    		
 
 
 
 
 	
 
-											</div>
+											
 										</div>
 									<br/>
 									
@@ -256,27 +203,7 @@ $(document).ready(function(){
 								<?php //endif; ?>
 
 
-
-                    		
-                    	</header>
-
-                    	<div class="row">
-                    		<div class="small-12 columns">
-
-                    	<p class="excerpt">
-							<?php 
-							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
-							//the_content();
-
-							echo ' <a href="' .get_permalink(). '">';
-							echo 'Read More';
-							echo '</a>';
-							?>
-						</p>
-
-						
-						
-						<?php
+								<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
 						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
@@ -327,6 +254,78 @@ $(document).ready(function(){
                         
                         
                         <?php } ?>
+
+
+
+                    		
+                    	</header>
+
+                    	<div class="row">
+                    		<div class="small-12 columns">
+
+                    			<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							//the_content();
+
+							echo ' <a href="' .get_permalink(). '">';
+							echo 'Read More';
+							echo '</a>';
+							?>
+						</p>
+						
+						
+
+                        <div class="row sponsored">
+								<div class="small-12 columns">
+
+									<small><strong>Sponsored by:</strong></small><br>
+
+
+								 <?php 
+
+									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
+
+										if ( ! empty( $product_terms ) ) {
+											if ( ! is_wp_error( $product_terms ) ) {
+												echo '<ul class="small-block-grid-2 medium-block-grid-4">';
+													foreach( $product_terms as $term ) { ?>
+
+
+
+													<?php 
+													$taxonomy = 'sponsor';
+													$term_id = $term->term_id; 
+													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+
+													?>
+
+													<li>
+
+														<div class="responsive-container">
+    														<div class="dummy"></div>
+																<div class="img-container">
+																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																</div>
+														</div>
+													</li>
+
+														
+
+													<?php }
+												echo '</ul>';
+
+											}
+										} ?>
+
+
+
+									
+										</div>
+                    				</div>
+
+
+                        
 
                         
 					</div>
