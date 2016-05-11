@@ -15,6 +15,7 @@ $WPcbt=get_post_meta($post->ID, 'WP Custom Button', $single = true);
 ?>
 
 
+
 <div id="whitepaper-<?php the_ID(); ?>" class="reveal-modal" data-reveal aria-labelledby="whitepaper-<?php the_ID(); ?>" aria-hidden="true" role="dialog">
 	<div class="row">
 
@@ -75,7 +76,7 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 	<?php setup_postdata($post); ?>
 
 	<div class="text-center">
-		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
 	</div>
 
 <?php endforeach; ?>
