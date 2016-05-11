@@ -24,9 +24,6 @@ get_header();
 
 	<?php get_template_part( 'parts/section-titles' ); ?>
 
-
-
-
 </div>
 <script type="text/javascript">
 jQuery.noConflict()(function ($) { // this was missing for me
@@ -36,7 +33,7 @@ $(document).ready(function(){
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
-        $("div.row.all").show();
+        $("div.panel.all").show();
 		$("h4#AllTitle").show();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -46,10 +43,11 @@ $(document).ready(function(){
     });
 
 	$("#curriculum").click(function(){
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-        $("div.row.curriculum-whitepapers").show();
+		$("div.panel.digital-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").hide();
+		$("div.panel.all").hide();
+        $("div.panel.curriculum-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").show();
 		$("h4#DigitalTitle").hide();
@@ -59,10 +57,11 @@ $(document).ready(function(){
     });
 
 	$("#digital").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.digital-whitepapers").show();
+        $("div.panel.curriculum-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").hide();
+		$("div.panel.all").hide();
+		$("div.panel.digital-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").show();
@@ -72,10 +71,11 @@ $(document).ready(function(){
     });
 
 	$("#mobile").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.technologies-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").show();
+        $("div.panel.curriculum-whitepapers").hide();
+		$("div.panel.digital-whitepapers").hide();
+		$("div.panel.technologies-whitepapers").hide();
+		$("div.panel.all").hide();
+		$("div.panel.mobile-online-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -85,10 +85,11 @@ $(document).ready(function(){
     });	
     
 	$("#technologies").click(function(){
-        $("div.row.curriculum-whitepapers").hide();
-		$("div.row.digital-whitepapers").hide();
-		$("div.row.mobile-online-whitepapers").hide();
-		$("div.row.technologies-whitepapers").show();
+        $("div.panel.curriculum-whitepapers").hide();
+		$("div.panel.digital-whitepapers").hide();
+		$("div.panel.mobile-online-whitepapers").hide();
+		$("div.panel.all").hide();
+		$("div.panel.technologies-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -148,11 +149,11 @@ $(document).ready(function(){
 				 while ( $query->have_posts() ) :
 					$query->the_post(); ?>
 
-				<div class="panel">
-
-					<header style="margin-bottom:8px;" class="row collapse all<?php 
+				<div class="panel all<?php 
 					$terms = wp_get_post_terms( $post->ID, 'subject_categories' );
 					foreach ( $terms as $term ) { echo " ".$term->slug ; } ?>">
+
+					<header style="margin-bottom:8px;" class="row collapse">
 
 
 						
@@ -160,13 +161,15 @@ $(document).ready(function(){
 
 							if (has_post_thumbnail()) { ?>
 
-							<div class="medium-3 columns">
+							<div class="small-12 medium-3 columns">
 
-							<?php the_post_thumbnail('medium-portrait'); ?>
+							<div class="hide-for-small-only">
+								<?php the_post_thumbnail('medium-portrait'); ?>
+							</div>
 							
 							</div>
                     		
-                    		<div class="medium-9 columns">
+                    		<div class="small-12 medium-9 columns">
                     			<div class="row">
                     				<div class="small-12 columns">
                     					
@@ -174,30 +177,109 @@ $(document).ready(function(){
 
 						    <?php }else{ ?>
 
-						    <div class="medium-12 columns">
+						    <div class="small-12 columns">
 						    	<div class="row collapse">
                     				<div class="small-12 columns">
 
 						    <?php } ?>
                     	
 						
-							<?php 
-
-							// $taxonomy = 'flag';
-							// $terms = get_the_terms( $post->ID, $taxonomy);
-							// $term_name = $terms[0]->name;
-
-							// echo $term_name;
-
-							 ?>
-                    		<h3><?php the_title(); ?></h3>
+                    		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
 
-                    		<div class="row sponsored">
+                    		
+
+
+
+
+	
+
+											
+										</div>
+									<br/>
+									
+
+								<?php //endif; ?>
+
+
+								<?php
+						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
+
+						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
+
+							<?php 
+
+							// $post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
+							// $cutoff_date = strtotime( '2016-04-27' ); 
+
+							// if( $post_date < $cutoff_date ) {
+
+							?>
+
+								<?php 
+
+								$posts = get_field('pdf_select');
+
+								if( $posts ) { ?>
+
+								    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+								        <?php setup_postdata($post); ?>
+					
+						        <div class="text-center">
+									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
+								</div>
+
+									<?php endforeach; ?>
+								   
+								    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+								
+								<?php } else { ?>
+
+							
+
+								<div class="text-center">
+									<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">View Now</a>
+								</div>
+
+							<?php } ?>
+						    
+
+						<?php } else { // not logged in ?>
+						
+						<div class="text-center">
+                        	<a href="#" class="button medium radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">View Now</a>
+                    	</div>
+						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
+                        
+                        
+                        <?php } ?>
+
+
+
+                    		
+                    	</header>
+
+                    	<div class="row">
+                    		<div class="small-12 columns">
+
+                    			<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							//the_content();
+
+							echo ' <a href="' .get_permalink(). '">';
+							echo 'Read More';
+							echo '</a>';
+							?>
+						</p>
+						
+						
+
+                        <div class="row sponsored">
 								<div class="small-12 columns">
 
-									<small>Sponsored by:</small><br>
+									<small><strong>Sponsored by:</strong></small><br>
 
 
 								 <?php 
@@ -206,7 +288,7 @@ $(document).ready(function(){
 
 										if ( ! empty( $product_terms ) ) {
 											if ( ! is_wp_error( $product_terms ) ) {
-												echo '<ul class="small-block-grid-1 medium-block-grid-3">';
+												echo '<ul class="small-block-grid-2 medium-block-grid-4">';
 													foreach( $product_terms as $term ) { ?>
 
 
@@ -243,85 +325,7 @@ $(document).ready(function(){
                     				</div>
 
 
-
-
-	
-
-											</div>
-										</div>
-									<br/>
-									
-
-								<?php //endif; ?>
-
-
-
-                    		
-                    	</header>
-
-                    	<div class="row">
-                    		<div class="small-12 columns">
-
-                    	<p class="excerpt">
-							<?php 
-							//echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
-							the_content();
-							?>
-						</p>
-
-						
-						
-						<?php
-						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
-
-						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
-
-							<?php 
-
-							// $post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
-							// $cutoff_date = strtotime( '2016-04-27' ); 
-
-							// if( $post_date < $cutoff_date ) {
-
-							?>
-
-								<?php 
-
-								$posts = get_field('pdf_select');
-
-								if( $posts ) { ?>
-
-								    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-								        <?php setup_postdata($post); ?>
-					
-						        <div class="text-center">
-									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
-								</div>
-
-									<?php endforeach; ?>
-								   
-								    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-								
-								<?php } else { ?>
-
-							
-
-								<div class="text-center">
-									<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">Download</a>
-								</div>
-
-							<?php } ?>
-						    
-
-						<?php } else { // not logged in ?>
-						
-						<div class="text-center">
-                        	<a href="#" class="button medium radius" data-reveal-id="whitepaper-<?php the_ID(); ?>">Download</a>
-                    	</div>
-						<?php get_template_part( 'parts/whitepapers-modal' ); ?>
                         
-                        
-                        <?php } ?>
 
                         
 					</div>

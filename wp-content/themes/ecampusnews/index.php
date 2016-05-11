@@ -81,9 +81,15 @@ echo $local_box_cache;
 
 </div>
 
-
+<div class="row">
+	<div class="small-12 columns">
+	
 <?php get_template_part('parts/whitepaper-section'); ?>
 
 </div>
 </div>
+
+</div>
+</div>
+
 <?php get_footer(); ?>

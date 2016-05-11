@@ -1539,6 +1539,76 @@ register_field_group(array (
 		),
 		'menu_order' => 0,
 	));
+	// register_field_group(array (
+	// 	'id' => 'acf_upload-file',
+	// 	'title' => 'Upload File',
+	// 	'fields' => array (
+	// 		array (
+	// 			'key' => 'field_5621461e0a54a',
+	// 			'label' => 'Upload File',
+	// 			'name' => 'download_file',
+	// 			'type' => 'file',
+	// 			'instructions' => 'Upload PDF here.',
+	// 			'save_format' => 'object',
+	// 			'library' => 'all',
+	// 		),
+	// 		array (
+	// 			'key' => 'field_56689ae3f89d5',
+	// 			'label' => 'Link to 3rd Party File',
+	// 			'name' => 'WP URL',
+	// 			'type' => 'text',
+	// 			'instructions' => 'Link to file hosted on another server. You must include \'http://\'.',
+	// 			'default_value' => '',
+	// 			'placeholder' => 'http://',
+	// 			'prepend' => '',
+	// 			'append' => '',
+	// 			'formatting' => 'html',
+	// 			'maxlength' => '',
+	// 		),
+	// 		array (
+	// 			'key' => 'field_56746d0cca33a',
+	// 			'label' => 'Gravity Form used to Download (Number)',
+	// 			'name' => 'WP Form Number',
+	// 			'type' => 'number',
+	// 			'instructions' => 'A value greater than 0 in this field will prevent a person from directly access the Whitepaper.',
+	// 			'default_value' => 0,
+	// 			'placeholder' => '',
+	// 			'prepend' => '',
+	// 			'append' => '',
+	// 			'min' => '',
+	// 			'max' => '',
+	// 			'step' => '',
+	// 		),
+	// 	),
+	// 	'location' => array (
+	// 		array (
+	// 			array (
+	// 				'param' => 'post_type',
+	// 				'operator' => '==',
+	// 				'value' => 'special-reports',
+	// 				'order_no' => 0,
+	// 				'group_no' => 0,
+	// 			),
+	// 		),
+	// 		array (
+	// 			array (
+	// 				'param' => 'post_type',
+	// 				'operator' => '==',
+	// 				'value' => 'whitepapers',
+	// 				'order_no' => 0,
+	// 				'group_no' => 1,
+	// 			),
+	// 		),
+	// 	),
+	// 	'options' => array (
+	// 		'position' => 'normal',
+	// 		'layout' => 'default',
+	// 		'hide_on_screen' => array (
+	// 		),
+	// 	),
+	// 	'menu_order' => 0,
+	// ));
+
 
 }
 
