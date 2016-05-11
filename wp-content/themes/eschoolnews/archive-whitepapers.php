@@ -195,53 +195,7 @@ $(document).ready(function(){
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
 
-                    		<div class="row sponsored">
-								<div class="small-12 columns">
-
-									<small>Sponsored by:</small><br>
-
-
-								 <?php 
-
-									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
-
-										if ( ! empty( $product_terms ) ) {
-											if ( ! is_wp_error( $product_terms ) ) {
-												echo '<ul class="small-block-grid-1 medium-block-grid-3">';
-													foreach( $product_terms as $term ) { ?>
-
-
-
-													<?php 
-													$taxonomy = 'sponsor';
-													$term_id = $term->term_id; 
-													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-
-													?>
-
-													<li>
-
-														<div class="responsive-container">
-    														<div class="dummy"></div>
-																<div class="img-container">
-																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-																</div>
-														</div>
-													</li>
-
-														
-
-													<?php }
-												echo '</ul>';
-
-											}
-										} ?>
-
-
-
-									
-										</div>
-                    				</div>
+                    		
 
 
 
@@ -256,27 +210,7 @@ $(document).ready(function(){
 								<?php //endif; ?>
 
 
-
-                    		
-                    	</header>
-
-                    	<div class="row">
-                    		<div class="small-12 columns">
-
-                    	<p class="excerpt">
-							<?php 
-							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
-							//the_content();
-
-							echo ' <a href="' .get_permalink(). '">';
-							echo 'Read More';
-							echo '</a>';
-							?>
-						</p>
-
-						
-						
-						<?php
+								<?php
 						$WPForm=get_post_meta($post->ID, 'WP Form Number', $single = true);
 
 						if ( esm_is_user_logged_in() and !$WPForm > 0) { ?>
@@ -327,6 +261,78 @@ $(document).ready(function(){
                         
                         
                         <?php } ?>
+
+
+
+                    		
+                    	</header>
+
+                    	<div class="row">
+                    		<div class="small-12 columns">
+
+                    			<p class="excerpt">
+							<?php 
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							//the_content();
+
+							echo ' <a href="' .get_permalink(). '">';
+							echo 'Read More';
+							echo '</a>';
+							?>
+						</p>
+						
+						
+
+                        <div class="row sponsored">
+								<div class="small-12 columns">
+
+									<small><strong>Sponsored by:</strong></small><br>
+
+
+								 <?php 
+
+									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
+
+										if ( ! empty( $product_terms ) ) {
+											if ( ! is_wp_error( $product_terms ) ) {
+												echo '<ul class="small-block-grid-2 medium-block-grid-4">';
+													foreach( $product_terms as $term ) { ?>
+
+
+
+													<?php 
+													$taxonomy = 'sponsor';
+													$term_id = $term->term_id; 
+													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+
+													?>
+
+													<li>
+
+														<div class="responsive-container">
+    														<div class="dummy"></div>
+																<div class="img-container">
+																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																</div>
+														</div>
+													</li>
+
+														
+
+													<?php }
+												echo '</ul>';
+
+											}
+										} ?>
+
+
+
+									
+										</div>
+                    				</div>
+
+
+                        
 
                         
 					</div>

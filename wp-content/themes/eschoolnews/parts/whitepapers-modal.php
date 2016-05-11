@@ -40,36 +40,15 @@
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
 
-                    		<?php 
-
-								$taxonomy = 'sponsor';
-								$terms = get_the_terms( $post->ID, $taxonomy);
-								$term_id = $terms[0]->term_id;
-
-								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-								
-								if( !empty($image) ): ?>
-
-									
-										<div class="row sponsored">
-											<div class="small-12 medium-6 columns">
-
-											<small>Sponsored by:</small><br>
-
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-											</div>
-										</div>
-									<br/>
-									
-
-								<?php endif; ?>
                     		
-                    	</header>
-  
+									
+
+								
+                    		
+
  
  
-  <?php the_content(); ?>
+
   
 
 		
@@ -160,9 +139,36 @@ Already a member? Log in
 <?php			}//end showpagecontent check
 ?>
 
+                    	</header>
+  
 
 
 						<?php // endwhile; else : endif; ?>
+
+						  <?php the_content(); ?>
+
+						<?php 
+
+								$taxonomy = 'sponsor';
+								$terms = get_the_terms( $post->ID, $taxonomy);
+								$term_id = $terms[0]->term_id;
+
+								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+								
+								if( !empty($image) ): ?>
+
+									
+										<div class="row sponsored">
+											<div class="small-12 medium-6 columns">
+
+											<small>Sponsored by:</small><br>
+
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+											</div>
+										</div>
+
+								<?php endif; ?>
 				
   </div>
   
