@@ -10,8 +10,7 @@ $whitepapersection = 0;
 
 ?>
 
-<div class="row">
-	<div class="small-12 columns">
+
 		
 
 
@@ -40,7 +39,7 @@ $args = array(
 
 				<li>
 
-				<header style="margin-bottom:8px;" class="row collapse">
+				<header style="margin-bottom:8px;" class="row">
 
 
 
@@ -217,6 +216,3 @@ $args = array(
 						<?php wp_reset_postdata(); ?>
 
 						</ul>
-
-							</div>
-</div>

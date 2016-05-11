@@ -39,7 +39,7 @@ $args = array(
 
 				<li>
 
-				<header style="margin-bottom:8px;" class="row collapse">
+				<header style="margin-bottom:8px;" class="row">
 
 
 
