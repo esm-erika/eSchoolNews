@@ -191,7 +191,6 @@ Already a member? Log in
 				
   </div>
   
-  </div>
   
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
