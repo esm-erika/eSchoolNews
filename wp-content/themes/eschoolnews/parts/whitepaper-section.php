@@ -145,19 +145,6 @@ $args = array(
 								<div class="row">
 									<div class="small-12 columns">
 
-										<p class="excerpt">
-											<?php 
-											echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
-							//the_content();
-
-											echo ' <a href="' .get_permalink(). '">';
-											echo 'Read More';
-											echo '</a>';
-											?>
-										</p>
-
-
-
 										<div class="row sponsored">
 											<div class="small-12 columns">
 
