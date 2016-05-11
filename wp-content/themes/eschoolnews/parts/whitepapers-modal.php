@@ -147,28 +147,47 @@ Already a member? Log in
 
 						  <?php the_content(); ?>
 
-						<?php 
+						 <?php 
 
-								$taxonomy = 'sponsor';
-								$terms = get_the_terms( $post->ID, $taxonomy);
-								$term_id = $terms[0]->term_id;
+									$product_terms = wp_get_object_terms( $post->ID,  'sponsor', $args );
 
-								$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
-								
-								if( !empty($image) ): ?>
+										if ( ! empty( $product_terms ) ) {
+											if ( ! is_wp_error( $product_terms ) ) {
+												echo '<ul class="small-block-grid-2 medium-block-grid-4">';
+													foreach( $product_terms as $term ) { ?>
+
+
+
+													<?php 
+													$taxonomy = 'sponsor';
+													$term_id = $term->term_id; 
+													$image = get_field('sponsor_image', $taxonomy . '_' . $term_id);
+
+													?>
+
+													<li>
+
+														<div class="responsive-container">
+    														<div class="dummy"></div>
+																<div class="img-container">
+																	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																</div>
+														</div>
+													</li>
+
+														
+
+													<?php }
+												echo '</ul>';
+
+											}
+										} ?>
+
+
 
 									
-										<div class="row sponsored">
-											<div class="small-12 medium-6 columns">
-
-											<small>Sponsored by:</small><br>
-
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-											</div>
 										</div>
-
-								<?php endif; ?>
+                    				</div>
 				
   </div>
   

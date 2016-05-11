@@ -161,13 +161,15 @@ $(document).ready(function(){
 
 							if (has_post_thumbnail()) { ?>
 
-							<div class="medium-3 columns">
+							<div class="small-12 medium-3 columns">
 
-							<?php the_post_thumbnail('medium-portrait'); ?>
+							<div class="hide-for-small-only">
+								<?php the_post_thumbnail('medium-portrait'); ?>
+							</div>
 							
 							</div>
                     		
-                    		<div class="medium-9 columns">
+                    		<div class="small-12 medium-9 columns">
                     			<div class="row">
                     				<div class="small-12 columns">
                     					
@@ -175,22 +177,13 @@ $(document).ready(function(){
 
 						    <?php }else{ ?>
 
-						    <div class="medium-12 columns">
+						    <div class="small-12 columns">
 						    	<div class="row collapse">
                     				<div class="small-12 columns">
 
 						    <?php } ?>
                     	
 						
-							<?php 
-
-							// $taxonomy = 'flag';
-							// $terms = get_the_terms( $post->ID, $taxonomy);
-							// $term_name = $terms[0]->name;
-
-							// echo $term_name;
-
-							 ?>
                     		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
