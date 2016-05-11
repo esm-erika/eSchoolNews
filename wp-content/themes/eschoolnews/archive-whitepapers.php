@@ -33,7 +33,7 @@ $(document).ready(function(){
 		$("h4#MobileTitle").hide();
 		$("h4#TechnologiesTitle").hide();	
 	$("#all").click(function(){
-        $("div.row.all").show();
+        $("div.panel.all").show();
 		$("h4#AllTitle").show();
 		$("h4#CurriculumTitle").hide();
 		$("h4#DigitalTitle").hide();
@@ -46,7 +46,7 @@ $(document).ready(function(){
 		$("div.panel.digital-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
 		$("div.panel.mobile-online-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
         $("div.panel.curriculum-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").show();
@@ -60,7 +60,7 @@ $(document).ready(function(){
         $("div.panel.curriculum-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
 		$("div.panel.mobile-online-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
 		$("div.panel.digital-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
@@ -74,7 +74,7 @@ $(document).ready(function(){
         $("div.panel.curriculum-whitepapers").hide();
 		$("div.panel.digital-whitepapers").hide();
 		$("div.panel.technologies-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
 		$("div.panel.mobile-online-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
@@ -88,7 +88,7 @@ $(document).ready(function(){
         $("div.panel.curriculum-whitepapers").hide();
 		$("div.panel.digital-whitepapers").hide();
 		$("div.panel.mobile-online-whitepapers").hide();
-		$("div.row.all").hide();
+		$("div.panel.all").hide();
 		$("div.panel.technologies-whitepapers").show();
 		$("h4#AllTitle").hide();
 		$("h4#CurriculumTitle").hide();
