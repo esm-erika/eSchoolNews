@@ -8830,11 +8830,17 @@ p.category {
 ul.really_simple_twitter_widget li {
   position: relative;
   font-size: 85%;
-  padding-left: 60px; }
+  padding-left: 60px;
+  line-height: 1.3;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid #ccc; }
   ul.really_simple_twitter_widget li img {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    margin: 0; }
+  ul.really_simple_twitter_widget li .twitter-timestamp {
+    font-weight: bold; }
 
 span.flag, span.tag {
   display: block; }
