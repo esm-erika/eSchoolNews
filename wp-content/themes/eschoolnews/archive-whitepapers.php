@@ -223,7 +223,7 @@ if( $pdfselects ) {
 	foreach( $pdfselects as $pdf): ?>
 	<div class="text-center">
     
-		<a class="button radius" target="_blank" href="<?php get_permalink( $pdf->ID ); ?>">View Now</a>
+		<a class="button radius" target="_blank" href="<?php echo get_permalink( $pdf->ID ); ?>">View Now</a>
 	</div>
 <?php 
 	endforeach; 
