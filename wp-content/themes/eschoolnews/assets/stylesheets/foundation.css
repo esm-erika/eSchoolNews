@@ -8827,6 +8827,15 @@ p.category {
   p.category a {
     color: #fff; }
 
+ul.really_simple_twitter_widget li {
+  position: relative;
+  font-size: 85%;
+  padding-left: 60px; }
+  ul.really_simple_twitter_widget li img {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
 span.flag, span.tag {
   display: block; }
 
