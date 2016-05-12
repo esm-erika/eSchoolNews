@@ -134,7 +134,7 @@ $(document).ready(function(){
 
 		    <br/>
 
-		    <?php
+		   <?php
 
 				// The Query
 				$args = array(
@@ -215,26 +215,24 @@ $(document).ready(function(){
 
 							// if( $post_date < $cutoff_date ) {
 
-							?>
 
-								<?php 
 
-								$posts = get_field('pdf_select');
+$pdfselects = get_field('pdf_select');
 
-								if( $posts ) { ?>
-
-								    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-								        <?php setup_postdata($post); ?>
-					
-						        <div class="text-center">
-									<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
-								</div>
-
-									<?php endforeach; ?>
-								   
-								    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+if( $pdfselects ) { 
+	foreach( $pdfselects as $pdf): ?>
+	<div class="text-center">
+    
+		<a class="button radius" target="_blank" href="<?php echo get_permalink( $pdf->ID ); ?>">View Now</a>
+	</div>
+<?php 
+	endforeach; 
 								
-								<?php } else { ?>
+                                
+                                
+                                
+                                
+                                 } else { ?>
 
 							
 
