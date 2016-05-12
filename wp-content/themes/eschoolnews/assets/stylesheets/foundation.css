@@ -8828,7 +8828,7 @@ p.category {
     color: #fff; }
 
 ul.really_simple_twitter_widget {
-  margin-bottom: 1.1rem; }
+  margin-bottom: 1.1rem !important; }
   ul.really_simple_twitter_widget li {
     position: relative;
     font-size: 85%;
