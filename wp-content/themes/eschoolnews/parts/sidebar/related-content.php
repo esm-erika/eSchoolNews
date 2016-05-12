@@ -24,7 +24,7 @@
 			'ignore_sticky_posts'=>1,
 			'post_type' => array('post' ),  // 'whitepapers' ,'ercs' ,'webinars' ,'special-reports',
 			'category__in' => $cat_ids,
-			'cat' => '-11583,-11,-133'
+			'cat' => '-11583,-11,-133, -10650'
 			);
 
 		 } else if(!empty($tag_ids)){ 
