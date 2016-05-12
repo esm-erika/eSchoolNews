@@ -20,7 +20,7 @@
 	
 			$args=array(
 			'post__not_in' => array($post->ID),
-			'posts_per_page'=>3, // Number of related posts to display.
+			'posts_per_page'=>5, // Number of related posts to display.
 			'ignore_sticky_posts'=>1,
 			'post_type' => array('post' ),  // 'whitepapers' ,'ercs' ,'webinars' ,'special-reports',
 			'category__in' => $cat_ids,
