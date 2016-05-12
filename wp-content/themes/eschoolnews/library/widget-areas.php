@@ -15,8 +15,8 @@ function foundationpress_sidebar_widgets() {
 	  'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
 	  'before_widget' => '<article id="%1$s" class="%2$s">',
 	  'after_widget' => '</article>',
-	  'before_title' => '<h5>',
-	  'after_title' => '</h5>',
+	  'before_title' => '<h4><i class="social-twitter"></i> ',
+	  'after_title' => '</h4>',
 	));
 
 	register_sidebar(array(
