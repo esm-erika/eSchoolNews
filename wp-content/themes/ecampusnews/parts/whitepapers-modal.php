@@ -67,18 +67,15 @@ if (($WPForm != null) and ($WPForm > 0)) { // has form??
 	
 } else {
 	
-	$posts = get_field('pdf_select');
+$pdfselects = get_field('pdf_select');
 
-	if( $posts ) { ?>
-
-	<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-	<?php setup_postdata($post); ?>
-
+if( $pdfselects ) { 
+	foreach( $pdfselects as $pdf): ?>
 	<div class="text-center">
-		<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+		<a class="button radius" target="_blank" href="<?php echo get_permalink( $pdf->ID ); ?>">View Now</a>
 	</div>
-
-<?php endforeach; ?>
+<?php  
+	endforeach;  ?>
 
 <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
