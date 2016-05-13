@@ -11,8 +11,44 @@ get_header(); ?>
 
 <div class="row">
 	<div class="small-12 large-8 columns" role="main">
+<div id='cse' style='width: 100%;'>Loading</div>
+<script src='//www.google.com/jsapi' type='text/javascript'></script>
+<script type='text/javascript'>
+google.load('search', '1', {language: 'en', style: google.loader.themes.DEFAULT});
+google.setOnLoadCallback(function() {
+  var customSearchOptions = {};
+  var orderByOptions = {};
+  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+  customSearchOptions['enableOrderBy'] = true;
+  customSearchOptions['orderByOptions'] = orderByOptions;
+  var customSearchControl =   new google.search.CustomSearchControl('007256987256189418192:esavkywrdf8', customSearchOptions);
+  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+  var options = new google.search.DrawOptions();
+  options.enableSearchResultsOnly();
+  options.setAutoComplete(true);
+  customSearchControl.draw('cse', options);
+  function parseParamsFromUrl() {
+    var params = {};
+    var parts = window.location.search.substr(1).split('&');
+    for (var i = 0; i < parts.length; i++) {
+      var keyValuePair = parts[i].split('=');
+      var key = decodeURIComponent(keyValuePair[0]);
+      params[key] = keyValuePair[1] ?
+          decodeURIComponent(keyValuePair[1].replace(/\+/g, ' ')) :
+          keyValuePair[1];
+    }
+    return params;
+  }
+  var urlParams = parseParamsFromUrl();
+  var queryParamName = 's';
+  if (urlParams[queryParamName]) {
+    customSearchControl.execute(urlParams[queryParamName]);
+  }
+}, true);
+</script>
+<link rel='stylesheet' href='cse.google.com/style/look/default.css' type='text/css'/>
 
-		<?php do_action( 'foundationpress_before_content' ); ?>
+		<?php /* do_action( 'foundationpress_before_content' ); ?>
 
 		<h4><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h4>
 		<br/>
@@ -80,7 +116,7 @@ get_header(); ?>
 		</nav>
 	<?php } ?>
 
-	<?php do_action( 'foundationpress_after_content' ); ?>
+	<?php do_action( 'foundationpress_after_content' ); */ ?>
 
 	</div>
 <?php 
