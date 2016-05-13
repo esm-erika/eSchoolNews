@@ -21,10 +21,14 @@ get_header(); ?>
 google.load('search', '1', {language: 'en', style: google.loader.themes.DEFAULT});
 google.setOnLoadCallback(function() {
   var customSearchOptions = {};
+  var orderByOptions = {};
+  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+  customSearchOptions['enableOrderBy'] = true;
+  customSearchOptions['orderByOptions'] = orderByOptions;
   var customSearchControl =   new google.search.CustomSearchControl('007256987256189418192:uwa1bciuqek', customSearchOptions);
   customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
   var options = new google.search.DrawOptions();
-  options.enableSearchResultsOnly();
+  options.setAutoComplete(true);
   customSearchControl.draw('cse', options);
   function parseParamsFromUrl() {
     var params = {};
