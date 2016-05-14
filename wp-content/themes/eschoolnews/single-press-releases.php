@@ -22,7 +22,7 @@ get_header(); ?>
 
 		
 						<?php 
-						if(has_post_thumbnail() { ?>
+						if(has_post_thumbnail()) { ?>
 
 						<div class="row">
 							<div class="small-8 small-centered medium-6 medium-centered large-6 large-centered columns">
