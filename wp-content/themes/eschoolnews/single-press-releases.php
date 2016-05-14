@@ -20,11 +20,20 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<div class="row">
-			<div class="small-8 small-centered medium-6 medium-centered large-6 large-centered columns">
-						<?php the_post_thumbnail(); ?>
-			</div>
-		</div>
+		
+						<?php 
+						if(has_post_thumbnail() { ?>
+
+						<div class="row">
+							<div class="small-8 small-centered medium-6 medium-centered large-6 large-centered columns">
+
+							<?php the_post_thumbnail(); ?>
+
+							</div>
+						</div>
+
+						<?php } ?>
+			
 	
 
 		<div class="text-center">
