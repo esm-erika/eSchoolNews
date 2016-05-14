@@ -38,7 +38,14 @@ get_header(); ?>
 				} ?>
 			
 			<span> <?php the_field('press_city_state_zip'); ?><br></span>
-			<span><?php the_field('press_contact_number'); ?><br></span>
+			
+			<?php 
+			if(get_field('press_contact_number')) {
+				echo '<span>';
+				the_field('press_contact_number'); 
+				echo '<br></span>';
+			} ?>
+			
 			<span>
 				<a target="_blank" href="<?php the_field('press_website'); ?>">
 					<?php the_field('press_website'); ?>
