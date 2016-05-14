@@ -960,7 +960,7 @@ register_field_group(array (
 				'placeholder' => '',
 				'prepend' => '',
 				'append' => '',
-				'formatting' => 'html',
+				'formatting' => 'none',
 				'maxlength' => '',
 			),
 			array (
@@ -972,7 +972,7 @@ register_field_group(array (
 				'placeholder' => '',
 				'maxlength' => '',
 				'rows' => '',
-				'formatting' => 'br',
+				'formatting' => 'html',
 			),
 		),
 		'location' => array (
