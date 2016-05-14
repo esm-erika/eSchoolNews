@@ -20,11 +20,20 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<div class="row">
-			<div class="small-8 small-centered medium-6 medium-centered large-6 large-centered columns">
-						<?php the_post_thumbnail(); ?>
-			</div>
-		</div>
+		
+						<?php 
+						if(has_post_thumbnail()) { ?>
+
+						<div class="row">
+							<div class="small-8 small-centered medium-6 medium-centered large-6 large-centered columns">
+
+							<?php the_post_thumbnail(); ?>
+
+							</div>
+						</div>
+
+						<?php } ?>
+			
 	
 
 		<div class="text-center">
@@ -38,7 +47,14 @@ get_header(); ?>
 				} ?>
 			
 			<span> <?php the_field('press_city_state_zip'); ?><br></span>
-			<span><?php the_field('press_contact_number'); ?><br></span>
+			
+			<?php 
+			if(get_field('press_contact_number')) {
+				echo '<span>';
+				the_field('press_contact_number'); 
+				echo '<br></span>';
+			} ?>
+			
 			<span>
 				<a target="_blank" href="<?php the_field('press_website'); ?>">
 					<?php the_field('press_website'); ?>
@@ -60,7 +76,11 @@ get_header(); ?>
 
 			<ul style="margin: 0; list-style: none;">
 			<li><strong>Name:</strong> <?php the_field('press_contact_name'); ?></li>
-			<li><strong>Phone:</strong> <?php the_field('press_contact_number'); ?></li>
+				<?php if(get_field('press_contact_number')){ ?>
+					<li>
+					<strong>Phone:</strong> <?php the_field('press_contact_number'); ?>
+					</li>
+				<?php } ?>
 			<li><strong>Email:</strong> <a href="mailto:<?php the_field('press_contact_email'); ?>"><?php the_field('press_contact_email'); ?></a></li>
 			</ul>
 		</div>
