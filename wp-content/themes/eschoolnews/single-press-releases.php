@@ -125,5 +125,6 @@ get_header(); ?>
 	</div>
 	
 <?php //get_sidebar('staff'); ?>
+
 </div>
 <?php get_footer(); ?>
