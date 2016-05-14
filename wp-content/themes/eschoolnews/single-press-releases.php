@@ -76,7 +76,11 @@ get_header(); ?>
 
 			<ul style="margin: 0; list-style: none;">
 			<li><strong>Name:</strong> <?php the_field('press_contact_name'); ?></li>
-			<li><strong>Phone:</strong> <?php the_field('press_contact_number'); ?></li>
+				<?php if(get_field('press_contact_number')){ ?>
+					<li>
+					<strong>Phone:</strong> <?php the_field('press_contact_number'); ?>
+					</li>
+				<?php } ?>
 			<li><strong>Email:</strong> <a href="mailto:<?php the_field('press_contact_email'); ?>"><?php the_field('press_contact_email'); ?></a></li>
 			</ul>
 		</div>
