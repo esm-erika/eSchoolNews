@@ -174,7 +174,7 @@ add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
  
 add_filter('body_class','smartestb_pages_bodyclass');
 function smartestb_pages_bodyclass($classes) {
-    if (is_page()) {
+    if (is_page() || is_singular()) {
         // get page slug
         global $post;
         $slug = get_post( $post )->post_name;

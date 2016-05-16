@@ -2345,6 +2345,247 @@ body.page.collaboration {
 }
 
 
+// Custom ERCs
+
+.single-ercs.mcgrawhill {
+
+	color: #231f20;
+
+	.logos {
+
+		.columns {
+			line-height: 59px;
+		}
+	}
+
+	.table-grid {
+
+		.row.content {
+			background-color: #ebe9db;
+			color: #777878;
+			font-size: 90%;
+			padding-top: 1.1rem;
+		}
+
+		.engrade, .acuity, .thrive {
+			border-right: 3px solid #fff;
+
+			h6 {
+				border-bottom: 3px solid #ffffff;
+			}
+		}
+
+
+
+			h6 {
+				background-color: #32484c;
+				color: #ffffff;
+				text-transform: uppercase;
+				padding: 5px 0;
+				font-weight: bold;
+				margin: 0;
+			}
+
+		.learn-more {
+			padding: 1.1rem 0;
+			clear: both;
+		}
+	}
+
+	.learn-more-box {
+		background-color: #7bc2ad;
+		color: #ffffff;
+		padding: 1.1rem;
+
+		p {
+			font-size: 90%;
+		}
+		
+	}
+}
+
+.single-ercs.mcgrawhill-engrade {
+
+	color: #231f20;
+	font-family: 'Raleway', sans-serif;
+
+	.header-engrade {
+
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		#main-nav {
+			position: absolute;
+			left: 1.875rem;
+			bottom: 0;
+			height: 51px;
+    		line-height: 51px;
+
+			h5 {
+				margin: 0;
+				line-height: 51px;
+				color: #ffffff;
+			}
+
+			ul {
+				margin: 0;
+				list-style: none;
+
+				li {
+					float: left;
+					margin-left: 0.9375rem;
+
+					a {
+						padding: 0 10px;
+					}
+
+					a:link, a:visited {
+						display: block;
+						line-height: 51px;
+						color: #ffffff;
+						font-style: italic;
+					}
+
+					a:hover {
+						text-decoration: none;
+					}
+
+					a.active {
+						background-color: #0099d5;
+					}
+
+					h5, span {
+						float: left;
+						margin: 0;
+						color: #ffffff;
+						// font-style: italic;
+					}
+				}
+			}
+		}
+	
+	}
+
+	#body {
+		article:first-child {
+			margin-top: .9375rem;
+		}
+
+		article:last-child {
+			background-color: #78c3ad;
+			color: #ffffff;
+			padding: .9375rem;
+			margin-top: .9375rem;
+
+			h4 {
+				font-weight: bold;
+				color: #ffffff;
+			}
+
+			hr {
+				border-color: #ffffff !important;
+			}
+		}
+
+		article {
+
+			h3 {
+				font-weight: bold;
+				color: #1d4448;
+			}
+		}
+
+		.button {
+			background-color: #78c3ad;
+			text-transform: uppercase;
+		}
+
+		.video {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			height: 0;
+		
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	#sponsor {
+
+		p {
+			font-size: 85%;
+			margin-bottom: .9375rem;
+		}
+	}
+
+	#sidebar {
+		background-color: #ebebdc;
+
+		.row {
+
+			background-color: #ebebdc;
+
+		h4 {
+			color: #e41d26;
+			margin-top: .9375rem;
+			font-weight: bold;
+
+			img {
+				width: 25px;
+				margin-right: 5px;
+
+			}
+		}
+
+
+		aside {
+			background-color: #ffffff;
+			padding: .9375rem;
+			margin-bottom: .9375rem;
+
+			h5 {
+				font-weight: bold;
+			}
+
+			.cover {
+				border: 1px solid #231f20;
+			}
+
+			.button {
+				background-color: #e41d26;
+				text-transform: uppercase;
+			}
+		}
+
+		#top-stories {
+			h4 {
+				font-weight: 500;
+			}
+
+			hr:last-child {
+				display: none !important;
+			}
+
+			hr {
+				margin: 0;
+			}
+		}
+	}
+}
+
+}
+
+
 // Gravity Forms
 
 div.registration-form {
