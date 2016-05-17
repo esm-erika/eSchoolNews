@@ -9,11 +9,13 @@
 
  get_header(); ?>
 
+<div id="content">
+
 <header class="header-engrade">
  		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/banner-engrade.png" alt="Curriculum; Meet Data.">
 
  		<nav id="main-nav">
- 			<h5 class="left">Learning Science Solutions:</h5>
+ 			<h5 class="left"><a href="">Learning Science Solutions</a></h5>
 			<ul class="left">
 				<li><h5><a class="active" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade">Engrade<sup>&reg;</sup></a></h5></li>
 				<li><h5><a href="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity">Acuity<sup>&reg;</sup></a></h5></li>
@@ -132,33 +134,17 @@
 				<aside id="top-stories">
 					<h5>eSchool News - Top News</h5>
 
-					<?php // The Query
-			
-				    global $pagefeaturedid; 
-
-					$exclude_val = get_option( 'esm_top_story_exclude' );	
-					
-					$topstories = new WP_Query(array(
-					'post_type' => 'post',
-					'posts_per_page' => 2,
-					'post__not_in' => array($pagefeaturedid),
-					'cat' => -$exclude_val
-					)); 
-
-				  	while ( $topstories->have_posts() ) : $topstories -> the_post(); ?>
-
-					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					<h4>
+					<a href="http://www.eschoolnews.com/2015/05/13/post-lms-era-437/" target="_blank">5 core functions of the LMS of the future</a></h4>
 
 					<hr>
 
-				  	<?php endwhile; wp_reset_query(); ?>
+					<h4><a href="http://www.eschoolnews.com/2014/12/22/education-lms-590/" target="_blank">12 big education challenges your LMS can solve</a></h4>
 
 					<div class="clearfix"></div>
 				</aside>
 
-				<div class="text-center">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/ad-engrade.png" alt="engrade: Transform the Learning Experience">
-				</div>
+				<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
 				
 			</div>
 		</div>
@@ -169,5 +155,5 @@
 </div>
 
  
-
+</div>
  <?php get_footer(); ?>

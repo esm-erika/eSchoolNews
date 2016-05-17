@@ -2351,6 +2351,13 @@ body.page.collaboration {
 
 	color: #231f20;
 
+	.main-header {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	.logos {
 
 		.columns {
@@ -2406,6 +2413,8 @@ body.page.collaboration {
 
 .single-ercs.mcgrawhill-engrade {
 
+	#content {
+
 	color: #231f20;
 	font-family: 'Raleway', sans-serif;
 
@@ -2421,7 +2430,7 @@ body.page.collaboration {
 		#main-nav {
 			position: absolute;
 			left: 1.875rem;
-			bottom: 0;
+			bottom: 1px;
 			height: 51px;
     		line-height: 51px;
 
@@ -2431,6 +2440,26 @@ body.page.collaboration {
 				color: #ffffff;
 			}
 
+			a {
+				padding: 0 10px;
+			}
+
+			a:link, a:visited {
+				display: block;
+				line-height: 51px;
+				color: #ffffff;
+				font-style: italic;
+			}
+
+			a:hover {
+				text-decoration: none;
+				background-color: #0099d5;
+			}
+
+			a.active {
+				background-color: #0099d5;
+			}
+
 			ul {
 				margin: 0;
 				list-style: none;
@@ -2438,25 +2467,6 @@ body.page.collaboration {
 				li {
 					float: left;
 					margin-left: 0.9375rem;
-
-					a {
-						padding: 0 10px;
-					}
-
-					a:link, a:visited {
-						display: block;
-						line-height: 51px;
-						color: #ffffff;
-						font-style: italic;
-					}
-
-					a:hover {
-						text-decoration: none;
-					}
-
-					a.active {
-						background-color: #0099d5;
-					}
 
 					h5, span {
 						float: left;
@@ -2583,6 +2593,7 @@ body.page.collaboration {
 	}
 }
 
+}
 }
 
 

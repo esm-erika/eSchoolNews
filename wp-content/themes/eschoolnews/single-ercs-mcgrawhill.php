@@ -9,11 +9,9 @@
 
  get_header(); ?>
 
- <div class="row">
- 	<div class="small-12 columns text-center">
- 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/mcgrawhill-banner.png" alt="Learning Science Solutions :: Powered By Purpose">
- 	</div>
- </div>
+<header class="main-header text-center">
+ 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/mcgrawhill-banner.png" alt="Learning Science Solutions :: Powered By Purpose">
+</header>
 
  <br>
 
@@ -99,11 +97,7 @@
  		
  	</div>
  	<div class="small-12 medium-4 columns text-center">
-
- 		
- 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/thrive-banner.png">
- 			
- 		
+ 		<?php get_template_part( 'parts/ads/embeddedbanner' ); ?>
  	</div>
  </div>
 
