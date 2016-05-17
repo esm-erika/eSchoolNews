@@ -15,7 +15,7 @@
 	<div class="small-12 columns">
  		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/banner-engrade.png" alt="Curriculum; Meet Data.">
 
- 		<nav class="show-for-large-only" id="main-nav">
+ 		<nav class="show-for-large-up" id="main-nav">
  			<h5 class="left"><a href="<?php echo site_url(); ?>/ercs/mcgrawhill/">Learning Science Solutions</a></h5>
 			<ul class="left">
 				<li><h5><a class="active" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade">Engrade<sup>&reg;</sup></a></h5></li>
@@ -26,7 +26,7 @@
 
  		<br>
 
- 		<select class="hide-for-large-only show-for-small-up" onchange="window.location.href=this.value;"> 
+ 		<select class="hide-for-large-up" onchange="window.location.href=this.value;"> 
 		  	<option value="<?php echo site_url(); ?>/ercs/mcgrawhill/">Home</option> 	    
 			<option selected="selected" value="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade/">Engrade</option> 
 		    <option value="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity/">Acuity</option> 
@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Learning math Starts with a Connection.</h3>
+							<h3>Learning Math Starts with a Connection.</h3>
 
 							<p><em>Engrade<sup>&reg;</sup></em> combines learning management and assessment into a single powerful platform.</p>
 
@@ -98,7 +98,7 @@
 			<div class="small-12 medium-3 columns">
 				<p>Sponsored by:</p>
 				
-				<img width="144" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-mcgrawhill.png" alt="McGraw Hill Education">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-mcgrawhill.png" alt="McGraw Hill Education">
 
 			</div>
 		</div>
@@ -145,14 +145,14 @@
 				</aside>
 
 				<aside id="top-stories">
-					<h5>eSchool News - Top News</h5>
+					<h5>eSchool News Resources</h5>
 
 					<h4>
-					<a href="http://www.eschoolnews.com/2015/05/13/post-lms-era-437/" target="_blank">5 core functions of the LMS of the future</a></h4>
+					<a href="http://www.eschoolnews.com/2015/05/13/post-lms-era-437/" target="_blank">5 Core Functions of the LMS of the Future</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2014/12/22/education-lms-590/" target="_blank">12 big education challenges your LMS can solve</a></h4>
+					<h4><a href="http://www.eschoolnews.com/2014/12/22/education-lms-590/" target="_blank">12 Big Education Challenges Your LMS can Solve</a></h4>
 
 					<div class="clearfix"></div>
 				</aside>
