@@ -15,7 +15,7 @@
 	<div class="small-12 columns">
  		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/banner-engrade.png" alt="Curriculum; Meet Data.">
 
- 		<nav class="hide-for-medium-up" id="main-nav">
+ 		<nav class="show-for-large-only" id="main-nav">
  			<h5 class="left"><a href="<?php echo site_url(); ?>/ercs/mcgrawhill/">Learning Science Solutions</a></h5>
 			<ul class="left">
 				<li><h5><a class="active" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade">Engrade<sup>&reg;</sup></a></h5></li>
@@ -26,7 +26,7 @@
 
  		<br>
 
- 		<select class="show-for-small-up" onchange="window.location.href=this.value;"> 
+ 		<select class="hide-for-large-only show-for-small-up" onchange="window.location.href=this.value;"> 
 		  	<option value="<?php echo site_url(); ?>/ercs/mcgrawhill/">Home</option> 	    
 			<option selected="selected" value="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade/">Engrade</option> 
 		    <option value="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity/">Acuity</option> 
