@@ -9986,6 +9986,137 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
   background-color: #dab7b7;
   padding: 0.9375rem; }
 
+.single-ercs.mcgrawhill {
+  color: #231f20; }
+  .single-ercs.mcgrawhill .logos .columns {
+    line-height: 59px; }
+  .single-ercs.mcgrawhill .table-grid .row.content {
+    background-color: #ebe9db;
+    color: #777878;
+    font-size: 90%;
+    padding-top: 1.1rem; }
+  .single-ercs.mcgrawhill .table-grid .engrade, .single-ercs.mcgrawhill .table-grid .acuity, .single-ercs.mcgrawhill .table-grid .thrive {
+    border-right: 3px solid #fff; }
+    .single-ercs.mcgrawhill .table-grid .engrade h6, .single-ercs.mcgrawhill .table-grid .acuity h6, .single-ercs.mcgrawhill .table-grid .thrive h6 {
+      border-bottom: 3px solid #ffffff; }
+  .single-ercs.mcgrawhill .table-grid h6 {
+    background-color: #32484c;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-weight: bold;
+    margin: 0; }
+  .single-ercs.mcgrawhill .table-grid .learn-more {
+    padding: 1.1rem 0;
+    clear: both; }
+  .single-ercs.mcgrawhill .learn-more-box {
+    background-color: #7bc2ad;
+    color: #ffffff;
+    padding: 1.1rem; }
+    .single-ercs.mcgrawhill .learn-more-box p {
+      font-size: 90%; }
+
+.single-ercs.mcgrawhill-engrade {
+  color: #231f20;
+  font-family: 'Raleway', sans-serif; }
+  .single-ercs.mcgrawhill-engrade .header-engrade {
+    position: relative; }
+    .single-ercs.mcgrawhill-engrade .header-engrade img {
+      width: 100%;
+      height: auto; }
+    .single-ercs.mcgrawhill-engrade .header-engrade #main-nav {
+      position: absolute;
+      left: 1.875rem;
+      bottom: 0;
+      height: 51px;
+      line-height: 51px; }
+      .single-ercs.mcgrawhill-engrade .header-engrade #main-nav h5 {
+        margin: 0;
+        line-height: 51px;
+        color: #ffffff; }
+      .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul {
+        margin: 0;
+        list-style: none; }
+        .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li {
+          float: left;
+          margin-left: 0.9375rem; }
+          .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li a {
+            padding: 0 10px; }
+          .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li a:link, .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li a:visited {
+            display: block;
+            line-height: 51px;
+            color: #ffffff;
+            font-style: italic; }
+          .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li a:hover {
+            text-decoration: none; }
+          .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li a.active {
+            background-color: #0099d5; }
+          .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li h5, .single-ercs.mcgrawhill-engrade .header-engrade #main-nav ul li span {
+            float: left;
+            margin: 0;
+            color: #ffffff; }
+  .single-ercs.mcgrawhill-engrade #body article:first-child {
+    margin-top: .9375rem; }
+  .single-ercs.mcgrawhill-engrade #body article:last-child {
+    background-color: #78c3ad;
+    color: #ffffff;
+    padding: .9375rem;
+    margin-top: .9375rem; }
+    .single-ercs.mcgrawhill-engrade #body article:last-child h4 {
+      font-weight: bold;
+      color: #ffffff; }
+    .single-ercs.mcgrawhill-engrade #body article:last-child hr {
+      border-color: #ffffff !important; }
+  .single-ercs.mcgrawhill-engrade #body article h3 {
+    font-weight: bold;
+    color: #1d4448; }
+  .single-ercs.mcgrawhill-engrade #body .button {
+    background-color: #78c3ad;
+    text-transform: uppercase; }
+  .single-ercs.mcgrawhill-engrade #body .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0; }
+    .single-ercs.mcgrawhill-engrade #body .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  .single-ercs.mcgrawhill-engrade #sponsor p {
+    font-size: 85%;
+    margin-bottom: .9375rem; }
+  .single-ercs.mcgrawhill-engrade #sidebar {
+    background-color: #ebebdc; }
+    .single-ercs.mcgrawhill-engrade #sidebar .row {
+      background-color: #ebebdc; }
+      .single-ercs.mcgrawhill-engrade #sidebar .row h4 {
+        color: #e41d26;
+        margin-top: .9375rem;
+        font-weight: bold; }
+        .single-ercs.mcgrawhill-engrade #sidebar .row h4 img {
+          width: 25px;
+          margin-right: 5px; }
+      .single-ercs.mcgrawhill-engrade #sidebar .row aside {
+        background-color: #ffffff;
+        padding: .9375rem;
+        margin-bottom: .9375rem; }
+        .single-ercs.mcgrawhill-engrade #sidebar .row aside h5 {
+          font-weight: bold; }
+        .single-ercs.mcgrawhill-engrade #sidebar .row aside .cover {
+          border: 1px solid #231f20; }
+        .single-ercs.mcgrawhill-engrade #sidebar .row aside .button {
+          background-color: #e41d26;
+          text-transform: uppercase; }
+      .single-ercs.mcgrawhill-engrade #sidebar .row #top-stories h4 {
+        font-weight: 500; }
+      .single-ercs.mcgrawhill-engrade #sidebar .row #top-stories hr:last-child {
+        display: none !important; }
+      .single-ercs.mcgrawhill-engrade #sidebar .row #top-stories hr {
+        margin: 0; }
+
 div.registration-form div.gform_wrapper {
   max-width: 100%; }
   div.registration-form div.gform_wrapper form .gform_body #gf_content_col_1, div.registration-form div.gform_wrapper form .gform_body #gf_content_col_2 {
