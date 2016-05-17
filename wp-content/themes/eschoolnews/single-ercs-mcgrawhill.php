@@ -28,7 +28,7 @@
 
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				Engrade® unifies the digital learning ecosystem, bringing together the data, curriculum, and assessments into a single-sign on, cloud-based platform. With products for both learning management and assessments, districts rely on Engrade to enable data-driven personalized learning, connecting student with the instruction they need, when they need it. 
+ 				Engrade<sup>&reg;</sup> unifies the digital learning ecosystem, bringing together the data, curriculum, and assessments into a single-sign on, cloud-based platform. With products for both learning management and assessments, districts rely on Engrade to enable data-driven personalized learning, connecting student with the instruction they need, when they need it. 
  			</div>
 
  			<div class="text-center learn-more">
@@ -50,7 +50,7 @@
  		
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				Acuity® K-12 interim assessment solution provides valid and reliable measures student growth and proficiency, informs instruction and offers engaging instructional content. This data-driven solution is in use every day in thousands of districts, helping educators gain a deeper understanding of each student’s strengths and opportunities for instructional improvement relative to state standards.
+ 				Acuity<sup>&reg;</sup> K-12 interim assessment solution provides valid and reliable measures student growth and proficiency, informs instruction and offers engaging instructional content. This data-driven solution is in use every day in thousands of districts, helping educators gain a deeper understanding of each student’s strengths and opportunities for instructional improvement relative to state standards.
  			</div>
 
  			<div class="text-center learn-more">
@@ -72,7 +72,7 @@
 
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				Thrive® is purely digital, core subject, that is research-based and proven to improve student learning in the 1:1 powered classroom. It blends advanced technology with multiple proven teaching practices to create a rich standards-based digital learning experience. Thrive allows you to easily plan and manage your 1:1 classroom, personalize learning for your entire classroom, and provide differentiated instructional support.
+ 				Thrive<sup>&reg;</sup> powered by Time to Know<sup>&trade;</sup> is purely digital, core curriculum for ELA, Math and Science, that is research-based and proven to improve student learning in the 1:1 powered classroom. It blends advanced technology with multiple proven teaching practices to create a rich standards-based digital learning experience. Thrive allows you to easily plan and manage your 1:1 classroom, personalize learning for your entire classroom, and provide differentiated instructional support.
  			</div>
 
  			<div class="text-center learn-more">
