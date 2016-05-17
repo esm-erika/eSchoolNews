@@ -15,7 +15,7 @@
  		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/banner-engrade.png" alt="Curriculum; Meet Data.">
 
  		<nav id="main-nav">
- 			<h5 class="left"><a href="">Learning Science Solutions</a></h5>
+ 			<h5 class="left"><a href="<?php echo site_url(); ?>/ercs/mcgrawhill/">Learning Science Solutions</a></h5>
 			<ul class="left">
 				<li><h5><a class="active" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade">Engrade<sup>&reg;</sup></a></h5></li>
 				<li><h5><a href="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity">Acuity<sup>&reg;</sup></a></h5></li>
