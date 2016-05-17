@@ -9,26 +9,20 @@
 
  get_header(); ?>
 
-<header class="main-header text-center">
- 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/mcgrawhill-banner.png" alt="Learning Science Solutions :: Powered By Purpose">
+<header class="row main-header collapse text-center">
+	<div class="small-12 columns">
+ 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/mcgrawhill-banner.png" alt="Learning Science Solutions :: Powered By Purpose">
+ 	</div>
 </header>
 
  <br>
 
- <div class="row logos">
- 	<div class="small-12 medium-4 columns text-center">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-engrade.png">
- 	</div>
- 	<div class="small-12 medium-4 columns text-center">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-acuity.png">
- 	</div>
- 	<div class="small-12 medium-4 columns text-center">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-thrive.png">
- 	</div>
- </div>
-
  <div class="row collapse table-grid" data-equalizer="content">
  	<div class="small-12 medium-4 columns engrade">
+
+ 		<div class="logo text-center">
+ 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-engrade.png">
+ 		</div>
 		
 			<h6 class="text-center">LMS, Assessment, SSO</h6>
 
@@ -46,6 +40,11 @@
  		
  	</div>
  	<div class="small-12 medium-4 columns acuity">
+
+ 		<div class="logo text-center">
+ 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-acuity.png">
+
+ 		</div>
  		
  			<h6 class="text-center">K-12 Assessments</h6>
  		
@@ -63,6 +62,11 @@
  		
  	</div>
  	<div class="small-12 medium-4 columns thrive">
+
+ 		<div class="logo text-center">
+ 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-thrive.png">
+
+ 		</div>
  		
  			<h6 class="text-center">Digital Teaching</h6>
 

@@ -11,10 +11,11 @@
 
 <div id="content">
 
-<header class="header-engrade">
+<header class="row collapse header-engrade">
+	<div class="small-12 columns">
  		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/banner-engrade.png" alt="Curriculum; Meet Data.">
 
- 		<nav id="main-nav">
+ 		<nav class="hide-for-medium-up" id="main-nav">
  			<h5 class="left"><a href="<?php echo site_url(); ?>/ercs/mcgrawhill/">Learning Science Solutions</a></h5>
 			<ul class="left">
 				<li><h5><a class="active" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade">Engrade<sup>&reg;</sup></a></h5></li>
@@ -22,6 +23,16 @@
 				<li><h5><a href="<?php echo site_url(); ?>/ercs/mcgrawhill-thrive">Thrive<sup>&trade;</sup></a></h5></li>
 			</ul>
  		</nav>
+
+ 		<br>
+
+ 		<select class="show-for-small-up" onchange="window.location.href=this.value;"> 
+		  	<option value="<?php echo site_url(); ?>/ercs/mcgrawhill/">Home</option> 	    
+			<option selected="selected" value="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade/">Engrade</option> 
+		    <option value="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity/">Acuity</option> 
+		    <option value="<?php echo site_url(); ?>/ercs/mcgrawhill-thrive/">Thrive</option> 
+		</select>
+ 		</div>
 </header>
 
 <div class="row collapse" data-equalizer>
@@ -94,6 +105,7 @@
 
 	</div>
 
+
 	<div class="small-12 medium-4 columns" id="sidebar" data-equalizer-watch>
 
 		<div class="row" >
@@ -104,7 +116,8 @@
 				<aside>
 					<h5>Unify Your Digital Learning Ecosystem</h5>
 
-					<img width="128" class="right cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_unify-your-digital-learning-ecosystem.png" alt="Unify Your Digital Learning Ecosystem">
+						
+					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_unify-your-digital-learning-ecosystem.png" alt="Unify Your Digital Learning Ecosystem">
 
 					<a href="http://www.eschoolnews.com/pdfs/engrade-overview-brochure/" target="_blank" class="button tiny">View Now</a>
 							
@@ -114,7 +127,7 @@
 				<aside>
 					<h5>Transforming The Learning Experience In Baltimore County, MD</h5>
 
-					<img width="128" class="right cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_transforming-the-learning-experience-in-baltimore.png" alt="Transforming The Learning Experience In Baltimore County, MD">
+					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_transforming-the-learning-experience-in-baltimore.png" alt="Transforming The Learning Experience In Baltimore County, MD">
 
 					<a href="http://www.eschoolnews.com/pdfs/engrade-balitmore-city-public-schools-case-study/" target="_blank" class="button tiny">View Now</a>
 
@@ -124,7 +137,7 @@
 				<aside>
 					<h5>engrade Inform</h5>
 
-					<img width="128" class="right cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_engrade-inform.png" alt="engrade INFORM">
+					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_engrade-inform.png" alt="engrade INFORM">
 
 					<a href="http://www.eschoolnews.com/pdfs/engrade-inform-brochure/" target="_blank" class="button tiny">View Now</a>
 

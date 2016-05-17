@@ -9991,13 +9991,15 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
   .single-ercs.mcgrawhill .main-header img {
     width: 100%;
     height: auto; }
-  .single-ercs.mcgrawhill .logos .columns {
-    line-height: 59px; }
   .single-ercs.mcgrawhill .table-grid .row.content {
     background-color: #ebe9db;
     color: #777878;
     font-size: 90%;
     padding-top: 1.1rem; }
+  .single-ercs.mcgrawhill .table-grid .logo {
+    line-height: 60px;
+    padding: .9375rem 0;
+    height: 90px; }
   .single-ercs.mcgrawhill .table-grid .engrade, .single-ercs.mcgrawhill .table-grid .acuity, .single-ercs.mcgrawhill .table-grid .thrive {
     border-right: 3px solid #fff; }
     .single-ercs.mcgrawhill .table-grid .engrade h6, .single-ercs.mcgrawhill .table-grid .acuity h6, .single-ercs.mcgrawhill .table-grid .thrive h6 {
@@ -10092,6 +10094,8 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
   .single-ercs.mcgrawhill-engrade #content #sponsor p {
     font-size: 85%;
     margin-bottom: .9375rem; }
+  .single-ercs.mcgrawhill-engrade #content #sponsor img {
+    margin-bottom: .9375rem; }
   .single-ercs.mcgrawhill-engrade #content #sidebar {
     background-color: #ebebdc; }
     .single-ercs.mcgrawhill-engrade #content #sidebar .row {
@@ -10110,10 +10114,12 @@ body.page.collaboration div.twitter h4, body.page-template-collaboration-nation 
         .single-ercs.mcgrawhill-engrade #content #sidebar .row aside h5 {
           font-weight: bold; }
         .single-ercs.mcgrawhill-engrade #content #sidebar .row aside .cover {
-          border: 1px solid #231f20; }
+          border: 1px solid #231f20;
+          margin-bottom: .9375rem; }
         .single-ercs.mcgrawhill-engrade #content #sidebar .row aside .button {
           background-color: #e41d26;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          margin: 0; }
       .single-ercs.mcgrawhill-engrade #content #sidebar .row #top-stories h4 {
         font-weight: 500; }
       .single-ercs.mcgrawhill-engrade #content #sidebar .row #top-stories hr:last-child {
@@ -10820,6 +10826,12 @@ body#newsletter {
   nav.tab-bar {
     display: block; } }
 @media only screen and (min-width: 64.0625em) {
+  .right-for-large-only {
+    float: right; }
+
+  .left-for-large-only {
+    float: left; }
+
   nav.top-bar .top-bar-section ul.center-menu li {
     float: left; }
 
