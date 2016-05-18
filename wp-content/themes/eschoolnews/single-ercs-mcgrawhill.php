@@ -28,7 +28,7 @@
 
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				Engrade<sup>&reg;</sup> unifies the digital learning ecosystem, bringing together the data, curriculum, and assessments into a single-sign on, cloud-based platform. With products for both learning management and assessments, districts rely on Engrade to enable data-driven personalized learning, connecting student with the instruction they need, when they need it. 
+ 				<em>Engrade<sup>&reg;</sup></em> unifies the digital learning ecosystem, bringing together the data, curriculum, and assessments into a single-sign on, cloud-based platform. With products for both learning management and assessments, districts rely on <em>Engrade</em> to enable data-driven personalized learning, connecting student with the instruction they need, when they need it. 
  			</div>
 
  			<div class="text-center learn-more">
@@ -46,11 +46,11 @@
 
  		</div>
  		
- 			<h6 class="text-center">K-12 Assessments</h6>
+ 			<h6 class="text-center">K&ndash;12 Assessments</h6>
  		
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				Acuity<sup>&reg;</sup> K-12 interim assessment solution provides valid and reliable measures student growth and proficiency, informs instruction and offers engaging instructional content. This data-driven solution is in use every day in thousands of districts, helping educators gain a deeper understanding of each student’s strengths and opportunities for instructional improvement relative to state standards.
+ 				<em>Acuity<sup>&reg;</sup></em> K&ndash;12 interim assessment solution provides valid and reliable measurements of student growth and proficiency, informs instruction, and offers engaging instructional content. This data-driven solution is in use every day in thousands of districts, helping educators gain a deeper understanding of each student’s strengths and opportunities for instructional improvement relative to state standards.
  			</div>
 
  			<div class="text-center learn-more">
@@ -68,11 +68,11 @@
 
  		</div>
  		
- 			<h6 class="text-center">Digital Teaching</h6>
+ 			<h6 class="text-center">Digital Teaching and Learning</h6>
 
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				Thrive<sup>&reg;</sup> powered by Time to Know<sup>&trade;</sup> is purely digital, core curriculum for ELA, Math and Science, that is research-based and proven to improve student learning in the 1:1 powered classroom. It blends advanced technology with multiple proven teaching practices to create a rich standards-based digital learning experience. Thrive allows you to easily plan and manage your 1:1 classroom, personalize learning for your entire classroom, and provide differentiated instructional support.
+ 				<em>Thrive<sup>&reg;</sup></em> powered by Time to Know<sup>&trade;</sup> offers purely digital, core curriculum for ELA, Math, and Science, that is research-based and proven to improve student learning in the 1:1 powered classroom. It blends advanced technology with multiple proven teaching practices to create a rich standards-based digital learning experience. <em>Thrive</em> allows you to easily plan and manage your 1:1 classroom, and provide differentiated instructional support.
  			</div>
 
  			<div class="text-center learn-more">
@@ -90,9 +90,9 @@
  	<div class="small-12 medium-8 columns">
 
  		<div class="learn-more-box">
- 			<p>McGraw-Hill Education connects decision makers and innovative educators with purposeful technology, bringing together comprehensive teaching tools with proven educational content.  Grounded in deep insights into how learning happens, it guides us to deliver tools, platforms, and services proven to power performance and achievement. We harness technology and data insights both inside and outside the classroom to ignite the spark between teaching and learning.</p>
+ 			<p>McGraw-Hill Education connects decision makers and innovative educators with purposeful technology, bringing together comprehensive teaching tools with proven educational content.  Grounded in deep insights into how learning happens, we deliver tools, platforms, and services proven to power performance and achievement. We harness technology and data insights both inside and outside the classroom to ignite the spark between teaching and learning.</p>
 
-			<p>This ideal blend of technology, content, and inspiration isn’t a distant dream – with McGraw-Hill Education, you can see it in action today.</p>
+			<p>This ideal blend of technology, content, and inspiration isn’t a distant dream&mdash;with McGraw-Hill Education, you can see it in action today.</p>
 
 			<a href="http://www.mheducation.com/prek-12/platforms.html" target="_blank">
 				<img style="border: 3px solid #fff;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/button-learn_more.png">

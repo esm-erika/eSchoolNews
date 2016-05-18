@@ -44,14 +44,11 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Learning Math Starts with a Connection.</h3>
+							<h3>Learning Math Starts with a Connection</h3>
 
 							<p><em>Engrade<sup>&reg;</sup></em> combines learning management and assessment into a single powerful platform.</p>
 
-							<p>The complete Engrade® suite brings together learning management and assessment
-							in a single platform with a single sign-on. Connecting curriculum,
-							assessments, and data across the learning cycle, Engrade helps students
-							learn what they need, when they need it.</p>
+							<p>The complete <em>Engrade</em> suite brings together learning management and assessment in a single platform with a single sign-on. Connecting curriculum, assessments, and data across the learning cycle, Engrade helps students learn what they need, when they need it.</p>
 
 							<a href="http://www.mheducation.com/prek-12/platforms/engrade/about.html" class="button tiny" target="_blank">Learn More</a>
 						</div>
@@ -66,19 +63,19 @@
 					<h4>Centralize Content and Curriculum</h4>
 					One open, integrated repository for curriculum resources across
 					providers, with full support for open educational resources (OER) as
-					well as IMS and Learning Tools Interoperability® (LTI) standards.
+					well as IMS and Learning Tools Interoperability<sup>&reg;</sup> (LTI<sup>&reg;</sup>) standards.
 
 					<hr>
 					
 					<h4>Monitor Learning Progress</h4>
-					Examine results by student, classroom, school, or district -wide, with a
+					Examine results by student, classroom, school, or district-wide, with a
 					powerful Data Wall visualization that captures student performance
 					across assessments.
 
 					<hr>
 
 					<h4>Deliver Impactful Assessment</h4>
-					Design assessments with more than fifteen tech- enhanced questions,
+					Design assessments with more than fifteen tech-enhanced questions,
 					or distribute assessments at the district level for consistent metrics
 					across schools.
 
@@ -86,7 +83,7 @@
 					
 					<h4>Communicate and Collaborate</h4>
 					Send and receive messages with parents and students; assign and
-					grade homework from within Engrade.
+					grade homework from within <em>Engrade</em>.
 				</article>
 				
 			</div>
@@ -162,10 +159,22 @@
 			</div>
 		</div>
 
+
+
 		
 		
 	</div>
 </div>
+
+<hr>
+
+<div class="row">
+	<div class="small-12 columns">
+		<small>Learning Tools Interoperability® (LTI®) is a trademark of the IMS Global Learning Consortium, Inc. (www.imsglobal.org)</small>
+	</div>
+</div>
+
+		
 
  
 </div>
