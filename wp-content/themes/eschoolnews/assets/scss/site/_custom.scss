@@ -161,26 +161,26 @@ p.category  {
 	}
 }
 
-ul.really_simple_twitter_widget {
+ul.tweet-list {
 	margin-bottom: 1.1rem !important;
 
 	li {
 		position: relative;
-		font-size: 85%;
-		padding-left: 60px;
-		line-height: 1.3;
-		padding-bottom: 1.1rem;
-		border-bottom: 1px solid #ccc;
 		
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			margin: 0;
-		}
+		// padding-left: 60px;
+		// line-height: 1.3;
+		// padding-bottom: 1.1rem;
+		border-bottom: 1px solid #ccc;
 
-		.twitter-timestamp {
-			font-weight: bold;
+		p {
+
+			font-size: 85%;
+			margin: 0;
+
+			small {
+				font-weight: bold;
+				display: block;
+			}
 		}
 	}
 }
@@ -2351,12 +2351,14 @@ body.page.collaboration {
 
 	color: #231f20;
 
-	.logos {
-
-		.columns {
-			line-height: 59px;
+	.main-header {
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
+
+	
 
 	.table-grid {
 
@@ -2365,6 +2367,12 @@ body.page.collaboration {
 			color: #777878;
 			font-size: 90%;
 			padding-top: 1.1rem;
+		}
+
+		.logo {
+			line-height: 60px;
+			padding: .9375rem 0;
+			height: 90px;
 		}
 
 		.engrade, .acuity, .thrive {
@@ -2406,6 +2414,8 @@ body.page.collaboration {
 
 .single-ercs.mcgrawhill-engrade {
 
+	#content {
+
 	color: #231f20;
 	font-family: 'Raleway', sans-serif;
 
@@ -2421,7 +2431,7 @@ body.page.collaboration {
 		#main-nav {
 			position: absolute;
 			left: 1.875rem;
-			bottom: 0;
+			bottom: 1px;
 			height: 51px;
     		line-height: 51px;
 
@@ -2431,6 +2441,26 @@ body.page.collaboration {
 				color: #ffffff;
 			}
 
+			a {
+				padding: 0 10px;
+			}
+
+			a:link, a:visited {
+				display: block;
+				line-height: 51px;
+				color: #ffffff;
+				font-style: italic;
+			}
+
+			a:hover {
+				text-decoration: none;
+				background-color: #0099d5;
+			}
+
+			a.active {
+				background-color: #0099d5;
+			}
+
 			ul {
 				margin: 0;
 				list-style: none;
@@ -2438,25 +2468,6 @@ body.page.collaboration {
 				li {
 					float: left;
 					margin-left: 0.9375rem;
-
-					a {
-						padding: 0 10px;
-					}
-
-					a:link, a:visited {
-						display: block;
-						line-height: 51px;
-						color: #ffffff;
-						font-style: italic;
-					}
-
-					a:hover {
-						text-decoration: none;
-					}
-
-					a.active {
-						background-color: #0099d5;
-					}
 
 					h5, span {
 						float: left;
@@ -2526,6 +2537,10 @@ body.page.collaboration {
 			font-size: 85%;
 			margin-bottom: .9375rem;
 		}
+
+		img {
+			margin-bottom: .9375rem;
+		}
 	}
 
 	#sidebar {
@@ -2559,11 +2574,13 @@ body.page.collaboration {
 
 			.cover {
 				border: 1px solid #231f20;
+				margin-bottom: .9375rem;
 			}
 
 			.button {
 				background-color: #e41d26;
 				text-transform: uppercase;
+				margin: 0;
 			}
 		}
 
@@ -2583,6 +2600,7 @@ body.page.collaboration {
 	}
 }
 
+}
 }
 
 
@@ -3545,6 +3563,14 @@ table.columns .right-text-pad {
 
 
 @media only screen and (min-width: 64.0625em) {
+
+ .right-for-large-only {
+    float: right;
+  }
+
+  .left-for-large-only {
+    float: left;
+  }
 
 	nav.tab-bar {
 		//display: none;
