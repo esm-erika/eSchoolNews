@@ -8831,10 +8831,13 @@ ul.tweet-list {
   margin-bottom: 1.1rem !important; }
   ul.tweet-list li {
     position: relative;
-    font-size: 85%;
     border-bottom: 1px solid #ccc; }
-    ul.tweet-list li p small {
-      font-weight: bold; }
+    ul.tweet-list li p {
+      font-size: 85%;
+      margin: 0; }
+      ul.tweet-list li p small {
+        font-weight: bold;
+        display: block; }
 
 span.flag, span.tag {
   display: block; }
