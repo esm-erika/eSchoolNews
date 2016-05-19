@@ -21,7 +21,8 @@
  	<div class="small-12 medium-4 columns engrade">
 
  		<div class="logo text-center">
- 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-engrade.png">
+ 			<a title="Engrade Logo" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-engrade.png">
+ 			</a>
  		</div>
 		
 			<h6 class="text-center">LMS, Assessment, SSO</h6>
@@ -32,7 +33,7 @@
  			</div>
 
  			<div class="text-center learn-more">
- 				<a href="<?php echo site_url(); ?>/mcgrawhill-engrade/">
+ 				<a class="learn-more" title="Engrade - Learn More" href="<?php echo site_url(); ?>/mcgrawhill-engrade/">
  					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/button-learn_more.png">
  				</a>
  			</div>
@@ -42,7 +43,9 @@
  	<div class="small-12 medium-4 columns acuity">
 
  		<div class="logo text-center">
- 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-acuity.png">
+ 			<a title="Acuity Logo" href="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity/">
+ 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-acuity.png">
+ 			</a>
 
  		</div>
  		
@@ -54,7 +57,7 @@
  			</div>
 
  			<div class="text-center learn-more">
- 				<a href="<?php echo site_url(); ?>/mcgrawhill-acuity/">
+ 				<a class="learn-more" title="Acuity - Learn More" href="<?php echo site_url(); ?>/mcgrawhill-acuity/">
  					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/button-learn_more.png">
  				</a>
  			</div>
@@ -64,7 +67,9 @@
  	<div class="small-12 medium-4 columns thrive">
 
  		<div class="logo text-center">
- 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-thrive.png">
+ 			<a title="Thrive Logo" href="<?php echo site_url(); ?>/ercs/mcgrawhill-thrive/">
+ 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-thrive.png">
+ 			</a>
 
  		</div>
  		
@@ -76,7 +81,7 @@
  			</div>
 
  			<div class="text-center learn-more">
- 				<a href="<?php echo site_url(); ?>/mcgrawhill-thrive/">
+ 				<a title="Learn More" class="learn-more" href="<?php echo site_url(); ?>/mcgrawhill-thrive/">
  					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/button-learn_more.png">
  				</a>
  			</div>
@@ -94,7 +99,7 @@
 
 			<p>This ideal blend of technology, content, and inspiration isn’t a distant dream&mdash;with McGraw-Hill Education, you can see it in action today.</p>
 
-			<a href="http://www.mheducation.com/prek-12/platforms.html" target="_blank">
+			<a title="McGraw Hill - Learn More" class="learn-more" href="http://www.mheducation.com/prek-12/platforms.html" target="_blank">
 				<img style="border: 3px solid #fff;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/button-learn_more.png">
 			</a>
  		</div>
