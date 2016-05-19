@@ -102,13 +102,30 @@ $box_q = preg_replace("/[^A-Za-z0-9_ ]/", '', $box_qt);
 				        		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 				        
 				    <?php endforeach; ?>
-				   <br>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
+
+				<hr>
+
+				<div class="row">
+					<div class="small-6 medium-8 columns">
 
 				<a name="comments"></a>
 
 				<?php $withcomments = "1"; comments_template( '', true ); ?>
+
+			</div>
+			<div class="small-6 medium-4 columns">
+				<?php 
+
+					$hashtag = get_field('symposium_hashtag', $post);
+
+					$content = '[custom-twitter-feeds hashtag=' . $hashtag .']';
+
+					echo do_shortcode($content); 
+
+					?>			
+			</div>
 
 			<?php endwhile; ?>
 

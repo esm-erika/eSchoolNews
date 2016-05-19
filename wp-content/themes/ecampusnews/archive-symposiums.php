@@ -123,13 +123,16 @@ get_header(); ?>
 				        						            
 				        
 				    <?php endforeach; ?>
-				   <br>
+				  
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				<?php endif; ?>
 
-				
+				<hr>
 
-						<?php 
+				<div class="row">
+					<div class="small-6 medium-8 columns">
+
+					<?php 
 
 						$post_id = $post->ID;
 
@@ -160,7 +163,31 @@ get_header(); ?>
 						   } ?>
 
 						   <a class="button small radius" href="<?php the_permalink(); ?>/#comments">Comment Now</a>
+					
+				</div>
+			
+				<div class="small-6 medium-4 columns">
+									<?php 
+
+									$hashtag = get_field('symposium_hashtag', $post);
+
+									$content = '[custom-twitter-feeds hashtag=' . $hashtag .']';
+
+									echo do_shortcode($content); 
+
+									?>
+
+				</div>
+				</div>
+
+						
 				
+				
+
+
+
+		
+
 				
 
 			<?php endwhile; ?>
