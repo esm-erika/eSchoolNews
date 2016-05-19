@@ -56,7 +56,7 @@
 				</article>
 
 				<div class="video">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/vZqzbBGg-MQ" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/CxOcXrh8_2A" frameborder="0" allowfullscreen></iframe>				
 				</div>
 
 				<article>
