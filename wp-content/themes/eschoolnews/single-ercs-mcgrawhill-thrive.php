@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Learning Math Starts with a Connection</h3>
+							<h3>McGraw-Hill Headline Here</h3>
 
 							<p><em>Thrive<sup>&trade;</sup></em> powered by Time To Know<sup>&reg;</sup>, a digital learning and teaching environment with core McGraw-Hill Education content, is your partner in creating digital harmony in your 21st century classroom. Built with technology that helps you differentiate instruction and personalize learning, <em>Thrive</em> fosters collaboration and connectivity to simplify and maximize learning by providing real‐time feedback to inform and adapt instruction.</p>
 
@@ -109,7 +109,7 @@
 					<h5><em>Thrive</em> Platform Overview Brochure</h5>
 
 						
-					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_unify-your-digital-learning-ecosystem.png" alt="Unify Your Digital Learning Ecosystem">
+					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-thrive_overview-brochure.png" alt="Thrive Platform Overview Brochure">
 
 					<a href="http://www.eschoolnews.com/pdfs/thrive-platform-overview-brochure/" target="_blank" class="button tiny view-now" title="Thrive - View Now">View Now</a>
 							
@@ -117,7 +117,7 @@
 				</aside>
 
 				<aside>
-					<h5><em>Thrive</em> Classroom Simulation Video:</h5>
+					<h5><em>Thrive</em> Classroom Simulation Video</h5>
 
 					<img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/thrive-video.png" alt="Thrive Classroom Simulation Video">
 

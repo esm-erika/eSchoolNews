@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Flexible to Improve Student Readiness</h3>
+							<h3>McGraw-Hill Headline Here</h3>
 
 							<p><em>Acuity<sup>&reg;</sup></em> combines comprehensive K&ndash;12 interim assessments with a wealth of formative instructional resources, providing differentiated instruction and booting student achievement.</p>
 							
@@ -108,7 +108,7 @@ and actionable insights — and that’s exactly what Acuity delivers.
 				<h4><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/lightbulb.png" class="left"> Insights &amp; Resources</h4>
 
 				<aside>
-					<h5>Acuity Overview Brochure:</h5>
+					<h5>Acuity Overview Brochure</h5>
 
 						
 					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-acuity_overview-brochure.png" alt="Acuity Overview Brochure">
@@ -119,7 +119,7 @@ and actionable insights — and that’s exactly what Acuity delivers.
 				</aside>
 
 				<aside>
-					<h5>Instructional Resources Brochure:</h5>
+					<h5>Instructional Resources Brochure</h5>
 
 					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-acuity_resource-brochure.png" alt="Instructional Resources Brochure">
 
@@ -129,7 +129,7 @@ and actionable insights — and that’s exactly what Acuity delivers.
 				</aside>
 
 				<aside>
-					<h5>Why Assessments Infographic:</h5>
+					<h5>Why Assessments Infographic</h5>
 
 					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-acuity_infographic.png" alt="Why Assessments Infographic">
 
@@ -142,7 +142,7 @@ and actionable insights — and that’s exactly what Acuity delivers.
 					<h5>eSchool News Resources</h5>
 
 					<h4>
-					<a href="http://www.eschoolnews.com/2016/03/30/when-will-assessments-finally-test-deeperlearning/" target="_blank">When will assessments finally test deeper learning?</a></h4>
+					<a href="http://www.eschoolnews.com/2016/03/30/when-will-assessments-finally-test-deeper-learning/" target="_blank">When will assessments finally test deeper learning?</a></h4>
 
 					<hr>
 
