@@ -44,13 +44,13 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Learning Math Starts with a Connection</h3>
+							<h3>McGraw-Hill Headline Here</h3>
 
 							<p><em>Engrade<sup>&reg;</sup></em> combines learning management and assessment into a single powerful platform.</p>
 
 							<p>The complete <em>Engrade</em> suite brings together learning management and assessment in a single platform with a single sign-on. Connecting curriculum, assessments, and data across the learning cycle, Engrade helps students learn what they need, when they need it.</p>
 
-							<a href="http://www.mheducation.com/prek-12/platforms/engrade/about.html" class="button tiny" target="_blank">Learn More</a>
+							<a href="http://www.mheducation.com/prek-12/platforms/engrade/about.html" class="button tiny learn-more" title="Learn More" target="_blank">Learn More</a>
 						</div>
 					</div>
 				</article>
@@ -116,7 +116,7 @@
 						
 					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_unify-your-digital-learning-ecosystem.png" alt="Unify Your Digital Learning Ecosystem">
 
-					<a href="http://www.eschoolnews.com/pdfs/engrade-overview-brochure/" target="_blank" class="button tiny">View Now</a>
+					<a href="http://www.eschoolnews.com/pdfs/engrade-overview-brochure/" target="_blank" class="button tiny view-now" title="Engrade - View Now">View Now</a>
 							
 					<div class="clearfix"></div>
 				</aside>
@@ -126,7 +126,7 @@
 
 					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_transforming-the-learning-experience-in-baltimore.png" alt="Transforming The Learning Experience In Baltimore County, MD">
 
-					<a href="http://www.eschoolnews.com/pdfs/engrade-balitmore-city-public-schools-case-study/" target="_blank" class="button tiny">View Now</a>
+					<a href="http://www.eschoolnews.com/pdfs/engrade-balitmore-city-public-schools-case-study/" target="_blank" class="button tiny view-now" title="Engrade - View Now">View Now</a>
 
 					<div class="clearfix"></div>
 				</aside>
@@ -136,7 +136,7 @@
 
 					<img width="128" class="right-for-large-only cover" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/cover-engrade_engrade-inform.png" alt="engrade INFORM">
 
-					<a href="http://www.eschoolnews.com/pdfs/engrade-inform-brochure/" target="_blank" class="button tiny">View Now</a>
+					<a href="http://www.eschoolnews.com/pdfs/engrade-inform-brochure/" target="_blank" class="button tiny view-now" title="Engrade - View Now">View Now</a>
 
 					<div class="clearfix"></div>
 				</aside>

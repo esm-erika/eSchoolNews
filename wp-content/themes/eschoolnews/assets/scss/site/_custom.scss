@@ -2412,7 +2412,7 @@ body.page.collaboration {
 	}
 }
 
-.single-ercs.mcgrawhill-engrade {
+.single-ercs.mcgrawhill-engrade, .single-ercs.mcgrawhill-acuity, .single-ercs.mcgrawhill-thrive  {
 
 	#content {
 
@@ -2581,6 +2581,19 @@ body.page.collaboration {
 				background-color: #e41d26;
 				text-transform: uppercase;
 				margin: 0;
+			}
+
+		}
+
+		#impact {
+
+			ul {
+
+				margin: .9375rem .9375rem 0 .9375rem;
+
+				li {
+					list-style: disc;
+				}
 			}
 		}
 
