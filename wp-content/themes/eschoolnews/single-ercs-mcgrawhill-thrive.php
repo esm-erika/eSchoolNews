@@ -130,12 +130,7 @@
 					<h5>The Impact of <em>Thrive</em></h5>
 					
 <p>Three New York City Schools, from the Bronx, Brooklyn, and Manhattan, using <em>Thrive</em> math and <em>Thrive</em> ELA were analyzed during the 2011-2012 school year. Data was collected from student and teacher focus groups, school principal interviews, and New York state test scores.</p>
-<ul>
-	<li>Forty-two percent of 4th graders reached 3rd and 4th levels in New York state tests after using the <em>Thrive</em> ELA program, compared to only 11 percent reaching the same levels the prior year without using the <em>Thrive</em> ELA program. 
-</li>
-<li>Sixty-three percent of 5th graders reached 3rd and 4th levels in New York state tests after using the <em>Thrive</em> math programs, compared with 36 percent reaching the same levels the prior year without using the <em>Thrive</em> math program.
-</li>
-</ul>
+<img src="?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/bargraph.jpg" alt="Thrive Makes the Difference in New York City Schools [graph]">
 
 					<div class="clearfix"></div>
 				</aside>
