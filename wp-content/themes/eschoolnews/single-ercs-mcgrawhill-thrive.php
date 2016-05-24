@@ -130,7 +130,7 @@
 					<h5>The Impact of <em>Thrive</em></h5>
 					
 <p>Three New York City Schools, from the Bronx, Brooklyn, and Manhattan, using <em>Thrive</em> math and <em>Thrive</em> ELA were analyzed during the 2011-2012 school year. Data was collected from student and teacher focus groups, school principal interviews, and New York state test scores.</p>
-<img src="?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/bargraph.jpg" alt="Thrive Makes the Difference in New York City Schools [graph]">
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/bargraph.jpg" alt="Thrive Makes the Difference in New York City Schools [graph]">
 
 					<div class="clearfix"></div>
 				</aside>
