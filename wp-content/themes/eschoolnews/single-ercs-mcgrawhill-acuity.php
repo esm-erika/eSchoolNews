@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Acuity: A Complete and Flexible Solution</h3>
+							<h3>A Complete and Flexible Solution</h3>
 
 							<p><em>Acuity<sup>&reg;</sup></em> combines comprehensive K&ndash;12 interim assessments with a wealth of formative instructional resources, providing differentiated instruction and booting student achievement.</p>
 							

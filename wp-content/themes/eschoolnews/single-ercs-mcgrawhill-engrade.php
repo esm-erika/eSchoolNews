@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>Engrade: Curriculum, Meet Data.</h3>
+							<h3>Curriculum, Meet Data.</h3>
 
 							<p><em>Engrade<sup>&reg;</sup></em> combines learning management and assessment into a single powerful platform.</p>
 
