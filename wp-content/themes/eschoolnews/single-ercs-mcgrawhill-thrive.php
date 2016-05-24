@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>McGraw-Hill Headline Here</h3>
+							<h3>Thrive: It’s Time to Watch Your Students <em>Thrive</em></h3>
 
 							<p><em>Thrive<sup>&trade;</sup></em> powered by Time To Know<sup>&reg;</sup>, a digital learning and teaching environment with core McGraw-Hill Education content, is your partner in creating digital harmony in your 21st century classroom. Built with technology that helps you differentiate instruction and personalize learning, <em>Thrive</em> fosters collaboration and connectivity to simplify and maximize learning by providing real‐time feedback to inform and adapt instruction.</p>
 

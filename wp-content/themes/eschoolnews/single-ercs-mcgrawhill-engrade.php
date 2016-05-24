@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>McGraw-Hill Headline Here</h3>
+							<h3>Engrade: Curriculum, Meet Data.</h3>
 
 							<p><em>Engrade<sup>&reg;</sup></em> combines learning management and assessment into a single powerful platform.</p>
 
