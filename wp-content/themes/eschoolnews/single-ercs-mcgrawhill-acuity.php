@@ -142,19 +142,19 @@ and actionable insights — and that’s exactly what <em>Acuity</em> delivers.
 					<h5>eSchool News Resources</h5>
 
 					<h4>
-					<a href="http://www.eschoolnews.com/2016/03/30/when-will-assessments-finally-test-deeper-learning/" target="_blank">When will assessments finally test deeper learning?</a></h4>
+					<a class="resource-link" href="http://www.eschoolnews.com/2016/03/30/when-will-assessments-finally-test-deeper-learning/" target="_blank">When will assessments finally test deeper learning?</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2015/01/22/mdr-districts-priorities-432/" target="_blank">Common Core, BYOD, assessments among districts’ budget priorities</a></h4>
+					<h4><a class="resource-link" href="http://www.eschoolnews.com/2015/01/22/mdr-districts-priorities-432/" target="_blank">Common Core, BYOD, assessments among districts’ budget priorities</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2014/01/16/assessments-common-core-567/" target="_blank">How to create assessments for the Common Core</a></h4>
+					<h4><a class="resource-link" href="http://www.eschoolnews.com/2014/01/16/assessments-common-core-567/" target="_blank">How to create assessments for the Common Core</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2014/02/13/data-into-achievement-117/2/" target="_blank">Experts: Here’s how to turn data into achievement</a></h4>
+					<h4><a class="resource-link" href="http://www.eschoolnews.com/2014/02/13/data-into-achievement-117/2/" target="_blank">Experts: Here’s how to turn data into achievement</a></h4>
 
 					<div class="clearfix"></div>
 				</aside>

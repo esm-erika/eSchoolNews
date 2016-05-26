@@ -139,16 +139,16 @@
 					<h5>eSchool News Resources</h5>
 
 					<h4>
-					<a href="http://www.eschoolnews.com/2016/02/01/is-it-time-to-redesign-your-curriculum-for-the-
+					<a class="resource-link" href="http://www.eschoolnews.com/2016/02/01/is-it-time-to-redesign-your-curriculum-for-the-
 21st-century-learner/" target="_blank">Is it time to redesign your curriculum for the 21st century learner?</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2015/02/19/self-assessment-701/" target="_blank">Take this self-assessment and discover your tech readiness</a></h4>
+					<h4><a class="resource-link" href="http://www.eschoolnews.com/2015/02/19/self-assessment-701/" target="_blank">Take this self-assessment and discover your tech readiness</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2015/03/31/tech-based-learning-291/" target="_blank">3 tips for implementing a tech-based learning environment</a></h4>
+					<h4><a class="resource-link" href="http://www.eschoolnews.com/2015/03/31/tech-based-learning-291/" target="_blank">3 tips for implementing a tech-based learning environment</a></h4>
 
 					<div class="clearfix"></div>
 				</aside>

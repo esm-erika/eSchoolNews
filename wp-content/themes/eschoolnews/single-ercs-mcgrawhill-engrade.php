@@ -145,11 +145,11 @@
 					<h5>eSchool News Resources</h5>
 
 					<h4>
-					<a href="http://www.eschoolnews.com/2015/05/13/post-lms-era-437/" target="_blank">5 Core Functions of the LMS of the Future</a></h4>
+					<a class="resource-link" href="http://www.eschoolnews.com/2015/05/13/post-lms-era-437/" target="_blank">5 Core Functions of the LMS of the Future</a></h4>
 
 					<hr>
 
-					<h4><a href="http://www.eschoolnews.com/2014/12/22/education-lms-590/" target="_blank">12 Big Education Challenges Your LMS can Solve</a></h4>
+					<h4><a class="resource-link" href="http://www.eschoolnews.com/2014/12/22/education-lms-590/" target="_blank">12 Big Education Challenges Your LMS can Solve</a></h4>
 
 					<div class="clearfix"></div>
 				</aside>
