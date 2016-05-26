@@ -21,7 +21,7 @@
  	<div class="small-12 medium-4 columns engrade">
 
  		<div class="logo text-center">
- 			<a title="Engrade Logo" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-engrade.png">
+ 			<a title="Engrade Logo" class="learn-more" href="<?php echo site_url(); ?>/ercs/mcgrawhill-engrade/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-engrade.png">
  			</a>
  		</div>
 		
@@ -43,7 +43,7 @@
  	<div class="small-12 medium-4 columns acuity">
 
  		<div class="logo text-center">
- 			<a title="Acuity Logo" href="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity/">
+ 			<a title="Acuity Logo" class="learn-more" href="<?php echo site_url(); ?>/ercs/mcgrawhill-acuity/">
  				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-acuity.png">
  			</a>
 
@@ -67,7 +67,7 @@
  	<div class="small-12 medium-4 columns thrive">
 
  		<div class="logo text-center">
- 			<a title="Thrive Logo" href="<?php echo site_url(); ?>/ercs/mcgrawhill-thrive/">
+ 			<a title="Thrive Logo" class="learn-more" href="<?php echo site_url(); ?>/ercs/mcgrawhill-thrive/">
  				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mcgrawhill/logo-thrive.png">
  			</a>
 
