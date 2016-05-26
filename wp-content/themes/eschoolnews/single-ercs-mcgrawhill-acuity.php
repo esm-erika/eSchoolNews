@@ -69,18 +69,18 @@
 					<hr>
 
 					<h4>Customizable</h4>
-					Acuity allows test authors to choose computer-adaptive or fixed-format assessments. Educators can author tests in part or in whole, and use item banks included in the system. Assessments can be given on the computer or in printed form.
+					<em>Acuity</em> allows test authors to choose computer-adaptive or fixed-format assessments. Educators can author tests in part or in whole, and use item banks included in the system. Assessments can be given on the computer or in printed form.
 
 					<hr>
 					
 					<h4>Predictive</h4>
-					When students take an interim assessment, Acuity produces real-time data that is predictive of future performance on summative exams. This data helps identify the student’s strengths and knowledge gaps — and informs instruction to close the gaps.
+					When students take an interim assessment, <em>Acuity</em> produces real-time data that is predictive of future performance on summative exams. This data helps identify the student’s strengths and knowledge gaps — and informs instruction to close the gaps.
 				
 					<hr>
 
 					<h4>Rich Data Provides Actionable Insights</h4>
 					When it comes to helping students succeed, most teachers don’t need more data — what’s helpful is more accurate
-and actionable insights — and that’s exactly what Acuity delivers.
+and actionable insights — and that’s exactly what <em>Acuity</em> delivers.
 				</article>
 				
 			</div>
