@@ -44,7 +44,7 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>McGraw-Hill Headline Here</h3>
+							<h3>A Complete and Flexible Solution</h3>
 
 							<p><em>Acuity<sup>&reg;</sup></em> combines comprehensive K&ndash;12 interim assessments with a wealth of formative instructional resources, providing differentiated instruction and booting student achievement.</p>
 							
@@ -69,18 +69,18 @@
 					<hr>
 
 					<h4>Customizable</h4>
-					Acuity allows test authors to choose computer-adaptive or fixed-format assessments. Educators can author tests in part or in whole, and use item banks included in the system. Assessments can be given on the computer or in printed form.
+					<em>Acuity</em> allows test authors to choose computer-adaptive or fixed-format assessments. Educators can author tests in part or in whole, and use item banks included in the system. Assessments can be given on the computer or in printed form.
 
 					<hr>
 					
 					<h4>Predictive</h4>
-					When students take an interim assessment, Acuity produces real-time data that is predictive of future performance on summative exams. This data helps identify the student’s strengths and knowledge gaps — and informs instruction to close the gaps.
+					When students take an interim assessment, <em>Acuity</em> produces real-time data that is predictive of future performance on summative exams. This data helps identify the student’s strengths and knowledge gaps — and informs instruction to close the gaps.
 				
 					<hr>
 
 					<h4>Rich Data Provides Actionable Insights</h4>
 					When it comes to helping students succeed, most teachers don’t need more data — what’s helpful is more accurate
-and actionable insights — and that’s exactly what Acuity delivers.
+and actionable insights — and that’s exactly what <em>Acuity</em> delivers.
 				</article>
 				
 			</div>

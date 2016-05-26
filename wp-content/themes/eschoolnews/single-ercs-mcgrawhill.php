@@ -29,7 +29,7 @@
 
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				<em>Engrade<sup>&reg;</sup></em> unifies the digital learning ecosystem, bringing together the data, curriculum, and assessments into a single-sign on, cloud-based platform. With products for both learning management and assessments, districts rely on <em>Engrade</em> to enable data-driven personalized learning, connecting student with the instruction they need, when they need it. 
+ 				<em>Engrade<sup>&reg;</sup></em> unifies the digital learning ecosystem, bringing together the data, curriculum, and assessments into a single-sign on, cloud-based platform. With products for learning management and assessments, <em>Engrade</em> enables data-driven, personalized learning, connecting students with the instruction they need when they need it. 
  			</div>
 
  			<div class="text-center learn-more">

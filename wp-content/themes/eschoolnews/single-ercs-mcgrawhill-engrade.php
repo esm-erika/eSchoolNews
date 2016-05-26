@@ -44,11 +44,11 @@
 				<article>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3>McGraw-Hill Headline Here</h3>
+							<h3>Curriculum, Meet Data.</h3>
 
 							<p><em>Engrade<sup>&reg;</sup></em> combines learning management and assessment into a single powerful platform.</p>
 
-							<p>The complete <em>Engrade</em> suite brings together learning management and assessment in a single platform with a single sign-on. Connecting curriculum, assessments, and data across the learning cycle, Engrade helps students learn what they need, when they need it.</p>
+							<p>The complete <em>Engrade</em> suite brings together learning management and assessment in a single platform with a single sign-on. Connecting curriculum, assessments, and data across the learning cycle, <em>Engrade</em> helps students learn what they need, when they need it.</p>
 
 							<a href="http://www.mheducation.com/prek-12/platforms/engrade/about.html" class="button tiny learn-more" title="Learn More" target="_blank">Learn More</a>
 						</div>
