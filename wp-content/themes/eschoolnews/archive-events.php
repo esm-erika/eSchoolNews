@@ -83,9 +83,9 @@ if (false === ($local_box_cache) ){
 					
 					if($showdate){
 					echo $showdate -> format('F d, Y');
-					} 
+					} ?>
 
-					if($enddate){ 
+					<?php if($enddate){ 
 						echo ' - ';
 						echo $enddate -> format('F d, Y');
 					} ?>
