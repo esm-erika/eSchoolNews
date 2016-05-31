@@ -924,7 +924,7 @@ table.columns .right-text-pad {
               $term_name = $terms[0]->name;
             ?>
             <p style="color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; margin: 0 0 10px; padding: 0;" align="left"><small style="font-size: 10px;">
-              <a href="<?php the_permalink(); ?>" target="_blank" style="color: #2ba6cb; text-decoration: none;">View in a web browser</a></small> | <small style="font-size: 10px;"><a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest <?php echo $term_name; ?> <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">Forward to a friend</a>
+              <a href="<?php the_permalink(); ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" target="_blank" style="color: #2ba6cb; text-decoration: none;">View in a web browser</a></small> | <small style="font-size: 10px;"><a href="mailto:someone@domain.com&amp;Subject=I thought you might like this&amp;Body=Latest <?php echo $term_name; ?> <?php the_permalink(); ?>" style="color: #2ba6cb; text-decoration: none;">Forward to a friend</a>
             </small></p>
 
           </td>
@@ -1032,7 +1032,7 @@ table.columns .right-text-pad {
 
                             if( !empty($image) ): ?>
 
-                            <a href="<?php site_url(); ?>/publications/<?php echo $term_slug; ?>" style="color: #2ba6cb; text-decoration: none;">
+                            <a href="<?php site_url(); ?>/publications/<?php echo $term_slug; ?>/?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
 
                             <img border="0" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%;" />
 
@@ -1355,7 +1355,7 @@ table.columns .right-text-pad {
                     <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
                       <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
                         <td class="text-pad center" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="center" valign="top">
-                          <a href="http://www.ecampusnews.com/current-issue/">
+                          <a href="http://www.ecampusnews.com/current-issue/?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!">
                             <img border="0" src="http://www.ecampusnews.com/files/2016/04/DigitalIssue550-eCN.jpg" alt="View the Digital Issue" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; display: block;"/>
                           </a>
                         </td>
@@ -1442,7 +1442,7 @@ table.columns .right-text-pad {
                         <td align="center">
                           <center style="width: 100%;">
                             <p style="text-align:center;"><small>Contents ©2016 eSchool Media. All rights reserved.</small></p>
-                            <p style="text-align:center;"><a href="http://www.ecampusnews.com/privacy-policy/" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | 
+                            <p style="text-align:center;"><a href="http://www.ecampusnews.com/privacy-policy/?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">Privacy</a> | 
 
                             <?php if( has_term('it-campus-leadership', 'publications')) {
 

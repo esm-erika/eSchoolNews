@@ -33,54 +33,24 @@ $curriculum=array("165","27","43","120","10238");
 
 $result=array_intersect($cat_ids,$tech);$result2=array_intersect($cat_ids,$mobile);$result3=array_intersect($cat_ids,$digital);$result4=array_intersect($cat_ids,$curriculum);
 if($result){
-	
-	$wargs = array(
-		'post_type' => array('whitepapers'),
-		'posts_per_page' => '2',
-		//'cat' => '11153'
-	);
-
+$wargs = array('post_type' => array('whitepapers'),'posts_per_page' => '2', 'subject_categories' => 'technologies-whitepapers');//technologies-whitepapers
 } else if($result2){
-
-	$wargs = array(
-		'post_type' => array('whitepapers'),
-		'posts_per_page' => '2',
-		//'cat' => '11152'
-	);	
-	
+	$wargs = array('post_type' => array('whitepapers'),	'posts_per_page' => '2','subject_categories' => 'mobile-online-whitepapers');//mobile-online-whitepapers	
 } else if($result3){
-
-	$wargs = array(
-		'post_type' => array('whitepapers'),
-		'posts_per_page' => '2',
-		//'cat' => '11151'
-	);
-
+	$wargs = array('post_type' => array('whitepapers'),'posts_per_page' => '2','subject_categories' => 'digital-whitepapers');//digital-whitepapers	
 }else if($result4){
-
-	$wargs = array(
-		'post_type' => array('whitepapers'),
-		'posts_per_page' => '2',
-		//'cat' => '11125'
-	);	
-	
+	$wargs = array('post_type' => array('whitepapers'),'posts_per_page' => '2','subject_categories' => 'curriculum-whitepapers');//curriculum-whitepapers
 } else { 
-	
-	$wargs = array(
-		'post_type' => array('whitepapers'),
-		'posts_per_page' => '2',
-		//'cat' => '11125'
-	);		
+	$wargs = array('post_type' => array('whitepapers'),'posts_per_page' => '2');		
 }
-	$ercarg = array(
-		'post_type' => array('ercs'),
-		'posts_per_page' => '2',
-	);	
 
-	 } 
+
+	
+} 
+	$ercarg = array('post_type' => array('ercs'),'posts_per_page' => '2',);	
 
     $my_query = new wp_query( $args );
-//if ( have_posts() ) {	
+
 ?>
 
 <ul>
@@ -88,38 +58,22 @@ if($result){
 <?php
     while( $my_query->have_posts() ) {
       $my_query->the_post();
+?>
+    <li>
+    <?php get_template_part('parts/flags'); ?>
+        <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+    </li>
+<?php     
+	}
+	$wargs_query = new wp_query( $wargs );
+	while( $wargs_query->have_posts() ) {
+	$wargs_query->the_post();
     ?>
-
-
-
 <li>
-<?php get_template_part('parts/flags'); ?>
-<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+	<?php get_template_part('parts/flags'); ?>
+	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 </li>
-
-
-     <?php 
-    
-	
-	 }
-	 
-
-    $wargs_query = new wp_query( $wargs );
-    while( $wargs_query->have_posts() ) {
-      $wargs_query->the_post();
-    ?>
-
-
-
-<li>
-<?php get_template_part('parts/flags'); ?>
-<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-</li>
-
-
-     <?php 
-    
-	
+<?php 
 	 }
 	 
 	 
@@ -127,30 +81,16 @@ if($result){
     while( $ercargs_query->have_posts() ) {
       $ercargs_query->the_post();
     ?>
-
-
-
 <li>
 <?php get_template_part('parts/flags'); ?>
 <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 </li>
+<?php  } ?>	
 
 
-     <?php 
-    
-	
-	 }		 
-	 	 
-?>	
 
 </ul> 
 
 
 </section>
 </article>
-<?php	
-//	}
-    $post = $orig_post;
-    wp_reset_query();
-    
-?>
