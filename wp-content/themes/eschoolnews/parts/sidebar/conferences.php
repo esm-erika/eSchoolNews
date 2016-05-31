@@ -30,7 +30,7 @@
 	
 	 ?>
 
-	 <li><a href="<?php echo site_url(); ?>/conferences/ies">IES</li>
+	 <li><a href="<?php echo site_url(); ?>/conferences/ies">IES</a></li>
 
 </ul>
 
