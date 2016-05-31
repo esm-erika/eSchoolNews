@@ -13,7 +13,7 @@
 
     foreach ( $terms as $term ) {
 
-    	$term_link = get_term_link( $term->term_id );
+    	$term_link = get_term_link( $term->term_id, $taxonomy='conferences');
 
     	//echo $term->name;
 
