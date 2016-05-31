@@ -9,21 +9,21 @@
 	$taxonomy = 'conferences';
 	$terms = get_terms( $taxonomy );
 
-	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+
     echo '<ul>';
+    
     foreach ( $terms as $term ) {
 
     	$term_link = get_term_link( $term->term_id, $taxonomy);
 
         echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
     }
+    
     echo '</ul>';
 	
-	}
+	} ?>
 
-	?>
-
-		
 	</ul>
 
 
