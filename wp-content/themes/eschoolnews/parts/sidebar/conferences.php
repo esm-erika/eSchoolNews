@@ -13,11 +13,11 @@
 
     foreach ( $terms as $term ) {
 
-    	$term_link = get_term_link( $term->term_id, $taxonomy);
+    	$term_link = get_term_link( $term->term_id );
 
-    	echo $term->name;
+    	//echo $term->name;
 
-        //echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
+        echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
     }
     
     echo '</ul>';
