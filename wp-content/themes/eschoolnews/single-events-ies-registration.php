@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="row">
 	<div class="small-12 columns">
 		
-	This is a page template.
+	<iframe width="100%" height="900" frameborder="0" scrolling="yes" src="http://edtech.org.il/summit/"></iframe>
 
 	</div>
 </div>
