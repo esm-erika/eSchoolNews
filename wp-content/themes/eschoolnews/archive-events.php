@@ -60,13 +60,10 @@ if (false === ($local_box_cache) ){
 					$query->the_post(); ?>
 
 				<article class="row">
-					<div class="medium-4 columns">
-						<?php 
-							the_post_thumbnail('medium-landscape');
-						?>
-					</div>
-
-			<header class="medium-8 columns">
+					<header class="small-12 columns">
+						
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+			
 				<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
 			</header>
 		</article>

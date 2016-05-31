@@ -91,7 +91,7 @@ include('single-coa.php');
 
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-			<div class="entry-content">
+			
 
 				<?php if(get_field('subheader')){
 					echo '<h3 class="subheader">';
@@ -117,12 +117,14 @@ include('single-coa.php');
     				echo '<div class="row">';
     				echo '<div class="small-12 medium-12 columns">';
     				the_post_thumbnail('large-landscape');
-    				echo '</div></div>';
+    				echo '</div></div><br>';
     		} else {
 
     		} ?>
 
-    			
+
+    		<div class="entry-content"> <!-- text-expandable -->
+	
     		<?php 
 			
 			if (esm_is_user_logged_in()){
@@ -201,6 +203,16 @@ custom_wp_link_pages();
 				<?php } ?>
 			
             </div>
+
+			
+			<!-- <div class="show-more text-center">
+		        <a class="button large radius" href="#read-more">Show more</a>
+		    </div> -->
+
+
+		   
+
+
 
 			<?php get_template_part('parts/social'); ?>
 

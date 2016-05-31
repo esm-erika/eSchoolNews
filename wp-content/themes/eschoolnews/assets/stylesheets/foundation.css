@@ -8738,6 +8738,9 @@ section.container .row, .container-content .row {
   margin: auto;
   background-color: #fff; }
 
+.text-expandable {
+  overflow: hidden; }
+
 a:link, a:visited {
   color: #336699; }
 
@@ -8774,6 +8777,13 @@ small {
   font-size: 12px;
   line-height: 12px;
   font-weight: bold; }
+  .small-caps .posted-on {
+    font-size: 100%;
+    text-transform: capitalize;
+    font-weight: normal;
+    border-left: 1px solid #222;
+    margin-left: 5px;
+    padding-left: 5px; }
 
 .custom-button {
   text-align: center;

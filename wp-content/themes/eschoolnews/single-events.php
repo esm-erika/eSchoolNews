@@ -30,10 +30,48 @@ if (false === ($local_box_cache) ){
 			echo '<!-- c a'.$astused."c".$astc.'c'.'p'.$post_id.'-->';
 ?>
 
+
+<?php if(has_post_thumbnail()) { ?>
+
+	<div class="row">
+		<div class="small-12 columns">
+			<?php the_post_thumbnail(); ?>
+		</div>
+	</div>
+
+<?php } ?>
+
+
 <div class="row top">
 	<div class="small-12 large-8 columns" role="main">
 
-		<?php get_template_part('parts/flags'); ?>
+		<?php 
+		
+		//get_template_part('parts/flags');
+
+		$taxonomy = 'conferences'; 
+
+		$terms = get_the_terms($post->id, 'conferences');
+
+
+		//echo $term[0]->name;
+
+		foreach ( $terms as $term ) {
+
+			$term_link = get_term_link( $term->term_id, $taxonomy);
+
+			echo '<span class="flag content">';
+			echo '<a href="' . esc_url($term_link) . '">' . $term->name . '</a>';
+			echo '</span>';
+
+		}
+
+		// echo '<pre>';
+		// var_dump($term_link);
+		// echo '</pre>';
+
+		?>
+
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -62,22 +100,9 @@ if (false === ($local_box_cache) ){
 
 				echo '<div class="large-12 columns">';
 
-				
-
-				if ( has_post_thumbnail() ) {
-
-					the_post_thumbnail('large-landscape'); 
-
-					echo '<br/><br/>';
-
-					
-				}
-
-					
-
 				echo '<h5>About Event</h5>';
 
-				the_field('event_information');
+				the_content();
 
 				if (get_field('registration_link')) {
 
@@ -93,6 +118,68 @@ if (false === ($local_box_cache) ){
 				?>
 
 			</div>
+
+			<?php 
+
+					$posts = get_field('related_event_articles');
+
+					if( $posts ): ?>
+
+					<hr>
+
+			<div class="row">
+				<div class="small-12 columns">
+					<h5>Related Articles</h5>
+
+
+					   
+					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					        <?php setup_postdata($post); ?>
+					      
+					            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+					            <?php if( get_field('remove_author')) { 
+
+									echo '';
+
+								} else { ?>
+
+									<div class="small-caps">
+										
+										<?php  if( get_field('Alt Author Read More Name')) {
+
+											echo 'By ';
+
+											the_field('Alt Author Read More Name');
+
+										}elseif(get_field('Byline')){
+
+											the_field('Byline');
+
+										} else {
+											echo 'By ';
+
+											the_author();
+
+										} ?>
+
+										<span class="posted-on"><?php the_time('F jS, Y') ?></span>
+
+									</div>
+
+								<?php } ?>
+
+
+								<br>
+					       
+					    <?php endforeach; ?>
+					   
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					
+				</div>
+			</div>
+
+			<?php endif; ?>
 
 			<?php if( ! has_tag()){
 				echo '<hr/>';
