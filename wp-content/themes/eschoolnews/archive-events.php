@@ -46,6 +46,13 @@ if (false === ($local_box_cache) ){
 				$args = array(
 					'post_type' => 'events',
 					'posts_per_page' => '5',
+					'meta_query' => array(
+						array(
+							'key' => 'event_status',
+							'value' => '1',
+							'compare' => '=='
+							)
+						),
 					'meta_key'	=> 'event_date',
 					'orderby'	=> 'meta_value_num',
 					'order'		=> 'DESC'

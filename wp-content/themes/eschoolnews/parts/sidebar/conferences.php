@@ -8,7 +8,6 @@
 	$taxonomy = 'conferences';
 	$terms = get_terms( $taxonomy, $args );
 
-
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
     echo '<ul>';
     foreach ( $terms as $term ) {
