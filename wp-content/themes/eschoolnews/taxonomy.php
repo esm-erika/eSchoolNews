@@ -117,36 +117,19 @@ if ( have_posts() ) {
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
 			
 						<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-						<?php if( get_field('remove_author')) { 
+						<h5>
+							<i class="fi-calendar"></i> 
+							<?php 
+							$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+							$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+							
+							echo $showdate -> format('F d, Y');
 
-									echo '';
-
-								} else { ?>
-
-									<div class="small-caps">
-										
-										<?php  if( get_field('Alt Author Read More Name')) {
-
-											echo 'By ';
-
-											the_field('Alt Author Read More Name');
-
-										}elseif(get_field('Byline')){
-
-											the_field('Byline');
-
-										} else {
-											echo 'By ';
-
-											the_author();
-
-										} ?>
-
-										<span class="posted-on"><?php the_time('F jS, Y') ?></span>
-
-									</div>
-
-								<?php } ?>
+							if($enddate){ 
+								echo ' - ';
+								echo $enddate -> format('F d, Y');
+							} ?>
+						</h5>
 					</header>
 				</article>
 

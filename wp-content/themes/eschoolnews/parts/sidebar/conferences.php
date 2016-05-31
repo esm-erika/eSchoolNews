@@ -1,6 +1,8 @@
 <article class="conferences">
 	<h4>Conferences</h4>
 
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <ul class="small-block-grid-1 medium-block-grid-2">
 
 	<?php
@@ -24,5 +26,7 @@
 
 		
 	</ul>
+
+<?php endwhile; endif; ?>
 
 </article>
