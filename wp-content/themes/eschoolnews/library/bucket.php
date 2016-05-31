@@ -199,6 +199,11 @@ add_filter( 'single_template', function( $template ) {
         if ( ! empty( $locate_template ) ) {
             $template = $locate_template;
         }
+    } elseif ($post->post_type === 'events') {
+    	$locate_template = locate_template( "single-events-{$post->post_name}.php" );
+        if ( ! empty( $locate_template ) ) {
+            $template = $locate_template;
+        }
     }
     return $template;
 } );

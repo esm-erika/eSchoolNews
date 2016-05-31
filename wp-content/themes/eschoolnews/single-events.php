@@ -80,9 +80,19 @@ if (false === ($local_box_cache) ){
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<h5><i class="fi-calendar"></i> <?php 
-				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
-				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
+				<h5>
+					<i class="fi-calendar"></i> 
+					<?php 
+					$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+					$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+					
+					echo $showdate -> format('F d, Y');
+
+					if($enddate){ 
+						echo ' - ';
+						echo $enddate -> format('F d, Y');
+					} ?>
+				</h5>
 				<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
 
 				<?php get_template_part('parts/social'); ?>
