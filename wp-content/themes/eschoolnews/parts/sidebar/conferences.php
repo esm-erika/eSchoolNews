@@ -17,7 +17,13 @@
 
     	//echo $term->name;
 
-        echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
+        echo '<li><a href="';
+        echo esc_url($term_link); 
+        echo '">' . $term->name . '</a></li>';
+
+        // echo '<pre>';
+        // var_dump($term_link);
+        // echo '</pre>';
     }
     
     echo '</ul>';
