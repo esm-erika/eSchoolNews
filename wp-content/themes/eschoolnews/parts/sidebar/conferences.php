@@ -1,17 +1,38 @@
 <article class="conferences">
-	<h4>Conferences</h4>
+	
+<h4>Conferences</h4>
 
 <ul class="small-block-grid-1 medium-block-grid-2">
-	<li><a href="<?php site_url(); ?>/tag/aasa">AASA</a></li> 
-	<li><a href="<?php site_url(); ?>/tag/alas">ALAS</a></li>
-	<li><a href="<?php site_url(); ?>/tag/ascd">ASCD</a></li>
-	<li><a href="<?php site_url(); ?>/tag/blc">BLC</a></li>
-	<li><a href="<?php site_url(); ?>/tag/cosn">COSN</a></li>
-	<li><a href="<?php site_url(); ?>/tag/cue">CUE</a></li>
-	<li><a href="<?php site_url(); ?>/tag/fetc">FETC</a></li>
-	<li><a href="<?php site_url(); ?>/tag/infocomm">InfoComm</a></li>
-	<li><a href="<?php site_url(); ?>/tag/iste">ISTE</a></li>
-	<li><a href="<?php site_url(); ?>/tag/nsba">NSBA<a/></li>
-	<li><a href="<?php site_url(); ?>/tag/tcea">TCEA</a></li>
+
+	<?php
+
+	// $taxonomy = 'conferences';
+	// $terms = get_terms( $taxonomy );
+
+ //    echo '<ul>';
+
+ //    foreach ( $terms as $term ) {
+
+ //    	$term_link = get_term_link( $term->term_id);
+
+ //    	//echo $term->name;
+
+ //        echo '<li><a href="';
+ //        echo esc_url($term_link); 
+ //        echo '">' . $term->name . '</a></li>';
+
+ //        echo '<pre>';
+ //        var_dump($term);
+ //        echo '</pre>';
+ //    }
+    
+ //    echo '</ul>';
+	
+	 ?>
+
+	 <li><a href="<?php echo site_url(); ?>/conferences/ies">IES</a></li>
+
 </ul>
+
+
 </article>

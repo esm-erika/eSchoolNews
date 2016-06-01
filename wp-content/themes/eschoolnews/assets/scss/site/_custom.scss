@@ -29,6 +29,11 @@ section.container, .container-content {
 }
 
 
+.text-expandable {
+    overflow: hidden;   
+}
+
+
 
 // Text Styles
 a:link, a:visited {
@@ -83,6 +88,15 @@ small {
 	font-size: 12px;
 	line-height: 12px;
 	font-weight: bold;
+
+	.posted-on {
+		font-size: 100%;
+		text-transform: capitalize;
+		font-weight: normal;
+		border-left: 1px solid #222;
+		margin-left: 5px;
+		padding-left: 5px;
+	}
 }
 
 .custom-button {
@@ -859,6 +873,8 @@ li.speaker {
 .posted-on {
 	font-size: 85%;
 }
+
+
 
 // Article Styles
 

@@ -42,7 +42,7 @@
 		get_template_part( 'parts/sidebar/most-popular' );
 	} ?>
 
-	<?php if(is_post_type_archive('events')){
+	<?php if(is_post_type_archive('events') || is_singular('events')){
 		get_template_part( 'parts/sidebar/conferences' );
 	} ?>
 
