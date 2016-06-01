@@ -28,8 +28,9 @@ if (is_user_logged_in()) {
 	$loggedin = '1';
 	//SET COOKIE WE KNOW WHO YOU ARE 
 		$value = $loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId;
+		if (!$value == '0---'){
 		setcookie("esmpass", $value, time()+315360000,'/');  /* expire in 10 years */
-	
+		}
 } else {
 //echo '34 showpagecontent = ' . $showpagecontent . '<br>';
 	// USER NOT LOGGED IN CHECK FOR ID ELSEWHERE
@@ -93,7 +94,7 @@ if (is_user_logged_in()) {
 	if( $setnewcookie==1){
 		$showpagecontent = 1; //echo '91 showpagecontent = ' . $showpagecontent . '<br>';
 		$value = '0' . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId;
-		setcookie("esmpass", $value, time()+315360000,'/');  /* expire in 10 years */
+		if (!$value == '0---'){	setcookie("esmpass", $value, time()+315360000,'/');  /* expire in 10 years */}
 	} else if( $badcookie == 1){
 		setcookie("esmpass", 0, time()-10000,'/');  /* expire now */
 	}
@@ -125,14 +126,20 @@ $showpagecontent = 0;
 
 function insert_trialfire_identify() {
   global $esmuser;
+echo 'sorry needed to fix items not on local used in secure scripts will remove in 10 min.<hr>';
+print_r($esmuser);
 
 $findme   = '@';
 $pos = strpos($esmuser[psemail], $findme);  
+
 if ($pos === false) {
 	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."');</script>";
+	echo "<hr>script>Trialfire.identify ('".$esmuser[sfuid]."');</script<hr>";
+	
 } else {
 
 	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."',{ 'email' : '".$esmuser[psemail]."'} );</script>";
+	echo "<hr>script>Trialfire.identify ('".$esmuser[sfuid]."',{ 'email' : '".$esmuser[psemail]."'} );</script<hr>";
 
 }
   
