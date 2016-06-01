@@ -83,9 +83,9 @@ if (false === ($local_box_cache) ){
 					
 					if($showdate){
 					echo $showdate -> format('F d, Y');
-					} 
+					} ?>
 
-					if($enddate){ 
+					<?php if($enddate){ 
 						echo ' - ';
 						echo $enddate -> format('F d, Y');
 					} ?>
@@ -109,14 +109,14 @@ if (false === ($local_box_cache) ){
 	<?php
 
 				// The Query
-				$args = array(
+				$article_args = array(
 					'post_type' => 'post',
 					'posts_per_page' => '3',
 					'orderby' => 'date',
-					'tag' => 'aasa, alas, ascd, blc, cosn, cue, fetc, infocomm, iste, nsba, tcea, event, events, conference, conferences'
+					'category_name' => 'event-articles'
 					);
 
-				$query = new WP_Query( $args ); ?>
+				$query = new WP_Query( $article_args ); ?>
 
 				<?php // The Loop
 				 while ( $query->have_posts() ) :

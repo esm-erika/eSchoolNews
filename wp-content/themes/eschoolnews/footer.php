@@ -95,5 +95,30 @@
 
 </script>
 
+<script>
+	// var linesVisible = 3; // the number of lines we want to show on load (just for easy cahnging)
+	// $('.text-expandable').each(function() { // loop trough all expandable texts
+	//     var $expandable = $(this);  // cache the text
+	//     var $children = $expandable.children(':first');  // cache the first element inside
+	//     var foldedHeight = (parseInt($children.css('line-height')) * linesVisible) +
+	//                         parseInt($children.css('padding-top')) + 
+	//                         parseInt($children.css('margin-top')) + 
+	//                         parseInt($expandable.css('padding-top')) + 'px'; // calculate the height
+	//     var totalHeight = $expandable.css('height'); // store the total height
+	    
+
+	//     $(this).next('.show-more').children('a').click(function(evt) { // on click of the 'show more'
+	//         evt.preventDefault();  // disable normal link action
+	//         $expandable.animate({
+	//             height: totalHeight
+	//         }, 300);  // fold the expadable text open
+	//         $(this).remove();  // remove the 'show more'
+	//     });
+
+	//     $expandable.css('height', foldedHeight);  // initial fold in of the expandable text
+	    
+	// });
+</script>
+
 </body>
 </html>

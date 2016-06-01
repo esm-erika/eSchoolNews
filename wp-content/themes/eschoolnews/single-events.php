@@ -93,7 +93,10 @@ if (false === ($local_box_cache) ){
 						echo $enddate -> format('F d, Y');
 					} ?>
 				</h5>
-				<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+
+				<?php if(get_field('event_time')) { ?>
+					<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+				<?php } ?>
 
 				<?php get_template_part('parts/social'); ?>
 			</header>

@@ -1,28 +1,38 @@
 <article class="conferences">
-	<h4>Conferences</h4>
+	
+<h4>Conferences</h4>
 
 <ul class="small-block-grid-1 medium-block-grid-2">
 
 	<?php
 
-	$taxonomy = 'conferences';
-	$terms = get_terms( $taxonomy, $args );
+	// $taxonomy = 'conferences';
+	// $terms = get_terms( $taxonomy );
 
-	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-    echo '<ul>';
-    foreach ( $terms as $term ) {
+ //    echo '<ul>';
 
-    	$term_link = get_term_link( $term->term_id, $taxonomy);
+ //    foreach ( $terms as $term ) {
 
-        echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
-    }
-    echo '</ul>';
+ //    	$term_link = get_term_link( $term->term_id);
+
+ //    	//echo $term->name;
+
+ //        echo '<li><a href="';
+ //        echo esc_url($term_link); 
+ //        echo '">' . $term->name . '</a></li>';
+
+ //        echo '<pre>';
+ //        var_dump($term);
+ //        echo '</pre>';
+ //    }
+    
+ //    echo '</ul>';
 	
-	}
+	 ?>
 
-	?>
+	 <li><a href="<?php echo site_url(); ?>/conferences/ies">IES</a></li>
 
-		
-	</ul>
+</ul>
+
 
 </article>
