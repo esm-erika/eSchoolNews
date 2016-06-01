@@ -114,7 +114,7 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	PersonContactId => $PersonContactId,	
 	esmpassvalue => $esmpass_COOKIE,	
 	showpagecontent => $showpagecontent,
-	psemail =>$psemail				
+	psemail =>$psemail
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';
 
@@ -126,20 +126,14 @@ $showpagecontent = 0;
 
 function insert_trialfire_identify() {
   global $esmuser;
-echo 'sorry needed to fix items not on local used in secure scripts will remove in 10 min.<hr>';
-print_r($esmuser);
 
 $findme   = '@';
 $pos = strpos($esmuser[psemail], $findme);  
-
 if ($pos === false) {
 	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."');</script>";
-	echo "<hr>script>Trialfire.identify ('".$esmuser[sfuid]."');</script<hr>";
-	
 } else {
 
 	$Trialfireidentify = "<script>Trialfire.identify ('".$esmuser[sfuid]."',{ 'email' : '".$esmuser[psemail]."'} );</script>";
-	echo "<hr>script>Trialfire.identify ('".$esmuser[sfuid]."',{ 'email' : '".$esmuser[psemail]."'} );</script<hr>";
 
 }
   
