@@ -102,41 +102,60 @@ if (false === ($local_box_cache) ){
 
 		
 
-		<h4>Conference News</h4>
+			<?php
+
+			$custom_terms = get_terms('conferences');
+
+			foreach($custom_terms as $custom_term) {
+			    wp_reset_query();
+			    
+			    $args = array(
+			    	'post_type' => 'post',
+			        'tax_query' => array(
+			            array(
+			                'taxonomy' => 'conferences',
+			                'field' => 'slug',
+			                'terms' => $custom_term->slug,
+			            ),
+			        ),
+			     );
+
+			     $loop = new WP_Query($args);
+
+			     if($loop->have_posts()) {
+			        //echo '<h2>'.$custom_term->name.'</h2>';
+
+			        while($loop->have_posts()) : $loop->the_post(); ?>
+
+
+			        <?php 
 		
-		
+					$taxonomy = 'conferences'; 
 
-	<?php
+					$terms = get_the_terms($post->id, 'conferences');
 
-				// The Query
-				$article_args = array(
-					'post_type' => 'post',
-					'posts_per_page' => '3',
-					'orderby' => 'date',
-					'category_name' => 'event-articles'
-					);
+					foreach ( $terms as $term ) {
 
-				$query = new WP_Query( $article_args ); ?>
+						$term_link = get_term_link( $term->term_id, $taxonomy);
 
-				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
+						echo '<span class="flag content">';
+						echo '<a href="' . esc_url($term_link) . '">' . $term->name . '</a>';
+						echo '</span>';
 
+					}
 
-				<article class="row">
-			<header class="small-12 columns">
-				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			</header>
-		</article>
+					?>
 
-		<hr/>
+		            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		            <hr>
+			<?php
+			        endwhile;
+			     }
+			}
 
+			?>
 
-		
-
-
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
+	
 			
 		
 	</div>

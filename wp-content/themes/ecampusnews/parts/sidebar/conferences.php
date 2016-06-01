@@ -10,8 +10,9 @@
 	  $terms = get_terms( $taxonomy, '' );
 	  if ($terms) {
 	    foreach($terms as $term) {
-	    	echo '<ul>';
+	    	echo '<li>';
 	        echo  '<a href="' . esc_attr(get_term_link($term, $taxonomy)) . '" title="' . sprintf( __( "%s" ), $term->name ) . '" ' . '>' . $term->name.'</a>';
+	        echo '</li>';
 	    }
 	  }
 	
