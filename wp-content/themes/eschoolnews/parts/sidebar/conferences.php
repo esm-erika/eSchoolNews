@@ -6,31 +6,31 @@
 
 	<?php
 
-	// $taxonomy = 'conferences';
-	// $terms = get_terms( $taxonomy );
+	$taxonomy = 'conferences';
+	$terms = get_terms( $taxonomy );
 
- //    echo '<ul>';
+    echo '<ul>';
 
- //    foreach ( $terms as $term ) {
+    foreach ( $terms as $term ) {
 
- //    	$term_link = get_term_link( $term->term_id);
+    	$term_link = get_term_link( $term->term_id);
 
- //    	//echo $term->name;
+    	//echo $term->name;
 
- //        echo '<li><a href="';
- //        echo esc_url($term_link); 
- //        echo '">' . $term->name . '</a></li>';
+        echo '<li><a href="';
+        echo esc_url($term_link); 
+        echo '">' . $term->name . '</a></li>';
 
- //        echo '<pre>';
- //        var_dump($term);
- //        echo '</pre>';
- //    }
+        echo '<pre>';
+        var_dump($term);
+        echo '</pre>';
+    }
     
- //    echo '</ul>';
+    echo '</ul>';
 	
 	 ?>
 
-	 <li><a href="<?php echo site_url(); ?>/conferences/ies">IES</a></li>
+	 <!-- <li><a href="<?php echo site_url(); ?>/conferences/ies-israel-edtech-summit/">IES: Israel EdTech Summit</a></li> -->
 
 </ul>
 
