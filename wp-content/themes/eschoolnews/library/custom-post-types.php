@@ -4,6 +4,19 @@
  *
  */
 
+add_action('init', 'register_event_categories');
+
+function register_event_categories() {
+		register_taxonomy(
+			'conferences', 
+			array('post','events'), 
+			array('hierarchical' => true, "label" => "Event Conferences", "singular_label" => "Conference", "rewrite" => true));
+
+}
+
+
+
+
 /*===================================================================================
  * Education Resource Center
  * =================================================================================*/
@@ -235,8 +248,6 @@ function events_register() {
 	  ); 
  
 	register_post_type( 'events' , $args );
-
-	register_taxonomy("conferences", array("events"), array("hierarchical" => true, "label" => "Conferences", "singular_label" => "Conference", "rewrite" => true));
 
 } 
 
