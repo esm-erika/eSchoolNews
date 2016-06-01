@@ -123,11 +123,17 @@ if ( have_posts() ) {
 							$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
 							$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
 							
+							if($showdate){ 
+							
 							echo $showdate -> format('F d, Y');
+							
+							} ?>
 
-							if($enddate){ 
-								echo ' - ';
-								echo $enddate -> format('F d, Y');
+							<?php if($enddate){ 
+							
+							echo ' - ';
+							echo $enddate -> format('F d, Y');
+							
 							} ?>
 						</h5>
 					</header>
