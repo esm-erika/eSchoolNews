@@ -46,28 +46,50 @@ if (false === ($local_box_cache) ){
 				$args = array(
 					'post_type' => 'events',
 					'posts_per_page' => '5',
+					'meta_query' => array(
+						array(
+							'key' => 'event_status',
+							'value' => '1',
+							'compare' => '=='
+							)
+						),
+					'meta_key'	=> 'event_date',
+					'orderby'	=> 'meta_value_num',
+					'order'		=> 'DESC'
 					);
 
-				$query = new WP_Query( $args ); ?>
+				$events = new WP_Query( $args ); ?>
 
-				<?php if( $query->have_posts() ) : ?>
+				<?php if( $events->have_posts() ) : ?>
 
 				<h4>Upcoming Events</h4>
 		<br/>
 
 				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
+				 while ( $events->have_posts() ) :
+					$events->the_post(); ?>
 
 				<article class="row">
-					<div class="medium-4 columns">
-						<?php 
-							the_post_thumbnail('medium-landscape');
-						?>
-					</div>
-
-			<header class="medium-8 columns">
+					<header class="small-12 columns">
+						
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+			
 				<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+				<h6>
+					<i class="fi-calendar"></i> 
+					<?php 
+					$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+					$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+					
+					if($showdate){
+					echo $showdate -> format('F d, Y');
+					} ?>
+
+					<?php if($enddate){ 
+						echo ' - ';
+						echo $enddate -> format('F d, Y');
+					} ?>
+				</h6>
 			</header>
 		</article>
 		<br/>
@@ -87,14 +109,14 @@ if (false === ($local_box_cache) ){
 	<?php
 
 				// The Query
-				$args = array(
+				$article_args = array(
 					'post_type' => 'post',
 					'posts_per_page' => '3',
 					'orderby' => 'date',
-					'tag' => 'aasa, alas, ascd, blc, cosn, cue, fetc, infocomm, iste, nsba, tcea, event, events, conference, conferences'
+					'category_name' => 'event-articles'
 					);
 
-				$query = new WP_Query( $args ); ?>
+				$query = new WP_Query( $article_args ); ?>
 
 				<?php // The Loop
 				 while ( $query->have_posts() ) :

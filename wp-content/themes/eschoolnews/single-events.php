@@ -35,7 +35,7 @@ if (false === ($local_box_cache) ){
 
 	<div class="row">
 		<div class="small-12 columns">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail( 'full', array( 'alt' => get_the_title()) ); ?>
 		</div>
 	</div>
 
@@ -132,26 +132,56 @@ if (false === ($local_box_cache) ){
 
 			</div>
 
-			<?php 
-
-					$posts = get_field('related_event_articles');
-
-					if( $posts ): ?>
-
-					<hr>
 
 			<div class="row">
 				<div class="small-12 columns">
-					<h5>Related Articles</h5>
 
+					<?php
 
-					   
-					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-					        <?php setup_postdata($post); ?>
-					      
-					            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					$terms = get_the_terms($post->id, 'conferences');
+					$term_slug = $terms[0]->slug;
 
-					            <?php if( get_field('remove_author')) { 
+					$args = array(
+
+					'post_type' => 'post',
+				    'tax_query' => array(
+				    	array(
+				    		'taxonomy' => 'conferences',
+							'field'    => 'slug',
+							'terms'    => $term_slug,
+				      		),
+				    	),
+					);
+			
+					$article_query = new WP_Query($args); 
+
+					// echo '<pre>';
+					// var_dump($term_slug);
+					// echo '</pre>';
+
+					?>
+
+					<?php if ( $article_query->have_posts() ) : ?>
+
+					<hr>
+
+					<h4><?php the_title(); ?> Related Articles</h4>
+					<ul class="large-block-grid-3">
+
+					<?php while ( $article_query->have_posts() ) : $article_query->the_post(); ?>
+
+					
+						<li>
+							
+								<?php if(has_post_thumbnail()){ ?>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+										<?php the_post_thumbnail(); ?>
+									</a>
+								<?php } ?>
+
+								<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+
+								 <?php if( get_field('remove_author')) { 
 
 									echo '';
 
@@ -181,18 +211,25 @@ if (false === ($local_box_cache) ){
 									</div>
 
 								<?php } ?>
+							
+						</li>
+					
 
+					
 
-								<br>
-					       
-					    <?php endforeach; ?>
-					   
-					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endwhile; wp_reset_postdata(); ?>
+				</ul>
+
+			<?php endif; ?>
+
+					
 					
 				</div>
 			</div>
 
-			<?php endif; ?>
+			
+
+			
 
 			<?php if( ! has_tag()){
 				echo '<hr/>';
