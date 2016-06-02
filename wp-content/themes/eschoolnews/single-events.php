@@ -227,6 +227,7 @@ if (false === ($local_box_cache) ){
 				</div>
 			</div>
 
+			<hr class="thick">
 
 			<div class="row">
 				<div class="small-12 medium-6 columns">
