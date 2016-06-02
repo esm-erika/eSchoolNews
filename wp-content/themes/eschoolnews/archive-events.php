@@ -55,7 +55,7 @@ if (false === ($local_box_cache) ){
 						),
 					'meta_key'	=> 'event_date',
 					'orderby'	=> 'meta_value_num',
-					'order'		=> 'DESC'
+					'order'		=> 'ASC'
 					);
 
 				$events = new WP_Query( $args ); ?>
