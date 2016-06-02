@@ -110,14 +110,16 @@ if ( have_posts() ) {
 		<?php } elseif(is_tax('conferences')){ ?>
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
+				
+				<?php if( is_post_type('events')) { ?>	
+				
 				<article class="row">
 					<header class="small-12 columns">
 						
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
 			
 						<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-						<?php if( is_post_type('events')) { ?>
+											
 							<h5>
 								<i class="fi-calendar"></i> 
 								<?php 
@@ -137,44 +139,17 @@ if ( have_posts() ) {
 								
 								} ?>
 							</h5>
-						<?php } elseif( is_post_type('post')) { ?>
 
-							<?php if( get_field('remove_author')) { 
+							
 
-									echo '';
-
-								} else { ?>
-
-									<div class="small-caps">
-										
-										<?php  if( get_field('Alt Author Read More Name')) {
-
-											echo 'By ';
-
-											the_field('Alt Author Read More Name');
-
-										}elseif(get_field('Byline')){
-
-											the_field('Byline');
-
-										} else {
-											echo 'By ';
-
-											the_author();
-
-										} ?>
-
-										<span class="posted-on"><?php the_time('F jS, Y') ?></span>
-
-									</div>
-
-								<?php } ?>
-
-						<?php } ?>
+						
 					</header>
 				</article>
-
 				<hr/>
+				<?php }else {
+					echo '';
+				} ?>
+				
 
 				<?php endwhile; ?>
 		<?php endif; ?>	
