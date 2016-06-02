@@ -227,6 +227,29 @@ if (false === ($local_box_cache) ){
 				</div>
 			</div>
 
+
+			<div class="row">
+				<div class="small-12 medium-6 columns">
+
+					<?php 
+
+					if(get_field('twitter_hashtag')) {
+
+					$hashtag = get_field('twitter_hashtag');
+
+					$content = '[custom-twitter-feeds hashtag=' . $hashtag .']';
+
+					echo do_shortcode($content); 
+
+					} ?>
+				</div>
+				<div class="small-12 medium-6 columns">
+
+					<?php echo do_shortcode('[instagram-feed type=hashtag hashtag="#Hashtag"]'); ?>
+					
+				</div>
+			</div>
+
 			
 
 			
