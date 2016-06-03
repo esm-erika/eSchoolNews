@@ -77,7 +77,7 @@
 
  		<div class="row content">
  			<div class="small-12 column" data-equalizer-watch="content">
- 				<em>Thrive<sup>&reg;</sup></em> powered by Time to Know<sup>&trade;</sup> offers purely digital, core curriculum for ELA, Math, and Science, that is research-based and proven to improve student learning in the 1:1 powered classroom. It blends advanced technology with multiple proven teaching practices to create a rich standards-based digital learning experience. <em>Thrive</em> allows you to easily plan and manage your 1:1 classroom, and provide differentiated instructional support.
+ 				<em>Thrive<sup>&trade;</sup></em> powered by Time to Know<sup>&reg;</sup> offers purely digital, core curriculum for ELA, Math, and Science, that is research-based and proven to improve student learning in the 1:1 powered classroom. It blends advanced technology with multiple proven teaching practices to create a rich standards-based digital learning experience. <em>Thrive</em> allows you to easily plan and manage your 1:1 classroom, and provide differentiated instructional support.
  			</div>
 
  			<div class="text-center learn-more">
