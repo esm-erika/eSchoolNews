@@ -12,7 +12,9 @@
     $cat_ids = array();
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
  if(!empty($tag_ids) || !empty($cat_ids)){
- 	
+				 
+		if(!empty($cat_ids)){ 
+	
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
