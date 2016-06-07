@@ -10,8 +10,6 @@
 get_header(); ?>
 
 
-
-
 <?php 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]t[if a tag page]
