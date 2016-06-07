@@ -11,6 +11,8 @@
 
 	<div class="small-12 large-4 columns ad-container hide-for-medium-only">
 	<?php // echo adrotate_group('1'); 
+
+	echo '<div style="border: 1px solid #ccc; display: inline-block; line-height: 0;">';
 		
 	if ($astused > 0){
 		// ast used defined   How to do this in the new?
@@ -26,6 +28,9 @@
 	}
  echo '    <!-- halfpage banner '.$astused.' --> '; 	
 	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,32);}
+
+
+	echo '</div>';
 		
 	?>
 	</div>
