@@ -113,7 +113,7 @@ if (false === ($local_box_cache) ){
 
 				echo '<div class="large-12 columns">';
 
-				echo '<h5>About Event</h5>';
+				//echo '<h5>About Event</h5>';
 
 				the_content();
 
@@ -163,9 +163,9 @@ if (false === ($local_box_cache) ){
 
 					<?php if ( $article_query->have_posts() ) : ?>
 
-					<div class="panel">
+					<!-- <div class="panel"> -->
 
-					<h4><?php //the_title(); ?>Related Articles</h4>
+					<!-- <h4>Related Articles</h4> -->
 					<ul class="large-block-grid-3">
 
 					<?php while ( $article_query->have_posts() ) : $article_query->the_post(); ?>
@@ -222,7 +222,7 @@ if (false === ($local_box_cache) ){
 
 			<?php endif; ?>
 
-		</div>
+		<!-- </div> -->
 
 					
 					
