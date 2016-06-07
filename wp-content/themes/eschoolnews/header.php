@@ -245,4 +245,17 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 	 ?>  
 
 
+<!-- Call Out -->
+
+<?php 
+
+if(get_field('call_out')) {
+
+  echo '<div class="text-center" style="background-color: #900; color: #fff;">';
+
+  the_field('call_out');
+
+  echo '</div>';
+}
+ ?>
 
