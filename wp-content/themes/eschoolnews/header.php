@@ -249,11 +249,11 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 
 <?php 
 
-if(get_field('call_out')) {
+if(get_field('call_out', 'option')) {
 
   echo '<div class="text-center" style="background-color: #900; color: #fff;">';
 
-  the_field('call_out');
+  the_field('call_out', 'option');
 
   echo '</div>';
 }
