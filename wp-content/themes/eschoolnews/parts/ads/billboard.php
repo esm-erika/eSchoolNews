@@ -16,7 +16,7 @@
 			
 	<?php // echo adrotate_group('1'); 
 
-	echo '<div style="border: 1px solid #ccc; display: inline;">';
+	echo '<div style="border: 1px solid #ccc; display: inline-block; max-width: 972px; max-height: 252px;">';
 		
 	if ($astused > 0){
 		// ast used defined   How to do this in the new?
