@@ -166,7 +166,7 @@ if (false === ($local_box_cache) ){
 					<!-- <div class="panel"> -->
 
 					<!-- <h4>Related Articles</h4> -->
-					<ul class="large-block-grid-3">
+					<ul class="large-block-grid-1">
 
 					<?php while ( $article_query->have_posts() ) : $article_query->the_post(); ?>
 
