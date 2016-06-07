@@ -174,7 +174,7 @@ add_action( 'pre_get_posts', 'wpse_category_set_post_types' );
  
 add_filter('body_class','smartestb_pages_bodyclass');
 function smartestb_pages_bodyclass($classes) {
-    if (is_page()) {
+    if (is_page() || is_singular()) {
         // get page slug
         global $post;
         $slug = get_post( $post )->post_name;
@@ -196,6 +196,11 @@ add_filter( 'single_template', function( $template ) {
     global $post;
     if ( $post->post_type === 'ercs' ) {
         $locate_template = locate_template( "single-ercs-{$post->post_name}.php" );
+        if ( ! empty( $locate_template ) ) {
+            $template = $locate_template;
+        }
+    } elseif ($post->post_type === 'events') {
+    	$locate_template = locate_template( "single-events-{$post->post_name}.php" );
         if ( ! empty( $locate_template ) ) {
             $template = $locate_template;
         }

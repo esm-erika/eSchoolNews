@@ -28,8 +28,9 @@ if (is_user_logged_in()) {
 	$loggedin = '1';
 	//SET COOKIE WE KNOW WHO YOU ARE 
 		$value = $loggedin . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId;
+		if (!$value == '0---'){
 		setcookie("esmpass", $value, time()+315360000,'/');  /* expire in 10 years */
-	
+		}
 } else {
 //echo '34 showpagecontent = ' . $showpagecontent . '<br>';
 	// USER NOT LOGGED IN CHECK FOR ID ELSEWHERE
@@ -93,7 +94,7 @@ if (is_user_logged_in()) {
 	if( $setnewcookie==1){
 		$showpagecontent = 1; //echo '91 showpagecontent = ' . $showpagecontent . '<br>';
 		$value = '0' . '-' . $wpuid . '-' . $sfuid . '-' . $PersonContactId;
-		setcookie("esmpass", $value, time()+315360000,'/');  /* expire in 10 years */
+		if (!$value == '0---'){	setcookie("esmpass", $value, time()+315360000,'/');  /* expire in 10 years */}
 	} else if( $badcookie == 1){
 		setcookie("esmpass", 0, time()-10000,'/');  /* expire now */
 	}
@@ -113,7 +114,7 @@ if($_COOKIE['esmpass']){$esmpass_COOKIE = filter_var($_COOKIE['esmpass'], FILTER
 	PersonContactId => $PersonContactId,	
 	esmpassvalue => $esmpass_COOKIE,	
 	showpagecontent => $showpagecontent,
-	psemail =>$psemail				
+	psemail =>$psemail
 	); 
 //echo '111 showpagecontent = ' . $showpagecontent . '<br>';
 

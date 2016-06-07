@@ -30,10 +30,48 @@ if (false === ($local_box_cache) ){
 			echo '<!-- c a'.$astused."c".$astc.'c'.'p'.$post_id.'-->';
 ?>
 
+
+<?php if(has_post_thumbnail()) { ?>
+
+	<div class="row">
+		<div class="small-12 columns">
+			<?php the_post_thumbnail( 'full', array( 'alt' => get_the_title()) ); ?>
+		</div>
+	</div>
+
+<?php } ?>
+
+
 <div class="row top">
 	<div class="small-12 large-8 columns" role="main">
 
-		<?php get_template_part('parts/flags'); ?>
+		<?php 
+		
+		//get_template_part('parts/flags');
+
+		$taxonomy = 'conferences'; 
+
+		$terms = get_the_terms($post->id, 'conferences');
+
+
+		//echo $term[0]->name;
+
+		foreach ( $terms as $term ) {
+
+			$term_link = get_term_link( $term->term_id, $taxonomy);
+
+			echo '<span class="flag content">';
+			echo '<a href="' . esc_url($term_link) . '">' . $term->name . '</a>';
+			echo '</span>';
+
+		}
+
+		// echo '<pre>';
+		// var_dump($term_link);
+		// echo '</pre>';
+
+		?>
+
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -42,10 +80,23 @@ if (false === ($local_box_cache) ){
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<h5><i class="fi-calendar"></i> <?php 
-				$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
-				if($showdate){ echo $showdate -> format('F d, Y');} ?></h5>
-				<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+				<h5>
+					<i class="fi-calendar"></i> 
+					<?php 
+					$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+					$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+					
+					echo $showdate -> format('F d, Y');
+
+					if($enddate){ 
+						echo ' - ';
+						echo $enddate -> format('F d, Y');
+					} ?>
+				</h5>
+
+				<?php if(get_field('event_time')) { ?>
+					<h5><i class="fi-clock"></i> <?php the_field('event_time'); ?></h5>
+				<?php } ?>
 
 				<?php get_template_part('parts/social'); ?>
 			</header>
@@ -62,22 +113,9 @@ if (false === ($local_box_cache) ){
 
 				echo '<div class="large-12 columns">';
 
-				
-
-				if ( has_post_thumbnail() ) {
-
-					the_post_thumbnail('large-landscape'); 
-
-					echo '<br/><br/>';
-
-					
-				}
-
-					
-
 				echo '<h5>About Event</h5>';
 
-				the_field('event_information');
+				the_content();
 
 				if (get_field('registration_link')) {
 
@@ -93,6 +131,129 @@ if (false === ($local_box_cache) ){
 				?>
 
 			</div>
+
+
+			<div class="row">
+				<div class="small-12 columns">
+
+					<?php
+
+					$terms = get_the_terms($post->id, 'conferences');
+					$term_slug = $terms[0]->slug;
+
+					$args = array(
+
+					'post_type' => 'post',
+				    'tax_query' => array(
+				    	array(
+				    		'taxonomy' => 'conferences',
+							'field'    => 'slug',
+							'terms'    => $term_slug,
+				      		),
+				    	),
+					);
+			
+					$article_query = new WP_Query($args); 
+
+					// echo '<pre>';
+					// var_dump($term_slug);
+					// echo '</pre>';
+
+					?>
+
+					<?php if ( $article_query->have_posts() ) : ?>
+
+					<hr>
+
+					<h4><?php the_title(); ?> Related Articles</h4>
+					<ul class="large-block-grid-3">
+
+					<?php while ( $article_query->have_posts() ) : $article_query->the_post(); ?>
+
+					
+						<li>
+							
+								<?php if(has_post_thumbnail()){ ?>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+										<?php the_post_thumbnail(); ?>
+									</a>
+								<?php } ?>
+
+								<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+
+								 <?php if( get_field('remove_author')) { 
+
+									echo '';
+
+								} else { ?>
+
+									<div class="small-caps">
+										
+										<?php  if( get_field('Alt Author Read More Name')) {
+
+											echo 'By ';
+
+											the_field('Alt Author Read More Name');
+
+										}elseif(get_field('Byline')){
+
+											the_field('Byline');
+
+										} else {
+											echo 'By ';
+
+											the_author();
+
+										} ?>
+
+										<span class="posted-on"><?php the_time('F jS, Y') ?></span>
+
+									</div>
+
+								<?php } ?>
+							
+						</li>
+					
+
+					
+
+				<?php endwhile; wp_reset_postdata(); ?>
+				</ul>
+
+			<?php endif; ?>
+
+					
+					
+				</div>
+			</div>
+
+			<hr class="thick">
+
+			<div class="row">
+				<div class="small-12 medium-6 columns">
+
+					<?php 
+
+					if(get_field('twitter_hashtag')) {
+
+					$hashtag = get_field('twitter_hashtag');
+
+					$content = '[custom-twitter-feeds hashtag=' . $hashtag .']';
+
+					echo do_shortcode($content); 
+
+					} ?>
+				</div>
+				<div class="small-12 medium-6 columns">
+
+					<?php echo do_shortcode('[instagram-feed type=hashtag hashtag="#Hashtag"]'); ?>
+					
+				</div>
+			</div>
+
+			
+
+			
 
 			<?php if( ! has_tag()){
 				echo '<hr/>';

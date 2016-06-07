@@ -66,7 +66,7 @@ if ( have_posts() ) {
                     	
 						<header>
                     		<h3><?php the_title(); ?></h3>
-                    		<div class="posted-on">Posted on <?php the_time('F j, Y'); ?></div>
+                    		<div class="posted-on"><?php the_time('F j, Y'); ?></div>
                     		<hr/>
                     	</header>
 
@@ -107,6 +107,52 @@ if ( have_posts() ) {
 					} // end if
 					?>
 
+		<?php } elseif(is_tax('conferences')){ ?>
+
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				
+				<?php if( is_post_type('events')) { ?>	
+				
+				<article class="row">
+					<header class="small-12 columns">
+						
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+			
+						<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+											
+							<h5>
+								<i class="fi-calendar"></i> 
+								<?php 
+								$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+								$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+								
+								if($showdate){ 
+								
+								echo $showdate -> format('F d, Y');
+								
+								} ?>
+
+								<?php if($enddate){ 
+								
+								echo ' - ';
+								echo $enddate -> format('F d, Y');
+								
+								} ?>
+							</h5>
+
+							
+
+						
+					</header>
+				</article>
+				<hr/>
+				<?php }else {
+					echo '';
+				} ?>
+				
+
+				<?php endwhile; ?>
+		<?php endif; ?>	
 		
 
 		<?php  } elseif( is_tax('sponsor') ) { ?>
@@ -139,7 +185,9 @@ if ( have_posts() ) {
 							echo the_field('masthead_text');
 
 						} else {
-							the_excerpt();
+							
+							echo balanceTags(wp_trim_words( strip_tags(get_the_excerpt()), $num_words = 30, $more = '&hellip;' ), true); 
+							
 						} ?>
 					</div>
 				</article>
@@ -173,6 +221,8 @@ if ( have_posts() ) {
 							<?php the_title();?>
 							</a>
 						</h4>
+						<div class="posted-on"><?php the_time('F j, Y'); ?></div>
+
 
 						<?php if(get_field('masthead_text')){
 

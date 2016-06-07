@@ -967,12 +967,10 @@ register_field_group(array (
 				'key' => 'field_570532a31a933',
 				'label' => 'Company Information',
 				'name' => 'about_company',
-				'type' => 'textarea',
+				'type' => 'wysiwyg',
 				'default_value' => '',
-				'placeholder' => '',
-				'maxlength' => '',
-				'rows' => '',
-				'formatting' => 'br',
+				'toolbar' => 'full',
+				'media_upload' => 'no',
 			),
 		),
 		'location' => array (
@@ -1211,5 +1209,6 @@ register_field_group(array (
 	));
 
 }
+
 
 ?>

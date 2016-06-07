@@ -107,6 +107,52 @@ if ( have_posts() ) {
 					} // end if
 					?>
 
+		<?php } elseif(is_tax('conferences')){ ?>
+
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				
+				<?php if( is_post_type('events')) { ?>	
+				
+				<article class="row">
+					<header class="small-12 columns">
+						
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+			
+						<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+											
+							<h5>
+								<i class="fi-calendar"></i> 
+								<?php 
+								$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+								$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+								
+								if($showdate){ 
+								
+								echo $showdate -> format('F d, Y');
+								
+								} ?>
+
+								<?php if($enddate){ 
+								
+								echo ' - ';
+								echo $enddate -> format('F d, Y');
+								
+								} ?>
+							</h5>
+
+							
+
+						
+					</header>
+				</article>
+				<hr/>
+				<?php }else {
+					echo '';
+				} ?>
+				
+
+				<?php endwhile; ?>
+		<?php endif; ?>	
 		
 
 		<?php  } elseif( is_tax('sponsor') ) { ?>

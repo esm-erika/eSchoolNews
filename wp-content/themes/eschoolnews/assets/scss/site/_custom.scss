@@ -29,6 +29,11 @@ section.container, .container-content {
 }
 
 
+.text-expandable {
+    overflow: hidden;   
+}
+
+
 
 // Text Styles
 a:link, a:visited {
@@ -83,6 +88,15 @@ small {
 	font-size: 12px;
 	line-height: 12px;
 	font-weight: bold;
+
+	.posted-on {
+		font-size: 100%;
+		text-transform: capitalize;
+		font-weight: normal;
+		border-left: 1px solid #222;
+		margin-left: 5px;
+		padding-left: 5px;
+	}
 }
 
 .custom-button {
@@ -158,6 +172,30 @@ p.category  {
 
 	a {
 		color: #fff;
+	}
+}
+
+ul.tweet-list {
+	margin-bottom: 1.1rem !important;
+
+	li {
+		position: relative;
+		
+		// padding-left: 60px;
+		// line-height: 1.3;
+		// padding-bottom: 1.1rem;
+		border-bottom: 1px solid #ccc;
+
+		p {
+
+			font-size: 85%;
+			margin: 0;
+
+			small {
+				font-weight: bold;
+				display: block;
+			}
+		}
 	}
 }
 
@@ -835,6 +873,8 @@ li.speaker {
 .posted-on {
 	font-size: 85%;
 }
+
+
 
 // Article Styles
 
@@ -2321,6 +2361,278 @@ body.page.collaboration {
 }
 
 
+// Custom ERCs
+
+.single-ercs.mcgrawhill {
+
+	color: #231f20;
+
+	.main-header {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	
+
+	.table-grid {
+
+		.row.content {
+			background-color: #ebe9db;
+			color: #777878;
+			font-size: 90%;
+			padding-top: 1.1rem;
+		}
+
+		.logo {
+			line-height: 60px;
+			padding: .9375rem 0;
+			height: 90px;
+		}
+
+		.engrade, .acuity, .thrive {
+			border-right: 3px solid #fff;
+
+			h6 {
+				border-bottom: 3px solid #ffffff;
+			}
+		}
+
+
+
+			h6 {
+				background-color: #32484c;
+				color: #ffffff;
+				text-transform: uppercase;
+				padding: 5px 0;
+				font-weight: bold;
+				margin: 0;
+			}
+
+		.learn-more {
+			padding: 1.1rem 0;
+			clear: both;
+		}
+	}
+
+	.learn-more-box {
+		background-color: #7bc2ad;
+		color: #ffffff;
+		padding: 1.1rem;
+
+		p {
+			font-size: 90%;
+		}
+		
+	}
+}
+
+.single-ercs.mcgrawhill-engrade, .single-ercs.mcgrawhill-acuity, .single-ercs.mcgrawhill-thrive  {
+
+	#content {
+
+	color: #231f20;
+	font-family: 'Raleway', sans-serif;
+
+	.header-engrade {
+
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		#main-nav {
+			position: absolute;
+			left: 1.875rem;
+			bottom: 1px;
+			height: 51px;
+    		line-height: 51px;
+
+			h5 {
+				margin: 0;
+				line-height: 51px;
+				color: #ffffff;
+			}
+
+			a {
+				padding: 0 10px;
+			}
+
+			a:link, a:visited {
+				display: block;
+				line-height: 51px;
+				color: #ffffff;
+				font-style: italic;
+			}
+
+			a:hover {
+				text-decoration: none;
+				background-color: #0099d5;
+			}
+
+			a.active {
+				background-color: #0099d5;
+			}
+
+			ul {
+				margin: 0;
+				list-style: none;
+
+				li {
+					float: left;
+					margin-left: 0.9375rem;
+
+					h5, span {
+						float: left;
+						margin: 0;
+						color: #ffffff;
+						// font-style: italic;
+					}
+				}
+			}
+		}
+	
+	}
+
+	#body {
+		article:first-child {
+			margin-top: .9375rem;
+		}
+
+		article:last-child {
+			background-color: #78c3ad;
+			color: #ffffff;
+			padding: .9375rem;
+			margin-top: .9375rem;
+
+			h4 {
+				font-weight: bold;
+				color: #ffffff;
+			}
+
+			hr {
+				border-color: #ffffff !important;
+			}
+		}
+
+		article {
+
+			h3 {
+				font-weight: bold;
+				color: #1d4448;
+			}
+		}
+
+		.button {
+			background-color: #78c3ad;
+			text-transform: uppercase;
+		}
+
+		.video {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			height: 0;
+		
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	#sponsor {
+
+		p {
+			font-size: 85%;
+			margin-bottom: .9375rem;
+		}
+
+		img {
+			margin-bottom: .9375rem;
+		}
+	}
+
+	#sidebar {
+		background-color: #ebebdc;
+
+		.row {
+
+			background-color: #ebebdc;
+
+		h4 {
+			color: #e41d26;
+			margin-top: .9375rem;
+			font-weight: bold;
+
+			img {
+				width: 25px;
+				margin-right: 5px;
+
+			}
+		}
+
+
+		aside {
+			background-color: #ffffff;
+			padding: .9375rem;
+			margin-bottom: .9375rem;
+
+			h5 {
+				font-weight: bold;
+			}
+
+			.cover {
+				border: 1px solid #231f20;
+				margin-bottom: .9375rem;
+			}
+
+			.button {
+				background-color: #e41d26;
+				text-transform: uppercase;
+				margin: 0;
+			}
+
+		}
+
+		#impact {
+
+			ul {
+
+				margin: .9375rem .9375rem 0 .9375rem;
+
+				li {
+					list-style: disc;
+				}
+			}
+		}
+
+		#top-stories {
+			h4 {
+				font-weight: 500;
+			}
+
+			hr:last-child {
+				display: none !important;
+			}
+
+			hr {
+				margin: 0;
+			}
+		}
+	}
+}
+
+}
+}
+
+
 // Gravity Forms
 
 div.registration-form {
@@ -3280,6 +3592,14 @@ table.columns .right-text-pad {
 
 
 @media only screen and (min-width: 64.0625em) {
+
+ .right-for-large-only {
+    float: right;
+  }
+
+  .left-for-large-only {
+    float: left;
+  }
 
 	nav.tab-bar {
 		//display: none;

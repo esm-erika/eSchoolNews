@@ -46,28 +46,50 @@ if (false === ($local_box_cache) ){
 				$args = array(
 					'post_type' => 'events',
 					'posts_per_page' => '5',
+					'meta_query' => array(
+						array(
+							'key' => 'event_status',
+							'value' => '1',
+							'compare' => '=='
+							)
+						),
+					'meta_key'	=> 'event_date',
+					'orderby'	=> 'meta_value_num',
+					'order'		=> 'ASC'
 					);
 
-				$query = new WP_Query( $args ); ?>
+				$events = new WP_Query( $args ); ?>
 
-				<?php if( $query->have_posts() ) : ?>
+				<?php if( $events->have_posts() ) : ?>
 
 				<h4>Upcoming Events</h4>
 		<br/>
 
 				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
+				 while ( $events->have_posts() ) :
+					$events->the_post(); ?>
 
 				<article class="row">
-					<div class="medium-4 columns">
-						<?php 
-							the_post_thumbnail('medium-landscape');
-						?>
-					</div>
-
-			<header class="medium-8 columns">
+					<header class="small-12 columns">
+						
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+			
 				<h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+				<h6>
+					<i class="fi-calendar"></i> 
+					<?php 
+					$showdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+					$enddate = DateTime::createFromFormat('Ymd', get_field('event_end_date'));
+					
+					if($showdate){
+					echo $showdate -> format('F d, Y');
+					} ?>
+
+					<?php if($enddate){ 
+						echo ' - ';
+						echo $enddate -> format('F d, Y');
+					} ?>
+				</h6>
 			</header>
 		</article>
 		<br/>
@@ -80,41 +102,60 @@ if (false === ($local_box_cache) ){
 
 		
 
-		<h4>Conference News</h4>
+			<?php
+
+			$custom_terms = get_terms('conferences');
+
+			foreach($custom_terms as $custom_term) {
+			    wp_reset_query();
+			    
+			    $args = array(
+			    	'post_type' => 'post',
+			        'tax_query' => array(
+			            array(
+			                'taxonomy' => 'conferences',
+			                'field' => 'slug',
+			                'terms' => $custom_term->slug,
+			            ),
+			        ),
+			     );
+
+			     $loop = new WP_Query($args);
+
+			     if($loop->have_posts()) {
+			        //echo '<h2>'.$custom_term->name.'</h2>';
+
+			        while($loop->have_posts()) : $loop->the_post(); ?>
+
+
+			        <?php 
 		
-		
+					$taxonomy = 'conferences'; 
 
-	<?php
+					$terms = get_the_terms($post->id, 'conferences');
 
-				// The Query
-				$args = array(
-					'post_type' => 'post',
-					'posts_per_page' => '3',
-					'orderby' => 'date',
-					'tag' => 'aasa, alas, ascd, blc, cosn, cue, fetc, infocomm, iste, nsba, tcea, event, events, conference, conferences'
-					);
+					foreach ( $terms as $term ) {
 
-				$query = new WP_Query( $args ); ?>
+						$term_link = get_term_link( $term->term_id, $taxonomy);
 
-				<?php // The Loop
-				 while ( $query->have_posts() ) :
-					$query->the_post(); ?>
+						echo '<span class="flag content">';
+						echo '<a href="' . esc_url($term_link) . '">' . $term->name . '</a>';
+						echo '</span>';
 
+					}
 
-				<article class="row">
-			<header class="small-12 columns">
-				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			</header>
-		</article>
+					?>
 
-		<hr/>
+		            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		            <hr>
+			<?php
+			        endwhile;
+			     }
+			}
 
+			?>
 
-		
-
-
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
+	
 			
 		
 	</div>

@@ -105,24 +105,19 @@ $args = array(
 
 										<?php 
 
-										$posts = get_field('pdf_select');
+										$pdfselects = get_field('pdf_select');
 
-										if( $posts ) { ?>
-
-										<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-										<?php setup_postdata($post); ?>
-
-										<div>
-											<a class="button radius" target="_blank" href="<?php the_permalink(); ?>">View Now</a>
-										</div>
-
-									<?php endforeach; ?>
-
-									<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-
-									<?php } else { ?>
-
-
+										if( $pdfselects ) { 
+											foreach( $pdfselects as $pdf): ?>
+											<div>
+												<a class="button radius" target="_blank" href="<?php echo get_permalink( $pdf->ID ); ?>">View Now</a>
+											</div>
+										
+										<?php 
+										
+											endforeach; 
+										
+										 } else { ?>
 
 									<div>
 										<a class="button medium radius" href="<?php echo site_url(); ?>/<?php echo 'wp.php?wp='. get_the_ID();echo $aststr; ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'advanced' ), the_title_attribute( 'echo=0' ) ); ?>" target="_blank" id="submit">View Now</a>
@@ -147,7 +142,7 @@ $args = array(
 								</header>
 
 								
-<!-- 
+
 										<div class="row sponsored">
 											<div class="small-12 columns">
 
@@ -194,7 +189,7 @@ $args = array(
 
 
 											</div>
-										</div> -->
+										</div> 
 
 
 
