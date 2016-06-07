@@ -45,6 +45,13 @@ include('single-coa.php');
 	   } else { ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
+<?php 
+$paged = get_query_var('page'); //this needs to be asked only once. 
+
+if ($paged < 2) { // you're on page 1 ?>
+
+
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 			<!-- single note -->
@@ -85,6 +92,8 @@ include('single-coa.php');
 			<?php get_template_part('parts/social'); ?>
 			 </header>
 
+
+
 			 <hr/>
 
 
@@ -121,6 +130,18 @@ include('single-coa.php');
     		} else {
 
     		} ?>
+
+
+    		<?php } else { // you are on page 2+ ?>
+			<header>
+    			<h2><?php the_title(); ?> (continued)</h2>
+
+    			<?php get_template_part('parts/social'); ?>
+    		</header>
+			
+			<hr>
+
+			<?php } ?>
 
 
     		<div class="entry-content"> <!-- text-expandable -->
