@@ -163,7 +163,7 @@ if (false === ($local_box_cache) ){
 
 					<?php if ( $article_query->have_posts() ) : ?>
 
-					<hr>
+					<div class="panel">
 
 					<h4><?php the_title(); ?> Related Articles</h4>
 					<ul class="large-block-grid-3">
@@ -221,6 +221,8 @@ if (false === ($local_box_cache) ){
 				</ul>
 
 			<?php endif; ?>
+
+		</div>
 
 					
 					
