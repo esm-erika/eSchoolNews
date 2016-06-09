@@ -219,7 +219,7 @@ $calloutURL = get_field('call_out_url');
 
 if(get_field('call_out', 'option')) {
 
-  echo '<a class="text-center" style="background-color: #c00; color: #fff; display: block; padding: 5px;" href="' . $calloutURL . '">';
+  echo '<a class="text-center" style="border: 1px solid #c00; background-color: #fff; color: #c00; display: block; padding: 5px;" href="' . $calloutURL . '">';
 
   the_field('call_out', 'option');
 
