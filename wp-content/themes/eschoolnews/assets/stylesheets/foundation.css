@@ -8747,7 +8747,7 @@ section.container .row, .container-content .row {
     display: none; }
   .subscribe-form .gform_wrapper .gform_body {
     float: left;
-    width: 80%; }
+    width: 75%; }
     .subscribe-form .gform_wrapper .gform_body .ginput_container {
       margin: 0; }
       .subscribe-form .gform_wrapper .gform_body .ginput_container input {
@@ -8761,7 +8761,7 @@ section.container .row, .container-content .row {
     .subscribe-form .gform_wrapper .gform_footer .gform_button {
       margin: 0;
       padding: .6375rem;
-      background-color: #fff;
+      background-color: transparent;
       color: black !important;
       font-weight: bold; }
 

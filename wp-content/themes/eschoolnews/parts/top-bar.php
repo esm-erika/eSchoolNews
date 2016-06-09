@@ -88,9 +88,9 @@
             <div class="large-3 medium-3 columns text-center subscribe-form" data-equalizer-watch>
                 <div class="show-for-small-only" style="height: 20px;"></div>
                 <div class="row">
-                    <div class="small-6 small-centered medium-12 large-12 columns">
+                    <div class="small-10 small-centered medium-12 large-12 columns">
 
-                        <div style="border: 1px solid #ccc;" data-equalizer-watch>
+                        <div style="border: 1px solid #ccc; padding: 10px;" data-equalizer-watch>
 
                 <div style="height: 100%; position: relative;">
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
