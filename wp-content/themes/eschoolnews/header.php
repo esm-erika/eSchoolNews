@@ -215,7 +215,7 @@ if (false === ($local_box_cache) ){
 
 <?php 
 
-$calloutURL = the_field('call_out_url');
+$calloutURL = get_field('call_out_url');
 
 if(get_field('call_out', 'option')) {
 
