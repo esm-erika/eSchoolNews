@@ -18,23 +18,54 @@
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
                         <div style="display: table-cell; vertical-align: middle;">
 
-                <?php if ( is_user_logged_in() ) { 
+                
+                <?php 
+
+                  $args = array(
+                    'post_type' => 'newsletter',
+                    'posts_per_page' => '1',
+                    'order' => 'DESC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'publications',
+                            'field'    => 'slug',
+                            'terms'    => 'eschool-news-today',
+                        ),
+                    ),
+
+                    );
+                // the query
+                $the_query = new WP_Query( $args ); ?>
+
+                <?php if ( $the_query->have_posts() ) : ?>
+
+                    <!-- pagination here -->
+
+                    <!-- the loop -->
+                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                    <?php if ( is_user_logged_in() ) { 
                     
-                        $current_user = wp_get_current_user();
-                        echo '<a href="' . site_url() . '/eschoolnews-today/">';
-                        echo 'Today\'s News Brief for <br> <strong>';
-                        echo $current_user->user_firstname;
-                        echo ' ';
-                        echo $current_user->user_lastname;
-                        echo '</strong></a><br>';
+                    $current_user = wp_get_current_user(); ?>
 
-                ?>
+                        <a href="<?php the_permalink(); ?>">
+                            Today's News Brief for <br> 
+                        <strong><?php echo $current_user->user_firstname; ?> <?php echo $current_user->user_lastname; ?></strong>
+                     
+                       </a><br>
+
+                
                     
-                <?php } else { 
+                <?php } else { ?>
 
-                    echo '<a href="' . site_url() . '/eschoolnews-today/">See Today\'s News Brief</a>';
+                   <a href="<?php the_permalink(); ?>">See Today's News Brief</a>
 
-                 } ?>
+                <?php } ?>
+                    
+                <?php endwhile; wp_reset_postdata(); ?>
+
+                <?php endif; ?>
+
 
                 </div>
                 </div>
