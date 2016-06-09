@@ -8745,6 +8745,10 @@ section.container .row, .container-content .row {
   margin: 0; }
   .subscribe-form .gform_wrapper .gform_heading {
     display: none; }
+  .subscribe-form .gform_wrapper .gform_body .ginput_container {
+    margin: 0; }
+    .subscribe-form .gform_wrapper .gform_body .ginput_container input {
+      margin: 0; }
   .subscribe-form .gform_wrapper .gform_footer {
     margin: 0;
     padding: 0; }
