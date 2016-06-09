@@ -55,7 +55,11 @@
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
                         <div style="display: table-cell; vertical-align: middle;">
 
-                            Subscribe box
+                            
+<style>#field_228_1 > label.gfield_label{ visibility:hidden;}</style>
+Join over 150,000 of your Peers!<br />
+Get the latest ed-tech news & innovations delivered to your email !
+                            <?php gravity_form( 228, $display_title = false, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true ); ?>
 
                     </div>
                     </div>
