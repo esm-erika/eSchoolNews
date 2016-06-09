@@ -897,7 +897,7 @@ table.columns .right-text-pad {
   $args = array(
   	'post_type' => 'newsletter',
   	'posts_per_page' => '1',
-  	'order' => 'ASC',
+  	'order' => 'DESC',
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'publications',
