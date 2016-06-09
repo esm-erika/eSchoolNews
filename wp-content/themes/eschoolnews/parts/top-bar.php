@@ -86,17 +86,24 @@
                     </h1>
                 </div>
             <div class="large-3 medium-3 columns text-center subscribe-form" data-equalizer-watch>
+                <div class="row" style="border: 1px solid #ccc;" data-equalizer-watch>
+                    <div class="small-6 small-centered medium-12 large-12 columns">
 
                 <div style="height: 100%; position: relative;">
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
                         <div style="display: table-cell; vertical-align: middle;">
+
+                        
                           
                         <style>#field_228_1 > label.gfield_label{ display: none;}</style>
                         
-                        <h4>Join over 150,000 <br>of your Peers!</h4>
-                        <p style="font-size: 90%; line-height: 1.2;">Get the latest ed-tech news &amp; innovations delivered to your email!</p>
+                        <h6>Join over 150,000 <br>of your Peers!</h6>
+                        <p style="font-size: 85%; line-height: 1.2; padding: 5px 0;">Get the latest ed-tech news &amp; innovations delivered to your email!</p>
                         
                         <?php gravity_form( 228, $display_title = false, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true ); ?>
+                    
+                        </div>
+                        </div>
 
                     </div>
                     </div>
