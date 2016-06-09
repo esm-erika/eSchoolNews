@@ -114,7 +114,7 @@ get_template_part( 'library/logged-in-check' );
 
           <h3>Subscribe to Our Newsletters</h3>
 
-          <?php get_template_part( 'parts/subscribe-form' ); ?>
+          <?php //get_template_part( 'parts/subscribe-form' ); ?>
           
 
           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -164,7 +164,7 @@ get_template_part( 'library/logged-in-check' );
         </section>
     
 
-    <nav class="row middle show-for-small-up hide-for-large-up">
+<!--     <nav class="row middle show-for-small-up hide-for-large-up">
       <div class="show-for-small-up hide-for-large-up" style="height: 20px;"></div>
       <h1 class="small-12 medium-6 medium-centered large-uncentered columns title">
         <?php //bloginfo( 'name' ); ?>
@@ -172,27 +172,7 @@ get_template_part( 'library/logged-in-check' );
           <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="eSchool News" />
         </a>
       </h1>
-    </nav> 
-
-
-    <div class="row mobile-search show-for-small-only">
-      <div class="small-12 columns">
-
-        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-          <div class="row collapse">
-            <div class="small-9 columns">
-              <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-            </div>
-            <div class="small-3 columns">
-              <input style="padding: 0;" type="submit" class="button postfix" value="Go" />
-            </div>
-          </div>
-        </form>
-
-      </div>
-    </div>
-
-
+    </nav>  -->
 
 
 <?php 
