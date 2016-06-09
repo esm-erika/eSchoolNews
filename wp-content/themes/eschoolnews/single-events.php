@@ -10,8 +10,6 @@
 get_header(); ?>
 
 
-
-
 <?php 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]t[if a tag page]
@@ -166,7 +164,7 @@ if (false === ($local_box_cache) ){
 					<!-- <div class="panel"> -->
 
 					<!-- <h4>Related Articles</h4> -->
-					<ul class="large-block-grid-1">
+					<ul class="large-block-grid-3">
 
 					<?php while ( $article_query->have_posts() ) : $article_query->the_post(); ?>
 
