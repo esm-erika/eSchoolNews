@@ -42,12 +42,18 @@ section.container, .container-content {
 		}
 
 		.gform_body {
-			
+
 		}
 
 		.gform_footer {
 			margin: 0;
 			padding: 0;
+
+			.gform_button {
+				margin: 0;
+				padding: .9375rem;
+
+			}
 		}
 
 	}

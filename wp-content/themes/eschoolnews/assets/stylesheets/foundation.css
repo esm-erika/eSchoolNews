@@ -8748,6 +8748,9 @@ section.container .row, .container-content .row {
   .subscribe-form .gform_wrapper .gform_footer {
     margin: 0;
     padding: 0; }
+    .subscribe-form .gform_wrapper .gform_footer .gform_button {
+      margin: 0;
+      padding: .9375rem; }
 
 a:link, a:visited {
   color: #336699; }
