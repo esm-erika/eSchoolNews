@@ -93,8 +93,8 @@
                           
                         <style>#field_228_1 > label.gfield_label{ display: none;}</style>
                         
-                        <h4>Join over 150,000 of your Peers!</h4>
-                        <div style="font-size: 90%; line-height: 1;">Get the latest ed-tech news &amp; innovations delivered to your email!</div>
+                        <h4>Join over 150,000 <br>of your Peers!</h4>
+                        <p style="font-size: 90%; line-height: 1.2;">Get the latest ed-tech news &amp; innovations delivered to your email!</p>
                         
                         <?php gravity_form( 228, $display_title = false, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true ); ?>
 
