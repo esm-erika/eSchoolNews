@@ -8741,6 +8741,9 @@ section.container .row, .container-content .row {
 .text-expandable {
   overflow: hidden; }
 
+.subscribe-form .gform_wrapper {
+  margin: 0; }
+
 a:link, a:visited {
   color: #336699; }
 

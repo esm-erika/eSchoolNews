@@ -85,7 +85,7 @@
                         </div>
                     </h1>
                 </div>
-            <div class="large-3 medium-3 columns text-center" data-equalizer-watch>
+            <div class="large-3 medium-3 columns text-center subscribe-form" data-equalizer-watch>
 
                 <div style="height: 100%; position: relative;">
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
@@ -93,8 +93,8 @@
                           
                         <style>#field_228_1 > label.gfield_label{ visibility:hidden;}</style>
                         
-                        <h5>Join over 150,000 of your Peers!</h5>
-                        <p style="font-size: 90%;">Get the latest ed-tech news &amp; innovations delivered to your email!</p>
+                        <h4>Join over 150,000 of your Peers!</h4>
+                        <div style="font-size: 90%; line-height: 1;">Get the latest ed-tech news &amp; innovations delivered to your email!</div>
                         
                         <?php gravity_form( 228, $display_title = false, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true ); ?>
 
