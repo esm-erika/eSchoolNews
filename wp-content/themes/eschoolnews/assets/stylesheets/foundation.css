@@ -8746,7 +8746,8 @@ section.container .row, .container-content .row {
   .subscribe-form .gform_wrapper .gform_heading {
     display: none; }
   .subscribe-form .gform_wrapper .gform_body {
-    float: left; }
+    float: left;
+    width: 80%; }
     .subscribe-form .gform_wrapper .gform_body .ginput_container {
       margin: 0; }
       .subscribe-form .gform_wrapper .gform_body .ginput_container input {
