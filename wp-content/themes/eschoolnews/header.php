@@ -193,19 +193,27 @@ if (false === ($local_box_cache) ){
 
     <!-- Call Out -->
 
+
+
 <?php 
 
 $calloutURL = get_field('call_out_url');
 
-if(get_field('call_out', 'option')) {
+if(get_field('call_out', 'option')) { ?>
 
-  echo '<a class="text-center" style="border: 1px solid #c00; background-color: #fff; color: #c00; display: block; padding: 5px;" href="' . $calloutURL . '">';
+<div class="row">
+  <div class="small-12 columns">
 
-  the_field('call_out', 'option');
+  <a class="text-center" style="border: 1px solid #c00; background-color: #fff; color: #c00; display: block; padding: 5px;" href="<?php echo $calloutURL; ?>">
 
-  echo '</a>';
-}
- ?>
+  <?php the_field('call_out', 'option'); ?>
+
+  </a>
+
+    </div>
+</div>
+
+<?php } ?>
 
 
 
