@@ -215,13 +215,15 @@ if (false === ($local_box_cache) ){
 
 <?php 
 
+$calloutURL = the_field('call_out_url');
+
 if(get_field('call_out', 'option')) {
 
-  echo '<div class="text-center" style="background-color: #900; color: #fff;">';
+  echo '<a class="text-center" style="background-color: #900; color: #fff; display: block; padding: 5px;" href="' . $calloutURL . '">';
 
   the_field('call_out', 'option');
 
-  echo '</div>';
+  echo '</a>';
 }
  ?>
 
