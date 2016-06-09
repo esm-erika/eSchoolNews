@@ -43,11 +43,14 @@ section.container, .container-content {
 
 		.gform_body {
 
+			float: left;
+
 			.ginput_container {
 				margin: 0;
 
 				input {
 					margin: 0;
+					width: 100% !important;
 				}
 			}
 
@@ -56,10 +59,16 @@ section.container, .container-content {
 		.gform_footer {
 			margin: 0;
 			padding: 0;
+			clear: none;
+
+			float: left;
 
 			.gform_button {
 				margin: 0;
-				padding: .9375rem;
+				padding: .6375rem;
+			    background-color: #fff;
+			    color: black !important;
+			    font-weight: bold;
 
 			}
 		}
