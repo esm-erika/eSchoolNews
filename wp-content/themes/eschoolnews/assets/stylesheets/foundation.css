@@ -8743,6 +8743,8 @@ section.container .row, .container-content .row {
 
 .subscribe-form .gform_wrapper {
   margin: 0; }
+  .subscribe-form .gform_wrapper .gform_heading {
+    display: none; }
 
 a:link, a:visited {
   color: #336699; }

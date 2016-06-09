@@ -37,6 +37,10 @@ section.container, .container-content {
 	.gform_wrapper {
 		margin: 0;
 
+		.gform_heading {
+			display: none;
+		}
+
 	}
 }
 

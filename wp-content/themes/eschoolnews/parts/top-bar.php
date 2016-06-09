@@ -91,7 +91,7 @@
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
                         <div style="display: table-cell; vertical-align: middle;">
                           
-                        <style>#field_228_1 > label.gfield_label{ visibility:hidden;}</style>
+                        <style>#field_228_1 > label.gfield_label{ display: none;}</style>
                         
                         <h4>Join over 150,000 of your Peers!</h4>
                         <div style="font-size: 90%; line-height: 1;">Get the latest ed-tech news &amp; innovations delivered to your email!</div>
