@@ -1466,7 +1466,7 @@ table.columns .right-text-pad {
 
                           } else {
 
-                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
 
                           } ?>
                               Unsubscribe</a>

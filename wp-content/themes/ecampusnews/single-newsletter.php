@@ -1450,7 +1450,7 @@ table.columns .right-text-pad {
 
                             } elseif( has_term('ecampus-news-today', 'publications')) {
 
-                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;list=201" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
 
 
                            } elseif( has_term('reinventing-higher-education', 'publications')) {
@@ -1459,7 +1459,7 @@ table.columns .right-text-pad {
                           
                           } else {
 
-                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+                              echo '<a href="http://www.ecampusnews.com/unsubscribe/?em=!*EMAIL*!" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
 
                           } ?>
 
