@@ -18,6 +18,7 @@
 
 get_header(); ?>
 
+
 <?php 
 //insert cache query
 global $page;

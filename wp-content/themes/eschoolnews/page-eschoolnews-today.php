@@ -892,6 +892,32 @@ table.columns .right-text-pad {
 
   <!-- This will appear as the preview text on email clients. -->
 
+  <?php 
+
+  $args = array(
+  	'post_type' => 'newsletter',
+  	'posts_per_page' => '1',
+  	'order' => 'DESC',
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'publications',
+			'field'    => 'slug',
+			'terms'    => 'eschool-news-today',
+		),
+	),
+
+  	);
+// the query
+$the_query = new WP_Query( $args ); ?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+
+	<!-- pagination here -->
+
+	<!-- the loop -->
+	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	
+
 
   <!-- Begin BODY of Email Template -->
 
@@ -1032,7 +1058,7 @@ table.columns .right-text-pad {
 
                             if( !empty($image) ): ?>
 
-                            <a href="<?php echo site_url(); ?>/publications/<?php echo $term_slug; ?>/?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
+                            <a href="<?php echo site_url(); ?>/publications/<?php echo $term_slug; ?>?ps=!*EMAIL*!-!*AccountID*!-!*ContactID*!" style="color: #2ba6cb; text-decoration: none;">
 
                             <img border="0" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" style="display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%;" />
 
@@ -1466,7 +1492,7 @@ table.columns .right-text-pad {
 
                           } else {
 
-                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
+                              echo '<a href="http://www.eschoolnews.com/unsubscribe/?em=!*EMAIL*!&amp;" target="_blank" style="color: #2ba6cb; text-decoration: none;">';
 
                           } ?>
                               Unsubscribe</a>
@@ -1499,6 +1525,18 @@ table.columns .right-text-pad {
 </table>
 
 <!-- End BODY -->
+
+<?php endwhile; ?>
+	<!-- end of the loop -->
+
+	<!-- pagination here -->
+
+	<?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
 
 <?php //wp_footer(); ?>
 

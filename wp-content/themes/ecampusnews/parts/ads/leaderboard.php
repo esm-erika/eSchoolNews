@@ -10,7 +10,13 @@
 ?>
 
 	<div class="ad-container">
+		<div class="row">
+			<div class="small-12 columns">
+				
+			
 	<?php // echo adrotate_group('1'); 
+
+	echo '<div style="border: 1px solid #ccc; display: inline-block; line-height: 0;">';
 		
 	if ($astused > 0){
 		// ast used defined   How to do this in the new?
@@ -26,7 +32,10 @@
 	}
 	 echo '    <!-- leaderboard banner '.$astused.' --> '; 
 	if(function_exists(adrotate_banner)){ echo adrotate_banner($astused,5);}
+
+	echo '</div>';
 		
 	?>
-        
+       </div>
+		</div> 
 	</div>
