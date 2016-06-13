@@ -10,8 +10,6 @@
 get_header(); ?>
 
 
-
-
 <?php 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]t[if a tag page]
@@ -113,7 +111,7 @@ if (false === ($local_box_cache) ){
 
 				echo '<div class="large-12 columns">';
 
-				echo '<h5>About Event</h5>';
+				//echo '<h5>About Event</h5>';
 
 				the_content();
 
@@ -163,9 +161,9 @@ if (false === ($local_box_cache) ){
 
 					<?php if ( $article_query->have_posts() ) : ?>
 
-					<hr>
+					<!-- <div class="panel"> -->
 
-					<h4><?php the_title(); ?> Related Articles</h4>
+					<!-- <h4>Related Articles</h4> -->
 					<ul class="large-block-grid-3">
 
 					<?php while ( $article_query->have_posts() ) : $article_query->the_post(); ?>
@@ -221,6 +219,8 @@ if (false === ($local_box_cache) ){
 				</ul>
 
 			<?php endif; ?>
+
+		<!-- </div> -->
 
 					
 					

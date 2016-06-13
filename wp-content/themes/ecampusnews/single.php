@@ -45,6 +45,13 @@ include('single-coa.php');
 	   } else { ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
+<?php 
+$paged = get_query_var('page'); //this needs to be asked only once. 
+
+if ($paged < 2) { // you're on page 1 ?>
+
+
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 			<!-- single note -->
@@ -85,13 +92,15 @@ include('single-coa.php');
 			<?php get_template_part('parts/social'); ?>
 			 </header>
 
+
+
 			 <hr/>
 
 
 
 
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-			<div class="entry-content">
+			
 
 				<?php if(get_field('subheader')){
 					echo '<h3 class="subheader">';
@@ -106,7 +115,7 @@ include('single-coa.php');
 			//$post_id < '161335' <--- Vince's Code
 
 			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
-			$cutoff_date = strtotime( '2016-02-24' );
+			$cutoff_date = strtotime( '2015-12-10' );
 
 			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
     
@@ -117,12 +126,26 @@ include('single-coa.php');
     				echo '<div class="row">';
     				echo '<div class="small-12 medium-12 columns">';
     				the_post_thumbnail('large-landscape');
-    				echo '</div></div>';
+    				echo '</div></div><br>';
     		} else {
 
     		} ?>
 
-    			
+
+    		<?php } else { // you are on page 2+ ?>
+			<header>
+    			<h2><?php the_title(); ?> (continued)</h2>
+
+    			<?php get_template_part('parts/social'); ?>
+    		</header>
+			
+			<hr>
+
+			<?php } ?>
+
+
+    		<div class="entry-content"> <!-- text-expandable -->
+	
     		<?php 
 			
 			if (esm_is_user_logged_in()){
@@ -202,6 +225,16 @@ custom_wp_link_pages();
 			
             </div>
 
+			
+			<!-- <div class="show-more text-center">
+		        <a class="button large radius" href="#read-more">Show more</a>
+		    </div> -->
+
+
+		   
+
+
+
 			<?php get_template_part('parts/social'); ?>
 
 			<?php 
@@ -235,7 +268,7 @@ custom_wp_link_pages();
 
 				<?php } ?>
 			<?php do_action( 'foundationpress_post_before_comments' ); ?>
-			<?php //comments_template(); ?>
+			<?php comments_template(); ?>
 			<?php do_action( 'foundationpress_post_after_comments' ); ?>
 		</article>
 

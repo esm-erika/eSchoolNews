@@ -8,14 +8,13 @@
     $tags = wp_get_post_tags($post->ID);
     $tag_ids = array();
 	foreach($tags as $individual_tag){ $tag_ids[] = $individual_tag->term_id;}
-
 	$cats = wp_get_post_categories($post->ID);
     $cat_ids = array();
 	foreach($cats as $individual_cat){ $cat_ids[] = $individual_cat;}
-
-
  if(!empty($tag_ids) || !empty($cat_ids)){
- 	
+				 
+		if(!empty($cat_ids)){ 
+	
 			$args=array(
 			'post__not_in' => array($post->ID),
 			'posts_per_page'=>5, // Number of related posts to display.
@@ -24,7 +23,6 @@
 			'category__in' => $cat_ids,
 			'cat' => '-11583,-11,-133'
 			);
-
 		 } else if(!empty($tag_ids)){ 
 			$args=array(
 			'post__not_in' => array($post->ID),
@@ -36,7 +34,6 @@
 		 }	
 	
 	} else {
-
 		$args=array(
 		'post__not_in' => array($post->ID),
 		'posts_per_page'=>5, // Number of related posts to display.
@@ -56,7 +53,6 @@
 		);
 		
 	}	
-
     $my_query = new wp_query( $args );
 //if ( have_posts() ) {	
 ?>
@@ -81,7 +77,6 @@
 	
 	 }
 	 
-
 	 
 ?>	
 

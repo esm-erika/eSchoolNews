@@ -192,6 +192,9 @@ get_template_part( 'library/logged-in-check' );
       </div>
     </div>
 
+
+
+
 <?php 
 //insert cache query
 $box_qt = 'esm_c_header_menu';
@@ -205,6 +208,22 @@ if (false === ($local_box_cache) ){
     <?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
     <?php get_template_part( 'parts/top-bar' ); ?>
+
+
+
+    <!-- Call Out -->
+
+<?php 
+
+if(get_field('call_out', 'option')) {
+
+  echo '<div class="text-center" style="background-color: #900; color: #fff;">';
+
+  the_field('call_out', 'option');
+
+  echo '</div>';
+}
+ ?>
 
 
 
@@ -243,6 +262,7 @@ if ( !esm_is_user_logged_in()){ get_template_part( 'parts/login-modal' ); }
 		get_template_part( 'parts/ads/billboard' );
 	 }
 	 ?>  
+
 
 
 
