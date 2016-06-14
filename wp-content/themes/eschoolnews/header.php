@@ -175,6 +175,24 @@ get_template_part( 'library/logged-in-check' );
     </nav>  -->
 
 
+    <div class="row mobile-search show-for-small-only">
+      <div class="small-12 columns">
+
+        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+          <div class="row collapse">
+            <div class="small-9 columns">
+              <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+            </div>
+            <div class="small-3 columns">
+              <input style="padding: 0;" type="submit" class="button postfix" value="Go" />
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
 <?php 
 //insert cache query
 $box_qt = 'esm_c_header_menu';
