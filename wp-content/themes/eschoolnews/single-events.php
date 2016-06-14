@@ -10,6 +10,8 @@
 get_header(); ?>
 
 
+
+
 <?php 
 //insert cache query
 //name format esm_c_[template name in 5 char]_a[ast]c[astc]c[category]p[post id(if sidebar needs to be unique]t[if a tag page]
@@ -142,6 +144,7 @@ if (false === ($local_box_cache) ){
 					$args = array(
 
 					'post_type' => 'post',
+					'posts_per_page' => -1,
 				    'tax_query' => array(
 				    	array(
 				    		'taxonomy' => 'conferences',
@@ -173,7 +176,7 @@ if (false === ($local_box_cache) ){
 							
 								<?php if(has_post_thumbnail()){ ?>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-										<?php the_post_thumbnail(); ?>
+										<?php the_post_thumbnail('medium-landscape'); ?>
 									</a>
 								<?php } ?>
 
