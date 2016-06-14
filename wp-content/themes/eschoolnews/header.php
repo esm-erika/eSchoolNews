@@ -232,7 +232,7 @@ if(get_field('call_out', 'option')) { ?>
 <div class="row">
   <div class="small-12 columns">
 
-  <a class="text-center" style="border: 1px solid #c00; background-color: #fff; color: #c00; display: block; padding: 5px;" href="<?php echo $calloutURL; ?>">
+  <a class="text-center" style="border: 1px solid #900; background-color: #c00; color: #fff; display: block; padding: 5px;" href="<?php echo $calloutURL; ?>">
 
   <?php the_field('call_out', 'option'); ?>
 
