@@ -49,8 +49,8 @@
                     $current_user = wp_get_current_user(); ?>
 
                         <a href="<?php the_permalink(); ?>">
-                            Today's News Brief for <br> 
-                        <strong><?php echo $current_user->user_firstname; ?> <?php echo $current_user->user_lastname; ?></strong>
+                            <strong>Today's News Brief</strong> for <br> 
+                        <strong><?php echo $current_user->user_firstname; ?> <?php echo $current_user->user_lastname; ?></strong> is now available.
                      
                        </a><br>
 
@@ -58,7 +58,8 @@
                     
                 <?php } else { ?>
 
-                   <a href="<?php the_permalink(); ?>">See Today's News Brief</a>
+                   <a href="<?php the_permalink(); ?>"><strong>Today's News Brief</strong><br />
+is now available.</a>
 
                 <?php } ?>
                     
@@ -85,6 +86,7 @@
                         </div>
                     </h1>
                 </div>
+            <?php if(!is_user_logged_in()){ ?>
             <div class="large-3 medium-3 columns text-center subscribe-form" data-equalizer-watch>
                 <div class="show-for-small-only" style="height: 20px;"></div>
                 <div class="row">
@@ -98,10 +100,17 @@
 
                         
                           
-                        <style>#field_228_1 > label.gfield_label{ display: none;}</style>
+                        <style>#field_228_1 > label.gfield_label{ display: none;} input#input_228_1{font-size: 12px!important; color:#000!important;} /* gform placeholders*/
+::-webkit-input-placeholder { color:#333; }
+:-moz-placeholder { opacity: 1; color:#333; } /* Firefox 18- */
+::-moz-placeholder { opacity: 1; color:#333; } /* firefox 19+ */
+:-ms-input-placeholder { color:#333; } /* ie */
+input:-moz-placeholder { color:#333; }
                         
-                        <h6>Join over 150,000 of your Peers!</h6>
-                        <div style="font-size: 85%; line-height: 1.2; margin-bottom: 10px; padding: 5px 0;">Get the latest ed-tech news &amp; innovations delivered to your email!</div>
+                        </style>
+                        
+                        <h5 style="font-size: 85%; line-height: 1.2;margin-bottom: 7px">Join over 150,000 of your Peers!</h5>
+                        <div style="font-size: 85%; line-height: 1.2; margin-bottom: 7px; padding: 2px 0;">Get the latest ed-tech news &amp; innovations delivered to your email!</div>
                         
                         <?php gravity_form( 228, $display_title = false, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true ); ?>
                     
@@ -113,6 +122,9 @@
                     </div>
                     </div>
             </div>
+            <?php } ?>
+            
+            
         </div>
 
     <div class="row mobile-search show-for-small-only">
