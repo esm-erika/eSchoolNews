@@ -14,7 +14,7 @@
         <div class="title-area row show-for-small-up" data-equalizer>
             <div class="large-3 medium-3 columns text-center" data-equalizer-watch>
 
-                <div style="height: 100%; position: relative;">
+                <div style="height: 100%; position: relative; border: 1px solid #ccc; padding: 10px;" data-equalizer-watch>
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
                         <div style="display: table-cell; vertical-align: middle;">
 
@@ -100,12 +100,13 @@ is now available.</a>
 
                         
                           
-                        <style>#field_228_1 > label.gfield_label{ display: none;} input#input_228_1{font-size: 12px!important; color:#000!important;} /* gform placeholders*/
+                        <style>#field_228_1 > label.gfield_label{ display: none;} input#input_228_1{font-size: 12px!important; color:#000!important; height: 22px;} /* gform placeholders*/
 ::-webkit-input-placeholder { color:#333; }
 :-moz-placeholder { opacity: 1; color:#333; } /* Firefox 18- */
 ::-moz-placeholder { opacity: 1; color:#333; } /* firefox 19+ */
 :-ms-input-placeholder { color:#333; } /* ie */
 input:-moz-placeholder { color:#333; }
+input#gform_submit_button_228 {margin-left:5px;}
                         
                         </style>
                         
