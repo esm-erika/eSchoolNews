@@ -83,17 +83,17 @@
 
 				<?php while ( $featured->have_posts() ) : $featured -> the_post(); ?>
 			
-						<div class="small-12 medium-6 columns" role="main">
+						<div class="small-12 medium-4 large-4 columns" role="main">
 
 						<?php if(has_post_thumbnail()){
-
+							echo '<a href="' . get_the_permalink() .'">';
 							the_post_thumbnail('medium-landscape');
-
+							echo '</a>';
 						} ?>
 
 						</div>
 
-						<article class="small-12 medium-6 columns">		
+						<article class="small-12 medium-8 large-8 columns">		
 
 			<header> 
 
@@ -150,7 +150,7 @@
 
 				<div class="excerpt">
 					<?php 
-					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 30, $more = '&hellip;' ), true); 
+					echo balanceTags(wp_trim_words( get_the_excerpt(), $num_words = 50, $more = '&hellip;' ), true); 
 					?>
 				</div>
 			</header>
