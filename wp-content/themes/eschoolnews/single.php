@@ -117,19 +117,7 @@ if ($paged < 2) { // you're on page 1 ?>
 			$post_date = strtotime( the_date( 'Y-m-d', '', '', false ) );
 			$cutoff_date = strtotime( '2015-12-10' );
 
-			if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
-    
-    			echo '';
-			 
-			 } elseif ( has_post_thumbnail()) {
-
-    				echo '<div class="row">';
-    				echo '<div class="small-12 medium-12 columns">';
-    				the_post_thumbnail('large-landscape');
-    				echo '</div></div><br>';
-    		} else {
-
-    		} ?>
+?>
 
 
     		<?php } else { // you are on page 2+ ?>
@@ -200,13 +188,32 @@ Already a member? Log in
 
 <?php // the_content(); 
 
+			 if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
+    
+    			echo '';
+			 
+			 } elseif ( has_post_thumbnail() and $paged < 2) {
+
+    				//echo '<div class="row">';
+    				echo '<div class="small-6 medium-6 large-5 columns">';
+    				the_post_thumbnail('small-landscape');
+    				echo '</div>';
+					//echo '</div></div>';
+    		} else {
+
+    		} 
+
+
 $content = apply_filters( 'the_content', get_the_content() );
 $content = explode("</p>", $content);
 $count = count($content);
 $placement = round($count/2);
 $paragraphAfter[$placement] = ''; // Can insert text if wanted.
 
+
+
 for ($i = 0; $i < $count; $i++ ) {
+
     if ( array_key_exists($i, $paragraphAfter) ) {
         echo $paragraphAfter[$i];
 		get_template_part( 'parts/ads/lb-article-1' );		
