@@ -224,10 +224,10 @@ if (false === ($local_box_cache) ){
 
 
 <?php 
-
+if(get_field('call_out', 'option')) { 
 $calloutURL = get_field('call_out_url');
-
-if(get_field('call_out', 'option')) { ?>
+echo '<!-- '.$calloutURL. ' -->';
+?>
 
 <div class="row">
   <div class="small-12 columns small-centered medium-centered large-centered" style="max-width:974px;margin-top:-10px!important;">
