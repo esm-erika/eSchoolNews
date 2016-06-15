@@ -227,12 +227,12 @@ if (false === ($local_box_cache) ){
 
 $calloutURL = get_field('call_out_url');
 
-if(1==1 or get_field('call_out', 'option')) { ?>
+if(get_field('call_out', 'option')) { ?>
 
 <div class="row">
   <div class="small-12 columns small-centered medium-centered large-centered" style="max-width:974px;margin-top:-10px!important;">
   	<a class="text-center" style="border: 1px solid #900; background-color: #c00; color: #fff; display: block;" href="<?php echo $calloutURL; ?>">
-  		<?php the_field('call_out', 'option'); ?>testing the callout
+  		<?php the_field('call_out', 'option'); ?>
 	</a>
   </div>
 </div>
