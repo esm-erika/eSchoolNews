@@ -188,21 +188,6 @@ Already a member? Log in
 
 <?php // the_content(); 
 
-			 if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
-    
-    			echo '';
-			 
-			 } elseif ( has_post_thumbnail() and $paged < 2) {
-
-    				//echo '<div class="row">';
-    				echo '<div class="small-6 medium-6 large-5 columns">';
-    				the_post_thumbnail('small-landscape');
-    				echo '</div>';
-					//echo '</div></div>';
-    		} else {
-
-    		} 
-
 
 $content = apply_filters( 'the_content', get_the_content() );
 $content = explode("</p>", $content);
@@ -211,9 +196,15 @@ $placement = round($count/2);
 $paragraphAfter[$placement] = ''; // Can insert text if wanted.
 
 
-
 for ($i = 0; $i < $count; $i++ ) {
-
+	if($i == 0){
+		if( get_field('remove_featured_image') || $post_date < $cutoff_date ) {
+		} elseif ( has_post_thumbnail() and $paged < 2) {
+			echo '<div style="max-width:50%; float:left; margin: 5px 5px 5px 0">';
+			the_post_thumbnail('small-landscape');
+		echo '</div>';
+		} 
+	}
     if ( array_key_exists($i, $paragraphAfter) ) {
         echo $paragraphAfter[$i];
 		get_template_part( 'parts/ads/lb-article-1' );		
