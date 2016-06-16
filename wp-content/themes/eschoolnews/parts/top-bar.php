@@ -98,16 +98,80 @@ is now available.</a>
                     <div style="positon: absolute; width: 100%; height: 100%; display: table;">
                         <div style="display: table-cell; vertical-align: middle;">
 
+<?php 
+
+
+//This is a filter to change the default validation message that Gravity Forms generates
+add_filter('gform_validation_message_228', 'change_validation_message', 10, 2);
+function change_validation_message($message, $form)
+{
+    return "";
+}
+// Often forms in Gravity Forms to need to start with default values and we need to check the form in case the user hasn't entered new data and give them a validation message back
+// Append the Gravity Forms ID to the end of the filter so that the validation only runs on this form. In this example I'm doing it on Form #2
+add_filter('gform_validation_228', 'custom_validation');
+function custom_validation($validation_result)
+{
+    $form = $validation_result["form"];
+    //We need to loop through all the form fields to check if the value matches and of the default values
+    foreach ($form['fields'] as &$field) {
+        //Check if the value is equal to the Default Value you entered in Gravity Forms
+        if ($field["value"] === "email") {
+            // set the form validation to false
+            $validation_result["is_valid"] = false;
+            //The field ID can be found by hovering over the field in the backend of WordPress
+            if ($field["id"] == "1") {
+                $field["failed_validation"] = true;
+                $field["validation_message"] = "";
+            }
+        }
+       
+    }
+    //Assign modified $form object back to the validation result
+    $validation_result["form"] = $form;
+    return $validation_result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
                         
                           
-                        <style>#field_228_1 > label.gfield_label{ display: none;} input#input_228_1{font-size: 12px!important; color:#000!important; height: 22px;} /* gform placeholders*/
+                        <style>#field_228_1 > label.gfield_label{ display: none;} input#input_228_1{font-size: 12px!important; color:#000!important; height: 22px;    margin: 0px!important;
+    padding:0px!important;} /* gform placeholders*/
 ::-webkit-input-placeholder { color:#333; }
 :-moz-placeholder { opacity: 1; color:#333; } /* Firefox 18- */
 ::-moz-placeholder { opacity: 1; color:#333; } /* firefox 19+ */
 :-ms-input-placeholder { color:#333; } /* ie */
 input:-moz-placeholder { color:#333; }
 input#gform_submit_button_228 {margin-left:5px;}
-                        
+div.gfield_description.validation_message{ display:none }
+li.gfield.gfield_error {
+	background-color:#fff!important;
+    margin: 0px!important;
+    padding:0px!important;
+    border-top: none!important;
+    border-bottom: none!important;}
+	
+
                         </style>
                         
                         <h5 style="font-size: 85%; line-height: 1.2;margin-bottom: 7px">Join over 150,000 of your Peers!</h5>
@@ -151,10 +215,8 @@ input#gform_submit_button_228 {margin-left:5px;}
             <section class="top-bar-section medium-12 columns">
 
                 <?php foundationpress_top_bar_c(); ?>
-               
             </section>
 
-            
         </nav>
 
     </div>
